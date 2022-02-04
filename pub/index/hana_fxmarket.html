@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행 원큐플러스 구축 퍼블리싱 리스트</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-width: 980px;
+        padding: 0 20px 50px 20px;
+        font-family: 'Malgun Gothic', '맑은 고딕', AppleSDGothicNeo, Droid Sans, Roboto, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    a:focus {
+        color:#e30101
+    }
+    /* a {
+        color: #444;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #444;
+    }
+
+    a:visited,
+    a:focus,
+    a:active {
+        color: #444;
+    } */
+
+    .list_header {
+        width: 100%;
+        padding: 20px;
+        background: #fff;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 20px 0 10px 0;
+        letter-spacing: -1px;
+        font-weight: 800;
+    }
+
+    h1 img {
+        height: 27px;
+        margin: 10px 5px 0 0;
+        vertical-align: top;
+    }
+
+    .info {
+        position: absolute;
+        right: 25px;
+        top: 40px;
+    }
+
+    .guide {
+        margin: 10px 0 5px 0;
+        text-align: right;
+    }
+
+    .red {
+        color: #e80000 !important
+    }
+
+    h2 {
+        padding: 10px 0 10px 15px;
+        font-size: 13px;
+        border: 1px solid #444;
+        border-bottom: none;
+        background: #595959;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    caption {
+        display: none;
+    }
+
+    div.cont {
+        border-top: 1px solid #444;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border-spacing: 0;
+        margin-bottom: 30px;
+        table-layout:fixed;
+    }
+
+    table thead th {
+        padding: 7px 3px;
+        border: 1px solid #ccc;
+        background: #eee;
+        font-size: 13px;
+    }
+
+    table tbody td {
+        padding: 7px 3px;
+        background: #e5e5e5;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-size: 11px;
+        color: #333;
+        padding: 0 10px;
+    }
+
+
+    table tbody td.left {
+        padding: 7px 10px;
+        text-align: left;
+    }
+
+    table tbody td.url {
+        padding: 7px 10px;
+        text-align: left;
+    }
+
+    table tbody tr.del td {
+        text-decoration: line-through;
+        color: #999;
+        background: #e9e9e9;
+    }
+
+    table tbody tr.del td a {
+        text-decoration: line-through;
+        color: #999;
+    }
+
+    table tbody tr td {
+        height: 30px;
+        box-sizing: border-box;
+        display: table-cell;
+        background: #fff;
+        color: #444;
+        transition: all 0.4s
+    }
+
+    table tbody tr:hover td {
+        background: #e9e9e9;
+    }
+
+    .proc_wrap {
+        margin: 0 0 20px;
+        text-align: right
+    }
+
+    .proc_wrap strong {
+        color: #0d643a;
+        font-weight: bold;
+    }
+
+    /* tab */
+    .tab {
+        overflow: hidden;
+    }
+
+    .tab ul {
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .tab ul li {
+        display: inline-block;
+    }
+
+    .tab ul li a {
+        position: relative;
+        float: left;
+        padding: 10px 30px;
+        background: #eee;
+        border-right: 1px solid #fff;
+        font-size: 13px;
+        color: #666;
+        text-align: center;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    .tab ul li:last-child a {
+        border: none;
+    }
+
+    .tab ul li a:hover {
+        background: #ccc;
+    }
+
+    .tab ul li.on a {
+        background: #1994da;
+        color: #fff;
+    }
+
+    .tab ul li.on a:hover {
+        background: #1994da;
+    }
+
+    /* marker */
+    .marker {
+        position: relative;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    .marker li {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px;
+        padding-left: 17px;
+        color: #666;
+        list-style: none;
+    }
+
+    .marker li.dep {
+        padding-right: 25px;
+    }
+
+    .marker li:before {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 12px;
+        height: 12px;
+        content: "";
+    }
+
+    .marker li.m1:before {
+        background: #999;
+    }
+
+    .marker li.s1:before {
+        background: #53b100;
+    }
+
+    .marker li.s2:before {
+        background: #0142b3;
+    }
+
+    .marker li.s3:before {
+        background: orange;
+        animation: over_a both linear infinite 3s;
+    }
+
+    .marker li.s4 {
+        text-decoration: line-through;
+    }
+
+    .marker li.s4:before {
+        background: #333;
+    }
+
+    .marker li.s5:before {
+        width: 10px;
+        height: 10px;
+        border: 2px solid #f68500;
+        border-radius: 100%;
+    }
+
+    .marker li.s6:before{
+        width: 14px;
+        height: 14px;
+        background: red;
+        border-radius: 100%;
+        animation: emer 1s linear infinite;
+    }
+
+    .marker:after {
+        display: block;
+        clear: both;
+        height: 0;
+        content: "";
+        overflow: hidden;
+    }
+
+    /* state */
+    .state {
+        padding-left: 10px;
+    }
+
+    .state i {
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        margin-right: 1px;
+        border-radius: 1px;
+        vertical-align: middle;
+    }
+
+    .state.ing i {
+        background: #0142b3;
+    }
+
+    .state.comp i {
+        background: #53b100;
+    }
+
+    .state.modi i {
+        background: orange;
+        animation: over_a both linear infinite 3s
+    }
+
+    .state.wait i {
+        background: #999;
+    }
+
+    .state.del i {
+        background: #333;
+    }
+    .state.em i {
+        background: blue;;
+        animation: emer 1s linear infinite;
+    }
+
+    .state.mc i {
+        width: 10px;
+        height: 10px;
+        border: 2px solid #f68500;
+        border-radius: 100%;
+    }
+
+    td.depa {
+        background:#b3e976 !important
+    }
+    td.date{
+        text-align: center;
+    }
+    .result{
+        position:relative;
+        font-size: 0;
+        margin: 10px 0 20px;
+        width: 1200px;
+        border-top: 1px solid #eaeaea;
+    }
+    .result:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #eaeaea;
+    }
+    strong.complate{
+        font-weight: 700;
+        color: #53b100;
+    }
+    strong.percentage{
+        font-size: 16px;
+        color: blue;
+    }
+    .result li{
+        box-sizing: border-box;
+        display: inline-block;
+        width: 400px;
+        padding: 5px 10px;
+        list-style: none;
+        font-size: 14px;
+        color: #666;
+        border-bottom: 1px solid #eaeaea;
+    }
+    tr.emer td{
+        animation: emerColor .4s linear infinite;
+        background: #eee8aa55;
+    }
+    .result li span{
+        color: #000;
+    }
+    #total{
+        padding-left: 10px;
+        font-size: 20px;
+        color: #666;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+    #total .total-count{
+        color: #000;
+    }
+    #total .total-complate{
+        color: #53b100;
+    }
+    #total .percent{
+        font-size: 22px;
+        color: blue;
+    }
+    tr.asap td{
+        background: aliceblue;
+    }
+    tr.asap.today td{
+        background: palegoldenrod;
+    }
+    .helper{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 16px;
+    }
+    .helper .url{
+        text-transform: uppercase;
+        margin-right: 20px;
+    }
+    @keyframes over_a {
+        0% {
+            opacity: 1;
+        }
+
+        40% {
+            opacity: 0.2;
+        }
+
+        60% {
+            opacity: 0.2;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes emer{
+        50% {
+            background: #ed1651;
+            color: #ed1651
+        }
+        75% {
+            background: #009591;
+            color: #009591
+        }
+    }
+    @keyframes emerColor{
+        50% {
+            color: #ed1651
+        }
+        75% {
+            color: #009591
+        }
+    }
+</style>
+    <style>
+    body{
+        padding: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <div class="cont">
+            <table>
+                <colgroup>
+    <col style="width:120px;">
+    <col style="width:180px;">
+    <col style="width:180px;">
+    <col style="width:180px;">
+    <col style="width:180px;">
+    <col style="width:60px">
+    <col style="width:250px;">
+    <col style="width:150px"/>
+    <col style="width:100px;">
+    <col style="width:80px;">
+    <col>
+</colgroup>
+<thead>
+    <tr>
+        <th scope="col">페이지ID</th>
+        <th scope="col">1 Depth</th>
+        <th scope="col">2 Depth</th>
+        <th scope="col">3 Depth</th>
+        <th scope="col">4 Depth</th>
+        <th scope="col">작업자</th>
+        <th scope="col">화면명</th>
+        <th scope="col">LINK</th>
+        <th scope="col">상태</th>
+        <th scope="col">날짜</th>
+        <th scope="col">비고</th>
+    </tr>
+</thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="url"><a href="../resource/html/" target="_blank"></a></td>
+                        <td class="state"><i class="icon"></i></td>
+                        <td class="date"></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- //wrap -->
+
+    <script src="../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script>
+    $(function () {
+        $.each($("td.url > a"), function (i, v) {
+            let link = $(v).attr("href");
+            // link = link.replace('../', '')
+            $(v).text('내부망 확인 링크');
+            $(v).attr('href', link)
+        })
+        $.each($("td.state"), function () {
+            if ($(this).hasClass('ing')) {
+                $(this).append(' 진행중');
+            }
+            if ($(this).hasClass('wait')) {
+                $(this).append(' 대기');
+            }
+            if ($(this).hasClass('modi')) {
+                $(this).append(' 수정중');
+            }
+            if ($(this).hasClass('comp')) {
+                $(this).append(' 완료');
+            }
+            if ($(this).hasClass('del')) {
+                $(this).append(' 삭제됨');
+                $(this).parent().addClass('del');
+            }
+            if ($(this).hasClass('mc')) {
+                $(this).append(' 수정완료');
+            }
+            if ($(this).hasClass('em')) {
+                $(this).closest('tr').addClass('emer')
+                $(this).append(' 긴급');
+            }
+        });
+    })
+</script>
+</body>
+
+>>>>>>> d6e902525e54967e9da9f30ff2bd14c48bc3f13c
+</html>
