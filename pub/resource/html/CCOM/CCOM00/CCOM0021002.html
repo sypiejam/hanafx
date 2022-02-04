@@ -1,0 +1,98 @@
+<!-- 0.95v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">FDS 지급 정지 해제</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <!-- 완료시 -->
+            <div class="container">
+                <div class="icon-wrap">
+                    <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
+                    <div class="icon-wrap__icon-word">이체일시 정지 해제가<br>완료되었습니다.</div>
+                </div>
+            </div>
+            <div class="tit-default">정상 해제 현황</div>
+            <div class="container">
+                <div class="list-section">
+                    <ul class="list-wrap">
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <!-- to.개발 200416 디자인 변경에 따른 class 변경 -->
+                                <strong class="list-wrap__text list-wrap__text--value">블랙리스트</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <!-- to.개발 200416 디자인 변경에 따른 class 변경 -->
+                                <strong class="list-wrap__text list-wrap__text--value">지연이체</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tit-default">해제 실패 현황</div>
+            <div class="container">
+                <div class="list-section">
+                    <ul class="list-wrap">
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <!-- to.개발 200416 디자인 변경에 따른 class 변경 -->
+                                <strong class="list-wrap__text list-wrap__text--value">FDS 이상징후 거래</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //완료시 -->
+
+            <!-- 실패시 -->
+            <div class="container">
+                <div class="icon-wrap">
+                    <i class="icon-wrap__icon icon-wrap__icon--no-data" aria-hidden="true"></i>
+                    <div class="icon-wrap__icon-word">이체일시 정지 해제시<br>오류가 발생하였습니다.</div>
+                    <div class="icon-wrap__description">고객님 거래에 이상징후가 발견되어<br>불법이체 방지를 위해 거래가 일시 중단되었습니다.</div>
+                </div>
+            </div>
+            <!-- //실패시 -->
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

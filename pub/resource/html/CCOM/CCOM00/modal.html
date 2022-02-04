@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="content">
+            <!-- Content Here -->
+            <h1>Modal</h1>
+            <!-- <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalFull"
+                >
+                    전체화면
+                </button>
+            </div>
+            <hr> -->
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalAlertError"
+                >
+                    알림(오류)
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalAlertSlim"
+                >
+                    알림(타이틀 없음)
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalConfirmSlim"
+                >
+                    컨펌(타이틀 없음)
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalAlert"
+                >
+                    알림
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalConfirm"
+                >
+                    컨펌
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalSlide"
+                >
+                    슬라이드
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalDownpop" 
+                    id="modalDown_btn"
+                >
+                    다운로드 슬라이드
+                </button> <!-- //layer 랑 id 맞출것 !! -->
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#modalSlide2"
+                >
+                    슬라이드 제목이 문장일 경우
+                </button>
+            </div>
+            <hr>
+            <div class="button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__open"
+                    data-target="#CCOM0015002_P02"
+                >
+                    상단에 탭이 있는 슬라이드
+                </button>
+            </div>
+            
+            
+            <!-- 다운로드 슬라이드 : 맨하단 애니메이션 스크립트 포함-->
+            <div id="modalDownpop" class="modal modal--slide" data-element="modal__element"> <!-- //버튼이랑 id 맞출것 !! -->
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">설명서류 다운로드</h1>
+                    </div>
+                    <div class="modal__contents">
+                    	<div class="downWrap">
+	                    	<div class="button-wrap">
+			                    <button type="button" class="button-secondary button-secondary--green down">설명서류 PDF받기</button>
+			                </div>
+			                <p class="p1"><span>상품설명서, 약관을 수령하고</span></p>
+			                <p class="p2"><span>내용을 이해했음을 확인합니다.</span></p>
+		                </div>
+                    </div>
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive">확인</button>
+                        </div>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- //다운로드 슬라이드 : 맨하단 애니메이션 스크립트 포함-->
+            
+            
+            <!-- 모달레이어 - 전체 -->
+            <!-- <div id="modalFull" class="modal modal--full" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">이체</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <div class="icon__wrap">
+                            <i class="icon icon--check" aria-hidden="true"></i>
+                            <span class="icon__word">이체완료</span>
+                        </div>
+                        <div class="info-list">
+                            <div class="info-list__text">김하나</div>
+                            <ul class="info-list__group">
+                                <li class="info-list__item">
+                                    <div class="info-list__label">보낸금액</div>
+                                    <div class="info-list__value"><span class="eng">409,000</span>원</div>
+                                </li>
+                                <li class="info-list__item">
+                                    <div class="info-list__label">받는계좌</div>
+                                    <div class="info-list__value">토스 <span class="eng">123456758123</span></div>
+                                </li>
+                                <li class="info-list__item">
+                                    <div class="info-list__label">출금계좌</div>
+                                    <div class="info-list__value">하나은행 <span class="eng">123456758123</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex-wrap">
+                            <div class="flex-wrap__left text-check">
+                                <input type="checkbox" id="textCheck">
+                                <label for="textCheck" class="text-check__label">경조메세지 보내기</label>
+                            </div>
+                            <div class="flex-wrap__right">
+                                <button type="button" class="button button--more">
+                                    더보기<i class="icon icon--plus" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal__button-wrap"></div>
+                    </div>
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--positive-green">이체</button>
+                            <button type="button" class="button button--positive">확인</button>
+                        </div>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div> -->
+            <!-- //모달레이어 - 전체 -->
+
+
+            <div id="modalConfirmSlim" class="modal modal--alert" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__contents">
+                        <div class="modal__description" data-element="focus">
+                            컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                        </div>
+                    </div>
+                    <div class="button-wrap">
+                        <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                        <button type="button" class="button button--positive">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modalConfirm" class="modal modal--confirm" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">타이틀 영역</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <div class="modal__description">
+                            컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                        </div>
+                    </div>
+                    <div class="button-wrap">
+                        <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                        <button type="button" class="button button--positive">확인</button>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            
+            <!-- 모달레이어 - 알럿 -->
+            <div id="modalAlertSlim" class="modal modal--alert" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__contents">
+                        <div class="modal__description">
+                            <p class="align-center">
+                                컨텐츠 영역 컨텐츠 영역 컨텐츠
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal__button-wrap">
+                        <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //모달레이어 - 알럿 -->
+
+            <!-- 모달레이어 - 오류 -->
+            <div id="modalAlertError" class="modal modal--alert" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__contents">
+                        <div class="modal__description modal-error">
+                            <p class="modal-error__description">
+                                처리 중 오류가 발생했습니다.<br>자세한 내용은 고객센터로 문의해주세요.<br>고객센터  1588-1111
+                            </p>
+                            <div class="modal-error__code">오류코드 : CODE1234</div>
+                        </div>
+                    </div>
+                    <div class="modal__button-wrap">
+                        <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //모달레이어 - 오류 -->
+
+            <!-- 모달레이어 - 알럿 -->
+            <div id="modalAlert" class="modal modal--alert" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">타이틀 영역</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <p class="modal__description">컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 </p>
+                        <div class="button-contained-wrap">
+                            <button type="button" class="button-underline button-underline--green">오늘 하루 열리지 않음</button>
+                        </div>
+                    </div>
+                    <div class="modal__button-wrap">
+                        <button
+                            type="button"
+                            class="button button--positive"
+                            data-element="modal__close">
+                            확인
+                        </button>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- //모달레이어 - 알럿 -->
+
+            <!-- 모달레이어 - 슬라이드 -->
+            <div id="modalSlide" class="modal modal--slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header modal__header--border">
+                        <h1 class="modal__header--title">슬라이드 팝업 제목</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <div class="text-type">
+                            <span class="text-type__value">김하나</span>님에게<br><span class="text-type__value eng">5,000,000</span>원을 이체합니다.
+                        </div>
+                        <div class="info-list info-list--type2">
+                            <ul class="info-list__group">
+                                <li class="info-list__item">
+                                    <div class="info-list__label">보낸금액</div>
+                                    <div class="info-list__value"><span class="eng">409,000</span>원</div>
+                                </li>
+                                <li class="info-list__item">
+                                    <div class="info-list__label">받는계좌</div>
+                                    <div class="info-list__value">토스 <span class="eng">123456758123</span></div>
+                                </li>
+                                <li class="info-list__item">
+                                    <div class="info-list__label">출금계좌</div>
+                                    <div class="info-list__value">하나은행 <span class="eng">123456758123</span></div>
+                                </li>
+                                <li class="info-list__item">
+                                    <div class="info-list__label">수수료</div>
+                                    <div class="info-list__value">면제</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__button-wrap"></div>
+                    </div>
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive">이체</button>
+                        </div>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- //모달레이어 - 슬라이드 -->
+
+            <!-- 모달레이어 - 슬라이드 -->
+            <div id="modalSlide2" class="modal modal--slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval modal__container--sentence" data-element="modal__element-container">
+                    <div class="modal__header modal__header--border">
+                        <!--  -->
+                        <h1 class="modal__header--title">슬라이드 팝업 제목입니다.</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <div class="tab" data-element="tab">
+                            <div class="tab-wrap">
+                                <ul class="tab-wrap__menu" role="tablist">
+                                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                                        <a href="#" class="tab-wrap__button is-active" data-element="tab__anchor" id="pualugin-tab-9" role="tab" aria-selected="true">주민등록번호</a>
+                                    </li>
+                                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor" id="pualugin-tab-10" role="tab" aria-selected="false">ID/생년월일</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab__panel is-active" data-element="tab__panel" aria-labelledby="pualugin-tab-9" role="tabpanel">
+                                <div class="container mgt90">
+                                    123
+                                </div>
+                            </div>
+                            <div class="tab__panel" data-element="tab__panel" aria-labelledby="pualugin-tab-10" role="tabpanel">
+                                <div class="container mgt90">
+                                    asdaasdsd
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive">이체</button>
+                        </div>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- //모달레이어 - 슬라이드 -->
+
+            <div id="CCOM0015002_P02" class="modal modal--slide" data-element="modal__element">
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header modal__header--interval">
+                        <h1 class="modal__header--title">계좌선택</h1>
+                    </div>
+                    <div class="modal__contents modal__contents--inner-tab">
+                        <div data-element="tab" data-options='{"initIndex":0}'>
+                            <div class="tab-wrap">
+                                <ul class="tab-wrap__menu">
+                                    <li class="tab-wrap__item" data-element="tab__list">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor">하나은행 계좌</a>
+                                    </li>
+                                    <li class="tab-wrap__item" data-element="tab__list">
+                                        <a href="#" class="tab-wrap__button" data-element="tab__anchor">타행계좌</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <div class="container">
+                                    <div class="list-section">
+                                        <ul class="list-wrap list-wrap--line">
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                                <button type="button" class="list-wrap__anchor">
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pualugin-tab__panel" data-element="tab__panel">
+                                <div class="container">
+                                    <div class="list-section">
+                                        <ul class="list-wrap list-wrap--line">
+                                            <li class="list-wrap__item list-button-wrap">
+                                                <button type="button" class="list-wrap__anchor list-wrap__anchor--icon">
+                                                    <i class="list-wrap__icon">
+                                                        <!-- 접근성 및 디자인현행화 -->
+                                                        <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                                        <!-- //접근성 및 디자인현행화 -->
+                                                    </i>
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                            <li class="list-wrap__item list-button-wrap">
+                                                <button type="button" class="list-wrap__anchor list-wrap__anchor--icon">
+                                                    <i class="list-wrap__icon">
+                                                        <!-- 접근성 및 디자인현행화 -->
+                                                        <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                                        <!-- //접근성 및 디자인현행화 -->
+                                                    </i>
+                                                    <span class="list-wrap__box">
+                                                        <strong class="list-wrap__title list-wrap__title--value">행복knowhow통장</strong>
+                                                        <span class="list-wrap__sub-text eng">123-******-89764</span>
+                                                    </span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- //Content Here -->
+        </div>
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<!-- 다운로드 애니메이션 스크립트 -->
+<script>
+$("#modalDown_btn").on('click', function(){
+	setTimeout(function(){
+		$('.downWrap .p1').addClass('on').delay(500);
+	}, 500);
+	setTimeout(function(){
+		$('.downWrap .p2').addClass('on').delay(1000);
+	}, 1000);
+});
+$("#modalDownpop .modal__btn--close, .button--negative").on('click', function(){
+	$('.downWrap .p1, .downWrap .p2').removeClass('on');
+});
+</script>
+<!-- //다운로드 애미메이션 스크립트 -->
+</body>
+
+</html>

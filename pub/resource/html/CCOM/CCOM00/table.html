@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="content pdnotch">
+            <!-- Content Here -->
+            <h1>Table</h1>
+
+            <p>caption 은 {테이블명} - {th 명(모두)} 입력</p>
+            <p>th 의 scope 필수 입력</p>
+            <div class="table-horizontal">
+                <table>
+                    <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:70%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">항목값</th>
+                            <td class="table-horizontal__td">데이터값</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">항목값</th>
+                            <td class="table-horizontal__td">데이터값 데이터값 데이터값 데이터값 데이터값 데이터값 데이터값 데이터값 데이터값 데이터값</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">항목값 항목값 항목값 항목값</th>
+                            <td class="table-horizontal__td">데이터값</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="table-vertical">
+                <table>
+                    <colgroup>
+                        <col span="2" style="width:50%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="table-vertical__th">항목값 항목값 항목값 항목값</th>
+                            <th scope="col" class="table-vertical__th">항목값</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-vertical__td">데이터값</td>
+                            <td class="table-vertical__td">데이터값 데이터값 데이터값 데이터값</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-horizontal table-horizontal--narrow">
+                <table>
+                    <colgroup>
+                        <col style="width:8%;">
+                        <col style="width:25%;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr class="table-horizontal__tr--single">
+                            <th scope="row" colspan="2" class="table-horizontal__th">상환금액</th>
+                            <td class="table-horizontal__td">0원</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="3" class="table-horizontal__th table-horizontal__th--narrow">약<br>정<br>이<br>자</th>
+                            <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                            <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">대출이율</th>
+                            <td class="table-horizontal__td">3.333%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">납입이자</th>
+                            <td class="table-horizontal__td">20,000원</td>
+                        </tr>
+                        <tr class="table-horizontal__tr--single">
+                            <th scope="row" colspan="2" class="table-horizontal__th">중도상환해약금</th>
+                            <td class="table-horizontal__td">-</td>
+                        </tr>
+                        <tr class="table-horizontal__tr--single">
+                            <th scope="row" colspan="2" class="table-horizontal__th">상환금액</th>
+                            <td class="table-horizontal__td">0원</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="3" class="table-horizontal__th table-horizontal__th--narrow">약<br>정<br>이<br>자</th>
+                            <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                            <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">대출이율</th>
+                            <td class="table-horizontal__td">3.333%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="table-horizontal__th">납입이자</th>
+                            <td class="table-horizontal__td">20,000원</td>
+                        </tr>
+                        <tr class="table-horizontal__tr--single">
+                            <th scope="row" colspan="2" class="table-horizontal__th">중도상환해약금</th>
+                            <td class="table-horizontal__td">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

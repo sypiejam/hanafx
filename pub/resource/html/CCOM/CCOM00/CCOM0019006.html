@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">OTP보정 등록</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main app-main--without-footer">
+            <div class="tit-large">OTP시간 맞추기(보정)이란?</div>
+            <div class="container mgt0">
+                <div class="text-default">고객님이 사용중이신 OTP와 인증시스템간의 시간차이를 재조정하여 서버와 일치하도록 하는 과정이며, OTP 보정 후에 정상적으로 사용하실 수 있습니다.</div>
+            </div>
+            <hr class="spacer">
+            <div class="container">
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="password" id="inputText01" class="input__element" title="OTP 비밀번호 입력" placeholder="6자리 숫자 입력">
+                        <label for="inputText01" class="input__label" aria-hidden="true">OTP 비밀번호 입력</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

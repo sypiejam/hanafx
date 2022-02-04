@@ -1,0 +1,75 @@
+<!-- v1.04 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">해당거래 메뉴명 노출</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <p class="text-default">등록된 전화번호(휴대폰, 자택, 직장)중 선택하신 번호로 전화를 드려 ARS를 통해 본인인증 절차를 진행합니다.</p>
+            </div>
+            <div class="container">
+                <div class="input input--on input--readonly">
+                    <div class="input__inner">
+                        <input type="text" id="inputText02" class="input__element" title="휴대폰번호" readonly value="010-1234-1234" placeholder="">
+                        <label for="inputText02" class="input__label" aria-hidden="true">휴대폰번호</label>
+                    </div>
+                    <!-- 에러 메시지 -->
+                </div>
+            </div>
+            <div class="container">
+                <div class="input-wrap">
+                    <!--
+                        * 오류시 class="input-wrap input-wrap--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input">
+                        <div class="input__inner">
+                            <input type="text" class="input__element" placeholder="인증번호 입력" title="인증번호">
+                            <label class="input__label" aria-hidden="true">인증번호</label><!-- 접근성 및 디자인현행화 | aria-hidden="true" 추가 -->
+                            <div class="confirm-code__time">03:00</div>
+                        </div>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <button type="button" class="button-rectangle button-rectangle--darkblue input__submit-button">전송</button>
+                </div>
+                <p class="input-wrap__error" aria-live="assertive">인증번호를 확인해주세요.</p>
+            </div>
+            <div class="container">
+                <div class="guide-wrap">
+                    <ul class="guide-wrap__list">
+                        <li class="guide-wrap__item">당행에 등록된 고객님의 휴대폰번호로 문자가 전송됩니다.</li>
+                        <li class="guide-wrap__item">휴대폰번호 변경은 고객님 본인명의의 휴대폰에 한하여, My하나 &gt; 개인정보조회/변경 메뉴에서 변경이 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

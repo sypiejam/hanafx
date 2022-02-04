@@ -1,0 +1,213 @@
+<!-- 0.95v -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <!-- 접근성 및 디자인현행화 -->
+    <div class="modal-full inner-tab modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">직원선택</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="tab-wrap">
+
+                <!-- 접근성 개선안 반영 -->
+                <ul class="tab-wrap__menu" role="tablist">
+                    <li class="tab-wrap__item" role="presentation">
+                        <!-- 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" class="tab-wrap__button is-active" role="tab" aria-selected="true">지점명검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">직원이름검색</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="container mgt72"><!-- 200702 | 클래스 추가 -->
+                <!-- 검색영역 -->
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <!--
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="search02" class="input__element" title="지점명 입력" placeholder="지점명을 입력하세요" value="">
+                        <label for="search02" class="input__label" aria-hidden="true">지점명 입력</label>
+                        <!-- 200708  | 마크업 위치 변경 -->
+                        <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                        <button type="button" class="input__search-button" title="검색"></button>
+                        <!-- //200708  | 마크업 위치 변경 -->
+                    </div>
+                </div>
+                <!-- //검색영역 -->
+
+                <!-- 최근검색 -->
+                <div class="latest-tag">
+                    <span class="latest-tag__title">최근 검색 : </span>
+                    <button type="button" class="latest-tag__item">
+                        <span class="latest-tag__name">김하나</span>
+                        <span class="latest-tag_number">(4234567)</span>
+                    </button>
+                </div>
+                <!-- //최근검색 -->
+            </div>
+
+            <!-- 검색결과 없음 -->
+            <div class="container container--full">
+                <div class="search-select search-select--no-result">
+                    <h5 class="search-select--no-result__title">
+                        검색 결과가 없습니다.
+                    </h5>
+                </div>
+            </div>
+            <!-- //검색결과 없음 -->
+
+            <!-- 검색결과 -->
+            <div class="container container--full">
+                <div class="search-select">
+                    <div class="search-select__header">
+                        <h5 class="search-select__header--title">전체 <span class="count">3건</span>이 검색되었습니다.</h5>
+                    </div>
+                    <ul class="branch-list">
+                        <li class="branch-list__item">
+                            <div class="accordion-branch" data-element="accordion">
+                                <div data-element="accordion__item">
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" class="accordion-branch__title" data-element="accordion__anchor" title="더보기" role="button">
+                                        을지로지점
+                                        <div class="accordion__button">
+                                            <i class="icon-arrow" aria-hidden="true"></i>
+                                        </div>
+                                    </a>
+                                    <!-- //접근성 및 디자인현행화 -->
+                                    <div data-element="accordion__panel">
+                                        <div class="search-select__list">
+                                            <div class="search-select__item search-select__item--none">
+                                                <strong class="select-none">지점으로 선택</strong>
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <label for="selectEmployee01" class="check-label">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                                    <input type="radio" class="check-input" id="selectEmployee01" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로지점</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <label for="selectEmployee02" class="check-label">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                                    <input type="radio" class="check-input" id="selectEmployee02" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로지점</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나둘셋넷</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <label for="selectEmployee03" class="check-label">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                                    <input type="radio" class="check-input" id="selectEmployee03" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="branch-list__item">
+                            <div class="accordion-branch" data-element="accordion">
+                                <div data-element="accordion__item">
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" class="accordion-branch__title" data-element="accordion__anchor" title="더보기" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        을지로센터
+                                        <div class="accordion__button">
+                                            <i class="icon-arrow" aria-hidden="true"></i>
+                                        </div>
+                                    </a>
+                                    <div data-element="accordion__panel">
+                                        <div class="search-select__list">
+                                            <div class="search-select__item search-select__item--none">
+                                                <strong class="select-none">지점으로 선택</strong>
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <label for="selectEmployee04" class="check-label">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                                    <input type="radio" class="check-input" id="selectEmployee04" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로센터</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <label for="selectEmployee05" class="check-label">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                                    <input type="radio" class="check-input" id="selectEmployee05" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로센터</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나둘셋넷</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <label for="selectEmployee06" class="check-label">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                                    <input type="radio" class="check-input" id="selectEmployee06" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //검색결과 -->
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

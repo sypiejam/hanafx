@@ -1,0 +1,94 @@
+<!-- 0.95v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">이체일시 보류</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main ">
+            <div class="container">
+                <div class="icon-wrap">
+                    <div class="icon-wrap">
+                        <!-- to.개발 200416 디자인 변경으로 하단 영역 추가 -->
+                        <i class="icon-wrap__icon icon-wrap__icon--no-data" aria-hidden="true"></i>
+                        <div class="icon-wrap__icon-word">홍길동님께서는<br>이체가 일시 보류 중입니다.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 접근성 및 디자인현행화 -->
+            <div class="tit-default mgt150">이체일시 보류 현황</div>
+            <div class="container">
+                <div class="list-section">
+                    <ul class="list-wrap">
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <!-- to.개발 200416 디자인 변경으로 class 변경 -->
+                                <strong class="list-wrap__title">시작일시</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value eng">2019-06-26 15:23:10</strong>
+                            </div>
+                        </li>
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <!-- to.개발 200416 디자인 변경으로 class 변경 -->
+                                <strong class="list-wrap__title">종료일시</strong>
+                            </div>
+                            <div class="list-wrap__box list-wrap__box--unit">
+                                <strong class="list-wrap__text list-wrap__text--value eng">2019-06-26 15:23:10</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 접근성 및 디자인현행화 -->
+                <p class="text-guide-small">종료일 전 해지를 하시려면 가까운 영업점으로 방문해 주시기 바랍니다.</p>
+            </div>
+            <div class="container">
+                <div class="button-contained-wrap">
+                    <!-- to.개발 200416 디자인 변경으로 class 변경 -->
+                    <!-- 접근성 및 디자인현행화 -->
+                    <button type="button" class="button-square button-square--border">전화문의</button>
+                    <button type="button" class="button-square button-square--border">영업점찾기</button>
+                    <!-- //접근성 및 디자인현행화 -->
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

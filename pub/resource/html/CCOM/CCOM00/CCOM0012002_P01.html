@@ -1,0 +1,72 @@
+<!-- v0.95 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">스마트간편인증</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <!-- 접근성 및 디자인현행화 -->
+                <p class="text-default color-000">스마트 간편인증은 스마트폰 기기정보와 통신사의 고객정보를 이용하는 편리하고 안전한 본인확인서비스입니다.</p><!-- 200729 | 텍스트 수정 : 이용하여 -> 이용하는 -->
+                <div class="text-guide-sub">2G 이용고객, 법인폰 이용고객, 외산폰(OMD)이용고객, 자급제 단말기 이용고객은 인증이 불가하오니 다른 인증방법을 선택하시기 바랍니다.</div>
+                <!-- //접근성 및 디자인현행화 -->
+            </div>
+            <div class="container">
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy1">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                전체동의
+                            </button>
+                        </div>
+                        <div class="privacy__sub-wrap">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                                <button type="button" class="privacy__detail" >개인정보 수집·이용에 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >개인정보 제공에 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >서비스 이용 약관에 동의</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">인증요청</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>약관동의</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        .common-title{display: block; padding: 10px 24px; margin: 20px 0; background: skyblue;}
+        .common-guide{color: red; font-weight: 500;}
+        .common-bg{background-color: red; color: #fff;}
+        .sub-text{color:#666; font-size:13px;margin-top:40px;}
+        .box .sub-text:first-of-type{margin-top:5px;}
+        .sub-text + div{margin-top:5px;}
+        .spacer{margin-top:10px !important; margin-bottom:30px !important;}
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">약관동의</h1>
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <div id="content" class="app-main app-main--without-footer">
+            <div class="container">
+                <div class="common-guide">id와 aria-labelledby값은 페이지에 추가할때 넣습니다.</div>
+                <div class="common-guide">.radio-wrap 부분 디자인 확인후 수정예정</div>
+                <strong class="common-title">약관동의</strong>
+                <!-- 약관 선택 버튼 + 체크리스트 : modi-privacy1
+                약관 선택 버튼 2개이상(체크리스트 x) : modi-privacy2
+                약관 선택 버튼 1개(체크리스트 x) : modi-privacy3
+                약관 선택 버튼 + 화살표없는 체크리스트 : modi-privacy4
+                확인함 체크버튼 있는 박스형 약관 : modi-agree-confirm -->
+                <!-- 전체동의 전체 컴포넌트-->
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy1">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                전체동의
+                            </button>
+                        </div>
+                        <div class="privacy__sub-wrap">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                                <button type="button" class="privacy__detail" >예금거래기본 약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >적립식 예금 약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >비과세종합저축 특약</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >계좌간 자동이체 약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >주택청약종합저축 특약</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >주택청약종합저축 상품설명서</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >은행상품 구속행위 규제 제도 안내</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >불법 탈법 차명거래 금지 설명 확인서</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >예금보호법 설명 확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agree-wrap__txt">본인은 위 항목에 대한 내용을 충분히 이해하고 확인하였습니다.</div>
+
+                    <div class="agree-wrap__section">
+                        <div class="privacy modi-privacy2">
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                    aria-labelledby=""></button>
+                                <button type="button" class="privacy__detail" id="" >
+                                    마케팅 활용 약관[선택]
+                                </button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                    aria-labelledby=""></button>
+                                <button type="button" class="privacy__detail" id="" >
+                                    마케팅 활용 약관[선택]
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <hr>
+
+                    <div class="agree-wrap">
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="" class="checkbox-wrap__check checked-js" name="mail-check">
+                            <label for="" class="checkbox-wrap__label checkbox-wrap__label--color-black">약관 이메일로 받기[선택]</label>
+                        </div>
+                    </div>
+
+                    <div class="agree-wrap__mail">
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="" class="checkbox-wrap__check checked-js" name="mail-check">
+                            <label for="" class="checkbox-wrap__label fw-300 color-000">약관 이메일로 받기[선택]</label>
+                        </div>
+                        <div class="inpwrap-mailselect">
+                            <div class="input input--on">
+                                <!--
+                                    * 오류시 class="input input--error"
+                                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                                -->
+                                <div class="input__inner">
+                                    <input type="text" id="inputText01" readonly class="input__element" title="이메일주소" value="***o@hanba.com" placeholder="">
+                                    <label for="inputText01" class="input__label" aria-hidden="true">이메일주소</label>
+                                    <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                                </div>
+                                <!-- 에러 메시지 -->
+                                <p class="input__error" aria-live="assertive">주민등록번호 오류입니다.</p>
+                            </div>
+
+                            <div class="inpwrap__txtinfo">개인정보 변경을 원하실 경우 마이하나 &gt; 개인정보 &gt; 개인정보 변경에서 수정하실 수 있습니다.</div>
+                            <div class="button--gray__wrap">
+                                <button type="button" class="button--gray" >개인정보변경</button>
+                                <button type="button" class="button--gray" >지금바로받기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //전체동의 전체 컴포넌트-->
+                <!--//-->
+                <hr class="spacer">
+                <h2>약관상세팝업</h2>
+                <!-- 약관상세팝업 -->
+                <div class="agree-view">
+                    <div class="agree-view__number">
+                        2019.12.12 개정<br>
+                        준법감시인 심사필번호 제2019-약관-122호
+                    </div>
+                    <div class="agree-view__title">
+                        예금거래기본약관
+                    </div>
+                    <div class="agree-view__contents">
+                        이 예금거래 기본약관(이하”약관”이라 한다)은 (주)
+                        하나은행(이하”은행”이라 한다)과 거래처(또는 예금
+                        주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림
+                        없이 처리하는 한편, 서로의 이해관계를 합리적으로
+                        조정하기 위하여 기본적이고 일반적인 사항을 정한
+                        것입니다.<br>
+                        이 예금거래 기본약관(이하”약관”이라 한다)은 (주)
+                        하나은행(이하”은행”이라 한다)과 거래처(또는 예금
+                        주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림
+                        없이 처리하는 한편, 서로의 이해관계를 합리적으로
+                        조정하기 위하여 기본적이고 일반적인 사항을 정한
+                        것입니다.<br>
+                        이 예금거래 기본약관(이하”약관”이라 한다)은 (주)
+                        하나은행(이하”은행”이라 한다)과 거래처(또는 예금
+                        주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림
+                        없이 처리하는 한편, 서로의 이해관계를 합리적으로
+                        조정하기 위하여 기본적이고 일반적인 사항을 정한
+                        이 예금거래 기본약관(이하”약관”이라 한다)은 (주)
+                        하나은행(이하”은행”이라 한다)과 거래처(또는 예금
+                        주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림
+                        없이 처리하는 한편, 서로의 이해관계를 합리적으로
+
+                    </div>
+                </div>
+                <!--// 약관상세팝업 -->
+
+                <hr class="spacer">
+                <h2>상품명</h2>
+
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy3">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                상품별 필수 개인(신용)정보 수집·이용 및 제공동의서
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy4">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >아래 내용을 확인하세요</button>
+                        </div>
+                        <div class="privacy__sub-wrap no-bullet-type">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                                <button type="button" class="privacy__detail">귀 행이 위와 같이 본인의 개인(신용)장보를 제공하는 것에 동의합니다</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail">귀 행이 위와 같이 본인의 개인(신용)장보를 제공하는 것에 동의합니다.</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agree-wrap__txt agree-wrap__txt--type02">
+                        <span class="bold">고유식별정보</span>는 개인정보보호법 제24조에 규정된 <span class="bold">[주민등록번호, 여권번호, 운전면허번호, 외국인등록번호]</span>를 의미합니다. 단, 주민등록번호는 법령에서 구체적으로 그 처리를 요구하거나 허용한 경우에 한합니다.
+                    </div>
+
+                    <div class="privacy modi-privacy3">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >고객권리안내문</button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="spacer">
+
+                <!-- 확인 약관 -->
+                <div class="agree-confirm modi-agree-confirm">
+                    <div class="privacy__item">
+                        <div  class="privacy__title" id="">
+                            아래 내용을 확인하세요
+                        </div>
+                        <span class="checkbox-wrap--button">
+                            <input type="checkbox" id="" class="checkbox-wrap__check">
+                            <label for="" class="checkbox-wrap__label">확인함</label>
+                        </span>
+                    </div>
+                    <div class="agree-confirm__contents">
+                        본인은 본 동의서의 내용을 이해하였으며, 개인(신용)정보 제공 관련 고객 권리 안내문을 수령하였습니다.
+                    </div>
+                </div>
+                <!-- //확인 약관 -->
+
+                <hr class="spacer">
+                <h2 class="text-default color-333">오픈뱅킹 약관동의</h2>
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy1">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                전체동의
+                            </button>
+                        </div>
+                        <div class="privacy__sub-wrap">
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >서비스 이용약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >참가은행 이용약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >계좌통합관리서비스 이용약관 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >정보수집&middot;활용 이용약관</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agree-wrap__txt">본인은 위 항목에 대한 내용을 충분히 이해하고 확인하였습니다.</div>
+
+                    <div class="agree-wrap__section">
+                        <div class="privacy modi-privacy2">
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                    aria-labelledby=""></button>
+                                <button type="button" class="privacy__detail" id="" >
+                                    [선택]오픈뱅킹용 개인(신용)정보수집&middot;이용동의
+                                </button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                    aria-labelledby=""></button>
+                                <button type="button" class="privacy__detail" id="" >
+                                    [선택]개인(신용)정보수집&middot;이용 및 제공동의
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agree-confirm modi-agree-confirm">
+                        <div class="privacy__item">
+                            <div  class="privacy__title" id="">
+                                제3자 정보제공동의
+                            </div>
+                            <span class="checkbox-wrap--button">
+                                <input type="checkbox" id="" class="checkbox-wrap__check">
+                                <label for="" class="checkbox-wrap__label">확인함</label>
+                            </span>
+                        </div>
+                        <div class="agree-confirm__contents">
+                            약관내용약관내용약관내용약관내용약관내용
+                        </div>
+                    </div>
+                    <div class="agree-confirm modi-agree-confirm">
+                        <div class="privacy__item">
+                            <div  class="privacy__title" id="">
+                                출금동의
+                            </div>
+                            <span class="checkbox-wrap--button">
+                                <input type="checkbox" id="" class="checkbox-wrap__check">
+                                <label for="" class="checkbox-wrap__label">확인함</label>
+                            </span>
+                        </div>
+                        <div class="agree-confirm__contents">
+                            본인은 (주)하나은행 오픈뱅킹 서비스를 이용함에 있어 본인명의 출금등록 계좌에서 처리 요청 금액의 출금처리에 동의합니다.<br>(오픈뱅킹서비스 이용약관 제6조)
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="privacy modi-privacy2">
+                    <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                            aria-labelledby=""></button>
+                        <button type="button" class="privacy__detail" id="" >
+                            개인정보 수집 및 이용동의
+                        </button>
+                    </div>
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                            aria-labelledby=""></button>
+                        <button type="button" class="privacy__detail" id="" >
+                            개인정보 제공 동의
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy1">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                전체동의
+                            </button>
+                        </div>
+                        <div class="privacy__sub-wrap">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                                <button type="button" class="privacy__detail" >Yessign 인증서 이용약관 및 개인정보 취급방침</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >공인인증서 발급에 따른 개인정보 수집 및 이용동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >공인인증서 발급에 따른 개인정보 제3자 제공에 대한 동의</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agree-wrap__txt">본인은 위 항목에 대한 내용을 충분히 이해하고 확인하였습니다.</div>
+
+                    <div class="agree-wrap__tit">공인인증서 온라인 발급 사전 동의여부</div>
+
+                    <div class="radio-wrap">
+                        <input type="radio" id="agree01" class="radio-wrap__radio" name="agree">
+                        <label for="agree01" class="radio-wrap__label">
+                            동의함
+                            <span class="mgl20">인증서 발급/재발급, 갱신 가능</span>
+                        </label>
+                    </div>
+                    <div class="agree-wrap__txt">전자서명법 시행규칙 개정에 따라 스마트폰에서 공인인증서 발급 시 사전동의가 필요합니다.</div>
+
+                </div>
+
+                <hr class="spacer">
+
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy1">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                하나멤버스 이용 약관 동의
+                            </button>
+                        </div>
+                        <div class="privacy__sub-wrap">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                                <button type="button" class="privacy__detail" >하나멤버스 이용약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >온라인 서비스 이용약관</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >개인(신용)정보 수집&middot;이용 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >개인(신용)정보의 제3자 제공 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >개인(신용)정보의 위탁 동의</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agree-wrap__txt">본인은 위 항목에 대한 내용을 충분히 이해하고 확인하였습니다.</div>
+
+                    <div class="agree-wrap__section">
+                        <div class="privacy modi-privacy2">
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                    aria-labelledby=""></button>
+                                <button type="button" class="privacy__detail" id="" >
+                                    개인(신용)정보 수집·이용 동의(선택)
+                                </button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                    aria-labelledby=""></button>
+                                <button type="button" class="privacy__detail" id="" >
+                                    개인(신용)정보의 제3자 제공 동의(선택)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="privacy modi-privacy1">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                전체 동의
+                            </button>
+                        </div>
+                        <div class="privacy__sub-wrap">
+                            <div class="privacy__item privacy__item--checked">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                                <button type="button" class="privacy__detail" >개인정보 수집&middot;이용&middot;제공 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >고객식별정보 처리 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >서비스 이용약관 동의</button>
+                            </div>
+                            <div class="privacy__item">
+                                <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                                <button type="button" class="privacy__detail" >통신사 이용약관 동의</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <strong class="common-title common-bg">동의서 타입 (디자인 확인 후 수정예정)</strong>
+                <div class="round-box">
+                    <div class="round-box__header">
+                        <strong class="text-default">동의서</strong>
+                    </div>
+                    <div class="round-box__body">
+                        <span class="text-guide">본인은 주식회사 하나은행과 아래의 예금을 담보 로 0000년 00월 00일 실행된 예금담보대출금을 상계(담보제공된 예금을 해지하여 대출금을 상환) 처리함에 동의합니다.</span>
+                    </div>
+                    <div class="round-box__body round-box__body--gray">
+                        <h2 class="product-list__title">상계 후 차액</h2>
+                        <p class="product-list__name">(예수금해지액-상환대상대출금)</p>
+                        <div class="product-list__amount">
+                            <strong><span class="eng">900,261</span>원</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-default">
+                    0000년 00월 00일<br>채무자 및 담보제공자 성명 : 김하나<br>주소 : 서울시 강남구 학동 897 1동 130호
+                </div>
+                <span class="checkbox-wrap checkbox-wrap--block mgt48">
+                    <input type="checkbox" id="agreement" class="checkbox-wrap__check" name="agreement">
+                    <label for="agreement" class="checkbox-wrap__label color-000">동의합니다.</label>
+                </span>
+
+                <hr class="spacer">
+
+                <div class="agree-confirm modi-agree-confirm">
+                    <div class="privacy__item">
+                        <div  class="privacy__title" id="">
+                            출금동의
+                        </div>
+                        <span class="checkbox-wrap--button">
+                            <input type="checkbox" id="" class="checkbox-wrap__check">
+                            <label for="" class="checkbox-wrap__label">확인함</label>
+                        </span>
+                    </div>
+                    <div class="agree-confirm__contents">
+                        본인은 ㈜하나은행 오픈뱅킹서비스를 이용함에 있어 본인명의 출금등록 계좌에서 처리 요청 금액의 출금처리에 동의합니다.(오픈뱅킹서비스 이용약관 제6조)
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="agree-view">
+                    <div class="agree-view__title">
+                        계좌통합관리서비스 이용약관 동의
+                    </div>
+                    <div class="agree-view__contents">
+                        오픈뱅킹 다른은행계좌 등록을 위해 조회된 계좌번호와 은행명을 활용함<br>
+                        오픈뱅킹 다른은행계좌 등록을 위해 조회된 계좌번호와 은행명을 활용함<br>
+                        오픈뱅킹 다른은행계좌 등록을 위해 조회된 계좌번호와 은행명을 활용함<br>
+                        오픈뱅킹 다른은행계좌 등록을 위해 조회된 계좌번호와 은행명을 활용함
+                    </div>
+                </div>
+
+                <div class="agree-confirm modi-agree-confirm">
+                    <div class="privacy__item">
+                        <div  class="privacy__title" id="">
+                            정보수집 &middot; 활용 동의
+                        </div>
+                        <span class="checkbox-wrap--button">
+                            <input type="checkbox" id="" class="checkbox-wrap__check">
+                            <label for="" class="checkbox-wrap__label">확인함</label>
+                        </span>
+                    </div>
+                    <div class="agree-confirm__contents">
+                        오픈뱅킹 다른은행계좌 등록을 위해 조회된 계좌번호와 은행명을 활용함
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="agree-confirm modi-agree-confirm">
+                    <div class="privacy__item">
+                        <div  class="privacy__title" id="">
+                            제3자 정보제공동의
+                        </div>
+                        <span class="checkbox-wrap--button">
+                            <input type="checkbox" id="" class="checkbox-wrap__check">
+                            <label for="" class="checkbox-wrap__label">확인함</label>
+                        </span>
+                    </div>
+                    <div class="agree-confirm__contents">
+                        약관내용약관내용약관내용약관내용약관내용
+                    </div>
+                </div>
+                <div class="agree-confirm modi-agree-confirm">
+                    <div class="privacy__item">
+                        <div  class="privacy__title" id="">
+                            출금동의
+                        </div>
+                        <span class="checkbox-wrap--button">
+                            <input type="checkbox" id="" class="checkbox-wrap__check">
+                            <label for="" class="checkbox-wrap__label">확인함</label>
+                        </span>
+                    </div>
+                    <div class="agree-confirm__contents">
+                        본인은 (주)하나은행 오픈뱅킹 서비스를 이용함에 있어 본인명의 출금등록 계좌에서 처리 요청 금액의 출금처리에 동의합니다.<br>(오픈뱅킹서비스 이용약관 제6조)
+                    </div>
+                </div>
+
+                <strong class="common-title common-bg">청약서 타입(디자인 확인 후 수정예정)</strong>
+                <div class="tit-small bold">청약문서 확인 및 전송</div>
+                <div class="card">
+                    <div class="card__wrap">
+                        <p class="card__text-wrap text-small">
+                            아래의 청약서 ‘상세보기’를 누르시면 청약서 내용을 확인하실 수 있습니다.
+                            <br>
+                            청약서 상세보기 화면에서 좌상단 <i class="card__text-wrap__icon ">다운로드</i> 버튼을 누르시면 청약서 보내기가 가능하여 청약서를 바로 받아 볼 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="privacy">
+                    <div class="row-list">
+                        <div class="row-list__item">
+                            <button type="button" class="row-list__link">
+                                <span class="row-list__title">청약서(핵심설명서)</span>
+                                <span class="row-list__anchor">
+                                    <i class="icon-arrow" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="privacy__sub-wrap privacy--white">
+                        <div class="text-guide privacy__item--padding">별도 청약서 수령 요청 또는 청약 관련 문의사항은 중소기업중앙회 콜센터(<a href="tel:1666-9988" title="전화앱 이동">1666-9988</a>)로 연락하시기 바랍니다.</div>
+                    </div>
+                </div>
+                <span class="checkbox-wrap">
+                    <input type="checkbox" id="" class="checkbox-wrap__check" name="">
+                    <label for="" class="checkbox-wrap__label fw-300 color-000">본인은 위 안내에 대해 확인하고 이해합니다.</label>
+                </span>
+                <strong class="common-title">단일동의체크</strong>
+                <div class="tit-small">약관동의</div>
+
+                <div class="privacy modi-privacy3">
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                            aria-labelledby=""></button>
+                        <button type="button" class="privacy__detail" id="" >
+                            하나입출금거래내역문자통지서비스 이용약관
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <p class="fw-300 color-333">출국사실을 확인하기 위하여 고객님의 주민등록번호 및 성명을 출국정보 조회시스템을운영하고 있는 금융결제원을 통하여 법무부 출입국관리사무소로 전송하고, 확인 받는데 동의합니다. </p>
+                <div class="privacy modi-privacy3">
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                            aria-labelledby=""></button>
+                        <button type="button" class="privacy__detail" id="" >
+                            전자금융사기예방
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="privacy modi-privacy3">
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                            aria-labelledby=""></button>
+                        <button type="button" class="privacy__detail" id="" >
+                            만기 시 자동재예치 입출금계좌 지정에 동의합니다.
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="privacy modi-privacy3">
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                            aria-labelledby=""></button>
+                        <button type="button" class="privacy__detail" id="" >
+                            개인(신용)정보 수집&middot;이용 및 제공 동의서
+                        </button>
+                    </div>
+                </div>
+
+                <hr class="spacer">
+
+                <div class="agree-wrap">
+                    <div class="privacy modi-privacy3">
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"
+                                aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                개인(신용)정보 조회 동의서
+                            </button>
+                        </div>
+                    </div>
+                    <div class="agree-wrap__txt">본인은 위 항목에 대한 내용을 충분히 이해하고 확인 하였습니다.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+
+    <script>
+        /*
+            input에 checked-js 클래스가 들어가 있어야 합니다
+        */
+        $(function () {
+
+            function checkClick() {
+                var tmp = $('.checked-js');
+
+                $('.inpwrap-mailselect').hide();
+
+                tmp.off('click').on('click', function () {
+
+                    if (tmp.prop('checked')) {
+                        tmp.closest('.agree-wrap__mail').find('.inpwrap-mailselect').slideDown(200);
+                    } else {
+                        tmp.closest('.agree-wrap__mail').find('.inpwrap-mailselect').slideUp(200);
+                    }
+                });
+            }
+            checkClick();
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full">
+        <div class="modal__header">
+            <h1 class="modal__header--title">직원선택</h1>
+        </div>
+        <div class="modal__contents">
+            <!-- 검색영역 -->
+            <div class="container">
+                <div class="inpwrap inpwrap--full">
+                    <input id="search02" class="input-text" type="search" placeholder="지점 및 직원이름을 입력하세요">
+                    <label for="search02" aria-hidden="true"><i>지점명 및 직원이름 입력</i></label>
+                    <button type="button" class="button button--gcircle-del" style="display: none;">텍스트삭제</button>
+                </div>
+            </div>
+            <!-- //검색영역 -->
+
+            <!-- 최근검색 -->
+            <div class="container mgt72">
+                <h5 class="title-xsmall">최근 검색한 직원</h5>
+                <div class="tag-list mgt30">
+                    <button type="button" class="tag-list__item">김하나 (4234567)</button>
+                    <button type="button" class="tag-list__item">김하나 (4234567)</button>
+                    <button type="button" class="tag-list__item">김하나 (4234567)</button>
+                </div>
+            </div>
+            <!-- //최근검색 -->
+
+            <!-- 검색결과 없음 -->
+            <div class="search-select search-select--no-result mgt90">
+                <h5 class="search-select--no-result__title">
+                    검색 결과가 없습니다.
+                </h5>
+            </div>
+            <!-- //검색결과 없음 -->
+
+            <!-- 검색결과 -->
+            <div class="search-select mgt90">
+
+                <div class="search-select__header">
+                    <h5 class="search-select__header--title">전체 <span class="count">3건</span>이 검색되었습니다.</h5>
+                </div>
+
+                <div class="search-select__list">
+                    <div class="search-select__item search-select__item--none">
+                        <strong class="select-none">직원선택안함</strong>
+                        <label for="selectEmployee01" class="check-label" title="선택">
+                            <input type="radio" class="check-input" id="selectEmployee01" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                            <i class="icon" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+                    <div class="search-select__item">
+                        <strong class="branch">본점</strong>
+                        <span class="employee">
+                            <strong class="employee__name">김하나</strong>
+                            <span class="employee__id">(1234567)</span>
+                        </span>
+                        <label for="selectEmployee02" class="check-label" title="선택">
+                            <input type="radio" class="check-input" id="selectEmployee02" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                            <i class="icon" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+                    <div class="search-select__item">
+                        <strong class="branch">을지로입구점</strong>
+                        <span class="employee">
+                            <strong class="employee__name">김하나둘셋넷</strong>
+                            <span class="employee__id">(1234567)</span>
+                        </span>
+                        <label for="selectEmployee03" class="check-label" title="선택">
+                            <input type="radio" class="check-input" id="selectEmployee03" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                            <i class="icon" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+                    <div class="search-select__item">
+                        <strong class="branch">을지로입구점</strong>
+                        <span class="employee">
+                            <strong class="employee__name">김하나둘셋넷</strong>
+                            <span class="employee__id">(1234567)</span>
+                        </span>
+                        <label for="selectEmployee04" class="check-label" title="선택">
+                            <input type="radio" class="check-input" id="selectEmployee04" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                            <i class="icon" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+                    <div class="search-select__item">
+                        <strong class="branch">을지로입구점</strong>
+                        <span class="employee">
+                            <strong class="employee__name">김하나둘셋넷</strong>
+                            <span class="employee__id">(1234567)</span>
+                        </span>
+                        <label for="selectEmployee05" class="check-label" title="선택">
+                            <input type="radio" class="check-input" id="selectEmployee05" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                            <i class="icon" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+                    <div class="search-select__item">
+                        <strong class="branch">을지로입구점</strong>
+                        <span class="employee">
+                            <strong class="employee__name">김하나둘셋넷</strong>
+                            <span class="employee__id">(1234567)</span>
+                        </span>
+                        <label for="selectEmployee06" class="check-label" title="선택">
+                            <input type="radio" class="check-input" id="selectEmployee06" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                            <i class="icon" aria-hidden="true"></i>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            <!-- //검색결과 -->
+
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

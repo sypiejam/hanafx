@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <!-- 접근성 및 디자인현행화 -->
+    <div class="modal-full inner-tab modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">주소찾기</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="tab-wrap">
+
+                <!-- 접근성 개선안 반영 -->
+                <ul class="tab-wrap__menu" role="tablist">
+                    <li class="tab-wrap__item" role="presentation">
+                        <!-- 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" class="tab-wrap__button is-active" role="tab" aria-selected="true">통합검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">지번검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">도로명검색</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="find-address after-tab"><!-- 200716 | after-tab 클래스 추가 -->
+                <div class="container">
+                    <p class="text-default">건물의 주거형태와 주소를 정확히 입력, <br>선택하여 주시기 바랍니다.</p>
+                </div>
+                <!-- to.개발 200416 디자인 변경으로 인한 mgt150 추가 -->
+                <div class="container mgt150">
+                    <div class="input input--on">
+                        <!--
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__inner">
+                            <input type="text" id="inputText04" class="input__element" title="기본주소 입력" placeholder="기본주소 입력" value="서울 중구 을지로 66">
+                            <label for="inputText04" class="input__label" aria-hidden="true">기본주소</label>
+                            <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                        </div>
+                    </div>
+                    <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                        <!--
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__inner">
+                            <input type="text" id="inputText05" class="input__element" title="건물번호 입력" placeholder="건물번호 입력" value="">
+                            <label for="inputText05" class="input__label" aria-hidden="true">건물번호</label>
+                            <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- to.개발 200416 디자인 변경으로 인한 class 수정 -->
+                <div class="tit-default">주거형태</div>
+                <div class="container">
+                    <div class="input">
+                        <div class="button-select">
+                            <!-- 접근성 및 디자인현행화 -->
+                            <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_1" title="주거형태 선택">선택</button>
+                            <!-- //접근성 및 디자인현행화 -->
+                        </div>
+                    </div>
+                    <!-- 아파트, 빌라, 연립, 다세대, 오피스텔 선택시 노출 -->
+                    <!-- to.개발 200416 디자인 변경으로 인한 mgt150 추가 -->
+                    <div class="input-wrap"><!-- 200714 | 간격 클래스 삭제 -->
+                        <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                            <!--
+                                * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                            -->
+                            <div class="input__inner">
+                                <input type="text" id="inputText07" class="input__element" title="동 입력" placeholder="동 입력" value="">
+                                <label for="inputText07" class="input__label" aria-hidden="true">동</label>
+                                <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                            </div>
+                        </div>
+                        <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                            <!--
+                                * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                            -->
+                            <div class="input__inner">
+                                <input type="text" id="inputText06" class="input__element" title="호 입력" placeholder="호 입력" value="">
+                                <label for="inputText06" class="input__label" aria-hidden="true">호</label>
+                                <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //아파트, 빌라, 연립, 다세대, 오피스텔 선택시 노출 -->
+                    <!-- 단독 , 기타 선택시 노출 -->
+                    <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                        <!--
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__inner">
+                            <input type="text" id="inputText07" class="input__element" title="상세주소 입력" placeholder="상세주소 입력" value="">
+                            <label for="inputText07" class="input__label" aria-hidden="true">상세주소</label>
+                            <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                        </div>
+                    </div>
+                    <!-- //단독 , 기타 선택시 노출 -->
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3">이전</button>
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <div id="combobox_1" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">콤보박스 타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션4</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

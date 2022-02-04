@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>아코디언</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        h2.guide-title {
+            padding: 10px 24px;
+            margin: 20px 0;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">아코디언</h1>
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <div id="content" class="app-main app-main--without-footer">
+            <!-- 기본 아코디언 : modi-accordion1
+                백그라운드 그레이 아코디언 : modi-accordion2
+                리스트형 아코디언 : modi-accordion3 -->
+            <h2 class="guide-title">테이블 형식 아코디언 기본</h2>
+            <!-- 같은 유형의 페이지 ID : [BCUS1102001] -->
+            <div class="container">
+
+                <div class="accordion modi-accordion1" data-element="accordion" data-options='{ "isInitActive": true }'> <!-- 작업 페이지 안에서는 지워주세요  가이드용으로 넣어둔 예시입니다 -->
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">해지 정보</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!-- accordion__inner  -->
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+                                패널내용 패널내용
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+                        </div>
+                        <!--// accordion__inner -->
+                    </div>
+                </div>
+
+
+            </div>
+            <h2 class="guide-title">테이블 형식 아코디언 - border-top</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0161001_P01] [BLON0207001] [BDEP0205002] -->
+            <div class="container">
+                <div class="accordion modi-accordion1" data-element="accordion" data-options='{ "isInitActive": true }' role="presentation">
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">기본정보</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <div class="accordion__panel" data-element="accordion__panel" aria-labelledby="pualugin-accordion-10" role="region">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">패널내용 패널내용</div>
+                            <!--// 컨텐츠 영역 -->
+                            <!-- <div class="table-horizontal table-horizontal--border">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:33%;">
+                                        <col style="width:67%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="table-horizontal__th">상품명</th>
+                                            <td class="table-horizontal__td table-horizontal__td--right">369정기예금</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="table-horizontal__th">계좌번호</th>
+                                            <td class="table-horizontal__td table-horizontal__td--right">111-******-56987</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="table-horizontal__th">신규일자</th>
+                                            <td class="table-horizontal__td table-horizontal__td--right">2019.01.06</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="table-horizontal__th">만기일자</th>
+                                            <td class="table-horizontal__td table-horizontal__td--right">2020.01.06</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">테이블 형식 아코디언 - border-top + card 형</h2>
+            <!-- 같은 유형의 페이지 ID : [BLON0204001]-->
+            <div class="container">
+
+                <!-- account-accordion -->
+                <div class="account-accordion">
+
+                    <div class="account-accordion__box">
+                        <div class="name">하나멤버스 신용 대출</div>
+                        <div class="number">123-******-12345</div>
+                    </div>
+
+                    <div class="accordion modi-accordion1" data-element="accordion" data-options='{ "isInitActive": true }'>
+                        <div class="accordion__item" data-element="accordion__item">
+                            <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                                <span class="title-name">실행번호</span>
+                                <span class="accordion__button">
+                                    <i class="icon-arrow" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__panel" data-element="accordion__panel">
+                                 <!-- 컨텐츠 영역-->
+                                <div class="accordion__inner">
+                                    패널내용 패널내용
+                                    <!-- <div class="table-horizontal table-horizontal--background border-t">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:30%;">
+                                            <col style="width:70%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">대출원금</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right"><span class="eng">10,000,000</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">대출잔액</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right"><span class="eng">10,000,000</span>원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">기준금리명</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right">여신시장금리 금융체6개월물</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">대출금리</th>
+                                                <td class="table-horizontal__td table-horizontal__td--small table-horizontal__td--right">
+                                                    <span class="eng">3.227</span>%<br>기준금리 <span class="eng">1.417%</span> + 가산금리 <span class="eng">1.810%</span>
+                                                    <a href="#" class="button-small button-small--link button-small--border bg-transparent">가계대출기준금리조회</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">부수거래<br>감면금리</th>
+                                                <td class="table-horizontal__td">
+                                                    <ul class="info-list__group">
+                                                        <li class="info-list__item">
+                                                            <div class="info-list__label">급여이체</div>
+                                                            <div class="info-list__value text-default"><span class="eng">-0.300</span>%</div>
+                                                        </li>
+                                                        <li class="info-list__item">
+                                                            <div class="info-list__label">1Qbank이체</div>
+                                                            <div class="info-list__value text-default"><span class="eng">-0.100</span>%</div>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> -->
+                                </div>
+                                <!--// 컨텐츠 영역 -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--// account-accordion -->
+
+
+
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0160001_P01]-->
+            <div class="container">
+
+                <div class="accordion accordion-type1 modi-accordion2" data-element="accordion" data-options='{ "isInitActive": true }'> <!-- 작업 페이지 안에서는 지워주세요  가이드용으로 넣어둔 예시입니다 -->
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">휴면계좌 해지 및 지급신청 방법</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!-- accordion__inner  -->
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+                                패널내용 패널내용
+                                <!-- <ul class="guide-wrap__list guide-wrap__list--small">
+                                    <li class="guide-wrap__item">인터넷 뱅킹 또는 영업점 방문을 통하여 해지, 지급신청이 가능합니다.</li>
+                                    <li class="guide-wrap__item">잔액이 100만원을 초과하는 계좌, 실명미확인 계좌의 경우에는 신분증 지참 후 영업점을 방문하셔야 합니다.</li>
+                                </ul> -->
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+
+
+                        </div>
+                        <!--// accordion__inner -->
+                    </div>
+                </div>
+
+
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - bg-white</h2>
+            <!-- 같은 유형의 페이지 ID : [BSEC0101001]-->
+            <div class="container">
+
+                <div class="accordion modi-accordion1" data-element="accordion" data-options='{ "isInitActive": true }' role="presentation">
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">공인인증서 제출 또는 생체인증</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <div class="accordion__panel" data-element="accordion__panel" aria-labelledby="pualugin-accordion-10" role="region">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+                                패널내용 패널내용
+                                <!-- <div class="table-horizontal table-horizontal--border">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:33%;">
+                                            <col style="width:67%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">상품명</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right">369정기예금</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">계좌번호</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right">111-******-56987</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">신규일자</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right">2019.01.06</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="table-horizontal__th">만기일자</th>
+                                                <td class="table-horizontal__td table-horizontal__td--right">2020.01.06</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> -->
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - full-size shadow X</h2>
+            <!-- 같은 유형의 페이지 ID : [FFPM0301002]-->
+            <div class="container">
+
+                <ul class="accodion-list">
+                    <li>
+                        <div class="accordion modi-accordion3" data-element="accordion" data-options='{ "isInitActive": true }'> <!-- 작업 페이지 안에서는 지워주세요  가이드용으로 넣어둔 예시입니다 -->
+                            <div data-element="accordion__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                                    <span class="title-name">상품내용</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="accordion__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner">
+                                        패널내용 패널내용
+                                        <!-- <div class="guide-wrap">
+                                            <ul class="guide-wrap__list">
+                                                <li class="guide-wrap__item">상품특징</li>
+                                                <li class="guide-wrap__item">예금종류</li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion modi-accordion3" data-element="accordion">
+                            <div data-element="accordion__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                                    <span class="title-name">우대혜택</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="accordion__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner">
+                                        패널내용 패널내용
+                                        <!-- <div class="guide-wrap">
+                                            <ul class="guide-wrap__list">
+                                                <li class="guide-wrap__item fw-500">우대금리</li>
+                                                <li class="guide-wrap__item fw-500">특별금리</li>
+                                                <li class="guide-wrap__item">중도해지(인출)</li>
+                                                <li class="guide-wrap__item">절세혜택</li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion modi-accordion3" data-element="accordion">
+                            <div data-element="accordion__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                                    <span class="title-name">금리안내</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="accordion__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner">
+                                        패널내용 패널내용
+                                        <!-- <div class="guide-wrap">
+                                            <ul class="guide-wrap__list">
+                                                <li class="guide-wrap__item">기본금리</li>
+                                                <li class="guide-wrap__item fw-500">우대금리</li>
+                                                <li class="guide-wrap__item fw-500">특별금리</li>
+                                                <li class="guide-wrap__item">중도해지금리</li>
+                                                <li class="guide-wrap__item">만기 후 금리</li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - full-size 질문 </h2>
+            <!-- 같은 유형의 페이지 ID : [FFPM0301002]-->
+            <div class="container">
+                <ul class="faq-accordion" data-element="accordion">
+                    <li class="faq-accordion__item" data-element="accordion__item">
+                        <button type="button" class="faq-accordion__anchor" data-element="accordion__anchor">
+                            <i class="faq-accordion--asked">질문</i>
+                            <strong class="faq-accordion--title">송금 완료후 송금 받는 이의 페이팔 계정 잔액에 바로 실시간 반영되나요?</strong>
+                        </button>
+                        <div class="faq-accordion__panel" data-element="accordion__panel">
+                            <div class="faq-accordion__detail">
+                                예. 하나 글로벌 페이서비스는 24시간 실시간 송금 서비스로 송금액이 받으시는 분의 페이팔 계정 잔액에 바로 반영됩니다.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq-accordion__item" data-element="accordion__item">
+                        <button type="button" class="faq-accordion__anchor" data-element="accordion__anchor">
+                            <i class="faq-accordion--asked">질문</i>
+                            <strong class="faq-accordion--title">송금 완료후 송금 받는 이의 페이팔 계정 잔액에 바로 실시간 반영되나요?</strong>
+                        </button>
+                        <div class="faq-accordion__panel" data-element="accordion__panel">
+                            <div class="faq-accordion__detail">
+                                예. 하나 글로벌 페이서비스는 24시간 실시간 송금 서비스로 송금액이 받으시는 분의 페이팔 계정 잔액에 바로 반영됩니다.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - 체크박스</h2>
+            <!-- 같은 유형의 페이지 ID : [FFND0101002_P02]-->
+            <div class="container">
+                <div class="qna-box" data-element="accordion">
+                    <div class="qna-box__item" data-element="accordion__item">
+                        <!-- 접근성 및 디자인현행화 -->
+                        <a href="#" class="qna-box__anchor" data-element="accordion__anchor" role="button">
+                        <!-- //접근성 및 디자인현행화 -->
+                            1. 다음 중 현재 투자하는 자금에 대하여 손님
+                            이 감내할 수 있는 손실 수준은 어느정도 입니까?
+                            <div class="accordion__button" title="더보기"></div>
+                        </a>
+                        <div class="qna-box__panel" data-element="accordion__panel">
+                            <ul class="panel__list">
+                                <li>
+                                    <span class=" checkbox-wrap checkbox-wrap--block">
+                                        <input type="checkbox" id="chk1" class="checkbox-wrap__check" name="chk1"
+                                            checked>
+                                        <label for="chk1" class="checkbox-wrap__label fw-400 color-000">
+                                            <i class="panel__list__icon">
+                                                <img src="../../../../resource/images/C/img_invest01.png"
+                                                    aria-hidden="true">
+                                            </i>
+                                            <span class="panel__list__info">
+                                                기대수익이 높다면 위험이 높아도 상관하지 않겠다.
+                                            </span>
+                                        </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class=" checkbox-wrap checkbox-wrap--block">
+                                        <input type="checkbox" id="chk2" class="checkbox-wrap__check" name="chk2">
+                                        <label for="chk2" class="checkbox-wrap__label fw-400 color-000">
+                                            <i class="panel__list__icon">
+                                                <img src="../../../../resource/images/C/img_invest02.png"
+                                                    aria-hidden="true">
+                                            </i>
+                                            <span class="panel__list__info">
+                                                투자원금 중 일부의 손실을 감수할 수 있다.
+                                            </span>
+                                        </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class=" checkbox-wrap checkbox-wrap--block">
+                                        <input type="checkbox" id="chk3" class="checkbox-wrap__check" name="chk3">
+                                        <label for="chk3" class="checkbox-wrap__label fw-400 color-000">
+                                            <i class="panel__list__icon">
+                                                <img src="../../../../resource/images/C/img_invest03.png"
+                                                    aria-hidden="true">
+                                            </i>
+                                            <span class="panel__list__info">
+                                                투자원금에서 최소한의 손실만을 감수할 수 있다.
+                                            </span>
+                                        </label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class=" checkbox-wrap checkbox-wrap--block">
+                                        <input type="checkbox" id="chk4" class="checkbox-wrap__check" name="chk4">
+                                        <label for="chk4" class="checkbox-wrap__label fw-400 color-000">
+                                            <i class="panel__list__icon">
+                                                <img src="../../../../resource/images/C/img_invest04.png"
+                                                    aria-hidden="true">
+                                            </i>
+                                            <span class="panel__list__info">
+                                                무슨일이 있어도 투자 원금은 보전
+                                                되어야 한다.<br>
+                                                <span class="panel__list__info--pink">
+                                                    선택 시 매우낮은위험(6등급) 상품만 가입가능 합니다.
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="guide-title">리스트 형식 아코디언 - 라디오버튼</h2>
+            <!-- 같은 유형의 페이지 ID : [CCOM0003001_P01]-->
+            <div class="container">
+                <ul class="accodion-list">
+                    <li>
+                        <div class="accordion modi-accordion3" data-element="accordion"> <!-- 작업 페이지 안에서는 지워주세요  가이드용으로 넣어둔 예시입니다 -->
+                            <div data-element="accordion__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                                    <span class="title-name">을지로지점</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="accordion__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner">
+                                        패널내용 패널내용
+                                        <!-- <div class="search-select__list">
+                                            <div class="search-select__item search-select__item--none">
+                                                <strong class="select-none">지점으로 선택</strong>
+                                                <label for="selectEmployee01" class="check-label">
+                                                    <input type="radio" class="check-input" id="selectEmployee01" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로지점</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <label for="selectEmployee02" class="check-label">
+                                                    <input type="radio" class="check-input" id="selectEmployee02" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로지점</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나둘셋넷</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <label for="selectEmployee03" class="check-label">
+                                                    <input type="radio" class="check-input" id="selectEmployee03" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="accordion modi-accordion3" data-element="accordion">
+                            <div data-element="accordion__item">
+                                <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                                    <span class="title-name">을지로지점</span>
+                                    <span class="accordion__button">
+                                        <i class="icon-arrow" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                                <!-- accordion__inner  -->
+                                <div class="accordion__panel" data-element="accordion__panel">
+                                    <!-- 컨텐츠 영역-->
+                                    <div class="accordion__inner">
+                                        패널내용 패널내용
+                                        <!-- <div class="search-select__list">
+                                            <div class="search-select__item search-select__item--none">
+                                                <strong class="select-none">지점으로 선택</strong>
+                                                <label for="selectEmployee01" class="check-label">
+                                                    <input type="radio" class="check-input" id="selectEmployee01" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로지점</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <label for="selectEmployee02" class="check-label">
+                                                    <input type="radio" class="check-input" id="selectEmployee02" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                            <div class="search-select__item">
+                                                <strong class="branch">을지로지점</strong>
+                                                <span class="employee">
+                                                    <strong class="employee__name">김하나둘셋넷</strong>
+                                                    <span class="employee__id">(1234567)</span>
+                                                </span>
+                                                <label for="selectEmployee03" class="check-label">
+                                                    <input type="radio" class="check-input" id="selectEmployee03" name="selectEmployee" data-change=".search-select__item" data-class="selected">
+                                                    <i class="icon" aria-hidden="true"></i>
+                                                </label>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <!--// 컨텐츠 영역 -->
+                                </div>
+                                <!--// accordion__inner -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="guide-title">리스트 형식 아코디언 - 버튼</h2>
+            <!-- 같은 유형의 페이지 ID : [BUSR0100000]-->
+            <div class="container">
+
+                <div class="accordion accordion-type1 modi-accordion3" data-element="accordion" data-options='{ "isInitActive": true }'> <!-- 작업 페이지 안에서는 지워주세요  가이드용으로 넣어둔 예시입니다 -->
+                    <div data-element="accordion__item ">
+                        <button type="button" title="더보기" class="accordion__title background-none" data-element="accordion__anchor">
+                            <span class="title-name">증명서발급</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!-- accordion__inner  -->
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+                                패널내용 패널내용
+                                <!-- <div class="button-wrap">
+                                    <a href="#" class="button-medium button-medium__line">금융거래확인서 발급신청</a>
+                                    <a href="#" class="button-medium button-medium__line">잔액증명서 발급신청</a>
+                                </div>
+                                <div class="button-wrap">
+                                    <a href="#" class="button-medium button-medium__line">부채증명원 발급신청</a>
+                                    <a href="#" class="button-medium button-medium__line">증명서발급신청 조회</a>
+                                </div> -->
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+
+
+                        </div>
+                        <!--// accordion__inner -->
+                    </div>
+                </div>
+            </div>
+            <h2 class="guide-title">리스트 형식 아코디언 - 순서변경</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0101001_P03]-->
+            <div class="container">
+                <div class="accordion accordion--modify-able" data-element="accordion">
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__title">
+                            <button type="button" class="accordion__anchor-button" data-element="accordion__anchor" title="더보기">
+                                예금/신탁
+                                <div class="accordion__button">
+                                    <i class="icon-arrow" aria-hidden="true"></i>
+                                </div>
+                            </button>
+                            <button type="button" class="accordion__button accordion__button--position" title="순서바꾸기">
+                                <i class="icon-line" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="shuffle-list">
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__title">
+                            <button type="button" class="accordion__anchor-button" data-element="accordion__anchor" title="더보기">
+                                펀드
+                                <div class="accordion__button">
+                                    <i class="icon-arrow" aria-hidden="true"></i>
+                                </div>
+                            </button>
+                            <button type="button" class="accordion__button accordion__button--position" title="순서바꾸기">
+                                <i class="icon-line" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="shuffle-list">
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__title">
+                            <button type="button" class="accordion__anchor-button" data-element="accordion__anchor" title="더보기">
+                                대출
+                                <div class="accordion__button">
+                                    <i class="icon-arrow" aria-hidden="true"></i>
+                                </div>
+                            </button>
+                            <button type="button" class="accordion__button accordion__button--position" title="순서바꾸기">
+                                <i class="icon-line" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="shuffle-list">
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__title">
+                            <button type="button" class="accordion__anchor-button" data-element="accordion__anchor" title="더보기">
+                                보험
+                                <div class="accordion__button">
+                                    <i class="icon-arrow" aria-hidden="true"></i>
+                                </div>
+                            </button>
+                            <button type="button" class="accordion__button accordion__button--position" title="순서바꾸기">
+                                <i class="icon-line" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="shuffle-list">
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="shuffle-list__item">
+                                    <div class="shuffle-list__name">
+                                        <span class="bank">KEB하나</span>
+                                        <div class="account">하나자유통장 [12345]</div>
+                                    </div>
+                                    <button type="button" class="shuffle-list__button" title="순서바꾸기">
+                                        <i class="icon-line" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - 내역</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0103001]-->
+            <div class="container">
+                <div class="accordion accordion--border" data-element="accordion">
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__item-header">
+                            <button type="button" class="accordion__item-header__button" data-element="accordion__anchor">
+                                <span class="year-month">2020. 09</span>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <dl class="history">
+                                    <dt class="history__title">
+                                        <div class="date-time">
+                                            <span class="date-time__date">11.14(토)</span>
+                                            <span class="date-time__time">14:36:23</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="history__desc">
+                                        <div class="name-amount">
+                                            <h5 class="name-amount__name">김하나</h5>
+                                            <span class="name-amount__amount">150,000원</span>
+                                        </div>
+                                        <div class="type-amount">
+                                            <div class="type-amount__type">타행입금</div>
+                                            <span class="type-amount__amount">150,000원</span>
+                                        </div>
+                                        <p class="memo">12월회비 중 5명빠진입금 금액 12월회비 중 5명</p>
+                                        <div class="option-button">
+
+                                            <div class="tooltip" data-tooltip="list">
+                                                <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <ul class="tooltip__list">
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                                    </ul>
+                                                    <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                    <dt class="history__title">
+                                        <div class="date-time">
+                                            <span class="date-time__date">11.14(토)</span>
+                                            <span class="date-time__time">14:36:23</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="history__desc">
+                                        <div class="name-amount">
+                                            <h5 class="name-amount__name">김하나</h5>
+                                            <span class="name-amount__amount name-amount__amount--minus">-150,000원</span>
+                                        </div>
+                                        <div class="type-amount">
+                                            <div class="type-amount__type">타행입금</div>
+                                            <span class="type-amount__amount">150,000원</span>
+                                        </div>
+                                        <div class="option-button">
+
+                                            <div class="tooltip" data-tooltip="list">
+                                                <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <ul class="tooltip__list">
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                                    </ul>
+                                                    <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__item-header">
+                            <button type="button" class="accordion__item-header__button" data-element="accordion__anchor">
+                                <span class="year-month">2020. 09</span>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <dl class="history">
+                                    <dt class="history__title">
+                                        <div class="date-time">
+                                            <span class="date-time__date">11.14(토)</span>
+                                            <span class="date-time__time">14:36:23</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="history__desc">
+                                        <div class="name-amount">
+                                            <h5 class="name-amount__name">김하나</h5>
+                                            <span class="name-amount__amount">150,000원</span>
+                                        </div>
+                                        <div class="type-amount">
+                                            <div class="type-amount__type">타행입금</div>
+                                            <span class="type-amount__amount">150,000원</span>
+                                        </div>
+                                        <p class="memo">12월회비 중 5명빠진입금 금액 12월회비 중 5명</p>
+                                        <div class="option-button">
+
+                                            <div class="tooltip" data-tooltip="list">
+                                                <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <ul class="tooltip__list">
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                                    </ul>
+                                                    <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                    <dt class="history__title">
+                                        <div class="date-time">
+                                            <span class="date-time__date">11.14(토)</span>
+                                            <span class="date-time__time">14:36:23</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="history__desc">
+                                        <div class="name-amount">
+                                            <h5 class="name-amount__name">김하나</h5>
+                                            <span class="name-amount__amount name-amount__amount--minus">-150,000원</span>
+                                        </div>
+                                        <div class="type-amount">
+                                            <div class="type-amount__type">타행입금</div>
+                                            <span class="type-amount__amount">150,000원</span>
+                                        </div>
+                                        <div class="option-button">
+
+                                            <div class="tooltip" data-tooltip="list">
+                                                <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <ul class="tooltip__list">
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                                    </ul>
+                                                    <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__item-header">
+                            <button type="button" class="accordion__item-header__button" data-element="accordion__anchor">
+                                <span class="year-month">2020. 09</span>
+                            </button>
+                        </div>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <dl class="history">
+                                    <dt class="history__title">
+                                        <div class="date-time">
+                                            <span class="date-time__date">11.14(토)</span>
+                                            <span class="date-time__time">14:36:23</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="history__desc">
+                                        <div class="name-amount">
+                                            <h5 class="name-amount__name">김하나</h5>
+                                            <span class="name-amount__amount">150,000원</span>
+                                        </div>
+                                        <div class="type-amount">
+                                            <div class="type-amount__type">타행입금</div>
+                                            <span class="type-amount__amount">150,000원</span>
+                                        </div>
+                                        <p class="memo">12월회비 중 5명빠진입금 금액 12월회비 중 5명</p>
+                                        <div class="option-button">
+
+                                            <div class="tooltip" data-tooltip="list">
+                                                <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <ul class="tooltip__list">
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                                    </ul>
+                                                    <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                    <dt class="history__title">
+                                        <div class="date-time">
+                                            <span class="date-time__date">11.14(토)</span>
+                                            <span class="date-time__time">14:36:23</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="history__desc">
+                                        <div class="name-amount">
+                                            <h5 class="name-amount__name">김하나</h5>
+                                            <span class="name-amount__amount name-amount__amount--minus">-150,000원</span>
+                                        </div>
+                                        <div class="type-amount">
+                                            <div class="type-amount__type">타행입금</div>
+                                            <span class="type-amount__amount">150,000원</span>
+                                        </div>
+                                        <div class="option-button">
+
+                                            <div class="tooltip" data-tooltip="list">
+                                                <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                                <div class="tooltip__panel" data-tooltip-panel="false">
+                                                    <ul class="tooltip__list">
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                        <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                                    </ul>
+                                                    <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - 내역 type2</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0113001 BINQ0105001 BINQ0106001 BINQ0107001 BINQ0108001 BINQ0109001 BINQ0110001 BINQ0111001 BINQ0112001]-->
+            <div class="container">
+                <div class="accordion accordion--border" data-element="accordion">
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <div role="button" class="accordion__sub-button" data-element="accordion__anchor">
+                                    <dl class="history history--accordion">
+                                        <dt class="history__title">
+                                            <div class="date-time">
+                                                <span class="date-time__date">12.12(목)</span>
+                                                <span class="date-time__time">14:36:23</span>
+                                            </div>
+                                        </dt>
+                                        <dd class="history__desc">
+                                            <div class="name-amount">
+                                                <h5 class="name-amount__name">김하나</h5>
+                                                <span class="name-amount__amount color-000"><span class="eng">-USD 50,000</span></span>
+                                            </div>
+                                            <div class="type-amount">
+                                                <div class="type-amount__type">지급</div>
+                                                <span class="type-amount__amount eng">USD 4,000.00</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="history history-dl history-dl--accordion">
+                                        <dt class="history__dt">적용환율</dt>
+                                        <dd class="history__dd eng">
+                                            1,500.00
+                                        </dd>
+                                    </dl>
+                                    <p class="memo">메모영역 메모영역 메모영역 메모영역</p>
+                                </div>
+                                <div data-element="accordion__panel">
+                                    <dl class="history history-dl history-dl--panel">
+                                        <dt class="history__dt color-333">상대계좌번호</dt>
+                                        <dd class="history__dd color-333 eng">106-******-09233</dd>
+                                    </dl>
+                                    <dl class="history history-dl history-dl--panel">
+                                        <dt class="history__dt color-333">받는분</dt>
+                                        <dd class="history__dd color-333">김하나</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <div class="accordion__sub-button accordion__sub-button--no-expand">
+                                    <dl class="history history--accordion">
+                                        <dt class="history__title">
+                                            <div class="date-time">
+                                                <span class="date-time__date">12.12(목)</span>
+                                                <span class="date-time__time">14:36:23</span>
+                                            </div>
+                                        </dt>
+                                        <dd class="history__desc">
+                                            <div class="name-amount">
+                                                <h5 class="name-amount__name">김하나</h5>
+                                                <span class="name-amount__amount"><span class="eng">+USD 50,000</span></span>
+                                            </div>
+                                            <div class="type-amount">
+                                                <div class="type-amount__type">입금</div>
+                                                <span class="type-amount__amount eng">USD 4,000.00</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="history history-dl history-dl--accordion">
+                                        <dt class="history__dt">적용환율</dt>
+                                        <dd class="history__dd eng">1,500.00</dd>
+                                    </dl>
+                                    <p class="memo">12월적금</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <div role="button" class="accordion__sub-button" data-element="accordion__anchor">
+                                    <dl class="history history--accordion">
+                                        <dt class="history__title">
+                                            <div class="date-time">
+                                                <span class="date-time__date">12.12(목)</span>
+                                                <span class="date-time__time">14:36:23</span>
+                                            </div>
+                                        </dt>
+                                        <dd class="history__desc">
+                                            <div class="name-amount">
+                                                <h5 class="name-amount__name">김하나</h5>
+                                                <span class="name-amount__amount color-000"><span class="eng">-USD 50,000</span></span>
+                                            </div>
+                                            <div class="type-amount">
+                                                <div class="type-amount__type">지급</div>
+                                                <span class="type-amount__amount eng">USD 4,000.00</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="history history-dl history-dl--accordion">
+                                        <dt class="history__dt">적용환율</dt>
+                                        <dd class="history__dd eng">1,500.00</dd>
+                                    </dl>
+                                    <p class="memo">메모영역 메모영역 메모영역 메모영역</p>
+                                </div>
+                                <div data-element="accordion__panel">
+                                    <dl class="history history-dl history-dl--panel">
+                                        <dt class="history__dt color-333">상대계좌번호</dt>
+                                        <dd class="history__dd color-333 eng">106-******-09233</dd>
+                                    </dl>
+                                    <dl class="history history-dl history-dl--panel">
+                                        <dt class="history__dt color-333">받는분</dt>
+                                        <dd class="history__dd color-333">김하나</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">리스트 형식 아코디언 - 내역 테이블</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0117001 BINQ0114001 BINQ0115001 BINQ0116001]-->
+            <div class="container">
+                <div class="accordion accordion--border" data-element="accordion">
+                    <div class="accordion__item" data-element="accordion__item">
+                        <div class="accordion__panel">
+                            <div class="accordion__sub-item">
+                                <div role="button" class="accordion__sub-button" data-element="accordion__anchor">
+                                    <dl class="history history--accordion">
+                                        <dt class="history__title">
+                                            <div class="date-time">
+                                                <span class="date-time__date">12.14(토)</span>
+                                                <span class="date-time__time">14:36:23</span>
+                                            </div>
+                                        </dt>
+                                        <dd class="history__desc">
+                                            <div class="name-amount">
+                                                <h5 class="name-amount__name">대출상환</h5>
+                                                <span class="name-amount__amount ">
+                                                    <span class="eng">50,000원</span>
+                                                </span>
+                                            </div>
+                                            <div class="type-amount">
+                                                <div class="type-amount__type">지급</div>
+                                                <span class="type-amount__amount eng">USD 4,000.00</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div data-element="accordion__panel">
+                                    <!-- to 개발 | 산출이율이 같은 경우 -->
+                                    <div class="table-horizontal table-horizontal--narrow">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:8%;">
+                                                <col style="width:25%;">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr class="table-horizontal__tr--single">
+                                                    <th scope="row" colspan="2" class="table-horizontal__th">상환금액</th>
+                                                    <td class="table-horizontal__td">0원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="rowgroup" rowspan="3"
+                                                        class="table-horizontal__th table-horizontal__th--narrow">약
+                                                        <br>정
+                                                        <br>이
+                                                        <br>자</th>
+                                                    <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                                    <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">대출이율</th>
+                                                    <td class="table-horizontal__td">3.333%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">납입이자</th>
+                                                    <td class="table-horizontal__td">20,000원</td>
+                                                </tr>
+                                                <tr class="table-horizontal__tr--single">
+                                                    <th scope="row" colspan="2" class="table-horizontal__th">중도상환해약금</th>
+                                                    <td class="table-horizontal__td">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //to 개발 | 산출이율이 같은 경우 -->
+
+                                    <!-- to 개발 | 산출이율이 다른 경우 -->
+                                    <div class="table-horizontal table-horizontal--narrow">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:8%;">
+                                                <col style="width:25%;">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr class="table-horizontal__tr--single">
+                                                    <th scope="row" colspan="2" class="table-horizontal__th">상환금액</th>
+                                                    <td class="table-horizontal__td">0원</td>
+                                                </tr>
+                                                <tr class="table-horizontal__tr--single">
+                                                    <th scope="row" colspan="2" class="table-horizontal__th">이자금액</th>
+                                                    <td class="table-horizontal__td">16,500원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="rowgroup" rowspan="3"
+                                                        class="table-horizontal__th table-horizontal__th--narrow">약
+                                                        <br>정
+                                                        <br>이
+                                                        <br>자</th>
+                                                    <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                                    <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">대출이율</th>
+                                                    <td class="table-horizontal__td">3.333%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">납입이자</th>
+                                                    <td class="table-horizontal__td">20,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="rowgroup" rowspan="3"
+                                                        class="table-horizontal__th table-horizontal__th--narrow">약
+                                                        <br>정
+                                                        <br>이
+                                                        <br>자</th>
+                                                    <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                                    <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">대출이율</th>
+                                                    <td class="table-horizontal__td">3.333%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">납입이자</th>
+                                                    <td class="table-horizontal__td">20,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="rowgroup" rowspan="3"
+                                                        class="table-horizontal__th table-horizontal__th--narrow">연
+                                                        <br>체
+                                                        <br>이
+                                                        <br>자</th>
+                                                    <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                                    <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">대출이율</th>
+                                                    <td class="table-horizontal__td">3.333%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">납입이자</th>
+                                                    <td class="table-horizontal__td">20,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="rowgroup" rowspan="3"
+                                                        class="table-horizontal__th table-horizontal__th--narrow">원
+                                                        <br>금
+                                                        <br>연
+                                                        <br>체
+                                                        <br>이
+                                                        <br>자
+                                                    </th>
+                                                    <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                                    <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">대출이율</th>
+                                                    <td class="table-horizontal__td">3.333%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="table-horizontal__th">납입이자</th>
+                                                    <td class="table-horizontal__td">20,000원</td>
+                                                </tr>
+                                                <tr class="table-horizontal__tr--single">
+                                                    <th scope="row" colspan="2" class="table-horizontal__th">중도상환해약금</th>
+                                                    <td class="table-horizontal__td">-</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //to 개발 | 산출이율이 다른 경우 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">카드 형식 아코디언</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0101001_T01]-->
+            <div class="container">
+                <div class="total-lookup">
+                    <div class="product-list product-list--card product-list--icon">
+                        <!--예금/신탁-->
+                        <div class="product-list__item" data-element="accordion" data-options='{"isInitActive": true, "initIndex": 0}'><!--예금/신탁 만 로드시 data-options='{"isInitActive":true}'-->
+                            <button class="product-list__accbtn is-active" data-element="accordion__anchor">예금/신탁<span class="count" aria-hidden="true">5</span></button><!--예금/신탁 만 로드시 is-active'-->
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                                        <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                        <p class="product-list__name">주거래 하나 통장 <span class="eng">[12345]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="eng">340,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <!-- //접근성 및 디자인현행화 -->
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">이체</button>
+                                        <button type="button" class="button-small button-small--border">ATM출금</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                                        <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">하나적금통장 <span class="eng">[12345]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="eng">150,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">이체</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--//예금/신탁-->
+                        <!--펀드-->
+                        <div class="product-list__item" data-element="accordion"><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">펀드<span class="count" aria-hidden="true">5</span></button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                                        <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">하나 | NH-Amundi코리아2 <span class="eng">[33333]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">평가금액</span> <span class="eng">150,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">입금</button>
+                                        <button type="button" class="button-small button-small--border">수익률추이</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                                        <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">하나 | NH-Amundi코리아2 <span class="eng">[33333]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">평가금액</span> <span class="eng">150,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">입금</button>
+                                        <button type="button" class="button-small button-small--border">수익률추이</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--//펀드-->
+                        <!--대출-->
+                        <div class="product-list__item" data-element="accordion"><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">대출<span class="count" aria-hidden="true">15</span></button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                                        <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">주택담보대출 <span class="eng">[58723]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">대출잔액</span> <span class="eng">10,150,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">이자납입</button>
+                                        <button type="button" class="button-small button-small--border">상환</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                                        <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">주택담보대출 <span class="eng">[58723]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">대출잔액</span> <span class="eng">10,150,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">이자납입</button>
+                                        <button type="button" class="button-small button-small--border">상환</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="lookup-more">
+                                    <button type="button">다른은행 대출 조회하기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//대출-->
+                        <!--외화/외화신탁-->
+                        <div class="product-list__item" data-element="accordion"><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">외화/외화신탁<span class="count" aria-hidden="true">2</span></button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">외화다통화 <span class="eng">[58723]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">USD</span> <span class="eng">1,000,00</span></strong>
+                                            <strong><span class="text-small">JPY</span> <span class="eng">1,000,00</span></strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">외화이체</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">더와이드외화적금 <span class="eng">[58723]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">USD</span> <span class="eng">1,000,00</span></strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">입금</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--//외화/외화신탁-->
+                        <!--보험/공제-->
+                        <div class="product-list__item" data-element="accordion"><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">보험/공제<span class="count" aria-hidden="true">54</span></button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">프로미라이프 우리가족상해안심보험<br>DB손해 <span class="eng">[58723]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">월 납입료</span> <span class="eng">56,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">입금</button>
+                                    </div>
+                                </div>
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">프로미라이프 우리가족상해안심보험<br>DB손해 <span class="eng">[58723]</span></p>
+                                    </a>
+                                </div>
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">프로미라이프 우리가족상해안심보험<br>DB손해 <span class="eng">[58723]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">월 납입료</span> <span class="eng">56,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">입금</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//보험/공제-->
+                        <!--서비스 미가입 고객인 경우-->
+                        <div class="product-list__item" data-element="accordion"><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">서비스 미가입 고객인 경우</button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <button type="button" class="product-list__no-amount">
+                                        다른은행계좌 이용손님도<span>한번에 오픈뱅킹 조회 &middot; 이체하세요.</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//서비스 미가입 고객인 경우-->
+                        <!--기가입자이며 등록된 계좌가 없는 경우-->
+                        <div class="product-list__item" data-element="accordion"><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">등록된 계좌가 없는 경우</button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <button type="button" class="product-list__no-amount">
+                                        보유하신 계좌가 없습니다.<span>다양한 상품을 만나보세요!</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//기가입자이며 등록된 계좌가 없는 경우-->
+
+                        <div class="total-lookup__bottom-btn">
+                            <a href="#">거래중지계좌/휴면계좌 <span>2건</span></a>
+                            <a href="#">해지계좌조회</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">카드 형식 아코디언 - 조회오류</h2>
+            <!-- 같은 유형의 페이지 ID : [BINQ0101001_T01]-->
+            <div class="container">
+                <div class="total-lookup">
+                    <div class="product-list product-list--card product-list--icon">
+                        <!--예금-->
+                        <div class="product-list__item" data-element="accordion" data-options='{"isInitActive":true}'><!--예금만 로드시 data-options='{"isInitActive":true}'-->
+                            <button class="product-list__accbtn is-active" data-element="accordion__anchor">예금<span class="count" aria-hidden="true">5</span></button><!--예금만 로드시 is-active'-->
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 -->
+                                        <img src="../../../../resource/images/C/icon_bank_shinhan_52x52.png" alt="신한은행">
+                                        <!-- //접근성 및 디자인현행화 -->
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">신한 | 신한입출금통장 <span class="eng">[144657]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="eng">340,000</span>원</strong>
+                                        </div>
+                                    </a>
+                                    <div class="product-list__wrap-button">
+                                        <button type="button" class="button-small button-small--background">이체</button>
+                                    </div>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 -->
+                                        <img src="../../../../resource/images/C/icon_bank_shinhan_52x52.png" alt="신한은행">
+                                        <!-- //접근성 및 디자인현행화 -->
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">신한 | 신한입출금통장 <span class="eng">[144657]</span></p>
+                                        <div class="product-list__error">
+                                            <strong>조회오류</strong>
+                                            <span>잠시 후 다시 조회하시거나, 계좌 개설은행에 계좌상태를 확인해주세요.</span>
+                                        </div>
+                                    </a>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--//예금/신탁-->
+                        <!--펀드-->
+                        <div class="product-list__item" data-element="accordion" data-options='{"isInitActive":false}'><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">펀드<span class="count" aria-hidden="true">5</span></button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 -->
+                                        <img src="../../../../resource/images/C/icon_bank_shinhan_52x52.png" alt="신한은행">
+                                        <!-- //접근성 및 디자인현행화 -->
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">신한 | 한국투자삼성그룹증권 <span class="eng">[33333]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">평가금액</span> <span class="eng">150,000</span>원</strong>
+                                        </div>
+                                    </a>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-list__sub-item">
+                                    <i class="product-list__icon">
+                                        <!-- 접근성 및 디자인현행화 -->
+                                        <img src="../../../../resource/images/C/icon_bank_shinhan_52x52.png" alt="신한은행">
+                                        <!-- //접근성 및 디자인현행화 -->
+                                    </i>
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <a href="#" role="button">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                        <p class="product-list__name">신한 | 한국투자삼성그룹증권 <span class="eng">[33333]</span></p>
+                                        <div class="product-list__amount">
+                                            <strong><span class="text-small">평가금액</span> <span class="eng">150,000</span>원</strong>
+                                        </div>
+                                    </a>
+
+                                    <div class="tooltip" data-tooltip="list">
+                                        <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <ul class="tooltip__list">
+                                                <li class="tooltip__item"><a href="#" role="button">계좌관리</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">계좌정보</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">입출금현황</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">통장사본보기</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">상품설명서</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">이체</a></li>
+                                                <li class="tooltip__item"><a href="#" role="button">ATM출금</a></li>
+                                            </ul>
+                                            <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--//펀드-->
+                        <!--서비스 미가입 고객인 경우-->
+                        <div class="product-list__item" data-element="accordion" data-options='{"isInitActive":false}'><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">서비스 미가입 고객인 경우</button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <button type="button" class="product-list__no-amount">
+                                        다른은행계좌 이용손님도<span>한번에 오픈뱅킹 조회 &middot; 이체하세요.</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//서비스 미가입 고객인 경우-->
+                        <!--기가입자이며 등록된 계좌가 없는 경우-->
+                        <div class="product-list__item" data-element="accordion" data-options='{"isInitActive":false}'><!--예금/신탁 제외하고 모두 로드시 data-options='{"isInitActive":false}'-->
+                            <button class="product-list__accbtn" data-element="accordion__anchor">등록된 계좌가 없는 경우</button>
+                            <div class="product-list__sub-items" data-element="accordion__panel">
+                                <div class="product-list__sub-item pd-all0"><!-- 은행아이콘이 없는 경우 pd-all0 추가 -->
+                                    <button type="button" class="product-list__no-amount">
+                                        보유하신 계좌가 없습니다.<span>다양한 상품을 만나보세요!</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//기가입자이며 등록된 계좌가 없는 경우-->
+
+                        <div class="total-lookup__bottom-btn">
+                            <a href="#">거래중지계좌/휴면계좌 <span>2건</span></a>
+                            <a href="#">해지계좌조회</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="guide-title">제로페이 아코디언</h2>
+            <!-- 같은 유형의 페이지 ID : [LMNP0304001_P01T03]-->
+            <div class="container">
+
+                <div class="accordion accordion-type1 modi-accordion2" data-element="accordion" data-options='{ "isInitActive": true }'> <!-- 작업 페이지 안에서는 지워주세요  가이드용으로 넣어둔 예시입니다 -->
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">PIN(결제비밀번호)가 기억나지 않아요</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!-- accordion__inner  -->
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+                                패널내용 패널내용
+                                <!-- <p class="text-guide">
+                                    PIN(결제비밀번호)를 변경하신 후 이용해 주세요.
+                                    PIN(결제비밀번호) 변경은 화면 우측 상단 설정버튼을 누르시고 PIN(결제비밀번호) 변경 메뉴를 선택하시면 변경하실 수
+                                    있습니다.
+                                </p> -->
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+
+
+                        </div>
+                        <!--// accordion__inner -->
+                    </div>
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">PIN(결제비밀번호)가 기억나지 않아요</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!-- accordion__inner  -->
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+                                패널내용 패널내용
+                                <!-- <p class="text-guide">
+                                    PIN(결제비밀번호)를 변경하신 후 이용해 주세요.
+                                    PIN(결제비밀번호) 변경은 화면 우측 상단 설정버튼을 누르시고 PIN(결제비밀번호) 변경 메뉴를 선택하시면 변경하실 수
+                                    있습니다.
+                                </p> -->
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+
+
+                        </div>
+                        <!--// accordion__inner -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

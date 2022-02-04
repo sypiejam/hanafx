@@ -1,0 +1,1556 @@
+<!-- 0.5v -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>버튼</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        h2{padding:10px;background:#880322;color:#fff;margin:0 -24px 20px}
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">버튼</h1>
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <div id="content" class="app-main app-main--without-footer container">
+            <h2>버튼 - 1개</h2>
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--active">확인</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--negative">확인</button>
+            </div>
+            <br><br>
+            <h2>버튼 - 5:5 (positive-green, positive)</h2>
+            <div class="button-wrap">
+                <button type="button" class="button button--active">바로상담</button>
+                <button type="button" class="button button--positive">상담신청</button>
+            </div>
+            <br><br>
+            <h2>버튼 - 5:5(negative , positive)</h2>
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3">취소</button>
+                <button type="button" class="button button--positive">다음</button>
+            </div>
+            <br><br>
+            <!-- <h2>버튼 - 3:7(negative+narrow , positive)</h2>
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3">취소</button>
+                <button type="button" class="button button--positive">변경하기</button>
+            </div> -->
+            <br><br>
+            <h2>버튼 - 3:7(negative , positive)</h2>
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3">취소</button>
+                <button type="button" class="button button--positive">변경하기</button>
+            </div>
+            <br><br>
+            <h2>금융상품 목록 가입하기 버튼</h2>
+            <ul class="account-view__list">
+                <li>
+                    <div class="account-box">
+                        <div class="account-box__info">
+                            <div class="account-box__info__title">
+                                최대 연 <span class="color">1.60</span>% <span class="small">(세전, 1년)</span>
+                            </div>
+                            <dl class="account-box__info__txt">
+                                <dt>모바일 예금</dt>
+                                <dd>영업점 방문없이 1분만에 돈모으기 시작!</dd>
+                            </dl>
+                            <div class="account-box__info__layer">보유중</div>
+                        </div>
+                        <div class="account-box__info__join">
+                            <dl>
+                                <dt>가입기간</dt>
+                                <dd>1년</dd>
+                            </dl>
+                            <dl>
+                                <dt>가입금액</dt>
+                                <dd>1만원 이상</dd>
+                            </dl>
+                        </div>
+                        <div class="account-box__button">
+                            <div class="button-wrap">
+                                <button type="button" class="button button--positive">가입하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <br><br>
+            <h2>더보기</h2>
+            <div class="button-wrap wrap-button--product">
+                <button type="button" class="button button--more-product">더보기</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button-secondary button-secondary--view-more">더보기</button>
+            </div>
+            <!-- <button type="button" class="button button--more button--more-view">더보기</button> -->
+            <button type="button" class="button-simple">더보기</button>
+
+            <div class="account-holder">
+                <div class="account-holder__name"><span class="eng">2.</span>이하나</div>
+                <div class="info-list">
+                    <ul class="info-list__group">
+                        <li class="info-list__item">
+                            <div class="info-list__label">입금계좌</div>
+                            <div class="info-list__value">토스 <span class="eng">123456758123</span></div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">출금계좌</div>
+                            <div class="info-list__value">하나은행 <span class="eng">123456758123</span></div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">수수료</div>
+                            <div class="info-list__value">면제</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-list">
+                    <ul class="info-list__group">
+                        <li class="info-list__item">
+                            <div class="info-list__label">받는분에게 표기</div>
+                            <div class="info-list__value">유펭수</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">나에게 표기</div>
+                            <div class="info-list__value">곽철용</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">메모</div>
+                            <div class="info-list__value">입력 시에만 항목노출</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">CMS코드</div>
+                            <div class="info-list__value">입력 시에만 항목노출</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <button type="button" class="text-button text-button--toggle text-button--right" data-element="transfer-info-btn">더보기 -->
+                <button type="button" class="button-simple button-simple--right" data-element="transfer-info-btn">더보기</button>
+                <div class="account-holder__button">
+                    <button type="button" class="button-delete"></button>
+                </div>
+            </div>
+            <div class="account-list mgt30">
+                <div class="account-list__item">
+                    <div class="account-list__label-wrap">
+                        <strong class="account-list__label purple">등록불가계좌</strong>
+                    </div>
+                    <div class="account-list__info-wrap">
+                        <i class="account-list__ci">
+                            <img src="../../../images/C/ci_bank_kakao.png" alt="">
+                        </i>
+                        <div class="account-list__info">
+                            <strong class="name">국민 123-******-89764</strong>
+                            <span class="account-name">보통예금(직장인플랜)</span>
+                            <span class="type active">활동성</span>
+                        </div>
+                        <div class="account-list__check">
+                            <input type="checkbox" id="checkAccount02" class="checkbox-wrap__check" name="checkAccount" title="은행선택">
+                            <label for="checkAccount02" class="checkbox-wrap__label"></label>
+                        </div>
+                    </div>
+                    <div class="product-list__amount">
+                        <strong><span class="eng">480,000</span>원</strong>
+                    </div>
+                    <div class="account-list__toggle" data-element="toggle">
+                        <div class="account-list__toggle-anchor">
+                            <!-- <button class="account-list__toggle-button" data-element="toggle__anchor" aria-controls="toggleInfo02" aria-expanded="false">더보기</button> -->
+                            <button class="button-simple" data-element="toggle__anchor" aria-controls="toggleInfo02" aria-expanded="false">더보기</button>
+                        </div>
+                        <div class="account-list__toggle-panel" data-element="toggle__panel" id="toggleInfo02" style="display: none;">
+                            <ul class="justify-content">
+                                <li class="justify-content__item">
+                                    <div class="justify-content__label">개설일</div>
+                                    <div class="justify-content__description">2019.01.01</div>
+                                </li>
+                                <li class="justify-content__item">
+                                    <div class="justify-content__label">최종입출금일</div>
+                                    <div class="justify-content__description">2019.01.01</div>
+                                </li>
+                                <li class="justify-content__item">
+                                    <div class="justify-content__label">만기일</div>
+                                    <div class="justify-content__description">2019.01.01</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-list product-list--card product-list--icon">
+                <div class="product-list__item">
+                    <div class="product-list__sub-item">
+                        <i class="product-list__icon">
+                            <!-- 접근성 및 디자인현행화 | aria-hidden 삭제, alt속성 추가 -->
+                            <img src="../../../../resource/images/C/icon_bank_hana.png" alt="하나은행">
+                        </i>
+                        <p class="product-list__name">주거래 하나 통장</p>
+                        <button type="button" class="account">
+                            106-******-16707
+                            <i class="icon" aria-hidden="true"></i>
+                        </button>
+                        <div class="product-list__amount align-right">
+                            <strong><span class="eng">480,000</span>원</strong>
+                        </div>
+                        <div class="tooltip" data-tooltip="list">
+                            <button class="tooltip__open" data-tooltip-button="open" title="메뉴 열기"></button>
+                            <div class="tooltip__panel" data-tooltip-panel="false">
+                                <ul class="tooltip__list">
+                                    <li class="tooltip__item"><a href="#" role="button">다시이체</a></li>
+                                    <li class="tooltip__item"><a href="#" role="button">자주쓰는이체등록</a></li>
+                                    <li class="tooltip__item"><a href="#" role="button">내역공유</a></li>
+                                    <li class="tooltip__item"><a href="#" role="button">거래메모</a></li>
+                                </ul>
+                                <button class="tooltip__close" data-tooltip-button="close" title="메뉴 닫기"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h2>텍스트 버튼 (화살표)</h2>
+            <button type="button" class="text-button text-button--right mgt42" >
+                해지계좌안내
+                <i class="text-button__arrow" aria-hidden="true"></i>
+            </button>
+            <div class="total-lookup__bottom-btn">
+                <a href="#">거래중지계좌/휴면계좌 <span>2건</span></a>
+                <a href="#">해지계좌조회</a>
+            </div>
+            <div class="country-transfer__link">
+                <a href="#">송금/예약 내역</a>
+            </div>
+            <button type="button" class="text-button">상세내역조회<i class="text-button__arrow" aria-hidden="true"></i></button>
+            <div class="block-title mgt120">
+                <span class="block-title__main">내계좌</span>
+                <a href="#" class="block-title__sub">계좌별칭관리</a>
+            </div>
+            <div data-element="toggle">
+                <div class="tit-small align-right">
+                    <button class="pualugin__button text-small button-arrow button-arrow--right" data-element="toggle__anchor" aria-controls="toggle-1" aria-label="닫힘" aria-expanded="false">계좌번호 직접 입력</button>
+                </div>
+                <div data-element="toggle__panel" id="toggle-1" style="display: none;">
+                    <div class="tit-small mgt90">입금정보</div>
+                    <div class="inpflex mgt30">
+                        <div class="button-select inpflex__smallarea--type2">
+                            <button type="button" class="button button-select__item">은행선택</button>
+                        </div>
+                        <div class="inpwrap inpflex__bigarea--type2">
+                            <input type="text" class="input-text" placeholder="계좌번호 입력" />
+                            <label aria-hidden="true"><i>계좌번호</i></label>
+                            <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+                        </div>
+                    </div>
+                    <div class="button-wrap mgt90">
+                        <button class="button button__green--line">추가</button>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h2>카드 내 버튼</h2>
+            <div class="button-contained-wrap button-contained-wrap--full">
+                <button type="button" class="button-contained button-contained--green">이체</button>
+                <button type="button" class="button-contained button-contained--white">ATM출금</button>
+            </div>
+            <div class="button-contained-wrap button-contained-wrap--full">
+                <button type="button" class="button-contained button-contained--green">이체</button>
+            </div>
+            <!-- <div class="product-list__wrap-button">
+                <button type="button" class="button-small button-small--background">이체</button>
+                <button type="button" class="button-small button-small--border">ATM출금</button>
+            </div>
+            <div class="product-list__wrap-button">
+                <button type="button" class="button-small button-small--background">이체</button>
+            </div> -->
+            <br><br>
+            <h2>툴팁</h2>
+            <div class="tooltip" data-tooltip="paragraph">
+                <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="$label$ 툴팁 열기"></button>
+                <div class="tooltip__panel" data-tooltip-panel="false">
+                    <div class="tooltip__column">
+                        <div class="tooltip__title" data-tooltip="focus">툴팁 타이틀1</div>
+                        <p class="tooltip__description" data-tooltip="focus">전환가능계좌는 원칙적으로 예금종류가 저축예금인 통장이나 일부 요건에 따라 전환이 불가한 경우가 있으니 자세한 내용은
+                            콜센터를 통해 문의하여 주시기 바랍니다.</p>
+                        <p class="tooltip__description" data-tooltip="focus">전환가능계좌는 원칙적으로 예금종류가 저축예금인 통장이나 일부 요건에 따라 전환이 불가한 경우가 있으니 자세한 내용은
+                                콜센터를 통해 문의하여 주시기 바랍니다.</p>
+                    </div>
+                    <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                </div>
+            </div>
+            <div class="tooltip" data-tooltip="paragraph">
+                <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="$label$ 툴팁 열기"></button>
+                <div class="tooltip__panel" data-tooltip-panel="false">
+                    <div class="tooltip__column">
+                        <div class="tooltip__title" data-tooltip="focus">툴팁 타이틀2</div>
+                        <p class="tooltip__description" data-tooltip="focus">전환가능계좌는 원칙적으로 예금종류가 저축예금인 통장이나 일부 요건에 따라 전환이 불가한 경우가 있으니 자세한 내용은
+                            콜센터를 통해 문의하여 주시기 바랍니다.</p>
+                    </div>
+                    <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                </div>
+            </div>
+            <br><br>
+            <h2>컨텐츠 내 큰 버튼</h2>
+            <div class="button-wrap">
+                <button class="button button__green--line">추가</button>
+            </div>
+            <div class="button-wrap">
+                <a href="#" class="button button--link button--border bg-transparent">약정 및 실행하기</a>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--background">조회</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--positive button--span6">자주쓰는계좌 등록</button>
+            </div>
+            <div class="button-wrap">
+                <button class="button button-short">검색</button>
+            </div>
+            <div class="button-wrap wrap-button--space">
+                <button type="button" class="button-rectangle button-rectangle--green">비과세 한도 조회</button>
+            </div>
+            <div class="button-wrap wrap-button--space">
+                <button type="button" class="button-rectangle">서비스이용료 관련 유의사항</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button-rectangle button-rectangle--darkblue font-small">자세히보기</button>
+                <button type="button" class="button button-rectangle color-888">접수취소</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button-rectangle button-rectangle--darkblue">자세히보기</button>
+                <button type="button" class="button button-rectangle">접수취소</button>
+            </div>
+            <div class="button-wrap flex-align-right">
+                <a href="#" class="button-rectangle w-450 align-center">해지예상조회</a>
+                <a href="#" class="button-rectangle w-450 align-center">해지</a>
+            </div>
+            <br><br>
+            <h2>컨텐츠 내 작은 버튼</h2>
+            <div class="product-list__wrap-button">
+                <button type="button" class="button-small button-small--blue">조회/변경</button>
+                <button type="button" class="button-small button-small--gray-border">신청해지</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--view-more button--width-fixed">무료통화연결</button>
+            </div>
+            <div class="icon-wrap">
+                <div class="button-contained-wrap button-contained-wrap--full">
+                    <button type="button" class="button-contained button-contained--green">로그인</button>
+                    <button type="button" class="button-contained button-contained--white">휴대폰 본인인증</button>
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button-contained button-contained--white" >담보해지내역보기</button>
+            </div>
+            <div class="button-wrap">
+                <a href="#" class="button-rectangle w-450 align-center">해지</a>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button-rectangle w-500">조회</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--view-more button--style-gray color-000 flex-wrap__item--font-xsmall w-660">한도변경</button>
+            </div>
+            <div class="button--gray__wrap">
+                <button type="button" class="button--gray" >개인정보변경</button>
+                <button type="button" class="button--gray" >지금바로받기</button>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button-square button--negative">직장정보 틀림</button>
+                <button type="button" class="button-square button--positive">직장정보 맞음</button>
+            </div>
+            <br><br>
+            <h2>텍스트버튼 (언더라인 있음)</h2>
+            <button type="button" class="button-underline button-underline--green">신청접수(버튼)</button>
+            <a href="#" type="button" class="button-underline button-underline--green">신청접수(a링크)</a>
+            <!-- <a href="#" class="link-line link-line--big">신청접수</a>
+            <a href="#" class="link-line">신청접수</a> -->
+            <br><br>
+            <h2>텍스트버튼 (언더라인 없음)</h2>
+            <a href="#" class="link-text link-text--big" >PC에서 인증서 가져오기</a>
+            <br><br>
+            <h2>테이블 하단 버튼</h2>
+            <!-- <div class="align-center">
+                <button type="button" class="button button--view-more button--view-more-short">상세보기</button>
+            </div> -->
+            <div class="button-wrap">
+                <button type="button" class="button-secondary button-secondary--gray">상세보기</button>
+            </div>
+
+            <br><br>
+            <h2>리스트형 버튼</h2>
+            <ul class="align-content">
+                <li class="align-content__list">
+                    <button type="button" class="align-content__button">
+                        <div class="align-content__label">금융거래확인서</div>
+                        <span class="align-content__description">발급일자 2020-02-16</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="search-select find-address-select">
+                <div class="search-select__header">
+                    <h5 class="search-select__header--title">전체 <span class="count">3건</span>이 검색되었습니다.</h5>
+                </div>
+                <ul class="search-select__list find-address-select__list">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <li class="search-select__item find-address-select__item">
+                        <a href="#"  role="button">
+                            <div class="find-address-select__number">04533</div>
+                            <div class="find-address-select__text">서울특별시 중구 을지로 1가 192-11</div>
+                        </a>
+                    </li>
+                    <li class="search-select__item find-address-select__item">
+                        <a href="#"  role="button">
+                            <div class="find-address-select__text">서울특별시 중구 을지로 1가 192-11</div>
+                        </a>
+                    </li>
+                    <li class="search-select__item find-address-select__item">
+                        <a href="#"  role="button">
+                            <div class="find-address-select__number">04533</div>
+                            <div class="find-address-select__text">서울특별시 중구 을지로 6(을지로1가)</div>
+                            <div class="find-address-select__sub-text">
+                                <span class="tag tag__gray">지번</span>
+                                서울특별시 중구 을지로1가 192-11재능빌딩
+                            </div>
+                        </a>
+                    </li>
+                    <!-- //접근성 및 디자인현행화 -->
+                </ul>
+            </div>
+            <div class="bank-list">
+                <ul>
+                    <li class="bank-list__item">
+                        <button type="button" class="button button--select-bank">
+                            <i class="bank-list__icon">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_hana.png" alt="하나은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                            </i>
+                            <p class="bank-list__name">하나은행</p>
+                        </button>
+                    </li>
+                    <li class="bank-list__item">
+                        <button type="button" class="button button--select-bank">
+                            <i class="bank-list__icon">
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                            </i>
+                            <p class="bank-list__name">우리은행</p>
+                        </button>
+                    </li>
+                    <li class="bank-list__item">
+                        <button type="button" class="button button--select-bank">
+                            <i class="bank-list__icon">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_hana.png" alt="하나은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                            </i>
+                            <p class="bank-list__name">하나은행</p>
+                        </button>
+                    </li>
+                    <li class="bank-list__item">
+                        <button type="button" class="button button--select-bank">
+                            <i class="bank-list__icon">
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                            </i>
+                            <p class="bank-list__name">우리은행</p>
+                        </button>
+                    </li>
+                    <li class="bank-list__item">
+                        <button type="button" class="button button--select-bank">
+                            <i class="bank-list__icon">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_hana.png" alt="하나은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                            </i>
+                            <p class="bank-list__name">하나은행</p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            <h2>서브메인 버튼 - 비주얼(상단)</h2>
+            <!-- 임시 style -->
+            <div class="deposit-main" style="background:none;padding:0">
+                <!-- 임시 style -->
+                <div class="button-wrap deposit-button" style="margin:0">
+                    <a href="#" class="button button__purple--line">해지</a>
+                    <a href="#" class="button button__purple">등록</a>
+                </div>
+            </div>
+            <!-- 임시 style -->
+            <div class="account-main" style="background:none;padding:0">
+                <!-- 임시 style -->
+                <div class="button-wrap account-button" style="margin:0">
+                    <a href="#" class="button button__purple"><i class="icon--simple-account" aria-hidden="true"></i>자주쓰는계좌관리</a>
+                    <a href="#" class="button button__purple--line"><i class="icon--add-account" aria-hidden="true"></i>추가등록</a>
+                </div>
+            </div>
+            <br><br>
+            <h2>리스트형 버튼</h2>
+            <div class="sub-main-link">
+                <ul class="sub-main-link__list">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <li class="sub-main-link__item">
+                        <a href="#" role="button">
+                            <strong>자동갱신(재예치) 조회/해지</strong>
+                            <p>자동갱신(재예치) 신청한 계좌 조회 및 해지</p>
+                        </a>
+                    </li>
+                    <li class="sub-main-link__item">
+                        <a href="#" role="button">
+                            <strong>자동갱신(재예치) 등록</strong>
+                            <p>만기가 지난 적금의 자동갱신(재예치)을 등록</p>
+                        </a>
+                    </li>
+                    <li class="sub-main-link__item">
+                        <a href="#" role="button">
+                            <strong>세금우대한도조회</strong>
+                            <p>전체 세금우대한도 및 계좌별 상세 조회 및 변경</p>
+                        </a>
+                    </li>
+                    <li class="sub-main-link__item">
+                        <a href="#" role="button">
+                            <strong>만기해지방법변경</strong>
+                            <p>예 · 적금 및 상호부금의 만기해지방법 변경</p>
+                        </a>
+                    </li>
+                    <li class="sub-main-link__item">
+                        <a href="#" role="button">
+                            <strong>해지/해지예상조회</strong>
+                            <p>예적금 및 외화예금, 신탁계좌의 해지/해지예상조회</p>
+                        </a>
+                    </li>
+                    <!-- //접근성 및 디자인현행화 -->
+                </ul>
+            </div>
+            <div class="account-main" style="padding:0;background: none;">
+                <div class="accordion" data-element="accordion" role="presentation">
+                    <div data-element="accordion__item">
+                        <a href="#" class="account-main__more-link" data-element="accordion__anchor" id="pualugin-accordion-1" aria-expanded="false" aria-controls="pualugin-accordion-1-panel" role="button">
+                            증명서발급
+                        </a>
+                        <div data-element="accordion__panel" aria-labelledby="pualugin-accordion-1" role="region" style="display: none;">
+                            <div class="button-wrap">
+                                <a href="#" class="button-medium button-medium__line">금융거래확인서 발급신청</a>
+                                <a href="#" class="button-medium button-medium__line">잔액증명서 발급신청</a>
+                            </div>
+                            <div class="button-wrap">
+                                <a href="#" class="button-medium button-medium__line">부채증명원 발급신청</a>
+                                <a href="#" class="button-medium button-medium__line">증명서발급신청 조회</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="row-list">
+                <li class="row-list__item row-list__item--small">
+                    <a href="#" class="row-list__link">
+                        <span class="row-list__title">대출이율조회</span>
+                    </a>
+                </li>
+                <li class="row-list__item row-list__item--small">
+                    <a href="#" class="row-list__link">
+                        <span class="row-list__title">금리인하요구권신청</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="row-list">
+                <li class="row-list__item">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="row-list__link" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        <span class="row-list__title">자동로그인</span>
+                        <div class="row-list__anchor">
+                            <span class="state">ON</span>
+                            <i class="icon-arrow" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="row-list__item">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="row-list__link" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        <span class="row-list__title">기본로그인</span>
+                        <div class="row-list__anchor">
+                            <span class="state">공인인증서</span>
+                            <i class="icon-arrow" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="row-list__item row-list__item--border-no">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="row-list__link" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        <span class="row-list__title">기본인증서</span>
+                        <div class="row-list__anchor">
+                            <i class="icon-arrow" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="row-list">
+                <li class="row-list__item">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="row-list__link" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        <div class="row-list__text">
+                            <span class="row-list__title">입출금 푸시</span>
+                            <p class="row-list__phrase">계좌별로 입출금거래내역의 알림을 설정할 수 있습니다.</p>
+                        </div>
+                        <div class="row-list__anchor">
+                            <span class="state">1계좌</span>
+                            <i class="icon-arrow" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="row-list__item">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="row-list__link" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        <div class="row-list__text">
+                            <span class="row-list__title">환율</span>
+                            <p class="row-list__phrase">주요 통화의 환율과 희망 환율 알림을 제공합니다.</p>
+                        </div>
+                        <div class="row-list__anchor">
+                            <span class="state">ON</span>
+                            <i class="icon-arrow" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="row-list__item">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="row-list__link" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        <div class="row-list__text">
+                            <span class="row-list__title">대여금고 사용</span>
+                            <p class="row-list__phrase">영업점에서 신청하신 대여금고 사용내역을 알려드립니다.</p>
+                        </div>
+                        <div class="row-list__anchor">
+                            <span class="state">ON</span>
+                            <i class="icon-arrow" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="search-select find-address-select ">
+                <div class="search-select__header">
+                    <h5 class="search-select__header--title">전체 <span class="count">3건</span>이 검색되었습니다.</h5>
+                </div>
+                <ul class="search-select__list find-address-select__list">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <li class="search-select__item find-address-select__item">
+                        <a href="#"  role="button">
+                            <div class="find-address-select__text">하나로의료재단</div>
+                            <div class="find-address-select__sub-text">방사선진단 및 병리검사 의원</div>
+                        </a>
+                    </li>
+                    <li class="search-select__item find-address-select__item">
+                        <a href="#"  role="button">
+                            <div class="find-address-select__text">하나로의료재단</div>
+                            <div class="find-address-select__sub-text">방사선진단 및 병리검사 의원</div>
+                        </a>
+                    </li>
+                    <li class="search-select__item find-address-select__item">
+                        <a href="#"  role="button">
+                            <div class="find-address-select__text">하나로의료재단</div>
+                            <div class="find-address-select__sub-text">방사선진단 및 병리검사 의원</div>
+                        </a>
+                    </li>
+                    <!-- //접근성 및 디자인현행화 -->
+                </ul>
+            </div>
+            <ul class="news-list">
+                <!-- 접근성 및 디자인현행화 -->
+                <li class="news-list__item">
+                    <a href="#" class="news-list__anchor" role="button">
+                        <div class="news-list__title">2줄이 초과하면 안된당께 하하하하하하 말줄임이 되야된당께 2줄이 초과하면 안된당께 하하하하하하 말줄임이 되야된당께</div>
+                        <span class="news-list__date">2020-02-02</span>
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="#" class="news-list__anchor" role="button">
+                        <div class="news-list__title">글로벌 차세대시스템 네트워크 보안장비 도입</div>
+                        <span class="news-list__date">2020-02-02</span>
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="#" class="news-list__anchor" role="button">
+                        <div class="news-list__title">적격대출 상품 재판매 안내</div>
+                        <span class="news-list__date">2020-02-02</span>
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="#" class="news-list__anchor" role="button">
+                        <div class="news-list__title">일부 영업점 업무 일시중단 안내</div>
+                        <span class="news-list__date">2020-02-02</span>
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="#" class="news-list__anchor" role="button">
+                        <div class="news-list__title">글로벌 차세대시스템 네트워크 보안장비 도입</div>
+                        <span class="news-list__date">2020-02-02</span>
+                    </a>
+                </li>
+                <li class="news-list__item">
+                    <a href="#" class="news-list__anchor" role="button">
+                        <div class="news-list__title">적격대출 상품 재판매 안내</div>
+                        <span class="news-list__date">2020-02-02</span>
+                    </a>
+                </li>
+                <!-- //접근성 및 디자인현행화 -->
+            </ul>
+            <div class="transfer-list">
+                <div class="transfer-list__item">
+                    <button type="button" class="transfer-list__button">
+                        <span class="transfer-list__number">01000000000</span>
+                        <span class="transfer-list__text">계좌로 이체</span>
+                    </button>
+                </div>
+                <div class="transfer-list__item">
+                    <button type="button" class="transfer-list__button">
+                        <span class="transfer-list__number">01000000000</span>
+                        <span class="transfer-list__text">연락처로 이체</span>
+                    </button>
+                </div>
+                <div class="transfer-list__item">
+                    <button type="button" class="transfer-list__button">
+                        <span class="transfer-list__number">01000000000</span>
+                        <span class="transfer-list__text">국세 납부</span>
+                    </button>
+                </div>
+            </div>
+            <div class="container product-list product-list--transform">
+                <!-- 접근성 및 디자인현행화 -->
+                <a href="#" class="product-list__item" role="button">
+                <!-- //접근성 및 디자인현행화 -->
+                    <i class="product-list__icon">
+                        <img src="../../../../resource/images/C/icon_bank_shinhan_52x52.png" alt="신한은행">
+                    </i>
+                    <div class="product-list__name">
+                        펭수(엣헴엣헴)
+                        <span class="product-list__account eng">123-******-89764</span>
+                    </div>
+                    <div class="product-list__amount">
+                        <strong><span class="eng">50,000</span>원</strong>
+                    </div>
+                </a>
+                <!-- 접근성 및 디자인현행화 -->
+                <a href="#" class="product-list__item" role="button">
+                    <i class="product-list__icon">
+                        <img src="../../../../resource/images/C/icon_bank_Industrial_54x52.png" alt="기업은행">
+                <!-- //접근성 및 디자인현행화 -->
+                    </i>
+                    <div class="product-list__name">
+                        곽철용(순정파)
+                        <span class="product-list__account eng">123-******-89764</span>
+                    </div>
+                    <div class="product-list__amount">
+                        <strong><span class="eng">1,010,000</span>원</strong>
+                    </div>
+                </a>
+            </div>
+            <br><br>
+            <h2>컨텐츠 상단 우측정렬 버튼</h2>
+            <div class="button-wrap mgt60">
+                <button class="button button-square-small button-square-small--gray button--left-auto">서비스안내</button>
+            </div>
+            <br><br>
+            <h2>아이콘 버튼</h2>
+            <div class="transfer-result__icon-wrap pdt0">
+                <button type="button" class="transfer-result__icon icon-kakao">
+                    <span class="transfer-result__text">카카오톡</span>
+                </button>
+                <button type="button" class="transfer-result__icon icon-sms">
+                    <span class="transfer-result__text">문자메시지</span>
+                </button>
+            </div>
+            <div class="transfer-state-list">
+                <div class="justify-header pdb0">
+                    <div class="justify-header__label">
+                        3.김하나<i class="icon-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="justify-header__value">
+                        <button type="button" class="justify-header__button justify-header__button--kakao" title="카카오톡"></button>
+                        <button type="button" class="justify-header__button justify-header__button--sms" title="문자메시지"></button>
+                    </div>
+                </div>
+                <ul class="justify-content justify-content--border">
+                    <li class="justify-content__item">
+                        <div class="justify-content__label">이체결과</div>
+                        <div class="justify-content__description justify-content__description--error">
+                            <span class="amount">이체오류(오류사유)</span>
+                        </div>
+                    </li>
+                    <li class="justify-content__item">
+                        <div class="justify-content__label">금액</div>
+                        <div class="justify-content__description">
+                            <span class="amount">10,000원</span>
+                        </div>
+                    </li>
+                    <li class="justify-content__item">
+                        <div class="justify-content__label">입금계좌</div>
+                        <div class="justify-content__description">
+                            <span class="amount">하나 01000000000</span>
+                        </div>
+                    </li>
+                    <li class="justify-content__item">
+                        <div class="justify-content__label">수수료</div>
+                        <div class="justify-content__description">
+                            <span class="amount">면제</span>
+                        </div>
+                    </li>
+                </ul>
+                <button type="button" class="button-simple button-simple--right">더보기</button>
+                <!-- <button type="button" class="text-button text-button--toggle text-button--right is-active" data-element="transfer-info-btn">더보기</button> -->
+            </div>
+            <button type="button" class="view-period__button" title="기간 선택"></button>
+            <div class="simple-list">
+                <div class="simple-list__item">
+                    <div class="simple-list__header">
+                        <span class="simple-list__title">#관리비</span>
+                        <button class="simple-list__icon" title="수정하기">
+                            <i class="icon-edit" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="simple-list__info">
+                        <div class="simple-list__info-name">김신한</div>
+                        <div class="simple-list__info-bank">
+                            <i class="icon-bank">
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                            </i>
+                            <span class="simple-list__info-bank-text">우리 12345678912</span>
+                        </div>
+                    </div>
+                    <div class="simple-list__subarea">
+                        <span class="simple-list__number"><span class="eng">100,000</span>원</span>
+                        <span class="simple-list__number eng">010-0000-0000</span>
+                    </div>
+                    <button class="simple-list__button" title="순서바꾸기">
+                        <i class="icon-line" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="my-account">
+                <div class="my-account__name">
+                    <span>김하나</span>님의 보유 계좌 현황
+                </div>
+                <div class="my-account__sort">
+                    <dl>
+                        <dt>예금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>적금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>적금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>적금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>적금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>적금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>적금</dt>
+                        <dd><a href="#" target="_blank">99 +</a></dd>
+                    </dl>
+                </div>
+                <div class="my-account__button">
+                    <button type="button" aria-expanded="false" title="더보기"></button>
+                </div>
+            </div>
+            <br><br>
+            <h2>인풋+버튼</h2>
+            <div class="inp-btn ">
+                <div class="inpwrap confirm-code">
+                    <input type="text" class="input-text on" id="confirmCode" placeholder="인증번호 입력" title="인증번호">
+                    <label for="confirmCode" aria-hidden="true">
+                        <i>인증번호</i>
+                    </label>
+                    <div class="confirm-code__time">03:00</div>
+                </div>
+                <!-- <button type="button" class="button-rectangle button-rectangle--darkblue inp-btn__button fw-300">인증번호요청</button> -->
+                <button type="button" class="button button-cert">인증번호요청</button>
+            </div>
+            <br><br>
+            <h2>삭제 버튼</h2>
+            <div class="link-box">
+                <!-- 접근성 및 디자인현행화 -->
+                <a href="#" class="link-box__open" role="button">
+                <!-- //접근성 및 디자인현행화 -->
+                    <div class="link-box__flex">
+                        <span>선택통화</span>
+                        <span class="button-underline button-underline--green">대상국가 선택</span>
+                        <!-- <span class="link-line">대상국가 선택</span> -->
+                    </div>
+                </a>
+                <div class="country-list country-list--modify">
+                    <ul>
+                        <li class="country-list__item">
+                            <div class="select-country">
+                                <i class="country-list__icon" aria-hidden="true">
+                                    <img src="../../../../resource/images/C/icon_country_us.png" alt="미국">
+                                </i>
+                                <span class="country-list__name">
+                                    미국 USD
+                                    <span class="country-list__currancy">1318.22 이하</span>
+                                </span>
+                            </div>
+                            <button type="type" class="card__icon-btn" title="수정하기">
+                                <i class="icon-delete" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="country-list__item">
+                            <div class="select-country">
+                                <i class="country-list__icon" aria-hidden="true">
+                                    <img src="../../../../resource/images/C/icon_country_eu.png" alt="유럽연합">
+                                </i>
+                                <span class="country-list__name">
+                                    아랍에미리트공화국 AED
+                                    <span class="country-list__currancy">1318.22 이하</span>
+                                </span>
+                            </div>
+                            <button type="type" class="card__icon-btn" title="수정하기">
+                                <i class="icon-delete" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="country-list__item">
+                            <div class="select-country">
+                                <i class="country-list__icon" aria-hidden="true">
+                                    <img src="../../../../resource/images/C/icon_country_jp.png" alt="일본">
+                                </i>
+                                <span class="country-list__name">
+                                    사우디아라비아 SAR
+                                    <span class="country-list__currancy">1318.22 이하</span>
+                                </span>
+                            </div>
+                            <button type="type" class="card__icon-btn" title="수정하기">
+                                <i class="icon-delete" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="country-list__item">
+                            <div class="select-country">
+                                <i class="country-list__icon" aria-hidden="true">
+                                    <img src="../../../../resource/images/C/icon_country_jp.png" alt="일본">
+                                </i>
+                                <span class="country-list__name">
+                                    사우디아라비아 SAR
+                                    <span class="country-list__currancy">1318.22 이하</span>
+                                </span>
+                            </div>
+                            <button type="type" class="card__icon-btn" title="수정하기">
+                                <i class="icon-delete" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="country-list__item">
+                            <div class="select-country">
+                                <i class="country-list__icon" aria-hidden="true">
+                                    <img src="../../../../resource/images/C/icon_country_jp.png" alt="일본">
+                                </i>
+                                <span class="country-list__name">
+                                    사우디아라비아 SAR
+                                    <span class="country-list__currancy">1318.22 이하</span>
+                                </span>
+                            </div>
+                            <button type="type" class="card__icon-btn" title="수정하기">
+                                <i class="icon-delete" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="delete-list">
+                <li class="delete-list__item">
+                    <strong class="delete-list__text">010-1234-5678</strong>
+                    <button type="button" title="삭제" class="delete-list__button"></button>
+                </li>
+                <li class="delete-list__item">
+                    <strong class="delete-list__text">010-1234-5678</strong>
+                    <button type="button" title="삭제" class="delete-list__button"></button>
+                </li>
+                <li class="delete-list__item">
+                    <strong class="delete-list__text">010-1234-5678</strong>
+                    <button type="button" title="삭제" class="delete-list__button"></button>
+                </li>
+            </ul>
+            <div class="account-holder">
+                <div class="account-holder__name"><span class="eng">2.</span>이하나</div>
+                <div class="info-list">
+                    <ul class="info-list__group">
+                        <li class="info-list__item">
+                            <div class="info-list__label">입금계좌</div>
+                            <div class="info-list__value">토스 <span class="eng">123456758123</span></div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">출금계좌</div>
+                            <div class="info-list__value">하나은행 <span class="eng">123456758123</span></div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">수수료</div>
+                            <div class="info-list__value">면제</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info-list" style="display:none;" data-element="info-list">
+                    <ul class="info-list__group">
+                        <li class="info-list__item">
+                            <div class="info-list__label">받는분에게 표기</div>
+                            <div class="info-list__value">유펭수</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">나에게 표기</div>
+                            <div class="info-list__value">곽철용</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">메모</div>
+                            <div class="info-list__value">입력 시에만 항목노출</div>
+                        </li>
+                        <li class="info-list__item">
+                            <div class="info-list__label">CMS코드</div>
+                            <div class="info-list__value">입력 시에만 항목노출</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <button type="button" class="text-button text-button--toggle text-button--right" data-element="transfer-info-btn">더보기</button> -->
+                <button type="button" class="button-simple button-simple--right" data-element="transfer-info-btn">더보기</button>
+                <div class="account-holder__button">
+                    <button type="button" class="button-delete"></button>
+                </div>
+            </div>
+            <div class="relative">
+                <button type="button" class="modal__btn--delete" title="삭제하기"></button>
+            </div>
+            <div class="gray-box">
+                <div class="list-wrap__box">
+                    <strong class="list-wrap__tit-small">생활비 통장</strong>
+                    <span class="list-wrap__sub-text eng">123-******-12345</span>
+                    <button class="card__icon-btn" title="삭제하기">
+                        <i class="icon-delete" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <p class="box-text">이체시 입금 주계좌가자동으로 입력되어 편리해요.</p>
+            <div class="account-list__item">
+                <div class="account-list__info-wrap">
+                    <i class="account-list__ci">
+                        <img src="../../../images/C/ci_bank_woori.png" alt="">
+                    </i>
+                    <div class="account-list__info">
+                        <strong class="name">국민</strong>
+                        <span class="account">123-******-89764</span>
+                    </div>
+                </div>
+                <div class="account-list__wrap-button">
+                    <div class="input-button">
+                        <input type="checkbox" name="settingAccount" id="settingAccount05" class="input-button__input" checked="">
+                        <label for="settingAccount05" class="input-button__label">조회</label>
+                    </div>
+                    <div class="input-button">
+                        <input type="checkbox" name="settingAccount" id="settingAccount06" class="input-button__input">
+                        <label for="settingAccount06" class="input-button__label">출금</label>
+                    </div>
+                </div>
+                <div class="account-list__delete">
+                    <button type="button" class="button-delete" title="삭제"></button>
+                </div>
+            </div>
+            <br><br>
+            <h2>좌측 텍스트 + 우측 버튼</h2>
+            <div class="title-wrap">
+                <h3 class="tit-small title-wrap__title">수신휴대폰번호</h3>
+                <div class="title-wrap__button">
+                    <button type="button" class="button button-inline">휴대폰번호선택</button>
+                </div>
+            </div>
+            <div class="title-wrap">
+                <h3 class="tit-small title-wrap__title">이용료 결제계좌</h3>
+                <div class="title-wrap__button">
+                    <button type="button" class="button-underline button-underline--green">결제계좌추가</button>
+                </div>
+            </div>
+            <br><br>
+            <h2>팝업 내 작은 버튼</h2>
+            <button type="button" class="button-medium button-medium--of-small">추가이체</button>
+
+            <div class="qna-box" data-element="accordion">
+                <div class="qna-box__item" data-element="accordion__item">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <a href="#" class="qna-box__anchor" data-element="accordion__anchor" role="button">
+                    <!-- //접근성 및 디자인현행화 -->
+                        5. 다음 중 손님의 투자경험과 가장 가까운 것
+                        은 어느것입니까?
+                        <div class="accordion__button" title="더보기"></div>
+                    </a>
+                    <div class="qna-box__panel qna-box__panel--position" data-element="accordion__panel"> <!-- 이미지 없는 리스트는 qna-box__panel--position 클래스 넣어야 합니다-->
+                        <ul class="panel__list">
+                            <li>
+                                <span class=" checkbox-wrap checkbox-wrap--block">
+                                    <input type="checkbox" id="chk13" class="checkbox-wrap__check" name="chk13" checked>
+                                    <label for="chk2" class="checkbox-wrap__label fw-400 color-000">
+                                        <span class="panel__list__info--year">은행 예적금, 국채, 지방채, 보증채, MMF, CMA 등</span>
+                                    </label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class=" checkbox-wrap checkbox-wrap--block">
+                                    <input type="checkbox" id="chk14" class="checkbox-wrap__check" name="chk14">
+                                    <label for="chk14" class="checkbox-wrap__label fw-400 color-000">
+                                        <span class="panel__list__info--year">금융채, 신용도가 높은 회사채, 채권형펀드, 원금보장형 ELF(ELS), ELD 등</span>
+                                    </label>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="button-wrap align-center mgt66">
+                            <button type="button" class="button button--view-more button--width-fixed flex-wrap__item--font-xsmall">선택완료</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-list__wrap-button product-list__wrap-full">
+                <button type="button" class="button-small button-small--border">
+                    투자성향별 상품 안내
+                </button>
+            </div>
+            <div class="button-wrap align-center">
+                <button type="button" class="button button--view-more button--width-fixed color-000 flex-wrap__item--font-xsmall">대출종류 및 금액변경</button>
+            </div>
+            <br><br>
+            <h2>태그 버튼</h2>
+            <div class="tag-list">
+                <button type="button" class="button-square-small button-square-small--gray">최근입금계좌</button>
+                <button type="button" class="button-square-small button-square-small--gray">내계좌</button>
+            </div>
+            <!-- <div class="tag-list">
+                <button type="button" class="tag-list__item">최근입금계좌</button>
+                <button type="button" class="tag-list__item">내계좌</button>
+            </div> -->
+            <button type="button" class="button-underline">
+                <span class="latest-tag__name">김하나</span>
+                <span class="latest-tag__number">(4234567)</span>
+            </button>
+            <!-- <button type="button" class="latest-tag__item">
+                <span class="latest-tag__name">김하나</span>
+                <span class="latest-tag_number">(4234567)</span>
+            </button> -->
+            <br><br>
+            <h2>공유하기 아이콘 버튼</h2>
+            <button type="button" class="button button-icon" title="공유하기">
+                <i class="icon-share" aria-hidden="true"></i>
+            </button>
+            <div class="relative">
+                <button type="button" class="modal__btn--share" aria-label="공유하기">
+                    <i aria-hidden="true"></i>
+                </button>
+            </div>
+            <br><br>
+            <h2>북마크 아이콘 버튼</h2>
+            <button type="button" class="button button-icon" title="북마크">
+                <i class="icon-bookmark" aria-hidden="true"></i>
+            </button>
+            <br><br>
+            <h2>페이징네비게이션 버튼</h2>
+            <div class="pagination">
+                <button type="button" class="pagination__button pagination__button--prev">이전으로 이동</button>
+
+                <!-- 접근성 및 디자인현행화 | tabindex="0" 에서 role="img" 로 변경 -->
+                <!-- to 개발 | 접근성 관련하여 aria-label 속성에도 전체페이지와 현재페이지 넘버를 넣어야합니다 -->
+                <div class="pagination__step" role="img" aria-label="5페이지 중 1페이지">
+                    <strong class="pagination__number pagination__number--current eng" aria-hidden="true">1</strong>
+                    <span class="pagination__number eng" aria-hidden="true">5</span>
+                </div>
+                <!-- //접근성 및 디자인현행화 -->
+
+                <button type="button" class="pagination__button pagination__button--next">다음으로 이동</button>
+            </div>
+            <br><br>
+            <h2>공통(샐랙트 팝업)</h2>
+            <div class="select-value">
+                <ul class="select-value__list">
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="select-value">
+                <ul class="select-value__list">
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <strong class="select-value__name">스마트간편인증</strong>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <strong class="select-value__name">ARS인증</strong>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <strong class="select-value__name">휴대폰본인인증</strong>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <strong class="select-value__name">1회용 인증번호 입력</strong>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <strong class="select-value__name">해외 출국한 경우</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="select-value">
+                <ul class="select-value__list">
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content select-value__another-bank">
+                            <div class="select-value__content--left">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                                <strong class="select-value__name">주거래하나 통장</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content select-value__another-bank">
+                            <div class="select-value__content--left">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                                <strong class="select-value__name">주거래하나 통장</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <strong class="select-value__total-price"><span class="eng">8,040,000,000</span>원</strong>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content select-value__another-bank">
+                            <div class="select-value__content--left">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                                <strong class="select-value__name">주거래하나 통장</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <em class="select-value__price">출금가능 : <span class="eng">2,020,000</span>원</em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content select-value__another-bank">
+                            <div class="select-value__content--left">
+                                <!-- 접근성 및 디자인현행화 -->
+                                <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                <!-- //접근성 및 디자인현행화 -->
+                                <strong class="select-value__name">주거래하나 통장</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <strong class="select-value__total-price"><span class="eng">8,040,000,000</span>원</strong>
+                                <em class="select-value__price">출금가능 : <span class="eng">2,020,000</span>원</em>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="container country-list country-list--scrolling">
+                <ul>
+                    <li class="country-list__item">
+                        <button type="button" class="button button--select-country">
+                            <i class="country-list__icon" aria-hidden="true">
+                                <img src="../../../../resource/images/C/icon_country_us.png">
+                            </i>
+                            <span class="country-list__name">USD : 달러 (미국)</span>
+                        </button>
+                    </li>
+                    <li class="country-list__item">
+                        <button type="button" class="button button--select-country">
+                            <i class="country-list__icon" aria-hidden="true">
+                                <img src="../../../../resource/images/C/icon_country_eu.png">
+                            </i>
+                            <span class="country-list__name">EUR : 유로 (유로연합)</span>
+                        </button>
+                    </li>
+                    <li class="country-list__item">
+                        <button type="button" class="button button--select-country">
+                            <i class="country-list__icon" aria-hidden="true">
+                                <img src="../../../../resource/images/C/icon_country_jp.png">
+                            </i>
+                            <span class="country-list__name">JPY : 100엔(일본)</span>
+                        </button>
+                    </li>
+                    <li class="country-list__item">
+                        <button type="button" class="button button--select-country">
+                            <i class="country-list__icon" aria-hidden="true">
+                                <img src="../../../../resource/images/C/icon_country_jp.png">
+                            </i>
+                            <span class="country-list__name">JPY : 100엔(일본)</span>
+                        </button>
+                    </li>
+                    <li class="country-list__item">
+                        <button type="button" class="button button--select-country">
+                            <i class="country-list__icon" aria-hidden="true">
+                                <img src="../../../../resource/images/C/icon_country_jp.png">
+                            </i>
+                            <span class="country-list__name">JPY : 100엔(일본)</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="select-value">
+                <ul class="select-value__list">
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <span class="badges">
+                                    <span class="badge">이메일</span>
+                                </span>
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <span class="badges">
+                                    <span class="badge">푸시</span>
+                                </span>
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <span class="badges">
+                                    <span class="badge">이메일</span>
+                                </span>
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="select-value__item">
+                        <div role="button" class="select-value__content">
+                            <div class="select-value__content--left">
+                                <strong class="select-value__name">상품명</strong>
+                                <em class="select-value__number eng">123-******-89764</em>
+                            </div>
+                            <div class="select-value__content--right">
+                                <span class="badges">
+                                    <span class="badge">이메일</span>
+                                </span>
+                                <em class="select-value__total-price">신규일 <span class="eng">2015-12-18</span></em>
+                                <em class="select-value__price">만기일 <span class="eng">2020-03-17</span></em>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            <h2>기타 버튼</h2>
+            <ul class="submit-list">
+                <li class="submit-list__item">
+                    <!-- to 개발 | 완료시 submit-list__button--check 클래스 추가 및 title="촬영 완료" 변경 필요 / 재촬영 불가시 disabled 속성 추가 -->
+                    <button class="submit-list__button submit-list__button--check" title="촬영 완료" disabled="">
+                        <span class="submit-list__textarea">
+                            <strong class="submit-list__label">신분증</strong>
+                            <span class="submit-list__desc">주민등록증, 운전면허증, 여권 앞면만 촬영 가능</span>
+                        </span>
+                        <i class="submit-list__icon" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li class="submit-list__item">
+                    <button class="submit-list__button" title="촬영 미완료, 촬영 화면으로 이동">
+                        <span class="submit-list__textarea">
+                            <strong class="submit-list__label">자택주소</strong>
+                            <span class="submit-list__desc">자택주소가 나온 일체의 서류 또는 수기 작성하여 촬영 가능</span>
+                        </span>
+                        <i class="submit-list__icon" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li class="submit-list__item">
+                    <button class="submit-list__button" title="촬영 미완료, 촬영 화면으로 이동">
+                        <span class="submit-list__textarea">
+                            <strong class="submit-list__label">직장주소</strong>
+                            <span class="submit-list__desc">명함 등 직장주소가 나온 일체의 서류</span>
+                        </span>
+                        <i class="submit-list__icon" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li class="submit-list__item">
+                    <button class="submit-list__button" title="촬영 미완료, 촬영 화면으로 이동">
+                        <span class="submit-list__textarea">
+                            <strong class="submit-list__label">재직증빙서류</strong>
+                            <span class="submit-list__desc">재직증명서 + 납부확인서/고용계약서 + 국민연금 납부확인서 등</span>
+                        </span>
+                        <i class="submit-list__icon" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li class="submit-list__item">
+                    <button class="submit-list__button" title="촬영 미완료, 촬영 화면으로 이동">
+                        <span class="submit-list__textarea">
+                            <strong class="submit-list__label">소득증빙서류</strong>
+                            <span class="submit-list__desc">소득금액증명원 (그 외 증명서류는 영업점 원본 제출만 가능)</span>
+                        </span>
+                        <i class="submit-list__icon" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li class="submit-list__item">
+                    <button class="submit-list__button" title="촬영 미완료, 촬영 화면으로 이동">
+                        <span class="submit-list__textarea">
+                            <strong class="submit-list__label">기타</strong>
+                            <span class="submit-list__desc">금융거래확인서, 등기부등본, 가족관계서 등</span>
+                        </span>
+                        <i class="submit-list__icon" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="select-type">
+                <div class="select-type__item">
+                    <input type="radio" id="requestType01" name="requestType" class="select-type__input">
+                    <i class="select-type__radio" aria-hidden="true"></i>
+                    <div class="select-type__label">
+                        <label class="select-type__title" for="requestType01">자택</label>
+                        <div class="select-type__description">
+                            <p>경기도 용인시 기흥구 보정동 죽현마을 동월오얄듀크 301동 1005호</p>
+                        </div>
+                    </div>
+                    <div class="select-type__button">
+                        <button type="button">변경</button>
+                    </div>
+                </div>
+            </div>
+            <div class="request-list">
+                <div class="request-list__item">
+                    <div class="request-list__item-header">
+                        <div class="request-list__item-name">
+                            <button type="button" class="button-arrow">연락처 이체</button>
+                        </div>
+                        <span class="request-list__item-status complete">완료</span>
+                    </div>
+                    <div class="request-list__detail">
+                        <ul class="request-list__detail-list info-list__group">
+                            <li class="info-list__item">
+                                <h5 class="info-list__label">받는분</h5>
+                                <div class="info-list__value">
+                                    <strong class="name">김하나</strong>
+                                    <p class="account">신한은행 123456758123</p>
+                                </div>
+                            </li>
+                            <li class="info-list__item">
+                                <h5 class="info-list__label">이체금액</h5>
+                                <div class="info-list__value">
+                                    <strong class="amount">408,000원</strong>
+                                </div>
+                            </li>
+                            <li class="info-list__item">
+                                <h5 class="info-list__label">처리일시</h5>
+                                <div class="info-list__value">
+                                    <span class="date">2019-12-16</span>
+                                    <span class="time">17:00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        .boxes{
+            padding: 20px;
+            display: flex;
+            background: #fff;
+            overflow: auto;
+            overflow-x: hidden;
+            flex-wrap:wrap;
+        }
+        .boxes .box{
+            position: relative;
+            overflow-x:hidden;
+            overflow-y: auto;
+            width: 375px;
+            min-width: 375px;
+            height: 812px;
+            border: 1px solid #333;
+            background: #f9f9fb;
+            margin: 0 10px;
+            padding-bottom: 50px;
+        }
+        .boxes .box .page-name{
+            position: absolute;
+            top: -20px;
+        }
+        .boxes .box .component_title{
+            font-size: 24px;
+            padding: 20px 15px;
+            background: beige;
+        }
+        .boxes .box .sub_title{
+            font-size: 18px;
+            padding: 10px 15px;
+            background: blanchedalmond;
+        }
+        .boxes .box .sub_title ~ .sub_title{
+            margin-top: 42px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="wrap" class="wrap">
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">Select Button</h1>
+        <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+    </div>
+    <div id="content" class="app-main">
+        <div class="tit-default">Select</div>
+        <div class="container">
+            <div class="button-select">
+
+                <!-- to 개발 | 데이터 속성 추가 data-element="modal__open" data-target="모달 레이어팝업 id값 예)#combobox1" -->
+                <button type="button" class="button button-select__item" title="버튼 선택" data-element="modal__open" data-target="#combobox_1">셀렉트 버튼</button>
+            </div>
+        </div>
+        <div class="tit-default">Select Disabled</div>
+        <div class="container">
+            <div class="button-select disabled">
+
+                <!-- to 개발 | 데이터 속성 추가 data-element="modal__open" data-target="모달 레이어팝업 id값 예)#combobox1" -->
+                <button type="button" class="button button-select__item" title="버튼 선택" data-element="modal__open" data-target="#combobox_1">셀렉트 버튼</button>
+            </div>
+        </div>
+
+        <div class="tit-default">Email Select</div>
+        <!-- 200630 | 현행화 | 이메일 수정 -->
+        <div class="container">
+            <div class="input-wrap">
+                <div class="input">
+                    <div class="input__inner">
+                        <!-- 200630 | title, placeholder 수정 -->
+                        <input type="text" class="input__element input__no-label" title="이메일아이디 입력" id="inputAddress" placeholder="이메일아이디">
+                    </div>
+                </div>
+                <span class="mark">@</span>
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="이메일 주소 선택" data-element="modal__open" data-target="#combobox_6-01">선택</button>
+                </div>
+            </div>
+            <!-- 에러 메시지 활성화는 active 클래스 추가 -->
+            <p class="input__error" aria-live="assertive">이메일 아이디와 주소선택 에러메세지 입니다.</p>
+
+            <!-- 200630 | 이메일 직접입력 수정  -->
+            <div class="input" style="display:none;">
+                <div class="input__inner">
+                    <input class="input__element input__no-label" type="text" title="도메인 직접입력" placeholder="도메인 직접입력">
+                    <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                </div>
+            </div>
+            <!-- 에러 메시지 활성화는 active 클래스 추가 -->
+            <p class="input__error" aria-live="assertive">에러메세지 입니다.</p>
+        </div>
+        <!-- //200630 | 현행화 | 이메일 수정 -->
+
+        <div class="tit-default">Select + input 1</div>
+        <div class="container">
+            <div class="input-wrap input-wrap--wide">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="휴대폰 식별번호 선택" data-element="modal__open" data-target="#combobox_3">010</button>
+                </div>
+                <div class="input">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                    <div class="input__inner">
+                        <input type="text" id="phoneNumber" class="input__element" title="휴대폰 나머지번호 입력">
+                        <label for="phoneNumber" class="input__label" aria-hidden="true">휴대폰번호 뒤8자리 입력</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tit-default">Select + input 2</div>
+        <div class="container">
+            <div class="input-wrap input-wrap--wide2">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_4">통화선택</button>
+                </div>
+                <div class="input input--full">
+                    <!--
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" class="input__element" title="금액 입력">
+                        <label class="input__label" aria-hidden="true">1천원 이상</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tit-default">Select + input 3</div>
+        <div class="container">
+            <div class="input-wrap input-wrap--wide2">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_5">통화선택</button>
+                </div>
+                <div class="input">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                    <!--
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" class="input__element" title="금액 입력">
+                        <label class="input__label" aria-hidden="true">1천원 이상</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                    </div>
+                </div>
+                <i class="input__optional pdt60">&middot;</i><!-- 200720 | 클래스 추가 | pdt60 -->
+                <div class="input">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                    <div class="input__inner">
+                        <input type="text" class="input__element input__no-label" title="금액 소수점 입력" value="00">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tit-default">Select + Select</div>
+        <div class="container">
+            <div class="input-wrap">
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_6">통화선택</button>
+                </div>
+                <i class="input__optional">~</i>
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_7">통화선택</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+    <!-- Modal layer -->
+    <div id="combobox_1" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor" data-element="modal__open" data-target="#modalAlert">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">알림 팝업</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor" data-element="modal__open" data-target="#modalConfirm">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">컨펌 팝업</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <div id="combobox_2" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <div id="combobox_3" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <div id="combobox_4" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <div id="combobox_5" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <div id="combobox_6" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <div id="combobox_7" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <!-- 알림 팝업 -->
+    <div id="modalConfirm" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">타이틀 영역</h1>
+            </div>
+            <div class="modal__contents">
+                <p class="modal__description">컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 </p>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                <button type="button" class="button button--positive">확인</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+    <!-- 알럿 팝업 -->
+    <div id="modalAlert" class="modal modal--alert" data-element="modal__element">
+        <div class="modal__container" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">타이틀 영역</h1>
+            </div>
+            <div class="modal__contents">
+                <p class="modal__description">컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 </p>
+                <div class="button-contained-wrap">
+                    <button type="button" class="button-underline button-underline--green">오늘 하루 열리지 않음</button>
+                </div>
+            </div>
+            <div class="modal__button-wrap">
+                <button
+                    type="button"
+                    class="button button--positive"
+                    data-element="modal__close">
+                    확인
+                </button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- //모달레이어 - 알럿 -->
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+
+</body>
+
+</html>

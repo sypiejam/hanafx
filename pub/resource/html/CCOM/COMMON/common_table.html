@@ -1,0 +1,280 @@
+<!-- 0.5v -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>테이블</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        /* .title{display:block;padding-top:30px;margin-top:30px;font-size:24px;font-weight:bold;}
+        .title:first-of-type{margin-top:0;border-top:0;padding-top:0;}
+        .sub-text{color:#666; font-size:13px;margin-top:40px;}
+        .box .sub-text:first-of-type{margin-top:5px;}
+        .sub-text + div{margin-top:5px;} */
+        .common-list-title{
+            padding: 10px 24px;
+            margin: 20px 0;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">테이블</h1>
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <div id="content" class="app-main app-main--without-footer">
+
+            <div class="common-list-title">테이블 상단 텍스트</div>
+            <div class="container">
+                <div class="table-header">
+                    <div class="table-header__title">시장금리</div>
+                </div>
+                <div class="table-header">
+                    <span class="table-header__unit">(단위:연%)
+                </div>
+                <div class="table-header">
+                    <div class="table-header__title">시장금리</div>
+                    <span class="table-header__unit">(단위:연%)
+                </div>
+
+                <div class="table-header label">
+                    <div class="table-header__title flex align-items-center">
+                        <div class="tit-small">가입자정보</div>
+                        <button type="button" class="button-tooltip" data-tooltip="button" data-target="#viewMore01" title="안내 툴팁 열기"></button>
+
+                        <div class="tooltip" data-tooltip="paragraph">
+                            <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="$label$ 툴팁 열기"></button>
+                            <div class="tooltip__panel" data-tooltip-panel="false">
+                                <div class="tooltip__column">
+                                    <div class="tooltip__title" data-tooltip="focus">툴팁 타이틀</div>
+                                    <p class="tooltip__description" data-tooltip="focus">전환가능계좌는 원칙적으로 예금종류가 저축예금인 통장이나 일부 요건에 따라 전환이 불가한 경우가 있으니 자세한 내용은
+                                        콜센터를 통해 문의하여 주시기 바랍니다.</p>
+                                </div>
+                                <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <span class="table-header__unit">
+                        <button type="button" class="button--gray">개인정보변경</button>
+                    </span>
+                </div>
+            </div>
+            <div class="common-list-title">테이블 세로형</div>
+            <div class="container">
+                <div class="table-header">
+                    <div class="table-header__title">시장금리</div>
+                    <span class="table-header__unit">(단위:연%)
+                </div>
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="3">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="table-vertical__th">거래은행</th>
+                                <th scope="col" class="table-vertical__th">금리변동주기</th>
+                                <th scope="col" class="table-vertical__th">기준금리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="table-vertical__th">table-vertical__th</th>
+                                <td class="table-vertical__td">table-vertical__td</td>
+                                <td class="table-vertical__td">table-vertical__td</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-vertical__th">6개월물 금융채 유통 수익율</th>
+                                <td class="table-vertical__td">6개월</td>
+                                <td class="table-vertical__td">1,460</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td table-vertical__td--left">table-vertical__td table-vertical__td--left</td>
+                                <td class="table-vertical__td table-vertical__td--right">table-vertical__td table-vertical__td--right</td>
+                                <td class="table-vertical__td table-vertical__td--right">table-vertical__td table-vertical__td--right</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td table-vertical__td--left">예금잔액</td>
+                                <td class="table-vertical__td table-vertical__td--right">123,123원</td>
+                                <td class="table-vertical__td table-vertical__td--right">123,123원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-sub-text">예금 담보에 대한 질권설정금액은 대출약정금액의 110%로 설정됩니다.</p>
+            </div>
+            <div class="common-list-title">테이블 가로형</div>
+            <div class="container">
+                <div class="table-header">
+                    <div class="table-header__title">대출내역</div>
+                </div>
+                <div class="table table-horizontal">
+                    <table>
+                        <colgroup>
+                            <col style="width:36%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">table-horizontal__th</th>
+                                <td class="table-horizontal__td">table-horizontal__td</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">대출금액</th>
+                                <td class="table-horizontal__td">10,000,000원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">table-horizontal__th</th>
+                                <td class="table-horizontal__td table-horizontal__td--right">table-horizontal__td table-horizontal__td--right</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">대출연체시작일</th>
+                                <td class="table-horizontal__td table-horizontal__td--right">2000-01-01</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-sub-text">예금 담보에 대한 질권설정금액은 대출약정금액의 110%로 설정됩니다.</p>
+            </div>
+            <div class="common-list-title">bg color #fafafa가 깔린 테이블 가로형</div>
+            <div class="container">
+                <div class="table-header">
+                    <div class="table-header__title">대출내역</div>
+                </div>
+                <div class="table table-horizontal table-horizontal--background">
+                    <table>
+                        <colgroup>
+                            <col style="width:40%;">
+                            <col style="width:60%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">대출계좌번호</th>
+                                <td class="table-horizontal__td table-horizontal__td--right">
+                                    000-******-00000
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">실행번호</th>
+                                <td class="table-horizontal__td table-horizontal__td--right">
+                                    1
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">대출상품명</th>
+                                <td class="table-horizontal__td table-horizontal__td--right">
+                                    예적금담보대출(예금)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">이용료면제</th>
+                                <td class="table-horizontal__td">
+                                    <ul class="dashed-list">
+                                        <li class="dashed-list__list-item">
+                                            Hana VIP, VIP 등급면제
+                                        </li>
+                                        <li class="dashed-list__list-item">
+                                            계좌별 1회에 한하여 최초 등록월은 면제(단, 문자통지 수신번호 추가 시는 예외)
+                                        </li>
+                                    </ul>
+                                    <p class="exam">입출금 푸시알림서비스는 무료신청이 가능합니다.</p>
+                                    <div class="inner-button">
+                                        <button type="button" class="optional-link">입출금푸시알림설정</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <dl class="table-summary">
+                        <dt class="table-summary__dt">해지 후 받으시는 금액 ① + ② </dt>
+                        <dd class="table-summary__dd eng">USD 0.00</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="common-list-title">여백이 좁은 테이블</div>
+            <div class="container">
+                <div class="table table-horizontal table-horizontal--narrow">
+                    <table>
+                        <colgroup>
+                            <col style="width:8%;">
+                            <col style="width:25%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr class="table-horizontal__tr--single">
+                                <th scope="row" colspan="2" class="table-horizontal__th">상환금액</th>
+                                <td class="table-horizontal__td">0원</td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="3"
+                                    class="table-horizontal__th table-horizontal__th--narrow">약
+                                    <br>정
+                                    <br>이
+                                    <br>자</th>
+                                <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">대출이율</th>
+                                <td class="table-horizontal__td">3.333%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">납입이자</th>
+                                <td class="table-horizontal__td">20,000원</td>
+                            </tr>
+                            <tr class="table-horizontal__tr--single">
+                                <th scope="row" colspan="2" class="table-horizontal__th">중도상환해약금</th>
+                                <td class="table-horizontal__td">-</td>
+                            </tr>
+                            <tr class="table-horizontal__tr--single">
+                                <th scope="row" colspan="2" class="table-horizontal__th">상환금액</th>
+                                <td class="table-horizontal__td">0원</td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="3"
+                                    class="table-horizontal__th table-horizontal__th--narrow">약
+                                    <br>정
+                                    <br>이
+                                    <br>자</th>
+                                <th scope="row" class="table-horizontal__th">이자계산기간</th>
+                                <td class="table-horizontal__td">2020-01-08 ~ 2020-01-08</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">대출이율</th>
+                                <td class="table-horizontal__td">3.333%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-horizontal__th">납입이자</th>
+                                <td class="table-horizontal__td">20,000원</td>
+                            </tr>
+                            <tr class="table-horizontal__tr--single">
+                                <th scope="row" colspan="2" class="table-horizontal__th">중도상환해약금</th>
+                                <td class="table-horizontal__td">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

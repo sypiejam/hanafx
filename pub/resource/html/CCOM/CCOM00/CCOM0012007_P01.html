@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">해외출국한경우</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <!-- 200612 수정 | 클래스 추가 -->
+                <p class="text-default color-333">출국사실을 확인하기 위하여 고객님의 주민등록번호 및 성명을 출국정보 조회시스템을운영하고 있는 금융결제원을 통하여 법무부 출입국관리사무소로 전송하고, 확인 받는데 동의합니다.</p>
+                <!-- //200612 수정 | 클래스 추가 -->
+            </div>
+            <!-- 200612 수정 | 클래스 추가 -->
+            <div class="container mgt150">
+            <!-- //200612 수정 | 클래스 추가 -->
+                <div class="agree-wrap__section">
+                    <div class="privacy modi-privacy2">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button>
+                            <button type="button" class="privacy__detail" id="" >
+                                전자금융사기예방
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="title-xsmall">
+                        <button class="pualugin__button button-arrow" data-element="toggle__anchor">이용안내</button>
+                    </div>
+                    <ul class="guide-wrap__list guide-wrap__list--small" data-element="toggle__panel">
+                        <!-- 200612 수정 | 텍스트 수정, 클래스 추가 -->
+                        <li class="guide-wrap__item color-333">
+                            해외IP임이 확인된 경우에만 출국정보를 이용하실 수 있으며 법무부 출입국관리 사무소 시스템에 장애가 발생하거나 출입국정보 업데이트가 지연될 경우 출국정보 이용이 제한 될 수 있습니다.
+                            <p class="indent-44 color-333 mgt18">출입국정보 업데이트 주기<br>
+                                <div class="indent-44 color-333 text-small">- 통상 출입국 후 최소 12시간에서 최대 32시간</div>
+                            </p>
+                        </li>
+                        <!-- //200612 수정 | 텍스트 수정, 클래스 추가 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">출국사실조회</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

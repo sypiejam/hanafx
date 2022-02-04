@@ -1,0 +1,116 @@
+<!-- v0.95 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">ARS인증</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <!-- 접근성 및 디자인현행화 -->
+                <p class="text-default color-000">등록된 전화번호(휴대폰, 자택, 직장)중 선택하신 번호로 전화를 드려 ARS를 통해 본인인증 절차를 진행합니다.</p><!-- 200629 | 오타 수정 -->
+                <div class="ars-confirm">
+                    <div class="ars-confirm__title">승인번호</div>
+                    <div class="ars-confirm__number">
+                        <span class="certification-number">5</span><span class="certification-number">5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tit-small">연락처</div>
+            <div class="container">
+                <div class="button-select">
+                    <!-- 접근성 및 디자인현행화 -->
+                    <button type="button" class="button button-select__item" data-element="modal__open" data-target="#CCOM0015001_T01" title="연락처 선택">010-1234-1234</button>
+                    <!-- //접근성 및 디자인현행화 -->
+                </div>
+
+                <!-- 접근성 및 디자인현행화 -->
+                <div class="guide-wrap mgt150">
+                    <ul class="guide-wrap__list">
+                        <li class="guide-wrap__item">ARS 안내에 따라 일회용 인증번호 2자리를 전화키패드에서 눌러 주시기 바랍니다.</li>
+                        <li class="guide-wrap__item">ARS 전화연결 시 해당 인증번호를 투입하여야 하오니 기억해 두셔야 합니다.</li>
+                        <li class="guide-wrap__item">인증번호를 3회 잘못 입력했을 경우 ARS인증이 자동으로 종료됩니다.</li>
+                        <li class="guide-wrap__item">재시도를 원하시면 재요청 버튼을 다시 눌러주시기바랍니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">ARS 요청</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+            <!-- 200626 | 버튼 추가 -->
+            <!-- <div class="button-wrap">
+                <button type="button" class="button button--negative">재요청</button>
+                <button type="button" class="button button--positive">확인</button>
+            </div> -->
+            <!-- //200626 | 버튼 추가 -->
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <div id="CCOM0015001_T01" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">연락처선택</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">010-1234-1234</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">010-1234-1234</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">010-1234-1234</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">010-1234-1234</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

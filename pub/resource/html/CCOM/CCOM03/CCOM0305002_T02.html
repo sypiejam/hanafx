@@ -1,0 +1,184 @@
+<!-- 1.0v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body class="bg-white">
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">손님우대서비스</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="background-gray">
+                <div class="tab-wrap tab-wrap--row2">
+                    <!-- 200714 수정 | tab-wrap__menu--scroll 클래스 추가 -->
+                    <ul class="tab-wrap__menu tab-wrap__menu--scroll">  
+                        <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                            <!--페이지 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                            <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">제공혜택</a>
+                        </li>
+                        <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                            <a href="#" role="tab" class="tab-wrap__button is-active" aria-selected="true">우대내역</a>
+                        </li>
+                        <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                            <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">손님평점<br>산정내역</a>
+                        </li>
+                        <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                            <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">평점별<br>손님등급</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container mgt90">
+                    <div class="sort-area">
+                        <div class="sort-area__tit">최근 6개월 보기</div>
+                    </div>
+                    <div class="sort-area__button">
+                        <div class="chart-button">
+                            <a href="#" class="active">그래프로보기</a>
+                            <a href="#">리스트형식으로보기</a>
+                        </div>
+                        <div class="history-button">
+                            <button type="button">이번달보기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- dev -->
+                <div class="container mgt120">
+                    <img src="../../../images/C/dev_chart2.png" alt="">
+                </div>
+                <!--// dev -->
+            </div>
+
+            <div class="container-full">
+                <div class="accordion accordion-type1 accordion--bgwhite" data-element="accordion"  role="presentation">
+                    <div data-element="accordion__item">
+                        <button type="button" title="더보기" class="accordion__title" data-element="accordion__anchor">
+                            <span class="title-name">월별내역보기</span>
+                            <span class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <div class="accordion__panel" data-element="accordion__panel"
+                            aria-labelledby="pualugin-accordion-10" role="region">
+                            <!-- 컨텐츠 영역-->
+                            <div class="accordion__inner">
+
+                                <div class="month-tab" data-element="tab" data-options='{ "initIndex": 3 }'>
+
+                                    <div class="month-tab__list">
+
+                                        <div class="month-tab__menu" role="tablist">
+                                            <button type="button is-active" data-element="tab__anchor"><span>10</span>월</button>
+                                            <button type="button" data-element="tab__anchor"><span>11</span>월</button>
+                                            <button type="button" data-element="tab__anchor"><span>12</span>월</button>
+                                            <button type="button" data-element="tab__anchor"><span>1</span>월</button>
+                                            <button type="button" data-element="tab__anchor"><span>2</span>월</button>
+                                            <button type="button" data-element="tab__anchor"><span>3</span>월</button>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="month-tab__view">
+
+                                        <div class="result-box is-active" data-element="tab__panel">
+                                            <ul class="result-box--list">
+                                                <li>
+                                                    <div class="title">
+                                                        모바일뱅킹이체
+                                                        수수료(다른은행)
+                                                        모바일뱅킹이체
+                                                        수수료(다른은행)
+                                                    </div>
+                                                    <div class="percent">
+                                                        <span style="width:20%">1건</span>
+                                                    </div>
+                                                    <div class="price">
+                                                        <span aria-hidden="true">1건/</span>
+                                                        500원
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        모바일뱅킹이체
+                                                        수수료(다른은행)
+                                                        모바일뱅킹이체
+                                                        수수료(다른은행)
+                                                    </div>
+                                                    <div class="percent">
+                                                        <span style="width:45%">3건</span>
+                                                    </div>
+                                                    <div class="price">
+                                                        <span aria-hidden="true">3건/</span>
+                                                        1,500원
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        모바일뱅킹이체
+                                                        수수료(다른은행)
+                                                        모바일뱅킹이체
+                                                        수수료(다른은행)
+                                                    </div>
+                                                    <div class="percent">
+                                                        <span style="width:20%">1건</span>
+                                                    </div>
+                                                    <div class="price">
+                                                        <span aria-hidden="true">1건/</span>
+                                                        500원
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="button-contained-wrap mgt120">
+                                                <button type="button" class="button-square-small button-square-small--white">우대사유보기</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="result-box result-box--none" data-element="tab__panel">
+                                            우대받으신 내역이 없습니다.
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <!--// 컨텐츠 영역 -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- //Content -->
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

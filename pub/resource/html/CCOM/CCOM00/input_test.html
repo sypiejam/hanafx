@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        .boxes{
+            padding: 20px;
+            display: flex;
+            background: #fff;
+            overflow: auto;
+            overflow-x: hidden;
+            flex-wrap:wrap;
+            min-width: 1860px;
+        }
+        .boxes .box{
+            position: relative;
+            overflow-x:hidden;
+            overflow-y: auto;
+            width: 375px;
+            min-width: 375px;
+            height: 812px;
+            border: 1px solid #333;
+            background: #f9f9fb;
+            margin: 0 10px;
+            padding-bottom: 50px;
+        }
+
+        .boxes .box .page-name{
+            position: absolute;
+            top: -20px;
+        }
+        .boxes .box .component_title{
+            font-size: 24px;
+            padding: 20px 15px;
+            background: beige;
+        }
+        .boxes .box .sub_title{
+            font-size: 18px;
+            padding: 10px 15px;
+            background: blanchedalmond;
+        }
+        .boxes .box .sub_title ~ .sub_title{
+            margin-top: 42px;
+        }
+        .guide__text + .container{
+            background-color: #fff;
+            position: relative;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap" class="wrap">
+
+    <div class="sub_title">native키패드용 readonly</div>
+    <div class="container">
+        <div class="input native-readonly">
+            <div class="input__inner">
+                <input type="text" id="inputText02" class="input__element" title="아이디" placeholder="5~20자 영문 숫자 입력" readonly data-element="modal__open" data-target="#combobox_1" role="button">
+                <label for="inputText02" class="input__label" aria-hidden="true">아이디</label>
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제" style="display: none;"></button>
+            </div>
+            <p class="input__error" aria-live="assertive">오류입니다.</p>
+        </div>
+    </div>
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+
+
+    <!-- Modal layer -->
+    <div id="combobox_1" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">콤보박스 타이틀</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션4</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션5</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

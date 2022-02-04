@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body onload="init();">
+    <div id="wrap" class="wrap wrap-intro">
+        
+        <!-- Content -->
+        <div id="content" class="app-main">
+            
+            <div id="animation_container" role="img" aria-label="공인인증서, OTP없이 빠르고! 안전하게! 1초 인증 3초 이체 1분 적금 3분 대출">
+                <canvas id="canvas"></canvas>
+                <div id="dom_overlay_container" style="">
+                </div>
+            </div>
+            <div id='_preload_div_' style=''></div>
+
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <div class="intro-banner"><img src="../../../images/C/img_intro_banner.png" alt="완료하면 이체수수료 면제"></div><!-- 200812 | 부행장지시사항 | 이미지추가-->
+                <button type="button" class="button button--positive">시작하기</button>
+            </div>
+            <div class="button-wrap--intro">
+                <button type="button" class="button button--intro"><span>기존방식으로 로그인</span></button>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/createjs/createjs.intro.min.js"></script>
+    <script src="../../../../resource/library/createjs/intro.js"></script>
+    <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp=AdobeAn.getComposition("46BB96967F0C48F39A27E19D5A71EEB8");
+            var lib=comp.getLibrary();
+            handleComplete({},comp);
+        }
+        function handleComplete(evt,comp) {
+            //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+            var lib=comp.getLibrary();
+            var ss=comp.getSpriteSheet();
+            var preloaderDiv = document.getElementById("_preload_div_");
+            preloaderDiv.style.display = 'none';
+            canvas.style.display = 'block';
+            exportRoot = new lib.tutorial();
+            stage = new lib.Stage(canvas);	
+            //Registers the "tick" event listener.
+            fnStartAnimation = function() {
+                stage.addChild(exportRoot);
+                createjs.Ticker.framerate = lib.properties.fps;
+                createjs.Ticker.addEventListener("tick", stage);
+            }	    
+            //Code to support hidpi screens and responsive scaling.
+            AdobeAn.makeResponsive(true,'both',true,1,[canvas,preloaderDiv,anim_container,dom_overlay_container]);	
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+    </script>
+
+</body>
+
+</html>

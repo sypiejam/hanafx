@@ -1,0 +1,105 @@
+<!-- v0.98 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full-button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">직업선택</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="tit-small">분류1</div>
+            <div class="container">
+                <!-- to.개발 정책변경으로 인한 디폴드 select 에서 팝업 팝업 호출 버튼으로 변경 -->
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="대분류 선택" data-element="modal__open" data-target="#combobox_1" aria-expanded="false" aria-controls="#combobox_1">선택</button>
+                </div>
+            </div>
+            <div class="tit-small">분류2</div>
+            <div class="container">
+                <!-- to.개발 정책변경으로 인한 디폴드 select 에서 팝업 팝업 호출 버튼으로 변경 -->
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="중분류 선택" data-element="modal__open" data-target="#combobox_1" aria-expanded="false" aria-controls="#combobox_1">선택</button>
+                </div>
+            </div>
+            <div class="tit-small">분류3</div>
+            <div class="container">
+                <!-- to.개발 정책변경으로 인한 디폴드 select 에서 팝업 팝업 호출 버튼으로 변경 -->
+                <div class="button-select">
+                    <button type="button" class="button button-select__item" title="소분류 선택" data-element="modal__open" data-target="#combobox_1" aria-expanded="false" aria-controls="#combobox_1">선택</button>
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <div id="combobox_1" class="modal modal--slide modal--select-value" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <!-- to.개발 선택 버튼 타이틀에 맞게 타이틀 수정 -->
+                <h1 class="modal__header--title">대분류 선택</h1>
+            </div>
+            <div class="modal__contents modal__contents--no-spacer">
+                <div class="container">
+                    <div class="list-section">
+                        <ul class="list-wrap list-wrap--line">
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션1</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션2</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션3</strong>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="list-wrap__item list-button-wrap list-button-wrap--small">
+                                <button type="button" class="list-wrap__anchor">
+                                    <span class="list-wrap__box">
+                                        <strong class="list-wrap__title list-wrap__title--value">옵션4</strong>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

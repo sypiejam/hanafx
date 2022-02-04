@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <!-- 접근성 및 디자인현행화 -->
+    <div class="modal-full inner-tab modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">주소찾기</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="tab-wrap">
+
+                <!-- 접근성 개선안 반영 -->
+                <ul class="tab-wrap__menu" role="tablist">
+                    <li class="tab-wrap__item" role="presentation">
+                        <!-- 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" class="tab-wrap__button is-active" role="tab" aria-selected="true">통합검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">지번검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">도로명검색</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="find-address after-tab"><!-- 200716 | after-tab 클래스 추가 -->
+                <div class="container">
+                    <p class="text-default">입력하신 주소를 확인해주시기 바랍니다. <br>정확한 우편물 전달을 위해 가급적 ‘도로명주소’ 를 선택하여 주시기바랍니다.</p>
+                </div>
+                <!-- to.개발 200416 디자인 변경으로 인한 class 변경 -->
+                <div class="tit-default">입력된 주소</div>
+                <div class="container">
+                    <span class="radio-wrap radio-wrap--box mgt30">
+                        <input type="radio" id="rdo1" class="radio-wrap__radio" name="rdo">
+                        <label for="rdo1" class="radio-wrap__label">
+                            서울특별시 중구 을지로 6(재능빌딩)
+                            <span>64-1, (명호빌딩)</span>
+                        </label>
+                    </span>
+                </div>
+                <!-- to.개발 200416 디자인 변경으로 인한 class 변경 -->
+                <div class="tit-default">도로명 주소</div>
+                <div class="container">
+                    <span class="radio-wrap radio-wrap--box mgt30">
+                        <input type="radio" id="rdo2" class="radio-wrap__radio" name="rdo" checked="checked">
+                        <label for="rdo2" class="radio-wrap__label">
+                            서울특별시 중구 을지로 6(재능빌딩)
+                            <span>64-1, (명호빌딩)</span>
+                        </label>
+                    </span>
+                </div>
+                <!-- to.개발 200416 디자인 변경으로 인한 class 변경 -->
+                <div class="tit-default">지번 주소</div>
+                <div class="container">
+                    <span class="radio-wrap radio-wrap--box mgt30">
+                        <input type="radio" id="rdo3" class="radio-wrap__radio" name="rdo">
+                        <label for="rdo3" class="radio-wrap__label">
+                            서울특별시 중구 을지로 6(재능빌딩)
+                            <span>64-1, (명호빌딩)</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

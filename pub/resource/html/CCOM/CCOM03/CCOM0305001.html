@@ -1,0 +1,722 @@
+<!-- 1.1v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">손님우대서비스</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="tab-wrap tab-wrap--row2">
+                <!-- 20200609 수정 | tab-wrap__menu--scroll 클래스 추가 -->
+                <ul class="tab-wrap__menu tab-wrap__menu--scroll">
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <!--페이지 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" role="tab" class="tab-wrap__button is-active" aria-selected="true">제공혜택</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">우대내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">손님평점<br>산정내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">평점별<br>손님등급</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container mgt90">
+                <div class="white-box white-box--main-title">
+                    <div class="white-box__header white-box__header2">
+                        <span class="label__name--type2">하나금융 우대서비스 등급 </span>
+                        <div class="text">
+                            홍길동 손님은 2020년 07월 09일까지<br>
+                            <span class="color-green">Hana Family</span>
+                            입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mgt120">
+                <ul class="guide-wrap__list">
+                    <li class="guide-wrap__item">
+                        하나금융그룹은 개인손님(개인사업자 포함)을 대상으로 하나은행, 하나금융투자,
+                        하나카드에서 산정된 평점을 합산하여 통일된 우대서비스 등급 기준으로 등급별 서비스를 제공하고 있습니다.
+                    </li>
+                    <li class="guide-wrap__item">
+                        최근 3개월 간의 거래실적을 1월, 4월, 7월, 10월에 산정하여 3개월 주기로 적용됩니다. (적용주기 : 해당월 10일)
+                    </li>
+                    <li class="guide-wrap__item">
+                        등급유예제도 : 이전분기에 산정된 등급과 현재분기에 산정된 등급을 비교하여 등급이 하락하는 경우,
+                        해당분기 3개월간은 높은 등급의 우대서비스를 제공합니다. (예 : 이전 분기 등급 VIP, 현재 분기 등급이
+                        hana Family인 경우 VIP로 우대서비스)
+                    </li>
+                </ul>
+            </div>
+            <!-- 200630 수정 | 제공서비스 제거
+            <div class="tit-default">제공서비스</div>
+            <div class="container">
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col width="25%">
+                            <col width="*">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="3" class="table-vertical__th">고객등급노출</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="3" class="table-vertical__th">
+                                    이체거래
+                                </th>
+                                <td class="table-vertical__td">
+                                    자동화기기 이용수수료 (타행자동화 기기 이용 수수료, 자행분)
+                                </td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">
+                                    자동화기기 이용수수료 (당행자동화 기기 이용)
+                                </td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">
+                                    인터넷뱅킹/스마트폰 뱅킹 이체수수료
+                                </td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    이체거래
+                                </th>
+                                <td class="table-vertical__td">
+                                    자동화기기 이용수수료 (타행자동화 기기 이용 수수료, 자행분)
+                                </td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">
+                                    자동화기기 이용수수료 (당행자동화 기기 이용)
+                                </td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">
+                                    인터넷뱅킹/스마트폰 뱅킹 이체수수료
+                                </td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            200630 수정 | 제공서비스 제거 -->
+            <div class="tit-default flex">
+                <div>
+                    등급별 제공서비스
+                </div>
+                <div class="additional-item text--xxsmall color-7575">
+                    ○:면제, ―:감면없음
+                </div>
+            </div>
+            <div class="container">
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="3">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="3" class="table-vertical__th">수수료</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    자동화기기 이용수수료 (타행자동화 기기 이용 수수료, 자행분)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    자동화기기 이용수수료 (당행자동화 기기 이용)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    인터넷뱅킹/스마트폰 뱅킹 이체수수료
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">월 10회 면제</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">월 5회 면제</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    창구 송금수수료(다른 은행으로 보낼 때)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">30% 감면</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    폰뱅킹 이체수수료
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    OTP 발급수수료 (토큰형)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">50% 감면</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    OTP 발급수수료 (카드형)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    OTP 발급수수료 (1Q스마트OTP)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    자기앞수표 발행수수료 (비정액권)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    자기앞수표 교환전자금화
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    수표/어음 결제연장
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    (가계)당좌예금신용조사
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    보관어음 취급수수료
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    부도처리
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    납부자자동이체
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    제증명서 발급
+                                    (은행조회서 外)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    통장/증서등 재발행
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    예금주명 변경수수료
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    질권설정승락서 발급수수료
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    자금이체 수취인통지
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    입출금 거래내역 문자통지 서비스
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    대여금고 임차보증금
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    보호예수
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">○</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="3">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="3" class="table-vertical__th">외환</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    환전/송금시 환율우대 (주요통화 USD, JPY EUR)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">20%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">10%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    여행자수표 환율우대 (주요통화 USD, JPY, EUR)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">20%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">10%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="4" class="table-vertical__th">
+                                    외화송금수수료(당발송금)
+                                </th>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">50%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">30%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">10%</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <!-- 200630 | 문구 수정 -->
+                <ul class="guide-wrap__list">
+                    <li class="guide-wrap__item">
+                        <p class="list-sub-text">제공서비스는 당행의 사정에 따라 변경될 수 있습니다.</p>
+                    </li>
+                    <li class="guide-wrap__item">
+                        <p class="list-sub-text">
+                           보호예수, 대여금고 등 일부 서비스는 거래 영업점 사정에 따라 이용이 제한될 수 있습니다.
+                        </p>
+                    </li>
+                    <li class="guide-wrap__item">
+                        <p class="list-sub-text">
+                            영업점 VIP실 이용은 제공서비스에 해당되지 않습니다.
+                        </p>
+                    </li>
+                    <li class="guide-wrap__item">
+                        <p class="list-sub-text">
+                            구 외환은행 프라임등급 보유 손님에게는 2017년 7월 10일부터 '프라임등급유지서비스'를 제공하고 있습니다. 단, 서비스 제공은 분기 등급산정시 일정 요건을 충족한 경우에 유지됩니다.
+                        </p>
+                    </li>
+                    <li class="guide-wrap__item">
+                        <p class="list-sub-text">
+                            본인의 거래평점의 증가에 따른 등급 상승으로 신용등급에 변동이 있는 경우, '금리인하 요구권' 신청이 가능합니다. 단, 개인 신용등급에 따라 금리가 차증 적용되는 가계대출을 이용하는 손님에 한합니다.
+                            자세한 내용은 대출 취급 영업점에 문의하여 주시기 바랍니다.
+                        </p>
+                    </li>
+                </ul>
+                <!--// 200630 | 문구 수정 -->
+            </div>
+            <div class="container mgt60">
+                <div class="button-contained-wrap button-contained-wrap--left">
+                    <button type="button" class="button-square-small button-square-small--white">프라임등급유지서비스</button>
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <!-- //footer -->
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!-- 0.98v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full modal-full--button">
+        <div class="modal__header">
+            <h1 class="modal__header--title">자물쇠카드번호입력</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <div class="password__wrap">
+                    <div class="password__wrap__item password__wrap__item--small">
+                        <div class="password__wrap__title">
+                            <strong class="password__wrap__title--brackets">[<span>32</span>]</strong>
+                            <storng class="password__wrap__title--text">앞 2자리</storng>
+                        </div>
+                        
+                        <div class="password__wrap__input-wrap">
+                            <!-- to.개발 | 입력 요소 'password__wrap__input--on' 클래스추가 -->
+                            <!-- to.개발 | 버튼 타이틀을 상단 일련번호 index, 앞뒤 순서  맞춰주세요 -->
+                            <input type="tel" class="password__wrap__input password__wrap__input--large password__wrap__input--on" title="n 앞 2자리 입력">
+                            <span class="password__wrap__input"></span>
+                            <span class="password__wrap__input"></span>
+                        </div>
+                    </div>
+                    <div class="password__wrap__item password__wrap__item--small">
+                        <div class="password__wrap__title">
+                            <strong class="password__wrap__title--brackets">[<span>06</span>]</strong>
+                            <storng class="password__wrap__title--text">뒤 2자리</storng>
+                        </div>
+                        <div class="password__wrap__input-wrap">
+                            <span class="password__wrap__input"></span>
+                           <!-- to.개발 | 입력 요소 'password__wrap__input--on' 클래스추가 -->
+                            <span class="password__wrap__input"></span>
+                            <!-- to.개발 | 버튼 타이틀을 상단 일련번호 index, 앞뒤 순서  맞춰주세요 -->
+                            <input type="tel" class="password__wrap__input password__wrap__input--large password__wrap__input--on" title="n 뒤 2자리 입력">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <ul class="guide-wrap__list">
+                    <li class="guide-wrap__item">ID중복에 따라 거래은행을 선택하신 경우 (예: 하나은행)선택하신 은행(하나은행)의 보안카드 번호를 입력해 주시기 바랍니다.</li>
+                    <li class="guide-wrap__item">5회 오류 입력 부터 서비스가 제한됩니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

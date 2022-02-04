@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+
+</head>
+
+<body>
+<div id="wrap" class="wrap">
+    <div></div>
+    <div class="tit-small">기본 인풋</div>
+    <div class="container">
+        <!-- 개발 | value 값이 들어가면 input--on 추가 -->
+        <div class="input native-readonly input--focus">
+            <!-- 개발 | 네이티브 키패스 활성화시 input-focus 클래스를 넣어주세요 -->
+            <!--
+                * 오류시 class="input input--error"
+                * 데이터가 초기에 자동으로 입력되어 있을때 class="input"
+            -->
+            <!--
+                * 데이터가 초기에 자동으로 입력되어 있을때 class="input"
+            -->
+            <div class="input__inner">
+                <div class="native-inner" role="button">
+                    <input type="text" id="inputText01" class="input__element" title="아이디" placeholder="플레이스홀더" readonly>
+                </div>
+                <label for="inputText01" class="input__label" aria-hidden="true">아이디</label>
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">에러메시지</p>
+        </div>
+    </div>
+
+
+    <div class="tit-small">인풋내 가이드 텍스트 들어간 경우</div>
+    <div class="container">
+        <!-- 개발 | value 값이 들어가면 input--on 추가 -->
+        <div class="input">
+            <div class="input__inner">
+                <div class="native-inner" role="button">
+                    <input type="text" id="inputText02" class="input__element input__element--right" title="몇명?" placeholder="숫자만 입력" readonly value="00">
+                </div>
+                <label for="inputText02" class="input__label" aria-hidden="true">몇명?</label>
+                <i class="input__optional">명</i>
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">에러메시지</p>
+        </div>
+    </div>
+
+    <div class="tit-small">인풋내 달력 또는 돋보기등 버튼 들어간 경우</div>
+    <div class="container">
+        <!-- 개발 | value 값이 들어가면 input--on 추가 -->
+        <div class="input native-readonly input--error">
+            <div class="input__inner">
+                <div class="native-inner" role="button">
+                    <input type="text" id="inputText03" class="input__element input-date" title="적금 시작일" readonly placeholder="적금 시작일">
+                </div>
+                <button type="button" class="input__calendar-button" aria-label="적금 시작일 선택"></button>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">에러메시지</p>
+        </div>
+    </div>
+
+    <div class="tit-small">기본달력</div>
+    <div class="container">
+        <div class="input-wrap">
+            <!-- 개발 | value 값이 들어가면 input--on 추가 -->
+            <div class="input native-readonly">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" id="inputText04" class="input__element input-date" title="달력 시작일" placeholder="달력 시작일" readonly>
+                    </div>
+                    <button type="button" class="input__calendar-button" aria-label="달력 시작일 선택"></button>
+                </div>
+            </div>
+            <i class="input__optional">-</i>
+            <!-- 개발 | value 값이 들어가면 input--on 추가 -->
+            <div class="input native-readonly input--error">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" id="inputText08" class="input__element input-date" title="달력 종료일" placeholder="달력 종료일" readonly>
+                    </div>
+                    <button type="button" class="input__calendar-button" aria-label="달력 종료일 선택"></button>
+                </div>
+            </div>
+        </div>
+        <!-- 에러 메시지 -->
+        <!-- 개발 | 에러 메시지 : 특이 케이스 block 클래스 직접 입력해주세요 -->
+        <p class="input__error block" aria-live="assertive">에러메시지</p>
+    </div>
+
+    <div class="tit-small">인풋 + 버튼</div>
+    <div class="container">
+        <div class="input-wrap">
+            <!-- 개발 | value 값이 들어가면 input--on 추가 -->
+            <div class="input input--error native-readonly">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" id="inputText06" class="input__element" placeholder="인증번호 입력" title="인증번호 입력" readonly>
+                    </div>
+                    <label for="inputText06" class="input__label" aria-hidden="true">인증번호</label>
+                    <div class="confirm-code__time">03:00</div>
+                </div>
+            </div>
+            <button type="button" class="button-rectangle button-rectangle--darkblue input__submit-button">전송</button>
+        </div>
+        <!-- 에러 메시지 -->
+        <!-- 개발 | 에러 메시지 : 특이 케이스 block 클래스 직접 입력해주세요 -->
+        <p class="input__error block" aria-live="assertive">에러메시지</p>
+    </div>
+
+    <div class="tit-small">인풋 * 3</div>
+    <div class="container">
+        <div class="input-wrap input-wrap--wide">
+            <div class="input native-readonly">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" class="input__element input__no-label" title="타이틀" placeholder="플레이스홀더" id="inputAddress1">
+                    </div>
+                </div>
+            </div>
+            <div class="input native-readonly input--error">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" class="input__element input__no-label" title="타이틀" placeholder="플레이스홀더" id="inputAddress2">
+                    </div>
+                </div>
+            </div>
+            <div class="input native-readonly">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" class="input__element input__no-label" title="타이틀" placeholder="플레이스홀더" id="inputAddress3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 에러 메시지 -->
+        <!-- 개발 | 에러 메시지 : 특이 케이스 block 클래스 직접 입력해주세요 -->
+        <p class="input__error block" aria-live="assertive">에러메시지</p>
+    </div>
+
+    <div class="tit-small">인풋 + 셀렉트</div>
+    <div class="container">
+        <div class="input-wrap">
+            <div class="input input--error">
+                <div class="input__inner">
+                    <input type="text" class="input__element input__no-label" title="이메일 아이디 입력" placeholder="이메일 아이디 입력" id="inputAddress4">
+                </div>
+            </div>
+            <span class="mark">@</span>
+            <div class="button-select">
+                <!-- to 개발 | 데이터 속성 추가 data-element="modal__open" data-target="모달 레이어팝업 id값 예)#combobox1" -->
+                <button type="button" class="button button-select__item" title="이메일 주소 선택" data-element="modal__open" data-target="#combobox_1" aria-label="이메일 도메인 선택" aria-expanded="false">선택</button>
+            </div>
+        </div>
+
+        <!-- 이메일 직접입력 -->
+        <!-- 개발 | 직업입력 선택시 보이는 ui -->
+        <div class="input native-readonly">
+            <div class="input__inner">
+                <div class="native-inner" role="button">
+                    <input class="input__element" type="text" title="이메일 직접입력" placeholder="이메일입력" readonly>
+                </div>
+                <label class="input__label" aria-hidden="true">이메일 직접입력</label>
+                <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+            </div>
+        </div>
+
+        <!-- 에러 메시지 -->
+        <!-- 개발 | 에러 메시지 : 특이 케이스 block 클래스 직접 입력해주세요
+        입력요소가 2칸 이상인 경우 제일 하단 input 요소에 에러메세지로 활성화해주세요 -->
+        <p class="input__error block" aria-live="assertive">에러메세지 입니다.</p>
+
+    </div>
+
+    <div class="tit-small">셀렉트(버튼) + 인풋</div>
+    <div class="container">
+        <div class="input-wrap input-wrap--wide2">
+            <div class="button-select">
+                <button type="button" class="button button-select__item" data-element="modal__open" data-target="#combobox_1" title="통화선택" aria-expanded="false">통화선택</button>
+            </div>
+            <div class="input native-readonly input--error">
+                <div class="input__inner">
+                    <div class="native-inner" role="button">
+                        <input type="text" class="input__element" title="1천원 이상" placeholder="1천원 이상" readonly>
+                    </div>
+                    <label class="input__label" aria-hidden="true">금액</label>
+                    <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+                </div>
+            </div>
+            <i class="input__optional pdt60">·</i><!-- 200720 | 클래스 추가 | pdt60 -->
+            <div class="input input--on native-readonly">
+                <div class="native-inner" role="button">
+                    <div class="input__inner">
+                        <input type="text" class="input__element input__no-label" title="금액 소수점 입력" value="00" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 에러 메시지 -->
+        <!-- 개발 | 에러 메시지 : 특이 케이스 block 클래스 직접 입력해주세요 -->
+        <p class="input__error block" aria-live="assertive">에러메세지 입니다.</p>
+    </div>
+
+    <div class="tit-small">주민등록번호 - 마스킹된 경우</div>
+    <div class="container">
+        <!-- to.개발 200416 주민등록번호 뒷자리 1자리만 입력하는 경우 -->
+        <div class="input id-number native-readonly readonly input--error">
+            <div class="input__inner">
+                <div class="native-inner" role="button">
+                    <input type="text" id="inputText08" class="input__element" title="주민등록번호" placeholder="생년월일 6자리">
+                </div>
+                <i class="input__optional">-</i>
+                <div class="native-inner" role="button">
+                    <input type="password" id="inputText06" class="input__element" title="주민등록번호" maxlength="1" readonly>
+                </div>
+                <label for="inputText08" class="input__label" aria-hidden="true">주민등록번호</label>
+            </div>
+            <!-- 에러 메시지 -->
+            <p class="input__error" aria-live="assertive">주민등록번호 오류입니다.</p>
+        </div>
+    </div>
+    <div style="padding-bottom:100px;"></div>
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+
+</body>
+
+</html>

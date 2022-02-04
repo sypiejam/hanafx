@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="content">
+            
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#modalDownpop" id="modalDown_btn">다운로드</button> <!-- //id 맞출것 !! -->
+            </div>
+            
+            <!-- 다운로드 슬라이드 -->
+            <div id="modalDownpop" class="modal modal--slide" data-element="modal__element"> <!-- //id 맞출것 !! -->
+                <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">설명서류 다운로드</h1>
+                    </div>
+                    <div class="modal__contents">
+                    	<div class="downWrap">
+	                    	<div class="button-wrap">
+			                    <button type="button" class="button-secondary button-secondary--green down">설명서류 PDF받기</button>
+			                </div>
+			                <p class="p1"><span>상품설명서, 약관을 수령하고</span></p>
+			                <p class="p2"><span>내용을 이해했음을 확인합니다.</span></p>
+		                </div>
+                    </div>
+                    <div class="button-fixed">
+                        <div class="button-wrap">
+                            <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                            <button type="button" class="button button--positive">확인</button>
+                        </div>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- //다운로드 슬라이드 -->
+		</div>
+    </div>
+
+
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<!-- 다운로드 애니메이션 스크립트 -->
+<script>
+$("#modalDown_btn").on('click', function(){
+	setTimeout(function(){
+		$('.downWrap .p1').addClass('on').delay(500);
+	}, 500);
+	setTimeout(function(){
+		$('.downWrap .p2').addClass('on').delay(1000);
+	}, 1000);
+});
+$("#modalDownpop .modal__btn--close, .button--negative").on('click', function(){
+	$('.downWrap .p1, .downWrap .p2').removeClass('on');
+});
+</script>
+<!-- //다운로드 애미메이션 스크립트 -->
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        .common-title{
+            padding: 10px 24px;
+            margin: 20px 0;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">슬라이드</h1>
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <div id="content" class="app-main app-main--without-footer">
+            <div class="common-title">슬라이드 - 기본형태</div>
+            <div class="total-lookup__slick">
+                <ul>
+                    <li>
+                        <a href="#" class="total-lookup__slick--1">나의 모든 계좌<br>하나원큐로 관리하세요!</a>
+                    </li>
+                    <li>
+                        <a href="#" class="total-lookup__slick--1">나의 모든 계좌<br>하나원큐로 관리하세요!</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="common-title">슬라이드 - 탭형식</div>
+            <div class="benefit-carousel">
+                <div class="benefit-carousel__title title-medium">언제 어디서나<br><strong class="benefit-carousel__strong">하나머니</strong>로 편리하게</div>
+
+                <!-- role / data-slider 속성 추가 -->
+                <div class="benefit-carousel__tab" role="tablist" data-slider="sliderTab1">
+                    <button type="button" role="tab" class="benefit-carousel__button">#포인트</button>
+                    <button type="button" role="tab" class="benefit-carousel__button">#충전</button>
+                    <button type="button" role="tab" class="benefit-carousel__button">#현금화</button>
+                    <button type="button" role="tab" class="benefit-carousel__button">#결제</button>
+                    <button type="button" role="tab" class="benefit-carousel__button">#송금</button>
+                    <button type="button" role="tab" class="benefit-carousel__button">#더치페이</button>
+                </div>
+
+                <!-- data-slider 속성 추가 -->
+                <div class="slider benefit-carousel__slider" data-slider="sliderDot1">
+                    <div class="benefit-carousel__item">
+                        <i class="benefit-carousel__icon benefit-carousel__icon1" aria-hidden="true"></i>
+                        <p class="benefit-carousel__description"><strong class="benefit-carousel__strong">포인트 전환</strong>으로 혜택은 더 크게<br>제휴사 포인트,마일리지를 한번에 조회/전화</p>
+                    </div>
+                    <div class="benefit-carousel__item">
+                        <i class="benefit-carousel__icon" aria-hidden="true"></i>
+                        <p class="benefit-carousel__description">머니가 부족하면 <strong class="benefit-carousel__strong">바로 충전</strong><br>계좌/카드를 통해 충전해서 편리하게</p>
+                    </div>
+                    <div class="benefit-carousel__item">
+                        <i class="benefit-carousel__icon" aria-hidden="true"></i>
+                        <p class="benefit-carousel__description">현금이 필요할 땐 즉시 <strong class="benefit-carousel__strong">현금화</strong><br>현금으로 ATM 출금 또는 내 계좌로 입금</p>
+                    </div>
+                    <div class="benefit-carousel__item">
+                        <i class="benefit-carousel__icon" aria-hidden="true"></i>
+                        <p class="benefit-carousel__description">쉽고 빠른 <strong class="benefit-carousel__strong">바코드 결제</strong><br>하나멤버스 가맹점에서 바로 결제</p>
+                    </div>
+                    <div class="benefit-carousel__item">
+                        <i class="benefit-carousel__icon" aria-hidden="true"></i>
+                        <p class="benefit-carousel__description">안전한 <strong class="benefit-carousel__strong">무료송금</strong>을 무제한으로<br>빠르고 간편하게 다양한 송금 가능</p>
+                    </div>
+                    <div class="benefit-carousel__item">
+                        <i class="benefit-carousel__icon" aria-hidden="true"></i>
+                        <p class="benefit-carousel__description">자동으로 계산하고 요청하는 <strong class="benefit-carousel__strong">더치페이</strong><br>계산부터 송금까지 깔끔하게 해결</p>
+                    </div>
+                </div>
+            </div>
+            <div class="common-title">슬라이드 - 약관</div>
+            <div class="slider slider--arrow1" data-slider="arrow1">
+                <div class="slider__item">
+                    <div class="privacy-box">
+                        <h2 class="privacy-box__title">하나 제로페이 서비스 이용 약관</h2>
+                        <div class="privacy-box__content">
+                            <p>이 예금거래 기본약관(이하”약관”이라 한다)은 (주) 하나은행(이하”은행”이라 한다)과 거래처(또는 예금주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림 없이 처리하는 한편, 서로의 이해관계를 합리적으로 조정하기 위하여 기본적이고 일반적인 사항을 정한것입니다.</p>
+                            <p>이 예금거래 기본약관(이하”약관”이라 한다)은 (주) 하나은행(이하”은행”이라 한다)과 거래처(또는 예금주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림 없이 처리하는 한편, 서로의 이해관계를 합리적으로 조정하기 위하여 기본적이고 일반적인 사항을 정한것입니다.</p>
+                            <p>이 예금거래 기본약관(이하”약관”이라 한다)은 (주) 하나은행(이하”은행”이라 한다)과 거래처(또는 예금주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림 없이 처리하는 한편, 서로의 이해관계를 합리적으로 조정하기 위하여 기본적이고 일반적인 사항을 정한것입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="privacy-box">
+                        <h2 class="privacy-box__title">하나 제로페이 서비스 이용 약관</h2>
+                        <div class="privacy-box__content">
+                            <p>이 예금거래 기본약관(이하”약관”이라 한다)은 (주) 하나은행(이하”은행”이라 한다)과 거래처(또는 예금주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림 없이 처리하는 한편, 서로의 이해관계를 합리적으로 조정하기 위하여 기본적이고 일반적인 사항을 정한것입니다.</p>
+                            <p>이 예금거래 기본약관(이하”약관”이라 한다)은 (주) 하나은행(이하”은행”이라 한다)과 거래처(또는 예금주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림 없이 처리하는 한편, 서로의 이해관계를 합리적으로 조정하기 위하여 기본적이고 일반적인 사항을 정한것입니다.</p>
+                            <p>이 예금거래 기본약관(이하”약관”이라 한다)은 (주) 하나은행(이하”은행”이라 한다)과 거래처(또는 예금주)가 서로 믿음을 바탕으로 예금거래를 빠르고 틀림 없이 처리하는 한편, 서로의 이해관계를 합리적으로 조정하기 위하여 기본적이고 일반적인 사항을 정한것입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- aria-label -->
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+    <script>
+        $('.total-lookup__amount button').on('click', function() {
+            const amount = $('.total-lookup__amount');
+            const btn = $(this);
+            amount.toggleClass('is-active');
+            amount.hasClass('is-active') ? btn.attr('aria-pressed','true') : btn.attr('aria-pressed','false');
+        });
+        $('.product-list__item').not('.oneq-money').on('afterChange', function( event, plugin, anchor, panel ){
+            $(this).toggleClass('on');
+        })
+        $('.total-lookup__slick ul').slick();
+    </script>
+</body>
+
+</html>

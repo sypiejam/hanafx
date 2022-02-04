@@ -1,0 +1,133 @@
+<!-- 0.5v -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <style>
+        h2{
+            padding: 10px 24px;
+            margin: 20px 0;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">Tab</h1>
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <div id="content" class="app-main app-main--without-footer container">
+            <h2>스크립트 탭</h2>
+            <div class="tab" data-element="tab">
+                <div class="tab-wrap" >
+                    <ul class="tab-wrap__menu" role="tablist">
+                        <li class="tab-wrap__item" data-element="tab__list">
+                            <a href="#" class="tab-wrap__button is-active" data-element="tab__anchor">주민등록번호</a>
+                        </li>
+                        <li class="tab-wrap__item" data-element="tab__list">
+                            <a href="#" class="tab-wrap__button" data-element="tab__anchor">ID/생년월일</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab__panel is-active" data-element="tab__panel">
+                    <div class="container mgt90">
+                        <div class="pw-wrap">
+                            <input type="text" class="pw-wrap__input" placeholder="앞 6자리 입력" id="personalId2">
+                            <i class="pw-wrap__sepherator">-</i>
+                            <input type="text" class="pw-wrap__input" placeholder="뒤 7자리 입력">
+                            <label for="personalId2" aria-hidden="true">
+                                <!-- aria-hidden 유지 --> <i>주민등록번호</i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab__panel" data-element="tab__panel">
+                    <div class="container mgt90">
+                        <div class="inpwrap inpwrap--full">
+                            <input class="input-text" type="text" placeholder="이용자 ID 입력" title="이용자 ID" id="inputId">
+                            <label for="inputId" aria-hidden="true">
+                                <!-- aria-hidden 유지 --> <i>이용자 ID</i>
+                            </label>
+                            <button type="button" class="button button--gcircle-del" style="display: none;">텍스트삭제</button>
+                        </div>
+                        <div class="inpwrap inpwrap--full mgt30">
+                            <input class="input-text" type="text" placeholder="생년월일 6자리 입력" title="생년월일" id="inputBirth">
+                            <label for="inputBirth" aria-hidden="true">
+                                <!-- aria-hidden 유지 --> <i>생년월일</i>
+                            </label>
+                            <button type="button" class="button button--gcircle-del" style="display: none;">텍스트삭제</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <h2>페이지 탭</h2>
+            <div class="tab-wrap" data-element="tab">
+                <ul class="tab-wrap__menu" role="tablist">
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">하나은행</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button is-active">다른은행</a><!--페이지 탭 활성화 시 is-active 추가 -->
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            <h2>스크립트 스와이프 탭</h2>
+            <div class="tab-wrap tab-deposit tab--js" data-element="tab">
+                <ul class="tab-wrap__menu tab-deposit__menu" role="tablist">
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <!--페이지 탭 활성화 시 is-active 추가  -->
+                        <a href="#" class="tab-wrap__button is-active">정기예금</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">적금</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">입출금자유</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">청약저축</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">서민/기타</a>
+                    </li>
+                </ul>
+            </div>
+            <br><br>
+            <h2>탭안에 탭</h2>
+            <div class="tab-wrap">
+                <ul class="tab-wrap__menu tab-wrap__menu--sub" role="tablist">
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">거래내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button">표</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" class="tab-wrap__button is-active">그래프</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

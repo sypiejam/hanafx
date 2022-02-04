@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full">
+        <div class="modal__header">
+            <h1 class="modal__header--title">장기미사용 이용제한 안내</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+				<div class="icon-wrap pdt0">
+                    <i class="icon-wrap__icon icon-wrap__icon--open" aria-hidden="true"></i>
+                    <div class="icon-wrap__description">고객님은 현재 장기미사용으로<br> 이용제한 상태입니다.</div>
+                </div>
+            </div>
+            <div class="container">
+            	<p><em class="color-red">1년 이상 로그인을 하지 않은 고객님</em>은 이용이 제한되고 고객님의 정보는 별도의 안전한 공간에 저장관리됩니다.</p>
+            </div>
+            <div class="container">
+            	<ul class="guide-wrap__list guide-wrap__list--small">
+                    <li class="guide-wrap__item">전자금융거래기본약관 제14조</li>
+                    <li class="guide-wrap__item">개인정보보호법 제39조의6</li>
+                    <li class="guide-wrap__item">개인정보보호법 시행령 제48조의5</li>
+                </ul>
+            </div>
+            <div class="container mgt120">
+                <div class="gray-box">
+                    로그인한 아이디를 다시 사용하기 원하신다면<br> “간편 로그인 등록”을 해주세요
+                </div>
+            </div>
+        </div>
+        <div class="button-fixed">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">간편 로그인 등록</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../../../../resource/library/slick/slick.js"></script>
+	<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+	<script src="../../../../resource/js/ui/pualugin.js"></script>
+	<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

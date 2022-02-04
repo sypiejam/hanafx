@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">이제내역조회</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="container">
+                <div class="wrap--title">
+                    <h3 class="title-sub">신규정보</h3>
+                    <div class="stepper" role="img" aria-label="3단계 중 1단계">
+                        <ul>
+                            <li class="stepper__step stepper__step--current">1</li>
+                            <li class="stepper__step">2</li>
+                            <li class="stepper__step">3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="inpwrap inpwrap--full mgt100">
+                    <input type="text" class="input-text" placeholder="1만원 이상 ~ 20만원 이하" id="registerAmount" />
+                    <label for="registerAmount" aria-hidden="true"><!-- aria-hidden 유지 -->
+                        <i>가입금액</i>
+                    </label>
+                    <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+                </div>
+
+                <div class="wrap--flex mgt30">
+                    <span class="checkbox-wrap">
+                        <input type="checkbox" id="chk1" class="checkbox-wrap__check" name="chk1">
+                        <label for="chk1" class="checkbox-wrap__label">하나머니로 납입</label>
+                    </span>
+                    <button type="button" class="button-tooltip" title="안내 툴팁 열기"></button>
+                </div>
+
+                <div class="select-box mgt70">
+                    <select class="select-box__item">
+                        <option value="0">선택 1</option>
+                        <option value="1">선택 2</option>
+                        <option value="2">선택 3</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <select class="select-box__item">
+                        <option value="0">선택 1</option>
+                        <option value="1">선택 2</option>
+                        <option value="2">선택 3</option>
+                    </select>
+                </div>
+                <div class="select-box">
+                    <select class="select-box__item">
+                        <option value="0">선택 1</option>
+                        <option value="1">선택 2</option>
+                        <option value="2">선택 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <section class="container mgt150">
+                <div class="wrap--title">
+                    <h3 class="title-sub">출금계좌</h3>
+                </div>
+
+                <div class="accordion mgt30" data-element="accordion" data-options='{ "isInitActive": true }'>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <!-- 접근성 및 디자인현행화 -->
+                        <a href="#" class="accordion__title" data-element="accordion__anchor" title="더보기" role="button">
+                        <!-- //접근성 및 디자인현행화 -->
+                            <div class="card__header card__header--icon">
+                                <i class="card__icon">
+                                    <img src="../../../../resource/images/C/icon_bank_hana.png" aria-hidden="true">
+                                </i>
+                                <div class="card__title">프리미엄직장인론</div>
+                                <p class="card__name"><span class="eng">123-******-12345</span>
+                                </p>
+                            </div>
+                            <div class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <ul class="info-list__group">
+                                <li class="info-list__item">
+                                    <div class="info-list__label">출금가능금액</div>
+                                    <div class="info-list__value"><span class="eng">409,409,000</span>원</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap--flex mgt30">
+                    <span class="checkbox-wrap">
+                        <input type="checkbox" id="chk2" class="checkbox-wrap__check" name="chk2">
+                        <label for="chk1" class="checkbox-wrap__label">신규비밀번호를 출금계좌와 다르게 등록</label>
+                    </span>
+                    <button type="button" class="button-tooltip" title="안내 툴팁 열기"></button>
+                </div>
+            </div>
+
+            <section class="container mgt150">
+                <div class="wrap--title">
+                    <h3 class="title-sub">만기시 입금계좌</h3>
+                </div>
+
+                <div class="accordion mgt30" data-element="accordion" data-options='{ "isInitActive": true }'>
+                    <div class="accordion__item" data-element="accordion__item">
+                        <!-- 접근성 및 디자인현행화 -->
+                        <a href="#" class="accordion__title" data-element="accordion__anchor" title="더보기" role="button">
+                        <!-- //접근성 및 디자인현행화 -->
+                            <div class="card__header card__header--icon">
+                                <i class="card__icon">
+                                    <img src="../../../../resource/images/C/icon_bank_hana.png" aria-hidden="true">
+                                </i>
+                                <div class="card__title">IBK 늘푸른하늘통장</div>
+                                <p class="card__name"><span class="eng">123-******-12345</span>
+                                </p>
+                            </div>
+                            <div class="accordion__button">
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="accordion__panel" data-element="accordion__panel">
+                            <ul class="info-list__group">
+                                <li class="info-list__item">
+                                    <div class="info-list__label">출금가능금액</div>
+                                    <div class="info-list__value"><span class="eng">409,409,000</span>원</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- //Content -->
+
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3">이전</button>
+                <button type="button" class="button button--positive">다음</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!-- 0.95v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">해외IP이체제한</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="container">
+                <div class="icon-wrap">
+                    <!-- to.개발 200416 디자인 변경으로 하단 영역 추가 -->
+                    <i class="icon-wrap__icon icon-wrap__icon--no-data" aria-hidden="true"></i>
+                    <div class="icon-wrap__icon-word">홍길동님께서는<br>이체가 일시 보류 중입니다.</div>
+                    <div class="icon-wrap__description">고객님께서는 현재 해외에서 접속하신 것으로 확인되어 이체가 제한된 상태입니다.</div>
+                    <div class="icon-wrap__description">해지를 위해서는 아래 필요서류를 지참하여 가까운 영업점으로 방문해 주시기 바랍니다.</div>
+                </div>
+            </div>
+            <!-- 접근성 및 디자인현행화 -->
+            <div class="tit-default mgt150">필요서류</div>
+            <!-- //접근성 및 디자인현행화 -->
+            <div class="container">
+                <!-- 접근성 및 디자인현행화 -->
+                <div class="list-section list-section--full">
+                    <ul class="list-wrap">
+                        <li class="list-wrap__item">
+                            <div class="list-wrap__box">
+                                <!-- to.개발 200416 디자인 변경으로 class 변경 -->
+                                <strong class="list-wrap__title align-center">전자금융출금계좌, 통장, 도장, 신분증</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //접근성 및 디자인현행화 -->
+            </div>
+            <div class="container">
+                <div class="button-contained-wrap">
+                    <!-- to.개발 200416 디자인 변경으로 class 변경 -->
+                    <!-- 접근성 및 디자인현행화 -->
+                    <button type="button" class="button-square button-square--border">전화문의</button>
+                    <button type="button" class="button-square button-square--border">영업점찾기</button>
+                    <!-- //접근성 및 디자인현행화 -->
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

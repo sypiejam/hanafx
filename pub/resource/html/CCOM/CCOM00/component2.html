@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="content">
+            <!-- Content Here -->
+            <h1>Component 2</h1>
+            <h2>privacy__item</h2>
+            <ul>
+                <li>활성화시 privacy__item--checked 클래스 추가</li>
+            </ul>
+            <h2>privacy__icon</h2>
+            <ul>
+                <li>@필수 aria-labelledby: privacy__detail 의 id 와 동일</li>
+                <li>@필수 aria-checked: 초기값은 <strong>false</strong>, 체크시 <strong>true</strong></li>
+                <li>가이드 상에는 button 으로 되어있지만 span, div 로 변경 가능</li>
+            </ul>
+            <h2>privacy__detail</h2>
+            <ul>
+                <li>@필수 id: privacy__icon의 aria-labelledby 와 동일</li>
+                <li>가이드 상에는 button 으로 되어있지만 span, div, p 로 변경 가능</li>
+            </ul>
+
+            <hr class="spacer">
+
+            <div class="privacy">
+                <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                <div class="privacy__item">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy01"
+                    ></button>
+                    <button type="button" class="privacy__detail" id="privacy01">
+                        하나은행 적금 설명서
+                    </button>
+                </div>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="privacy">
+                <div class="privacy__item privacy__item--checked">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="true"
+                        aria-labelledby="privacy07"
+                    ></button>
+                    <button type="button" class="privacy__detail" id="privacy07">
+                        하나은행 적금 설명서
+                    </button>
+                </div>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="privacy">
+                <div class="privacy__item">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy02"
+                    ></button>
+                    <button type="button" class="privacy__detail" id="privacy02">
+                        하나은행 적금 설명서 하나은행 적금 설명서 하나은행 적금 설명서 하나은행 적금 설명서
+                    </button>
+                </div>
+            </div>
+
+            <hr class="spacer">
+            <div class="privacy">
+                <div class="privacy__item">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy09"
+                    ></button>
+                    <button type="button" class="privacy__detail" id="privacy09">
+                        하나은행 적금 설명서
+                    </button>
+                </div>
+                <div class="privacy__item">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy10"
+                    ></button>
+                    <button type="button" class="privacy__detail" id="privacy10">
+                        하나은행 적금 설명서
+                    </button>
+                </div>
+            </div>
+            <hr class="spacer">
+
+            <div class="privacy">
+                <div class="privacy__item">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy03"
+                    ></button>
+                    <button type="button" class="privacy__detail" id="privacy03">
+                        하나은행 적금 설명서 하나
+                    </button>
+                </div>
+                <div class="privacy__sub-wrap privacy--all">
+                    <div class="privacy__item">
+                        <button
+                            type="button"
+                            class="privacy__icon"
+                            role="checkbox"
+                            aria-checked="false"
+                            aria-labelledby="privacy04"
+                        ></button>
+                        <button type="button" class="privacy__detail" id="privacy04">
+                            하나은행 적금 설명서 하나
+                        </button>
+                    </div>
+                    <div class="privacy__item privacy__item--checked">
+                        <button
+                            type="button"
+                            class="privacy__icon"
+                            role="checkbox"
+                            aria-checked="true"
+                            aria-labelledby="privacy05"
+                        ></button>
+                        <button type="button" class="privacy__detail" id="privacy05">
+                            하나은행 적금 설명서 하나
+                        </button>
+                    </div>
+                    <div class="privacy__item">
+                        <button
+                            type="button"
+                            class="privacy__icon"
+                            role="checkbox"
+                            aria-checked="false"
+                            aria-labelledby="privacy06"
+                        ></button>
+                        <button type="button" class="privacy__detail" id="privacy06">
+                            하나은행 적금 설명서 하나
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="privacy privacy--single">
+                <div class="privacy__item">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy07"
+                    ></button>
+                    <span class="privacy__detail" id="privacy07">
+                        [선택] 상품이용약관을 이메일로 받겠습니다.
+                    </span>
+                </div>
+            </div>
+
+            <hr class="spacer">
+
+            <div class="privacy privacy--single">
+                <div class="privacy__item privacy__item--checked">
+                    <button
+                        type="button"
+                        class="privacy__icon"
+                        role="checkbox"
+                        aria-checked="false"
+                        aria-labelledby="privacy08"
+                    ></button>
+                    <span class="privacy__detail" id="privacy08">
+                        [선택] 상품이용약관을 이메일로 받겠습니다.
+                    </span>
+                </div>
+            </div>
+
+            <hr class="spacer">
+        </div>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

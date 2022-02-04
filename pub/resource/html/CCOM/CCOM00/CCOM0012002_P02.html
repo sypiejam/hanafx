@@ -1,0 +1,66 @@
+<!-- v0.97 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">공통</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="button-wrap">
+            <button type="button" class="button button--positive" data-element="modal__open" data-target="#CCOM0012002_P02">유의사항</button>
+            </div>
+            <!-- //Content -->
+        </div>
+        <!-- footer -->
+        <!-- <div id="footer" class="app-footer"></div> -->
+        <!-- //footer -->
+
+        <div id="CCOM0012002_P02" class="modal modal--confirm" data-element="modal__element">
+            <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                <div class="modal__header">
+                    <h1 class="modal__header--title">유의사항</h1>
+                </div>
+                <div class="modal__contents">
+                    <p class="modal__description">
+                    <p class="text-default">스마트 간편인증을 위해 인증문자 보내기를 누르시면 휴대폰 메시지 창에 일회용 메시지가 입력됩니다. 입력된 메시지를 수정 없이 전송해주시면 고객님의 휴대폰에서 인증 처리가 완료됩니다.</p>
+                    
+                    <!-- 200615 수정 | mgt90 클래스 추가, 당구장(※) 삭제 -->
+                    <div class="inpwrap__guide-text mgt90">가입하신 요금제에 따라 문자 발송 비용이 부가될 수 있으니 유의하시기 바랍니다.</div>
+
+                </div>
+                <div class="button-wrap">
+                    <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                    <button type="button" class="button button--positive">인증문자 보내기</button>
+                </div>
+                <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

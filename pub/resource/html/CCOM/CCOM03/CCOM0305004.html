@@ -1,0 +1,99 @@
+<!-- 1.0v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">손님우대서비스</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <!-- 탭 버튼에 글자가 두줄이면 tab-wrap--row2 클래스 추가 -->
+            <div class="tab-wrap tab-wrap--row2">
+                <!-- 200714 수정 | tab-wrap__menu--scroll 클래스 추가 -->
+                <ul class="tab-wrap__menu tab-wrap__menu--scroll">
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <!--페이지 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">제공혜택</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">우대내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">손님평점<br>산정내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button is-active" aria-selected="true">평점별<br>손님등급</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="2">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="table-vertical__th">우대서비스</th>
+                                <th scope="col" class="table-vertical__th">평점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-vertical__td">Hana VIP</td>
+                                <td class="table-vertical__td">10,000점 이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">VIP</td>
+                                <td class="table-vertical__td">3,000점 이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Hana Family</td>
+                                <td class="table-vertical__td">1,000점 이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Family</td>
+                                <td class="table-vertical__td">500점 이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">Green</td>
+                                <td class="table-vertical__td">500점 미만</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <!-- //footer -->
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

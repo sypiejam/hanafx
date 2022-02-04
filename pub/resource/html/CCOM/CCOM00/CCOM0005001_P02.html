@@ -1,0 +1,73 @@
+<!-- 0.98v -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="content">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#CCOM0005001_P02">오류화면</button>
+            </div>
+            <!-- 200715 | 아래로 전체 변경
+                <div id="CCOM0005001_P02" class="modal modal--alert modal--error" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">오류코드 : CODE1234</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <div class="container">
+                            <p class="modal__description color-000" data-element="focus">처리 중 오류가 발생했습니다.<br> 자세한 내용은 고객센터로 문의해주세요.<br> 고객센터  1588-1111</p>
+                            <button type="button" class="button-simple button-simple--right" data-element="toggle-btn"><span>상세보기</span><span>접기</span></button>
+                        </div>
+                        <div class="container">
+                            <p class="text-guide-sub"  data-element="toggle-list" style="display: none;">처리 중 오류에 대한 내용이 노출되는 영역입니다. 확인 후 관리자에게 문의를 하시면 빠른 도움을 드릴 수 있도록 노력하겠습니다.</p>
+                        </div>
+                    </div>
+                    <div class="modal__button-wrap">
+                        <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                    </div>
+                </div>
+            </div>
+            -->
+
+
+            <div id="CCOM0005001_P02" class="modal modal--alert" data-element="modal__element">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__contents">
+                        <div class="modal__description modal-error">
+                            <p class="modal-error__description">
+                                처리 중 오류가 발생했습니다.<br>자세한 내용은 고객센터로 문의해주세요.<br>고객센터  1588-1111
+                            </p>
+                            <div class="modal-error__code">오류코드 : CODE1234</div>
+                        </div>
+                    </div>
+                    <div class="modal__button-wrap">
+                        <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

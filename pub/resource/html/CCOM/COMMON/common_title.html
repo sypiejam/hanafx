@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>타이틀</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <button class="app-header__button app-header__button--size">큰글씨</button>
+            <h1 class="app-header__title">타이틀 가이드</h1>
+            <!-- <button class="app-header__button app-header__button--home" title="메인 화면"></button> -->
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="tit-large">첫번째 타이틀</div>
+            <div class="container">
+                <p class="text-default">페이지 상단에 추가되며 대부분의 페이지에서 생략되며 아래와 같은 속성을 가진다.<br>모든 타이틀은 line-height 의 여백을 포함하여 margin 이 입력되어 있음</p>
+                <ul class="dotted-list">
+                    <li class="dotted-list__item">margin: 0 72px</li>
+                    <li class="dotted-list__item">font-size: 60px</li>
+                    <li class="dotted-list__item">color: #000</li>
+                    <li class="dotted-list__item">line-height: 78px</li>
+                    <li class="dotted-list__item">font-weight: 500</li>
+                </ul>
+            </div>
+            <div class="tit-default">두번째 타이틀 두번째</div>
+            <div class="container">
+                <p class="text-default">주로 사용되는 타이틀로 아래와 같은 속성을 가진다.</p>
+                <ul class="dotted-list">
+                    <li class="dotted-list__item">margin: 150px 72px 42px</li>
+                    <li class="dotted-list__item">font-size: 54px</li>
+                    <li class="dotted-list__item">line-height: 72px</li>
+                    <li class="dotted-list__item">color: #000</li>
+                    <li class="dotted-list__item">font-weight: 500</li>
+                    <li class="dotted-list__item">페이지의 첫번째 요소로 올때는 margin-top: 0</li>
+                </ul>
+            </div>
+            <div class="tit-small">
+                세번째 타이틀
+                <button type="button" class="button-tooltip button-tooltip--gray" data-tooltip="button" data-target="#viewMore01" title="안내 툴팁 열기"></button>
+            </div>
+            <div class="container">
+                <p class="text-default">두번째 타이틀 하위에 있는 타이틀로 아래와 같은 속성을 가진다.</p>
+                <ul class="dotted-list">
+                    <li class="dotted-list__item">margin: 120px 72px 42px</li>
+                    <li class="dotted-list__item">font-size: 54px</li>
+                    <li class="dotted-list__item">line-height: 66px</li>
+                    <li class="dotted-list__item">color: #000</li>
+                    <li class="dotted-list__item">font-weight: 500</li>
+                    <li class="dotted-list__item">페이지의 첫번째 요소로 올때는 margin-top: 0</li>
+                </ul>
+            </div>
+
+            <div class="tit-large">
+                두번째 타이틀
+                <div class="stepper" role="img" aria-label="3단계 중 1단계">
+                    <ul>
+                        <li class="stepper__step stepper__step--current">1</li>
+                        <li class="stepper__step">2</li>
+                        <li class="stepper__step">3</li>
+                        <li class="stepper__step">4</li>
+                        <li class="stepper__step">5</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="select-value">
+                    <ul class="select-value__list">
+                        <li class="select-value__item">
+                            <div role="button" class="select-value__content select-value__another-bank">
+                                <div class="select-value__content--left">
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                    <strong class="select-value__name">주거래하나 통장</strong>
+                                    <em class="select-value__number eng">123-******-89764</em>
+                                </div>
+                                <div class="select-value__content--right">
+                                    <strong class="select-value__total-price"><span class="eng">8,040,000,000</span>원</strong>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="select-value__item">
+                            <div role="button" class="select-value__content select-value__another-bank">
+                                <div class="select-value__content--left">
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                    <strong class="select-value__name">주거래하나 통장</strong>
+                                    <em class="select-value__number eng">123-******-89764</em>
+                                </div>
+                                <div class="select-value__content--right">
+                                    <em class="select-value__price">출금가능 : <span class="eng">2,020,000</span>원</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="select-value__item">
+                            <div role="button" class="select-value__content select-value__another-bank">
+                                <div class="select-value__content--left">
+                                    <!-- 접근성 및 디자인현행화 -->
+                                    <img src="../../../../resource/images/C/icon_bank_list_woori.png" alt="우리은행">
+                                    <!-- //접근성 및 디자인현행화 -->
+                                    <strong class="select-value__name">주거래하나 통장</strong>
+                                    <em class="select-value__number eng">123-******-89764</em>
+                                </div>
+                                <div class="select-value__content--right">
+                                    <strong class="select-value__total-price"><span class="eng">8,040,000,000</span>원</strong>
+                                    <em class="select-value__price">출금가능 : <span class="eng">2,020,000</span>원</em>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tit-large">제목 + 단계
+                <div class="stepper" role="img" aria-label="5단계 중 1단계">
+                    <ul>
+                        <li class="stepper__step stepper__step--current">1</li>
+                        <li class="stepper__step">2</li>
+                        <li class="stepper__step">3</li>
+                        <li class="stepper__step">4</li>
+                        <li class="stepper__step">5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">확인</button>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

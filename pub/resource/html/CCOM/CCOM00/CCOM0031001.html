@@ -1,0 +1,128 @@
+<!-- v1.04 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <!-- <button class="app-header__button app-header__button--back" title="이전 화면"></button> --><!-- 200629 기획 확인 후 현행화 | 삭제처리 -->
+            <h1 class="app-header__title">이용자비밀번호변경</h1>
+            <!-- <button class="app-header__button app-header__button--home" title="메인화면"></button> --><!-- 200629 기획 확인 후 현행화 | 삭제처리 -->
+            <!-- <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button> --><!-- 200629 기획 확인 후 현행화 | 삭제처리 -->
+        </div>
+        <!-- //header -->
+        <!-- content -->
+        <div id="content" class="app-main">
+            <div class="container">
+                <div class="guide-wrap">
+                    <ul class="guide-wrap__list guide-wrap__list--small">
+                        <li class="guide-wrap__item">현재 영업점에서 지정한 이용자 비밀번호(숫자6자리)를 사용중입니다.</li>
+                        <li class="guide-wrap__item">안전한 금융서비스 이용을 위하여 새로운 비밀번호로 변경하시기 바랍니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="password" id="input01" class="input__element" title="기존비밀번호 입력" placeholder="비밀번호 입력">
+                        <label for="input01" class="input__label" aria-hidden="true">기존비밀번호</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">기존 비밀번호를 입력하세요.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="password" id="input02" class="input__element" title="신규비밀번호 입력" placeholder="영문/숫자/특수문자 혼합 8~16이내">
+                        <label for="input02" class="input__label" aria-hidden="true">신규비밀번호</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">신규 비밀번호를 입력하세요.</p>
+                    <p class="input__error" aria-live="assertive">비밀번호가 일치하지 않습니다.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="password" id="input03" class="input__element" title="신규비밀번호확인 입력" placeholder="영문/숫자/특수문자 혼합 8~16이내">
+                        <label for="input03" class="input__label" aria-hidden="true">신규비밀번호확인</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">신규 비밀번호확인을 입력하세요.</p>
+                </div>
+            </div>
+            <!-- to.개발 조회 회원일 경우 노출 -->
+            <div class="container">
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="password" id="input04" class="input__element" title="출금계좌번호 입력" placeholder="영문/숫자/특수문자 혼합 8~16이내">
+                        <label for="input04" class="input__label" aria-hidden="true">출금계좌번호</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">출금계좌번호를 확인하세요.</p>
+                </div>
+            </div>
+            <!-- //to.개발 조회 회원일 경우 노출 -->
+            <div class="container">
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="guide-title">
+                        <button class="pualugin__button button-arrow" data-element="toggle__anchor" aria-controls="toggle-2" aria-expanded="false">이용안내</button>
+                    </div>
+                    <div class="guide-panel" data-element="toggle__panel" id="toggle-2" style="display: none;">
+                        <ul class="guide-list">
+                            <li class="guide-list__item">이용자 비밃너호는 영문자와 숫자, 특수문자 3가지를 혼합하여 8자리 이상 16자리 이하로 지정하셔야 합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //content -->
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">비밀번호 변경</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

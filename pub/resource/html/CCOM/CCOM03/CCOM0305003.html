@@ -1,0 +1,500 @@
+<!-- 1.0v -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">손님우대서비스</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="tab-wrap tab-wrap--row2">
+                <!-- 200625 클래스 추가 | tab-wrap__menu--scroll -->
+                <ul class="tab-wrap__menu tab-wrap__menu--scroll">
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <!--페이지 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">제공혜택</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">우대내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button is-active" aria-selected="true">손님평점<br>산정내역</a>
+                    </li>
+                    <li class="tab-wrap__item" data-element="tab__list" role="presentation">
+                        <a href="#" role="tab" class="tab-wrap__button" aria-selected="false">평점별<br>손님등급</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container mgt90">
+                개인 거래 실적에 따른 하나은행의 손님평점 산정 내역 (3개월 실적 및 평균장액의 합)
+            </div>
+
+            <div class="tit-default flex">
+                <div>
+                    MY 우대서비스 등급 평점
+                </div>
+                <div class="additional-item text--xxsmall color-7575">
+                    (단위:원, US$, 점)
+                </div>
+            </div>
+            <div class="container">
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="4">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2" class="table-vertical__th">구분</th>
+                                <th scope="col" class="table-vertical__th">실적</th>
+                                <th scope="col" class="table-vertical__th">평점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="12" class="table-vertical__th">
+                                    총수신
+                                </th>
+                                <td class="table-vertical__td">순수통장예금</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">저축성예금</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">방카슈랑스</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">신탁</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">후순위채</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">시장성예금</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">MMDA</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">MMF</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">외화예금</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기타예금</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">집합투자상품 주식형</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">집합투자상품 채권형</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="2" class="table-vertical__th">
+                                    대출
+                                </th>
+                                <td class="table-vertical__td">가계대출</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기업대출</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="table-vertical__th">
+                                    카드
+                                </th>
+                                <td class="table-vertical__td">신용카드/체크카드</td>
+                                <td class="table-vertical__td">0</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="2" class="table-vertical__th">
+                                    외환거래
+                                </th>
+                                <td class="table-vertical__td">환전</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">송금</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="5" class="table-vertical__th">
+                                    주요이체
+                                </th>
+                                <td class="table-vertical__td">APT관리비</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">급여이체</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">연금이체</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">가맹점이체</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기타자동이체</td>
+                                <td class="table-vertical__td">0.000</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" colspan="2">전자금융거래</th>
+                                <td class="table-vertical__td">0건</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th">보유상품</th>
+                                <td class="table-vertical__td">평점산정항목</td>
+                                <td class="table-vertical__td">0건</td>
+                                <td class="table-vertical__td">0</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" colspan="2">거래기간</th>
+                                <td class="table-vertical__td">146개월</td>
+                                <td class="table-vertical__td">120점</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="6" class="table-vertical__th">
+                                    기타
+                                </th>
+                                <td class="table-vertical__td">주택청약상품</td>
+                                <td class="table-vertical__td">N</td>
+                                <td class="table-vertical__td">0점</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">퇴직연금</td>
+                                <td class="table-vertical__td">N</td>
+                                <td class="table-vertical__td">0점</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">연금저축</td>
+                                <td class="table-vertical__td">N</td>
+                                <td class="table-vertical__td">0점</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">하나멤버스가입</td>
+                                <td class="table-vertical__td">N</td>
+                                <td class="table-vertical__td">0점</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">하나멤버스거래</td>
+                                <td class="table-vertical__td">N</td>
+                                <td class="table-vertical__td">0점</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">행복포인트</td>
+                                <td class="table-vertical__td">N</td>
+                                <td class="table-vertical__td">0점</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container mgt120">
+                <ul class="guide-wrap__list">
+                    <li class="guide-wrap__item">
+                        상기 제시된 내용은 손님의 은행 개인거래 실적을 기준으로한 평점산정 내역입니다.
+                    </li>
+                    <li class="guide-wrap__item">
+                        관계사(하나카드, 하나금융투자)및 가족손님, 실적은 관련 법령(금융실명제법, 금융지주회사법 등)에 따라 표기되지 않으나
+                        실제 등급 산정 시에는 합산 적용됩니다.
+                    </li>
+                    <li class="guide-wrap__item">
+                        대출에는 외화수표 매입과 같은 여신성 거래 실적이 포함됩니다. 단 양도된 대출(보금자리, 공사방식 디딤돌, 아낌E 등)의 경우에는 제외됩니다.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tit-default flex">
+                <div>
+                    손님평점 산정방법
+                </div>
+                <div class="additional-item text--xxsmall color-7575">
+                    (단위:원, US$, 점)
+                </div>
+            </div>
+            <div class="container">
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="4">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2" class="table-vertical__th">구분</th>
+                                <th scope="col" class="table-vertical__th">실적</th>
+                                <th scope="col" class="table-vertical__th">평점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="6" class="table-vertical__th">
+                                    총수신 (3개월 평잔)
+                                </th>
+                                <td class="table-vertical__td">순수통장예금</td>
+                                <td class="table-vertical__td">10p/10만원</td>
+                                <td class="table-vertical__td">보통/저축/자유저축/기입자유</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">저축성 예금</td>
+                                <td class="table-vertical__td">20p/100만원</td>
+                                <td class="table-vertical__td">적립식 및 거치식 예금</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">방카슈랑스</td>
+                                <td class="table-vertical__td">20p/100만원</td>
+                                <td class="table-vertical__td">보험상품</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기타예금 및 신탁</td>
+                                <td class="table-vertical__td">20p/100만원</td>
+                                <td class="table-vertical__td">외화예금/CD/RP/신탁/후순위채/MMDA/MMF/당좌/가계당좌/신자유예금</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">집합투자상품 주식형</td>
+                                <td class="table-vertical__td">30p/100만원</td>
+                                <td class="table-vertical__td">주식형/주식혼합형/해외펀드/뮤추얼펀드/기타(파생 등)</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">집합투자상품 채권형</td>
+                                <td class="table-vertical__td">20p/100만원</td>
+                                <td class="table-vertical__td">채권형/채권혼합형</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" rowspan="2">대츨(3개월 평잔)</th>
+                                <td class="table-vertical__td">가계대출</td>
+                                <td class="table-vertical__td">30p/100만원</td>
+                                <td class="table-vertical__td" rowspan="2">신용대출/담보대출</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기업대출</td>
+                                <td class="table-vertical__td">10p/100만원</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th">카드 (3개월 실적)</th>
+                                <td class="table-vertical__td">신용카드/체크카드</td>
+                                <td class="table-vertical__td">10p/100만원</td>
+                                <td class="table-vertical__td">하나카드 신용/체크카드 매출 또는 결제실적 중 큰 금액</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" rowspan="2">외환거래 (3개월 누적 실적)</th>
+                                <td class="table-vertical__td">환전</td>
+                                <td class="table-vertical__td">5p/USD 100</td>
+                                <td class="table-vertical__td" rowspan="2">USD 환산</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">송금</td>
+                                <td class="table-vertical__td">2p/USD 100</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" rowspan="4">주요이체 (3개월간 누적 실적)</th>
+                                <td class="table-vertical__td">급여/연금</td>
+                                <td class="table-vertical__td">300p</td>
+                                <td class="table-vertical__td" rowspan="3">최고 300P</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">가맹점</td>
+                                <td class="table-vertical__td">200p</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">APT관리비</td>
+                                <td class="table-vertical__td">100P</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기타 자동이체</td>
+                                <td class="table-vertical__td">이체건별 20P</td>
+                                <td class="table-vertical__td">최고 60P (1건+기타 자동이체 총합계/3)</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th">전자금융 (3개월간 누적 실적)</th>
+                                <td class="table-vertical__td">전자금융거래</td>
+                                <td class="table-vertical__td">20p/6건 이상</td>
+                                <td class="table-vertical__td">최고 20P (인터넷 폰뱅킹+모바일 뱅킹)</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th">보유상품 (3개월간 누적 실적)</th>
+                                <td class="table-vertical__td">평점산정항목</td>
+                                <td class="table-vertical__td">25p/0건 이상</td>
+                                <td class="table-vertical__td">최고 25P (3개 이상 인정, 13개 항목)</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" rowspan="3">거래기간</th>
+                                <td class="table-vertical__td">3년미만</td>
+                                <td class="table-vertical__td">점수없음</td>
+                                <td class="table-vertical__td" rowspan="3">손님신규일을 기준으로 거래기간 산정하고 거래기간 산정당시 활동계좌를 보유한 경우에만 평점을 부여함.</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">3년~30년 미만</td>
+                                <td class="table-vertical__td">10P/1년(최저30P)</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">30년 이상</td>
+                                <td class="table-vertical__td">300P</td>
+                            </tr>
+                            <tr>
+                                <th class="table-vertical__th" rowspan="3">기타(분기말)</th>
+                                <td class="table-vertical__td">주택청약상품/퇴직연금/연금저축</td>
+                                <td class="table-vertical__td">각 10P (최고30P)</td>
+                                <td class="table-vertical__td">가입여부 주택청약 상품:종합저축 저축 예금, 부금</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">하나멤버스</td>
+                                <td class="table-vertical__td">5P/멤버스가입, 5P/멤버스거래</td>
+                                <td class="table-vertical__td">멤버스 거래:당행계좌를 통한 하나머니 충전 또는 통장 입금</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">행복포인트</td>
+                                <td class="table-vertical__td">30P</td>
+                                <td class="table-vertical__td">대출이 있거나 총 수신평잔 30만원 이상</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tit-default">
+                *보유상품 13개 항목 및 인정기준
+            </div>
+            <div class="container">
+                <div class="table table-vertical">
+                    <table>
+                        <colgroup>
+                            <col span="2">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="table-vertical__th">항목</th>
+                                <th scope="col" class="table-vertical__th">기준</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-vertical__td">순수 통장예금</td>
+                                <td class="table-vertical__td">10만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">저축성예금</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">방카슈랑스</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기타예금 및 신탁</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">집합투자상품 주식형</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">집합투자상품 채권형</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">가계대출</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기업대출</td>
+                                <td class="table-vertical__td">100만원(3개월평잔)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">신용카드/체크카드</td>
+                                <td class="table-vertical__td">10만원(3개월실적)이상 하나카드 매출 또는 결제실적 중 큰 금액</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">환전/송금</td>
+                                <td class="table-vertical__td">USD100(3개월실적)이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">급여/연금/가맹점/APT관리비</td>
+                                <td class="table-vertical__td">3개월 1번 이상</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">기타자동이체</td>
+                                <td class="table-vertical__td">1건 이상(3개월 누적실적/1건=기타 자동이체 총합계/3)</td>
+                            </tr>
+                            <tr>
+                                <td class="table-vertical__td">전자금융거래</td>
+                                <td class="table-vertical__td">6건이상(3개월누적실적)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+        <!-- footer -->
+        <!-- //footer -->
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

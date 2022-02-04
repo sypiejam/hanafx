@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <!-- 접근성 및 디자인현행화 -->
+    <div class="modal-full inner-tab">
+        <div class="modal__header">
+            <h1 class="modal__header--title">주소찾기</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="tab-wrap">
+
+                <!-- 접근성 개선안 반영 -->
+                <ul class="tab-wrap__menu" role="tablist">
+                    <li class="tab-wrap__item" role="presentation">
+                        <!-- 탭 활성화 시 is-active 클래스 추가 및 aria-selected="true" 변경 -->
+                        <a href="#" class="tab-wrap__button is-active" role="tab" aria-selected="true">통합검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">지번검색</a>
+                    </li>
+                    <li class="tab-wrap__item" role="presentation">
+                        <a href="#" class="tab-wrap__button" role="tab" aria-selected="false">도로명검색</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="find-address after-tab"><!-- 200716 | after-tab 클래스 추가 -->
+                <div class="container">
+                    <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                        <!--
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__inner">
+                            <input type="text" id="inputText01" class="input__element" title="주소 입력" placeholder="도로명 또는 지번 입력">
+                            <label for="inputText01" class="input__label" aria-hidden="true">주소</label>
+                            <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                            <button type="button" class="input__search-button" aria-label="검색"></button>
+                        </div>
+                    </div>
+                    <div class="guide-wrap">
+                        <ul class="guide-wrap__list">
+                            <li class="guide-wrap__item">도로명 + 건물번호 <span>예)판교로15</span></li>
+                            <li class="guide-wrap__item">건물명 <span>예)판교세븐벤처밸리1</span></li>
+                            <li class="guide-wrap__item">동/읍/면/리 <span>예)삼평동 625</span></li>
+                        </ul>
+                        <!-- to.개발 200416 디자인 변경에 의한 class 변경 -->
+                        <p class="text-guide-small">지번주소의 경우 이용편의를 위해 동/읍/면/리로 검색하시기 바랍니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

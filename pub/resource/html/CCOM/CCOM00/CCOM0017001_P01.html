@@ -1,0 +1,135 @@
+<!-- v0.98 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div class="modal-full">
+        <div class="modal__header">
+            <h1 class="modal__header--title">직장명조회</h1>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <p class="text-default">하나은행은 12,000여개 기업의 신용을 평가하여 임직원들의 대출 한도를 합리적으로 산정해드립니다.</p>
+            </div>
+            <div class="container mgt120"><!-- 200624 | 현업요청 - 간격 수정 -->
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <!--
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText01" class="input__element" title="직장명 입력" value="" placeholder="직장명 입력">
+                        <label for="inputText01" class="input__label" aria-hidden="true">직장명</label>
+                        <!-- 200624 | 현업요청 - 버튼 추가 -->
+                        <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+                        <button type="button" class="input__search-button" aria-label="검색"></button>
+                        <!--// 200624 | 현업요청 - 버튼 추가 -->
+                        <!-- to.개발 200416 기획 및 디자인 변경으로 인한 버튼 삭제 -->
+                        <!-- <button type="button" class="input__search-button" title="검색"></button>
+                        <button type="button" class="input__remove-button" title="텍스트삭제"></button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="search-select search-select--no-result">
+                    <div class="search-select--no-result__title">
+                        검색 결과가 없습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="search-select find-address-select">
+                    <div class="search-select__header">
+                        <h5 class="search-select__header--title">전체 <span class="count">3건</span>이 검색되었습니다.</h5>
+                    </div>
+                    <ul class="search-select__list find-address-select__list">
+                        <!-- 접근성 및 디자인현행화 -->
+                        <li class="search-select__item find-address-select__item">
+                            <a href="#"  role="button">
+                                <div class="find-address-select__text">하나로의료재단</div>
+                                <div class="find-address-select__sub-text">
+                                    <!-- to.개발 200416 기획서 변경에 따른 마크업 수정-->
+                                    <div class="house-info__list">
+                                        <span class="house-info__item">업종</span>
+                                        <span class="house-info__item">방사선진단 및 병리검사 의원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search-select__item find-address-select__item">
+                            <a href="#"  role="button">
+                                <div class="find-address-select__text">하나로의료재단</div>
+                                <div class="find-address-select__sub-text">
+                                    <div class="house-info__list">
+                                        <span class="house-info__item">업종</span>
+                                        <span class="house-info__item">방사선진단 및 병리검사 의원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search-select__item find-address-select__item">
+                            <a href="#"  role="button">
+                                <div class="find-address-select__text">하나로의료재단</div>
+                                <div class="find-address-select__sub-text">
+                                    <div class="house-info__list">
+                                        <span class="house-info__item">업종</span>
+                                        <span class="house-info__item">방사선진단 및 병리검사 의원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- //접근성 및 디자인현행화 -->
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="button-contained-wrap">
+                    <button type="button" class="button-secondary button-secondary--spacer button-secondary--green">직군별로 찾기</button><!-- 200624 | 현업요청 - 버튼 스타일 수정 -->
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="guide-title">
+                        <!-- to.개발 200416 기획서 변경에 따른 수정 입력 시 이용안내 -> 이용시 유의사항 으로 문구변경 -->
+                        <button class="pualugin__button button-arrow" data-element="toggle__anchor">입력 시 유의사항</button>
+                    </div>
+                    <div class="guide-panel" data-element="toggle__panel">
+                        <ul class="guide-list">
+                            <li class="guide-list__item">정식명칭만 입력 예)한국전기통신공사</li>
+                            <li class="guide-list__item">한글만 입력 예)에스케이텔레콤</li>
+                            <li class="guide-list__item">직장명 앞머리 일부 입력가능 예하나, 하</li>
+                            <li class="guide-list__item">주식회사, 유한회사, (주), (유) 등은 입력불가</li>
+                            <li class="guide-list__item">띄어쓰기 없이 입력</li>
+                            <li class="guide-list__item">지점이나 영업소 이름생략</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="modal__btn--close" type="button" title="닫기"></button>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

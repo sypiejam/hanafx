@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <!-- 200721 | 팝업 -> 페이지로 수정 및 마크업 수정 -->
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면" type="button"></button>
+            <h1 class="app-header__title">휴대폰 본인인증</h1>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴" type="button"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">            
+            <div class="tit-small">휴대폰 번호 확인 절차를 진행합니다.</div><!--// 200811  | 타이틀 추가 -->
+            <div class="container">
+                <ul class="numbering-list color-666">
+                    <!-- 200811  
+                    <li class="numbering-list__item">
+                        <span class="numbering-list__number">1</span>
+                        <p class="numbering-list__text">휴대폰 번호 확인 절차를 진행합니다.</p>
+                    </li>
+                   -->
+                    <li class="numbering-list__item">
+                        <span class="numbering-list__number">1</span><!-- //200807 | 숫자변경 | 1->2 -->
+                        <!-- 200805 | 문구 변경 -->
+                        <p class="numbering-list__text">[동의 및 휴대폰 번호 확인] 을 누르세요.</p>
+                    </li>
+                    <li class="numbering-list__item">
+                        <span class="numbering-list__number">2</span><!-- //200807 | 숫자변경 | 2->3 -->
+                        <!-- 200805 | 문구 변경 -->
+                        <p class="numbering-list__text">아래 화면이 나타나면 [보내기]를 해주세요. </p>
+                    </li>
+                </ul>
+
+                <div class="confirm-img mgt120">
+                    <img src="../../../../resource/images/C/img_phone_confirm2.png" alt="예시화면">
+                </div>
+
+                <!-- 200805 | 마크업 변경 -->
+                <div class="confirm-info">
+                    <p class="confirm-info__text">본인 명의의 휴대폰을 통해서만 인증할 수 있습니다.</p>
+                    <div class="button-contained-wrap">
+                        <button type="button" class="button-underline button-underline--green">혹시, 본인명의 휴대폰이 아니세요?</button>
+                    </div>
+                </div>
+                <!-- //200805 | 마크업 변경 -->
+
+                <div class="agree-wrap__section mgt120">
+                <!-- //접근성 및 디자인현행화 -->
+                    <div class="privacy modi-privacy2">
+                        <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                        <div class="privacy__item">
+                            <!-- <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button> --><!-- 200624 | 긴급 수정 - 삭제 -->
+                            <button type="button" class="privacy__detail privacy__detail--none-check" id="" ><!-- 200624 | 긴급 수정 privacy__detail--none-check 클래스 추가 -->
+                                개인정보 수집 및 이용동의
+                            </button>
+                        </div>
+                        <div class="privacy__item">
+                            <!-- <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button> --><!-- 200624 | 긴급 수정 - 삭제 -->
+                            <button type="button" class="privacy__detail privacy__detail--none-check" id="" ><!-- 200624 | 긴급 수정 privacy__detail--none-check 클래스 추가 -->
+                                개인정보 제공 동의
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Content -->
+
+        <!-- footer -->
+        <div id="footer" class="app-footer app-footer--button">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive">동의 및 휴대폰 번호 확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!--// 200721 | 팝업 -> 페이지로 수정 및 마크업 수정 -->
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

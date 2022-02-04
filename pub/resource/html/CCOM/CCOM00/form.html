@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="pdnotch">
+            <h1>FORM 요소</h1>
+            <h3 class="mgt90">Default</h3>
+            <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                <div class="input__inner">
+                    <i class="input__optional">+</i>
+                    <input type="text" id="inputText01" class="input__element" title="아이디" placeholder="5~20자 영문 숫자 입력">
+                    <label for="inputText01" class="input__label" aria-hidden="true">아이디</label>
+                    <i class="input__optional">백만원</i>
+                    <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                </div>
+                <!-- 에러 메시지 -->
+            </div>
+            <div class="input mgt30">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                <div class="input__inner">
+                    <input type="text" id="inputText01" class="input__element input__element--right" title="아이디" placeholder="5~20자 영문 숫자 입력">
+                    <label for="inputText01" class="input__label" aria-hidden="true">아이디</label>
+                    <i class="input__optional">백만원</i>
+                    <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                </div>
+                <!-- 에러 메시지 -->
+            </div>
+
+            <div class="input input--error mgt30">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                <div class="input__inner">
+                    <input type="text" id="inputText02" class="input__element" title="아이디" placeholder="5~20자 영문 숫자 입력">
+                    <label for="inputText02" class="input__label" aria-hidden="true">아이디</label>
+                    <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                </div>
+                <!-- 에러 메시지 -->
+                <p class="input__error" aria-live="assertive">주민등록번호 오류입니다.</p>
+            </div>
+
+            <div class="input input--on mgt30">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                <div class="input__inner">
+                    <input type="text" id="inputText03" class="input__element input__element--right" title="아이디" placeholder="5~20자 영문 숫자 입력" value="123">
+                    <label for="inputText03" class="input__label" aria-hidden="true">아이디</label>
+                    <i class="input__optional">백만원</i>
+                    <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                </div>
+                <!-- 에러 메시지 -->
+                <p class="input__error" aria-live="assertive">주민등록번호 오류입니다.</p>
+            </div>
+            <div class="input input--on mgt30">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                <div class="input__inner">
+                    <input type="text" id="inputText04" class="input__element" title="생년월일 6자리" placeholder="5~20자 영문 숫자 입력" value="123">
+                    <i class="input__optional">-</i>
+                    <input type="text" id="inputText05" class="input__element" title="주민등록번호 뒷자리" placeholder="5~20자 영문 숫자 입력" value="123">
+                    <i class="input__optional pdt60">&middot;</i><!-- 200720 | 클래스 추가 | pdt60 -->
+                    <input type="text" id="inputText06" class="input__element" title="주민등록번호 뒷자리" placeholder="5~20자 영문 숫자 입력" value="123">
+                    <label for="inputText04" class="input__label" aria-hidden="true">아이디</label>
+                </div>
+                <!-- 에러 메시지 -->
+                <p class="input__error" aria-live="assertive">주민등록번호 오류입니다.</p>
+            </div>
+
+            <div class="input-wrap">
+                <!--
+                    * 오류시 class="input input--error"
+                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                -->
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText01" class="input__element" title="연락처" placeholder="5~20자 영문 숫자 입력">
+                        <label for="inputText01" class="input__label" aria-hidden="true">연락처</label>
+                    </div>
+                </div>
+
+                <i class="input__optional">-</i>
+
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText01" class="input__element" title="연락처" placeholder="5~20자 영문 숫자 입력">
+                        <label for="inputText01" class="input__label" aria-hidden="true">연락처</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inpwrap inpwrap--full mgt30">
+                <input type="text" class="input-text" placeholder="5~20자 영문 숫자 입력" value="yalala" id='form1' />
+                <label aria-hidden="true"><!-- aria-hidden 유지 -->
+                    <i>아이디</i>
+                </label>
+                <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+            </div>
+
+            <h3 class="mgt90">selectbox</h3>
+            <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                <div class="select-box">
+                    <select disabled class="select-box__item">
+                        <option value="0">선택 1</option>
+                        <option value="1">선택 2</option>
+                        <option value="2">선택 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                <div class="select-box">
+                    <select class="select-box__item">
+                        <option value="0">선택 1</option>
+                        <option value="1">선택 2</option>
+                        <option value="2">선택 3</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <h3 class="mgt90">주민등록번호</h3>
+            <div class="pw-wrap mgt30">
+                <input type="text" class="pw-wrap__input" placeholder="생년월일 6자리" id="personalId" />
+                <i class="pw-wrap__sepherator">-</i>
+                <input type="text" class="pw-wrap__input" placeholder="" />
+                <label for="personalId" aria-hidden="true"><!-- aria-hidden 유지 -->
+                    <i>주민등록번호</i>
+                </label>
+            </div>
+
+            <div class="pw-wrap focus mgt30">
+                <input type="text" class="pw-wrap__input" placeholder="생년월일 6자리" id="personalId2" />
+                <i class="pw-wrap__sepherator">-</i>
+                <input type="text" class="pw-wrap__input" placeholder="" />
+                <label for="personalId2" aria-hidden="true"><!-- aria-hidden 유지 -->
+                    <i>주민등록번호</i>
+                </label>
+            </div>
+
+            <h3 class="mgt90">Error</h3>
+            <div class="inpwrap inpwrap--full error mgt30"><!-- error 일 경우 error 클래스 추가 -->
+                <input type="text" class="input-text" placeholder="5~20자 영문 숫자 입력" />
+                <label aria-hidden="true">
+                    <i>주민등록번호(-)없이 입력</i>
+                </label>
+                <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+                <p aria-live="assertive">주민등록번호 오류입니다.</p>
+            </div>
+            <h3 class="mgt90">Disable</h3>
+            <div class="inpwrap inpwrap--full mgt30">
+                <input type="text" class="input-text" disabled placeholder="5~20자 영문 숫자 입력" value="아이디입니다" />
+                <label aria-hidden="true">
+                    <i>아이디</i>
+                </label>
+                <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+            </div>
+            <h3 class="mgt90">Readonly</h3>
+            <div class="inpwrap inpwrap--full mgt30">
+                <input type="text" class="input-text" readonly placeholder="5~20자 영문 숫자 입력" value="아이디입니다" />
+                <label aria-hidden="true">
+                    <i>아이디</i>
+                </label>
+                <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+            </div>
+            <h3 class="mgt90">Password</h3>
+            <div class="inpwrap inpwrap--full mgt30">
+                <input type="password" class="input-text" placeholder="영문,숫자,특수문자 조합" />
+                <label aria-hidden="true">
+                    <i>비밀번호</i>
+                </label>
+                <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+            </div>
+            <h3 class="mgt90">Label Tooltip</h3>
+            <div class="inpwrap inpwrap--full mgt30 tooltipbox"><!-- 툴팁을 가지고 있을 경우 tooltipbox 클래스 추가-->
+                <input type="text" class="input-text" placeholder="5~20자 영문 숫자 입력" />
+                <label aria-hidden="true">
+                    <i>아이디</i>
+                </label>
+                <button type="button" class="button button--gcircle-del">텍스트삭제</button>
+                <div class="tooltip tooltip--input" data-element="tooltip" data-options='{ "position": "bottom" }'>
+                    <button type="button" class="button button--gcircle-tooltip" data-element="tooltip__button">안내</button>
+                    <div class="tooltip__cont" data-element="tooltip__panel">
+                        아이디는 꼭 5~20자 영문, 숫자로만 입력하세요
+                    </div>
+                </div>
+            </div>
+            <h3 class="mgt90">TextArea</h3>
+            <div class="txtareawrap">
+                <textarea></textarea>
+                <div class="txtareawrap__byte">
+                    <span class="txtareawrap__byte-total"><strong class="txtareawrap__byte-current">09</strong>/60</span>
+                </div>
+            </div>
+
+            <label class="switch"><!-- label에 해당하는 요소가 없을 경우 aria-label="토글버튼 설명" 추가해야 함 -->
+                <input type="checkbox">
+                <span class="switch__toggle" aria-hidden="true"></span>
+            </label>
+            <p>토글</p>
+            <div class="toggle">
+                <input type="radio" class="toggle__input toggle__input--first" id="toggleRdo1" name="toggleRdo1" checked>
+                <label for="toggleRdo1" class="toggle__button">최근</label>
+                <input type="radio" class="toggle__input toggle__input--last" id="toggleRdo2" name="toggleRdo1">
+                <label for="toggleRdo2" class="toggle__button">자주</label>
+                <span class="toggle__slider"></span>
+            </div>
+            <hr>
+            <p></p>
+            <h2>checkbox,radio</h2>
+            <div class="grid">
+                <span class="grid__item checkbox-wrap">
+                    <input type="checkbox" id="chk1" class="checkbox-wrap__check" name="chk1">
+                    <label for="chk1" class="checkbox-wrap__label">이메일</label>
+                </span>
+                <span class="grid__item checkbox-wrap">
+                    <input type="checkbox" id="chk2" class="checkbox-wrap__check" name="chk2" checked>
+                    <label for="chk2" class="checkbox-wrap__label">SMS</label>
+                </span>
+                <span class="grid__item checkbox-wrap">
+                    <input type="checkbox" id="chk3" class="checkbox-wrap__check" name="chk3" disabled>
+                    <label for="chk3" class="checkbox-wrap__label">전화</label>
+                </span>
+            </div>
+            <hr>
+            <div class="grid">
+                <span class="grid__item radio-wrap">
+                    <input type="radio" id="rdo1" class="radio-wrap__radio" name="rdo">
+                    <label for="rdo1" class="radio-wrap__label">이메일</label>
+                </span>
+                <span class="grid__item radio-wrap">
+                    <input type="radio" id="rdo2" class="radio-wrap__radio" name="rdo" checked>
+                    <label for="rdo2" class="radio-wrap__label">SMS</label>
+                </span>
+                <span class="grid__item radio-wrap">
+                    <input type="radio" id="rdo3" class="radio-wrap__radio" name="rdo" disabled>
+                    <label for="rdo3" class="radio-wrap__label">전화</label>
+                </span>
+            </div>
+            <hr>
+            <div class="grid">
+                <span class="grid__item checkbox-wrap checkbox-wrap--text">
+                    <input type="checkbox" id="chk4" class="checkbox-wrap__check" name="chk4">
+                    <label for="chk4" class="checkbox-wrap__label">이메일</label>
+                </span>
+                <span class="grid__item checkbox-wrap checkbox-wrap--text">
+                    <input type="checkbox" id="chk5" class="checkbox-wrap__check" name="chk5">
+                    <label for="chk5" class="checkbox-wrap__label">SMS</label>
+                </span>
+            </div>
+
+            <hr>
+
+            <div class="account-list__wrap-button">
+                <div class="input-button">
+                    <input type="checkbox" name="settingAccount" id="settingAccount01" class="input-button__input">
+                    <label for="settingAccount01" class="input-button__label">조회</label>
+                </div>
+                <div class="input-button">
+                    <input type="checkbox" name="settingAccount" id="settingAccount02" class="input-button__input">
+                    <label for="settingAccount02" class="input-button__label">출금</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>

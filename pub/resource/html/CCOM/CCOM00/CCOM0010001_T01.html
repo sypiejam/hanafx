@@ -1,0 +1,356 @@
+<!-- v0.98 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">공통</h1>
+            <button class="app-header__button app-header__button--home" title="메인 화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- Content -->
+        <div id="content" class="app-main">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#CCOM010801">은행찾기</button>
+            </div>
+        </div>
+        <!-- //Content -->
+
+        <!-- footer -->
+        <!-- <div id="footer" class="app-footer"></div> -->
+        <!-- //footer -->
+        <div id="CCOM010801" class="modal modal--slide" data-element="modal__element">
+            <div class="modal__container modal__container--interval modal__find-bank"
+                data-element="modal__element-container">
+                <div class="modal__header modal__header--interval">
+                    <h1 class="modal__header--title">은행선택</h1>
+                </div>
+                <div class="modal__contents">
+                    <div data-element="tab" data-options='{"initIndex":0}'>
+                        <div class="tab-wrap">
+                            <ul class="tab-wrap__menu">
+                                <li class="tab-wrap__item" data-element="tab__list"> <a href="#" class="tab-wrap__button" data-element="tab__anchor">은행</a></li>
+                                <li class="tab-wrap__item" data-element="tab__list"> <a href="#" class="tab-wrap__button" data-element="tab__anchor">증권</a></li>
+                                <li class="tab-wrap__item" data-element="tab__list"> <a href="#" class="tab-wrap__button" data-element="tab__anchor">ICT</a></li>
+                            </ul>
+                        </div>
+                        <div class="pualugin-tab__panel" data-element="tab__panel">
+                            <div class="bank-list">
+                                <ul>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_000.png" alt="모든은행">
+                                            </i>
+                                            <p class="bank-list__name">모든은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pualugin-tab__panel" data-element="tab__panel">
+                            <div class="bank-list">
+                                <ul>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pualugin-tab__panel" data-element="tab__panel">
+                            <div class="bank-list">
+                                <ul>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <img src="../../../../resource/images/symbols/ba_020.png" alt="우리은행">
+                                            </i>
+                                            <p class="bank-list__name">우리은행</p>
+                                        </button>
+                                    </li>
+                                    <li class="bank-list__item">
+                                        <button type="button" class="button button--select-bank">
+                                            <i class="bank-list__icon">
+                                                <!-- 접근성 및 디자인현행화 -->
+                                                <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                                                <!-- //접근성 및 디자인현행화 -->
+                                            </i>
+                                            <p class="bank-list__name">하나은행</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+    </div>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+
+</html>
