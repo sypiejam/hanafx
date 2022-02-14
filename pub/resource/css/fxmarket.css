@@ -2,15 +2,8 @@
 
 /* 서비스 가입 */
 .fx-nickname .input .button-square-small {position:absolute;top:50%;right:0;margin-top:-0.938rem;z-index:2;}
-.fx-account .product-list--card {margin-top:1.174rem;}
-.fx-account .product-list__item {padding-bottom:1.25rem;box-shadow:0.688rem 0.688rem 0.75rem rgb(36 128 139 / 18%), 0 -0.625rem 0.875rem rgb(255 255 255 / 90%);}
-.fx-account .product-card__account-title {font-size:1.125rem;}
-.fx-account .button-select__item--bank {min-height:auto;margin-top:1.125rem;padding:0;border:none;background-position:100% 50%;background-color:transparent;}
-.fx-account .button-select__item--icon-bank img {top:0;left:0;}
-.fx-account .button-select__item--icon-bank img ~ .bank-name,
-.fx-account .button-select__item--icon-bank img ~ .bank-number {padding-left:1.875rem;}
-.fx-account .button-select__item--icon-bank .bank-name + .bank-number {margin-top:0.313rem;}
-.fx-account .icon-wrap__icon-word {margin-top:0;padding:0.625rem 0;}
+.fx-account {margin-top:1.875rem;}
+.fx-account__word {padding-left:2.1875rem;}
 .fxmarket .fx-limit {margin-top:1.5rem;}
 .fx-limit .input-wrap {margin:0;}
 .fx-limit .input {width:40%;margin-left:0;}
