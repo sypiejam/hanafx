@@ -2,6 +2,7 @@
 
 /* 서비스 가입 */
 .fx-nickname .input .button-square-small {position:absolute;top:50%;right:0;margin-top:-0.938rem;z-index:2;}
+.fx-nickname .input__error {position:absolute;width:calc(100% - 2.188rem);}
 .fx-account {margin-top:1.875rem;}
 .fx-account__word {padding-left:2.1875rem;}
 .fxmarket .fx-limit {margin-top:1.5rem;}
