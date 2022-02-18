@@ -25,91 +25,99 @@
     <!-- //header -->
     <!-- content -->
     <div id="content" class="app-main fxmarket">
-        <div class="tit-large">닉네임을 입력해주세요.</div>
-        <div class="container fx-nickname">
-            <div class="input">
-                <!--
-                    * 오류시 class="input input--error"
-                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
-                -->
-                <div class="input__inner">
-                    <input type="text" id="inputText01" class="input__element" title="2~10자 이내 입력" placeholder="2~10자 이내 입력">
-                    <label for="inputText01" class="input__label" aria-hidden="true">닉네임</label>
-                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
-                    <button type="button" class="input__find-button" aria-label="중복확인">중복확인</button>
+        <!-- 2022-02-18 마크업 수정 -->
+        <div class="fx-join-step01">
+            <div class="tit-large">닉네임을 입력해주세요.</div>
+            <div class="container fx-nickname">
+                <div class="input">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText01" class="input__element" title="3~10자 이내 입력" placeholder="3~10자 이내 입력">
+                        <label for="inputText01" class="input__label" aria-hidden="true">닉네임</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                        <button type="button" class="input__find-button" aria-label="중복확인">중복확인</button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">에러메시지</p>
                 </div>
-                <!-- 에러 메시지 -->
-                <p class="input__error" aria-live="assertive">에러메시지</p>
-            </div>
-            <div class="input__guide-text">
-                <span>0</span>/10
-            </div>
-         </div>
-
-        <div class="tit-large">FX마켓 거래에 필요한 계좌를 <br>확인해주세요.</div>
-        <div class="fx-account">
-            <div class="tit-small">원화계좌</div>
-            <div class="container">
-                <div class="button-select">
-                    <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank button-select__item--icon-bank02">
-                    <p class="fx-account__word">등록된 계좌가 없습니다.</p>
-                    </button>
-                </div>
-            </div>
-            <div class="container">
-                <div class="button-select">
-                    <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank button-select__item--icon-bank02" title="계좌 선택">
-                        <img src="../../../../resource/images/symbols/ba_021.png" alt="신한은행">
-                        <strong class="bank-name">[신한] 타은행통장</strong>
-                        <span class="bank-number eng">746 - 234567 - 03000</span>
-                    </button>
-                </div>
-            </div>
-            <div class="tit-small">외화계좌</div>
-            <div class="container">
-                <div class="button-select">
-                    <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank button-select__item--icon-bank02" title="계좌 선택">
-                        <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
-                        <strong class="bank-name">하나밀리언달러투자</strong>
-                        <span class="bank-number eng">746 - 234567 - 03000</span>
-                    </button>
+                <div class="input__guide-text">
+                    <span>0</span>/10
                 </div>
             </div>
         </div>
 
-        <div class="tit-large">FX마켓 거래한도는</div>
-        <div class="fx-limit">
-            <div class="container">
-                <div class="input-wrap">
-                    <label for="inputText02" class="input__title">1회 <span>USD</span></label>
-                    <div class="input input--on">
-                        <div class="input__inner">
-                            <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText02" class="input__element input__no-label" title="1회 한도" value="500,000" placeholder="">
-                            <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
-                        </div>
+        <div class="fx-join-step02 active">
+            <div class="tit-large">FX마켓 거래에 필요한 계좌를 <br>확인해주세요.</div>
+            <div class="fx-account">
+                <div class="tit-small">원화계좌</div>
+                <div class="container">
+                    <div class="button-select">
+                        <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank button-select__item--icon-bank02">
+                        <p class="fx-account__word">등록된 계좌가 없습니다.</p>
+                        </button>
                     </div>
                 </div>
-                <!-- 에러 메시지 -->
-                <p class="input__error" aria-live="assertive">1회 거래한도 USD 500,000까지 입력</p>
-            </div>
-            <div class="container">
-                <div class="input-wrap input-wrap--error">
-                    <label for="inputText03" class="input__title">1일 <span>USD</span></label>
-                    <div class="input input--on">
-                        <div class="input__inner">
-                            <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText03" class="input__element input__no-label" title="1일 한도" value="1,000,000" placeholder="">
-                            <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
-                        </div>
+                <div class="container">
+                    <div class="button-select">
+                        <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank button-select__item--icon-bank02" title="계좌 선택">
+                            <img src="../../../../resource/images/symbols/ba_021.png" alt="신한은행">
+                            <strong class="bank-name">[신한] 타은행통장</strong>
+                            <span class="bank-number eng">746 - 234567 - 03000</span>
+                        </button>
                     </div>
-                    <p class="input__text">까지 가능합니다.</p>
                 </div>
-                <!-- 에러 메시지 -->
-                <p class="input__error active" aria-live="assertive">1일 거래한도 USD 1,000,000까지 입력</p>
-                <div class="input__guide-text input__guide-text--left">
-                    ※ 거래시간에 따라 변동될 수 있습니다.
+                <div class="tit-small">외화계좌</div>
+                <div class="container">
+                    <div class="button-select">
+                        <button type="button" class="button button-select__item button-select__item--bank button-select__item--icon-bank button-select__item--icon-bank02" title="계좌 선택">
+                            <img src="../../../../resource/images/symbols/ba_005.png" alt="하나은행">
+                            <strong class="bank-name">하나밀리언달러투자</strong>
+                            <span class="bank-number eng">746 - 234567 - 03000</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="fx-join-step03 active">
+            <div class="tit-large">FX마켓 거래한도는</div>
+            <div class="fx-limit">
+                <div class="container">
+                    <div class="input-wrap">
+                        <label for="inputText02" class="input__title">1회 <span>USD</span></label>
+                        <div class="input input--on">
+                            <div class="input__inner">
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText02" class="input__element input__no-label" title="1회 한도" value="500,000" placeholder="">
+                                <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">1회 거래한도 USD 500,000까지 입력</p>
+                </div>
+                <div class="container">
+                    <div class="input-wrap input-wrap--error">
+                        <label for="inputText03" class="input__title">1일 <span>USD</span></label>
+                        <div class="input input--on">
+                            <div class="input__inner">
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText03" class="input__element input__no-label" title="1일 한도" value="1,000,000" placeholder="">
+                                <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                            </div>
+                        </div>
+                        <p class="input__text">까지 가능합니다.</p>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error active" aria-live="assertive">1일 거래한도 USD 1,000,000까지 입력</p>
+                    <div class="input__guide-text input__guide-text--left">
+                        ※ 거래시간에 따라 변동될 수 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //2022-02-18 마크업 수정 -->
     </div>
     <!-- //content -->
     <!-- footer -->
