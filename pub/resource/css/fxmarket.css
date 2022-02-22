@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.btn-share {display:flex;align-items:center;height:1.875rem;}
+.btn-share::before {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-right:0.5rem;background:url('../../resource/images/C/header_btn_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
+.btn-share__text {font-size:0.813rem;color:#666;}
+
 /* 서비스 가입 */
 [class^='fx-join-step']:not(:first-child) {overflow:hidden;height:1px;opacity:0;transition:all 0.3s;transition-timing-function:ease-out;}
 [class^='fx-join-step'].active {height:auto;margin-top:2.5rem;opacity:1;}
