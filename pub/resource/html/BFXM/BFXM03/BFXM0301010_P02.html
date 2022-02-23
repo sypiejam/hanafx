@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <div class="content">
+        <div class="container">
+            <!-- 즉시매수 입력정보 확인 팝업 -->
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0301010_P02">입력정보확인</button>
+            </div>
+        </div>
+    </div>
+    <div id="BFXM0301010_P02" class="modal modal--slide" data-element="modal__element">
+        <div class="modal__container" data-element="modal__element-container">
+            <div class="modal__header modal__header--visible">
+                <div class="modal__header--title">
+                    <div class="fx-sticker">
+                        <i class="fx-sticker__arrow" aria-hidden="true"></i>
+                        <div class="fx-sticker__cont">
+                            <em class="fx-sticker__txt">출석이벤트 환율우대</em>
+                            <strong class="fx-sticker__num">90%</strong>
+                        </div>
+                    </div>
+                    <p>USD <em class="fw-700">500,000</em>을<br> <em class="fw-700">602,750,000</em>원에 삽니다.</p>
+                    <p class="text-guide mgt42">환율 (spread) 80% 우대로<br> <em class="fw-700 color-red">2,500,000</em>원 더 싸게 사요!</p>
+                </div>
+            </div>
+            <div class="modal__contents modal__contents--modi">
+                <div class="container container--full">
+                    <div class="list-section">
+                        <ul class="list-wrap">
+                            <li class="list-wrap__item align-top">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">사는금액</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value eng">
+                                        USD <em>500,000</em><br>
+                                        (KRW <em>602,705,000</em>)
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">거래후 원화 잔액</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value">
+                                        <em class="eng">8,794,500</em>원
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">우대금액</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value">
+                                        적용예상환율 <em class="eng">1,205.50</em><br>
+                                        환율우대 <em class="eng">80</em>%
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="button-fixed">
+                <div class="button-wrap">
+                    <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                    <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

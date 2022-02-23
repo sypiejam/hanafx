@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <div class="content">
+        <div class="container">
+            <!-- 마환율매수 입력정보 확인 팝업 -->
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0304010_P02">입력정보확인</button>
+            </div>
+        </div>
+    </div>
+    <div id="BFXM0304010_P02" class="modal modal--slide" data-element="modal__element">
+        <div class="modal__container" data-element="modal__element-container">
+            <div class="modal__header modal__header--visible">
+                <div class="modal__header--title">
+                    <p>시장평균환율거래(MAR거래)를<br> 예약하시겠습니까?</p>
+                    <p class="text-guide mgt42">이 주문은 <em>16:00</em>에<br> 오늘 시장평균환율로 거래가 체결됩니다.</p>
+                </div>
+            </div>
+            <div class="modal__contents modal__contents--modi">
+                <div class="container container--full">
+                    <div class="list-section">
+                        <ul class="list-wrap">
+                            <li class="list-wrap__item align-top">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">예약환율</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value eng">
+                                        시장평균환율
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">예약금액</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value">
+                                        USD <em>500,000</em>
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">예약일자</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text eng">2022-02-25</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="button-fixed">
+                <div class="button-wrap">
+                    <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                    <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                </div>
+            </div>
+            <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
