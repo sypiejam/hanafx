@@ -31,10 +31,10 @@
                 <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
                 <!-- //아이콘 영역 디자인 미정 작업예정 -->
                 <p class="icon-wrap__icon-word">
-                    예약/지정매수(<em>KRW</em> &gt; <em>USD</em>)가<br> 예약되었습니다.
+                    USD <em class="fw-700">500,000</em>을<br> <em class="fw-700">597,750,000</em>원에 팔았습니다.
                 </p>
                 <p class="icon-wrap__description">
-                    이 주문은 예약종료일 <em>18:00</em>까지 유지됩니다.
+                    환율(Spread) <span>80</span>% 우대로<br> <em class="fw-700 color-light-blue">2,500,000</em>원 더 받고 팔았어요!
                 </p>
             </div>
         </div>
@@ -44,35 +44,48 @@
                 <ul class="list-wrap">
                     <li class="list-wrap__item">
                         <div class="list-wrap__box">
-                            <strong class="list-wrap__title list-wrap__title--value">예약환율</strong>
-                        </div>
-                        <div class="list-wrap__box list-wrap__box--unit">
-                            <strong class="list-wrap__text list-wrap__text--value">
-                                <em class="eng">1,190.50</em>원
-                            </strong>
-                        </div>
-                    </li>
-                    <li class="list-wrap__item">
-                        <div class="list-wrap__box">
-                            <strong class="list-wrap__title list-wrap__title--value">예약금액</strong>
+                            <strong class="list-wrap__title list-wrap__title--value">파는금액</strong>
                         </div>
                         <div class="list-wrap__box list-wrap__box--unit">
                             <strong class="list-wrap__text list-wrap__text--value eng">
                                 USD <em>500,000</em><br>
-                                (KRW <em>595,250,000</em>)
+                                (KRW <em>597,750,000</em>)
                             </strong>
                         </div>
                     </li>
                     <li class="list-wrap__item">
                         <div class="list-wrap__box">
-                            <strong class="list-wrap__title">예약기간</strong>
+                            <strong class="list-wrap__title list-wrap__title--value">우대금액</strong>
                         </div>
                         <div class="list-wrap__box list-wrap__box--unit">
-                            <strong class="list-wrap__text eng">2022-02-17 ~ 2022-02-22</strong>
+                            <strong class="list-wrap__text list-wrap__text--value">
+                                적용환율 <em class="eng">1,234.55</em><br>
+                                환율우대 <em class="eng">80%</em>
+                            </strong>
                         </div>
                     </li>
                 </ul>
                 <ul class="list-wrap" style="display: none;" data-element="toggle-list">
+                    <li class="list-wrap__item">
+                        <div class="list-wrap__box">
+                            <strong class="list-wrap__title list-wrap__title--value">거래후 원화 잔액</strong>
+                        </div>
+                        <div class="list-wrap__box list-wrap__box--unit">
+                            <strong class="list-wrap__text list-wrap__text--value">
+                                <em class="eng">697,112,000</em>원
+                            </strong>
+                        </div>
+                    </li>
+                    <li class="list-wrap__item">
+                        <div class="list-wrap__box">
+                            <strong class="list-wrap__title list-wrap__title--value">거래후 외화 잔액</strong>
+                        </div>
+                        <div class="list-wrap__box list-wrap__box--unit">
+                            <strong class="list-wrap__text list-wrap__text--value eng">
+                                USD <em>500,000</em>
+                            </strong>
+                        </div>
+                    </li>
                     <li class="list-wrap__item">
                         <div class="list-wrap__box">
                             <strong class="list-wrap__title list-wrap__title--value">출금계좌</strong>
@@ -98,7 +111,8 @@
                 </ul>
             </div>
         </div>
-        <div class="container">
+        <div class="container flex">
+            <button type="button" class="btn-share" title="공유하기"><span class="btn-share__text">공유하기</span></button>
             <button type="button" class="button-simple button-simple--right" data-element="toggle-btn">펼치기</button>
         </div>
     </div>

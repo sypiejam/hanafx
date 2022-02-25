@@ -26,18 +26,25 @@
 
     <div id="content" class="app-main fxmarket">
         <div class="container">
-            <!-- 마환율매수&매도 입력정보 확인 팝업 -->
+            <!-- 즉시매도 입력정보 확인 팝업 -->
             <div class="button-wrap">
-                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0304010_P02">입력정보확인</button>
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0401010_P02">입력정보확인</button>
             </div>
         </div>
     </div>
-    <div id="BFXM0304010_P02" class="modal modal--slide" data-element="modal__element">
+    <div id="BFXM0401010_P02" class="modal modal--slide" data-element="modal__element">
         <div class="modal__container" data-element="modal__element-container">
             <div class="modal__header modal__header--visible">
                 <div class="modal__header--title">
-                    <p>시장평균환율거래(MAR거래)를<br> 예약하시겠습니까?</p>
-                    <p class="text-guide mgt42">이 주문은 <em>16:00</em>에<br> 오늘 시장평균환율로 거래가 체결됩니다.</p>
+                    <div class="fx-sticker">
+                        <i class="fx-sticker__arrow" aria-hidden="true"></i>
+                        <div class="fx-sticker__cont">
+                            <em class="fx-sticker__txt">출석이벤트 환율우대</em>
+                            <strong class="fx-sticker__num">90%</strong>
+                        </div>
+                    </div>
+                    <p>USD <em class="fw-700">500,000</em>을<br> <em class="fw-700">597,750,000</em>원에 팝니다.</p>
+                    <p class="text-guide mgt42">환율 (spread) 80% 우대로<br> <em class="fw-700 color-light-blue">2,500,000</em>원 더 받고 팔아요!</p>
                 </div>
             </div>
             <div class="modal__contents modal__contents--modi">
@@ -46,30 +53,34 @@
                         <ul class="list-wrap">
                             <li class="list-wrap__item align-top">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">예약환율</strong>
+                                    <strong class="list-wrap__title list-wrap__title--value">사는금액</strong>
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value eng">
-                                        시장평균환율
+                                        USD <em>500,000</em><br>
+                                        (KRW <em>597,750,000</em>)
                                     </strong>
                                 </div>
                             </li>
                             <li class="list-wrap__item">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">예약금액</strong>
+                                    <strong class="list-wrap__title list-wrap__title--value">거래후 외화 잔액</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value eng">
+                                        USD <em>8,794,500</em>
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">우대금액</strong>
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value">
-                                        USD <em>500,000</em>
+                                        적용예상환율 <em class="eng">1,195.50</em><br>
+                                        환율우대 <em class="eng">80</em>%
                                     </strong>
-                                </div>
-                            </li>
-                            <li class="list-wrap__item">
-                                <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">예약일자</strong>
-                                </div>
-                                <div class="list-wrap__box list-wrap__box--unit">
-                                    <strong class="list-wrap__text eng">2022-02-25</strong>
                                 </div>
                             </li>
                         </ul>

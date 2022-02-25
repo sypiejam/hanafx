@@ -26,18 +26,18 @@
 
     <div id="content" class="app-main fxmarket">
         <div class="container">
-            <!-- 마환율매수&매도 입력정보 확인 팝업 -->
+            <!-- 예약/지정매도 입력정보 확인 팝업 -->
             <div class="button-wrap">
-                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0304010_P02">입력정보확인</button>
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0302010_P02">입력정보확인</button>
             </div>
         </div>
     </div>
-    <div id="BFXM0304010_P02" class="modal modal--slide" data-element="modal__element">
+    <div id="BFXM0302010_P02" class="modal modal--slide" data-element="modal__element">
         <div class="modal__container" data-element="modal__element-container">
             <div class="modal__header modal__header--visible">
-                <div class="modal__header--title">
-                    <p>시장평균환율거래(MAR거래)를<br> 예약하시겠습니까?</p>
-                    <p class="text-guide mgt42">이 주문은 <em>16:00</em>에<br> 오늘 시장평균환율로 거래가 체결됩니다.</p>
+                <div class="modal__header--title max-w80">
+                    <p>예약/지정매도(<em>USD</em> &gt; <em>KRW</em>)을<br> 예약하시겠습니까?</p>
+                    <p class="text-guide mgt42">이 주문은 예약종료일 <em>18:00</em>까지 유지됩니다.</p>
                 </div>
             </div>
             <div class="modal__contents modal__contents--modi">
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value eng">
-                                        시장평균환율
+                                        <em class="eng">1,190.50</em>원
                                     </strong>
                                 </div>
                             </li>
@@ -60,16 +60,17 @@
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value">
-                                        USD <em>500,000</em>
+                                        USD <em>500,000</em><br>
+                                        (KRW <em>602,705,000</em>)
                                     </strong>
                                 </div>
                             </li>
                             <li class="list-wrap__item">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">예약일자</strong>
+                                    <strong class="list-wrap__title list-wrap__title--value">예약기간</strong>
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
-                                    <strong class="list-wrap__text eng">2022-02-25</strong>
+                                    <strong class="list-wrap__text eng">2022-02-17 ~ 2022-02-22</strong>
                                 </div>
                             </li>
                         </ul>
