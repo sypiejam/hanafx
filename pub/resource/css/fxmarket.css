@@ -24,3 +24,13 @@
 .fx-limit .input {width:40%;margin-left:0;}
 .fx-limit .input__title {width:4.375rem;font-size:1.125rem;}
 .fx-limit .input__text {font-size:1.125rem;}
+
+/* 환율선택 팝업 */
+.modal__contents--fx {max-height:80vh;overflow-y:auto;}
+.fx-rate__select {margin-top:-0.625rem}
+.fx-rate__select .check-full ~ .check-full {margin-top:0.625rem;border-top:1px solid #e7e9ee}
+.fx-rate__select .check-full__item {margin-top:0.625rem}
+.fx-rate__select .check-full__label {text-align:center;}
+.fx-rate__select .check-full__input:checked  + .check-full__label .check-full__label--txt {color:#000}
+.fx-rate__select .input__unit {min-width:3rem;font-size:1.125rem;color:#757575;text-align:center}
+.fx-rate__select .tooltip {top:-1px;padding-right:0.25rem;} 
