@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="fx-rateinfo">
                     <div class="white-box" data-element="toggle">
-                        <div class="white-box__header" data-element="toggle__anchor" aria-expanded="false">
+                        <div class="white-box__header is-active" aria-expanded="true">
                             <div class="list-wrap__item list-wrap__item--arrow">
                                 <div class="list-wrap__box">
                                     <strong class="title">환율정보</strong>
@@ -108,7 +108,7 @@
                                 <div class="list-wrap__box list-wrap__box--button"></div>
                             </div>
                         </div>
-                        <div class="white-box__content" data-element="toggle__panel">
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block">
                             <!-- 
                                 to.개발 | 평균가보다 높을 때 :fx-compare__txt--high
                                           평균가보다 낮을 때 :fx-compare__txt--low
@@ -351,154 +351,141 @@
     <script src="../../../../resource/js/ui/common.js"></script>
     <script src="../../../../resource/js/ui/numberAnimate.js"></script> <!-- Hana FX numberAnimate 추가 -->
     <script>
-        var fxtrade = fxtrade || {};
-        fxtrade = (function () {
-            var init, fxrateInfoControl, fxrollingEvt, refreshTimer, refreshTimerClickEvt, progressPosSet, currencyChange;
+        var fxtabIdx = $('.tab__type--small .tab__panel.is-active').index();
+        var fxtimer;
+        var rollingState = false;
+        var fxData = { // 더미데이터 세팅
+            buying: { before: '1,210.50', after: '1,195.30' }, // before : 고시환율, after : 스프레드 적용환율
+            selling: { before: '1,190.50', after: '1,201.23' }
+        }
 
-            var fxData = { // 더미데이터 세팅
-                buying: { before: '1,210.50', after: '1,195.30' }, // before : 고시환율, after : 스프레드 적용환율
-                selling: { before: '1,190.50', after: '1,201.23' }
+        function fxrateInfoControl() { // 환율정보 2초 후 닫힘
+            setTimeout(function () {
+                $('.fx-rateinfo .white-box__header').attr('data-element', 'toggle__anchor');
+                $("[data-element=toggle]").toggle();
+            }, 3000)
+        }
+
+        function refreshTimer() { // 갱신타이머
+            var timeSec = 30;
+            var timeFunc = function () {
+                $('.fx-refresh__txt--sec').text(timeSec);
+                if (timeSec === 0) {
+                    clearInterval(fxtimer);
+                } else {
+                    timeSec--;
+                }
             }
+            fxtimer = setInterval(timeFunc, 1000);
+        }
 
-            // 전역변수 세팅
-            var fxtabIdx = $('.tab__type--small .tab__panel.is-active').index();
-            var fxtimer;
-            var rollingState = false;
-
-            init = function () {
-                fxrateInfoControl();
-                fxrollingEvt.init();
+        function refreshTimerClickEvt() { // 갱신버튼 클릭시
+            $('.fx-refresh .button-refresh').on('click', function () {
+                clearInterval(fxtimer);
                 refreshTimer();
-                refreshTimerClickEvt();
-                currencyChange();
-                progressPosSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
-            }
-
-            fxrateInfoControl = function () {
-                $('.fx-rateinfo .white-box__header').trigger('click');
-                setTimeout(function () {
-                    $('.fx-rateinfo .white-box__header').trigger('click');
-                }, 2000)
-            }
-
-            fxrollingEvt = {
-                dataPush: function () {
-                    var delbuying = $('.tab__panel--buy .fx-rate__item--del');
-                    var sellbuying = $('.tab__panel--sell .fx-rate__item--del');
-                    var insbuying = $('.tab__panel--buy .fx-rate__item--ins');
-                    var insselling = $('.tab__panel--sell .fx-rate__item--ins');
-                    switch (fxtabIdx) {
-                        case 0:
-                            delbuying.text(fxData.buying.before);
-                            fxrollingEvt.rolling(insbuying, fxData.buying.before, fxData.buying.after);
-                            break;
-                        case 1:
-                            sellbuying.text(fxData.selling.before);
-                            fxrollingEvt.rolling(insselling, fxData.selling.before, fxData.selling.after);
-                            break;
-                    }
-                },
-                rolling: function (target, before, after) { // 대상(팔래요or살래요), 고시환율, 스프레드적용환율
-                    target.text(before).numberAnimate();
-                    setTimeout(function () {
-                        target.numberAnimate('set', after);
-                        setTimeout(function () {
-                            rollingState = true;
-                        }, 500)
-                    }, 1000)
-                },
-                fxTabControl: function () {
-                    $('.tab__type--small .tab-wrap__button').on('click', function (e) {
-                        fxtabIdx = $(this).parent('.tab-wrap__item').index();
-                        
-                        $('.tab__type--small .tab-wrap__button').removeClass('is-active');
-                        $(this).addClass('is-active');
-                        $('.tab__type--small').find('.tab__panel').removeClass('is-active');
-                        $('.tab__type--small').find('.tab__panel').eq(fxtabIdx).addClass('is-active');
-
-                        clearInterval(fxtimer);
-                        refreshTimer();
-                        fxrollingEvt.dataSet();
-                        fxrollingEvt.dataPush();
-                        
-                    })
-                },
-                dataSet: function () {
-                    $('.fx-rate__item--ins').numberAnimate('destroy').empty();
-                    // 리프레시 데이터 새로 불러와서 세팅
-                    fxData.buying.before = '1,210.50';
-                    fxData.buying.after = '1,195.30';
-                    fxData.selling.before = '1,190.50';
-                    fxData.selling.after = '1,201.23';
-                },
-                init: function () {
+                if (rollingState) {
+                    fxrollingEvt.dataSet();
                     fxrollingEvt.dataPush();
-                    fxrollingEvt.fxTabControl();
+                    rollingState = false;
                 }
-            }
-
-            refreshTimer = function () { // 갱신타이머
-                var timeSec = 30;
-                var timeFunc = function () {
-                    $('.fx-refresh__txt--sec').text(timeSec);
-                    if (timeSec === 0) {
-                        clearInterval(fxtimer);
-                    } else {
-                        timeSec--;
-                    }
+            })
+        }
+        
+        var fxrollingEvt = { // 숫자롤링이벤트
+            dataPush: function () {
+                var delbuying = $('.tab__panel--buy .fx-rate__item--del');
+                var sellbuying = $('.tab__panel--sell .fx-rate__item--del');
+                var insbuying = $('.tab__panel--buy .fx-rate__item--ins');
+                var insselling = $('.tab__panel--sell .fx-rate__item--ins');
+                switch (fxtabIdx) {
+                    case 0:
+                        delbuying.text(fxData.buying.before);
+                        fxrollingEvt.rolling(insbuying, fxData.buying.before, fxData.buying.after);
+                        break;
+                    case 1:
+                        sellbuying.text(fxData.selling.before);
+                        fxrollingEvt.rolling(insselling, fxData.selling.before, fxData.selling.after);
+                        break;
                 }
-                fxtimer = setInterval(timeFunc, 1000);
-            }
+            },
+            rolling: function (target, before, after) { // 대상(팔래요or살래요), 고시환율, 스프레드적용환율
+                target.text(before).numberAnimate();
+                setTimeout(function () {
+                    target.numberAnimate('set', after);
+                    setTimeout(function () {
+                        rollingState = true;
+                    }, 500)
+                }, 1000)
+            },
+            fxTabControl: function () {
+                $('.tab__type--small .tab-wrap__button').on('click', function (e) {
+                    fxtabIdx = $(this).parent('.tab-wrap__item').index();
 
-            refreshTimerClickEvt = function () { // 갱신버튼 클릭시
-                $('.fx-refresh .button-refresh').on('click', function () {
+                    $('.tab__type--small .tab-wrap__button').removeClass('is-active');
+                    $(this).addClass('is-active');
+                    $('.tab__type--small').find('.tab__panel').removeClass('is-active');
+                    $('.tab__type--small').find('.tab__panel').eq(fxtabIdx).addClass('is-active');
                     clearInterval(fxtimer);
                     refreshTimer();
-                    if (rollingState) {
-                        fxrollingEvt.dataSet();
-                        fxrollingEvt.dataPush();
-                        rollingState = false;
-                    }
+                    fxrollingEvt.dataSet();
+                    fxrollingEvt.dataPush();
+                    
                 })
+            },
+            dataSet: function () {
+                $('.fx-rate__item--ins').numberAnimate('destroy').empty();
+                // 리프레시 데이터 새로 불러와서 세팅
+                fxData.buying.before = '1,210.50';
+                fxData.buying.after = '1,195.30';
+                fxData.selling.before = '1,190.50';
+                fxData.selling.after = '1,201.23';
+            },
+            init: function () {
+                fxrollingEvt.dataPush();
+                fxrollingEvt.fxTabControl();
+            }
+        }
+
+        function progressPosSet(el, per) { // 말풍선 위치 및 색상 제어함수
+            if (per <= 7) {
+                el.addClass('progress__bar--min');
+            } else if (per >= 91) {
+                el.addClass('progress__bar--max');
             }
 
-            progressPosSet = function (el, per) {
-                // 말풍선 꼬리위치제어
-                if (per <= 7) {
-                    el.addClass('progress__bar--min');
-                } else if (per >= 91) {
-                    el.addClass('progress__bar--max');
+            if (per > 50) {
+                el.addClass('progress__bar--over');
+            } else if (per == 50) {
+                el.addClass('progress__bar--average');
+            }
+            el.css('width', per + '%');
+        }
+
+        function currencyChange() { // 원하는 금액 폼제어
+            $('.fx-exchange .checkbox-wrap__check').on('change', function () {
+                if ($(this).prop('checked')) {
+                    $('[data-input-section="check-section-1"]').hide();
+                    $('[data-input-section="check-section-2"]').show();
+                } else {
+                    $('[data-input-section="check-section-1"]').show();
+                    $('[data-input-section="check-section-2"]').hide();
                 }
+            })
+        }
 
-                // 말풍선 색상제어
-                if (per > 50) {
-                    el.addClass('progress__bar--over');
-                } else if (per == 50) {
-                    el.addClass('progress__bar--average');
-                }
-                el.css('width', per + '%');
-            }
-
-            currencyChange = function () { // 원하는 금액 폼제어
-                $('.fx-exchange .checkbox-wrap__check').on('change', function () {
-                    if ($(this).prop('checked')) {
-                        $('[data-input-section="check-section-1"]').hide();
-                        $('[data-input-section="check-section-2"]').show();
-                    } else {
-                        $('[data-input-section="check-section-1"]').show();
-                        $('[data-input-section="check-section-2"]').hide();
-                    }
-                })
-            }
-
-            return {
-                init: init
-            }
-        })();
-
-        $(function () {
-            fxtrade.init();
+        function fxtradeInit(){
+            fxrateInfoControl();
+            refreshTimer();
+            refreshTimerClickEvt();
+            progressPosSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
+            fxrollingEvt.init();
+            currencyChange();
+        }
+        
+        $(function(){
+            fxtradeInit();
         })
+        
     </script>
 </body>
 
