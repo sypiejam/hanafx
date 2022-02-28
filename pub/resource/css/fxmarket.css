@@ -17,12 +17,15 @@
 [class^='fx-join-step'].active {height:auto;margin-top:2.5rem;opacity:1;}
 .fx-nickname .input .button-square-small {position:absolute;top:50%;right:0;margin-top:-0.938rem;z-index:2;}
 .fx-nickname .input__error {position:absolute;width:calc(100% - 2.188rem);}
+.fx-nickname .input__find-button {color:#757575;}
+.fx-nickname .input.input--on .input__find-button {color:#009591;}
 .fx-account {margin-top:1.875rem;}
 .fx-account__word {padding-left:2.1875rem;}
 .fxmarket .fx-limit {margin-top:1.5rem;}
 .fx-limit .input-wrap {margin:0;}
 .fx-limit .input {width:40%;margin-left:0;}
 .fx-limit .input__title {width:4.375rem;font-size:1.125rem;}
+.fx-limit .input__element {font-size:1.188rem !important;}
 .fx-limit .input__text {font-size:1.125rem;}
 
 /* fx거래 */
@@ -139,10 +142,15 @@
 .list-wrap__box--label .label-box {border-radius:0.125rem;}
 .list-wrap__box--label .label-box--blue {border-color:#4b97f6;color:#4b97f6;}
 .list-wrap__box--label .label-box--gray {border-color:#ccc;color:#a5a5a5;}
-.fx-historylist .border-list__item {padding:0.938rem 1.5rem;border-top:0;}
+.fx-searchlist .white-box__arrow-button {margin-top:0.188rem;}
+.fx-searchlist .text-guide-sub {font-weight:400;}
+.fx-historylist .border-list__item {padding:0;border-top:0;}
 .fx-historylist .border-list__item + .border-list__item {border-top:1px solid #e7e9ee;}
+.fx-historylist .list-list__anchor {display:block;padding:0.938rem 1.5rem;}
 .fx-historylist .list-wrap {width:100%;margin-top:-0.188rem;padding:0;}
 .fx-historylist .list-wrap__item {padding:0;}
+.fx-historylist .list-wrap__title {color:#000;}
+.fx-historylist .list-wrap__title + .list-wrap__title {margin-top:0;color:#666;}
 .fx-historylist .icon-na {margin-top:-0.063rem;margin-right:0.625rem;}
 .fx-applyrate .input--maxw {max-width:3.750rem !important;}
 .fx-currency {margin-top: 0.875rem !important;}
