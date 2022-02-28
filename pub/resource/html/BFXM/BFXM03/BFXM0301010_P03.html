@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <div class="content">
+        <div class="container">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0301010_P03" aria-controls="#BFXM0301010_P03">환율 선택</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="BFXM0301010_P03" class="modal modal--slide" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">환율 선택</h1>
+            </div>
+            <div class="modal__contents--narrow modal__contents--fx">
+                <div class="fx-rate__select" data-input-selector="radio">
+                    <h2 class="offscreen">즉시거래</h2>
+                    <ul class="check-full">
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type1" class="check-full__input" checked>
+                                <label for="type1" class="check-full__label">
+                                    <span class="check-full__label--txt">현재 환율로 즉시 사기</span>
+                                    <strong class="block">1,205.50</strong>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <h2 class="offscreen">지정/예약거래</h2>
+                    <ul class="check-full">
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type2_1" class="check-full__input">
+                                <label for="type2_1" class="check-full__label"><span>1,199.48</span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type2_2" class="check-full__input">
+                                <label for="type2_2" class="check-full__label"><span>1,193.45</span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type2_3" class="check-full__input">
+                                <label for="type2_3" class="check-full__label"><span>1,193.45</span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type2_4" class="check-full__input">
+                                <label for="type2_4" class="check-full__label"><span>1,193.45</span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type2_5" class="check-full__input">
+                                <label for="type2_5" class="check-full__label"><span>1,193.45</span></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type2_6" class="check-full__input" data-input-name="radio-1" data-input-target="radio-section-1">
+                                <label for="type2_6" class="check-full__label">직접입력</label>
+                            </div>
+                            <div class="check-full__item" data-input-labeledby="radio-1" data-input-section="radio-section-1" style="display:none;">
+                                <!-- * 오류시 class="input-wrap input-wrap--wide2 mgt90 input-wrap--error" -->
+                                <div class="input-wrap input-wrap--wide2 mgt90"> 
+                                    <div class="input">
+                                        <div class="input__inner">
+                                            <input type="text" class="input__element" title="예약환율 입력" placeholder="예약환율 입력">
+                                            <label class="input__label" aria-hidden="true">예약환율</label>
+                                            <button type="button" class="input__remove-button" title="텍스트삭제"></button>
+                                        </div>
+                                    </div>
+                                    <i class="input__optional pdt60">&middot;</i>
+                                    <div class="input">
+                                        <div class="input__inner">
+                                            <input type="text" class="input__element input__no-label" title="금액 소수점 입력" value="">
+                                        </div>
+                                    </div>
+                                    <i class="input__unit">이하</i>
+                                </div>
+                                <p class="input-wrap__error align-right" aria-live="assertive">현재 환율의 +-5% 이내</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h2 class="offscreen">마거래</h2>
+                    <ul class="check-full">
+                        <li>
+                            <div class="check-full__item">
+                                <input type="radio" name="type1" id="type3" class="check-full__input">
+                                <label for="type3" class="check-full__label">
+                                    <div class="tooltip" data-tooltip="paragraph">
+                                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="오늘 시장평균환율 상세"></button>
+                                        <!-- 툴팁 레이어 -->
+                                        <div class="tooltip__panel" data-tooltip-panel="false">
+                                            <div class="tooltip__column">
+                                                <p class="tooltip__description" data-tooltip="focus">매일 08:30 ~ 09:00에 신청 가능하며, 신청 시 예약일 16시 고시되는 시장평균환율로 거래가 진행됩니다.</p>
+                                            </div>
+                                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                                        </div>
+                                        <!-- //툴팁 레이어 -->
+                                    </div> <span>오늘 시장평균환율로 사기</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal__button-wrap"></div>
+            </div>
+            <div class="button-fixed">
+                <div class="button-wrap">
+                    <button type="button" class="button button--positive">확인</button>
+                </div>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
