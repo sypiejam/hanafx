@@ -84,6 +84,11 @@
                                 </div>
                             </li>
                         </ul>
+                        <div class="fx-refresh fx-refresh__modal">
+                            <div class="fx-refresh__txt">
+                                <em class="fx-refresh__txt--sec">30</em>초 후 환율정보 갱신<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,5 +109,29 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script>
+    // 환율정보 갱신
+    $(function(){
+        var fxtimer;
+        function refreshTimer() {
+            var timeSec = 30;
+            var timeFunc = function(){
+                $('.fx-refresh__txt--sec').text(timeSec);
+                if (timeSec === 0) {
+                    clearInterval(fxtimer);
+                } else {
+                    timeSec--;
+                }
+            }
+            fxtimer = setInterval(timeFunc, 1000);
+        }
+        refreshTimer();
+
+        $('.fx-refresh .button-refresh').on('click', function () {
+            clearInterval(fxtimer);
+            refreshTimer();
+        })
+    })
+</script>
 </body>
 </html>
