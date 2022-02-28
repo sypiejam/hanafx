@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="fx-rateinfo">
                     <div class="white-box" data-element="toggle">
-                        <div class="white-box__header" aria-expanded="false" data-element="toggle__anchor">
+                        <div class="white-box__header is-active" aria-expanded="true">
                             <div class="list-wrap__item list-wrap__item--arrow">
                                 <div class="list-wrap__box">
                                     <strong class="title">환율정보</strong>
@@ -108,7 +108,7 @@
                                 <div class="list-wrap__box list-wrap__box--button"></div>
                             </div>
                         </div>
-                        <div class="white-box__content" data-element="toggle__panel">
+                        <div class="white-box__content" data-element="toggle__panel" style="display: block">
                             <!-- 
                                 to.개발 | 평균가보다 높을 때 :fx-compare__txt--high
                                           평균가보다 낮을 때 :fx-compare__txt--low
@@ -360,9 +360,9 @@
         }
 
         function fxrateInfoControl() { // 환율정보 2초 후 닫힘
-            $('.fx-rateinfo .white-box__header').trigger('click');
             setTimeout(function () {
-                $('.fx-rateinfo .white-box__header').trigger('click');
+                $('.fx-rateinfo .white-box__header').attr('data-element', 'toggle__anchor');
+                $("[data-element=toggle]").toggle();
             }, 3000)
         }
 
@@ -459,6 +459,7 @@
                 el.addClass('progress__bar--average');
             }
             el.css('width', per + '%');
+            fxrateInfoControl();
         }
 
         function currencyChange() { // 원하는 금액 폼제어
@@ -474,7 +475,6 @@
         }
 
         function fxtradeInit(){
-            fxrateInfoControl();
             refreshTimer();
             refreshTimerClickEvt();
             progressPosSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
