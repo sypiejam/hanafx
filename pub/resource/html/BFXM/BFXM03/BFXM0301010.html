@@ -64,7 +64,7 @@
                                     </li>
                                     <li class="fx-rate__item">
                                         <span class="offscreen">적용환율</span>
-                                        <ins class="fx-rate__item--ins">1205.50</ins>
+                                        <ins class="fx-rate__item--ins">1195.30</ins>
                                     </li>
                                 </ul>
                             </div>
@@ -77,7 +77,7 @@
                                     </li>
                                     <li class="fx-rate__item">
                                         <span class="offscreen">적용환율</span>
-                                        <ins class="fx-rate__item--ins">1195.50</ins>
+                                        <ins class="fx-rate__item--ins">1198.42</ins>
                                     </li>
                                 </ul>
                             </div>
@@ -356,8 +356,8 @@
             var init, fxrateInfoControl, fxrollingEvt, refreshTimer, refreshTimerClickEvt, progressPosSet, currencyChange;
 
             var fxData = { // 더미데이터 세팅
-                buying: { before: '1,210.50', after: '1,205.50' }, // before : 고시환율, after : 스프레드 적용환율
-                selling: { before: '1,190.50', after: '1,195.50' }
+                buying: { before: '1,210.50', after: '1195.30' }, // before : 고시환율, after : 스프레드 적용환율
+                selling: { before: '1,190.50', after: '1198.42' }
             }
 
             // 전역변수 세팅
@@ -371,7 +371,7 @@
                 refreshTimer();
                 refreshTimerClickEvt();
                 currencyChange();
-                progressPosSet($('.fx-progress .progress__bar'), 3); // 대상, 위치값 (0~ 100%)
+                progressPosSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
             }
 
             fxrateInfoControl = function () {
@@ -420,9 +420,9 @@
                     $('.fx-rate__item--ins').numberAnimate('destroy').empty();
                     // 리프레시 데이터 새로 불러와서 세팅
                     fxData.buying.before = '1,210.50';
-                    fxData.buying.after = '1,205.50';
+                    fxData.buying.after = '1195.30';
                     fxData.selling.before = '1,190.50';
-                    fxData.selling.after = '1,195.50';
+                    fxData.selling.after = '1198.42';
                 },
                 init: function () {
                     fxrollingEvt.dataPush();
