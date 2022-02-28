@@ -142,8 +142,11 @@
 .list-wrap__box--label .label-box {border-radius:0.125rem;}
 .list-wrap__box--label .label-box--blue {border-color:#4b97f6;color:#4b97f6;}
 .list-wrap__box--label .label-box--gray {border-color:#ccc;color:#a5a5a5;}
-.fx-historylist .border-list__item {padding:0.938rem 1.5rem;border-top:0;}
+.fx-searchlist .white-box__arrow-button {margin-top:0.188rem;}
+.fx-searchlist .text-guide-sub {font-weight:400;}
+.fx-historylist .border-list__item {padding:0;border-top:0;}
 .fx-historylist .border-list__item + .border-list__item {border-top:1px solid #e7e9ee;}
+.fx-historylist .list-list__anchor {display:block;padding:0.938rem 1.5rem;}
 .fx-historylist .list-wrap {width:100%;margin-top:-0.188rem;padding:0;}
 .fx-historylist .list-wrap__item {padding:0;}
 .fx-historylist .icon-na {margin-top:-0.063rem;margin-right:0.625rem;}
