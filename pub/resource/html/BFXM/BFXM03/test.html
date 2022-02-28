@@ -51,6 +51,7 @@
         .fx-rateinfo .white-box__content {padding:0;border:0;}
 
         .fx-compare {display:flex;align-items:center;justify-content:space-between;}
+        .fx-compare .fx-period {margin-right:0.25rem}
         .fx-compare .fx-compare__txt {display:flex;align-items:center;font-size:0.813rem;font-weight:500;color:#000;line-height:1;}
         .fx-compare__txt--high {font-size:1.25rem;color:#f4466a;}
         .fx-compare__txt--low {font-size:1.25rem;color:#2396e7;}
@@ -464,7 +465,7 @@
                 refreshTimer();
                 refreshTimerClickEvt();
                 currencyChange();
-                progressposSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
+                progressposSet($('.fx-progress .progress__bar'), 3); // 대상, 위치값 (0~ 100%)
             }
 
             fxrateInfoControl = function(){
