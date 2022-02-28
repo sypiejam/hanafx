@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">FX거래내역조회</h1>
+        <!-- <button class="app-header__button app-header__button--home" title="메인 화면"></button> -->
+        <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+    </div>
+    <!-- //header -->
+
+    <!-- Content -->
+    <div id="content" class="app-main fxmarket">
+        <div class="container">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0502010_P02">거래변경확인</button>
+            </div>
+        </div>
+        <div id="BFXM0502010_P02" class="modal modal--slide" data-element="modal__element">
+            <div class="modal__container modal__container--interval"
+                data-element="modal__element-container">
+                <div class="modal__header modal__header--visible">
+                    <p class="modal__header--title"><span class="fw-500">살래요 &middot; 예약거래</span>를<br> 변경 하시겠습니까?</p>
+                </div>
+                <div class="modal__contents modal__contents--modi">
+                    <div class="list-section">
+                        <ul class="list-wrap">
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title">통화</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text eng">USD</strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title">신청환율</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text eng">1,205.70</strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title">외화금액</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text eng">USD <em>500,000</em></strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title">예약기간</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text eng">2022-03-04 ~ 2022-04-03</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button-fixed">
+                    <div class="button-wrap">
+                        <button type="button" class="button button--negative button--span3" data-element="modal__close">취소</button>
+                        <button type="button" class="button button--positive" data-element="modal__close">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+                    </div>
+                </div>
+                <button type="button" class="modal__btn--close" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+    </div>
+    <!-- //Content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+    </div>
+    <!-- //footer -->
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
