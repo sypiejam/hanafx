@@ -15,110 +15,110 @@
     <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
     <style>
         .fxmarket__pull {padding-top:3.5rem;padding-top:calc(3.5rem + constant(safe-area-inset-top));padding-top:calc(3.5rem + env(safe-area-inset-top));}
-        .fx-rateboard {position:relative;min-height:15.25rem;padding:1rem 1.5rem 0}
-        .fx-rateboard .button-alert {width:auto;height:3rem;margin:0;padding:0;font-size:0.813rem;color:#fff}
+        .fx-rateboard {position:relative;min-height:15.25rem;padding:1rem 1.5rem 0;}
+        .fx-rateboard .button-alert {width:auto;height:3rem;margin:0;padding:0;font-size:0.813rem;color:#fff;}
         .fx-rateboard .button-alert .icon-moon {display:inline-block;width:0.5rem;height:0.563rem;margin-right:0.3rem;background:url(../../../images/fxmarket/icon_moon.png) no-repeat 0 0 / 100%;}
         .fx-rateboard .button-select__flex {z-index:10;position:relative;display:flex;justify-content:space-between;}
         .fx-rateboard .button-select__item {width:auto;height:3rem;padding:0 2.5rem 0 0;font-size:1rem;font-weight:400;border:0;background-color:inherit;color:#000;line-height:1.4;}
         
-        .tab__type--small {margin-top:0.313rem}
-        .tab__type--small .tab-wrap__menu:before {content:none}
+        .tab__type--small {margin-top:0.313rem;}
+        .tab__type--small .tab-wrap__menu:before {content:none;}
         .tab__type--small .tab-wrap__item {width:auto;border-radius:0.438rem;}
-        .tab__type--small .tab-wrap__item ~ .tab-wrap__item {margin-left:-0.313rem}
+        .tab__type--small .tab-wrap__item ~ .tab-wrap__item {margin-left:-0.313rem;}
         .tab__type--small .tab-wrap__button {z-index:10;padding:0.375rem 1.313rem;border-radius:0.313rem;background:#666;color:#b4b4b4;line-height:1;}
-        .tab__type--small .tab-wrap__button.is-active {z-index:20;background:#fff;color:#333!important}
-        .tab__type--small .tab-wrap__button.is-active:before {content:none}
-        .tab__type--small .tab-wrap__button.is-active:after {z-index:0;content:'';background:#fff}
-        .tab__type--small .tab-content {position:absolute;top:0;right:0;bottom:0;left:0}
-        .tab__type--small .tab__panel {height:100%;padding:7.5rem 2.125rem 0}
-        .tab__type--small .tab__panel--buy {background:#f0d4b4 url(../../../images/fxmarket/img_fxtrade_buy.png) no-repeat calc(100% - 1.5rem) 100% / 9.625rem}
-        .tab__type--small .tab__panel--sell {background:#c1e2eb url(../../../images/fxmarket/img_fxtrade_sell.png) no-repeat calc(100% - 1.5rem) 100% / 9.625rem}
+        .tab__type--small .tab-wrap__button.is-active {z-index:20;background:#fff;color:#333!important;}
+        .tab__type--small .tab-wrap__button.is-active:before {content:none;}
+        .tab__type--small .tab-wrap__button.is-active:after {z-index:0;content:'';background:#fff;}
+        .tab__type--small .tab-content {position:absolute;top:0;right:0;bottom:0;left:0;}
+        .tab__type--small .tab__panel {height:100%;padding:7.5rem 2.125rem 0;}
+        .tab__type--small .tab__panel--buy {background:#f0d4b4 url(../../../images/fxmarket/img_fxtrade_buy.png) no-repeat calc(100% - 1.5rem) 100% / 9.625rem;}
+        .tab__type--small .tab__panel--sell {background:#c1e2eb url(../../../images/fxmarket/img_fxtrade_sell.png) no-repeat calc(100% - 1.5rem) 100% / 9.625rem;}
 
         .fx-rate__item--del {font-size:1rem;color:#61605c;}
-        .fx-rate__item--ins {font-size:1.5rem;font-weight:500;text-decoration:none;color:#000;line-height:1.25}
+        .fx-rate__item--ins {font-size:1.5rem;font-weight:500;text-decoration:none;color:#000;line-height:1.25;}
         
         .fx-rateboard .fx-refresh {position:absolute;top:4.6rem;right:1.5rem;}
-        .fx-refresh .fx-refresh__txt {font-size:0.875rem;color:#555}
+        .fx-refresh .fx-refresh__txt {font-size:0.875rem;color:#555;}
 
         .fx-rateboard .fx-spread {position:absolute;bottom:2rem;left:2.215rem;font-size:0.813rem;}
-        .fx-spread__grade {display:inline-block;padding-left:1.125rem;font-weight:500}
-        .fx-spread__grade--type01 {background:url(../../../images/fxmarket/icon_spread_grade01.png) no-repeat 0 50% / 0.688rem}
+        .fx-spread__grade {display:inline-block;padding-left:1.125rem;font-weight:500;}
+        .fx-spread__grade--type01 {background:url(../../../images/fxmarket/icon_spread_grade01.png) no-repeat 0 50% / 0.688rem;}
 
-        .icon__moon-yellow {display:block;width:2.5rem;height:3rem;margin:0 auto 1rem;background:url(../../../images/fxmarket/icon_moon_yellow.png) no-repeat 0 0 / 100%}
+        .icon__moon-yellow {display:block;width:2.5rem;height:3rem;margin:0 auto 1rem;background:url(../../../images/fxmarket/icon_moon_yellow.png) no-repeat 0 0 / 100%;}
 
         .fx-rateinfo .white-box {border:0;border-radius:initial;background:transparent;}
-        .fx-rateinfo .white-box__header {padding:0.75rem 0 0.5rem}
-        .fx-rateinfo .white-box__content {padding:0;border:0}
+        .fx-rateinfo .white-box__header {padding:0.75rem 0 0.5rem;}
+        .fx-rateinfo .white-box__content {padding:0;border:0;}
 
-        .fx-compare {display:flex;align-items:center;justify-content:space-between}
+        .fx-compare {display:flex;align-items:center;justify-content:space-between;}
         .fx-compare .fx-compare__txt {display:flex;align-items:center;font-size:0.813rem;font-weight:500;color:#000;line-height:1;}
         .fx-compare__txt--high {font-size:1.25rem;color:#f4466a;}
-        .fx-compare__txt--low {font-size:1.25rem;color:#2396e7}
-        .fx-compare__txt--same {font-size:1.25rem;color:#666}
+        .fx-compare__txt--low {font-size:1.25rem;color:#2396e7;}
+        .fx-compare__txt--same {font-size:1.25rem;color:#666;}
 
-        .fx-progress {margin-top:4.063rem}
-        .fx-progress .progress__bg {overflow:visible;position:relative;display:block;width:100%;height:0.625rem;margin-top:0;background:linear-gradient(90deg, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent 50%);background-size:calc((100% - 1px) / 2) 100%;border-radius:initial}
-        .fx-progress .progress__bg:after {content:'';position:absolute;top:0;right:0;bottom:0;left:0;height:0.125rem;margin:auto;background:#dbdbdb}
-        .fx-progress .progress__bar {overflow:visible;position:relative;height:100%;margin:0;padding-left:0.6rem;background:none;border-radius:initial;text-align:right}
-        .fx-progress .progress__bar:after {content:'◀';z-index:10;position:absolute;right:0;font-size:0.2rem;color:#55b8fd;line-height:1}
-        .fx-progress .progress__text-wrap {display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;margin-top:0.563rem}
-        .fx-progress .progress__tooltip--text {display:block;font-size:0.75rem;color:#138fe5;line-height:1.2}
-        .fx-progress .progress__tooltip--value {display:block;font-size:0.875rem;font-weight:500;color:#138fe5;line-height:1.3}
-        .fx-progress .progress__item {padding-bottom:0}
-        .fx-progress .progress__text {display:block;font-size:0.75rem}
-        .fx-progress .progress__item--left .progress__text {color:#168bdc;text-align:left}
-        .fx-progress .progress__item--center .progress__text {color:#000;text-align:center}
-        .fx-progress .progress__item--center .progress__rate {color:#757575}
-        .fx-progress .progress__item--right .progress__text {color:#f4466a;text-align:right}
-        .fx-progress .progress__tooltip {position:absolute;top:-3.5rem;display:inline-block;width:4.563rem;margin-left:-2.5rem;padding:.375rem 0;border:1px solid #83c9f0;border-radius:0.313rem;text-align:center}
-        .fx-progress .progress__tooltip:before {content:'';position:absolute;bottom:-0.5rem;left:50%;width:0.625rem;height:0.5rem;margin-left:-0.3125rem;background:url(../../../images/fxmarket/bg_bulloon_tail.png) no-repeat 0 0 / 100%}
+        .fx-progress {margin-top:4.063rem;}
+        .fx-progress .progress__bg {overflow:visible;position:relative;display:block;width:100%;height:0.625rem;margin-top:0;background:linear-gradient(90deg, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent 50%);background-size:calc((100% - 1px) / 2) 100%;border-radius:initial;}
+        .fx-progress .progress__bg:after {content:'';position:absolute;top:0;right:0;bottom:0;left:0;height:0.125rem;margin:auto;background:#dbdbdb;}
+        .fx-progress .progress__bar {overflow:visible;position:relative;height:100%;margin:0;padding-left:0.6rem;background:none;border-radius:initial;text-align:right;}
+        .fx-progress .progress__bar:after {content:'';z-index:10;position:absolute;right:0;width:0.375rem;height:0.5rem;background:url(../../../images/fxmarket/bg_process_low.png) no-repeat 0 0 / 100%;line-height:1;}
+        .fx-progress .progress__text-wrap {display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;margin-top:0.563rem;}
+        .fx-progress .progress__tooltip--text {display:block;font-size:0.75rem;color:#138fe5;line-height:1.2;}
+        .fx-progress .progress__tooltip--value {display:block;font-size:0.875rem;font-weight:500;color:#138fe5;line-height:1.3;}
+        .fx-progress .progress__item {padding-bottom:0;}
+        .fx-progress .progress__text {display:block;font-size:0.75rem;}
+        .fx-progress .progress__item--left .progress__text {color:#168bdc;text-align:left;}
+        .fx-progress .progress__item--center .progress__text {color:#000;text-align:center;}
+        .fx-progress .progress__item--center .progress__rate {color:#757575;}
+        .fx-progress .progress__item--right .progress__text {color:#f4466a;text-align:right;}
+        .fx-progress .progress__tooltip {position:absolute;top:-3.5rem;display:inline-block;width:4.563rem;margin-left:-2.5rem;padding:.375rem 0;border:1px solid #83c9f0;border-radius:0.313rem;text-align:center;}
+        .fx-progress .progress__tooltip:before {content:'';position:absolute;bottom:-0.5rem;left:50%;width:0.625rem;height:0.5rem;margin-left:-0.3125rem;background:url(../../../images/fxmarket/bg_bulloon_tail.png) no-repeat 0 0 / 100%;}
         .progress__bar--average .progress__tooltip {margin-left:-2.3rem;border-color:#ccc;}
-        .progress__bar--average .progress__tooltip--text {color:#666}
-        .progress__bar--average .progress__tooltip--value {color:#666}
-        .progress__bar--average .progress__tooltip:before {background:url(../../../images/fxmarket/bg_bulloon_tail_gray.png) no-repeat 0 0 / 100%}
-        .fx-progress .progress__bar--average:after {content:none}
-        .fx-progress .progress__bar--over:after {content:'▶';right:auto;color:#f4466a}
-        .progress__bar--over .progress__tooltip {margin-left:-2.1rem;border-color:#f08395}
-        .progress__bar--over .progress__tooltip:before {background:url(../../../images/fxmarket/bg_bulloon_tail_red.png) no-repeat 0 0 / 100%}
-        .progress__bar--over .progress__tooltip--text {color:#f4466a}
-        .progress__bar--over .progress__tooltip--value {color:#f4466a}
-        .fx-progress .progress__bar--max:after {right:1px}
+        .progress__bar--average .progress__tooltip--text {color:#666;}
+        .progress__bar--average .progress__tooltip--value {color:#666;}
+        .progress__bar--average .progress__tooltip:before {background:url(../../../images/fxmarket/bg_bulloon_tail_gray.png) no-repeat 0 0 / 100%;}
+        .fx-progress .progress__bar--average:after {content:none;}
+        .fx-progress .progress__bar--over:after {content:'';right:auto;background:url(../../../images/fxmarket/bg_process_high.png) no-repeat 0 0 / 100%;}
+        .progress__bar--over .progress__tooltip {margin-left:-2.1rem;border-color:#f08395;}
+        .progress__bar--over .progress__tooltip:before {background:url(../../../images/fxmarket/bg_bulloon_tail_red.png) no-repeat 0 0 / 100%;}
+        .progress__bar--over .progress__tooltip--text {color:#f4466a;}
+        .progress__bar--over .progress__tooltip--value {color:#f4466a;}
+        .fx-progress .progress__bar--max:after {right:1px;}
         .progress__bar--max .progress__tooltip {margin-left:0;left:auto;right:-0.6rem;}
-        .progress__bar--max .progress__tooltip:before {left:80%}
-        .progress__bar--min .progress__tooltip {margin-left:-1.1rem}
-        .progress__bar--min .progress__tooltip:before {left:20%}
+        .progress__bar--max .progress__tooltip:before {left:80%;}
+        .progress__bar--min .progress__tooltip {margin-left:-1.1rem;}
+        .progress__bar--min .progress__tooltip:before {left:20%;}
 
-        .fx-rate__graph {margin-top:1.688rem}
-        .fx-graph__control {display:flex;align-items:center;justify-content:space-between}
-        .fx-graph__control .select-button__item {height:2rem;font-size:0.875rem;color:#999;background:none}
-        .fx-graph__control .select-button__item:before {border:0}
-        .fx-graph__control .select-button__input:checked + .select-button__item {color:#138fe5}
-        .fx-graph__control .select-button__input:checked + .select-button__item:before {content:none}
+        .fx-rate__graph {margin-top:1.688rem;}
+        .fx-graph__control {display:flex;align-items:center;justify-content:space-between;}
+        .fx-graph__control .select-button__item {height:2rem;font-size:0.875rem;color:#999;background:none;}
+        .fx-graph__control .select-button__item:before {border:0;}
+        .fx-graph__control .select-button__input:checked + .select-button__item {color:#138fe5;}
+        .fx-graph__control .select-button__input:checked + .select-button__item:before {content:none;}
 
-        .button-select__edit .button-select__item {background:url(../../../images/C/icon_edit_gray.png) no-repeat calc(100% - 1.188rem) 50% / 0.75rem}
+        .button-select__edit .button-select__item {background:url(../../../images/C/icon_edit_gray.png) no-repeat calc(100% - 1.188rem) 50% / 0.75rem;}
 
-        .label-balloon .label-line__item {position:relative;padding:0.25rem 0.313rem;border-radius:.25rem .25rem 0 .25rem}
-        .label-balloon .label-line__item:after {content:'';position:absolute;right:-1px;bottom:-0.313rem;width:0.25rem;height:0.313rem}
-        .label-line__item--direct {border-color:#f64b6e;color:#f64b6e}
-        .label-line__item--direct:after {background:url(../../../images/fxmarket/bg_label_tail_red.png) no-repeat 0 0 / 100%}
-        .label-line__item--mar {border-color:#52c400;color:#81bb4c}
-        .label-line__item--mar:after {background:url(../../../images/fxmarket/bg_label_tail_green.png) no-repeat 0 0 / 100%}
-        .label-line__item--reserve {border-color:#ee9d46;color:#ee9d46}
-        .label-line__item--reserve:after {background:url(../../../images/fxmarket/bg_label_tail_yellow.png) no-repeat 0 0 / 100%}
+        .label-balloon .label-line__item {position:relative;padding:0.25rem 0.313rem;border-radius:.25rem .25rem 0 .25rem;}
+        .label-balloon .label-line__item:after {content:'';position:absolute;right:-1px;bottom:-0.313rem;width:0.25rem;height:0.313rem;}
+        .label-line__item--direct {border-color:#f64b6e;color:#f64b6e;}
+        .label-line__item--direct:after {background:url(../../../images/fxmarket/bg_label_tail_red.png) no-repeat 0 0 / 100%;}
+        .label-line__item--mar {border-color:#52c400;color:#81bb4c;}
+        .label-line__item--mar:after {background:url(../../../images/fxmarket/bg_label_tail_green.png) no-repeat 0 0 / 100%;}
+        .label-line__item--reserve {border-color:#ee9d46;color:#ee9d46;}
+        .label-line__item--reserve:after {background:url(../../../images/fxmarket/bg_label_tail_yellow.png) no-repeat 0 0 / 100%;}
 
-        .fx-exchange .checkbox-wrap {width:2.375rem;height:3.5rem}
-        .fx-exchange .checkbox-wrap__label {display:block;width:100%;padding-left:0;background:url(../../../images/fxmarket/btn_currency_switch.png) no-repeat 0 50% / 1.438rem}
+        .fx-exchange .checkbox-wrap {width:2.375rem;height:3.5rem;}
+        .fx-exchange .checkbox-wrap__label {display:block;width:100%;padding-left:0;background:url(../../../images/fxmarket/btn_currency_switch.png) no-repeat 0 50% / 1.438rem;}
         .fx-exchange .checkbox-wrap__label:before {content:none;}
-        .fx-exchange .input-wrap {align-items:flex-start;margin:0}
-        .fx-exchange .input-wrap .input {margin:0}
+        .fx-exchange .input-wrap {align-items:flex-start;margin:0;}
+        .fx-exchange .input-wrap .input {margin:0;}
         .fx-exchange .input__optional {width:0.75rem;padding-top:1rem;text-align:center;}
-        .fx-exchange .input__optional ~ .input {max-width:3.75rem}
+        .fx-exchange .input__optional ~ .input {max-width:3.75rem;}
 
-        .amount-list {position:relative;margin:3.563rem 0 0 0;padding:0.625rem 0 0 0;border-top:1px solid #f0f0f0}
-        .amount-list .list-wrap__title {font-size:0.875rem}
-        .amount-list .list-wrap__text--value {font-size:0.875rem;color:#666}
-        .checkbox-content .amount-list {position:absolute;left:1.5rem;right:1.5rem;margin:0.875rem 0 0 0;padding:0;border:0}
-        .checkbox-content .amount-list .list-wrap__title {font-size:1rem}
+        .amount-list {position:relative;margin:3.563rem 0 0 0;padding:0.625rem 0 0 0;border-top:1px solid #f0f0f0;}
+        .amount-list .list-wrap__title {font-size:0.875rem;}
+        .amount-list .list-wrap__text--value {font-size:0.875rem;color:#666;}
+        .checkbox-content .amount-list {position:absolute;left:1.5rem;right:1.5rem;margin:0.875rem 0 0 0;padding:0;border:0;}
+        .checkbox-content .amount-list .list-wrap__title {font-size:1rem;}
         .checkbox-content .amount-list .list-wrap__text--value {font-size:1rem;}
         .checkbox-content .amount-list .list-wrap__currency {margin-left:3.125rem;font-size:1rem;color:#666;}
     </style>
