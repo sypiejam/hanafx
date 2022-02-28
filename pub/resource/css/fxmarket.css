@@ -25,7 +25,6 @@
 .fx-limit .input__title {width:4.375rem;font-size:1.125rem;}
 .fx-limit .input__text {font-size:1.125rem;}
 
-
 /* fx거래 */
 .fxmarket__pull {padding-top:3.5rem;padding-top:calc(3.5rem + constant(safe-area-inset-top));padding-top:calc(3.5rem + env(safe-area-inset-top));}
 .fx-rateboard {position:relative;min-height:15.25rem;padding:1rem 1.5rem 0;}
@@ -50,6 +49,7 @@
 .fx-rate__item--ins {font-size:1.5rem;font-weight:500;text-decoration:none;color:#000;line-height:1.25;}
 .fx-rateboard .fx-refresh {position:absolute;top:4.6rem;right:1.5rem;}
 .fx-refresh .fx-refresh__txt {font-size:0.875rem;color:#555;}
+.fx-refresh__modal {margin-top:1.125rem;text-align:center;}
 .fx-rateboard .fx-spread {position:absolute;bottom:2rem;left:2.215rem;font-size:0.813rem;}
 .fx-spread__grade {display:inline-block;padding-left:1.125rem;font-weight:500;}
 .fx-spread__grade--type01 {background:url(../../resource/images/fxmarket/icon_spread_grade01.png) no-repeat 0 50% / 0.688rem;}
@@ -132,4 +132,4 @@
 .fx-rate__select .check-full__label {text-align:center;}
 .fx-rate__select .check-full__input:checked  + .check-full__label .check-full__label--txt {color:#000}
 .fx-rate__select .input__unit {min-width:3rem;font-size:1.125rem;color:#757575;text-align:center}
-.fx-rate__select .tooltip {top:-1px;padding-right:0.25rem;} 
+.fx-rate__select .tooltip {top:-1px;padding-right:0.25rem;}
