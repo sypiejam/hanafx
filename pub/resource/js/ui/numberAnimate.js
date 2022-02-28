@@ -58,7 +58,7 @@
         }, maxMSTillTransitionEnd + 100);
     };
     
-    var allChars = ', . - + 0 1 2 3 4 5 6 7 8 9';
+    var allChars = ', . 0 1 2 3 4 5 6 7 8 9';
 
     var checkValue = function (str) {
         for (var i = 0, len = str.length; i < len; i++) {
