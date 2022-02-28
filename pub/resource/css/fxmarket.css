@@ -100,7 +100,7 @@
 .fx-graph__control .select-button__item:before {border:0;}
 .fx-graph__control .select-button__input:checked + .select-button__item {color:#138fe5;}
 .fx-graph__control .select-button__input:checked + .select-button__item:before {content:none;}
-.button-select__edit .button-select__item {background:url(../../../images/C/icon_edit_gray.png) no-repeat calc(100% - 1.188rem) 50% / 0.75rem;}
+.button-select__edit .button-select__item {background:url(../../resource/images/C/icon_edit_gray.png) no-repeat calc(100% - 1.188rem) 50% / 0.75rem;}
 .label-balloon .label-line__item {position:relative;padding:0.25rem 0.313rem;border-radius:.25rem .25rem 0 .25rem;}
 .label-balloon .label-line__item:after {content:'';position:absolute;right:-1px;bottom:-0.313rem;width:0.25rem;height:0.313rem;}
 .label-line__item--direct {border-color:#f64b6e;color:#f64b6e;}
