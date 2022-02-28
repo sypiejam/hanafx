@@ -353,7 +353,7 @@
     <script>
         var fxtrade = fxtrade || {};
         fxtrade = (function () {
-            var init, fxrateInfoControl, fxrollingEvt, refreshTimer, progressposSet, currencyChange;
+            var init, fxrateInfoControl, fxrollingEvt, refreshTimer, refreshTimerClickEvt, progressPosSet, currencyChange;
 
             var fxData = { // 더미데이터 세팅
                 buying: { before: '1,210.50', after: '1,205.50' }, // before : 고시환율, after : 스프레드 적용환율
@@ -371,7 +371,7 @@
                 refreshTimer();
                 refreshTimerClickEvt();
                 currencyChange();
-                progressposSet($('.fx-progress .progress__bar'), 3); // 대상, 위치값 (0~ 100%)
+                progressPosSet($('.fx-progress .progress__bar'), 3); // 대상, 위치값 (0~ 100%)
             }
 
             fxrateInfoControl = function () {
@@ -455,7 +455,7 @@
                 })
             }
 
-            progressposSet = function (el, per) {
+            progressPosSet = function (el, per) {
                 // 말풍선 꼬리위치제어
                 if (per <= 7) {
                     el.addClass('progress__bar--min');
