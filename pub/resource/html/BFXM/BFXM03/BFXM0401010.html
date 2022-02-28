@@ -47,16 +47,16 @@
                         <div class="tab-wrap">
                             <ul class="tab-wrap__menu" role="tablist">
                                 <li class="tab-wrap__item" data-element="tab__list">
-                                    <a href="#" class="tab-wrap__button is-active" data-element="tab__anchor">살래요</a>
+                                    <a href="#" class="tab-wrap__button">살래요</a>
                                 </li>
                                 <li class="tab-wrap__item" data-element="tab__list">
-                                    <a href="#" class="tab-wrap__button" data-element="tab__anchor">팔래요</a>
+                                    <a href="#" class="tab-wrap__button is-active">팔래요</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="tab-content">
                             <!-- 살래요 탭 -->
-                            <div class="tab__panel tab__panel--buy is-active" data-element="tab__panel">
+                            <div class="tab__panel tab__panel--buy" data-element="tab__panel">
                                 <ul class="fx-rate__list">
                                     <li class="fx-rate__item">
                                         <span class="offscreen">고시환율</span>
@@ -69,7 +69,7 @@
                                 </ul>
                             </div>
                             <!-- 팔래요 탭 -->
-                            <div class="tab__panel tab__panel--sell" data-element="tab__panel">
+                            <div class="tab__panel tab__panel--sell is-active" data-element="tab__panel">
                                 <ul class="fx-rate__list">
                                     <li class="fx-rate__item">
                                         <span class="offscreen">고시환율</span>
@@ -116,9 +116,8 @@
                             -->
                             <div class="fx-compare">
                                 <p class="fx-compare__txt">
-                                    <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong
-                                        class="fx-compare__txt--high">높네요</strong>
-                                    <!-- <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong class="fx-compare__txt--low">낮네요</strong> -->
+                                    <!-- <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong class="fx-compare__txt--high">높네요</strong> -->
+                                    <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong class="fx-compare__txt--low">낮네요</strong>
                                     <!-- <span class="fx-period">현재 <span>52주</span> 평균가와</span> <strong class="fx-compare__txt--same">같네요</strong> -->
                                 </p>
                                 <span class="text-guide-xxsmall">*매매기준율 기준</span>
@@ -371,7 +370,7 @@
                 refreshTimer();
                 refreshTimerClickEvt();
                 currencyChange();
-                progressPosSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
+                progressPosSet($('.fx-progress .progress__bar'), 23); // 대상, 위치값 (0~ 100%)
             }
 
             fxrateInfoControl = function () {
@@ -410,7 +409,7 @@
                 fxTabControl: function () {
                     $('.tab__type--small .tab-wrap__button').on('click', function (e) {
                         fxtabIdx = $(this).parent('.tab-wrap__item').index();
-                        
+
                         $('.tab__type--small .tab-wrap__button').removeClass('is-active');
                         $(this).addClass('is-active');
                         $('.tab__type--small').find('.tab__panel').removeClass('is-active');
