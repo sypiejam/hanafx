@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="fx-rateinfo">
                     <div class="white-box" data-element="toggle">
-                        <div class="white-box__header is-active" aria-expanded="true">
+                        <div class="white-box__header" aria-expanded="false" data-element="toggle__anchor">
                             <div class="list-wrap__item list-wrap__item--arrow">
                                 <div class="list-wrap__box">
                                     <strong class="title">환율정보</strong>
@@ -108,7 +108,7 @@
                                 <div class="list-wrap__box list-wrap__box--button"></div>
                             </div>
                         </div>
-                        <div class="white-box__content" data-element="toggle__panel" style="display: block">
+                        <div class="white-box__content" data-element="toggle__panel">
                             <!-- 
                                 to.개발 | 평균가보다 높을 때 :fx-compare__txt--high
                                           평균가보다 낮을 때 :fx-compare__txt--low
@@ -350,18 +350,18 @@
     <script src="../../../../resource/js/ui/common.js"></script>
     <script src="../../../../resource/js/ui/numberAnimate.js"></script> <!-- Hana FX numberAnimate 추가 -->
     <script>
-        var fxtabIdx = $('.tab__type--small .tab__panel.is-active').index();
         var fxtimer;
         var rollingState = false;
+        var fxtabIdx = $('.tab__type--small .tab__panel.is-active').index();
         var fxData = { // 더미데이터 세팅
             buying: { before: '1,210.50', after: '1,195.30' }, // before : 고시환율, after : 스프레드 적용환율
             selling: { before: '1,190.50', after: '1,201.23' }
         }
 
         function fxrateInfoControl() { // 환율정보 2초 후 닫힘
+            $('.fx-rateinfo .white-box__header').trigger('click');
             setTimeout(function () {
-                $('.fx-rateinfo .white-box__header').attr('data-element', 'toggle__anchor');
-                $("[data-element=toggle]").toggle();
+                $('.fx-rateinfo .white-box__header').trigger('click');
             }, 3000)
         }
 
@@ -481,7 +481,7 @@
             currencyChange();
         }
         
-        $(function(){
+        $(window).on('load', function(){
             fxtradeInit();
         })
         
