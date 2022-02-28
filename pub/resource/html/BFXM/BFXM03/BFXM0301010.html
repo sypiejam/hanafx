@@ -14,6 +14,7 @@
     <!-- Hana FX market CSS -->
     <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 </head>
+
 <body>
     <div id="wrap" class="wrap">
         <!-- header -->
@@ -24,19 +25,21 @@
             <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
         </div>
         <!-- //header -->
-        
+
         <!-- content -->
         <div id="content" class="app-main fxmarket fxmarket__pull">
             <div class="container container--full">
                 <div class="fx-rateboard">
                     <div class="button-select__flex">
                         <!-- to.개발 | 통화선택 공통레이어팝업 호출 -->
-                        <button type="button" class="button button-select__item" data-element="modal__open" data-target="#" title="통화 선택">
+                        <button type="button" class="button button-select__item" data-element="modal__open"
+                            data-target="#" title="통화 선택">
                             <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i>
                             <span>USD</span>
                         </button>
                         <!-- to.개발 | 15:30분부터 익일 09시까지만 노출 / 제어클래스 blind -->
-                        <button type="button" class="button button-alert" data-element="modal__open" data-target="#aftermarket">
+                        <button type="button" class="button button-alert" data-element="modal__open"
+                            data-target="#aftermarket">
                             <i class="icon-moon" aria-hidden="true"></i><span>After Market</span>
                         </button>
                     </div>
@@ -88,11 +91,12 @@
                     </div>
                     <div class="fx-spread">
                         <!-- to.개발 | 등급미정 추후 작업예정 -->
-                        <em class="fx-spread__grade fx-spread__grade--type01">등급</em> 환율우대 스프레드 <em class="spread__rate">80%</em> 적용중
+                        <em class="fx-spread__grade fx-spread__grade--type01">등급</em> 환율우대 스프레드 <em
+                            class="spread__rate">80%</em> 적용중
                     </div>
                 </div>
             </div>
-            
+
             <div class="container">
                 <div class="fx-rateinfo">
                     <div class="white-box" data-element="toggle">
@@ -112,7 +116,8 @@
                             -->
                             <div class="fx-compare">
                                 <p class="fx-compare__txt">
-                                    <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong class="fx-compare__txt--high">높네요</strong>
+                                    <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong
+                                        class="fx-compare__txt--high">높네요</strong>
                                     <!-- <span class="fx-period">현재 <span>52주</span> 평균가보다</span> <strong class="fx-compare__txt--low">낮네요</strong> -->
                                     <!-- <span class="fx-period">현재 <span>52주</span> 평균가와</span> <strong class="fx-compare__txt--same">같네요</strong> -->
                                 </p>
@@ -144,7 +149,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div class="fx-rate__graph">
                                 <div style="height:9rem;background:#f0d4b4">
                                     그래프영역
@@ -159,7 +164,8 @@
                                         <label for="period02" class="select-button__item">1M</label>
                                     </div>
                                     <div class="select-button__box">
-                                        <input type="radio" id="period03" class="select-button__input" name="period" checked>
+                                        <input type="radio" id="period03" class="select-button__input" name="period"
+                                            checked>
                                         <label for="period03" class="select-button__item">3M</label>
                                     </div>
                                     <div class="select-button__box">
@@ -207,10 +213,11 @@
                         </div>
                         <div class="checkbox-content w100" data-input-section="check-section-1">
                             <!-- * 오류시 class="input-wrap input-wrap--error" -->
-                            <div class="input-wrap input-wrap--wide2"> 
+                            <div class="input-wrap input-wrap--wide2">
                                 <div class="input">
                                     <div class="input__inner">
-                                        <input type="text" class="input__element input__no-label input__element--right" title="환산금액입력" placeholder="금액입력" value="">
+                                        <input type="text" class="input__element input__no-label input__element--right"
+                                            title="환산금액입력" placeholder="금액입력" value="">
                                         <span class="input__label" aria-hidden="true">USD</span>
                                         <button type="button" class="input__remove-button" title="텍스트삭제"></button>
                                     </div>
@@ -218,11 +225,13 @@
                                 <i class="input__optional">&middot;</i>
                                 <div class="input">
                                     <div class="input__inner">
-                                        <input type="text" class="input__element input__no-label" title="금액 소수점 입력" value="">
+                                        <input type="text" class="input__element input__no-label" title="금액 소수점 입력"
+                                            value="">
                                     </div>
                                 </div>
                             </div>
-                            <p class="input-wrap__error align-right" aria-live="assertive">금액은 미국 달러(USD)기준<br>1불 이상 500,000불 이내로 입력하세요</p>
+                            <p class="input-wrap__error align-right" aria-live="assertive">금액은 미국 달러(USD)기준<br>1불 이상
+                                500,000불 이내로 입력하세요</p>
                             <div class="fx-balance">
                                 <div class="list-wrap__item">
                                     <div class="list-wrap__box list-wrap__flexbox">
@@ -230,20 +239,23 @@
                                         <span class="list-wrap__currency">KRW</span>
                                     </div>
                                     <div class="list-wrap__box list-wrap__box--unit">
-                                        <strong class="list-wrap__text list-wrap__text--value"><span>1,000,000</span></strong>
+                                        <strong
+                                            class="list-wrap__text list-wrap__text--value"><span>1,000,000</span></strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="checkbox-content w100" data-input-section="check-section-2" style="display:none;">
                             <!-- * 오류시 class="input input--error" -->
-                            <div class="input input--error"> 
+                            <div class="input input--error">
                                 <div class="input__inner">
-                                    <input type="text" class="input__element input__no-label input__element--right" title="환산금액입력" placeholder="금액입력">
+                                    <input type="text" class="input__element input__no-label input__element--right"
+                                        title="환산금액입력" placeholder="금액입력">
                                     <span class="input__label" aria-hidden="true">KRW</span>
                                     <button type="button" class="input__remove-button" title="텍스트삭제"></button>
                                 </div>
-                                <p class="input__error align-right p-static" aria-live="assertive">금액은 미국 달러(USD)기준<br>1불 이상 500,000불 이내로 입력하세요</p>
+                                <p class="input__error align-right p-static" aria-live="assertive">금액은 미국
+                                    달러(USD)기준<br>1불 이상 500,000불 이내로 입력하세요</p>
                             </div>
                             <div class="fx-balance">
                                 <div class="list-wrap__item">
@@ -252,7 +264,8 @@
                                         <span class="list-wrap__currency">USD</span>
                                     </div>
                                     <div class="list-wrap__box list-wrap__box--unit">
-                                        <strong class="list-wrap__text list-wrap__text--value"><span>1,000.00</span></strong>
+                                        <strong
+                                            class="list-wrap__text list-wrap__text--value"><span>1,000.00</span></strong>
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +283,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="tit-default">예약기간</div>
             <div class="container">
                 <div class="input-wrap">
@@ -280,7 +293,8 @@
                             * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
                         -->
                         <div class="input__inner">
-                            <input type="text" id="inputText01" class="input__element input-date" title="예약일자 시작일" value="2022-02-22" readonly>
+                            <input type="text" id="inputText01" class="input__element input-date" title="예약일자 시작일"
+                                value="2022-02-22" readonly>
                             <button type="button" class="input__calendar-button" aria-label="예약일자 시작일 선택"></button>
                         </div>
                     </div>
@@ -291,21 +305,24 @@
                             * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
                         -->
                         <div class="input__inner">
-                            <input type="text" id="inputText02" class="input__element input-date" title="예약일자 종료일" value="2022-03-21" readonly>
+                            <input type="text" id="inputText02" class="input__element input-date" title="예약일자 종료일"
+                                value="2022-03-21" readonly>
                             <button type="button" class="input__calendar-button" aria-label="예약일자 종료일 선택"></button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="aftermarket" class="modal modal--alert" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="true">
+            <div id="aftermarket" class="modal modal--alert" data-element="modal__element" role="dialog"
+                aria-modal="true" aria-hidden="true">
                 <div class="modal__container" data-element="modal__element-container">
                     <div class="modal__header">
                         <h1 class="modal__header--title" data-element="focus" tabindex="0">After Market 알림</h1>
                     </div>
                     <div class="modal__contents">
                         <p class="modal__description align-center">
-                            <i class="icon__moon-yellow"></i><em class="color-333 fw-500">After Market 시간</em>에는<br>환율 고시가 상대적으로 느리게 일어나며<br>호재 및 악재가 완전히 반영되기 전<br>저가/고가거래가 일어나 가격 변동성이<br>클 수 있으니 매매시 유의해주세요.
+                            <i class="icon__moon-yellow"></i><em class="color-333 fw-500">After Market 시간</em>에는<br>환율
+                            고시가 상대적으로 느리게 일어나며<br>호재 및 악재가 완전히 반영되기 전<br>저가/고가거래가 일어나 가격 변동성이<br>클 수 있으니 매매시 유의해주세요.
                         </p>
                     </div>
                     <div class="modal__button-wrap">
@@ -335,12 +352,12 @@
     <script src="../../../../resource/js/ui/numberAnimate.js"></script> <!-- Hana FX numberAnimate 추가 -->
     <script>
         var fxtrade = fxtrade || {};
-        fxtrade = (function(){
-            var init, fxrateInfoControl, fxrollingEvt, refreshTimer, progressposSet, currencyChange;
+        fxtrade = (function () {
+            var init, fxrateInfoControl, fxrollingEvt, refreshTimer, refreshTimerClickEvt, progressPosSet, currencyChange;
 
             var fxData = { // 더미데이터 세팅
-                buying :{ before :'1,210.50', after :'1,205.50'}, // before : 고시환율, after : 스프레드 적용환율
-                selling :{ before :'1,190.50', after :'1,195.50'}
+                buying: { before: '1,210.50', after: '1,205.50' }, // before : 고시환율, after : 스프레드 적용환율
+                selling: { before: '1,190.50', after: '1,195.50' }
             }
 
             // 전역변수 세팅
@@ -348,50 +365,50 @@
             var fxtimer;
             var rollingState = false;
 
-            init = function(){
+            init = function () {
                 fxrateInfoControl();
                 fxrollingEvt.init();
                 refreshTimer();
                 refreshTimerClickEvt();
                 currencyChange();
-                progressposSet($('.fx-progress .progress__bar'), 3); // 대상, 위치값 (0~ 100%)
+                progressPosSet($('.fx-progress .progress__bar'), 3); // 대상, 위치값 (0~ 100%)
             }
 
-            fxrateInfoControl = function(){
+            fxrateInfoControl = function () {
                 $('.fx-rateinfo .white-box__header').trigger('click');
-                setTimeout(function(){
+                setTimeout(function () {
                     $('.fx-rateinfo .white-box__header').trigger('click');
-                },2000)
+                }, 2000)
             }
 
             fxrollingEvt = {
-                dataPush : function(){
+                dataPush: function () {
                     var delbuying = $('.tab__panel--buy .fx-rate__item--del');
                     var sellbuying = $('.tab__panel--sell .fx-rate__item--del');
                     var insbuying = $('.tab__panel--buy .fx-rate__item--ins');
                     var insselling = $('.tab__panel--sell .fx-rate__item--ins');
-                    switch(fxtabIdx) {
-                        case 0 :
+                    switch (fxtabIdx) {
+                        case 0:
                             delbuying.text(fxData.buying.before);
                             fxrollingEvt.rolling(insbuying, fxData.buying.before, fxData.buying.after);
-                        break;
-                        case 1 :
+                            break;
+                        case 1:
                             sellbuying.text(fxData.selling.before);
                             fxrollingEvt.rolling(insselling, fxData.selling.before, fxData.selling.after);
-                        break;
+                            break;
                     }
                 },
-                rolling : function(target, before, after){ // 대상(팔래요or살래요), 고시환율, 스프레드적용환율
+                rolling: function (target, before, after) { // 대상(팔래요or살래요), 고시환율, 스프레드적용환율
                     target.text(before).numberAnimate();
-                    setTimeout(function(){
+                    setTimeout(function () {
                         target.numberAnimate('set', after);
-                        setTimeout(function(){
+                        setTimeout(function () {
                             rollingState = true;
-                        },500)
-                    },1000)
+                        }, 500)
+                    }, 1000)
                 },
-                fxTabControl : function(){
-                    $('.tab__type--small .tab-wrap__button').on('click', function(e){
+                fxTabControl: function () {
+                    $('.tab__type--small .tab-wrap__button').on('click', function (e) {
                         fxtabIdx = $(this).parent('.tab-wrap__item').index();
                         clearInterval(fxtimer);
                         refreshTimer();
@@ -399,7 +416,7 @@
                         fxrollingEvt.dataPush();
                     })
                 },
-                dataSet : function(){
+                dataSet: function () {
                     $('.fx-rate__item--ins').numberAnimate('destroy').empty();
                     // 리프레시 데이터 새로 불러와서 세팅
                     fxData.buying.before = '1,210.50';
@@ -407,14 +424,13 @@
                     fxData.selling.before = '1,190.50';
                     fxData.selling.after = '1,195.50';
                 },
-                init : function(){
-                    fxrollingEvt.dataSet();
+                init: function () {
                     fxrollingEvt.dataPush();
                     fxrollingEvt.fxTabControl();
                 }
             }
 
-            refreshTimer = function(){
+            refreshTimer = function () {
                 var timeSec = 30;
                 var timeFunc = function () {
                     $('.fx-refresh__txt--sec').text(timeSec);
@@ -427,38 +443,38 @@
                 fxtimer = setInterval(timeFunc, 1000);
             }
 
-            refreshTimerClickEvt = function(){
+            refreshTimerClickEvt = function () {
                 $('.fx-refresh .button-refresh').on('click', function () {
                     clearInterval(fxtimer);
                     refreshTimer();
-                    if(rollingState){
+                    if (rollingState) {
                         fxrollingEvt.dataSet();
                         fxrollingEvt.dataPush();
                         rollingState = false;
                     }
                 })
             }
-            
-            progressposSet = function(el,per){
+
+            progressPosSet = function (el, per) {
                 // 말풍선 꼬리위치제어
-                if(per <= 7) {
+                if (per <= 7) {
                     el.addClass('progress__bar--min');
-                } else if(per >= 91) {
+                } else if (per >= 91) {
                     el.addClass('progress__bar--max');
-                } 
+                }
 
                 // 말풍선 색상제어
-                if(per > 50) {
+                if (per > 50) {
                     el.addClass('progress__bar--over');
-                } else if(per == 50) {
+                } else if (per == 50) {
                     el.addClass('progress__bar--average');
                 }
                 el.css('width', per + '%');
             }
 
-            currencyChange = function(){
-                $('.fx-exchange .checkbox-wrap__check').on('change', function(){
-                    if($(this).prop('checked')) {
+            currencyChange = function () {
+                $('.fx-exchange .checkbox-wrap__check').on('change', function () {
+                    if ($(this).prop('checked')) {
                         $('[data-input-section="check-section-1"]').hide();
                         $('[data-input-section="check-section-2"]').show();
                     } else {
@@ -469,13 +485,14 @@
             }
 
             return {
-                init : init
+                init: init
             }
         })();
-     
-        $(function(){
+
+        $(function () {
             fxtrade.init();
         })
     </script>
 </body>
+
 </html>
