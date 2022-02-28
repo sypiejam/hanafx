@@ -133,3 +133,17 @@
 .fx-rate__select .check-full__input:checked  + .check-full__label .check-full__label--txt {color:#000}
 .fx-rate__select .input__unit {min-width:3rem;font-size:1.125rem;color:#757575;text-align:center}
 .fx-rate__select .tooltip {top:-1px;padding-right:0.25rem;}
+
+/* 거래내역조회 */
+.list-wrap__box--label {display:block;width:100%;margin:0.313rem 0 0.875rem;line-height:1;}
+.list-wrap__box--label .label-box {border-radius:0.125rem;}
+.list-wrap__box--label .label-box--blue {border-color:#4b97f6;color:#4b97f6;}
+.list-wrap__box--label .label-box--gray {border-color:#ccc;color:#a5a5a5;}
+.fx-historylist .border-list__item {padding:0.938rem 1.5rem;border-top:0;}
+.fx-historylist .border-list__item + .border-list__item {border-top:1px solid #e7e9ee;}
+.fx-historylist .list-wrap {width:100%;margin-top:-0.188rem;padding:0;}
+.fx-historylist .list-wrap__item {padding:0;}
+.fx-historylist .icon-na {margin-top:-0.063rem;margin-right:0.625rem;}
+.fx-applyrate .input--maxw {max-width:3.750rem !important;}
+.fx-currency {margin-top: 0.875rem !important;}
+.fx-currency .icon-na img {vertical-align:-4px;}
