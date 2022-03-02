@@ -105,8 +105,9 @@
         }
         
         var innerDiv = $(document.createElement('div')).html(allChars);
-        if (css3Prefix === 'Webkit')
-            //innerDiv[0].style['-webkit-backface-visibility'] = 'hidden';
+        if (css3Prefix === 'Webkit'){
+            innerDiv[0].style['-webkit-backface-visibility'] = 'hidden';
+        }
 
         innerDiv[0].style[css3Prefix + 'Transform'] =  translateOpen + height + translateClose;
         holderDiv.append(innerDiv);
