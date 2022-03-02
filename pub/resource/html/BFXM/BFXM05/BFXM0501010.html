@@ -35,11 +35,7 @@
                     <div class="search-list__filter">
                         <button type="button" class="view-period" title="조회기간 선택" data-element="modal__open" data-target="#BFXM0501010_P01">
                             <span class="view-period__text">
-                                <span>1주</span>
-                                <span class="sepherator"></span>
-                                <span>전체상태</span>
-                                <span class="sepherator"></span>
-                                <span>전체거래</span>
+                                <span>1주일</span>
                             </span>
                             <i class="view-period__button"></i>
                         </button>
@@ -67,7 +63,7 @@
                                             <strong class="list-wrap__title list-wrap__title--exrate">1,201.20</strong>
                                         </div>
                                         <div class="list-wrap__box list-wrap__box--unit">
-                                            <strong class="list-wrap__text">매매완료</strong>
+                                            <strong class="list-wrap__text">거래완료</strong>
                                             <strong class="list-wrap__text list-wrap__text--date">2022-02-21 10:35</strong>
                                         </div>
                                     </li>
@@ -90,30 +86,7 @@
                                             <strong class="list-wrap__title list-wrap__title--exrate">1,047.94</strong>
                                         </div>
                                         <div class="list-wrap__box list-wrap__box--unit">
-                                            <strong class="list-wrap__text">매매불가</strong>
-                                            <strong class="list-wrap__text list-wrap__text--date">2022-02-21 10:35</strong>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="border-list__item">
-                        <a href="#none" class="list-list__anchor">
-                            <div class="list-wrap__box--label">
-                                <em class="label-box label-box--blue">팔래요</em>
-                                <span class="label-box label-box--gray">즉시거래</span>
-                            </div>
-                            <div class="flex">
-                                <i class="icon-na"><img src="../../../images/symbols/na_CA.png" alt="캐나다"></i>
-                                <ul class="list-wrap">
-                                    <li class="list-wrap__item">
-                                        <div class="list-wrap__box">
-                                            <strong class="list-wrap__title fw-500 eng">CAD <em>500,000</em></strong>
-                                            <strong class="list-wrap__title list-wrap__title--exrate">시장평균환율</strong>
-                                        </div>
-                                        <div class="list-wrap__box list-wrap__box--unit">
-                                            <strong class="list-wrap__text">매매대기</strong>
+                                            <strong class="list-wrap__text">예약취소</strong>
                                             <strong class="list-wrap__text list-wrap__text--date">2022-02-21 10:35</strong>
                                         </div>
                                     </li>
@@ -128,6 +101,29 @@
                                 <span class="label-box label-box--gray">예약거래</span>
                             </div>
                             <div class="flex">
+                                <i class="icon-na"><img src="../../../images/symbols/na_CA.png" alt="캐나다"></i>
+                                <ul class="list-wrap">
+                                    <li class="list-wrap__item">
+                                        <div class="list-wrap__box">
+                                            <strong class="list-wrap__title fw-500 eng">CAD <em>500,000</em></strong>
+                                            <strong class="list-wrap__title list-wrap__title--exrate">시장평균환율</strong>
+                                        </div>
+                                        <div class="list-wrap__box list-wrap__box--unit">
+                                            <strong class="list-wrap__text">거래불가</strong>
+                                            <strong class="list-wrap__text list-wrap__text--date">2022-02-21 10:35</strong>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="border-list__item">
+                        <a href="#none" class="list-list__anchor">
+                            <div class="list-wrap__box--label">
+                                <em class="label-box label-box--blue">팔래요</em>
+                                <span class="label-box label-box--gray">MAR거래</span>
+                            </div>
+                            <div class="flex">
                                 <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt="유럽"></i>
                                 <ul class="list-wrap">
                                     <li class="list-wrap__item">
@@ -136,7 +132,7 @@
                                             <strong class="list-wrap__title list-wrap__title--exrate">1,349.43</strong>
                                         </div>
                                         <div class="list-wrap__box list-wrap__box--unit">
-                                            <strong class="list-wrap__text">기일경과</strong>
+                                            <strong class="list-wrap__text">거래완료</strong>
                                             <strong class="list-wrap__text list-wrap__text--date">2022-02-21 10:35</strong>
                                         </div>
                                     </li>
@@ -159,7 +155,7 @@
                                             <strong class="list-wrap__title list-wrap__title--exrate">1,307.36</strong>
                                         </div>
                                         <div class="list-wrap__box list-wrap__box--unit">
-                                            <strong class="list-wrap__text">예약취소</strong>
+                                            <strong class="list-wrap__text">기일경과</strong>
                                             <strong class="list-wrap__text list-wrap__text--date">2022-02-21 10:35</strong>
                                         </div>
                                     </li>
@@ -261,7 +257,7 @@
                 <div class="date-wrap">
                     <span class="date-wrap__item">
                         <input type="radio" id="dateSelect1" name="dateSelect" class="date-wrap__radio" checked>
-                        <label for="dateSelect1" class="date-wrap__label">1주</label>
+                        <label for="dateSelect1" class="date-wrap__label">1주일</label>
                     </span>
                     <span class="date-wrap__item">
                         <input type="radio" id="dateSelect2" name="dateSelect" class="date-wrap__radio">
@@ -314,25 +310,25 @@
                     </span>
                     <span class="date-wrap__item">
                         <input type="radio" id="typeSelect12" name="typeSelect1" class="date-wrap__radio">
-                        <label for="typeSelect12" class="date-wrap__label">매매대기</label>
+                        <label for="typeSelect12" class="date-wrap__label">예약완료</label>
                     </span>
                     <span class="date-wrap__item">
                         <input type="radio" id="typeSelect13" name="typeSelect1" class="date-wrap__radio">
-                        <label for="typeSelect13" class="date-wrap__label">매매완료</label>
+                        <label for="typeSelect13" class="date-wrap__label">예약취소</label>
                     </span>
                 </div>
                 <div class="date-wrap">
                     <span class="date-wrap__item">
                         <input type="radio" id="typeSelect14" name="typeSelect1" class="date-wrap__radio">
-                        <label for="typeSelect14" class="date-wrap__label">매매불가</label>
+                        <label for="typeSelect14" class="date-wrap__label">거래불가</label>
                     </span>
                     <span class="date-wrap__item">
                         <input type="radio" id="typeSelect15" name="typeSelect1" class="date-wrap__radio">
-                        <label for="typeSelect15" class="date-wrap__label">기일경과</label>
+                        <label for="typeSelect15" class="date-wrap__label">거래완료</label>
                     </span>
                     <span class="date-wrap__item">
                         <input type="radio" id="typeSelect16" name="typeSelect1" class="date-wrap__radio">
-                        <label for="typeSelect16" class="date-wrap__label">예약취소</label>
+                        <label for="typeSelect16" class="date-wrap__label">기일경과</label>
                     </span>
                 </div>
             </div>
