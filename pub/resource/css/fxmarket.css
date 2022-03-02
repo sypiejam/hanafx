@@ -112,6 +112,7 @@
 .label-line__item--mar:after {background:url(../../resource/images/fxmarket/bg_label_tail_green.png) no-repeat 0 0 / 100%;}
 .label-line__item--reserve {border-color:#ee9d46;color:#ee9d46;}
 .label-line__item--reserve:after {background:url(../../resource/images/fxmarket/bg_label_tail_yellow.png) no-repeat 0 0 / 100%;}
+.fx-exchange {overflow:hidden;padding-top:1px;}
 .fx-exchange .checkbox-wrap {width:2.375rem;height:3.5rem;}
 .fx-exchange .checkbox-wrap__label {display:block;width:100%;padding-left:0;background:url(../../resource/images/fxmarket/btn_currency_switch.png) no-repeat 0 50% / 1.438rem;}
 .fx-exchange .checkbox-wrap__label:before {content:none;}
@@ -119,10 +120,10 @@
 .fx-exchange .input-wrap .input {margin:0;}
 .fx-exchange .input__optional {width:0.75rem;padding-top:1rem;text-align:center;}
 .fx-exchange .input__optional ~ .input {max-width:3.75rem;}
-.fx-balance {position:relative;margin:3.563rem 0 0 0;padding:0.625rem 0 0 0;border-top:1px solid #f0f0f0;}
+.fx-balance {position:relative;padding:0.625rem 0 0 0}
 .fx-balance .list-wrap__title {font-size:0.875rem;}
 .fx-balance .list-wrap__text--value {font-size:0.875rem;color:#666;}
-.checkbox-content .fx-balance {position:absolute;left:1.5rem;right:1.5rem;margin:0.875rem 0 0 0;padding:0;border:0;}
+.checkbox-content .fx-balance {margin:0 0 -1px -2.188rem;padding:0.938rem  0 0.625rem 0;border-bottom:1px solid #f0f0f0;}
 .checkbox-content .fx-balance .list-wrap__title {font-size:1rem;}
 .checkbox-content .fx-balance .list-wrap__text--value {font-size:1rem;}
 .checkbox-content .fx-balance .list-wrap__currency {margin-left:3.125rem;font-size:1rem;color:#666;}
