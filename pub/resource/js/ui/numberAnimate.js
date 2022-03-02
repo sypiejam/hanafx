@@ -83,6 +83,7 @@
             transformY = 0 - (indexOfChar / 2) * $holderDiv.height();
         }
         innerStyle[css3Prefix + 'Transform'] = translateOpen + transformY + translateClose;
+        $holderDiv.children()[0].setAttribute('style','-webkit-transform:' + translateOpen + transformY + translateClose + ';transform:' + translateOpen + transformY + translateClose)
     };
 
     var createDivForChar = function (character, height, width, position, animationTimes) {
@@ -105,9 +106,8 @@
         }
         
         var innerDiv = $(document.createElement('div')).html(allChars);
-        if (css3Prefix === 'Webkit'){
+        if (css3Prefix === 'Webkit')
             innerDiv[0].style['-webkit-backface-visibility'] = 'hidden';
-        }
 
         innerDiv[0].style[css3Prefix + 'Transform'] =  translateOpen + height + translateClose;
         holderDiv.append(innerDiv);
