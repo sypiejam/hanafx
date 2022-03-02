@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
     <!-- Hana FX market CSS -->
     <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+    <style>
+        .fx-rate__item--ins div div{backface-visibility:hidden;-webkit-backface-visibility:hidden;;transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;-webkit-transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;}
+    </style>
 </head>
 
 <body>
@@ -96,7 +99,7 @@
 
             <div class="container">
                 <div class="fx-rateinfo">
-                    <div class="white-box" data-element="toggle">
+                    <div class="white-box">
                         <div class="white-box__header is-active" aria-expanded="true">
                             <div class="list-wrap__item list-wrap__item--arrow">
                                 <div class="list-wrap__box">
@@ -172,7 +175,6 @@
                                         <label for="period05" class="select-button__item">1Y</label>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -345,8 +347,9 @@
 
         function fxrateInfoControl() { // 환율정보 2초 후 닫힘
             setTimeout(function () {
+                $('.fx-rateinfo .white-box').attr('data-element','toggle');
                 $('.fx-rateinfo .white-box__header').attr('data-element', 'toggle__anchor');
-                $("[data-element=toggle]").toggle();
+                $(document).find('[data-element="toggle"]').toggle();
             }, 3000)
         }
 

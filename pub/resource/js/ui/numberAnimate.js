@@ -83,6 +83,7 @@
             transformY = 0 - (indexOfChar / 2) * $holderDiv.height();
         }
         innerStyle[css3Prefix + 'Transform'] = translateOpen + transformY + translateClose;
+        $holderDiv.children()[0].setAttribute('style','transform:' + translateOpen + transformY + translateClose + ';-webkit-transform:' + translateOpen + transformY + translateClose)
     };
 
     var createDivForChar = function (character, height, width, position, animationTimes) {
