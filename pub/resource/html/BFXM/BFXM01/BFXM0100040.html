@@ -26,20 +26,33 @@
     <!-- content -->
     <div id="content" class="app-main fxmarket">
         <div class="container">
-            <!-- 2022-02-25 마크업 수정(v0.7.05) -->
             <div class="icon-wrap">
                 <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
                 <p class="icon-wrap__icon-word"><span class="color-green">FX마켓 서비스 가입</span>이<br> 완료되었습니다.</p>
             </div>
-            <!-- 서비스 가입 오류 -->
+            <!-- 2022-03-02 메인 설정 기능 추가(v0.7.09) -->
+            <div class="flex">
+                <div class="row-list__title">FX마켓 메인 사용</div>
+                <div class="row-list__anchor">
+                    <label class="switch">
+                        <input type="checkbox" title="FX마켓 메인 사용 설정여부" checked>
+                        <span class="switch__toggle" aria-hidden="true"></span>
+                    </label>
+                </div>
+            </div>
+            <p class="text-guide-sub mgt36">하나원큐 앱 실행 시 FX마켓으로 설정해요.</p>
+            <!-- //2022-03-02 메인 설정 기능 추가(v0.7.09) -->
+        </div>
+
+        <!-- 서비스 가입 오류 -->
+        <div class="container">
             <div class="icon-wrap">
                 <i class="icon-wrap__icon icon-wrap__icon--no-data" aria-hidden="true"></i>
                 <p class="icon-wrap__icon-word"><span class="color-green">FX마켓 서비스 가입</span>이<br> 완료되지 않았습니다.</p>
                 <p class="icon-wrap__description">다시 가입을 진행해주세요.</p>
             </div>
-            <!-- //서비스 가입 오류 -->
-            <!-- 2022-02-25 마크업 수정(v0.7.05) -->
         </div>
+        <!-- //서비스 가입 오류 -->
     </div>
     <!-- //content -->
     <!-- footer -->
