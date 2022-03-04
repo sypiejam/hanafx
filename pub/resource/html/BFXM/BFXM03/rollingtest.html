@@ -475,12 +475,12 @@
         var rollingState = false;
         var fxtabIdx = $('.tab__type--small .tab__panel.is-active').index();
         var fxData = { // 더미데이터 세팅
-            buying: { before: '', after: ''}, // before : 고시환율, after : 스프레드 적용환율
-            selling: { before: '', after: ''}
+            buying: { before: '', after: '' }, // before : 고시환율, after : 스프레드 적용환율
+            selling: { before: '', after: '' }
         }
 
         // 갱신타이머
-        function refreshTimer() { 
+        function refreshTimer() {
             var timeSec = 30;
             var timeFunc = function () {
                 $('.fx-refresh__txt--sec').text(timeSec);
@@ -494,7 +494,7 @@
         }
 
         // 갱신버튼 클릭시
-        function refreshTimerClickEvt() { 
+        function refreshTimerClickEvt() {
             $('.fx-refresh .button-refresh').on('click', function () {
                 clearInterval(fxtimer);
                 refreshTimer();
@@ -540,7 +540,7 @@
 
         // 데이터 롤링
         function rolling(target, after) {
-            setTimeout(function(){
+            setTimeout(function () {
                 target.innerHTML = '';
                 od = new Odometer({
                     el: target,
@@ -548,11 +548,11 @@
                     animation: 'count'
                 });
                 od.update(after);
-                
+
                 setTimeout(function () {
                     rollingState = true;
                 }, 500)
-            },1500)
+            }, 1500)
         }
 
         // 탭제어
@@ -571,7 +571,7 @@
         }
 
         // 말풍선 위치 및 색상 제어함수
-        function progressPosSet(el, per) { 
+        function progressPosSet(el, per) {
             if (per <= 7) {
                 el.addClass('progress__bar--min');
             } else if (per >= 91) {
@@ -588,7 +588,7 @@
         }
 
         // 원하는 금액 폼제어
-        function currencyChange() { 
+        function currencyChange() {
             $('.fx-exchange .checkbox-wrap__check').on('change', function () {
                 if ($(this).prop('checked')) {
                     $('[data-input-section="check-section-1"]').hide();
