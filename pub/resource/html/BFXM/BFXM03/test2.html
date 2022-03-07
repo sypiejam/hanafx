@@ -197,7 +197,7 @@
             p.y = window.innerHeight + (Math.random() * window.innerHeight * 0.3);
             p.vel = {
                 x: (Math.random() - 0.5) * 8,
-                y: Math.random() * - 25
+                y: Math.random() * - 30
             };
             p.mass = Math.random() * 0.2 + 0.5;
             particles.push(p);
@@ -216,18 +216,19 @@
             p.style.transform = `translate3d(${p.x}px, ${p.y}px, 1px)`;
             p.x += p.vel.x;
             p.y += p.vel.y;
-            p.vel.y += (0.6 * p.mass);
+            p.vel.y += (1 * p.mass);
             if (p.y > (window.innerHeight * 2)) {
                 p.remove();
                 particles.splice(i, 1);
             }
         }
         requestAnimationFrame(render);
+        $('.particle:last').hide();
         setTimeout(function () {
             document.querySelector('body,html').style.overflow = 'visible';
             particleWrap.remove();
-        }, 3500)
-    }
+        }, 3000)
+    } 
 
     window.addEventListener('load', function () {
         pop();
