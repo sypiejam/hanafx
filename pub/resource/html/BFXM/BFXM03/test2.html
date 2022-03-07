@@ -18,7 +18,7 @@
             width: 100vw;
             height: 100vh;
             position:fixed;
-            bottom:0;
+            bottom:10%;
             right:0;
             left:0;
         }
@@ -216,7 +216,7 @@
             p.style.transform = `translate3d(${p.x}px, ${p.y}px, 1px)`;
             p.x += p.vel.x;
             p.y += p.vel.y;
-            p.vel.y += (0.6 * p.mass);
+            p.vel.y += (0.7 * p.mass);
             if (p.y > (window.innerHeight * 2)) {
                 p.remove();
                 particles.splice(i, 1);
