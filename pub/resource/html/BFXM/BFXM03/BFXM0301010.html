@@ -60,6 +60,8 @@
                                         <del class="fx-rate__item--del">1,250.50</del>
                                     </li>
                                     <li class="fx-rate__item">
+
+                                        
                                         <span class="offscreen">적용환율</span>
                                         <ins class="fx-rate__item--ins odometer"></ins>
                                     </li>
@@ -221,7 +223,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="input-wrap__error align-right" aria-live="assertive">금액은 미국 달러(USD)기준<br>1불 이상 500,000불 이내로 입력하세요</p>
+                            <p class="input-wrap__error align-right" aria-live="assertive">USD 환산 기준 1~500,000 이하 입력</p> <!-- 2022-03-07 에러문구 변경(v0.9) -->
                             <div class="fx-balance">
                                 <div class="list-wrap__item">
                                     <div class="list-wrap__box list-wrap__flexbox">
@@ -242,7 +244,7 @@
                                     <span class="input__label" aria-hidden="true">KRW</span>
                                     <button type="button" class="input__remove-button" title="텍스트삭제"></button>
                                 </div>
-                                <p class="input__error align-right p-static" aria-live="assertive">금액은 미국 달러(USD)기준<br>1불 이상 500,000불 이내로 입력하세요</p>
+                                <p class="input__error align-right p-static" aria-live="assertive">USD 환산 기준 1~500,000 이하 입력</p> <!-- 2022-03-07 에러문구 변경(v0.9) -->
                             </div>
                             <div class="fx-balance">
                                 <div class="list-wrap__item">
@@ -272,12 +274,8 @@
 
             <div class="tit-default">예약기간</div>
             <div class="container">
-                <div class="input-wrap">
+                <div class="input-wrap"> <!-- * 오류시 class="input-wrap input-wrap--error" -->
                     <div class="input">
-                        <!--
-                            * 오류시 class="input input--error"
-                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
-                        -->
                         <div class="input__inner">
                             <input type="text" id="inputText01" class="input__element input-date" title="예약일자 시작일" value="2022-02-22" readonly>
                             <button type="button" class="input__calendar-button" aria-label="예약일자 시작일 선택"></button>
@@ -285,16 +283,13 @@
                     </div>
                     <i class="input__optional">-</i>
                     <div class="input">
-                        <!--
-                            * 오류시 class="input input--error"
-                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
-                        -->
                         <div class="input__inner">
                             <input type="text" id="inputText02" class="input__element input-date" title="예약일자 종료일" value="2022-03-21" readonly>
                             <button type="button" class="input__calendar-button" aria-label="예약일자 종료일 선택"></button>
                         </div>
                     </div>
                 </div>
+                <p class="input-wrap__error align-right" aria-live="assertive">예약 시작일이 예약 종료일 보다 미래일 수 없습니다.</p> <!-- 2022-03-07 에러문구 추가(v0.9) -->
             </div>
 
             <div id="aftermarket" class="modal modal--alert" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="true">
