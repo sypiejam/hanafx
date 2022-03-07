@@ -18,7 +18,7 @@
             position: absolute;
             margin: auto;
             width:100%;
-            max-width: 375px;
+            max-width: 512px;
             height: 100vh;
             top: 0;
             left: 0;
@@ -48,7 +48,7 @@
                     <!-- //아이콘 영역 디자인 미정 작업예정 -->
                     <p class="icon-wrap__icon-word">
                         USD <em>500,000</em>을<br>
-                        <em>502,750,000</em>원에 샀습니다.
+                        <em>602,750,000</em>원에 샀습니다.
                     </p>
                     <p class="icon-wrap__description">환율(Spread) <span>80</span>% 우대로 <br>
                         <em class="fw-400 color-red">2,500,000</em>원 더 싸게 샀어요!
@@ -183,7 +183,7 @@
     function test() {
 
         // canvas settings
-        var viewWidth = 1200,
+        var viewWidth = 1024,
             viewHeight = $(window).height() * 2,
             //imageSrc = ['heart01.png', 'bg_slide2.png', 'heart03.png', 'bg_slide.png', 'heart02.png'],
             drawingCanvas = document.getElementById("drawing_canvas"),
@@ -236,7 +236,7 @@
 
         function createParticles() {
             for (var i = 0; i < 30; i++) {
-                var p0 = new Point(viewWidth, viewHeight);
+                var p0 = new Point(viewWidth * 0.5, viewHeight * 0.5);
                 var p1 = new Point(Math.random() * viewWidth, Math.random() * viewHeight);
                 var p2 = new Point(Math.random() * viewWidth, Math.random() * viewHeight);
                 var p3 = new Point(Math.random() * viewWidth, viewHeight + 64);
