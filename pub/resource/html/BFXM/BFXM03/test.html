@@ -48,7 +48,7 @@
                     <!-- //아이콘 영역 디자인 미정 작업예정 -->
                     <p class="icon-wrap__icon-word">
                         USD <em>500,000</em>을<br>
-                        <em>602,750,000</em>원에 샀습니다.
+                        <em>502,750,000</em>원에 샀습니다.
                     </p>
                     <p class="icon-wrap__description">환율(Spread) <span>80</span>% 우대로 <br>
                         <em class="fw-400 color-red">2,500,000</em>원 더 싸게 샀어요!
@@ -228,7 +228,7 @@
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.r);
-                ctx.scale(1, 1);
+                ctx.scale(1, this.sy);
                 ctx.drawImage(imageObj, -this.w * 0.5, -this.h * 0.5, this.w, this.h);
                 ctx.restore();
             }
