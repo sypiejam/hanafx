@@ -19,8 +19,8 @@
             margin: auto;
             width:100%;
             max-width: 375px;
-            height: 150vh;
-            top: -50vh;
+            height: 100vh;
+            top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
@@ -229,7 +229,7 @@
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.r);
                 ctx.scale(1, this.sy);
-                ctx.drawImage(imageObj, 0, -100, this.w, this.h);
+                ctx.drawImage(imageObj, 0, 0, this.w, this.h);
                 ctx.restore();
             }
         };
