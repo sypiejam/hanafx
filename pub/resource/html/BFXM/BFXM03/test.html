@@ -237,8 +237,8 @@
         function createParticles() {
             for (var i = 0; i < 30; i++) {
                 var p0 = new Point(viewWidth, viewHeight);
-                var p1 = new Point(Math.random() * viewWidth, Math.random() * -viewHeight * 0.5);
-                var p2 = new Point(Math.random() * viewWidth, Math.random() * -viewHeight * 0.5);
+                var p1 = new Point(Math.random() * viewWidth, Math.random() * viewHeight * 1);
+                var p2 = new Point(Math.random() * viewWidth, Math.random() * viewHeight * 1);
                 var p3 = new Point(Math.random() * viewWidth, viewHeight);
                 particles.push(new Particle(p0, p1, p2, p3));
             }
