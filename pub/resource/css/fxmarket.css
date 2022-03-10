@@ -209,6 +209,8 @@
 /* 마이페이지 - FX Score 상세 */
 .fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
 .fx-score--detail .card__wrap {padding:1.188rem;}
+.fx-score--detail .fx-score__point {font-size:1.125rem;font-weight:500;}
+.fx-score--detail .fx-score__point--num {font-weight:400;}
 .fx-score--detail .fx-score__item {font-size:0.875rem;}
 .fx-searchlist--bg {background-color:#f9f9fb;}
 .white-nowrap {white-space:nowrap !important;}
