@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div class="modal-full">
+    <div class="modal__header">
+        <h1 class="modal__header--title">등급안내</h1>
+    </div>
+    <div class="modal__contents fx-levelinfo">
+        <div class="fx-mylevel">
+            <div class="tit-default">나의 등급</div>
+            <div class="container">
+                <div class="card__wrap">
+                    <div class="fx-mylevel__wrap">
+                        <span class="fx-level-icon level-1"><em class="offscreen">등급1</em></span>
+                        <div class="fx-mylevel__item">
+                            <em class="fx-mylevel__lv">Lv 2</em>
+                            <p class="fx-mylevel__desc"><span>USD</span> 환율(Spread) 우대 <span>80</span>%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tit-default flex">
+            <span>FX 등급</span>
+            <div class="additional-item">
+                <button type="button" class="button button-select__item" data-element="modal__open" data-target="#" title="통화 선택">
+                    <!-- <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i> -->
+                    <span>USD</span>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="table table-vertical table-vertical--narrow">
+                <table>
+                    <colgroup>
+                        <col width="25%">
+                        <col span="2">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="table-vertical__th">등급명</th>
+                            <th scope="col" class="table-vertical__th">FX Score</th>
+                            <th scope="col" class="table-vertical__th">환율(Spread) 우대</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-vertical__td">Lv1</td>
+                            <td class="table-vertical__td table-vertical__td--left">0점 이상</td>
+                            <td class="table-vertical__td">80%</td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td">Lv2</td>
+                            <td class="table-vertical__td table-vertical__td--left">10,000점 이상</td>
+                            <td class="table-vertical__td">82.5%</td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td">Lv3</td>
+                            <td class="table-vertical__td table-vertical__td--left">15,000점 이상</td>
+                            <td class="table-vertical__td">85%</td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td">Lv4</td>
+                            <td class="table-vertical__td table-vertical__td--left">20,000점 이상</td>
+                            <td class="table-vertical__td">87.5%</td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td">Lv5</td>
+                            <td class="table-vertical__td table-vertical__td--left">25,000점 이상</td>
+                            <td class="table-vertical__td">90%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr class="spacer">
+        <div class="tit-default">FX Score 모으기</div>
+        <div class="container">
+            <div class="table table-vertical table-vertical--narrow">
+                <table>
+                    <colgroup>
+                        <col span="3">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="table-vertical__th">모으기</th>
+                            <th scope="col" class="table-vertical__th">Score</th>
+                            <th scope="col" class="table-vertical__th">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-vertical__td table-vertical__td--left">FX 서비스 가입</td>
+                            <td class="table-vertical__td">+5,000</td>
+                            <td class="table-vertical__td">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td table-vertical__td--left">FX 거래</td>
+                            <td class="table-vertical__td">즉시거래 +2</td>
+                            <td class="table-vertical__td">
+                                <span class="block">예약거래 신청 +1</span>
+                                <span class="block">예약거래 체결 +1</span>
+                                <span class="block">예약거래 취소 -1</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td table-vertical__td--left">커뮤니티 공유</td>
+                            <td class="table-vertical__td">+1</td>
+                            <td class="table-vertical__td">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td table-vertical__td--left">환율예측 참여</td>
+                            <td class="table-vertical__td">+1</td>
+                            <td class="table-vertical__td">
+                                <span class="block">예측 적중시 +1</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td table-vertical__td--left">공감 주고받기</td>
+                            <td class="table-vertical__td">+1</td>
+                            <td class="table-vertical__td">
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-vertical__td table-vertical__td--left">누적거래</td>
+                            <td class="table-vertical__td">+1</td>
+                            <td class="table-vertical__td">
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <button class="modal__btn--close" type="button" title="닫기"></button>
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

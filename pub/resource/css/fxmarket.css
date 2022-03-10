@@ -155,9 +155,75 @@
 .fx-historylist .list-wrap__text--date {letter-spacing:0;font-weight:300;color:#757575;}
 .fx-historylist .icon-na {margin-top:-0.063rem;margin-right:0.625rem;}
 .fx-applyrate .input--maxw {max-width:3.750rem !important;}
-.fx-currency {margin-top: 0.875rem !important;margin-bottom:-0.313rem;}
+.fx-currency {margin-top:0.875rem !important;margin-bottom:-0.313rem;}
 .fx-currency .icon-na img {vertical-align:-4px;}
 .fx-exchange--applysum {margin-bottom:-1rem;}
+
+/* 마이페이지 */
+.modal__contents .fx-nickname {margin:0.687rem 0 -0.938rem;}
+.fx-nickname__modaltit {font-weight:400;font-size:1rem;line-height:1.3125rem;}
+.fx-nickname .input__guide-text--green {position:absolute;margin-top:0.625rem;color:#009591;}
+.fx-nickname--leave {margin-bottom:0.375rem;text-align:center;font-size:1.25rem;font-weight:400;color:#000;}
+.fx-mypage .button-select {width:13.750em;padding-bottom:0.813rem;}
+.fx-mypage .button-select__item {height:1.875rem;padding-left:0;border:none;font-size:1.25rem;background-position:98% 50%;}
+.fx-mypage--arrow {margin:0 auto;color:#333;}
+.fx-mypage--arrow::after {width:0.375rem;height:0.688rem;background:url(../../resource/images/fxmarket/arrow_right_17x31_333.png) 0 0 no-repeat;background-size:100% auto;}
+.fx-level {position:relative;}
+.fx-level-icon {display:block;position:absolute;top:0;right:0;width:4rem;height:4.875rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
+.fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/icon_level_01.png);}
+.fx-challenge-icon {display:flex;align-items:center;}
+[class^='fx-challenge__icon--'] {display:block;width:1.313rem;height:1.313rem;margin-right:0.625rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
+.fx-challenge__icon--01 {background-image:url(../../resource/images/fxmarket/icon_challenge_01.png);}
+.fx-challenge__icon--02 {background-image:url(../../resource/images/fxmarket/icon_challenge_02.png);}
+.fx-challenge__icon--03 {background-image:url(../../resource/images/fxmarket/icon_challenge_03.png);}
+.fx-score__point {color:#009591;}
+.fx-score__point span {margin:0 0.375rem 0 0;}
+.fx-score__point--num {margin-left:0.813rem;font-weight:300;color:#000;}
+.fx-score__item {display:flex;justify-content:space-between;align-items:center;margin-top:0.438rem;font-size:0.813rem;font-weight:300;color:#757575;}
+.fx-score__text--lv {margin-left:0.188rem;color:#009591;}
+.fx-score__progress[value] {appearance:none;overflow:hidden;width:100%;display:flex;align-items:center;margin-top:0.625rem;border:1px solid #d9d9d9;border-radius:1rem;}
+.fx-score__progress[value]::-webkit-progress-bar {
+    background-color:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2) inset, 0 0 10px black;
+}
+.fx-score__progress[value]::-webkit-progress-value {
+    border-radius:15px;
+    background-color:#0faca8;
+    background-image:linear-gradient(to left, #0faca8, #3498db);
+    box-shadow:0 2px 5px rgba(255,255,255,0.5) inset;
+}
+.fx-mybox {margin-top:2.5rem;}
+.fx-mybox__wrap {display:flex;justify-content:space-between;align-items:center;}
+.fx-mybox__item {flex:1;padding: 1.25rem 0;text-align:center;}
+.fx-mybox__item::before {content:'';display:block;width:2.875rem;height:2.938rem;margin:0 auto;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
+.fx-mybox__item--ico01::before {background-image:url(../../resource/images/fxmarket/icon_mypage_box01.png);}
+.fx-mybox__item--ico02::before {background-image:url(../../resource/images/fxmarket/icon_mypage_box02.png);}
+.fx-mybox__title {display:block;margin-top:0.375rem;}
+.fx-mybox__count {display:inline-block;min-width:2rem;height:1rem;padding:0.063rem 0.625rem 0;line-height:1.2;border-radius:0.5rem;font-size:0.75rem;background:#009591;color:#fff;}
+.list-section--fxm {margin:0 0 -1.875rem;}
+.list-wrap--line,
+.list-wrap--line .list-wrap__item {border:0;}
+.list-section--fxm .list-wrap__item + .list-wrap__item {border-top:1px solid #e7e9ee;}
+.list-section--fxm .list-button-wrap--large .list-wrap__anchor {padding-left:0;padding-right:1.25rem;}
+.list-section--fxm .list-button-wrap--large .list-wrap__anchor--bullet::after {right:0;}
+/* 마이페이지 - FX Score 상세 */
+.fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
+.fx-score--detail .card__wrap {padding:1.188rem;}
+.fx-score--detail .fx-score__item {font-size:0.875rem;}
+.fx-searchlist--bg {background-color:#f9f9fb;}
+.white-nowrap {white-space:nowrap !important;}
+.fx-scorelist .tit-default {margin-left:0;margin-right:0;}
+.fx-scorelist__item {margin-top:2.125rem;}
+/* 마이페이지 - 등급안내 */
+.fx-levelinfo .additional-item {margin-right:-0.813rem;}
+.fx-levelinfo .button-select__item {height:auto;border:none;}
+.fx-mylevel {margin-top:-1.75rem;padding:1.875rem 0 2.5rem;background-color:#f9f9fb;}
+.fx-mylevel .fx-level-icon {position:static;width:3.438rem;height:4.188rem;margin-right:1.25rem;}
+.fx-mylevel__wrap {display:flex;align-items:center;padding:0.75rem 0;}
+.fx-mylevel__lv {font-weight:500;font-size:1.25rem;}
+.fx-mylevel__desc {color:#666;}
+/* 마이페이지 - 거래한도 관리 */
+.amount-item--fxlimit .amount {font-weight:500;letter-spacing:0;}
 
 /* odometer css */
 .odometer.odometer-auto-theme, 

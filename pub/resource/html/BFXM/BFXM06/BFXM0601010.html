@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+</style>
+</head>
+<body class="bg-white">
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">마이페이지</h1>
+        <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- Content -->
+    <div id="content" class="app-main app-main--without-footer fxmarket">
+        <div class="fx-mypage background-gray">
+            <div class="container fx-level">
+                <span class="fx-level-icon level-1"><em class="offscreen">등급1</em></span>
+                <div class="fx-challenge-icon">
+                    <i class="fx-challenge__icon--01"></i>
+                    <i class="fx-challenge__icon--02"></i>
+                    <i class="fx-challenge__icon--03"></i>
+                </div>
+            </div>
+            <div class="container">
+                <div class="button-select selected button-select__edit">
+                    <button type="button" title="닉네임 변경하기" class="button button-select__item">다동한외빌딩큰손개미</button>
+                </div>
+            </div>
+            <div class="container fx-score">
+                <button type="button" class="fx-score__point button-arrow">F<span class="color-red">X</span> Score <em class="fx-score__point--num">23,100</em></button>
+                <progress min="0" max="100" value="95" class="fx-score__progress"></progress>
+                <div class="fx-score__item">
+                    <span class="fx-score__title">다음 등급까지 <em>1,900</em></span>
+                    <em class="fx-score__text">25,000 <span class="fx-score__text--lv">Lv2</span></em>
+                </div>
+            </div>
+            <div class="container fx-mybox">
+                <div class="card__wrap">
+                    <ul class="fx-mybox__wrap">
+                        <li class="fx-mybox__item fx-mybox__item--ico01">
+                            <em class="fx-mybox__title">마이커뮤니티</em>
+                            <span class="fx-mybox__count">999+</span>
+                        </li>
+                        <li class="fx-mybox__item fx-mybox__item--ico02">
+                            <em class="fx-mybox__title">FX 마이챌린지</em>
+                            <span class="fx-mybox__count">9</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <button type="button" class="button-arrow fx-mypage--arrow">자주하는 질문</button>
+            </div>
+        </div>
+        
+        <div class="list-section list-section--fxm">
+            <div class="container">
+                <ul class="list-wrap list-wrap--line">
+                    <li class="list-wrap__item list-button-wrap list-button-wrap--large">
+                        <button type="button" class="list-wrap__anchor list-wrap__anchor--bullet">
+                            <span class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">FX마켓 계좌관리</strong>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="list-wrap__item list-button-wrap list-button-wrap--large">
+                        <button type="button" class="list-wrap__anchor list-wrap__anchor--bullet">
+                            <span class="list-wrap__box">
+                                <strong class="list-wrap__title list-wrap__title--value">FX마켓 거래한도관리</strong>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="spacer">
+        <ul class="row-list push-alarm">
+            <li class="row-list__item">
+                <div class="row-list__link">
+                    <div class="row-list__text">
+                        <span class="row-list__title">FX마켓 푸시알림 설정</span>
+                        <p class="row-list__phrase">FX마켓 거래 알림 및 이벤트, 혜택 등의 안내를 위해 <em class="color-green">설정 &gt; 푸시알림</em> 설정으로 이동해요.</p>
+                    </div>
+                    <div class="row-list__anchor">
+                        <label class="switch">
+                            <input type="checkbox" title="FX마켓 푸시알림 설정여부">
+                            <span class="switch__toggle" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="row-list__item">
+                <div class="row-list__link">
+                    <div class="row-list__text">
+                        <span class="row-list__title">FX마켓 메인 사용</span>
+                        <p class="row-list__phrase">하나원큐 앱 로그인 시 FX마켓으로 설정해요.</p>
+                    </div>
+                    <div class="row-list__anchor">
+                        <label class="switch">
+                            <input type="checkbox" title="FX마켓 메인사용 설정여부">
+                            <span class="switch__toggle" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="row-list__item">
+                <div class="row-list__link">
+                    <div class="row-list__text">
+                        <span class="row-list__title">FX마켓 활동정보공개 동의</span>
+                        <p class="row-list__phrase">커뮤니티 및 자랑하기 등 정보 공유를 할 수 있어요.</p>
+                    </div>
+                    <div class="row-list__anchor">
+                        <label class="switch">
+                            <input type="checkbox" title="FX마켓 활동정보공개 동의 설정여부">
+                            <span class="switch__toggle" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="guide-wrap">
+                <div class="guide-wrap__list guide-wrap__list--small">
+                    <p class="guide-wrap__item color-7575">서비스 이용을 원하지 않으시면 <button type="button" class="button-underline">서비스 해지</button>를 진행해주세요.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Content -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
