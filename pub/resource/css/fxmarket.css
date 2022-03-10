@@ -206,6 +206,8 @@
 .list-section--fxm .list-wrap__item + .list-wrap__item {border-top:1px solid #e7e9ee;}
 .list-section--fxm .list-button-wrap--large .list-wrap__anchor {padding-left:0;padding-right:1.25rem;}
 .list-section--fxm .list-button-wrap--large .list-wrap__anchor--bullet::after {right:0;}
+.push-alarm--fxm .row-list__text {width:100%;}
+.push-alarm--fxm .row-list__phrase--em {display:inline-block;color:#009591;}
 /* 마이페이지 - FX Score 상세 */
 .fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
 .fx-score--detail .card__wrap {padding:1.188rem;}
