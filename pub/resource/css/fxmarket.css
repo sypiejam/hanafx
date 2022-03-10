@@ -219,13 +219,20 @@
 /* 마이페이지 - 등급안내 */
 .fx-levelinfo .additional-item {margin-right:-0.813rem;}
 .fx-levelinfo .button-select__item {height:auto;border:none;}
+.fx-levelinfo-icon {display:flex;align-items:center;justify-content:center;}
+.fx-levelinfo-icon::before {content:'';display:inline-block;width:0.625rem;height:0.625rem;margin-right:0.375rem;background-position:0 0;background:url(../../resource/images/fxmarket/icon_fxlevel.png) no-repeat;background-size:100% auto;}
+.fx-levelinfo-icon.level-1::before {background-position:0 0;}
+.fx-levelinfo-icon.level-2::before {background-position:0 -0.625rem;}
+.fx-levelinfo-icon.level-3::before {background-position:0 -1.25rem;}
+.fx-levelinfo-icon.level-4::before {background-position:0 -1.875rem;}
+.fx-levelinfo-icon.level-5::before {background-position:0 -2.5rem;}
 .fx-mylevel {margin-top:-1.75rem;padding:1.875rem 0 2.5rem;background-color:#f9f9fb;}
 .fx-mylevel .fx-level-icon {position:static;width:3.438rem;height:4.188rem;margin-right:1.25rem;}
 .fx-mylevel__wrap {display:flex;align-items:center;padding:0.75rem 0;}
 .fx-mylevel__lv {font-weight:500;font-size:1.25rem;}
 .fx-mylevel__desc {color:#666;}
 /* 마이페이지 - 거래한도 관리 */
-.amount-item--fxlimit .amount {font-weight:500;letter-spacing:0;}
+.amount-item--fxlimit .amount {font-weight:500;font-size:1.125rem;letter-spacing:0;}
 
 /* odometer css */
 .odometer.odometer-auto-theme, 
