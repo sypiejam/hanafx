@@ -26,46 +26,40 @@
     <!-- //header -->
     <!-- Content -->
     <div id="content" class="app-main app-main--without-footer fxmarket">
+        <!-- 기획&디자인 변경예정 / 등급 및 챌린지 아이콘 디자인 미정 -->
         <div class="fx-mypage background-gray">
-            <div class="container fx-level">
-                <span class="fx-level-icon level-1"><em class="offscreen">등급1</em></span>
-                <div class="fx-challenge-icon">
-                    <i class="fx-challenge__icon--01"></i>
-                    <i class="fx-challenge__icon--02"></i>
-                    <i class="fx-challenge__icon--03"></i>
-                </div>
-            </div>
-            <div class="container">
+            <div class="container fx-myinfo">
+                <span class="fx-level-icon level-1"><em class="offscreen">Level 1</em></span>
                 <div class="button-select selected button-select__edit">
                     <button type="button" title="닉네임 변경하기" class="button button-select__item">다동한외빌딩큰손개미</button>
                 </div>
             </div>
             <div class="container fx-score">
                 <button type="button" class="fx-score__point button-arrow">F<span class="color-red">X</span> Score <em class="fx-score__point--num">23,100</em></button>
-                <progress min="0" max="100" value="95" class="fx-score__progress"></progress>
+                <progress min="0" max="100" value="92.4" class="fx-score__progress"></progress>
                 <div class="fx-score__item">
                     <span class="fx-score__title">다음 등급까지 <em>1,900</em></span>
                     <em class="fx-score__text">25,000 <span class="fx-score__text--lv">Lv2</span></em>
                 </div>
             </div>
-            <div class="container fx-mybox">
-                <div class="card__wrap">
-                    <div class="fx-mybox__wrap">
-                        <button type="button" class="fx-mybox__item fx-mybox__item--ico01">
-                            <em class="fx-mybox__title">마이커뮤니티</em>
-                            <span class="fx-mybox__count">999+</span>
-                        </button>
-                        <button type="button" class="fx-mybox__item fx-mybox__item--ico02">
-                            <em class="fx-mybox__title">FX 마이챌린지</em>
-                            <span class="fx-mybox__count">9</span>
-                        </button>
-                    </div>
+            <div class="tit-default">
+                <a href="#none" class="tit-default__link">마이챌린지</a>
+            </div>
+            <div class="container fx-challenge">
+                <div class="fx-challenge-badge">
                 </div>
+            </div>
+            <div class="tit-default">
+                <a href="#none" class="tit-default__link">마이커뮤니티</a>
+            </div>
+            <div class="container fx-community">
+                
             </div>
             <div class="container">
                 <button type="button" class="button-arrow fx-mypage--arrow">자주하는 질문</button>
             </div>
         </div>
+        <!-- //기획&디자인 변경예정 / 등급 및 챌린지 아이콘 디자인 미정 -->
         
         <div class="list-section list-section--fxm">
             <div class="container">
@@ -91,18 +85,18 @@
         <div class="fx-pushalarm">
             <ul class="row-list push-alarm">
                 <li class="row-list__item">
-                    <div class="row-list__link">
+                    <a href="#none" class="row-list__link">
                         <div class="row-list__text">
                             <span class="row-list__title">FX마켓 푸시알림 설정</span>
                             <p class="row-list__phrase">FX마켓 거래 알림 및 이벤트, 혜택 등의 안내를 위해 <em class="row-list__phrase--em">설정 &gt; 푸시알림</em> 설정으로 이동해요.</p>
                         </div>
                         <div class="row-list__anchor">
-                            <label class="switch">
-                                <input type="checkbox" title="FX마켓 푸시알림 설정여부">
-                                <span class="switch__toggle" aria-hidden="true"></span>
-                            </label>
+                            <div class="row-list__anchor">
+                                <span class="state">ON</span>
+                                <i class="icon-arrow" aria-hidden="true"></i>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
                 <li class="row-list__item">
                     <div class="row-list__link">
@@ -129,6 +123,18 @@
                                 <input type="checkbox" title="FX마켓 활동정보공개 동의 설정여부">
                                 <span class="switch__toggle" aria-hidden="true"></span>
                             </label>
+                        </div>
+                    </div>
+                </li>
+                <li class="row-list__item">
+                    <div class="row-list__link">
+                        <div class="row-list__text">
+                            <span class="row-list__title">FX마켓 맞춤메뉴</span>
+                            <p class="row-list__phrase">원큐 마춤메뉴 설정에 FX마켓을 추가합니다.<br>추가 후 원큐 메인 &gt; 맞춤설정에서 해제할 수 있습니다.</p>
+                        </div>
+                        <div class="row-list__anchor">
+                            <button type="button" class="button-underline">설정</button>
+                            <!-- <em class="font-xsmall color-green">설정완료</em> -->
                         </div>
                     </div>
                 </li>
