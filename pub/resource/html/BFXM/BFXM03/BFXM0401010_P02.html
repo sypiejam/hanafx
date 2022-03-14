@@ -48,23 +48,23 @@
                 </div>
             </div>
             <div class="modal__contents modal__contents--modi">
+                <!-- 2022-03-14 항목 추가 및 변경(v0.9) st -->
                 <div class="container container--full">
                     <div class="list-section">
                         <ul class="list-wrap">
                             <li class="list-wrap__item align-top">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">사는금액</strong>
+                                    <strong class="list-wrap__title list-wrap__title--value">환율</strong>
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
-                                    <strong class="list-wrap__text list-wrap__text--value eng">
-                                        USD <em>500,000</em><br>
-                                        (KRW <em>597,750,000</em>)
-                                    </strong>
+                                    <strong class="list-wrap__text list-wrap__text--value"><em class="eng">1,205.50</em></strong>
                                 </div>
                             </li>
+                        </ul>
+                        <ul class="list-wrap" style="display: none;" data-element="toggle-list">
                             <li class="list-wrap__item">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">거래후 외화 잔액</strong>
+                                    <strong class="list-wrap__title list-wrap__title--value">거래 후 외화 잔액</strong> <!-- 2022-03-14 띄어쓰기(v0.9) -->
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value eng">
@@ -74,21 +74,39 @@
                             </li>
                             <li class="list-wrap__item">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">우대금액</strong>
+                                    <strong class="list-wrap__title list-wrap__title--value">외화계좌</strong>
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value">
-                                        적용예상환율 <em class="eng">1,195.50</em><br>
-                                        환율우대 <em class="eng">80</em>%
+                                        <em class="account">하나밀리언달러통장</em><br>
+                                        <em class="number eng">123-123456-12345</em>
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">원화계좌</strong> 
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value">
+                                        <em class="account">급여하나통장</em><br>
+                                        <em class="number eng">123-123456-12345</em>
                                     </strong>
                                 </div>
                             </li>
                         </ul>
-                        <div class="fx-refresh fx-refresh__modal">
-                            <div class="fx-refresh__txt">
-                                <em class="fx-refresh__txt--sec">30</em>초 후 환율정보 갱신<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <!-- 2022-03-14 항목 추가 및 변경(v0.9) end -->
+                <!-- 2022-03-14 마크업 추가(v0.9) -->
+                <div class="container flex mgr0">
+                    <button type="button" class="button-simple button-simple--right mgt0" data-element="toggle-btn">펼치기</button>
+                </div>
+                <!-- 2022-03-14 마크업 위치변경(v0.9) -->
+                <div class="fx-refresh fx-refresh__modal">
+                    <div class="fx-refresh__txt">
+                        <em class="fx-refresh__txt--sec">30</em>초 후 환율정보 만료<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
+                        <!-- 2022-03-14 문구변경 갱신 > 만료(v0.9) -->
                     </div>
                 </div>
             </div>
