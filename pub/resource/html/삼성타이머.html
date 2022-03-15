@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://dev12-mbp.hanabank.com:18080/pub/resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://dev12-mbp.hanabank.com:18080/pub/resource/library/slick/slick.js"></script>
+    <script src="https://dev12-mbp.hanabank.com:18080/pub/resource/library/dnd/touch-dnd.js"></script>
+    <script src="https://dev12-mbp.hanabank.com:18080/pub/resource/js/ui/pualugin.js"></script>
+    <script src="https://dev12-mbp.hanabank.com:18080/pub/resource/js/ui/common.js"></script>
+    <style>
+        ul,li {
+            list-style: none;
+            display: inline-block;
+        }
+        .num {padding:1rem;background-color: #000000;color:#fff;font-size: 1rem;border-radius: 5px;}
+    </style>
+</head>
+
+<body>
+    <div class="countdownDiv_352517 countdownDiv" id="countdownDiv_352517_0" data-dt="2022-03-22" data-hr="00" data-mn="00"></div>
+
+    <script>
+        $(function () {
+            $(".countdownDiv_352517").each(function (i) {
+			    if ($(this).attr("id") != "") {
+			    	var id = $(this).attr("id");
+			    	var id2 = id;
+					id2 = setInterval(function () {
+						showCarouselCountdown(id, id2, $("#" + id).data("dt"), $("#" + id).data("hr"), $("#" + id).data("mn"));
+					}, 1000);
+				}
+			});
+        });
+
+        function showCarouselCountdown(targetId, timerId, dt, hr, mn) {
+            try {
+                var _second = 1000;
+                var _minute = _second * 60;
+                var _hour = _minute * 60;
+                var _day = _hour * 24;
+                var date = dt.split("-");
+                var targetDate = new Date(Number(date[0]), Number(date[1]) - 1, Number(date[2]), Number(hr), Number(mn), 00);
+                var now = new Date().getTime();
+                var distDt = targetDate.getTime() - now;
+                var htmlText = '';
+
+                var days = "00";
+                var hours = "00";
+                var minutes = "00";
+                var seconds = "00";
+                if (distDt < 0) {
+                    clearInterval(timerId);
+                    $("#" + targetId).remove();
+                }
+                else {
+                    days = Math.floor(distDt / _day);
+                    days = (days < 10) ? "0" + days : days;
+                    hours = Math.floor((distDt % _day) / _hour);
+                    hours = (hours < 10) ? "0" + hours : hours;
+                    minutes = Math.floor((distDt % _hour) / _minute);
+                    minutes = (minutes < 10) ? "0" + minutes : minutes;
+                    seconds = Math.floor((distDt % _minute) / _second);
+                    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+                    htmlText += '<ul>';
+                    htmlText += '	<li>';
+                    htmlText += '		<div class="num">' + days + '<span class="txt">일</span></div>';
+                    htmlText += '	</li>';
+                    htmlText += '	<li>';
+                    htmlText += '		<div class="num">' + hours + '<span class="txt">시간</span></div>';
+                    htmlText += '	</li>';
+                    htmlText += '	<li>';
+                    htmlText += '		<div class="num">' + minutes + '<span class="txt">분</span></div>';
+                    htmlText += '	</li>';
+                    htmlText += '	<li>';
+                    htmlText += '		<div class="num">' + seconds + '<span class="txt">초</span></div>';
+                    htmlText += '	</li>';
+                    htmlText += '</ul>';
+
+                    $("#" + targetId).html(htmlText);
+                }
+            } catch (e) {
+                clearInterval(timerId);
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>
