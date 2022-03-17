@@ -51,7 +51,7 @@
 .fx-rate__item--del {font-size:1rem;color:#61605c;}
 .fx-rate__item--ins {font-size:1.5rem;font-weight:500;text-decoration:none;color:#000;line-height:1.25;}
 .fx-rateboard .fx-refresh {position:absolute;top:4.6rem;right:1.5rem;}
-.fx-refresh .fx-refresh__txt {font-size:0.875rem;color:#555;}
+.fx-refresh__txt {font-size:0.875rem;color:#555;}
 .fx-refresh__modal {margin-top:1.125rem;text-align:center;}
 .fx-rateboard .fx-spread {position:absolute;bottom:2rem;left:2.215rem;font-size:0.813rem;}
 .fx-spread__grade {display:inline-block;padding-left:1.125rem;font-weight:500;}
@@ -173,23 +173,31 @@
 .fx-myinfo .button-select__item {height:1.875rem;padding-left:0;border:none;font-size:1.25rem;letter-spacing:-0.5px;background-position:95% 50%;}
 .fx-level-icon {display:block;width:4rem;height:4.875rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
 .fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/dummy_icon_level_01.png);}
-/* .fx-challenge-icon {display:flex;align-items:center;}
-[class^='fx-challenge__icon--'] {display:block;width:1.313rem;height:1.313rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-[class^='fx-challenge__icon--']:not(:first-child) {margin-left:0.625rem;}
-.fx-challenge__icon--01 {background-image:url(../../resource/images/fxmarket/dummy_icon_challenge_01.png);}
-.fx-challenge__icon--02 {background-image:url(../../resource/images/fxmarket/dummy_icon_challenge_02.png);}
-.fx-challenge__icon--03 {background-image:url(../../resource/images/fxmarket/dummy_icon_challenge_03.png);} */
+/* s마이페이지 수정중 */
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
 .fx-score__point--num {margin-left:0.813rem;font-weight:300;color:#000;}
 .fx-score__item {display:flex;justify-content:space-between;align-items:center;margin-top:0.438rem;font-size:0.813rem;font-weight:300;color:#757575;}
-.fx-score__text--lv {margin-left:0.188rem;color:#009591;}
+.fx-score__text--lv {margin-left:0.313rem;color:#009591;}
 .fx-score__progress[value] {appearance:none;overflow:hidden;width:100%;display:flex;align-items:center;margin-top:0.625rem;border:1px solid #d9d9d9;border-radius:1rem;}
 .fx-score__progress[value]::-webkit-progress-bar {background-color:#f7f7f7;}
 .fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);}
 
+.fx-challenge-badge {padding:1.25rem 0.938rem;border-radius:1.25rem;background:#ececee;}
+.fx-challenge-badge .no-data {padding:1.813rem 0;}
+.fx-challenge-badge .inner-box {overflow:hidden;overflow-x:auto;}
+.fx-challenge-badge .inner-list {display:flex;flex-wrap:nowrap;}
+/* .fx-challenge-badge__item {display:inline-block;} */
+.fx-challenge-badge__item:not(:first-child) {margin-left:0.625rem;}
+.fx-challenge-badge__text {display:block;margin-top:5px;text-align:center;font-size:0.875rem;}
+[class^='fx-challenge-badge__icon--'] {}
+[class^='fx-challenge-badge__icon--']::before {content:'';display:block;width:3.438rem;height:3.438rem;margin:0 auto;border-radius:50%;border:3px solid #004cf5;background-color:#fff4a3;}
+.fx-challenge-badge__icon--01 {}
+
 .list-section--fxm {margin:0 0 -1.875rem;}
+hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
+/* e마이페이지 수정중 */
 .list-wrap--line,
 .list-wrap--line .list-wrap__item {border:0;}
 .list-section--fxm .list-wrap__item + .list-wrap__item {border-top:1px solid #e7e9ee;}
@@ -201,7 +209,7 @@
 /* 마이페이지 - FX Score 상세 */
 .fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
 .fx-score--detail .card__wrap {padding:1.188rem;}
-.fx-score--detail .fx-score__point {font-size:1.125rem;font-weight:500;}
+.fx-score--detail .fx-score__point {display:flex;align-items:center;height:1.375rem;letter-spacing:0;font-size:1.125rem;font-weight:500;}
 .fx-score--detail .fx-score__point--num {font-weight:400;}
 .fx-score--detail .fx-score__item {font-size:0.875rem;}
 .fx-searchlist--bg {background-color:#f9f9fb;}
@@ -225,6 +233,9 @@
 .fx-mylevel__desc {color:#666;}
 /* 마이페이지 - 거래한도 관리 */
 .amount-item--fxlimit .amount {font-weight:500;font-size:1.125rem;letter-spacing:0;}
+
+/* 부가서비스 */
+.fx-service__keyvisual {margin-top:-1.25rem;padding:1.875rem 1.5rem;}
 
 /* odometer css */
 .odometer.odometer-auto-theme, 
