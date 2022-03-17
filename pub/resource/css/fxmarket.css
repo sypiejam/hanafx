@@ -112,7 +112,7 @@
 .label-line__item--mar:after {background:url(../../resource/images/fxmarket/bg_label_tail_green.png) no-repeat 0 0 / 100%;}
 .label-line__item--reserve {border-color:#ee9d46;color:#ee9d46;}
 .label-line__item--reserve:after {background:url(../../resource/images/fxmarket/bg_label_tail_yellow.png) no-repeat 0 0 / 100%;}
-.fx-exchange {overflow:hidden;padding-top:1px;}
+.fx-exchange {overflow:hidden;padding:1px 0;}
 .fx-exchange .checkbox-wrap {width:2.375rem;height:3.5rem;}
 .fx-exchange .checkbox-wrap__label {display:block;width:100%;padding-left:0;background:url(../../resource/images/fxmarket/btn_currency_switch.png) no-repeat 0 50% / 1.438rem;}
 .fx-exchange .checkbox-wrap__label:before {content:none;}
