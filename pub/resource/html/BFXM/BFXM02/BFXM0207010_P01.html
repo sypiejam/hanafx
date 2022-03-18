@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">출석체크</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main fxmarket">
+        <div class="container">
+            <div class="button-wrap">
+                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0207010_P01">출석체크 당첨</button>
+            </div>
+        </div>
+    </div>
+    <!-- //content -->
+</div>
+<div id="BFXM0207010_P01" class="modal modal--confirm is-open" data-element="modal__element">
+    <div class="modal__container modal__container--interval" data-element="modal__element-container">
+        <div class="modal__header">
+            <strong class="modal__header--title">축하합니다!</strong>
+        </div>
+        <div class="modal__contents">
+            <div class="container">
+                <strong>축하합니다!</strong>
+                <p><em>99</em>번째 출석 FX부스터 당첨</p>
+            </div>
+    
+            <div class="container">
+                <strong>FX 부스터</strong>
+                <span>2022.04.25(당일)</span>
+                <p>FX거래시 최고우대율이 자동 적용됩니다.</p>
+            </div>
+            
+            <div class="container">
+                <div class="guide-wrap">
+                    <ul class="guide-list">
+                        <li class="guide-list__item">환율부스터는 즉시거래에 한합니다. (지정/예약/마환율 거래 제외)</li>
+                        <li class="guide-list__item">유효기간은 당일에 한하여 경과시 자동소멸됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button-wrap">
+            <button type="button" class="button button--negative button--span3" data-element="modal__close">닫기</button>
+            <button type="button" class="button button--positive">FX거래하기</button>
+        </div>
+        <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+    </div>
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
