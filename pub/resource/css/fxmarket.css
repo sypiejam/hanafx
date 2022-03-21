@@ -245,8 +245,9 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-attend-animation {position:relative;width:11.813rem;height:11.813rem;margin:2.25rem auto 1.625rem;}
 .fx-attend-animation .circle {display:block;width:11.813rem;height:11.813rem;border-radius:50%;background:#ffc62d;}
 .fx-attend-animation .rocket {position:absolute;top:34px;left:8px;display:block;width:8.375rem;height:9.75rem;background:url(../../resource/images/fxmarket/dummy_img_rocket.png) no-repeat 0 0 / 100%;}
-.fx-attend--modal {margin-top:-1rem;}
+.fx-attend--modal {max-height:49vh !important;margin-top:-1rem;}
 .fx-attend--modal .fx-attend-animation {margin:1.25rem auto 0.625rem;}
+.fx-attend--modal hr.content-devider {margin:1.875rem 0 0}
 
 /* odometer css */
 .odometer.odometer-auto-theme, 
