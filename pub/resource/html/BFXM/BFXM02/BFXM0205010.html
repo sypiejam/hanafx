@@ -36,7 +36,7 @@
 .floating--active .floating__button .icon--expand {opacity: 0;}
 .floating--active .floating__button .icon--collapse { background-image: url(../../../../resource/images/C/icon_floating_close.png); -webkit-transform: translate(-50%, -50%) rotate(150deg); -o-transform: translate(-50%, -50%) rotate(150deg); -moz-transform: translate(-50%, -50%) rotate(150deg); transform: translate(-50%, -50%) rotate(150deg); opacity: 1; transform: translate(-50%, -50%) rotate(0deg); } */
 
-.fx-service__keyvisual--toptrader {position:relative;padding-top:106%;background:#373a4d}
+.fx-service__keyvisual--toptrader {overflow:hidden;position:relative;padding-top:106%;background:#373a4d}
 .fx-toptrader__list {position:relative;display:flex;margin:0.625rem 1.5rem;border:1px solid #d4d4d4;border-radius:0.75rem;}
 .fx-toptrader__list:nth-child(1) {border-color:#e1cc9e;}
 .fx-toptrader__list:nth-child(2) {border-color:#adadc8;}
@@ -48,7 +48,7 @@
 .fx-toptrader__list .fx-level-icon {width:1.25rem;height:1.25rem;}
 .fx-toptrader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
 .fx-toptrader__info {flex:1;padding:1.125rem 1rem 0.813rem 1.25rem;}
-.fx-toptrader__nickname {margin-left:0.5rem;font-size:0.875rem;font-weight:300}
+.fx-toptrader__nickname {margin-left:0.5rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
 .fx-challenge__badge {display:flex;margin-left:0.5rem;}
 .fx-challenge__badge--item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem}
 .fx-challenge__badge--red {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_01.png) no-repeat 0 0 / 100%}
@@ -95,7 +95,7 @@
 .img__keyvisual--txt {position:absolute;top:79vw;left:0;right:0;}
 
 @keyframes trophy {
-    0% {transform: translateY(40px)}
+    0% {transform: translateY(20px)}
     60% {transform: translateY(-10px)}
     100% {transform: translateY(0)}
 }
