@@ -90,14 +90,38 @@
     54% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
     57% {-webkit-transform: rotate(0);transform: rotate(0)}
 }
-.img__keyvisual--trophy {position:absolute;top:12vw;left:0;right:0;animation: trophy 2s ease-in-out;}
-.img__keyvisual--particle {position:absolute;top:0;left:0;right:0;}
+.img__keyvisual--trophy {
+    position:absolute;top:12vw;left:0;right:0;
+    -webkit-animation-name: trophy;
+    animation-name: trophy;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+.img__keyvisual--particle {position:absolute;top:0;left:0;right:0;
+    -webkit-animation-name: particle;
+    animation-name: particle;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards;
+}
 .img__keyvisual--txt {position:absolute;top:79vw;left:0;right:0;}
-
+@keyframes particle {
+    0% {-webkit-transform:scale(1);transform: scale(1)}
+    100% {-webkit-transform:scale(1.1);transform: scale(1.1)}
+}
 @keyframes trophy {
-    0% {transform: translateY(20px)}
-    60% {transform: translateY(-10px)}
-    100% {transform: translateY(0)}
+    0% {-webkit-transform:translateY(20px);transform: translateY(20px);}
+    60% {-webkit-transform:translateY(-10px);transform: translateY(-10px);}
+    100% {-webkit-transform:translateY(0);transform: translateY(0);}
 }
 .fx-share__content {text-align:center;}
 .fx-share__img {width:50%;margin:auto;}
@@ -226,7 +250,7 @@
                     <div class="fx-toptrader__info">
                         <div class="wrap--flex">
                             <span class="fx-level-icon level-1"></span>
-                            <span class="fx-toptrader__nickname">개구리</span>
+                            <span class="fx-toptrader__nickname">MUZIKTIGER</span>
                             <div class="fx-challenge__badge">
                                 <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
                             </div>
@@ -371,7 +395,7 @@ $(function(){
     $(window).scroll(function(){
         var visualH = $('.fx-service__keyvisual--toptrader').innerHeight();
         var scrollT = $(this).scrollTop();
-        var scale = (1 + scrollT / visualH).toFixed(2);
+        var scale = (1.1 + scrollT / visualH).toFixed(2);
       
         $('.img__keyvisual--particle').css({
             '-webkit-transform' : 'scale('+ scale +')',
