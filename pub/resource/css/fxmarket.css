@@ -237,6 +237,17 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* 부가서비스 */
 .fx-service__keyvisual {margin-top:-1.25rem;padding:1.875rem 1.5rem;}
 
+/* 부가서비스 - 출석체크 */
+.font-xxlarge {font-size:1.5rem !important;}
+.fx-attend__title {display:block;width:12.688rem;height:1.375rem;margin:0.875rem auto 1.313rem;background:url(../../resource/images/fxmarket/txt_attendevent.png) no-repeat 0 0 / 100%;}
+.fx-attend__desc {display:block;font-size:1.25rem;text-align:center;line-height:1.3;color:#000;font-weight:300;}
+.fx-attend__desc .color-green {font-weight:400;}
+.fx-attend-animation {position:relative;width:11.813rem;height:11.813rem;margin:2.25rem auto 1.625rem;}
+.fx-attend-animation .circle {display:block;width:11.813rem;height:11.813rem;border-radius:50%;background:#ffc62d;}
+.fx-attend-animation .rocket {position:absolute;top:34px;left:8px;display:block;width:8.375rem;height:9.75rem;background:url(../../resource/images/fxmarket/dummy_img_rocket.png) no-repeat 0 0 / 100%;}
+.fx-attend--modal {margin-top:-1rem;}
+.fx-attend--modal .fx-attend-animation {margin:1.25rem auto 0.625rem;}
+
 /* odometer css */
 .odometer.odometer-auto-theme, 
 .odometer.odometer-theme-minimal {position:relative;display:inline-block;vertical-align:middle;} 
