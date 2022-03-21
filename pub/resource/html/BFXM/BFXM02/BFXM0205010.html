@@ -14,99 +14,100 @@
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
-/* .floating { position:fixed;bottom:7.125rem;right:1.625rem;font-size:0;z-index: 21 }
-.floating__dim { display: none; position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
-.floating__dim.is-active { display: block; }
-.floating__button .icon { content: ''; position: absolute;left:50%;top:50%;display:block;-webkit-transform:translate(-50%, -50%);transform: translate(-50%, -50%);background-repeat: no-repeat;background-position: 0 0; background-size: 100%; opacity: 0; -webkit-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
-.floating__button { position: relative; display: flex; align-items: center; justify-content: center; width: 3.438rem;height: 3.438rem; border-radius: 50%; background:#326b8d; z-index: 21; box-shadow:5px 5px 16px 0px rgb(64 132 173 / 32%)}
-.floating__button .icon--start { width: 2.625rem; height: 1.75rem; background-image: url(../images/C/icon_floating_text.png); background-size:100%; background-position:center;}
-.floating__button .icon--expand {width: 2.625rem; height: 1.75rem; background-image: url(../images/C/icon_floating_text.png); background-size:100%; background-position:center; }
-.floating__button--expand .icon--expand { opacity: 1; }
-.floating__button .icon--collapse { opacity:1; position:absolute; top:50%; left:50%; width:1.063rem; height:1.063rem; background: url('../../../../resource/images/C/icon_floating_close.png') no-repeat center/cover; transform: translate(-50%, -50%) rotate(135deg); transition: all ease-out 0.2s; }
-.floating--active .floating__button--collapse { background:#326b8d;}
-.floating__sub { display: flex; align-items: center; }
-.floating__sub .text { display: block; font-size: 0.9375rem; color: #fff; font-weight: 400; white-space: nowrap; margin-right: -1.875rem; opacity: 0; transition: all 0.2s ease 0.2s; }
-.floating__sub .icon img { width:100%; }
-.floating__items { display: none; position: absolute; right: 0.25rem; bottom: 3.25rem; }
-.floating--active .floating__items { pointer-events:auto; }
-.floating__item { display: -webkit-box; display: -o-box; display: -moz-box; display: box; display: flex; -webkit-box-pack: end; -o-box-pack: end; -moz-box-pack: end; box-pack: end; justify-content: flex-end; margin-bottom: 0; opacity: 0; -webkit-transition: all 0.2s ease-in 0s; -o-transition: all 0.2s ease-in 0s; -moz-transition: all 0.2s ease-in 0s; transition: all 0.2s ease-in 0s; }
-.floating--active .floating__item { margin-bottom: 1.25rem; opacity: 1; }
-.floating--active .floating__item .text { margin-right: 0.875rem; opacity: 1; }
-.floating--active .floating__button .icon--start {opacity: 0;}
-.floating--active .floating__button .icon--expand {opacity: 0;}
-.floating--active .floating__button .icon--collapse { background-image: url(../../../../resource/images/C/icon_floating_close.png); -webkit-transform: translate(-50%, -50%) rotate(150deg); -o-transform: translate(-50%, -50%) rotate(150deg); -moz-transform: translate(-50%, -50%) rotate(150deg); transform: translate(-50%, -50%) rotate(150deg); opacity: 1; transform: translate(-50%, -50%) rotate(0deg); } */
-
-.fx-service__keyvisual--toptrader {position:relative;padding-top:106%;background:#373a4d}
-.fx-toptrader__list {position:relative;display:flex;margin:0.625rem 1.5rem;border:1px solid #d4d4d4;border-radius:0.75rem;}
-.fx-toptrader__list:nth-child(1) {border-color:#e1cc9e;}
-.fx-toptrader__list:nth-child(2) {border-color:#adadc8;}
-.fx-toptrader__list:nth-child(3) {border-color:#a8d9e2;}
-.fx-toptrader__list:before {content:'';position:absolute;top:-1px;bottom:-1px;left:-1px;width:3.5rem;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
-.fx-toptrader__list:nth-child(1):before {background:#f7b21f;}
-.fx-toptrader__list:nth-child(2):before {background:#6e6ec4;}
-.fx-toptrader__list:nth-child(3):before {background:#67cfe3;}
-.fx-toptrader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
-.fx-toptrader__info {flex:1;padding:1.25rem 1rem 0.813rem 1.25rem;}
-.fx-toptrader__nickname {margin-left:0.5rem;font-size:0.875rem;font-weight:300;line-height:1}
-.fx-challenge__badge {display:flex;margin-left:0.5rem;}
-.fx-challenge__badge--item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem}
-.fx-challenge__badge--red {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_01.png) no-repeat 0 0 / 100%}
-.fx-challenge__badge--green {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_02.png) no-repeat 0 0 / 100%}
-.fx-challenge__badge--blue {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_03.png) no-repeat 0 0 / 100%}
-.fx-toptrader__sum {display:block;margin:0.375rem 0 0 1.625rem;font-size:1.125rem;color:#000;line-height:1}
-.fx-mytoptrader {z-index:10;position:relative;top:-1px;background:#373a4d;}
-.fx-mytoptrader .fx-sticker {right:1.5rem;}
-.fx-mytoptrader .fx-toptrader__list {z-index:-1;align-items:center;margin:0;padding:0 1rem 0 1.5rem;border-width:0 0 1px 0;border-color:#f0f0f0;border-radius:1.5rem 1.5rem 0 0;background:#fff;}
-.fx-mytoptrader .fx-toptrader__info {padding:2.188rem 0 1rem 1.5rem}
-.fx-mytoptrader .fx-toptrader__list:before {content:none;}
-.fx-mytoptrader .fx-toptrader__rank {position:relative;max-width:4.813rem;width:auto;padding:0 0.75rem;border-radius:1.5rem;background:#c6c6c6;font-size:1.125rem;line-height:1.8;}
-.fx-mytoptrader .fx-toptrader__rank:before {content:'';z-index:-1;position:absolute;left:0.25rem;bottom:-0.5rem;width:1.438rem;height:0.75rem;background:url(../../../../resource/images/fxmarket/bg_toptrader_tail.png) no-repeat 50% 0 / 100%}
-.fx-mytoptrader .fx-sticker__txt {width:100%;margin-top:2rem}
-.fx-toptrader {padding-top:1.25rem;background:#fff}
+.fx-service__keyvisual--toptrader {overflow:hidden;position:relative;padding-top:106%;background:#373a4d}
+.fx-trader__list {position:relative;display:flex;margin:0.625rem 1.5rem;border:1px solid #d4d4d4;border-radius:0.75rem;}
+.fx-trader__list:nth-child(1) {border-color:#e1cc9e;}
+.fx-trader__list:nth-child(2) {border-color:#adadc8;}
+.fx-trader__list:nth-child(3) {border-color:#a8d9e2;}
+.fx-trader__list:before {content:'';position:absolute;top:-1px;bottom:-1px;left:-1px;width:3.5rem;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
+.fx-trader__list:nth-child(1):before {background:#f7b21f;}
+.fx-trader__list:nth-child(2):before {background:#6e6ec4;}
+.fx-trader__list:nth-child(3):before {background:#67cfe3;}
+.fx-trader__list .fx-level-icon {width:1.25rem;height:1.25rem;}
+.fx-trader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
+.fx-trader__info {flex:1;padding:1.125rem 1rem 0.813rem 1.25rem;}
+.fx-trader__nickname {margin-left:0.5rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
+.challenge__badge {display:flex;margin-left:0.5rem;}
+.challenge-badge__item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem;}
+.challenge-badge__item--red {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_01.png) no-repeat 0 0 / 100%;}
+.challenge-badge__item--green {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_02.png) no-repeat 0 0 / 100%;}
+.challenge-badge__item--blue {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_03.png) no-repeat 0 0 / 100%;}
+.fx-trader__sum {display:block;margin:0.375rem 0 0 1.625rem;font-size:1.125rem;color:#000;line-height:1}
+.fx-mytrader__wrap {z-index:10;position:relative;top:-1px;background:#373a4d;}
+.fx-mytrader__wrap .fx-sticker {right:1.5rem;}
+.fx-mytrader__wrap .fx-trader__list {z-index:-1;align-items:center;margin:0;padding:0 1rem 0 1.5rem;border-width:0 0 1px 0;border-color:#f0f0f0;border-radius:1.5rem 1.5rem 0 0;background:#fff;}
+.fx-mytrader__wrap .fx-trader__info {padding:2.188rem 0 1rem 1.5rem}
+.fx-mytrader__wrap .fx-trader__list:before {content:none;}
+.fx-mytrader__wrap .fx-trader__rank {position:relative;max-width:4.813rem;width:auto;padding:0 0.75rem;border-radius:1.5rem;background:#c6c6c6;font-size:1.125rem;line-height:1.8;}
+.fx-mytrader__wrap .fx-trader__rank:before {content:'';z-index:-1;position:absolute;left:0.25rem;bottom:-0.438rem;width:1.438rem;height:0.75rem;background:url(../../../../resource/images/fxmarket/bg_toptrader_tail.png) no-repeat 50% 0 / 100%;}
+.fx-mytrader__wrap .fx-sticker__txt {width:100%;margin-top:2rem;}
+.fx-trader__wrap {padding-top:1.25rem;background:#fff;}
 .icon-speaker {
-    position:absolute;top:20%;left:0;right:0;width:1.688rem;height:1.813rem;background:url(../../../../resource/images/fxmarket/icon_speaker.png) no-repeat 50% 0 / 100%;margin:auto;
-    -webkit-animation-name: speaker;
-    animation-name: speaker;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+    position:absolute;top:20%;left:0;right:0;width:1.688rem;height:1.813rem;margin:auto;background:url(../../../../resource/images/fxmarket/icon_speaker.png) no-repeat 50% 0 / 100%;
+    -webkit-animation-name:speaker;
+    animation-name:speaker;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-timing-function:ease-in;
+    animation-timing-function:ease-in;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
 }
 @keyframes speaker {
-    0% {-webkit-transform: scale(1);transform:scale(1);}        
-    10% {-webkit-transform: scale(1.4);transform:scale(1.4);}        
-    16%{-webkit-transform: scale(1);transform:scale(1);}        
-    30% {-webkit-transform: rotate(10deg);transform: rotate(10deg);} 
-    33% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
-    36% {-webkit-transform: rotate(10deg);transform: rotate(10deg);}
-    39% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
-    42% {-webkit-transform: rotate(10deg);transform: rotate(10deg);}
-    45% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
-    48% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
-    51% {-webkit-transform: rotate(-10deg);transform: rotate(-10deg);}
-    54% {-webkit-transform: rotate(10deg);transform: rotate(10deg)}
-    57% {-webkit-transform: rotate(0);transform: rotate(0)}
+    0% {-webkit-transform:scale(1);transform:scale(1);}        
+    10% {-webkit-transform:scale(1.4);transform:scale(1.4);}        
+    16%{-webkit-transform:scale(1);transform:scale(1);}        
+    30% {-webkit-transform:rotate(10deg);transform:rotate(10deg);} 
+    33% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
+    36% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
+    39% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
+    42% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
+    45% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
+    48% {-webkit-transform:rotate(10deg);transform:rotate(10deg)}
+    51% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
+    54% {-webkit-transform:rotate(10deg);transform:rotate(10deg)}
+    57% {-webkit-transform:rotate(0);transform:rotate(0)}
 }
-.img__keyvisual--trophy {position:absolute;top:12vw;left:0;right:0;animation: trophy 2s ease-in-out;}
-.img__keyvisual--particle {position:absolute;top:0;left:0;right:0;}
+.img__keyvisual--trophy {
+    position:absolute;top:12vw;right:0;left:0;
+    -webkit-animation-name:trophy;
+    animation-name:trophy;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+    -webkit-animation-iteration-count:1;
+    animation-iteration-count:1;
+}
+.img__keyvisual--particle {position:absolute;top:0;right:0;left:0;-webkit-transform:scale(1.1);transform:scale(1.1);
+    -webkit-animation-name:particle;
+    animation-name:particle;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+    -webkit-animation-iteration-count:1;
+    animation-iteration-count:1;
+}
 .img__keyvisual--txt {position:absolute;top:79vw;left:0;right:0;}
-
+@keyframes particle {
+    0% {-webkit-transform:scale(1);transform:scale(1)}
+    100% {-webkit-transform:scale(1.1);transform:scale(1.1)}
+}
 @keyframes trophy {
-    0% {transform: translateY(40px)}
-    60% {transform: translateY(-10px)}
-    100% {transform: translateY(0)}
+    0% {-webkit-transform:translateY(20px);transform:translateY(20px);}
+    60% {-webkit-transform:translateY(-10px);transform:translateY(-10px);}
+    100% {-webkit-transform:translateY(0);transform:translateY(0);}
 }
 .fx-share__content {text-align:center;}
 .fx-share__img {width:50%;margin:auto;}
 .fx-share__title {margin-top:1.5rem;color:#000;font-size:1.25rem;line-height:1.5;}
 .fx-share__desc {color:#666;font-weight:300;font-size:1.125rem;line-height:1.2;}
-.button-wrap .button--kakao {position:relative;background:#fae100; color:#3c1e1e; box-shadow: 0 0.58333rem 0.525rem 0.05833rem rgba(250, 225, 0, 0.28);}
+.button-wrap .button--kakao {position:relative;background:#fae100; color:#3c1e1e;box-shadow:0 0.58333rem 0.525rem 0.05833rem rgba(250, 225, 0, 0.28);}
 .button-wrap .button--kakao:before {content:'';display:inline-block;width:1.375rem;height:1.25rem;margin-right:0.5rem;background:url(../../../../resource/images/C/icon_kakao.png) no-repeat 0 0 / 1.375rem;vertical-align:middle;}
 </style>
 </head>
-<body>
+<body class="bg-white">
 <div id="wrap" class="wrap">
     <!-- header -->
     <div id="header" class="app-header">
@@ -117,29 +118,29 @@
     </div>
     <!-- //header -->
     <!-- content -->
-    <div id="content" class="app-main app-main--without-footer fxmarket">
-        <!-- 부가서비스 : 탑트레이더 랭킹 -->
-        <div class="fx-service toptrader-ranking">
+    <div id="content" class="app-main app-main--without-footer background-white fxmarket">
+        <!-- 부가서비스 :탑트레이더 랭킹 -->
+        <div class="fx-service fx-toptrader">
             <div class="fx-service__keyvisual fx-service__keyvisual--toptrader">
                 <img src="../../../images/fxmarket/img_keyvisual_toptrader_particle.png" class="img__keyvisual--particle" alt="" aria-hidden="true">
                 <img src="../../../images/fxmarket/img_keyvisual_toptrader_trophy.png" class="img__keyvisual--trophy" alt="" aria-hidden="true">
                 <img src="../../../images/fxmarket/img_keyvisual_toptrader_txt.png" alt="Top Trader Ranking FX마켓 고수를 소개합니다. 지난 1주간 USD환산 누적 거래금액 기준" class="img__keyvisual--txt">
             </div>
             <h2 class="offscreen">나의 탑트레이더 랭킹</h2>
-            <div class="fx-mytoptrader">
-                <div class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">155767</strong>
-                    <div class="fx-toptrader__info">
+            <div class="fx-mytrader__wrap">
+                <div class="fx-trader__list">
+                    <strong class="fx-trader__rank">155767</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-1"></span>
-                            <span class="fx-toptrader__nickname">소심한단타형백억부자</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--red"></i>
-                                <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
-                                <i class="fx-challenge__badge--item fx-challenge__badge--blue"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--red"></i>
+                                <i class="challenge-badge__item challenge-badge__item--green"></i>
+                                <i class="challenge-badge__item challenge-badge__item--blue"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 50,000,000.00</span>
+                        <span class="fx-trader__sum">USD 50,000,000.00</span>
                     </div>
                 </div>
                 <button type="button" class="fx-sticker" data-element="modal__open" data-target="#toptradershare">
@@ -151,138 +152,138 @@
             </div>
             
             <h2 class="offscreen">탑트레이더 랭킹 top10</h2>
-            <ol class="fx-toptrader">
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">1</strong>
-                    <div class="fx-toptrader__info">
+            <ol class="fx-trader__wrap">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">1</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-2"></span>
-                            <span class="fx-toptrader__nickname">소심한단타형백억부자</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--red"></i>
-                                <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
-                                <i class="fx-challenge__badge--item fx-challenge__badge--blue"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--red"></i>
+                                <i class="challenge-badge__item challenge-badge__item--green"></i>
+                                <i class="challenge-badge__item challenge-badge__item--blue"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 50,000,000.00</span>
+                        <span class="fx-trader__sum">USD 50,000,000.00</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">2</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">2</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-1"></span>
-                            <span class="fx-toptrader__nickname">소심한단타형백억부자</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--red"></i>
-                                <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--red"></i>
+                                <i class="challenge-badge__item challenge-badge__item--green"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 50,000,000.00</span>
+                        <span class="fx-trader__sum">USD 50,000,000.00</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">3</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">3</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-3"></span>
-                            <span class="fx-toptrader__nickname">소심한백억부자</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--red"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">소심한백억부자</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--red"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 49,000,000.60</span>
+                        <span class="fx-trader__sum">USD 49,000,000.60</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">4</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">4</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">소심한백억부자</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">소심한백억부자</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--green"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 48,700,000.22</span>
+                        <span class="fx-trader__sum">USD 48,700,000.22</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">5</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">5</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">두꺼비</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">두꺼비</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--green"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 47,700,000.22</span>
+                        <span class="fx-trader__sum">USD 47,700,000.22</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">6</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">6</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">개구리</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--green"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">MUZIKTIGER</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--green"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 37,700,000.22</span>
+                        <span class="fx-trader__sum">USD 37,700,000.22</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">7</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">7</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">미키마우스</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--red"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">미키마우스</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--red"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 37,700,000.22</span>
+                        <span class="fx-trader__sum">USD 37,700,000.22</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">8</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">8</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">미니마우스</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--blue"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">미니마우스</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--blue"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 27,700,000.22</span>
+                        <span class="fx-trader__sum">USD 27,700,000.22</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">9</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">9</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">도널드덕</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--blue"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">도널드덕</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--blue"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 17,700,000.22</span>
+                        <span class="fx-trader__sum">USD 17,700,000.22</span>
                     </div>
                 </li>
-                <li class="fx-toptrader__list">
-                    <strong class="fx-toptrader__rank">10</strong>
-                    <div class="fx-toptrader__info">
+                <li class="fx-trader__list">
+                    <strong class="fx-trader__rank">10</strong>
+                    <div class="fx-trader__info">
                         <div class="wrap--flex">
-                            <span class="fx-levelinfo-icon level-4"></span>
-                            <span class="fx-toptrader__nickname">미니언즈</span>
-                            <div class="fx-challenge__badge">
-                                <i class="fx-challenge__badge--item fx-challenge__badge--blue"></i>
+                            <span class="fx-level-icon level-1"></span>
+                            <span class="fx-trader__nickname">미니언즈</span>
+                            <div class="challenge__badge">
+                                <i class="challenge-badge__item challenge-badge__item--blue"></i>
                             </div>
                         </div>
-                        <span class="fx-toptrader__sum">USD 17,500,000.22</span>
+                        <span class="fx-trader__sum">USD 17,500,000.22</span>
                     </div>
                 </li>
             </ol>
@@ -319,7 +320,7 @@
         <i class="icon icon--expand"></i>
         <i class="icon icon--collapse"></i>
     </button>
-    <div class="floating__items" style="display: none;">
+    <div class="floating__items" style="display:none;">
         <div class="floating__item">
             <button type="button" class="floating__sub">
                 <span class="text">FX홈</span>
@@ -370,11 +371,11 @@ $(function(){
     $(window).scroll(function(){
         var visualH = $('.fx-service__keyvisual--toptrader').innerHeight();
         var scrollT = $(this).scrollTop();
-        var scale = (1 + scrollT / visualH).toFixed(2);
+        var scale = (1.1 + scrollT / visualH).toFixed(2);
       
         $('.img__keyvisual--particle').css({
-            '-webkit-transform' : 'scale('+ scale +')',
-            'transform' : 'scale('+ scale +')',
+            '-webkit-transform' :'scale('+ scale +')',
+            'transform' :'scale('+ scale +')',
         })
 
     })
