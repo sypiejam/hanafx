@@ -360,8 +360,8 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
-.fx-attend-visual .ani-rocket-main {display:block;width:5.75rem;height:8.25rem;background:url(../../resource/images/fxmarket/rocket.png) no-repeat 0 0 / 100%;}
-.fx-attend-visual .ani-smoke {z-index:20;position:absolute;width:3.625rem;height:4.25rem;background:url(../../resource/images/fxmarket/gas.png) no-repeat 0 0 / 100%;}
+.fx-attend-visual .ani-rocket-main {display:block;width:5.75rem;height:8.25rem;background:url(../../resource/images/fxmarket/img_ani_rocket.png) no-repeat 0 0 / 100%;}
+.fx-attend-visual .ani-smoke {z-index:20;position:absolute;width:3.625rem;height:4.25rem;background:url(../../resource/images/fxmarket/img_ani_smoke.png) no-repeat 0 0 / 100%;}
 .fx-attend-visual .ani-smoke-center {
     top:8rem;left:2rem;
     -webkit-animation-name:maingas;
