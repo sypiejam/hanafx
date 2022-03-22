@@ -337,64 +337,123 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-attend__desc {display:block;font-size:1.25rem;text-align:center;line-height:1.3;color:#000;font-weight:300;}
 .fx-attend__desc .color-green {font-weight:400;}
 .fx-attend-visual {position:relative;width:11.813rem;height:11.813rem;margin:2.25rem auto 1.625rem;}
-.fx-attend-visual .scene {position:absolute;top:34px;left:8px;}
-.fx-attend-visual .circle {display:block;width:11.813rem;height:11.813rem;border-radius:50%;background:#ffc62d;}
-.fx-attend-visual .rocket {display:block;width:8.375rem;height:9.75rem;background:url(../../resource/images/fxmarket/dummy_img_rocket.png) no-repeat 0 0 / 100%;}
-.fx-attend-visual .scene {
-    -webkit-animation:vibration 0.2s infinite;
-    animation:vibration 0.2s infinite;
+.fx-attend-visual .ani-circle {display:block;width:11.813rem;height:11.813rem;border-radius:50%;background:#ffc62d;}
+.fx-attend-visual .ani-rocket-wrap {
+    z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;height:100%;
+    -webkit-animation-name:rocketbox;
+    animation-name:rocketbox;
+    -webkit-animation-duration:6s;
+    animation-duration:6s;
+    -webkit-animation-timing-function:linear;
+    animation-timing-function:linear;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
 }
-.fx-attend-animation .rocket {
-    transform:translate(200px,-200px) scale(0);
-    -webkit-animation:fire_propulsion 2s ease-in;
-    animation:fire_propulsion 2s ease-in;
+.fx-attend-visual .ani-rocket {
+    display:inline-block;
+    -webkit-animation-name:vibration;
+    animation-name:vibration;
+    -webkit-animation-duration:0.2s;
+    animation-duration:0.2s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.fx-attend-visual .ani-rocket-main {display:block;width:5.75rem;height:8.25rem;background:url(../../resource/images/fxmarket/rocket.png) no-repeat 0 0 / 100%;}
+.fx-attend-visual .ani-smoke {z-index:20;position:absolute;width:3.625rem;height:4.25rem;background:url(../../resource/images/fxmarket/gas.png) no-repeat 0 0 / 100%;}
+.fx-attend-visual .ani-smoke-center {
+    top:8rem;left:2rem;
+    -webkit-animation-name:maingas;
+    animation-name:maingas;
+    -webkit-animation-duration:0.1s;
+    animation-duration:0.1s;
+    -webkit-animation-timing-function:cubic-bezier(0.175, 0.885, 0.42, 1.41);
+    animation-timing-function:cubic-bezier(0.175, 0.885, 0.42, 1.41);
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.fx-attend-visual .ani-smoke-left, .fx-attend-visual .ani-smoke-right {
+    -webkit-animation-name:smallgas;
+    animation-name:smallgas;
+    -webkit-animation-duration:0.3s;
+    animation-duration:0.3s;
+    -webkit-animation-timing-function:ease-in;
+    animation-timing-function:ease-in;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+}
+.fx-attend-visual .ani-smoke-left {-webkit-transform:scale(0.5);transform:scale(0.5);top:12rem;left:1rem;}
+.fx-attend-visual .ani-smoke-right {-webkit-transform:scale(0.6);transform:scale(0.6);top:10rem;left:5rem;-webkit-animation-delay:0.1s;animation-delay:0.1s}
+.fx-booster {
+    margin-bottom:1.875rem;text-align:center;
+    -webkit-animation-name:boosterday;
+    animation-name:boosterday;
+    -webkit-animation-duration:6s;
+    animation-duration:6s;
+    -webkit-animation-timing-function:ease-out;
+    animation-timing-function:ease-out;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.fx-attend-visual .ani-circle {
+    -webkit-animation-name:circlespin;
+    animation-name:circlespin;
+    -webkit-animation-duration:4s;
+    animation-duration:4s;
+    -webkit-animation-timing-function:linear;
+    animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.fx-attend-visual .ani-circle:before {
+    content:'';display:block;width:100%;height:100%;border-radius:50%;
+    -webkit-animation-name:circleglow;
+    animation-name:circleglow;
+    -webkit-animation-duration:6s;
+    animation-duration:6s;
+    -webkit-animation-timing-function:linear;
+    animation-timing-function:linear;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes rocketbox {
+  0%, 15% {-webkit-transform:translate(-200%, 50vh);transform:translate(-200%, 50vh);}
+  25% {-webkit-transform:translate(0, 2rem);transform:translate(0, 2rem);}
+  35% {-webkit-transform:translate(0, 4rem);transform:translate(0, 4rem);}
+  45% {-webkit-transform:translate(-2rem, 0);transform:translate(-2rem, 0);}
+  60% {-webkit-transform:translate(1rem, -1rem);transform:translate(1rem, -1rem);}
+  82% {-webkit-transform:translate(-5rem, 7rem);transform:translate(-5rem, 7rem);opacity:1}
+  90%, 100% {-webkit-transform:translate(200%, -50vh);transform:translate(200%, -50vh);opacity:0}
 }
 @keyframes vibration {
-    0%   { 
-        transform:scale(1) translate(0,0);
-    }
-    50%   { 
-        transform:scale(1) translate(1px,-1px);
-    }
-    100% { 
-        transform:scale(1) translate(0,0);
-    }
+    0% {-webkit-transform:scale(1) translate(0,0) rotate(45deg);transform:scale(1) translate(0,0) rotate(45deg);}
+    50% {-webkit-transform:scale(1) translate(1px,-1px) rotate(45deg);transform:scale(1) translate(1px,-1px) rotate(45deg);}
+    100% {-webkit-transform:scale(1) translate(0,0) rotate(45deg);transform:scale(1) translate(0,0) rotate(45deg);}
 }
-@keyframes fire_propulsion {
-    /* 0% { 
-        transform:translate(-150px,150px) scale(0.7) ;
-    } */
-
-    0%   { 
-        transform:translate(0,0) scale(1) ;
-    }
-
-    15%   { 
-        transform:translate(1px,-1px) scale(1) ;
-    }
-    20%   { 
-        transform:translate(0,0) scale(1) ;
-    }
-    25%   { 
-        transform:translate(1px,-1px) scale(1) ;
-    }
-    30%   { 
-        transform:translate(0,0) scale(1) ;
-    }
-    35%   { 
-        transform:translate(1px,-1px) scale(1) ;
-    }
-    40%   { 
-        transform:translate(0,0) scale(1) ;
-    }
-    80%   { 
-        transform:translate(0,0) scale(1) ;
-    }
-
-    100% { 
-        transform:translate(200px,-200px) scale(0.7) ;
-        /* opacity: 0; */
-    }
+@keyframes maingas {
+    0% {-webkit-transform:translate(0, 0.313rem) scale(0.9);transform:translate(0, 0.313rem) scale(0.9);}
+    100% {-webkit-transform:translate(0, 0px) scale(1.2);transform:translate(0, 0px) scale(1.2);}
+}
+@keyframes smallgas {
+    0% {-webkit-transform:translate(0, -0.625rem) scale(1);transform:translate(0, -0.625rem) scale(0.5);opacity:1;}
+    100% {-webkit-transform:translate(0, 3.125rem) scale(0.7);transform:translate(0, 3.125rem) scale(0.3);opacity:0;}
+}
+@keyframes circleglow {
+    0%, 88% {box-shadow:-10px 0 40px rgb(255 255 255),10px 0 40px rgb(255 255 255);}
+    100% {box-shadow:-10px 0 40px rgb(250, 204, 89),10px 0 40px rgb(255, 253, 229);}
+}
+@keyframes circlespin { 
+    100% {-webkit-transform:rotate(360deg);transform:rotate(360deg); } 
+}
+@keyframes boosterday {
+    0%, 82% {-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1);}
+    92% {-webkit-transform:translateY(-10.625rem) scale(1.4);}
+    100% {-webkit-transform:translateY(-9.375rem) scale(1);transform:translateY(-9.375rem) scale(1);}
 }
 
 .fx-attend--modal {max-height:49vh !important;margin-top:-1rem;}
