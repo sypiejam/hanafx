@@ -58,7 +58,7 @@
 .fx-trader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
 .fx-trader__info {flex:1;padding:1rem 1rem 0.813rem 1.25rem;}
 .fx-trader__nickname {margin-left:0.5rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
-.challenge__badge {display:flex;margin-left:0.5rem;}
+.challenge__badge {display:flex;margin-left:0.313rem;}
 .challenge-badge__item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem;}
 .challenge-badge__item--red {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_01.png) no-repeat 0 0 / 100%;}
 .challenge-badge__item--green {background:url(../../../../resource/images/fxmarket/dummy_icon_challenge_02.png) no-repeat 0 0 / 100%;}
@@ -106,6 +106,7 @@
 .fx-share__desc {color:#666;font-weight:300;font-size:1.125rem;line-height:1.2;}
 .button-wrap .button--kakao {position:relative;background:#fae100; color:#3c1e1e;box-shadow:0 0.58333rem 0.525rem 0.05833rem rgba(250, 225, 0, 0.28);}
 .button-wrap .button--kakao:before {content:'';display:inline-block;width:1.375rem;height:1.25rem;margin-right:0.5rem;background:url(../../../../resource/images/C/icon_kakao.png) no-repeat 0 0 / 1.375rem;vertical-align:middle;}
+
 </style>
 </head>
 <body class="bg-white">
@@ -308,7 +309,6 @@ $(function(){
         var visualH = $('.fx-service__keyvisual--toptrader').innerHeight();
         var scrollT = $(this).scrollTop();
         var scale = (1.1 + scrollT / visualH).toFixed(2);
-      
         $('.img__keyvisual--particle').css({
             '-webkit-transform' : `scale(${scale})`,
             'transform' : `scale(${scale})`
