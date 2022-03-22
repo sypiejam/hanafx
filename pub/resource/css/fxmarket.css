@@ -242,9 +242,67 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-attend__title {display:block;width:12.688rem;height:1.375rem;margin:0.875rem auto 1.313rem;background:url(../../resource/images/fxmarket/txt_attendevent.png) no-repeat 0 0 / 100%;}
 .fx-attend__desc {display:block;font-size:1.25rem;text-align:center;line-height:1.3;color:#000;font-weight:300;}
 .fx-attend__desc .color-green {font-weight:400;}
-.fx-attend-animation {position:relative;width:11.813rem;height:11.813rem;margin:2.25rem auto 1.625rem;}
-.fx-attend-animation .circle {display:block;width:11.813rem;height:11.813rem;border-radius:50%;background:#ffc62d;}
-.fx-attend-animation .rocket {position:absolute;top:34px;left:8px;display:block;width:8.375rem;height:9.75rem;background:url(../../resource/images/fxmarket/dummy_img_rocket.png) no-repeat 0 0 / 100%;}
+.fx-attend-visual {position:relative;width:11.813rem;height:11.813rem;margin:2.25rem auto 1.625rem;}
+.fx-attend-visual .scene {position:absolute;top:34px;left:8px;}
+.fx-attend-visual .circle {display:block;width:11.813rem;height:11.813rem;border-radius:50%;background:#ffc62d;}
+.fx-attend-visual .rocket {display:block;width:8.375rem;height:9.75rem;background:url(../../resource/images/fxmarket/dummy_img_rocket.png) no-repeat 0 0 / 100%;}
+.fx-attend-visual .scene {
+    -webkit-animation:vibration 0.2s infinite;
+    animation:vibration 0.2s infinite;
+}
+.fx-attend-animation .rocket {
+    transform:translate(200px,-200px) scale(0);
+    -webkit-animation:fire_propulsion 2s ease-in;
+    animation:fire_propulsion 2s ease-in;
+}
+@keyframes vibration {
+    0%   { 
+        transform:scale(1) translate(0,0);
+    }
+    50%   { 
+        transform:scale(1) translate(1px,-1px);
+    }
+    100% { 
+        transform:scale(1) translate(0,0);
+    }
+}
+@keyframes fire_propulsion {
+    /* 0% { 
+        transform:translate(-150px,150px) scale(0.7) ;
+    } */
+
+    0%   { 
+        transform:translate(0,0) scale(1) ;
+    }
+
+    15%   { 
+        transform:translate(1px,-1px) scale(1) ;
+    }
+    20%   { 
+        transform:translate(0,0) scale(1) ;
+    }
+    25%   { 
+        transform:translate(1px,-1px) scale(1) ;
+    }
+    30%   { 
+        transform:translate(0,0) scale(1) ;
+    }
+    35%   { 
+        transform:translate(1px,-1px) scale(1) ;
+    }
+    40%   { 
+        transform:translate(0,0) scale(1) ;
+    }
+    80%   { 
+        transform:translate(0,0) scale(1) ;
+    }
+
+    100% { 
+        transform:translate(200px,-200px) scale(0.7) ;
+        /* opacity: 0; */
+    }
+}
+
 .fx-attend--modal {max-height:49vh !important;margin-top:-1rem;}
 .fx-attend--modal .fx-attend-animation {margin:1.25rem auto 0.625rem;}
 .fx-attend--modal hr.content-devider {margin:1.875rem 0 0}
