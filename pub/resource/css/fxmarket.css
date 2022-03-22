@@ -392,8 +392,8 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     margin-bottom:1.875rem;text-align:center;
     -webkit-animation-name:boosterday;
     animation-name:boosterday;
-    -webkit-animation-duration:6s;
-    animation-duration:6s;
+    -webkit-animation-duration:7s;
+    animation-duration:7s;
     -webkit-animation-timing-function:ease-out;
     animation-timing-function:ease-out;
     -webkit-animation-fill-mode:both;
@@ -452,8 +452,8 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     100% {-webkit-transform:rotate(360deg);transform:rotate(360deg); } 
 }
 @keyframes boosterday {
-    0%, 82% {-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1);}
-    90% {-webkit-transform:translateY(-9.375rem) scale(1.4);transform:translateY(-9.375rem) scale(1.4);}
+    0%, 73% {-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1);}
+    80% {-webkit-transform:translateY(-9.375rem) scale(1.4);transform:translateY(-9.375rem) scale(1.4);}
     100% {-webkit-transform:translateY(-9.375rem) scale(1);transform:translateY(-9.375rem) scale(1);}
 }
 
