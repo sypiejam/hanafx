@@ -453,7 +453,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 }
 @keyframes boosterday {
     0%, 82% {-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1);}
-    90% {-webkit-transform:translateY(-10.625rem) scale(1.4);}
+    90% {-webkit-transform:translateY(-10.625rem) scale(1.4);transform:translateY(-10.625rem) scale(1.4);}
     100% {-webkit-transform:translateY(-9.375rem) scale(1);transform:translateY(-9.375rem) scale(1);}
 }
 
