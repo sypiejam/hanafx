@@ -462,7 +462,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     45% {-webkit-transform:translate(-2rem, 0);transform:translate(-2rem, 0);}
     60% {-webkit-transform:translate(2rem, -1rem);transform:translate(2rem, -1rem);}
     82% {-webkit-transform:translate(1rem, 5rem);transform:translate(1rem, 5rem);opacity:1}
-    90%, 100% {-webkit-transform:translate(200%, -50vh) scale(0.5);transform:translate(200%, -50vh) scale(0.5);opacity:0}
+    90%, 100% {-webkit-transform:translate(200%, -70vh) scale(0.5);transform:translate(200%, -70vh) scale(0.5);opacity:0}
 }
 @keyframes smokelaunch {
     0%, 17% {-webkit-transform:translate(-200%, 50vh) rotate(45deg);transform:translate(-200%, 50vh) rotate(45deg);}
