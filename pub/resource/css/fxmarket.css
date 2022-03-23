@@ -517,13 +517,13 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     100% {-webkit-transform:rotate(360deg);transform:rotate(360deg); } 
 }
 @keyframes fxbooster {
-    0%, 82% {-webkit-transform:translateY(0) scale(1);transform:translateY(0) scale(1);}
-    90% {-webkit-transform:translateY(-8.5rem) scale(1.5);transform:translateY(-8.5rem) scale(1.5);}
-    100% {-webkit-transform:translateY(-8.5rem) scale(1);transform:translateY(-8.5rem) scale(1);}
+    0%, 82% {margin:0 0 0 0;-webkit-transform:scale(1);transform:scale(1);}
+    90% {margin:-8.5rem 0 7rem 0;-webkit-transform:scale(1.5);transform:scale(1.5);}
+    100% {margin:-8.5rem 0 7rem 0;-webkit-transform:scale(1);transform:scale(1);}
 }
 
 
-.fx-attend--modal {max-height:52vh !important;margin-top:-1rem;}
+.fx-attend--modal {min-height:26.25rem !important;margin-top:-1rem;}
 .fx-attend--modal .fx-launch-animation {margin:2rem auto 0.625rem;}
 .fx-attend--modal hr.content-devider {margin:1.875rem 0 0}
 
