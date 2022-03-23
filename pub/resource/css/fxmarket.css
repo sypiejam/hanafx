@@ -518,8 +518,8 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 }
 @keyframes fxbooster {
     0%, 82% {margin:0 0 0 0;-webkit-transform:scale(1);transform:scale(1);}
-    90% {margin:-8.5rem 0 7rem 0;-webkit-transform:scale(1.5);transform:scale(1.5);}
-    100% {margin:-8.5rem 0 7rem 0;-webkit-transform:scale(1);transform:scale(1);}
+    90% {margin:-8.5rem 0 6.5rem 0;-webkit-transform:scale(1.5);transform:scale(1.5);}
+    100% {margin:-8.5rem 0 6.5rem 0;-webkit-transform:scale(1);transform:scale(1);}
 }
 
 
