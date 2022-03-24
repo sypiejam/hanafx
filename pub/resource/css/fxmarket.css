@@ -311,7 +311,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 @keyframes speaker {
     0% {-webkit-transform:scale(1);transform:scale(1);}        
     10% {-webkit-transform:scale(1.4);transform:scale(1.4);}        
-    16%{-webkit-transform:scale(1);transform:scale(1);}        
+    16% {-webkit-transform:scale(1);transform:scale(1);}        
     30% {-webkit-transform:rotate(10deg);transform:rotate(10deg);} 
     33% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
     36% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
@@ -521,11 +521,36 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     90% {margin:-8.5rem 0 6.5rem 0;-webkit-transform:scale(1.5);transform:scale(1.5);}
     100% {margin:-8.5rem 0 6.5rem 0;-webkit-transform:scale(1);transform:scale(1);}
 }
-
-
 .fx-attend--modal {min-height:26.25rem !important;margin-top:-1rem;}
 .fx-attend--modal .fx-launch-animation {margin:2rem auto 0.625rem;}
 .fx-attend--modal hr.content-devider {margin:1.875rem 0 0}
+
+/* 부가서비스 - 타임세일 */
+.fx-service__keyvisual--specialtime {background:#f90;}
+
+/* 서브메인 */
+/* - 환율정보 영역(타임세일 공통스타일) */
+.button-select--fxm .button-select__item {width:auto;height:auto;padding-left:0;padding-right:2.5rem;border:0;background-color:inherit;font-weight:400;font-size:1.25rem;color:#000;}
+.fx-specialrate-info {display:inline-block;height:1.313rem;padding:0 0.625rem;margin-top:-1px;border:1px solid #009591;border-radius:0.688rem;font-size:0.813rem;font-weight:300;}
+.fx-dominant .inner-wrap {display:flex;align-items:center;justify-content:center;}
+.fx-dominant__desc {display:inline-block;text-align:center;font-size:0.813rem;}
+.fx-dominant__desc::before {content:'';display:inline-block;width:0.875rem;height:0.875rem;margin:0 5px -1px 0;background:url(../../resource/images/fxmarket/icon_speaker_42x42.png) no-repeat 0 0 / 100%;}
+.fx-specialtime .txt-buy {color:#139be5;}
+.fx-specialtime .txt-sell {color:#fa1036;}
+.fx-specialrate {display:flex;align-items:center;justify-content:center;margin:1.125rem -1rem 0;}
+.fx-specialrate__item {flex:1;text-align:center;}
+.fx-specialrate__item:not(:first-child) {position:relative;}
+.fx-specialrate__item:not(:first-child)::before {content:'';position:absolute;top:0.313rem;left:0;bottom:0.313rem;display:block;width:1px;background:#f0f0f0;}
+.fx-specialrate__tit {font-size:1.125rem;}
+.fx-specialrate__num {margin-top:-0.313rem;font-size:1.688rem;font-weight:500;}
+.fx-specialrate-noti {display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#666;}
+.fx-specialrate-noti .exr {margin-left:0.625rem;font-weight:600;vertical-align:middle;}
+.fx-specialrate-noti .exr--up::before,
+.fx-specialrate-noti .exr--dw::before {content:'';display:inline-block;width:0.688rem;height:0.688rem;margin:0 0.313rem -1px 0;background:url(../../resource/images/fxmarket/sp_exr_arrow.png) no-repeat 0 0;background-size:auto 100%;}
+.fx-specialrate-noti .exr--up {color:#ff204e;}
+.fx-specialrate-noti .exr--dw {color:#139be5;}
+.fx-specialrate-noti .exr--dw::before {background-position:-0.688rem 0;}
+.fx-refresh--timesale {margin-top:2.625rem;}
 
 /* odometer css */
 .odometer.odometer-auto-theme, 

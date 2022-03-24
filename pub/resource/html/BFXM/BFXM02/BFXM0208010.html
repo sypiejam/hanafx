@@ -11,18 +11,15 @@
 <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/flip.css" type="text/css"><!-- Flip Clock CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
-    .button-select--fxtime .button-select__item {width:auto;height:auto;padding-left:0;padding-right:2.5rem;border:0;background-color:inherit;font-weight:400;font-size:1.25rem;color:#000;}
-
-    .fx-service__keyvisual--specialtime {background:#f90;}
-
     .fx-countdown {display:flex;justify-content:center;margin-top:0.625rem}
     .fx-countdown .inner-group {display:inline-flex;margin-left:-0.5rem;}
     [class^='fx-countdown__unit--'] {display:flex;flex-direction:column;margin:0 0.5rem;}
     .fx-countdown__colon {position:relative;margin:0 -0.5rem;width:1rem;height:calc(100% - 1.313rem);}
     .fx-countdown__colon::before,
-    .fx-countdown__colon::after {content:'';position:absolute;top:30%;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:block;width:0.313rem;height:0.313rem;border-radius:50%;background:#000;}
+    .fx-countdown__colon::after {content:'';position:absolute;top:30%;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:block;width:0.313rem;height:0.313rem;background:#000;}
     .fx-countdown__colon::after {top:60%;}
     /* .fx-countdown__num {margin: 0 2px; padding:5px 10px;border-radius:5px; background:#000;font-size:2rem;color:#fff;} */
     .fx-countdown__num {position:relative;display:block;font-size:2.5rem;font-weight:500;line-height:1;}
@@ -33,6 +30,26 @@
     .fx-countdown__num::after {right:0;} */
     .fx-countdown__txt {text-align:center;font-size:0.813rem;}
     .fx-countdown__word {align-self:flex-end;flex-shrink:0;width:1.875rem;}
+
+    /* Flip Clock */
+    .tick-wrap {width:80%;margin:0 auto;}
+    .tick {
+        font-size:1rem;
+        font-family:Roboto;
+    }
+
+    .tick-label {
+        font-size:0.813rem;
+        text-align:center;
+    }
+
+    .tick-group {
+        margin:0 .25rem;
+        text-align:center;
+    }
+    .tick-group:first-child {display:none;}
+    .tick-group .inner {margin-bottom: -0.625rem;}
+    .tick-credits {display:none;}
 
 </style>
 </head>
@@ -57,11 +74,11 @@
                 </div>
 
                 <div class="fx-countdown">
-                    <div class="inner-group" id="countDown" data-dt="2023-01-01" data-hr="00" data-mn="00">
+                    <div class="inner-group">
                         <!-- <div class="fx-countdown__unit--dd">
                             <span class="fx-countdown__num">01</span>
                             <span class="fx-countdown__txt">일</span>
-                        </div>
+                        </div> -->
                         <div class="fx-countdown__unit--hh">
                             <span class="fx-countdown__num">11</span>
                             <span class="fx-countdown__txt">시간</span>
@@ -75,28 +92,81 @@
                         <div class="fx-countdown__unit--ss">
                             <span class="fx-countdown__num">59</span>
                             <span class="fx-countdown__txt">초</span>
-                        </div> -->
+                        </div>
                     </div>
                     <span class="fx-countdown__word">남음</span>
                 </div>
             </div>
 
+            <!-- Flip Clock -->
+            <div class="tick-wrap">
+                <div class="tick" data-did-init="handleTickInit">
+                    <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay">
+                        <div class="tick-group">
+                            <div class="inner" data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                <span class="tick-flip" data-view="flip"></span>
+                            </div>
+                            <span data-key="label" data-view="text" class="tick-label"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Flip Clock -->
+
             <div class="container flex flex--item-c flex-align-center">
-                <div class="button-select--fxtime">
+                <div class="button-select--fxm">
                     <button type="button" class="button button-select__item" title="통화선택">
                         <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
                         <span>USD</span>
                     </button>
                 </div>
-                <div>
-                    <em>타임세일 특별 우대율 90%</em>
+                <p class="fx-specialrate-info">타임세일 특별 우대율 <em>90%</em></p>
+            </div>
+            <div class="container fx-dominant">
+                <div class="inner-wrap">
+                    <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-buy bold">살래요</em>가 더 많아요</p>
+                    <!-- <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-sell bold">팔래요</em>가 더 많아요</p> -->
+                    <div class="tooltip" data-tooltip="paragraph">
+                        <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="$label$ 툴팁 열기"></button>
+                        <div class="tooltip__panel" data-tooltip-panel="false">
+                            <div class="tooltip__column">
+                                <div class="tooltip__title" data-tooltip="focus">
+                                    <p>팔래요 <em>00.00%</em> 살래요 <em>00.00%</em> (거래건수 기준)</p>
+                                </div>
+                            </div>
+                            <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="container">
-                내가 팔면
-                1,231.54
-                내가 사면
-                1.235.74
+                <div class="fx-specialrate">
+                    <div class="fx-specialrate__item fx-specialrate__item--sell">
+                        <span class="fx-specialrate__tit">내가 <em class="txt-sell">팔면</em></span>
+                        <div class="fx-specialrate__num">
+                            <span class="offscreen">우대율</span><strong>1,228.48</strong>
+                        </div>
+                        <div class="fx-specialrate-noti">
+                            <em class="offscreen">고시환율</em>
+                            <span>1,228.25</span> <em class="exr">0.00<span class="offscreen">동일</span></em>
+                        </div>
+                    </div>
+                    <div class="fx-specialrate__item fx-specialrate__item--buy">
+                        <span class="fx-specialrate__tit">내가 <em class="txt-buy">사면</em></span>
+                        <div class="fx-specialrate__num">
+                            <span class="offscreen">우대율</span><strong>1.232.00</strong>
+                        </div>
+                        <div class="fx-specialrate-noti">
+                            <em class="offscreen">고시환율</em>
+                            <span>1,232.55</span> <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
+                            <!-- to.개발 | 고시환율 표기
+                                동일 : <em class="exr">0.00<span class="offscreen">동일</span>
+                                오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span>
+                                내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span>
+                            -->
+                        </div>
+                    </div>
+                </div>
                 <div class="fx-refresh fx-refresh--timesale">
                     <div class="fx-refresh__txt align-right">
                         <span>2022.02.20 13:14:00</span> 기준<button type="button" class="button-refresh" aria-label="새로고침"></button>
@@ -123,7 +193,7 @@
     <!-- footer -->
     <div id="footer" class="app-footer app-footer--button">
         <div class="button-wrap">
-            <button type="button" class="button button--positive">FX마켓 입장</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+            <button type="button" class="button button--positive">거래하기</button>
         </div>
     </div>
     <!-- //footer -->
@@ -134,75 +204,41 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script src="../../../../resource/js/ui/flip.js"></script><!-- Flip Clock JS -->
 <script>
-    // 삼성닷컴 소스 줍줍
-    $(function () {
-        $("#countDown").each(function (i) {
-            if ($(this).attr("id") != "") {
-                var id = $(this).attr("id");
-                var id2 = id;
-                id2 = setInterval(function () {
-                    showCarouselCountdown(id, id2, $("#" + id).data("dt"), $("#" + id).data("hr"), $("#" + id).data("mn"));
-                }, 1000);
-            }
-        });
-    });
+    // Flip Clock
+	function handleTickInit(tick) {
+        var locale = {
+            // YEAR_PLURAL: 'Years',
+            // YEAR_SINGULAR: 'Year',
+            // MONTH_PLURAL: 'Months',
+            // MONTH_SINGULAR: 'Month',
+            // WEEK_PLURAL: 'Weeks',
+            // WEEK_SINGULAR: 'Week',
+            DAY_PLURAL: '일',
+            DAY_SINGULAR: '일',
+            HOUR_PLURAL: '시간',
+            HOUR_SINGULAR: '시간',
+            MINUTE_PLURAL: '분',
+            MINUTE_SINGULAR: '분',
+            SECOND_PLURAL: '초',
+            SECOND_SINGULAR: '초',
+            // MILLISECOND_PLURAL: 'Milliseconds',
+            // MILLISECOND_SINGULAR: 'Millisecond'
+        };
 
-    function showCarouselCountdown(targetId, timerId, dt, hr, mn) {
-        try {
-            var _second = 1000;
-            var _minute = _second * 60;
-            var _hour = _minute * 60;
-            var _day = _hour * 24;
-            var date = dt.split("-");
-            var targetDate = new Date(Number(date[0]), Number(date[1]) - 1, Number(date[2]), Number(hr), Number(mn), 00);
-            var now = new Date().getTime();
-            var distDt = targetDate.getTime() - now;
-            var htmlText = '';
-
-            var days = "00";
-            var hours = "00";
-            var minutes = "00";
-            var seconds = "00";
-            if (distDt < 0) {
-                clearInterval(timerId);
-                $("#" + targetId).remove();
-            }
-            else {
-                days = Math.floor(distDt / _day);
-                days = (days < 10) ? "0" + days : days;
-                hours = Math.floor((distDt % _day) / _hour);
-                hours = (hours < 10) ? "0" + hours : hours;
-                minutes = Math.floor((distDt % _hour) / _minute);
-                minutes = (minutes < 10) ? "0" + minutes : minutes;
-                seconds = Math.floor((distDt % _minute) / _second);
-                seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-                htmlText += '<div class="fx-countdown__unit--dd">';
-                htmlText += '    <span class="fx-countdown__num">' + days + '</span>';
-                htmlText += '    <span class="fx-countdown__txt">일</span>';
-                htmlText += '</div>';
-                htmlText += '<div class="fx-countdown__unit--hh">';
-                htmlText += '    <span class="fx-countdown__num">' + hours + '</span>';
-                htmlText += '    <span class="fx-countdown__txt">시간</span>';
-                htmlText += '</div>';
-                htmlText += '<i class="fx-countdown__colon" aria-hidden="true"></i>';
-                htmlText += '<div class="fx-countdown__unit--mm">';
-                htmlText += '    <span class="fx-countdown__num">' + minutes + '</span>';
-                htmlText += '    <span class="fx-countdown__txt">분</span>';
-                htmlText += '</div>';
-                htmlText += '<i class="fx-countdown__colon" aria-hidden="true"></i>';
-                htmlText += '<div class="fx-countdown__unit--ss">';
-                htmlText += '    <span class="fx-countdown__num">' + seconds + '</span>';
-                htmlText += '    <span class="fx-countdown__txt">초</span>';
-                htmlText += '</div>';
-
-                $("#" + targetId).html(htmlText);
-            }
-        } catch (e) {
-            clearInterval(timerId);
+        for (var key in locale) {
+            if (!locale.hasOwnProperty(key)) { continue; }
+            tick.setConstant(key, locale[key]);
         }
-    }
+        
+        var nextYear = (new Date()).getFullYear() + 1;
+
+		// Tick.count.down(nextYear + '-01-01').onupdate = function(value) {
+		Tick.count.down('2022-05-16').onupdate = function(value) {
+			tick.value = value;
+        };
+	}
 </script>
 </body>
 </html>
