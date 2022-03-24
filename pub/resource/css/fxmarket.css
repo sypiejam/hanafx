@@ -274,12 +274,12 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-trader__list:nth-child(1) {border-color:#e1cc9e;}
 .fx-trader__list:nth-child(2) {border-color:#adadc8;}
 .fx-trader__list:nth-child(3) {border-color:#a8d9e2;}
-.fx-trader__list:before {content:'';position:absolute;top:-1px;bottom:-1px;left:-1px;width:3.5rem;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
-.fx-trader__list:nth-child(1):before {background:#f7b21f;}
-.fx-trader__list:nth-child(2):before {background:#6e6ec4;}
-.fx-trader__list:nth-child(3):before {background:#67cfe3;}
 .fx-trader__list .fx-level-icon {width:1.25rem;height:1.25rem;}
 .fx-trader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
+.fx-trader__rank:before {content:'';z-index:-1;position:absolute;top:-1px;bottom:-1px;left:-1px;width:100%;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
+.fx-trader__list:nth-child(1) .fx-trader__rank:before {background:#f7b21f;}
+.fx-trader__list:nth-child(2) .fx-trader__rank:before {background:#6e6ec4;}
+.fx-trader__list:nth-child(3) .fx-trader__rank:before {background:#67cfe3;}
 .fx-trader__info {flex:1;padding:1rem 1rem 0.813rem 1.25rem;}
 .fx-trader__nickname {margin-left:0.5rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
 .challenge__badge {display:flex;margin-left:0.313rem;}
