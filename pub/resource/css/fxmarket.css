@@ -558,7 +558,11 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-commicon {display:flex;align-items:center;justify-content:space-around;padding-top:0.875rem;}
 .fx-commicon__item {font-size:0;}
 .fx-commicon__count {display:block;margin-top:0.125rem;text-align:center;font-size:0.813rem;color:#666;}
-[class^='fx-commicon__icon--'] {display:block;width:2.375rem;height:2.375rem;background-image:url(../../resource/images/fxmarket/sp_community_emoji.png);background-repeat:no-repeat;background-size:auto 100%;}
+[class^='fx-commicon__icon--'] {display:block;width:2.375rem;height:2.375rem;background-image:url(../../resource/images/fxmarket/sp_community_emoji.png);background-repeat:no-repeat;background-size:auto 100%;
+    -webkit-user-select:none;
+    user-select:none !important;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color:transparent;}
 .fx-commicon__icon--01 {background-position:0 0;}
 .fx-commicon__icon--02 {background-position:-4.063rem 0;}
 .fx-commicon__icon--03 {background-position:-8.125rem 0;}
