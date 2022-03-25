@@ -18,54 +18,331 @@
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">FX커뮤니티</h1>
+        <h1 class="app-header__title">밀리언달러 커뮤니티</h1>
         <button class="app-header__button app-header__button--home" title="메인화면"></button>
         <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
     </div>
     <!-- //header -->
     <!-- content -->
     <div id="content" class="app-main app-main--without-footer fxmarket">
-        <!-- 부가서비스 : FX커뮤니티 -->
+        <!-- 부가서비스 : 커뮤니티 -->
         <div class="fx-service fx-community">
-            <div class="fx-service__keyvisual fx-service__keyvisual--community">
-                <div class="">
-                    <strong>FX COMMUNITY</strong>
-                    <p>모두 모여라! FX커뮤니티에 자랑해</p>
+            <div class="fx-service__keyvisual">
+                <div class="fx-service__keyvisual--community">
+                    <div class="offscreen">
+                        <strong>모두 모여라!</strong> 
+                        <p>밀리언달러커뮤니티에 자랑해</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="container">
-                <div class="-wrap">
-                    <article class="">
-                        <div class="-header">
-                            <span class="-profile__img"><img src="" alt="프로필"></span>
-                            <div class="-header__text-box">
-                                <strong class="s-profile__name">닉네임</strong>
+            <!-- 게시물 있을 경우 -->
+            <div class="fx-commlist">
+                <hr class="spacer">
+                <div class="container">
+                    <div class="fx-commlist__item">
+                        <article class="fx-boast">
+                            <div class="fx-boast__header">
+                                <!-- 등급 및 챌린지 아이콘 디자인 미정 -->
+                                <span class="fx-level-icon level-1"><span class="offscreen">level 1</span></span><!-- D : 개발시 유저등급 기재 -->
+                                <em class="fx-boast__nickname">소심한단타형백억부자</em>
+                                <div class="challenge__badge">
+                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
+                                    <i class="challenge-badge__item challenge-3"><span class="offscreen">챌린지</span></i>
+                                </div>
+                                <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
-                        </div>
-            
-                        <div class="-contents">
-                            <div class="-contents__img">
-                                <img src="" alt="">
+                            <div class="fx-boast__cont">
+                                <div class="fx-boast__tit fx-boast__tit--toptrader">
+                                    <em class="offscreen">탑트레이더</em>
+                                </div>
+                                <span class="fx-boast__img fx-boast__img--toptrader" aria-hidden="true"></span>
+                                <div class="inner-txt align-center">
+                                    <strong class="fx-boast__txt">따라올테면 따라와봐.</strong>
+                                    <span class="fx-boast__rank">나의 랭킹 <em class="num">156</em>위</span>
+                                </div>
+                                <p class="fx-boast__myword">
+                                    <span>따라올려면 따라와봐 나의 랭킹 부럽지</span>
+                                </p>
                             </div>
-                        </div>
-            
-                        <div class="-bottom">
-                            <div class="-text__date">
-                                <span>2022-02-12 00:00</span>
+                            <div class="fx-boast__bottom">
+                                <div class="fx-commlist__date">
+                                    <span>2022-02-12 00:00</span>
+                                </div>
+                                <div class="fx-commlike" data-element="toggle">
+                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><sapn class="txt">공감하기</sapn><span class="num">99+</span></button>
+                                    <ul class="fx-commicon" data-element="toggle__panel">
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike01" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike01" class="fx-commicon__icon--01">
+                                                <em class="offscreen">좋아요</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">999+</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike02" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike02" class="fx-commicon__icon--02">
+                                                <em class="offscreen">부러워</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">7</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike03" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike03" class="fx-commicon__icon--03">
+                                                <em class="offscreen">대단해</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">167</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike04" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike04" class="fx-commicon__icon--04">
+                                                <em class="offscreen">반했어</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">16</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike05" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike05" class="fx-commicon__icon--05">
+                                                <em class="offscreen">슬퍼요</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div>
-                                <label class="button-like">
-                                    <input type="checkbox" id="" class="button-like__input" title="공감하기" checked>
-                                </label>
-                                <span>99+</span>
+                        </article>
+                    </div>
+                    <div class="fx-commlist__item">
+                        <article class="fx-boast">
+                            <div class="fx-boast__header">
+                                <!-- 등급 및 챌린지 아이콘 디자인 미정 -->
+                                <span class="fx-level-icon level-2"><span class="offscreen">level 2</span></span><!-- D : 개발시 유저등급 기재 -->
+                                <em class="fx-boast__nickname">내일의 왕</em>
+                                <div class="challenge__badge">
+                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                </div>
+                                <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
-                        </div>
-                    </article>
+                            <div class="fx-boast__cont">
+                                <div class="fx-boast__tit fx-boast__tit--forecast">
+                                    <em class="offscreen">환율예측</em>
+                                </div>
+                                <span class="fx-boast__img fx-boast__img--forecast" aria-hidden="true"></span>
+                                <div class="inner-txt align-center">
+                                    <strong class="fx-boast__txt">비트코인 물럿거라!</strong>
+                                    <span class="fx-boast__rank">나의 예지력 <em class="num">90</em>%</span>
+                                </div>
+                                <p class="fx-boast__myword">
+                                    <span>비트코인 물럿거라</span>
+                                </p>
+                            </div>
+                            <div class="fx-boast__bottom">
+                                <div class="fx-commarti__date">
+                                    <span>2022-02-12 00:00</span>
+                                </div>
+                                <div class="fx-commlike" data-element="toggle">
+                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><sapn class="txt">공감하기</sapn><span class="num">99+</span></button>
+                                    <ul class="fx-commicon" data-element="toggle__panel">
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike01" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike01" class="fx-commicon__icon--01">
+                                                <em class="offscreen">좋아요</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">999+</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike02" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike02" class="fx-commicon__icon--02">
+                                                <em class="offscreen">부러워</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">7</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike03" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike03" class="fx-commicon__icon--03">
+                                                <em class="offscreen">대단해</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">167</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike04" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike04" class="fx-commicon__icon--04">
+                                                <em class="offscreen">반했어</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">16</span>
+                                        </li>
+                                        <li class="fx-commicon__item">
+                                            <input type="radio" id="fxCommLike05" name="fxCommLike" class="fx-commicon__input">
+                                            <label for="fxCommLike05" class="fx-commicon__icon--05">
+                                                <em class="offscreen">슬퍼요</em>
+                                                <div class="fx-commicon-heart" aria-hidden="true">
+                                                    <div class="hearts-animations"> 
+                                                        <span class="heart heart1"></span>
+                                                        <span class="heart heart2"></span>
+                                                        <span class="heart heart3"></span>
+                                                        <span class="heart heart4"></span>
+                                                        <span class="heart heart5"></span>
+                                                        <span class="heart heart6"></span>
+                                                        <span class="heart heart7"></span>
+                                                        <span class="heart heart8"></span>
+                                                        <span class="heart heart9"></span>
+                                                        <span class="heart heart10"></span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <span class="fx-commicon__count">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
+            <div class="container mgt120">
+                <div class="button-contained-wrap">
+                    <button type="button" class="button-contained-full button-contained-full--white">더보기</button>
+                </div>
+            </div>
+            <!-- //게시물 있을 경우 -->
+
+            <!-- 게시물 없을 경우 -->
+            <div class="container">
+                <div class="icon-wrap">
+                    <i class="icon-wrap__icon icon-wrap__icon--no-data" aria-hidden="true"></i>
+                    <p class="icon-wrap__icon-word">등록된 게시물이 없습니다.</p>
+                </div>
+            </div>
+            <!-- //게시물 없을 경우 -->
         </div>
-        <!-- //부가서비스 : FX커뮤니티 -->
+        <!-- //부가서비스 : 커뮤니티 -->
     </div>
     <!-- //content -->
 </div>
@@ -75,5 +352,23 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script>
+    $(function () {
+        $('.fx-commicon__input').on('change', function(){
+            var state = $(this).prop('checked');
+            if(state){
+                $('.hearts-animations').addClass('is-active');
+            } else {
+                $('.hearts-animations').removeClass('is-active');
+            }
+        });
+        $('.hearts-animations .heart').each(function(i,el){
+            $(el).css({
+                'animation-delay': (i * 0.1) + 's',
+                '-webkit-animation-delay': (i * 0.1) + 's'
+            })
+        })
+    })
+</script>
 </body>
 </html>
