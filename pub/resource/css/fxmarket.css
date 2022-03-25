@@ -572,9 +572,9 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     -webkit-animation-duration:0.5s;
     animation-duration:0.5s;}
 @keyframes heartScale {
-    0% {-webkit-transform:scale(80%);transform:scale(80%);}
-    50% {-webkit-transform:scale(130%);transform:scale(130%);}
-    100% {-webkit-transform:scale(100%);transform:scale(100%);}
+    0% {-webkit-transform:scale(0.8);transform:scale(0.8);}
+    50% {-webkit-transform:scale(1.3);transform:scale(1.3);}
+    100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 .hearts-animations {position:relative;margin-left:-1.25rem;}
 .is-active .heart {
@@ -589,12 +589,12 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     animation-name:hearts;
     -webkit-animation-name:hearts;
 }
-.hearts-animations .heart1 {left: 12px;}
-.hearts-animations .heart2 {left: 24px;width: 36px;height: 36px;}
-.hearts-animations .heart3 {left: 32px;}
-.hearts-animations .heart4 {left: 15px;width: 20px;height: 20px;}
-.hearts-animations .heart5 {left: 30px;width: 24px;height: 24px;}
-.hearts-animations .heart6 {left: 25px;}
+.hearts-animations .heart1 {left:12px;}
+.hearts-animations .heart2 {left:24px;width:36px;height:36px;}
+.hearts-animations .heart3 {left:32px;}
+.hearts-animations .heart4 {left:15px;width:20px;height:20px;}
+.hearts-animations .heart5 {left:30px;width:24px;height:24px;}
+.hearts-animations .heart6 {left:25px;}
 @keyframes hearts {
     0% {transform:rotate(15deg);opacity:0;}
     50% {transform:rotate(-15deg);opacity:0.8;}
