@@ -171,13 +171,15 @@
 .fx-myinfo {display:flex;justify-content:space-between;align-items:center;flex-direction:row-reverse;}
 .fx-myinfo .button-select {width:13.750em;padding-bottom:0.813rem;}
 .fx-myinfo .button-select__item {height:1.875rem;padding-left:0;border:none;font-size:1.25rem;letter-spacing:-0.5px;background-position:95% 50%;}
-/* s마이페이지 수정중 */
+/* [s] 마이페이지 수정중 */
 .fx-level-icon {display:block;width:4rem;height:4rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-.fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_1.png);}
-.fx-level-icon.level-2 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_2.png);}
-.fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_3.png);}
-.fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_3.png);}
-.fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_3.png);}
+/* [s] Level 아이콘 미정 */
+.fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_1.png);}
+.fx-level-icon.level-2 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_2.png);}
+.fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_3.png);}
+.fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_4.png);}
+.fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_5.png);}
+/* [e] Level 아이콘 미정 */
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
@@ -200,7 +202,7 @@
 
 .list-section--fxm {margin:0 0 -1.875rem;}
 hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
-/* e마이페이지 수정중 */
+/* [e] 마이페이지 수정중 */
 .list-wrap--line,
 .list-wrap--line .list-wrap__item {border:0;}
 .list-section--fxm .list-wrap__item + .list-wrap__item {border-top:1px solid #e7e9ee;}
@@ -557,7 +559,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-commlike__btn .num {margin-left:0.375rem;font-size:0.875rem}
 .fx-commicon {display:flex;align-items:center;justify-content:space-around;padding-top:0.625rem;}
 .fx-commicon__item {position:relative;font-size:0;}
-.fx-commicon__input {position:absolute;top:0;left:0;}
+.fx-commicon__input {position:absolute;top:0;left:0;opacity:0;}
 .fx-commicon__count {display:block;margin-top:0.125rem;text-align:center;font-size:0.813rem;color:#666;}
 [class^='fx-commicon__icon--'] {display:block;width:2.375rem;height:2.375rem;background-image:url(../../resource/images/fxmarket/sp_community_emoji.png);background-repeat:no-repeat;background-size:auto 100%;
     -webkit-transform:scale(0.8);transform:scale(0.8);
