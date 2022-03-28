@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+    [class^="fx-submain-"] {margin-top:2.5rem}
+    .fx-submain-toplink {margin:0.5rem 0 1.5rem}
+    .fx-submain-toplink .fx-level-icon {width:1.563rem;height:1.563rem;}
+    .fx-submain-toplink .fx-trader__nickname {font-size:1.25rem;font-weight:400;}
+    .fx-submain-toplink .challenge-badge__item {width:1.313rem;height:1.313rem;margin:0.313rem;}
+
+    .fx-submain-timesale {margin-top:0}
+    .fx-submain-service {overflow:hidden;max-height:9rem;}
+    .fx-serviceslider .slick-dots {display:flex;-webkit-box-pack:center;justify-content:center;margin-top:1.25rem;}
+    .fx-serviceslider .slick-dots li {margin:0 0.188rem;}
+    .fx-serviceslider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
+    .fx-serviceslider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
+    .fx-serviceslider__item {position:relative;height:7.188rem;padding:0 2.25rem;background-repeat:no-repeat;background-position:calc(100% - 1.5rem) 0;background-size:auto 7.188rem;;}
+    .fx-serviceslider__item .service-noti {display:block;font-size:0.813rem;color:#666;}
+    .fx-serviceslider__item .service-title {display:block;margin-top:0.5rem;font-size:1.375rem;color:#000;}
+    .fx-serviceslider__item .service-desc {display:block;font-size:1rem;color:#000;line-height:1.4;}
+    .fx-serviceslider__item .service-img {z-index:-1;position:absolute;top:0;right:1.5rem;width:auto;height:100%;}
+    .fx-submain-news {overflow:hidden;padding:2.5rem 0;background:#f9f9fb;}
+    .fx-newsslider .slick-list {margin-left:1.5rem;margin-right:-2.625rem}
+    .fx-newsslider .slick-slide {margin-right:0.625rem}
+    .fx-newsslider__item {position:relative;padding:0.75rem 1rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
+    .fx-newsslider__item .btn-newsmore {z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;}
+    .fx-newsslider__item .news-title {overflow:hidden;font-size:1rem;font-weight:300;color:#666;text-align:left;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+
+    .fx-submain-rate {overflow:hidden;color:#fff;max-height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
+    .fx-rateslider .slick-list {padding-left:1.5rem}
+    .fx-rateslider .slick-slide {margin-right:0.75rem}
+    .fx-rateslider__item .icon-na {width:0.813rem;height:0.813rem;margin-right:0.313rem;border:1px solid #fff;border-radius:50%;}
+    .fx-rateslider__item .exr {margin-left:0.5rem;font-size:0.875rem;font-weight:400;color:#666;line-height:initial;}
+    .fx-rateslider__item .exr--icon {display:inline-block;width:0;height:0;margin:0;}
+    .fx-rateslider__item .exr--up {color:#fa1036;}
+    .fx-rateslider__item .exr--dw {color:#4fc7ff}
+    .fx-rateslider__item .exr--up .exr--icon {border-right:6px solid transparent;border-bottom:11px solid #fa1036;border-left:6px solid transparent;}
+    .fx-rateslider__item .exr--dw .exr--icon {border-top:11px solid #4fc7ff;border-right:6px solid transparent;border-left:6px solid transparent;}
+
+    .fx-submain-toptrader .fx-trader__list {margin:-1px 0 0 0;border:1px solid #f0f0f0;border-radius:initial;border-width:1px 0;}
+    .fx-submain-toptrader .fx-trader__rank {justify-content:flex-start;width:2.625rem;padding-left:0.625rem;}
+    .fx-submain-toptrader .fx-trader__info {padding:1.25rem 1rem 1.063rem 1rem;}
+    .fx-submain-toptrader .fx-trader__list:nth-child(1) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader01.png) no-repeat 0 50% / 2.625rem;}
+    .fx-submain-toptrader .fx-trader__list:nth-child(2) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader02.png) no-repeat 0 50% / 2.625rem;}
+    .fx-submain-toptrader .fx-trader__list:nth-child(3) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader03.png) no-repeat 0 50% / 2.625rem;}
+</style>
+</head>
+<body class="bg-white">
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">FX 마켓</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main fxmarket background-white">
+        <div class="fx-submain">
+            <div class="fx-submain-toplink">
+                <div class="tit-default">
+                    <span class="fx-level-icon level-1"><span class="offscreen">level1</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
+                    <span class="fx-trader__nickname">내일은 투자왕</span>
+                    <div class="challenge__badge">
+                        <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i> <!--to.개발 | <span class="offscreen">챌린지</span> 챌린지명 기재 -->
+                        <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
+                    </div>
+                    <a href="#none" class="button-arrow button-arrow--big"><span class="offscreen">마이페이지 바로가기</span></a>
+                </div>
+            </div>
+
+            <!-- 타임세일 -->
+            <div class="fx-submain-timesale">
+                <img src="../../../../resource/images/fxmarket/dummy_timesale.jpg" alt="">
+            </div>
+
+            <!-- 부가서비스 -->
+            <div class="fx-submain-service">
+                <ul class="fx-serviceslider" data-slider="dot1">
+                    <li class="fx-serviceslider__item">
+                        <span class="service-noti eng">EVERYDAY EVENT</span>
+                        <strong class="service-title">환율 맞추기</strong>
+                        <span class="service-desc">내일 환율 오를까 내릴까?</span>
+                        <img src="../../../../resource/images/fxmarket/bg_submain_service_rate.png" alt="" class="service-img">
+                    </li>
+                    <li class="fx-serviceslider__item">
+                        <span class="service-noti eng">EVERYDAY EVENT</span>
+                        <strong class="service-title">커뮤니티</strong>
+                        <span class="service-desc">밀달활동 자랑하기</span>
+                        <img src="../../../../resource/images/fxmarket/bg_submain_service_community.png" alt="" class="service-img">
+                    </li>
+                    <li class="fx-serviceslider__item">
+                        <span class="service-noti eng">EVERYDAY EVENT</span>
+                        <strong class="service-title">출첵 이벤트</strong>
+                        <span class="service-desc">밀달부스터 증정</span>
+                        <img src="../../../../resource/images/fxmarket/bg_submain_service_checkout.png" alt="" class="service-img">
+                    </li>
+                    <li class="fx-serviceslider__item">
+                        <span class="service-noti eng">EVERYDAY EVENT</span>
+                        <strong class="service-title">밀달챌린지 달성하면</strong>
+                        <span class="service-desc">밀달배지 득템</span>
+                        <img src="../../../../resource/images/fxmarket/bg_submain_service_challenge.png" alt="" class="service-img">
+                    </li>
+                    <li class="fx-serviceslider__item">
+                        <span class="service-noti eng">EVERYDAY EVENT</span>
+                        <strong class="service-title">밀리언달러마켓은 처음이지?</strong>
+                        <span class="service-desc">100% 활용가이드</span>
+                        <img src="../../../../resource/images/fxmarket/bg_submain_service_guide.png" alt="" class="service-img">
+                    </li>
+                </ul>
+            </div>
+            <hr class="spacer mgt120" aria-hidden="true">
+
+            <!-- 탑트레이더랭킹 -->
+            <div class="fx-submain-toptrader">
+                <div class="tit-default">
+                    <span>탑트레이더 랭킹</span>
+                    <a href="#none" class="button-arrow button-arrow--right">더보기</a>
+                </div>
+                <div class="container">
+                    <ol class="fx-trader__wrap pdt0">
+                        <li class="fx-trader__list">
+                            <strong class="fx-trader__rank">1</strong>
+                            <div class="fx-trader__info">
+                                <div class="wrap--flex">
+                                    <span class="fx-level-icon level-1"><span class="offscreen">level1</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
+                                    <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                                    <div class="challenge__badge">
+                                        <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i> <!--to.개발 | <span class="offscreen">챌린지</span> 챌린지명 기재 -->
+                                        <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
+                                        <i class="challenge-badge__item challenge-3"><span class="offscreen">챌린지</span></i>
+                                    </div>
+                                </div>
+                                <span class="fx-trader__sum">USD 50,000,000.00</span>
+                            </div>
+                        </li>
+                        <li class="fx-trader__list">
+                            <strong class="fx-trader__rank">2</strong>
+                            <div class="fx-trader__info">
+                                <div class="wrap--flex">
+                                    <span class="fx-level-icon level-2"><span class="offscreen">level2</span></span>
+                                    <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                                    <div class="challenge__badge">
+                                        <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i> 
+                                    </div>
+                                </div>
+                                <span class="fx-trader__sum">USD 49,000,000.00</span>
+                            </div>
+                        </li>
+                        <li class="fx-trader__list">
+                            <strong class="fx-trader__rank">3</strong>
+                            <div class="fx-trader__info">
+                                <div class="wrap--flex">
+                                    <span class="fx-level-icon level-3"><span class="offscreen">level3</span></span>
+                                    <span class="fx-trader__nickname">소심한백억부자</span>
+                                    <div class="challenge__badge">
+                                        <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i> 
+                                    </div>
+                                </div>
+                                <span class="fx-trader__sum">USD 48,000,000.00</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- 환율배너 -->
+            <div class="fx-submain-rate">
+                <ul class="fx-rateslider">
+                    <li class="fx-rateslider__item">
+                        <div class="wrap--flex">
+                            <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i> <span class="eng">USD 1232.00</span> 
+                             <!-- to.개발 | 고시환율 표기
+                                    동일 :<em class="exr">0.00<span class="offscreen">동일</span>
+                                    오름 :<em class="exr exr--up">0.01<span class="offscreen">오름</span>
+                                    내림 :<em class="exr exr--dw">0.01<span class="offscreen">내림</span> 
+                            -->
+                            <em class="exr">
+                                <i class="exr--icon"><span class="offscreen">동일</span></i> <span>0.00</span>
+                            </em>
+                        </div>
+                    </li>
+                    <li class="fx-rateslider__item">
+                        <div class="wrap--flex">
+                            <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt="유럽"></i> <span class="eng">EUR 1232.00</span>
+                            <span class="exr exr--up">
+                                <i class="exr--icon"><span class="offscreen">오름</span></i> <span>10.00</span>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="fx-rateslider__item">
+                        <div class="wrap--flex">
+                            <i class="icon-na"><img src="../../../images/symbols/na_JP.png" alt="일본"></i> <span class="eng">JPY 1232.00</span>
+                            <span class="exr exr--dw">
+                                <i class="exr--icon"><span class="offscreen">내림</span></i> <span>10.00</span>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 환율현황 -->
+            <div class="fx-submain-state">
+                <div class="container flex flex--item-c flex-align-center">
+                    <div class="button-select--fxm">
+                        <button type="button" class="button button-select__item" title="통화선택">
+                            <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
+                            <span>USD</span>
+                        </button>
+                    </div>
+                    <p class="fx-specialrate-info">타임세일 특별 우대율 <em>90%</em></p>
+                </div>
+                <div class="container fx-dominant">
+                    <div class="inner-wrap">
+                        <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-buy bold">살래요</em>가 더 많아요</p>
+                        <!-- <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-sell bold">팔래요</em>가 더 많아요</p> -->
+                        <div class="tooltip" data-tooltip="paragraph">
+                            <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="$label$ 툴팁 열기"></button>
+                            <div class="tooltip__panel" data-tooltip-panel="false">
+                                <div class="tooltip__column">
+                                    <div class="tooltip__title" data-tooltip="focus">
+                                        <p>팔래요 <em>00.00%</em> 살래요 <em>00.00%</em> (거래건수 기준)</p>
+                                    </div>
+                                </div>
+                                <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container fx-specialtime">
+                    <div class="fx-specialrate">
+                        <div class="fx-specialrate__item fx-specialrate__item--sell">
+                            <span class="fx-specialrate__tit">내가 <em class="txt-sell">팔면</em></span>
+                            <div class="fx-specialrate__num">
+                                <span class="offscreen">우대율</span><strong>1,228.48</strong>
+                            </div>
+                            <div class="fx-specialrate-noti">
+                                <em class="offscreen">고시환율</em>
+                                <span>1,228.25</span> <em class="exr">0.00<span class="offscreen">동일</span></em>
+                            </div>
+                        </div>
+                        <div class="fx-specialrate__item fx-specialrate__item--buy">
+                            <span class="fx-specialrate__tit">내가 <em class="txt-buy">사면</em></span>
+                            <div class="fx-specialrate__num">
+                                <span class="offscreen">우대율</span><strong>1.232.00</strong>
+                            </div>
+                            <div class="fx-specialrate-noti">
+                                <em class="offscreen">고시환율</em>
+                                <span>1,232.55</span> <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
+                                <!-- to.개발 | 고시환율 표기
+                                    동일 :<em class="exr">0.00<span class="offscreen">동일</span>
+                                    오름 :<em class="exr exr--up">0.01<span class="offscreen">오름</span>
+                                    내림 :<em class="exr exr--dw">0.01<span class="offscreen">내림</span>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fx-refresh fx-refresh--timesale">
+                        <div class="fx-refresh__txt align-right">
+                            <span>2022.02.20 13:14:00</span> 기준<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
+                        </div> 
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="fx-rate__graph mgt0">
+                        <div style="height:9rem;background:#f0d4b4">
+                            그래프영역
+                        </div>
+                        <div class="select-button fx-graph__control">
+                            <div class="select-button__box">
+                                <input type="radio" id="period01" class="select-button__input" name="period">
+                                <label for="period01" class="select-button__item">1D</label>
+                            </div>
+                            <div class="select-button__box">
+                                <input type="radio" id="period02" class="select-button__input" name="period">
+                                <label for="period02" class="select-button__item">1M</label>
+                            </div>
+                            <div class="select-button__box">
+                                <input type="radio" id="period03" class="select-button__input" name="period" checked>
+                                <label for="period03" class="select-button__item">3M</label>
+                            </div>
+                            <div class="select-button__box">
+                                <input type="radio" id="period04" class="select-button__input" name="period">
+                                <label for="period04" class="select-button__item">6M</label>
+                            </div>
+                            <div class="select-button__box">
+                                <input type="radio" id="period05" class="select-button__input" name="period">
+                                <label for="period05" class="select-button__item">1Y</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- fx뉴스 -->
+            <div class="fx-submain-news">
+                <ul class="fx-newsslider">
+                    <li class="fx-newsslider__item">
+                        <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button> <!-- 뉴스상세팝업 호출 -->
+                    </li>
+                    <li class="fx-newsslider__item">
+                        <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
+                    </li>
+                    <li class="fx-newsslider__item">
+                        <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+            <button type="button" class="button button--active button--span4">내역조회</button>
+            <button type="button" class="button button--positive button--span6">거래하기</button>
+        </div>
+    </div>
+    <!-- //footer -->
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script>
+$(function(){
+    setTimeout(function(){
+        var submainrate = $('.fx-submain-rate').offset().top,
+            appHeader = $('.app-header').innerHeight();
+        $('body,html').animate({scrollTop : submainrate - appHeader}, 700)
+    },2000)
+    
+    if($('.fx-newsslider .fx-newsslider__item').length > 1){
+        $('.fx-newsslider').slick({
+            slidesToShow:2,
+            dots:false,
+            infinite :true,
+        });
+    }
+
+    if($('.fx-rateslider .fx-rateslider__item').length > 1){
+        $('.fx-rateslider').slick({
+            autoplay:true,
+            autoplaySpeed :0,
+            speed :2000,
+            cssEase:"linear",
+            dots :false,
+            infinite :true,
+            swipe:false,
+            variableWidth :true,
+        });
+        $('.fx-rateslider')[0].slick.focussed = false;
+    }
+})
+</script>
+</body>
+</html>
