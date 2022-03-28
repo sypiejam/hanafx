@@ -609,6 +609,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     50% {transform:rotate(-15deg);opacity:0.8;}
     100% {top:-150px;transform:rotate(15deg);opacity:0;}
 }
+.fx-commicon__input:checked ~ .fx-commicon__count {font-weight:500;color:#009591;}
 
 /* 부가서비스 - 타임세일 */
 .fx-service__keyvisual--specialtime {background:#f90;}
