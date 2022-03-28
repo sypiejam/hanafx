@@ -21,7 +21,7 @@
     .fx-submain-toplink .challenge-badge__item {width:1.313rem;height:1.313rem;margin:0.313rem;}
 
     .fx-submain-timesale {margin-top:0}
-    .fx-submain-service {overflow:hidden;max-height:9rem;}
+    .fx-submain-service {overflow:hidden;height:9rem;}
     .fx-serviceslider .slick-dots {display:flex;-webkit-box-pack:center;justify-content:center;margin-top:1.25rem;}
     .fx-serviceslider .slick-dots li {margin:0 0.188rem;}
     .fx-serviceslider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
@@ -38,7 +38,7 @@
     .fx-newsslider__item .btn-newsmore {z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;}
     .fx-newsslider__item .news-title {overflow:hidden;font-size:1rem;font-weight:300;color:#666;text-align:left;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
 
-    .fx-submain-rate {overflow:hidden;color:#fff;max-height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
+    .fx-submain-rate {overflow:hidden;color:#fff;height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
     .fx-rateslider .slick-list {padding-left:1.5rem}
     .fx-rateslider .slick-slide {margin-right:0.75rem}
     .fx-rateslider__item .icon-na {width:0.813rem;height:0.813rem;margin-right:0.313rem;border:1px solid #fff;border-radius:50%;}
@@ -89,38 +89,38 @@
 
             <!-- 부가서비스 -->
             <div class="fx-submain-service">
-                <ul class="fx-serviceslider" data-slider="dot1">
-                    <li class="fx-serviceslider__item">
+                <div class="fx-serviceslider" data-slider="dot1">
+                    <div class="fx-serviceslider__item">
                         <span class="service-noti eng">EVERYDAY EVENT</span>
                         <strong class="service-title">환율 맞추기</strong>
                         <span class="service-desc">내일 환율 오를까 내릴까?</span>
                         <img src="../../../../resource/images/fxmarket/bg_submain_service_rate.png" alt="" class="service-img">
-                    </li>
-                    <li class="fx-serviceslider__item">
+                    </div>
+                    <div class="fx-serviceslider__item">
                         <span class="service-noti eng">EVERYDAY EVENT</span>
                         <strong class="service-title">커뮤니티</strong>
                         <span class="service-desc">밀달활동 자랑하기</span>
                         <img src="../../../../resource/images/fxmarket/bg_submain_service_community.png" alt="" class="service-img">
-                    </li>
-                    <li class="fx-serviceslider__item">
+                    </div>
+                    <div class="fx-serviceslider__item">
                         <span class="service-noti eng">EVERYDAY EVENT</span>
                         <strong class="service-title">출첵 이벤트</strong>
                         <span class="service-desc">밀달부스터 증정</span>
                         <img src="../../../../resource/images/fxmarket/bg_submain_service_checkout.png" alt="" class="service-img">
-                    </li>
-                    <li class="fx-serviceslider__item">
+                    </div>
+                    <div class="fx-serviceslider__item">
                         <span class="service-noti eng">EVERYDAY EVENT</span>
                         <strong class="service-title">밀달챌린지 달성하면</strong>
                         <span class="service-desc">밀달배지 득템</span>
                         <img src="../../../../resource/images/fxmarket/bg_submain_service_challenge.png" alt="" class="service-img">
-                    </li>
-                    <li class="fx-serviceslider__item">
+                    </div>
+                    <div class="fx-serviceslider__item">
                         <span class="service-noti eng">EVERYDAY EVENT</span>
                         <strong class="service-title">밀리언달러마켓은 처음이지?</strong>
                         <span class="service-desc">100% 활용가이드</span>
                         <img src="../../../../resource/images/fxmarket/bg_submain_service_guide.png" alt="" class="service-img">
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
             <hr class="spacer mgt120" aria-hidden="true">
 
@@ -179,8 +179,8 @@
 
             <!-- 환율배너 -->
             <div class="fx-submain-rate">
-                <ul class="fx-rateslider">
-                    <li class="fx-rateslider__item">
+                <div class="fx-rateslider">
+                    <div class="fx-rateslider__item">
                         <div class="wrap--flex">
                             <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i> <span class="eng">USD 1232.00</span> 
                              <!-- to.개발 | 고시환율 표기
@@ -192,24 +192,24 @@
                                 <i class="exr--icon"><span class="offscreen">동일</span></i> <span>0.00</span>
                             </em>
                         </div>
-                    </li>
-                    <li class="fx-rateslider__item">
+                    </div>
+                    <div class="fx-rateslider__item">
                         <div class="wrap--flex">
                             <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt="유럽"></i> <span class="eng">EUR 1232.00</span>
                             <span class="exr exr--up">
                                 <i class="exr--icon"><span class="offscreen">오름</span></i> <span>10.00</span>
                             </span>
                         </div>
-                    </li>
-                    <li class="fx-rateslider__item">
+                    </div>
+                    <div class="fx-rateslider__item">
                         <div class="wrap--flex">
                             <i class="icon-na"><img src="../../../images/symbols/na_JP.png" alt="일본"></i> <span class="eng">JPY 1232.00</span>
                             <span class="exr exr--dw">
                                 <i class="exr--icon"><span class="offscreen">내림</span></i> <span>10.00</span>
                             </span>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
             
             <!-- 환율현황 -->
@@ -307,20 +307,20 @@
             
             <!-- fx뉴스 -->
             <div class="fx-submain-news">
-                <ul class="fx-newsslider">
-                    <li class="fx-newsslider__item">
+                <div class="fx-newsslider">
+                    <div class="fx-newsslider__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
                         <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button> <!-- 뉴스상세팝업 호출 -->
-                    </li>
-                    <li class="fx-newsslider__item">
+                    </div>
+                    <div class="fx-newsslider__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
                         <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
-                    </li>
-                    <li class="fx-newsslider__item">
+                    </div>
+                    <div class="fx-newsslider__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
                         <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
