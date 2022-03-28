@@ -16,6 +16,7 @@
 <style>
     [class^="fx-submain-"] {margin-top:2.5rem}
     .fx-submain-toplink {margin:0.5rem 0 1.5rem}
+    .fx-submain-toplink .tit-default {margin-top:0;}
     .fx-submain-toplink .fx-level-icon {width:1.563rem;height:1.563rem;}
     .fx-submain-toplink .fx-trader__nickname {font-size:1.25rem;font-weight:400;}
     .fx-submain-toplink .challenge-badge__item {width:1.313rem;height:1.313rem;margin:0.313rem;}
@@ -70,7 +71,8 @@
     <!-- content -->
     <div id="content" class="app-main fxmarket background-white">
         <div class="fx-submain">
-            <div class="fx-submain-toplink">
+            <section class="fx-submain-toplink">
+                <h2 class="offscreen">나의 정보</h2>
                 <div class="tit-default">
                     <span class="fx-level-icon level-1"><span class="offscreen">level1</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
                     <span class="fx-trader__nickname">내일은 투자왕</span>
@@ -80,15 +82,17 @@
                     </div>
                     <a href="#none" class="button-arrow button-arrow--big"><span class="offscreen">마이페이지 바로가기</span></a>
                 </div>
-            </div>
+            </section>
 
             <!-- 타임세일 -->
-            <div class="fx-submain-timesale">
+            <section class="fx-submain-timesale">
+                <h2 class="offscreen">타임세일</h2>
                 <img src="../../../../resource/images/fxmarket/dummy_timesale.jpg" alt="">
-            </div>
+            </section>
 
             <!-- 부가서비스 -->
-            <div class="fx-submain-service">
+            <section class="fx-submain-service">
+                <h2 class="offscreen">부가서비스</h2>
                 <div class="fx-serviceslider" data-slider="dot1">
                     <a href="#none" class="fx-serviceslider__item">
                         <span class="service-noti eng">EVERYDAY EVENT</span>
@@ -121,13 +125,13 @@
                         <img src="../../../../resource/images/fxmarket/bg_submain_service_guide.png" alt="" class="service-img">
                     </a>
                 </div>
-            </div>
+            </section>
             <hr class="spacer mgt120" aria-hidden="true">
 
             <!-- 탑트레이더랭킹 -->
-            <div class="fx-submain-toptrader">
+            <section class="fx-submain-toptrader">
                 <div class="tit-default">
-                    <span>탑트레이더 랭킹</span>
+                    <h2>탑트레이더 랭킹</h2>
                     <a href="#none" class="button-arrow button-arrow--right">더보기</a>
                 </div>
                 <div class="container">
@@ -175,10 +179,11 @@
                         </li>
                     </ol>
                 </div>
-            </div>
+            </section>
 
             <!-- 환율배너 -->
-            <div class="fx-submain-rate">
+            <section class="fx-submain-rate">
+                <h2 class="offscreen">고시환율</h2>
                 <div class="fx-rateslider">
                     <div class="fx-rateslider__item">
                         <div class="wrap--flex">
@@ -210,10 +215,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             
             <!-- 환율현황 -->
-            <div class="fx-submain-state">
+            <section class="fx-submain-state">
+                <h2 class="offscreen">환율정보</h2>
                 <div class="container flex flex--item-c flex-align-center">
                     <div class="button-select--fxm">
                         <button type="button" class="button button-select__item" title="통화선택">
@@ -301,10 +307,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             
-            <!-- fx뉴스 -->
-            <div class="fx-submain-news">
+            <!-- 뉴스 -->
+            <section class="fx-submain-news">
+                <h2 class="offscreen">뉴스</h2>
                 <div class="fx-newsslider">
                     <div class="fx-newsslider__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
@@ -319,7 +326,7 @@
                         <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
     <!-- //content -->
