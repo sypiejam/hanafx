@@ -529,7 +529,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-attend--modal hr.content-devider {margin:1.875rem 0 0}
 
 /* 부가서비스 - 커뮤니티 */
-.fx-service__keyvisual--community {height:13.063rem;background:url(../../resource/images/fxmarket/dummy_img_keyvisual_community.png) no-repeat 0 0 / 100%;}
+.fx-service__keyvisual--community {height:13.063rem;background:url(../../resource/images/fxmarket/img_keyvisual_community.png) no-repeat 0 0 / 100%;}
 .fx-commlist hr.spacer {margin-top:0;}
 .fx-commlist__item {margin-top:3rem;}
 .fx-boast .fx-level-icon {width:1.563rem;height:1.563rem;}
