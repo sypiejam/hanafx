@@ -585,7 +585,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 }
 .hearts-animations {position:relative;margin-left:-1.25rem;}
 .is-active .heart {
-    z-index:0;opacity:0;position:absolute;top:1.25rem;left:0;width:1.875rem;height:1.875rem;
+    z-index:0;opacity:0;position:absolute;top:0.625rem;left:0;width:1.875rem;height:1.875rem;
     background:url(../../resource/images/fxmarket/icon_community_heart.png) no-repeat 0 0 / 100%;
     animation-duration:1s;
     -webkit-animation-duration:1s;
