@@ -614,6 +614,14 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* 부가서비스 - 타임세일 */
 .fx-service__keyvisual--specialtime {background:#f90;}
 
+/* 부가서비스 - fx챌린지 */
+.fx-service__keyvisual--challenge {padding:0;}
+.fx-activity-advice {margin-top:3rem;}
+.fx-activity-advice .row-list__link {margin-top:2rem;padding:0;}
+.fx-activity-badge {margin-top:2.625rem;}
+.fx-activity-badge__txt {margin-top:3rem;font-size:1.125rem;color:#000;line-height:1.4;}
+.fx-activity-badge__img {margin-top:1.563rem;}
+
 /* 서브메인 */
 /* - 환율정보 영역(타임세일 공통스타일) */
 .button-select--fxm .button-select__item {width:auto;height:auto;padding-left:0;padding-right:2.5rem;border:0;background-color:inherit;font-weight:400;font-size:1.25rem;color:#000;}
