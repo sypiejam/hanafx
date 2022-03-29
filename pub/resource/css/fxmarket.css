@@ -617,7 +617,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* 부가서비스 - fx챌린지 */
 .fx-service__keyvisual--challenge {padding:0;}
 .fx-advice {margin-top:3rem;}
-.fx-advice-box {position:relative;height:0;padding-top:157.49%;}
+.fx-advice-imgbox {position:relative;height:0;padding-top:157.49%;}
 .fx-advice__img {position:absolute;top:0;right:0;left:0;}
 .fx-advice .row-list__link {margin-top:2rem;padding:0;}
 .fx-activity {margin-top:2.625rem;}
