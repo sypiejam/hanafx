@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+    .fx-service__keyvisual--challenge {padding:0;}
+    .fx-activity-advice {margin-top:3rem;}
+    .fx-activity-advice .row-list__link {margin-top:2rem;padding:0;}
+    .fx-activity-badge {margin-top:2.625rem;}
+    .fx-activity-badge__txt {margin-top:3rem;font-size:1.125rem;color:#000;line-height:1.4;}
+    .fx-activity-badge__img {margin-top:1.563rem;}
+</style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">FX챌린지</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main app-main--without-footer fxmarket">
+        <!-- 부가서비스 : FX챌린지 -->
+        <div class="fx-service fx-challenge">
+            <div class="fx-service__keyvisual fx-service__keyvisual--challenge">
+                <img src="../../../images/fxmarket/img_keyvisual_challenge.png" alt="챌린지 미션 달성하면 밀달배지 득템">
+            </div>
+            
+            <div class="container fx-activity-advice">
+                <img src="../../../images/fxmarket/img_activity_advice.png" alt="밀리언달러마켓 커뮤니티에 내 배지를 자랑해보세요.">
+                <div class="row-list__link">
+                    <div class="row-list__text">
+                        <span class="row-list__title">밀리언달러마켓 활동정보공개 동의</span>
+                    </div>
+                    <div class="row-list__anchor">
+                        <label class="switch">
+                            <input type="checkbox" title="밀리언달러마켓 활동정보공개 동의 설정">
+                            <span class="switch__toggle" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </div>
+                <p class="row-list__phrase fs16">커뮤니티 및 자랑하기 등 정보 공유를 할 수 있어요.</p>
+            </div>
+            
+            <div class="container fx-activity-badge">
+                <hr class="spacer" aria-hidden="true">
+                <p class="fx-activity-badge__txt">밀달활동(거래,커뮤니티,환율맞추기)에 따라 배지를 받아요.</p>
+                <img src="../../../../resource/images/fxmarket/fx_activity_badge.png" aria-hidden="true" alt="" class="fx-activity-badge__img">
+            </div>
+
+            <hr class="content-devider mgt150" aria-hidden="true">
+            <div class="container">
+                <div class="guide-wrap guide-wrap--notoggle mgt90">
+                    <div class="guide-panel">
+                        <ul class="guide-list guide-list--large color-666">
+                            <li class="guide-list__item">마이페이지에서 내가 획득한 밀달배지를 확인할 수 있어요.</li>
+                            <li class="guide-list__item">밀달배지는 매년 1월1일 초기화됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- //부가서비스 : FX챌린지 -->
+    </div>
+    <!-- //content -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
