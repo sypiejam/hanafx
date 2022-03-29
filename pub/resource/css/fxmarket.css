@@ -616,11 +616,13 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 
 /* 부가서비스 - fx챌린지 */
 .fx-service__keyvisual--challenge {padding:0;}
-.fx-activity-advice {margin-top:3rem;}
-.fx-activity-advice .row-list__link {margin-top:2rem;padding:0;}
-.fx-activity-badge {margin-top:2.625rem;}
-.fx-activity-badge__txt {margin-top:3rem;font-size:1.125rem;color:#000;line-height:1.4;}
-.fx-activity-badge__img {margin-top:1.563rem;}
+.fx-advice {margin-top:3rem;}
+.fx-advice-imgbox {position:relative;height:0;padding-top:157.49%;}
+.fx-advice__img {position:absolute;top:0;right:0;left:0;}
+.fx-advice .row-list__link {margin-top:2rem;padding:0;}
+.fx-activity {margin-top:2.625rem;}
+.fx-activity__txt {margin-top:3rem;font-size:1.125rem;color:#000;line-height:1.4;}
+.fx-activity__img {margin-top:1.563rem;}
 
 /* 서브메인 */
 /* - 환율정보 영역(타임세일 공통스타일) */
