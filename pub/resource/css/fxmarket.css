@@ -624,13 +624,13 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 
 /* 서브메인 */
 /* - 환율정보 영역(타임세일 공통스타일) */
+.fxmarket .txt-buy {color:#139be5;}
+.fxmarket .txt-sell {color:#fa1036;}
 .button-select--fxm .button-select__item {width:auto;height:auto;padding-left:0;padding-right:2.5rem;border:0;background-color:inherit;font-weight:400;font-size:1.25rem;color:#000;}
 .fx-specialrate-info {display:inline-block;height:1.313rem;padding:0 0.625rem;margin-top:-1px;border:1px solid #009591;border-radius:0.688rem;font-size:0.813rem;font-weight:300;}
 .fx-dominant .inner-wrap {display:flex;align-items:center;justify-content:center;}
 .fx-dominant__desc {display:inline-block;text-align:center;font-size:0.813rem;}
 .fx-dominant__desc::before {content:'';display:inline-block;width:0.875rem;height:0.875rem;margin:0 5px -1px 0;background:url(../../resource/images/fxmarket/icon_speaker_42x42.png) no-repeat 0 0 / 100%;}
-.fx-specialtime .txt-buy {color:#139be5;}
-.fx-specialtime .txt-sell {color:#fa1036;}
 .fx-specialrate {display:flex;align-items:center;justify-content:center;margin:1.125rem -1rem 0;}
 .fx-specialrate__item {flex:1;text-align:center;}
 .fx-specialrate__item:not(:first-child) {position:relative;}
