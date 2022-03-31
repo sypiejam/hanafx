@@ -245,6 +245,9 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-mylevel__desc {color:#666;}
 /* 마이페이지 - 거래한도 관리 */
 .amount-item--fxlimit .amount {font-weight:500;font-size:1.125rem;letter-spacing:0;}
+.fx-bounds .input.readonly::before {background:#fff;}
+.fx-bounds .input.readonly .input__element {color:#000;}
+.fx-bounds .input--error.readonly::before {border:2px solid #ed1651 !important;}
 
 /* 부가서비스 */
 .fx-service__keyvisual {margin-top:-1.25rem;padding:1.875rem 1.5rem;}

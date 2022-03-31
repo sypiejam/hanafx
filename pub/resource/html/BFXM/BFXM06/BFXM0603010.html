@@ -56,7 +56,7 @@
 
         <div class="tit-default">변경 FX마켓 거래한도</div>
         <div class="tit-small">1일 FX거래한도</div>
-        <div class="container">
+        <div class="container fx-bounds"><!-- 2022-03-31 클래스 fx-bounds 추가 -->
             <div class="input input--flex input--error">
                 <!--
                     * 오류시 class="input input--error"
@@ -68,7 +68,7 @@
                 </div>
                 <div class="additional-item">
                     <div class="input__inner">
-                        <input type="text" id="" class="input__element input__no-label input__element--right" title="1일 FX거래한도" placeholder="" value="1,000,000">
+                        <input type="text" id="" class="input__element input__no-label input__element--right" title="1일 FX거래한도" placeholder="" value="1,000,000" readonly>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <p class="input__error" aria-live="assertive">1일 FX거래한도 보다 높은 금액 입력</p>
         </div>
         <div class="tit-small">1회 FX거래한도</div>
-        <div class="container">
+        <div class="container fx-bounds"><!-- 2022-03-31 클래스 fx-bounds 추가 -->
             <div class="input input--flex">
                 <div class="input__icon">
                     <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="additional-item">
                     <div class="input__inner">
-                        <input type="text" id="" class="input__element input__no-label input__element--right" title="1회 FX거래한도" placeholder="" value="500,000">
+                        <input type="text" id="" class="input__element input__no-label input__element--right" title="1회 FX거래한도" placeholder="" value="500,000" readonly>
                     </div>
                 </div>
             </div>
