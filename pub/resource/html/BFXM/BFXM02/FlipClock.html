@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/flip.css" type="text/css"><!-- Flip Clock CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">타임세일</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main fxmarket">
+        <!-- 부가서비스 : 타임세일 -->
+        <div class="fx-service fx-specialtime">
+            <div class="fx-service__keyvisual fx-service__keyvisual--specialtime">
+                <img src="../../../../resource/images/fxmarket/img_timesale_ing.png" alt="" class="fx-specialtime__img" aria-hidden="true">
+                <div class="offscreen">
+                    <strong>타임세일 진행중</strong>
+                    <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
+                </div>
+                <div class="fx-countdown">
+                    <!-- Flip Clock -->
+                    <div class="tick-wrap">
+                        <div class="tick" data-did-init="handleTickInit">
+                            <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay">
+                                <div class="tick-group i-colon">
+                                    <div class="inner" data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                        <span class="tick-flip" data-view="flip"></span>
+                                    </div>
+                                    <span data-key="label" data-view="text" class="tick-label"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Flip Clock -->
+                </div>
+            </div>
+
+            <div class="container flex flex--item-c flex-align-center mgt120">
+                <div class="button-select--fxm">
+                    <button type="button" class="button button-select__item" title="통화선택">
+                        <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
+                        <span>USD</span>
+                    </button>
+                </div>
+                <p class="fx-specialrate-info">타임세일 특별 우대율 <em>90</em>%</p>
+            </div>
+            <div class="container">
+                <div class="fx-specialrate">
+                    <div class="fx-specialrate__item fx-specialrate__item--sell">
+                        <span class="fx-specialrate__tit">내가 <em class="txt-sell">팔면</em></span>
+                        <div class="fx-specialrate__num">
+                            <span class="offscreen">우대율</span><strong>1,228.48</strong>
+                        </div>
+                        <div class="fx-specialrate-noti">
+                            <em class="offscreen">고시환율</em>
+                            <span>1,228.25</span> <em class="exr">0.00<span class="offscreen">동일</span></em>
+                        </div>
+                    </div>
+                    <div class="fx-specialrate__item fx-specialrate__item--buy">
+                        <span class="fx-specialrate__tit">내가 <em class="txt-buy">사면</em></span>
+                        <div class="fx-specialrate__num">
+                            <span class="offscreen">우대율</span><strong>1,232.00</strong>
+                        </div>
+                        <div class="fx-specialrate-noti">
+                            <em class="offscreen">고시환율</em>
+                            <span>1,232.55</span> <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
+                            <!-- to.개발 | 고시환율 표기
+                                동일 : <em class="exr">0.00<span class="offscreen">동일</span>
+                                오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span>
+                                내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="fx-refresh mgt75">
+                    <div class="fx-refresh__txt align-center">
+                        <span>2022.02.20 13:14:00</span><button type="button" class="button-refresh" aria-label="새로고침"></button>
+                    </div> 
+                </div>
+            </div>
+
+            <hr class="spacer">
+            <div class="container">
+                <div class="guide-wrap">
+                    <div class="guide-title">이용안내</div>
+                    <div class="guide-panel mgt36">
+                        <ul class="guide-list guide-list--large color-999">
+                            <li class="guide-list__item">타임세일은 특정시간대에 거래하는 고객에게 제공하는 우대서비스입니다.</li>
+                            <li class="guide-list__item">타임세일을 통한 거래시 최고 우대(Spread) 한율을 적용하여 체결됩니다.</li>
+                            <li class="guide-list__item">타임세일은 즉시거래에 한해 적용됩니다.(예약거래 제외)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //부가서비스 : 타임세일 -->
+    </div>
+    <!-- //content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+            <button type="button" class="button button--positive">거래하기</button>
+        </div>
+    </div>
+    <!-- //footer -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script src="../../../../resource/js/ui/flip.min.js"></script><!-- Flip Clock JS -->
+<script>
+    // Flip Clock
+	function handleTickInit(tick) {
+        var locale = {
+            // YEAR_PLURAL: 'Years',
+            // YEAR_SINGULAR: 'Year',
+            // MONTH_PLURAL: 'Months',
+            // MONTH_SINGULAR: 'Month',
+            // WEEK_PLURAL: 'Weeks',
+            // WEEK_SINGULAR: 'Week',
+            DAY_PLURAL: '일',
+            DAY_SINGULAR: '일',
+            HOUR_PLURAL: '시간',
+            HOUR_SINGULAR: '시간',
+            MINUTE_PLURAL: '분',
+            MINUTE_SINGULAR: '분',
+            SECOND_PLURAL: '초',
+            SECOND_SINGULAR: '초',
+            // MILLISECOND_PLURAL: 'Milliseconds',
+            // MILLISECOND_SINGULAR: 'Millisecond'
+        };
+
+        for (var key in locale) {
+            if (!locale.hasOwnProperty(key)) { continue; }
+            tick.setConstant(key, locale[key]);
+        }
+        
+        var timeSale = '2022-06-16 09:00:00';
+
+		Tick.count.down(timeSale).onupdate = function(value) {
+			tick.value = value;
+        };
+	}
+</script>
+</body>
+</html>
