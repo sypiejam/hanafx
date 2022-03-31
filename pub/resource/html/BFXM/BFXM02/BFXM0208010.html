@@ -155,10 +155,9 @@
             tick.setConstant(key, locale[key]);
         }
         
-        // var nextYear = (new Date()).getFullYear() + 1;
+        var timeSale = '2022/06/16 09:00:00';
 
-		// Tick.count.down(nextYear + '-01-01').onupdate = function(value) {
-		Tick.count.down('2022-06-16').onupdate = function(value) {
+		Tick.count.down(timeSale).onupdate = function(value) {
 			tick.value = value;
         };
 	}
