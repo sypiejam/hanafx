@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* FXM 밀리언달러마켓(FX market) stylesheet */
 .max-w80 {max-width:80% !important;}
 .btn-share {display:flex;align-items:center;}
 .btn-share::before {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-right:0.5rem;background:url('../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
@@ -28,7 +29,7 @@
 .fx-limit .input__element {font-size:1.25rem !important;}
 .fx-limit .input__text {font-size:1.125rem;}
 
-/* fx거래 */
+/* 밀리언달러마켓 거래 */
 .fxmarket__pull {padding-top:3.5rem;padding-top:calc(3.5rem + constant(safe-area-inset-top));padding-top:calc(3.5rem + env(safe-area-inset-top));}
 .fx-rateboard {position:relative;min-height:15.25rem;padding:1rem 1.5rem 0;}
 .fx-rateboard .button-alert {width:auto;height:3rem;margin:0;padding:0;font-size:0.813rem;color:#fff;}
@@ -173,13 +174,13 @@
 .fx-myinfo .button-select__item {height:1.875rem;padding-left:0;border:none;font-size:1.25rem;letter-spacing:-0.5px;background-position:95% 50%;}
 /* [s] 마이페이지 수정중 */
 .fx-level-icon {display:block;width:4rem;height:4rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-/* [s] Level 아이콘 미정 */
+    /* [s] Level 아이콘(공통) 미정 */
 .fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_1.png);}
 .fx-level-icon.level-2 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_2.png);}
 .fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_3.png);}
 .fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_4.png);}
 .fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_5.png);}
-/* [e] Level 아이콘 미정 */
+    /* [e] Level 아이콘(공통) 미정 */
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
@@ -189,17 +190,23 @@
 .fx-score__progress[value] {appearance:none;overflow:hidden;width:100%;display:flex;align-items:center;margin-top:0.625rem;border:1px solid #d9d9d9;border-radius:1rem;}
 .fx-score__progress[value]::-webkit-progress-bar {background-color:#f7f7f7;}
 .fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);}
-.fx-challenge-badge {padding:1.25rem 0.938rem;border-radius:1.25rem;background:#ececee;}
-.fx-challenge-badge .no-data {padding:1.813rem 0;}
-.fx-challenge-badge .inner-box {overflow:hidden;overflow-x:auto;}
-.fx-challenge-badge .inner-list {display:flex;flex-wrap:nowrap;}
-/* .fx-challenge-badge__item {display:inline-block;} */
-.fx-challenge-badge__item:not(:first-child) {margin-left:0.625rem;}
-.fx-challenge-badge__text {display:block;margin-top:5px;text-align:center;font-size:0.875rem;}
-[class^='fx-challenge-badge__icon--'] {}
-[class^='fx-challenge-badge__icon--']::before {content:'';display:block;width:3.438rem;height:3.438rem;margin:0 auto;border-radius:50%;border:3px solid #004cf5;background-color:#fff4a3;}
-.fx-challenge-badge__icon--01 {}
-
+.fx-mybadge {padding:1.25rem 0.938rem;border-radius:1.25rem;border:1px solid #ececee;}
+.fx-mybadge .no-data {padding:1.813rem 0;}
+.fx-mybadge__inner {overflow:hidden;overflow-x:auto;}
+.fx-mybadge__list {display:flex;flex-wrap:nowrap;}
+.fx-mybadge__item:not(:first-child) {margin-left:0.625rem;}
+.fx-mybadge__anchor {display:block;}
+.fx-mybadge__text {display:block;margin-top:5px;text-align:center;font-size:0.875rem;}
+[class^='fx-mybadge__icon--'] {display:block;width:66px;height:66px;margin:0 auto;background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);background-repeat:no-repeat;background-size:214px auto;}
+.fx-mybadge__icon--01 {height:90px;background-position:0 0;}
+.fx-mybadge__icon--02 {height:90px;background-position:-74px 0;}
+.fx-mybadge__icon--03 {height:90px;background-position:-148px 0;}
+.fx-mybadge__icon--04 {background-position:0 -130px;}
+.fx-mybadge__icon--05 {background-position:-74px -130px;}
+.fx-mybadge__icon--06 {background-position:-148px -130px;}
+.fx-mybadge__icon--07 {background-position:0 -269px;}
+.fx-mybadge__icon--08 {background-position:-74px -269px;}
+.fx-mybadge__icon--09 {background-position:-148px -269px;}
 .list-section--fxm {margin:0 0 -1.875rem;}
 hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* [e] 마이페이지 수정중 */
@@ -211,7 +218,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-pushalarm .row-list__text {width:100%;}
 .fx-pushalarm .row-list__phrase--em {display:inline-block;color:#009591;}
 .fx-pushalarm .guide-wrap__item {font-size:0.813rem;color:#757575;}
-/* 마이페이지 - FX Score 상세 */
+/* 마이페이지 - 밀달 Score 상세 */
 .fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
 .fx-score--detail .card__wrap {padding:1.188rem;}
 .fx-score--detail .fx-score__point {display:flex;align-items:center;height:1.375rem;letter-spacing:0;font-size:1.125rem;font-weight:500;}
@@ -242,7 +249,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* 부가서비스 */
 .fx-service__keyvisual {margin-top:-1.25rem;padding:1.875rem 1.5rem;}
 
-/* 부가서비스 탑트레이더 랭킹 */
+/* 부가서비스 - 탑트레이더 랭킹 */
 .fx-service__keyvisual--trader {overflow:hidden;position:relative;padding-top:106%;background:#373a4d;}
 .keyvisual__trader--trophy {
     position:absolute;top:12vw;right:0;left:0;
@@ -616,7 +623,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* 부가서비스 - 타임세일 */
 .fx-service__keyvisual--specialtime {background:#f90;}
 
-/* 부가서비스 - fx챌린지 */
+/* 부가서비스 - 챌린지 */
 .fx-service__keyvisual--challenge {padding:0;}
 .fx-advice {margin-top:3rem;}
 .fx-advice-imgbox {position:relative;height:0;padding-top:157.49%;}
