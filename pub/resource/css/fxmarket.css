@@ -622,9 +622,6 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     100% {top:-150px;transform:rotate(15deg);opacity:0;}
 }
 
-/* 부가서비스 - 타임세일 */
-.fx-service__keyvisual--specialtime {background:#f90;}
-
 /* 부가서비스 - 챌린지 */
 .fx-service__keyvisual--challenge {padding:0;}
 .fx-advice {margin-top:3rem;}
@@ -635,8 +632,22 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-activity__txt {margin-top:3rem;font-size:1.125rem;color:#000;line-height:1.4;}
 .fx-activity__img {margin-top:1.563rem;}
 
-/* 서브메인 */
-/* - 환율정보 영역(타임세일 공통스타일) */
+/* 부가서비스 - 타임세일(서브메인 공통) */
+.fx-service__keyvisual--specialtime {position:relative;height:0;padding:0;padding-top:76.5333%}
+.fx-specialtime__img {position:absolute;top:0;right:0;left:0;}
+.fx-countdown {position:absolute;bottom:1.625rem;right:2.313rem;left:2.813rem;}
+.fx-countdown .i-colon {position:relative;height:100%;}
+.fx-countdown .i-colon::before,
+.fx-countdown .i-colon::after {content:'';position:absolute;top:30%;right:-0.688rem;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:block;width:0.188rem;height:0.188rem;border-radius:50%;background:#000;}
+.fx-countdown .i-colon::after {top:60%;}
+.fx-countdown .i-colon:last-child::before,
+.fx-countdown .i-colon:last-child::after {display:none;}
+/* Flip Clock */
+.fx-specialtime .tick-group {margin:0 0.5rem; text-align:center;}
+.fx-specialtime .tick-group:first-child,
+.fx-specialtime .tick-label, 
+.fx-specialtime .tick-credits {display:none !important;}
+/* 부가서비스 - 타임세일 : 환율정보 영역 */
 .fxmarket .txt-buy {color:#139be5;}
 .fxmarket .txt-sell {color:#fa1036;}
 .button-select--fxm .button-select__item {width:auto;height:auto;padding-left:0;padding-right:2.5rem;border:0;background-color:inherit;font-weight:400;font-size:1.25rem;color:#000;}
