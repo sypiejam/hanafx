@@ -14,24 +14,47 @@
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
-    [class^="fx-submain-"] {margin-top:3rem}
-    .fx-submain-toplink {margin:0.5rem 0 1.5rem}
-    .fx-submain-toplink .tit-default {margin-top:0;}
-    .fx-submain-toplink .fx-level-icon {width:1.563rem;height:1.563rem;}
-    .fx-submain-toplink .fx-trader__nickname {font-size:1.25rem;font-weight:400;}
-    .fx-submain-toplink .challenge-badge__item {width:1.313rem;height:1.313rem;margin:0.313rem;}
-
+    [class^="fx-submain-"] {margin-top:2.5rem;}
+    .fx-welcome {display:flex;justify-content:center;align-items:center;height:3.125rem;background:#eff0f3;text-align:center;}
+    .fx-welcome__icon {display:inline-block;width:1.938rem;height:1.188rem;background:url(../../../../resource/images/fxmarket/icon_welcome_basket.png) no-repeat 0 0 / 1.938rem;}
+    .fx-welcome__msg {font-size:0.875rem;line-height:1.4;}
+    
+    .fx-submain-toplink {display:flex;align-items:center;justify-content:space-between;margin:1.25rem 0 0 0;padding:0 1.5rem;}
+    .fx-mypage {position:relative;display:flex;align-items:center;padding:1rem 1rem 1.25rem 0;}
+    .fx-mypage:after {content:'';position:absolute;right:0;width:1rem;height:1rem;background:url(../../../../resource/images/C/arrow_right_small.png) no-repeat 50% 50% / 0.4rem;}
+    .fx-mypage__nickname {margin-left:0.125rem;font-size:0.875rem;line-height:1;}
+    .fx-mypage__link {position:absolute;top:0;right:0;bottom:0;left:0;}
+    @media (max-width: 360px) { 
+        .fx-mypage__nickname {font-size:0.813rem;} 
+    }
+    .fx-mypage .fx-level-icon {width:1.813rem;height:1rem;}
+    .fx-mypage .challenge__badge {margin-left:0.25rem;}
+    .fx-mypage .challenge-badge__item {margin:0 0.125rem;}
+    .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;}
+    .fx-mainset__tit {font-size:0.75rem;line-height:1;}
+    
     .fx-submain-timesale {margin-top:0}
-    .fx-submain-service {overflow:hidden;height:9rem;}
-    .fx-serviceslider .slick-dots {display:flex;-webkit-box-pack:center;justify-content:center;margin-top:1.25rem;}
+
+    .fx-serviceslider {height:15rem;padding:0 1.5rem;}
+    .fx-serviceslider .slick-list {margin-left:calc(-1.25rem - 1px);}
+    .fx-serviceslider .slick-slide {margin-left:1.25rem;}
+    .fx-serviceslider .slick-dots {position:absolute;right:0;bottom:0;left:0;display:flex;justify-content:center;}
     .fx-serviceslider .slick-dots li {margin:0 0.188rem;}
     .fx-serviceslider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
     .fx-serviceslider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
-    .fx-serviceslider__item {position:relative;display:block;height:7.188rem;padding:0 2.25rem;background-repeat:no-repeat;background-position:calc(100% - 1.5rem) 0;background-size:auto 7.188rem;;}
-    .fx-serviceslider__item .service-noti {display:block;font-size:0.813rem;color:#666;}
-    .fx-serviceslider__item .service-title {display:block;margin-top:0.5rem;font-size:1.375rem;color:#000;}
-    .fx-serviceslider__item .service-desc {display:block;font-size:1rem;color:#000;line-height:1.4;}
-    .fx-serviceslider__item .service-img {z-index:-1;position:absolute;top:0;right:1.5rem;width:auto;height:100%;}
+    .fx-serviceslider__item {position:relative;display:block;height:13.125rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
+    .fx-serviceslider__item .service-title {display:block;font-size:1.375rem;color:#000;line-height:1.3;}
+    .fx-serviceslider__item .service-desc {display:block;margin-top:0.5rem;font-size:1rem;color:#000;line-height:1.4;}
+    .fx-serviceslider__item .service-img {position:absolute;left:0;right:0;bottom:0;width:100%;}
+    .fx-serviceslider__item [class^="fx-service__"] {width:100%;height:100%;padding:1rem;background-repeat:no-repeat;background-position:0 100%;background-size:100%;}
+    .fx-service__rate {background-image:url(../../../../resource/images/fxmarket/bg_submain_service_rate.png);}
+    .fx-service__community {background-image:url(../../../../resource/images/fxmarket/bg_submain_service_community.png);}
+    .fx-service__challenge {background-image:url(../../../../resource/images/fxmarket/bg_submain_service_challenge.png);}
+    .fx-service__checkout {background-image:url(../../../../resource/images/fxmarket/bg_submain_service_checkout.png);}
+    .fx-service__guide {background-image:url(../../../../resource/images/fxmarket/bg_submain_service_guide.png);}
+    .fx-service__rate .bold {color:#009591;}
+    .fx-service__community .bold {color:#f84b6f;}
+    
     .fx-submain-news {overflow:hidden;padding:2.5rem 0;background:#f9f9fb;}
     .fx-newsslider .slick-list {margin-left:1.5rem;margin-right:-2.625rem}
     .fx-newsslider .slick-slide {margin-right:0.625rem}
@@ -56,9 +79,10 @@
     .fx-submain-toptrader .fx-trader__list:nth-child(1) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader01.png) no-repeat 0 50% / 2.625rem;}
     .fx-submain-toptrader .fx-trader__list:nth-child(2) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader02.png) no-repeat 0 50% / 2.625rem;}
     .fx-submain-toptrader .fx-trader__list:nth-child(3) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader03.png) no-repeat 0 50% / 2.625rem;}
+
 </style>
 </head>
-<body class="bg-white">
+<body>
 <div id="wrap" class="wrap">
     <!-- header -->
     <div id="header" class="app-header">
@@ -69,18 +93,33 @@
     </div>
     <!-- //header -->
     <!-- content -->
-    <div id="content" class="app-main fxmarket background-white">
+    <div id="content" class="app-main fxmarket">
         <div class="fx-submain">
+            <!-- 환영메세지 -->
+            <section class="fx-welcome">
+                <i class="fx-welcome__icon"aria-hidden="true"></i>
+                <p class="fx-welcome__msg"><strong class="color-green fw-700">밀리언달러마켓</strong>에 오신 것을 환영합니다.</p>
+            </section>
+
+            <!-- 나의 정보 -->
             <section class="fx-submain-toplink">
                 <h2 class="offscreen">나의 정보</h2>
-                <div class="tit-default">
-                    <span class="fx-level-icon level-1"><span class="offscreen">level1</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
-                    <span class="fx-trader__nickname">내일은 투자왕</span>
+                <div class="fx-mypage">
+                    <span class="fx-level-icon level-1"><span class="offscreen">level3</span></span> <!-- to.개발 | <span class="offscreen">level3</span> 유저등급 기재 -->
+                    <span class="fx-mypage__nickname">다동한외빌딩큰손개미</span>
                     <div class="challenge__badge">
                         <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i> <!--to.개발 | <span class="offscreen">챌린지</span> 챌린지명 기재 -->
                         <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
+                        <i class="challenge-badge__item challenge-3"><span class="offscreen">챌린지</span></i>
                     </div>
-                    <a href="#none" class="button-arrow button-arrow--big"><span class="offscreen">마이페이지 바로가기</span></a>
+                    <a href="#none" class="fx-mypage__link"><span class="offscreen">마이페이지 바로가기</span></a>
+                </div>
+                <div class="fx-mainset">
+                    <span class="fx-mainset__tit">메인설정</span>
+                    <label class="switch mgt0">
+                        <input type="checkbox" title="메인설정 여부">
+                        <span class="switch__toggle" aria-hidden="true"></span>
+                    </label>
                 </div>
             </section>
 
@@ -93,39 +132,40 @@
             <!-- 부가서비스 -->
             <section class="fx-submain-service">
                 <h2 class="offscreen">부가서비스</h2>
-                <div class="fx-serviceslider" data-slider="dot1">
+                <div class="fx-serviceslider">
                     <a href="#none" class="fx-serviceslider__item">
-                        <span class="service-noti eng">EVERYDAY EVENT</span>
-                        <strong class="service-title">환율 맞추기</strong>
-                        <span class="service-desc">내일 환율 오를까 내릴까?</span>
-                        <img src="../../../../resource/images/fxmarket/bg_submain_service_rate.png" alt="" class="service-img">
+                        <div class="fx-service__rate">
+                            <strong class="service-title">환율 맞추기</strong>
+                            <span class="service-desc"><em class="bold">내일 환율</em>이<br>오를까 내릴까?</span>
+                        </div>
                     </a>
                     <a href="#none" class="fx-serviceslider__item">
-                        <span class="service-noti eng">EVERYDAY EVENT</span>
-                        <strong class="service-title">커뮤니티</strong>
-                        <span class="service-desc">밀달활동 자랑하기</span>
-                        <img src="../../../../resource/images/fxmarket/bg_submain_service_community.png" alt="" class="service-img">
+                        <div class="fx-service__community">
+                            <strong class="service-title">커뮤니티</strong>
+                            <span class="service-desc"><em class="bold">밀달활동</em> 자랑하기</span>
+                        </div>
                     </a>
                     <a href="#none" class="fx-serviceslider__item">
-                        <span class="service-noti eng">EVERYDAY EVENT</span>
-                        <strong class="service-title">출첵 이벤트</strong>
-                        <span class="service-desc">밀달부스터 증정</span>
-                        <img src="../../../../resource/images/fxmarket/bg_submain_service_checkout.png" alt="" class="service-img">
+                        <div class="fx-service__checkout">
+                            <strong class="service-title">출첵 이벤트</strong>
+                            <span class="service-desc"><em class="bold">밀달부스터</em> 증정</span>
+                        </div>
                     </a>
                     <a href="#none" class="fx-serviceslider__item">
-                        <span class="service-noti eng">EVERYDAY EVENT</span>
-                        <strong class="service-title">밀달챌린지 달성하면</strong>
-                        <span class="service-desc">밀달배지 득템</span>
-                        <img src="../../../../resource/images/fxmarket/bg_submain_service_challenge.png" alt="" class="service-img">
+                        <div class="fx-service__challenge">
+                            <strong class="service-title"><em class="bold">밀달챌린지</em> 달성하면</strong>
+                            <span class="service-desc">밀달배지 득템</span>
+                        </div>
                     </a>
                     <a href="#none" class="fx-serviceslider__item">
-                        <span class="service-noti eng">EVERYDAY EVENT</span>
-                        <strong class="service-title">밀리언달러마켓은 처음이지?</strong>
-                        <span class="service-desc">100% 활용가이드</span>
-                        <img src="../../../../resource/images/fxmarket/bg_submain_service_guide.png" alt="" class="service-img">
+                        <div class="fx-service__guide">
+                            <strong class="service-title"><em class="bold">밀리언달러마켓</em>은 처음이지?</strong>
+                            <span class="service-desc">100% 활용가이드</span>
+                        </div>
                     </a>
                 </div>
             </section>
+            
             <hr class="spacer mgt120" aria-hidden="true">
 
             <!-- 탑트레이더랭킹 -->
@@ -246,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container fx-specialtime">
+                <div class="container">
                     <div class="fx-specialrate">
                         <div class="fx-specialrate__item fx-specialrate__item--sell">
                             <span class="fx-specialrate__tit">내가 <em class="txt-sell">팔면</em></span>
@@ -351,10 +391,20 @@ $(function(){
     setTimeout(function(){
         var submainrate = $('.fx-submain-rate').offset().top,
             appHeader = $('.app-header').innerHeight();
-        $('body,html').animate({scrollTop : submainrate - appHeader}, 700)
+        $('body,html').animate({scrollTop : submainrate - appHeader}, 700);
     },2000)
+
+    if($('.fx-serviceslider__item').length > 1){
+        $('.fx-serviceslider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+        });
+    }
     
-    if($('.fx-newsslider .fx-newsslider__item').length > 1){
+    if($('.fx-newsslider__item').length > 1){
         $('.fx-newsslider').slick({
             slidesToShow:2,
             dots:false,
@@ -362,7 +412,7 @@ $(function(){
         });
     }
 
-    if($('.fx-rateslider .fx-rateslider__item').length > 1){
+    if($('.fx-rateslider__item').length > 1){
         $('.fx-rateslider').slick({
             autoplay:true,
             autoplaySpeed :0,
