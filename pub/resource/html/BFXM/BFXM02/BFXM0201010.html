@@ -12,74 +12,77 @@
 <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/flip.css" type="text/css"><!-- Flip Clock CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
     [class^="fx-submain-"] {margin-top:2.5rem;}
-    .fx-welcome {display:flex;justify-content:center;align-items:center;height:3.125rem;background:#eff0f3;text-align:center;}
+    .fx-welcome {display:flex;justify-content:center;align-items:center;height:3.125rem;margin-bottom:1.25rem;background:#eff0f3;text-align:center;}
     .fx-welcome__icon {display:inline-block;width:1.938rem;height:1.188rem;background:url(../../../../resource/images/fxmarket/icon_welcome_basket.png) no-repeat 0 0 / 1.938rem;}
     .fx-welcome__msg {font-size:0.875rem;line-height:1.4;}
-    
-    .fx-submain-toplink {display:flex;align-items:center;justify-content:space-between;margin:1.25rem 0 0 0;padding:0 1.5rem;}
+    .fx-submain-toplink {display:flex;align-items:center;justify-content:space-between;margin:0;padding:0 1.5rem;}
     .fx-mypage {position:relative;display:flex;align-items:center;padding:1rem 1rem 1.25rem 0;}
-    .fx-mypage:after {content:'';position:absolute;right:0;width:1rem;height:1rem;background:url(../../../../resource/images/C/arrow_right_small.png) no-repeat 50% 50% / 0.4rem;}
+    .fx-mypage:after {content:'';position:absolute;right:0;width:1rem;height:1rem;background:url(../../../../resource/images/C/arrow_right_small.png) no-repeat 70% 50% / 0.4rem;}
     .fx-mypage__nickname {margin-left:0.125rem;font-size:0.875rem;line-height:1;}
     .fx-mypage__link {position:absolute;top:0;right:0;bottom:0;left:0;}
-    @media (max-width: 360px) { 
-        .fx-mypage__nickname {font-size:0.813rem;} 
-    }
     .fx-mypage .fx-level-icon {width:1.813rem;height:1rem;}
     .fx-mypage .challenge__badge {margin-left:0.25rem;}
     .fx-mypage .challenge-badge__item {margin:0 0.125rem;}
-    .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;}
+    .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
     .fx-mainset__tit {font-size:0.75rem;line-height:1;}
-    
-    .fx-submain-timesale {margin-top:0}
-
-    .fx-serviceslider {height:15rem;padding:0 1.5rem;}
-    .fx-serviceslider .slick-list {margin-left:calc(-1.25rem - 1px);}
+    .fx-submain-timesale {margin:0 0 3rem 0;}
+    .fx-submain-service {margin-top:0;}
+    .fx-serviceslider {overflow:hidden;height:15rem;}
+    .fx-serviceslider .slick-list {padding-right:1.25rem;}
     .fx-serviceslider .slick-slide {margin-left:1.25rem;}
     .fx-serviceslider .slick-dots {position:absolute;right:0;bottom:0;left:0;display:flex;justify-content:center;}
     .fx-serviceslider .slick-dots li {margin:0 0.188rem;}
     .fx-serviceslider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
     .fx-serviceslider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
-    .fx-serviceslider__item {position:relative;display:block;height:13.125rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
-    .fx-serviceslider__item .service-title {display:block;font-size:1.375rem;color:#000;line-height:1.3;}
-    .fx-serviceslider__item .service-desc {display:block;margin-top:0.5rem;font-size:1rem;color:#000;line-height:1.4;}
-    .fx-serviceslider__item .service-img {position:absolute;left:0;right:0;bottom:0;width:100%;}
-    .fx-serviceslider__item [class^="fx-service__"] {width:100%;height:100%;padding:1rem;background-repeat:no-repeat;background-position:0 100%;background-size:100%;}
-    .fx-service__rate {background-image:url(../../../../resource/images/fxmarket/bg_service_rate.png);}
-    .fx-service__community {background-image:url(../../../../resource/images/fxmarket/bg_service_community.png);}
-    .fx-service__challenge {background-image:url(../../../../resource/images/fxmarket/bg_service_challenge.png);}
-    .fx-service__checkout {background-image:url(../../../../resource/images/fxmarket/bg_service_checkout.png);}
-    .fx-service__guide {background-image:url(../../../../resource/images/fxmarket/bg_service_guide.png);}
-    .fx-service__rate .bold {color:#009591;}
-    .fx-service__community .bold {color:#f84b6f;}
-    
-    .fx-submain-news {overflow:hidden;padding:2.5rem 0;background:#f9f9fb;}
-    .fx-newsslider .slick-list {margin-left:1.5rem;margin-right:-2.625rem}
-    .fx-newsslider .slick-slide {margin-right:0.625rem}
-    .fx-newsslider__item {position:relative;padding:0.75rem 1rem 0.5rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
-    .fx-newsslider__item .btn-newsmore {z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;}
-    .fx-newsslider__item .news-title {overflow:hidden;font-size:1rem;font-weight:300;color:#666;text-align:left;line-height:1.4;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
-
-    .fx-submain-rate {overflow:hidden;color:#fff;height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
-    .fx-rateslider .slick-list {padding-left:1.5rem}
-    .fx-rateslider .slick-slide {margin-right:0.75rem}
-    .fx-rateslider__item .icon-na {width:0.813rem;height:0.813rem;margin-right:0.313rem;border:1px solid #fff;border-radius:50%;}
-    .fx-rateslider__item .exr {margin-left:0.5rem;font-size:0.875rem;font-weight:400;color:#666;line-height:initial;}
-    .fx-rateslider__item .exr--icon {display:inline-block;width:0;height:0;margin:0;}
-    .fx-rateslider__item .exr--up {color:#fa1036;}
-    .fx-rateslider__item .exr--dw {color:#4fc7ff}
-    .fx-rateslider__item .exr--up .exr--icon {border-right:6px solid transparent;border-bottom:11px solid #fa1036;border-left:6px solid transparent;}
-    .fx-rateslider__item .exr--dw .exr--icon {border-top:11px solid #4fc7ff;border-right:6px solid transparent;border-left:6px solid transparent;}
-    .fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
+    .fx-service__item {position:relative;display:block;height:13.125rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
+    .fx-service__item .service-title {display:block;font-size:1.375rem;color:#000;line-height:1.3;word-break:keep-all;}
+    .fx-service__item .service-desc {display:block;margin-top:0.25rem;font-size:1rem;color:#000;line-height:1.4;}
+    .fx-service__item .service-img {position:absolute;left:0;right:0;bottom:0;width:100%;}
+    .fx-service__item [class^="fx-service-"] {display:block;width:100%;height:100%;padding:1.25rem 1.125rem;background-repeat:no-repeat;background-position:0 100%;background-size:100%;}
+    .fx-service-rate {background-image:url(../../../../resource/images/fxmarket/bg_service_rate.png);}
+    .fx-service-community {background-image:url(../../../../resource/images/fxmarket/bg_service_community.png);}
+    .fx-service-challenge {background-image:url(../../../../resource/images/fxmarket/bg_service_challenge.png);}
+    .fx-service-checkout {background-image:url(../../../../resource/images/fxmarket/bg_service_checkout.png);}
+    .fx-service-guide {background-image:url(../../../../resource/images/fxmarket/bg_service_guide.png);}
+    .fx-service-rate .bold {color:#009591;}
+    .fx-service-community .bold {color:#f84b6f;}
+    .fx-service-challenge .bold {color:#009591;}
+    .fx-service-checkout .bold {color:#f84b6f;}
+    .fx-service-guide .bold {color:#009591;}
+    .fx-submain-toptrader .fx-level-icon {width:1.625rem;height:1rem;}
+    .fx-submain-toptrader .fx-trader__nickname {margin-left:0.25rem;}
+    .fx-submain-toptrader .fx-trader__sum {margin-left:1.875rem;}
+    .fx-submain-toptrader .gray-box {border:1px solid #f4f4f4;background:#f4f4f4;color:#666;}
     .fx-submain-toptrader .fx-trader__list {margin:-1px 0 0 0;border:1px solid #f0f0f0;border-radius:initial;border-width:1px 0;}
     .fx-submain-toptrader .fx-trader__rank {justify-content:flex-start;width:2.625rem;padding-left:0.625rem;}
     .fx-submain-toptrader .fx-trader__info {padding:1.25rem 1rem 1.063rem 1rem;}
     .fx-submain-toptrader .fx-trader__list:nth-child(1) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader01.png) no-repeat 0 50% / 2.625rem;}
     .fx-submain-toptrader .fx-trader__list:nth-child(2) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader02.png) no-repeat 0 50% / 2.625rem;}
     .fx-submain-toptrader .fx-trader__list:nth-child(3) .fx-trader__rank:before {background:url(../../../../resource/images/fxmarket/bg_submain_trader03.png) no-repeat 0 50% / 2.625rem;}
-
+    .fx-submain-rate {overflow:hidden;color:#fff;height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
+    .fx-rateslider .slick-list {padding-left:1.5rem}
+    .fx-rateslider .slick-slide {margin-right:0.75rem}
+    .fx-rate__item .icon-na {width:0.813rem;height:0.813rem;margin-right:0.313rem;border:1px solid #fff;border-radius:50%;}
+    .fx-rate__item .exr {margin-left:0.5rem;font-size:0.875rem;font-weight:400;color:#666;line-height:initial;}
+    .fx-rate__item .exr--icon {display:inline-block;width:0;height:0;margin:0;}
+    .fx-rate__item .exr--up {color:#fa1036;}
+    .fx-rate__item .exr--dw {color:#4fc7ff}
+    .fx-rate__item .exr--up .exr--icon {border-right:6px solid transparent;border-bottom:11px solid #fa1036;border-left:6px solid transparent;}
+    .fx-rate__item .exr--dw .exr--icon {border-top:11px solid #4fc7ff;border-right:6px solid transparent;border-left:6px solid transparent;}
+    .fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
+    .fx-submain-news {overflow:hidden;height:4.25rem;}
+    .fx-newsslider .slick-list {padding-left:1.5rem;margin-right:-1.5rem}
+    .fx-newsslider .slick-slide {margin-right:0.625rem}
+    .fx-news__item {position:relative;padding:0.75rem 1rem 0.5rem;border:1px solid #e3e4e8;border-radius:0.8rem;background:#fff;}
+    .fx-news__item .btn-newsmore {z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;}
+    .fx-news__item .news-title {overflow:hidden;font-size:1rem;font-weight:300;color:#666;text-align:left;line-height:1.4;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+    @media (max-width: 360px) { 
+        .fx-mypage__nickname {font-size:0.813rem;} 
+    }
 </style>
 </head>
 <body>
@@ -96,17 +99,17 @@
     <div id="content" class="app-main fxmarket">
         <div class="fx-submain">
             <!-- 환영메세지 -->
-            <section class="fx-welcome">
-                <i class="fx-welcome__icon"aria-hidden="true"></i>
-                <p class="fx-welcome__msg"><strong class="color-green fw-700">밀리언달러마켓</strong>에 오신 것을 환영합니다.</p>
-            </section>
+            <div class="fx-welcome">
+                <i class="fx-welcome__icon"aria-hidden="true"></i><p class="fx-welcome__msg"><strong class="color-green bold">밀리언달러마켓</strong>에 오신 것을 환영합니다.</p>
+            </div>
 
-            <!-- 나의 정보 -->
+            <!-- 고객 정보 -->
             <section class="fx-submain-toplink">
                 <h2 class="offscreen">나의 정보</h2>
+                <!-- to.개발 | 로그인 후 -->
                 <div class="fx-mypage">
-                    <span class="fx-level-icon level-1"><span class="offscreen">level3</span></span> <!-- to.개발 | <span class="offscreen">level3</span> 유저등급 기재 -->
-                    <span class="fx-mypage__nickname">다동한외빌딩큰손개미</span>
+                    <span class="fx-level-icon level-1"><span class="offscreen">level1</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
+                    <span class="fx-mypage__nickname">다동한외빌딩큰손개미</span> 
                     <div class="challenge__badge">
                         <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i> <!--to.개발 | <span class="offscreen">챌린지</span> 챌린지명 기재 -->
                         <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
@@ -114,6 +117,10 @@
                     </div>
                     <a href="#none" class="fx-mypage__link"><span class="offscreen">마이페이지 바로가기</span></a>
                 </div>
+                <!-- to.개발 | 로그인 전 -->
+                <!-- <a href="#none" class="fx-mypage"> 
+                    <span class="fx-mypage__nickname">로그인</span>
+                </a>  -->
                 <div class="fx-mainset">
                     <span class="fx-mainset__tit">메인설정</span>
                     <label class="switch mgt0">
@@ -125,62 +132,85 @@
 
             <!-- 타임세일 -->
             <section class="fx-submain-timesale">
-                <h2 class="offscreen">타임세일</h2>
-                <img src="../../../../resource/images/fxmarket/dummy_timesale.jpg" alt="">
+                <h2 class="offscreen">환율우대 타임세일</h2>
+                <!-- to.개발 | 타임세일 진행중 case / 대기중 case는 추후 진행 예정 -->
+                <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--ongoing">
+                    <img src="../../../../resource/images/fxmarket/img_timesale_ing.png" alt="" class="fx-specialtime__img" aria-hidden="true">
+                    <div class="offscreen">
+                        <strong>타임세일 진행중</strong>
+                        <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
+                    </div>
+                    <div class="fx-countdown">
+                        <!-- Flip Clock -->
+                        <div class="tick-wrap">
+                            <div class="tick" data-did-init="handleTickInit">
+                                <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay" style="font-size: 33.6559px;">
+                                    <div class="tick-group i-colon">
+                                        <div class="inner" data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                            <span class="tick-flip" data-view="flip"></span>
+                                        </div>
+                                        <span data-key="label" data-view="text" class="tick-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Flip Clock -->
+                    </div>
+                </div>
             </section>
 
-            <!-- 부가서비스 -->
+            <!-- 부가서비스 배너 -->
             <section class="fx-submain-service">
                 <h2 class="offscreen">부가서비스</h2>
                 <div class="fx-serviceslider">
-                    <a href="#none" class="fx-serviceslider__item">
-                        <div class="fx-service__rate">
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-rate">
                             <strong class="service-title">환율 맞추기</strong>
-                            <span class="service-desc"><em class="bold">내일 환율</em>이<br>오를까 내릴까?</span>
-                        </div>
-                    </a>
-                    <a href="#none" class="fx-serviceslider__item">
-                        <div class="fx-service__community">
+                            <span class="service-desc"><em class="bold">내일 환율</em><br>오를까 내릴까?</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-community">
                             <strong class="service-title">커뮤니티</strong>
                             <span class="service-desc"><em class="bold">밀달활동</em> 자랑하기</span>
-                        </div>
-                    </a>
-                    <a href="#none" class="fx-serviceslider__item">
-                        <div class="fx-service__checkout">
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-checkout">
                             <strong class="service-title">출첵 이벤트</strong>
                             <span class="service-desc"><em class="bold">밀달부스터</em> 증정</span>
-                        </div>
-                    </a>
-                    <a href="#none" class="fx-serviceslider__item">
-                        <div class="fx-service__challenge">
-                            <strong class="service-title"><em class="bold">밀달챌린지</em> 달성하면</strong>
-                            <span class="service-desc">밀달배지 득템</span>
-                        </div>
-                    </a>
-                    <a href="#none" class="fx-serviceslider__item">
-                        <div class="fx-service__guide">
-                            <strong class="service-title"><em class="bold">밀리언달러마켓</em>은 처음이지?</strong>
-                            <span class="service-desc">100% 활용가이드</span>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-challenge">
+                            <strong class="service-title">밀달챌린지 달성하면</strong>
+                            <span class="service-desc"><em class="bold">밀달배지</em> 득템</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-guide">
+                            <strong class="service-title">밀달마켓은 처음이지?</strong>
+                            <span class="service-desc"><em class="bold">100% 활용</em>가이드</span>
+                        </a>
+                    </div>
                 </div>
             </section>
             
             <hr class="spacer mgt120" aria-hidden="true">
 
-            <!-- 탑트레이더랭킹 -->
+            <!-- 탑트레이더 랭킹 -->
             <section class="fx-submain-toptrader">
                 <div class="tit-default">
                     <h2>탑트레이더 랭킹</h2>
-                    <a href="#none" class="button-arrow button-arrow--right">더보기</a>
+                    <a href="#none" class="button-arrow">더보기</a>
                 </div>
-                <div class="container">
+                <div class="container mgt48">
                     <ol class="fx-trader__wrap pdt0">
                         <li class="fx-trader__list">
                             <strong class="fx-trader__rank">1</strong>
                             <div class="fx-trader__info">
                                 <div class="wrap--flex">
-                                    <span class="fx-level-icon level-1"><span class="offscreen">level1</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
+                                    <span class="fx-level-icon level-5"><span class="offscreen">level5</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
                                     <span class="fx-trader__nickname">소심한단타형백억부자</span>
                                     <div class="challenge__badge">
                                         <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i> <!--to.개발 | <span class="offscreen">챌린지</span> 챌린지명 기재 -->
@@ -219,13 +249,16 @@
                         </li>
                     </ol>
                 </div>
+                <div class="container mgt48">
+                    <div class="gray-box gray-box--center">랭킹 대기중입니다.</div>
+                </div>
             </section>
 
-            <!-- 환율배너 -->
+            <!-- 고시환율 통화리스트 -->
             <section class="fx-submain-rate">
-                <h2 class="offscreen">고시환율</h2>
+                <h2 class="offscreen">통화별 고시환율</h2>
                 <div class="fx-rateslider">
-                    <div class="fx-rateslider__item">
+                    <div class="fx-rate__item">
                         <div class="wrap--flex">
                             <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i> <span class="eng">USD 1232.00</span> 
                              <!-- to.개발 | 고시환율 표기
@@ -238,7 +271,7 @@
                             </em>
                         </div>
                     </div>
-                    <div class="fx-rateslider__item">
+                    <div class="fx-rate__item">
                         <div class="wrap--flex">
                             <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt="유럽"></i> <span class="eng">EUR 1232.00</span>
                             <span class="exr exr--up">
@@ -246,7 +279,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="fx-rateslider__item">
+                    <div class="fx-rate__item">
                         <div class="wrap--flex">
                             <i class="icon-na"><img src="../../../images/symbols/na_JP.png" alt="일본"></i> <span class="eng">JPY 1232.00</span>
                             <span class="exr exr--dw">
@@ -257,17 +290,17 @@
                 </div>
             </section>
             
-            <!-- 환율현황 -->
+            <!-- 환율정보 -->
             <section class="fx-submain-state">
                 <h2 class="offscreen">환율정보</h2>
-                <div class="container flex flex--item-c flex-align-center">
+                <div class="container flex flex--item-c flex-align-center mgt120">
                     <div class="button-select--fxm">
                         <button type="button" class="button button-select__item" title="통화선택">
                             <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
                             <span>USD</span>
                         </button>
                     </div>
-                    <p class="fx-specialrate-info">타임세일 특별 우대율 <em>90%</em></p>
+                    <p class="fx-specialrate-info">Lv4 우대<em>90%</em></p>
                 </div>
                 <div class="container fx-dominant">
                     <div class="inner-wrap">
@@ -301,28 +334,30 @@
                         <div class="fx-specialrate__item fx-specialrate__item--buy">
                             <span class="fx-specialrate__tit">내가 <em class="txt-buy">사면</em></span>
                             <div class="fx-specialrate__num">
-                                <span class="offscreen">우대율</span><strong>1.232.00</strong>
+                                <span class="offscreen">우대율</span><strong>1,232.00</strong>
                             </div>
                             <div class="fx-specialrate-noti">
                                 <em class="offscreen">고시환율</em>
-                                <span>1,232.55</span> <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
+                                <span>1,232.55</span> <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
                                 <!-- to.개발 | 고시환율 표기
-                                    동일 :<em class="exr">0.00<span class="offscreen">동일</span>
-                                    오름 :<em class="exr exr--up">0.01<span class="offscreen">오름</span>
-                                    내림 :<em class="exr exr--dw">0.01<span class="offscreen">내림</span>
+                                    동일 : <em class="exr">0.00<span class="offscreen">동일</span>
+                                    오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span>
+                                    내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span>
                                 -->
                             </div>
                         </div>
                     </div>
-                    <div class="fx-refresh fx-refresh--timesale">
+                    <div class="fx-refresh mgt75">
                         <div class="fx-refresh__txt align-right">
-                            <span>2022.02.20 13:14:00</span> 기준<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
+                            <span>2022.02.20 13:14:00</span><button type="button" class="button-refresh" aria-label="새로고침"></button>
                         </div> 
                     </div>
                 </div>
-                <div class="container fx-rate__graph">
-                    <div style="height:9rem;background:#f0d4b4">
-                        그래프영역
+                <div class="container">
+                    <div class="fx-rate__graph">
+                        <div style="height:9rem;background:#f0d4b4">
+                            그래프영역
+                        </div>
                     </div>
                     <div class="select-button fx-graph__control">
                         <div class="select-button__box">
@@ -353,15 +388,15 @@
             <section class="fx-submain-news">
                 <h2 class="offscreen">뉴스</h2>
                 <div class="fx-newsslider">
-                    <div class="fx-newsslider__item">
+                    <div class="fx-news__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
-                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button> <!-- 뉴스상세팝업 호출 -->
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button> <!-- to.개발 | BFXM0201010_P01 뉴스상세팝업 호출 -->
                     </div>
-                    <div class="fx-newsslider__item">
+                    <div class="fx-news__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
                         <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
                     </div>
-                    <div class="fx-newsslider__item">
+                    <div class="fx-news__item">
                         <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
                         <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
                     </div>
@@ -386,46 +421,81 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script src="../../../../resource/js/ui/flip.min.js"></script><!-- Flip Clock JS -->
 <script>
 $(function(){
+    // 로드 후 환율영역 고정
     setTimeout(function(){
         var submainrate = $('.fx-submain-rate').offset().top,
             appHeader = $('.app-header').innerHeight();
         $('body,html').animate({scrollTop : submainrate - appHeader}, 700);
     },2000)
+})
+// 부가서비스 배너
+if($('.fx-service__item').length > 1){
+    $('.fx-serviceslider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 2,
+    });
+}
 
-    if($('.fx-serviceslider__item').length > 1){
-        $('.fx-serviceslider').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-        });
+// 통화별 고시환율 배너
+if($('.fx-rate__item').length > 1){
+    $('.fx-rateslider').slick({
+        autoplay:true,
+        autoplaySpeed :0,
+        speed :2000,
+        cssEase:"linear",
+        dots :false,
+        infinite :true,
+        swipe:false,
+        variableWidth :true,
+    });
+    $('.fx-rateslider')[0].slick.focussed = false;
+}
+
+// 뉴스 배너
+if($('.fx-news__item').length > 1){
+    $('.fx-newsslider').slick({
+        dots:false,
+        infinite :true,
+        slidesToShow:2,
+    });
+}
+
+//  타임세일 Flip Clock
+function handleTickInit(tick) {
+    var locale = {
+        // YEAR_PLURAL: 'Years',
+        // YEAR_SINGULAR: 'Year',
+        // MONTH_PLURAL: 'Months',
+        // MONTH_SINGULAR: 'Month',
+        // WEEK_PLURAL: 'Weeks',
+        // WEEK_SINGULAR: 'Week',
+        DAY_PLURAL: '일',
+        DAY_SINGULAR: '일',
+        HOUR_PLURAL: '시간',
+        HOUR_SINGULAR: '시간',
+        MINUTE_PLURAL: '분',
+        MINUTE_SINGULAR: '분',
+        SECOND_PLURAL: '초',
+        SECOND_SINGULAR: '초',
+        // MILLISECOND_PLURAL: 'Milliseconds',
+        // MILLISECOND_SINGULAR: 'Millisecond'
+    };
+
+    for (var key in locale) {
+        if (!locale.hasOwnProperty(key)) { continue; }
+        tick.setConstant(key, locale[key]);
     }
     
-    if($('.fx-newsslider__item').length > 1){
-        $('.fx-newsslider').slick({
-            slidesToShow:2,
-            dots:false,
-            infinite :true,
-        });
-    }
+    var timeSale = '2022/06/16 09:00:00';
 
-    if($('.fx-rateslider__item').length > 1){
-        $('.fx-rateslider').slick({
-            autoplay:true,
-            autoplaySpeed :0,
-            speed :2000,
-            cssEase:"linear",
-            dots :false,
-            infinite :true,
-            swipe:false,
-            variableWidth :true,
-        });
-        $('.fx-rateslider')[0].slick.focussed = false;
-    }
-})
+    Tick.count.down(timeSale).onupdate = function(value) {
+        tick.value = value;
+    };
+}
 </script>
 </body>
 </html>
