@@ -646,7 +646,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-countdown .i-colon:last-child::after {display:none;}
 .fx-countdown .tick-group {margin:0 0.5rem; text-align:center;}
 .fx-countdown .tick-group:first-child,
-.fx-countdown .tick-label, 
+.fx-countdown .tick-label,
 .fx-countdown .tick-credits {display:none !important;}
 /* 부가서비스 - 타임세일 : 환율정보 영역 */
 .fxmarket .txt-buy {color:#139be5;}
