@@ -627,7 +627,6 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-advice {margin-top:3rem;}
 .fx-advice-imgbox {position:relative;height:0;padding-top:157.49%;}
 .fx-advice__img {position:absolute;top:0;right:0;left:0;}
-.fx-advice .row-list__link {margin-top:2rem;padding:0;}
 .fx-activity {margin-top:2.625rem;}
 .fx-activity__txt {margin-top:3rem;font-size:1.125rem;color:#000;line-height:1.4;}
 .fx-activity__img {margin-top:1.563rem;}
@@ -686,7 +685,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-mylog .challenge-badge__item {margin:0 0.125rem;}
 .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
 .fx-mainset__tit {font-size:0.75rem;line-height:1;}
-.fx-submain-timesale {margin:0 0 3rem 0;}
+.fx-submain-timesale {margin:0 0 2.5rem 0;}
 .fx-submain-service {margin-top:0;}
 .fx-serviceslider {overflow:hidden;height:15rem;}
 .fx-serviceslider .slick-list {padding-right:1.25rem;}
