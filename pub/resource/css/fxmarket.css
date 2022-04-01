@@ -633,8 +633,10 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-activity__img {margin-top:1.563rem;}
 
 /* 부가서비스 - 타임세일(서브메인 공통) */
-.fx-service__keyvisual--specialtime {position:relative;height:0;padding:0;padding-top:76.5333%}
-.fx-specialtime__img {position:absolute;top:0;right:0;left:0;}
+.fx-service__keyvisual--specialtime {padding:0;}
+.fx-specialtime__keyvisual {position:relative;height:76.5333vw;background-repeat:no-repeat;background-position:0 0;background-size:100% auto;}
+.fx-specialtime__keyvisual--ongoing {background-image:url(../../resource/images/fxmarket/img_timesale_ongoing.png);}
+.fx-specialtime__keyvisual--waiting {}
 .fx-countdown {position:absolute;bottom:1.625rem;right:2.313rem;left:2.813rem;}
 .fx-countdown .i-colon {position:relative;height:100%;}
 .fx-countdown .i-colon::before,

@@ -29,27 +29,30 @@
         <!-- 부가서비스 : 타임세일 -->
         <div class="fx-service fx-specialtime">
             <div class="fx-service__keyvisual fx-service__keyvisual--specialtime">
-                <img src="../../../../resource/images/fxmarket/img_timesale_ing.png" alt="" class="fx-specialtime__img" aria-hidden="true">
-                <div class="offscreen">
-                    <strong>타임세일 진행중</strong>
-                    <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
-                </div>
-                <div class="fx-countdown">
-                    <!-- Flip Clock -->
-                    <div class="tick-wrap">
-                        <div class="tick" data-did-init="handleTickInit">
-                            <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay" style="font-size: 33.6559px;">
-                                <div class="tick-group i-colon">
-                                    <div class="inner" data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
-                                        <span class="tick-flip" data-view="flip"></span>
+                <!-- 진행중 -->
+                <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--ongoing">
+                    <div class="offscreen">
+                        <strong>타임세일 진행중</strong>
+                        <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
+                    </div>
+                    <div class="fx-countdown">
+                        <!-- Flip Clock -->
+                        <div class="tick-wrap">
+                            <div class="tick" data-did-init="handleTickInit">
+                                <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay" style="font-size: 33.6559px;">
+                                    <div class="tick-group i-colon">
+                                        <div class="inner" data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                            <span class="tick-flip" data-view="flip"></span>
+                                        </div>
+                                        <span data-key="label" data-view="text" class="tick-label"></span>
                                     </div>
-                                    <span data-key="label" data-view="text" class="tick-label"></span>
                                 </div>
                             </div>
                         </div>
+                        <!-- //Flip Clock -->
                     </div>
-                    <!-- //Flip Clock -->
                 </div>
+                <!-- //진행중 -->
             </div>
 
             <div class="container flex flex--item-c flex-align-center mgt120">
