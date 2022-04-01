@@ -642,11 +642,10 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-countdown .i-colon::after {top:60%;}
 .fx-countdown .i-colon:last-child::before,
 .fx-countdown .i-colon:last-child::after {display:none;}
-/* Flip Clock */
-.fx-specialtime .tick-group {margin:0 0.5rem; text-align:center;}
-.fx-specialtime .tick-group:first-child,
-.fx-specialtime .tick-label, 
-.fx-specialtime .tick-credits {display:none !important;}
+.fx-countdown .tick-group {margin:0 0.5rem; text-align:center;}
+.fx-countdown .tick-group:first-child,
+.fx-countdown .tick-label, 
+.fx-countdown .tick-credits {display:none !important;}
 /* 부가서비스 - 타임세일 : 환율정보 영역 */
 .fxmarket .txt-buy {color:#139be5;}
 .fxmarket .txt-sell {color:#fa1036;}
