@@ -661,13 +661,15 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-specialrate__item:not(:first-child)::before {content:'';position:absolute;top:0.313rem;left:0;bottom:0.313rem;display:block;width:1px;background:#f0f0f0;}
 .fx-specialrate__tit {font-size:1.125rem;}
 .fx-specialrate__num {margin-top:-0.313rem;font-size:1.688rem;font-weight:500;}
-.fx-specialrate-noti {display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#666;}
-.fx-specialrate-noti .exr {margin-left:0.625rem;font-weight:600;vertical-align:middle;}
-.fx-specialrate-noti .exr--up::before,
-.fx-specialrate-noti .exr--dw::before {content:'';display:inline-block;width:0.688rem;height:0.688rem;margin:0 0.313rem -1px 0;background:url(../../resource/images/fxmarket/sp_exr_arrow.png) no-repeat 0 0;background-size:auto 100%;}
-.fx-specialrate-noti .exr--up {color:#ff204e;}
-.fx-specialrate-noti .exr--dw {color:#139be5;}
-.fx-specialrate-noti .exr--dw::before {background-position:-0.688rem 0;}
+.fx-specialrate-noti {display:flex;align-items:center;justify-content:center;margin-top:0.438rem;font-size:0.75rem;color:#666;line-height:1;}
+.fxmarket .exr {display:flex;align-items:center;margin-left:0.625rem;font-weight:600;color:#666;}
+.fxmarket .exr--up {color:#fa1036;}
+.fxmarket .exr--dw {color:#139be5;}
+.fxmarket .exr::before {content:'';width:0.25rem;height:0.125rem;margin-right:0.313rem;background:#666;}
+.fxmarket .exr--up::before,
+.fxmarket .exr--dw::before {width:0;height:0;background:none;border-left:5px solid transparent;border-right:5px solid transparent;}
+.fxmarket .exr--up::before {border-bottom:9px solid #fa1036;}
+.fxmarket .exr--dw::before {border-top:9px solid #139be5;}
 .fx-refresh--timesale {margin-top:2.625rem;}
 
 /* 서브메인 */
@@ -723,12 +725,12 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-rateslider .slick-list {padding-left:1.5rem}
 .fx-rateslider .slick-slide {margin-right:0.75rem}
 .fx-rate__item .icon-na {width:0.813rem;height:0.813rem;margin-right:0.313rem;border:1px solid #fff;border-radius:50%;}
-.fx-rate__item .exr {margin-left:0.5rem;font-size:0.875rem;font-weight:400;color:#666;line-height:initial;}
-.fx-rate__item .exr--icon {display:inline-block;width:0;height:0;margin:0;}
-.fx-rate__item .exr--up {color:#fa1036;}
+.fx-rate__item .exr {margin-left:0.5rem;font-size:0.875rem;font-weight:400;line-height:initial;}
 .fx-rate__item .exr--dw {color:#4fc7ff}
-.fx-rate__item .exr--up .exr--icon {border-right:6px solid transparent;border-bottom:11px solid #fa1036;border-left:6px solid transparent;}
-.fx-rate__item .exr--dw .exr--icon {border-top:11px solid #4fc7ff;border-right:6px solid transparent;border-left:6px solid transparent;}
+.fx-rate__item .exr--up::before,
+.fx-rate__item .exr--dw::before {border-left:6px solid transparent;border-right:6px solid transparent;}
+.fx-rate__item .exr--up::before {border-bottom:11px solid #fa1036;}
+.fx-rate__item .exr--dw::before {border-top:11px solid #4fc7ff;}
 .fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
 .fx-submain-news {overflow:hidden;height:4.25rem;}
 .fx-newsslider .slick-list {padding-left:1.5rem;margin-right:-1.5rem}
