@@ -662,7 +662,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-specialrate__tit {font-size:1.125rem;}
 .fx-specialrate__num {margin-top:-0.313rem;font-size:1.688rem;font-weight:500;}
 .fx-specialrate-noti {display:flex;align-items:center;justify-content:center;margin-top:0.438rem;font-size:0.75rem;color:#666;line-height:1;}
-.fx-specialrate-amount {margin-right:0.625rem;}
+.fx-specialrate__amount {margin-right:0.625rem;}
 .fxmarket .exr {display:flex;align-items:center;font-weight:600;color:#666;}
 .fxmarket .exr--up {color:#fa1036;}
 .fxmarket .exr--dw {color:#139be5;}
