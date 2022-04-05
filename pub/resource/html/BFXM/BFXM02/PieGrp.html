@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+.fx-piechart-box {position:relative;width:10rem;height:10rem;border-radius:50%;overflow:hidden;text-align:center;background-color:#f1f1f1}
+.fx-piechart-box::before {content:'';position:absolute;left:50%;display:block;width:0.75rem;height:0.75rem;margin-left:-0.438rem;border-radius:50%;background-color:#8c4fe9;z-index:1;}
+.fx-piechart {position:relative;display:block;width:100%;height:100%;padding:0.75rem;transition:0.5s;z-index:2;}
+.fx-piechart .inner {position:relative;display:block;width:100%;height:100%;font-size:1.4rem;line-height:1;color:#333;font-weight:700;border-radius:50%;background-color:#fff;}
+.fx-pietxtarea {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);display:inline-block;}
+
+.pie-rotate {position:absolute;top:0;right:0;left:0;display:block;width:10rem;height:10rem;z-index:1;}
+.pie-rotate__ball {position:absolute;left:50%;margin-left:-0.438rem;display:block;width:0.75rem;height:0.75rem;border-radius:50%;background-color:#2fc8e3;}
+[data-value="0"] .pie-rotate {display:none;}
+
+
+.pie-chart {
+  position: relative;
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+span.center{
+  background: #fff;
+  display : block;
+  position: absolute;
+  top:50%; left:50%;
+  width:80px; height:80px;
+  border-radius: 50%;
+  text-align:center; line-height: 80px;
+  font-size:20px;
+    transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">ooo</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main fxmarket">
+        <!-- 부가서비스 :  -->
+        <div class="fx-service fx-specialtime">
+            <div class="fx-service__keyvisual">
+                
+            </div>
+
+            <div class="container">
+                <div class="fx-piechart-box" data-value="69"> <!-- data값으로 백분율 조절 -->
+                    <div class="fx-piechart">
+                        <div class="inner">
+                            <div class="fx-pietxtarea">
+                                <span><em>3</em>%</span><br>
+                                <span>적중 21/29</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="pie-rotate" style="transform: rotate(12deg);"><i class="pie-rotate__ball"></i></span>
+                    <!--  style="transform: rotate(12deg);" -->
+                </div>
+            </div>
+
+            <!-- ////////////////////////////////////////////////////////////// -->
+            <div class="container">
+                <div class="pie-chart pie-chart1"><span class="center">80%</span></div>
+                <div class="pie-chart pie-chart2"><span class="center">50%</span></div>
+                <div class="pie-chart pie-chart3"><span class="center">30%</span></div>
+            </div>
+
+        </div>
+        <!-- //부가서비스 :  -->
+    </div>
+    <!-- //content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+            <button type="button" class="button button--positive">거래하기</button>
+        </div>
+    </div>
+    <!-- //footer -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script>
+
+
+	$(".fx-piechart-box").each(function(){
+
+		var thisVal = $(this).data("value");
+
+        var flag = 100; //100%
+        var per = (thisVal > 100) ? 100 : thisVal;
+        var angle = 360;
+        var rotate = Math.abs(angle) / flag;
+        var val = rotate * per;
+
+        $(this).find(".fx-piechart").css("background","conic-gradient(#8c4fe9 0% "+ ", #2fc8e3 " + thisVal + "%, transparent " + thisVal +"% 100%)")
+        $(this).find(".pie-rotate").css("transform", "rotate(" + val + "deg)");
+
+	});
+
+
+
+
+
+/////////////////////////////////////////////////////////
+$(window).ready(function(){
+   draw(80, '.pie-chart1', '#ccc');
+  draw(50, '.pie-chart2', '#8b22ff');
+  draw(30, '.pie-chart3','#ff0');
+});
+
+function draw(max, classname, colorname){
+   var i=1;
+    var func1 = setInterval(function(){
+      if(i<max){
+          color1(i,classname,colorname);
+          i++;
+      } else{
+        clearInterval(func1);
+      }
+    },10);
+}
+function color1(i, classname,colorname){
+   $(classname).css({
+        "background":"conic-gradient("+colorname+" 0% "+i+"%, #ffffff "+i+"% 100%)"
+   });
+}
+function replay(){
+  draw(80, '.pie-chart1', '#ccc');
+  draw(50, '.pie-chart2', '#8b22ff');
+  draw(30, '.pie-chart3','#ff0');
+}
+</script>
+</body>
+</html>
