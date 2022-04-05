@@ -22,6 +22,7 @@
 .pie-rotate {position:absolute;top:0;right:0;left:0;display:block;width:10rem;height:10rem;z-index:1;}
 .pie-rotate__ball {position:absolute;left:50%;margin-left:-0.438rem;display:block;width:0.75rem;height:0.75rem;border-radius:50%;background-color:#2fc8e3;}
 [data-value="0"] .pie-rotate {display:none;}
+[data-value="100"] .pie-rotate {z-index:2;}
 
 
 .pie-chart {
@@ -64,7 +65,7 @@ span.center{
             </div>
 
             <div class="container">
-                <div class="fx-piechart-box" data-value="69"> <!-- data값으로 백분율 조절 -->
+                <div class="fx-piechart-box" data-value="100"> <!-- data값으로 백분율 조절 -->
                     <div class="fx-piechart">
                         <div class="inner">
                             <div class="fx-pietxtarea">
