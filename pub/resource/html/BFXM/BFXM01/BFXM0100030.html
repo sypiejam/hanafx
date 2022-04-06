@@ -29,8 +29,9 @@
         <div class="fx-join-step01">
             <div class="tit-large">닉네임을 입력해주세요.</div>
             <div class="container fx-nickname">
-                <div class="input">
+                <div class="input input__guide-text">
                     <!--
+                        * 닉네임 사용 가능시 class="input input__guide-text"
                         * 오류시 class="input input--error"
                         * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
                     -->
@@ -40,8 +41,11 @@
                         <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
                         <button type="button" class="input__find-button" aria-label="중복확인">중복확인</button>
                     </div>
+                    <p class="input__guide-text--green" aria-live="assertive">사용 가능한 닉네임 입니다.</p>
                     <!-- 에러 메시지 -->
-                    <p class="input__error" aria-live="assertive">에러메시지</p>
+                    <p class="input__error" aria-live="assertive">3~10자 이내 입력해주세요.</p>
+                    <p class="input__error" aria-live="assertive">이미 사용하고 있는 닉네임 입니다.</p>
+                    <p class="input__error" aria-live="assertive">닉네임 중복확인 해주세요.</p>
                 </div>
                 <div class="input__guide-text">
                     <span>0</span>/10
@@ -88,7 +92,7 @@
                         <label for="inputText02" class="input__title">1회 <span>USD</span></label>
                         <div class="input input--on">
                             <div class="input__inner">
-                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText02" class="input__element input__no-label" title="1회 한도" value="500,000" placeholder="">
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText02" class="input__element input__no-label" title="1회 한도" value="500,000" placeholder="" readonly>
                                 <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
                             </div>
                         </div>
@@ -101,7 +105,7 @@
                         <label for="inputText03" class="input__title">1일 <span>USD</span></label>
                         <div class="input input--on">
                             <div class="input__inner">
-                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText03" class="input__element input__no-label" title="1일 한도" value="1,000,000" placeholder="">
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputText03" class="input__element input__no-label" title="1일 한도" value="1,000,000" placeholder="" readonly>
                                 <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
                             </div>
                         </div>
