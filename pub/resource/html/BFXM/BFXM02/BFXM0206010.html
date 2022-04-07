@@ -12,79 +12,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-    .fx-service__keyvisual--forecast {position:relative;height:68vw;background:url(../../../../resource/images/fxmarket/dummy_keyvisual_predict.png) no-repeat 0 0 / 100%;} 
-    .fx-forecast-date {position:absolute;top:12%;left:13%;font-weight:700;font-size:1.188rem}
-
-    .fx-guess {margin-top:2.5rem;}
-    .fx-guess .fx-rate__graph {margin-top:0.5rem;}
-    .fx-guess .fx-refresh {display:flex;justify-content:space-between;align-items:center;font-size:0.938rem;line-height:1;}
-    .fx-guess .fx-refresh__txt {font-weight:300;font-size:0.75rem;}
-    .fx-guess .icon-na {width:1rem;height:1rem;margin-right:0.313rem;}
-    .fx-guess .exr {margin-left:0.25rem;font-size:0.75rem;font-weight:700;}
-    .fx-guess .exr:before {margin-right:0.125rem;}
-    .fx-guess .exr--up::before {border-width:0 5px 8px;}
-    .fx-guess .exr--dw::before {border-width:8px 5px 0;}
-    .fx-guess .fx-score__progress[value] {margin-top:0.313rem;border:0;}
-    .fx-guess .fx-score__progress[value]::-webkit-progress-bar {background-color:#3f78fa;}
-    .fx-guess .fx-score__progress[value]::-webkit-progress-value {border-radius:initial;background:#fa3f66;box-shadow:none;}
-    .fx-guess .icon-modify {display:inline-block;width:0.75rem;height:0.75rem;margin-left:0.25rem;background:url(../../../../resource/images/C/icon_edit_gray.png) no-repeat 0 0 / 100%;-webkit-filter:brightness(3);filter:brightness(3);}
-    .fx-participate {margin-top:1.25rem;}
-    .fx-participate__opts {display:flex;justify-content:space-between;padding:0 0.5rem;}
-    .fx-participate__opt {position:relative;font-size:0.813rem;}
-    .fx-participate__opt:before {content:'';display:inline-block;width:0.563rem;height:0.625rem;margin-right:0.25rem;background-image:url(../../../../resource/images/fxmarket/bg_quiz_sp2.png);background-repeat:no-repeat;background-size:0.563rem;}
-    .fx-participate__opt--up:before {background-position:0 0;}
-    .fx-participate__opt--dw:before {background-position:0 -0.688rem;}
-    .fx-participant {margin-top:0.5rem;font-size:0.875rem;color:#666;text-align:center;}
-
-    .fx-predict .spacer {margin:2.5rem -1.5rem 0;}
-    .fx-predictor {display:flex;justify-content:center;align-items:center;margin-top:1.5rem;font-size:0.875rem;}
-    .fx-piechart-box {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 0;border-radius:50%;overflow:hidden;background-color:#f1f1f1;text-align:center;}
-    .fx-piechart-box::before {content:'';position:absolute;left:50%;display:block;width:0.75rem;height:0.75rem;margin-left:-0.438rem;border-radius:50%;background-color:#8c4fe9;z-index:1;}
-    .fx-piechart {position:relative;display:block;width:100%;height:100%;padding:0.75rem;transition:0.5s;z-index:2;}
-    .fx-piechart .inner {position:relative;display:block;width:100%;height:100%;font-size:1.4rem;line-height:1;;border-radius:50%;background-color:#f9f9fb;}
-    .fx-pietxtarea {position:absolute;top:50%;left:50%;width:100%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);}
-    .fx-pietxtarea__per {display:block;font-size:1.875rem;}
-    .fx-pietxtarea__value {font-size:0.875rem;color:#666;}
-    .fx-pierotate {position:absolute;top:0;right:0;left:0;display:block;width:100%;height:100%;}
-    .fx-pierotate__ball {position:absolute;left:50%;margin-left:-0.438rem;display:block;width:0.75rem;height:0.75rem;border-radius:50%;background-color:#2fc8e3;}
-    [data-value="0"] .fx-pierotate {display:none;}
-    [data-value="100"] .fx-pierotate {z-index:2;}
-    .fx-predict .btn-share {margin-left:auto;}
-    .fx-predict .btn-share:before {content:none;}
-    .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url('../../../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
-    .fx-predict .fx-level-icon {width:1.813rem;height:1rem;text-align:center;}
-    
-    .fx-calendar {margin-top:0.5rem;}
-    .fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
-    .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
-    .fx-calendar__label {display:flex;justify-content:center;align-items:center;width:2.938rem;height:2.938rem;margin:auto;border-radius:50%;background:url(../../../../resource/images/fxmarket/sp_calender_label.png) no-repeat 0 0 / 100%;}
-    .fx-calendar__label--success {background-position:0 0;}
-    .fx-calendar__label--getpoint {background-position:0 20%;}
-    .fx-calendar__label--miss {background-position:0 40%;}
-    .fx-calendar__label--fail {background-position:0 60%;}
-    .fx-calendar__label--holiday {background-position:0 80%;}
-    .fx-calendar__label--today {background-position:0 100%;}
-
-    .fx-quiz__opts {display:flex;justify-content:space-around;align-items:center;margin-bottom:2.5rem;}
-    .fx-quiz__label {display:block;width:8.313rem;height:8.313rem;background-color:#dfdfdf;background-image:url(../../../../resource/images/fxmarket/bg_quiz_sp.png);background-repeat:no-repeat;background-size:100%;border-radius:50%;}
-    .fx-quiz__opt--up, 
-    .fx-quiz__opt--dw {position:absolute;width:1px;height:1px;}
-    .fx-quiz__opt--up + .fx-quiz__label {background-position:0 0;}
-    .fx-quiz__opt--dw + .fx-quiz__label {background-position:0 -8.313rem;}
-    .fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;}
-    .fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;}
-
-    .fx-boast__contents {min-height:50vh;}
-    .fx-boastslider {position:relative;}
-    .fx-boastslider .slick-arrow {z-index:10;position:absolute;top:50%;width:1.75rem;height:3.25rem;background:url(../../../../resource/images/C/arrow_right_default.png) no-repeat 100% 50% / 0.875rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);opacity:0.8;}
-    .fx-boastslider .slick-prev {left:0;-webkit-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg);}
-    .fx-boastslider .slick-next {right:0;}
-    .fx-boastslider .slick-disabled {opacity:0.3;}
-    .fx-boast__img--predictorlv1 {background-image:url(../../../../resource/images/fxmarket/img_boast_toptrader.png);}
-    .fx-boast__img--predictorlv2 {background-image:url(../../../../resource/images/fxmarket/img_boast_challenge.png);}
-    .fx-boast__img--predictorlv3 {background-image:url(../../../../resource/images/fxmarket/img_boast_forecast.png);}
-</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -156,11 +83,11 @@
                         <span class="fx-participate__opt fx-participate__opt--dw">내려요 <em>78%</em></span>
                     </div>
                     <progress max="100" value="22" class="fx-score__progress"></progress>
-                    <p class="fx-participant">오늘 <strong class="color-000"><span>100,000</span>명</strong> 참여</p>
+                    <p class="fx-participant">오늘 <strong class="color-000">100,000명</strong> 참여</p>
                 </div>
                 <div class="button-wrap mgt100">
                     <button type="button" class="button button--positive" data-element="modal__open" data-target="#ratequiz">환율맞추기</button>
-                    <!-- <button type="button" class="button button--positive" data-element="modal__open" data-target="#ratequiz" aria-controls="#ratequiz">맞추기완료 <i aria-hidden="true" class="icon-modify"></i></button> -->
+                    <!-- <button type="button" class="button button--positive" data-element="modal__open" data-target="#ratequiz">맞추기완료 <i aria-hidden="true" class="icon-modify"></i></button> -->
                 </div>
             </div>
 
@@ -171,16 +98,13 @@
                     <span class="fx-level-icon level-5"><span class="offscreen">level5</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
                     <span><strong class="fw-700">다동한외빌딩큰손개미</strong> 님의 예지력</span>
                 </div>
-                <div class="fx-piechart-box" data-value="69"> <!-- data값으로 백분율 조절 -->
-                    <div class="fx-piechart">
-                        <div class="inner">
-                            <div class="fx-pietxtarea">
-                                <span class="fx-pietxtarea__per"><em>69</em>%</span>
-                                <span class="fx-pietxtarea__value"><span class="color-000">적중</span> <em class="color-green fw-700">21</em>/<span>29</span></span>
-                            </div>
-                        </div>
+                
+                <div class="fx-piechart">
+                    <div style="width:100%;height:100%;background:#d0ecff">그래프영역</div>
+                    <div class="fx-pietxtarea">
+                        <span class="fx-pietxtarea__per"><em>69</em>%</span>
+                        <span class="fx-pietxtarea__value"><span class="color-000">적중</span> <em class="color-green fw-700">21</em>/<span>29</span></span>
                     </div>
-                    <span class="fx-pierotate"><i class="fx-pierotate__ball"></i></span>
                 </div>
                 <button type="button" class="btn-share mgt48" title="환율예측현황 공유하기" data-element="modal__open" data-target="#boastpopup"><span class="btn-share__text">자랑할래요</span></button>
                 <div class="fx-calendar">
@@ -298,7 +222,7 @@
                                 </td>
                                 <td class="fx-calendar__td">
                                     <span class="fx-calendar__day">16</span>
-                                    <strong class="fx-calendar__label fx-calendar__label--today"><span class="offscreen">환율예측 도전</span></strong>
+                                    <strong class="fx-calendar__label fx-calendar__label--challenge"><span class="offscreen">환율예측 도전</span></strong>
                                 </td>
                                 <td class="fx-calendar__td">
                                     <span class="fx-calendar__day">17</span>
@@ -318,7 +242,7 @@
                 <div class="guide-wrap">
                     <ul class="guide-list guide-list--large color-666">
                         <li class="guide-list__item">환율예측 응모시간은 00:00~24:00입니다.</li>
-                        <li class="guide-list__item">주말 및 공유일 응모시 다음날 영업일을 기준으로 합니다.</li>
+                        <li class="guide-list__item">주말 및 공휴일 응모시 다음날 영업일을 기준으로 합니다.</li>
                         <li class="guide-list__item">다음날 영업일 기준 장마감 시간(15:30)이후 첫 고시환율로 등락이 확정됩니다.</li>
                         <li class="guide-list__item">포인트 적립 안내
                             <ul class="guide-sub-list guide-sub-list--gray">
@@ -438,18 +362,7 @@
 <script src="../../../../resource/js/ui/common.js"></script>
 <script>
 $(function(){
-    $(".fx-piechart-box").each(function(){
-        var thisVal = $(this).data("value"),
-            flag = 100,
-            per = (thisVal > 100) ? 100 : thisVal,
-            angle = 360,
-            rotate = Math.abs(angle) / flag,
-            val = rotate * per;
-
-        $(this).find(".fx-piechart").css("background","conic-gradient(#8c4fe9 0% "+ ", #2fc8e3 " + thisVal + "%, transparent " + thisVal +"% 100%)")
-        $(this).find(".fx-pierotate").css("transform", "rotate(" + val + "deg)");
-    });
-
+    // 공유하기 버튼 클릭시 SLICK레이아웃 깨짐 방지
     $('.btn-share').on('click', function(){
         $('.fx-boastslider').slick('setPosition');
     });
