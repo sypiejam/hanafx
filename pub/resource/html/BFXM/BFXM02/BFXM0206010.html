@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+    .fx-service__keyvisual--forecast {position:relative;height:68vw;background:url(../../../../resource/images/fxmarket/dummy_keyvisual_predict.png) no-repeat 0 0 / 100%;}
+    .fx-forecast-date {position:absolute;top:12%;left:13%;font-weight:700;font-size:1.188rem}
+
+    .fx-guess {margin-top:2.5rem;}
+    .fx-guess .fx-rate__graph {margin-top:0.5rem;}
+    .fx-guess .fx-refresh {display:flex;justify-content:space-between;align-items:center;font-size:0.938rem;line-height:1;}
+    .fx-guess .fx-refresh__txt {font-weight:300;font-size:0.75rem;}
+    .fx-guess .icon-na {width:1rem;height:1rem;margin-right:0.313rem;}
+    .fx-guess .exr {margin-left:0.25rem;font-size:0.75rem;font-weight:700;}
+    .fx-guess .exr:before {margin-right:0.125rem;}
+    .fx-guess .exr--up::before {border-width:0 5px 8px;}
+    .fx-guess .exr--dw::before {border-width:8px 5px 0;}
+    .fx-guess .fx-score__progress[value] {margin-top:0.313rem;border:0;}
+    .fx-guess .fx-score__progress[value]::-webkit-progress-bar {background-color:#3f78fa;}
+    .fx-guess .fx-score__progress[value]::-webkit-progress-value {border-radius:initial;background:#fa3f66;box-shadow:none;}
+    .fx-guess .icon-modify {display:inline-block;width:0.75rem;height:0.75rem;margin-left:0.25rem;background:url(../../../../resource/images/C/icon_edit_gray.png) no-repeat 0 0 / 100%;-webkit-filter:brightness(3);filter:brightness(3);}
+    .fx-participate {margin-top:1.25rem;}
+    .fx-participate__opts {display:flex;justify-content:space-between;padding:0 0.5rem;}
+    .fx-participate__opt {position:relative;font-size:0.813rem;}
+    .fx-participate__opt:before {content:'';display:inline-block;width:0.563rem;height:0.625rem;margin-right:0.25rem;background-image:url(../../../../resource/images/fxmarket/bg_quiz_sp2.png);background-repeat:no-repeat;background-size:0.563rem;}
+    .fx-participate__opt--up:before {background-position:0 0;}
+    .fx-participate__opt--dw:before {background-position:0 -0.688rem;}
+    .fx-participant {margin-top:0.5rem;font-size:0.875rem;color:#666;text-align:center;}
+
+    .fx-predict .spacer {margin:2.5rem -1.5rem 0;}
+    .fx-predictor {display:flex;justify-content:center;align-items:center;margin-top:1.5rem;font-size:0.875rem;}
+    .fx-piechart-box {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 0;border-radius:50%;overflow:hidden;background-color:#f1f1f1;text-align:center;}
+    .fx-piechart-box::before {content:'';position:absolute;left:50%;display:block;width:0.75rem;height:0.75rem;margin-left:-0.438rem;border-radius:50%;background-color:#8c4fe9;z-index:1;}
+    .fx-piechart {position:relative;display:block;width:100%;height:100%;padding:0.75rem;transition:0.5s;z-index:2;}
+    .fx-piechart .inner {position:relative;display:block;width:100%;height:100%;font-size:1.4rem;line-height:1;;border-radius:50%;background-color:#f9f9fb;}
+    .fx-pietxtarea {position:absolute;top:50%;left:50%;width:100%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);}
+    .fx-pietxtarea__per {display:block;font-size:1.875rem;}
+    .fx-pietxtarea__value {font-size:0.875rem;color:#666;}
+    .fx-pierotate {position:absolute;top:0;right:0;left:0;display:block;width:100%;height:100%;}
+    .fx-pierotate__ball {position:absolute;left:50%;margin-left:-0.438rem;display:block;width:0.75rem;height:0.75rem;border-radius:50%;background-color:#2fc8e3;}
+    [data-value="0"] .fx-pierotate {display:none;}
+    [data-value="100"] .fx-pierotate {z-index:2;}
+    .fx-predict .btn-share {margin-left:auto;}
+    .fx-predict .btn-share:before {content:none;}
+    .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url('../../../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
+    .fx-predict .fx-level-icon {width:1.813rem;height:1rem;text-align:center;}
+    
+    .fx-calendar {margin-top:0.5rem;}
+    .fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
+    .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
+    .fx-calendar__label {display:flex;justify-content:center;align-items:center;width:2.938rem;height:2.938rem;margin:auto;border-radius:50%;background:url(../../../../resource/images/fxmarket/sp_calender_label.png) no-repeat 0 0 / 100%;}
+    .fx-calendar__label--success {background-position:0 0;}
+    .fx-calendar__label--getpoint {background-position:0 20%;}
+    .fx-calendar__label--miss {background-position:0 40%;}
+    .fx-calendar__label--fail {background-position:0 60%;}
+    .fx-calendar__label--holiday {background-position:0 80%;}
+    .fx-calendar__label--today {background-position:0 100%;}
+
+    .fx-quiz__opts {display:flex;justify-content:space-around;align-items:center;margin-bottom:2.5rem;}
+    .fx-quiz__label {display:block;width:8.313rem;height:8.313rem;background-color:#dfdfdf;background-image:url(../../../../resource/images/fxmarket/bg_quiz_sp.png);background-repeat:no-repeat;background-size:100%;border-radius:50%;}
+    .fx-quiz__opt--up, 
+    .fx-quiz__opt--dw {position:absolute;width:1px;height:1px;}
+    .fx-quiz__opt--up + .fx-quiz__label {background-position:0 0;}
+    .fx-quiz__opt--dw + .fx-quiz__label {background-position:0 -8.313rem;}
+    .fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;}
+    .fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;}
+
+    .fx-boast__contents {min-height:50vh;}
+    .fx-boastslider {position:relative;}
+    .fx-boastslider .slick-arrow {z-index:10;position:absolute;top:50%;width:1.75rem;height:3.25rem;background:url(../../../../resource/images/C/arrow_right_default.png) no-repeat 100% 50% / 0.875rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);opacity:0.8;}
+    .fx-boastslider .slick-prev {left:0;-webkit-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg);}
+    .fx-boastslider .slick-next {right:0;}
+    .fx-boastslider .slick-disabled {opacity:0.3;}
+    .fx-boast__img--predictorlv1 {background-image:url(../../../../resource/images/fxmarket/img_boast_toptrader.png);}
+    .fx-boast__img--predictorlv2 {background-image:url(../../../../resource/images/fxmarket/img_boast_challenge.png);}
+    .fx-boast__img--predictorlv3 {background-image:url(../../../../resource/images/fxmarket/img_boast_forecast.png);}
+</style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">환율예측</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main app-main--without-footer fxmarket">
+        <!-- 부가서비스 : 환율예측 -->
+        <div class="fx-service fx-forecast">
+            <div class="fx-service__keyvisual fx-service__keyvisual--forecast">
+                <span class="fx-forecast-date">내일 04월01일</span>  <!-- to.개발 | 익일날짜 출력 -->
+                <p class="offscreen">환율맞추기 오늘보다 오를까? 내릴까? 응모만해도 Get 적중하면 Get 5일 연속 맞추면 5,000스코어 추가적립</p>
+            </div>
+            
+            <div class="container fx-guess">
+                <h2 class="offscreen">현재환율</h2>
+                <div class="fx-refresh">
+                    <div class="flex-wrap">
+                        <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i> <span>EUR <span class="fw-700 fs16">1232.00</span></span> 
+                        <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
+                        <!-- to.개발 | 고시환율 표기
+                            동일 : <em class="exr">0.00<span class="offscreen">동일</span></em>
+                            오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
+                            내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
+                        -->
+                    </div>
+                    <div class="fx-refresh__txt">
+                        <span>2022.02.20 13:14:00</span> 기준<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
+                    </div>
+                </div>
+                <div class="fx-rate__graph">
+                    <div style="height:9rem;background:#f0d4b4">
+                        그래프영역
+                    </div>
+                    <div class="select-button fx-graph__control">
+                        <div class="select-button__box">
+                            <input type="radio" id="period01" class="select-button__input" name="period">
+                            <label for="period01" class="select-button__item">1D <span class="offscreen">오늘의 환율현황</span></label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period02" class="select-button__input" name="period">
+                            <label for="period02" class="select-button__item">1M <span class="offscreen">1달 환율현황</span></label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period03" class="select-button__input" name="period" checked>
+                            <label for="period03" class="select-button__item">3M <span class="offscreen">3개월 환율현황</span></label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period04" class="select-button__input" name="period">
+                            <label for="period04" class="select-button__item">6M <span class="offscreen">6개월 환율현황</span></label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period05" class="select-button__input" name="period">
+                            <label for="period05" class="select-button__item">1Y <span class="offscreen">1년 환율현황</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="offscreen">참여자 환율예측 현황</h2>
+                <div class="fx-participate">
+                    <div class="fx-participate__opts">
+                        <span class="fx-participate__opt fx-participate__opt--up">올라요 <em>22%</em></span>
+                        <span class="fx-participate__opt fx-participate__opt--dw">내려요 <em>78%</em></span>
+                    </div>
+                    <progress max="100" value="22" class="fx-score__progress"></progress>
+                    <p class="fx-participant">오늘 <strong class="color-000"><span>100,000</span>명</strong> 참여</p>
+                </div>
+                <div class="button-wrap mgt100">
+                    <button type="button" class="button button--positive" data-element="modal__open" data-target="#ratequiz">환율맞추기</button>
+                    <!-- <button type="button" class="button button--positive" data-element="modal__open" data-target="#ratequiz" aria-controls="#ratequiz">맞추기완료 <i aria-hidden="true" class="icon-modify"></i></button> -->
+                </div>
+            </div>
+
+            <div class="container fx-predict">
+                <hr class="spacer">
+                <h2 class="offscreen">나의 환율예측 현황</h2>
+                <div class="fx-predictor">
+                    <span class="fx-level-icon level-5"><span class="offscreen">level5</span></span> <!-- to.개발 | <span class="offscreen">level1</span> 유저등급 기재 -->
+                    <span><strong class="fw-700">다동한외빌딩큰손개미</strong> 님의 예지력</span>
+                </div>
+                <div class="fx-piechart-box" data-value="100"> <!-- data값으로 백분율 조절 -->
+                    <div class="fx-piechart">
+                        <div class="inner">
+                            <div class="fx-pietxtarea">
+                                <span class="fx-pietxtarea__per"><em>69</em>%</span>
+                                <span class="fx-pietxtarea__value"><span class="color-000">적중</span> <em class="color-green fw-700">21</em>/<span>29</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="fx-pierotate"><i class="fx-pierotate__ball"></i></span>
+                </div>
+                <button type="button" class="btn-share mgt48" title="환율예측현황 공유하기" data-element="modal__open" data-target="#boastpopup"><span class="btn-share__text">자랑할래요</span></button>
+                <div class="fx-calendar">
+                    <table>
+                        <caption>1달간 환율예측 현황</caption>
+                        <colgroup>
+                            <col span="5">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="fx-calendar__th">월</th>
+                                <th scope="col" class="fx-calendar__th">화</th>
+                                <th scope="col" class="fx-calendar__th">수</th>
+                                <th scope="col" class="fx-calendar__th">목</th>
+                                <th scope="col" class="fx-calendar__th">금</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">1/17</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">18</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">19</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">20</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">21</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--getpoint"><span class="offscreen">릴레이적중 5000스코어획득</span></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">24</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--miss"><span class="offscreen">환율예측 미참여</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">25</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--miss"><span class="offscreen">환율예측 미참여</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">26</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--fail"><span class="offscreen">환율예측 실패</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">27</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">28</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">31</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--holiday"><span class="offscreen">휴일</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">2/1</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--holiday"><span class="offscreen">휴일</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">2</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--holiday"><span class="offscreen">휴일</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">3</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">4</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">7</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--getpoint"><span class="offscreen">릴레이적중 5000스코어획득</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">8</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">9</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">10</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">11</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">14</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--miss"><span class="offscreen">환율예측 미참여</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">15</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--success"><span class="offscreen">환율예측 적중</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">16</span>
+                                    <strong class="fx-calendar__label fx-calendar__label--today"><span class="offscreen">환율예측 도전</span></strong>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">17</span>
+                                </td>
+                                <td class="fx-calendar__td">
+                                    <span class="fx-calendar__day">18</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr class="spacer mgt120">
+            <div class="tit-default">응모안내</div>
+            <div class="container">
+                <div class="guide-wrap">
+                    <ul class="guide-list guide-list--large color-666">
+                        <li class="guide-list__item">환율예측 응모시간은 00:00~24:00입니다.</li>
+                        <li class="guide-list__item">주말 및 공유일 응모시 다음날 영업일을 기준으로 합니다.</li>
+                        <li class="guide-list__item">다음날 영업일 기준 장마감 시간(15:30)이후 첫 고시환율로 등락이 확정됩니다.</li>
+                        <li class="guide-list__item">포인트 적립 안내
+                            <ul class="guide-sub-list guide-sub-list--gray">
+                                <li class="guide-sub-list__item">응모시 1ⓢ, 적중시 1ⓢ, 5일 연속 적중시 1,500 ⓢ 적립</li>
+                            </ul>
+                        </li>
+                        <li class="guide-list__item">환율예측 정보는 과거 1개월까지 확인할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //부가서비스 : 환율예측 -->
+    </div>
+    <!-- //content -->
+
+    <!-- 환율맞추기퀴즈 레이어 -->
+    <div id="ratequiz" class="modal modal--slide" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header modal__header--border">
+                <h1 class="modal__header--title">환율맞추기</h1>
+            </div>
+            <div class="modal__contents modal__contents--narrow">
+                <ul class="fx-quiz__opts">
+                    <li class="fx-quiz__opt">
+                        <input type="radio" id="quiz01" name="quiz" class="fx-quiz__opt--up">
+                        <label for="quiz01" class="fx-quiz__label">
+                            <span class="offscreen">올라요</span>
+                        </label>
+                    </li>
+                    <li class="fx-quiz__opt">
+                        <input type="radio" id="quiz02" name="quiz" class="fx-quiz__opt--dw">
+                        <label for="quiz02" class="fx-quiz__label">
+                            <span class="offscreen">내려요</span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="modal__button-wrap"></div>
+            </div>
+            <div class="button-fixed">
+                <div class="button-wrap">
+                    <button type="button" class="button button--negative" data-element="modal__close">맞추기 완료</button> 
+                    <!-- <button type="button" class="button button--positive" data-element="modal__close">맞추기 완료</button> to.개발 | 옵션선택시 -->
+                    <!-- <button type="button" class="button button--positive" data-element="modal__close">맞추기 변경완료</button> to.개발 | 옵션수정시 -->
+                </div>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 환율맞추기퀴즈 레이어 -->
+
+    <!-- 환율맞추기 공유하기 레이어 -->
+    <div id="boastpopup" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">환율맞추기</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <!-- to.개발 |  
+                            예지력 50% 미만인 경우 노출 fx-boast__img--predictorlv1 
+                            예지력 50% 이상인 경우 노출 fx-boast__img--predictorlv2
+                            연속적중 히스토리 있는 경우 노출 fx-boast__img--predictorlv3 
+                        -->
+                        <span class="fx-boast__img fx-boast__img--predictorlv1" aria-hidden="true"></span>
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">헤헷 환율똥손입니다.</strong>
+                            <span class="fx-boast__subtxt">나의 예지력 <em class="num">49%</em></span>
+                        </div>
+                    </div>
+                    <div class="fx-boast">
+                        <span class="fx-boast__img fx-boast__img--predictorlv2" aria-hidden="true"></span>
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">백발백중 환율찍신!</strong>
+                            <span class="fx-boast__subtxt">나의 예지력 <em class="num">59%</em></span>
+                        </div>
+                    </div>
+                    <div class="fx-boast">
+                        <span class="fx-boast__img fx-boast__img--predictorlv3" aria-hidden="true"></span>
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">다음은 로또다.</strong>
+                            <span class="fx-boast__subtxt">릴레이적중 <em class="num">1,500ⓢ</em> 획득</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText01" class="input__element" title="한줄입력" value="">
+                        <label for="inputText01" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 환율맞추기 공유하기 레이어 -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script>
+$(function(){
+    $(".fx-piechart-box").each(function(){
+        var thisVal = $(this).data("value"),
+            flag = 100,
+            per = (thisVal > 100) ? 100 : thisVal,
+            angle = 360,
+            rotate = Math.abs(angle) / flag,
+            val = rotate * per;
+
+        $(this).find(".fx-piechart").css("background","conic-gradient(#8c4fe9 0% "+ ", #2fc8e3 " + thisVal + "%, transparent " + thisVal +"% 100%)")
+        $(this).find(".fx-pierotate").css("transform", "rotate(" + val + "deg)");
+    });
+
+    $('.btn-share').on('click', function(){
+        $('.fx-boastslider').slick('setPosition');
+    });
+})
+</script>
+</body>
+</html>
