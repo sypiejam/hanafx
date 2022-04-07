@@ -797,7 +797,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-quiz__opt--dw + .fx-quiz__label {background-position:0 100%;}
 .fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;}
 .fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;}
-.fx-boast__contents {min-height:50vh;}
+.fx-boast__contents {max-height:50vh;}
 .fx-boastslider {position:relative;}
 .fx-boastslider .slick-arrow {z-index:10;position:absolute;top:50%;width:1.75rem;height:3.25rem;background:url(../../resource/images/C/arrow_right_default.png) no-repeat 100% 50% / 0.875rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);opacity:0.8;}
 .fx-boastslider .slick-prev {left:0;-webkit-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg);}
