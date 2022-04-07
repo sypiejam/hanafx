@@ -742,6 +742,70 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     .fx-mylog__nickname {font-size:0.813rem;} 
 }
 
+/* 환율예측 */
+.fx-service__keyvisual--forecast {position:relative;height:68vw;background:url(../../resource/images/fxmarket/dummy_keyvisual_predict.png) no-repeat 0 0 / 100%;} 
+.fx-forecast-date {position:absolute;top:12%;left:13%;font-weight:700;font-size:1.188rem}
+.fx-guess {margin-top:2.5rem;}
+.fx-guess .fx-rate__graph {margin-top:0.5rem;}
+.fx-guess .fx-refresh {display:flex;justify-content:space-between;align-items:center;font-size:0.938rem;line-height:1;}
+.fx-guess .fx-refresh__txt {font-weight:300;font-size:0.75rem;}
+.fx-guess .icon-na {width:1rem;height:1rem;margin-right:0.313rem;}
+.fx-guess .exr {margin-left:0.25rem;font-size:0.75rem;font-weight:700;}
+.fx-guess .exr:before {margin-right:0.125rem;}
+.fx-guess .exr--up::before {border-width:0 5px 8px;}
+.fx-guess .exr--dw::before {border-width:8px 5px 0;}
+.fx-guess .fx-score__progress[value] {margin-top:0.313rem;border:0;}
+.fx-guess .fx-score__progress[value]::-webkit-progress-bar {background-color:#3f78fa;}
+.fx-guess .fx-score__progress[value]::-webkit-progress-value {border-radius:initial;background:#fa3f66;box-shadow:none;}
+.fx-guess .icon-modify {display:inline-block;width:0.75rem;height:0.75rem;margin-left:0.25rem;background:url(../../resource/images/C/icon_edit_gray.png) no-repeat 0 0 / 100%;-webkit-filter:brightness(3);filter:brightness(3);}
+.fx-participate {margin-top:1.25rem;}
+.fx-participate__opts {display:flex;justify-content:space-between;padding:0 0.5rem;}
+.fx-participate__opt {position:relative;font-size:0.813rem;}
+.fx-participate__opt:before {content:'';display:inline-block;width:0.563rem;height:0.625rem;margin-right:0.25rem;background-image:url(../../resource/images/fxmarket/bg_quiz_sp2.png);background-repeat:no-repeat;background-size:0.563rem;}
+.fx-participate__opt--up:before {background-position:0 0;}
+.fx-participate__opt--dw:before {background-position:0 100%;}
+.fx-participant {margin-top:0.5rem;font-size:0.875rem;color:#666;text-align:center;}
+.fx-predict .spacer {margin:2.5rem -1.5rem 0;}
+.fx-predictor {display:flex;justify-content:center;align-items:center;margin-top:1.5rem;font-size:0.875rem;}
+.fx-piechart {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 0;border-radius:50%;overflow:hidden;text-align:center;}
+.fx-pietxtarea {position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);background:transparent;}
+.fx-pietxtarea__per {display:block;font-size:1.875rem;}
+.fx-pietxtarea__value {font-size:0.875rem;color:#666;}
+.fx-pierotate {position:absolute;top:0;right:0;left:0;display:block;width:100%;height:100%;}
+.fx-pierotate__ball {position:absolute;left:50%;margin-left:-0.438rem;display:block;width:0.75rem;height:0.75rem;border-radius:50%;background-color:#2fc8e3;}
+[data-value="0"] .fx-pierotate {display:none;}
+[data-value="100"] .fx-pierotate {z-index:2;}
+.fx-predict .btn-share {margin-left:auto;}
+.fx-predict .btn-share:before {content:none;}
+.fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url('../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
+.fx-predict .fx-level-icon {width:1.813rem;height:1rem;text-align:center;}
+.fx-calendar {margin-top:0.5rem;}
+.fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
+.fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
+.fx-calendar__label {display:flex;justify-content:center;align-items:center;width:2.938rem;height:2.938rem;margin:auto;border-radius:50%;background:url(../../resource/images/fxmarket/sp_calender_label.png) no-repeat 0 0 / 100%;}
+.fx-calendar__label--success {background-position:0 0;}
+.fx-calendar__label--getpoint {background-position:0 20%;}
+.fx-calendar__label--miss {background-position:0 40%;}
+.fx-calendar__label--fail {background-position:0 60%;}
+.fx-calendar__label--holiday {background-position:0 80%;}
+.fx-calendar__label--challenge {background-position:0 100%;}
+.fx-quiz__opts {display:flex;justify-content:space-around;align-items:center;margin-bottom:2.5rem;}
+.fx-quiz__label {display:block;width:8.313rem;height:8.313rem;background-color:#dfdfdf;background-image:url(../../resource/images/fxmarket/bg_quiz_sp.png);background-repeat:no-repeat;background-size:100%;border-radius:50%;}
+.fx-quiz__opt--up, 
+.fx-quiz__opt--dw {position:absolute;width:1px;height:1px;}
+.fx-quiz__opt--up + .fx-quiz__label {background-position:0 0;}
+.fx-quiz__opt--dw + .fx-quiz__label {background-position:0 100%;}
+.fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;}
+.fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;}
+.fx-boast__contents {min-height:50vh;}
+.fx-boastslider {position:relative;}
+.fx-boastslider .slick-arrow {z-index:10;position:absolute;top:50%;width:1.75rem;height:3.25rem;background:url(../../resource/images/C/arrow_right_default.png) no-repeat 100% 50% / 0.875rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);opacity:0.8;}
+.fx-boastslider .slick-prev {left:0;-webkit-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg);}
+.fx-boastslider .slick-next {right:0;}
+.fx-boastslider .slick-disabled {opacity:0.3;}
+.fx-boast__img--predictorlv1 {background-image:url(../../resource/images/fxmarket/img_boast_toptrader.png);}
+.fx-boast__img--predictorlv2 {background-image:url(../../resource/images/fxmarket/img_boast_challenge.png);}
+.fx-boast__img--predictorlv3 {background-image:url(../../resource/images/fxmarket/img_boast_forecast.png);}
 /* odometer css */
 .odometer.odometer-auto-theme, 
 .odometer.odometer-theme-minimal {position:relative;display:inline-block;vertical-align:middle;} 
