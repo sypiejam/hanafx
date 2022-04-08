@@ -237,7 +237,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-mylevel__wrap {display:flex;align-items:center;padding:0.75rem 0;}
 .fx-mylevel__lv {font-weight:500;font-size:1.25rem;}
 .fx-mylevel__desc {color:#666;}
-.fx-levelinfo .table .fx-level-icon {width:1.438rem;height:0.875rem;margin:auto;}
+.fx-levelinfo .table .fx-level-icon {width:1.438rem;height:0.938rem;margin:auto;}
 /* [s] 삭제예정 */
 .fx-levelinfo-icon {display:flex;align-items:center;justify-content:center;}
 .fx-levelinfo-icon::before {content:'';display:inline-block;width:0.625rem;height:0.625rem;margin-right:0.375rem;background:url(../../resource/images/fxmarket/dummy_icon_fxlevel.png) no-repeat;background-size:100% auto;}
@@ -293,7 +293,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-trader__list:nth-child(1) {border-color:#e1cc9e;}
 .fx-trader__list:nth-child(2) {border-color:#adadc8;}
 .fx-trader__list:nth-child(3) {border-color:#a8d9e2;}
-.fx-trader__list .fx-level-icon {width:1.438rem;height:0.875rem;margin-top:-0.25rem;}
+.fx-trader__list .fx-level-icon {width:1.438rem;height:0.938rem;margin-top:-0.25rem;}
 .fx-trader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
 .fx-trader__rank:before {content:'';z-index:-1;position:absolute;top:-1px;bottom:-1px;left:-1px;width:100%;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
 .fx-trader__list:nth-child(1) .fx-trader__rank:before {background:#f7b21f;}
