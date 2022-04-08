@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* FXM 밀리언달러마켓(FX market) stylesheet */
+/* FX마켓 stylesheet */
 .max-w80 {max-width:80% !important;}
 .btn-share {display:flex;align-items:center;}
 .btn-share::before {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-right:0.5rem;background:url('../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
@@ -181,8 +181,7 @@
 .fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_3.png);}
 .fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_4.png);}
 .fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_5.png);}
-.fx-myinfo .fx-level-icon {filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.1));}
-/* .fx-myinfo .fx-level-icon::after {content:'';position:absolute;bottom:0;left:0;right:0;height:0;display:block;box-shadow:0 2px 15px 3px rgba(0, 0, 0, 0.2);} */
+.fx-myinfo .fx-level-icon {filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));}
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
@@ -778,7 +777,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-predict .btn-share {margin-left:auto;}
 .fx-predict .btn-share:before {content:none;}
 .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url('../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
-.fx-predict .fx-level-icon {width:1.875rem;height:1.188rem;margin:-0.25rem 0.5rem 0 0;text-align:center;}
+.fx-predict .fx-level-icon {width:1.875rem;height:1.188rem;margin:-0.313rem 0.5rem 0 0;text-align:center;}
 .fx-calendar {margin-top:0.5rem;}
 .fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
 .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
