@@ -181,7 +181,7 @@
 .fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_3.png);}
 .fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_4.png);}
 .fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_5.png);}
-.fx-myinfo .fx-level-icon {filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));}
+/* .fx-myinfo .fx-level-icon {filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));} */
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
@@ -191,23 +191,22 @@
 .fx-score__progress[value] {appearance:none;overflow:hidden;width:100%;display:flex;align-items:center;margin-top:0.625rem;border:1px solid #d9d9d9;border-radius:1rem;}
 .fx-score__progress[value]::-webkit-progress-bar {background-color:#f7f7f7;}
 .fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);}
-.fx-mybadge {}
 .fx-mybadge .no-data {padding:1.813rem 0;}
 .fx-mybadge__list {overflow-x:auto;display:flex;flex-wrap:nowrap;}
-.fx-mybadge__item:not(:first-child) {margin-left:0.625rem;}
+.fx-mybadge__item:not(:first-child) {margin-left:0.875rem;}
 .fx-mybadge__item {position:relative;display:inline-block;}
 .fx-mybadge__anchor {display:block;}
 .fx-mybadge__text {display:block;margin-top:5px;text-align:center;font-size:0.875rem;}
-[class^='fx-mybadge__icon--'] {display:block;width:85px;height:110px;margin:0 auto;background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);background-repeat:no-repeat;background-size:275px auto;}
+[class^='fx-mybadge__icon--'] {display:block;width:80px;height:110px;margin:0 auto;background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);background-repeat:no-repeat;background-size:263px auto;}
 .fx-mybadge__icon--01 {background-position:0 0;}
-.fx-mybadge__icon--02 {background-position:-95px 0;}
-.fx-mybadge__icon--03 {background-position:-191px 0;}
-.fx-mybadge__icon--04 {background-position:0 -167px;}
-.fx-mybadge__icon--05 {background-position:-95px -167px;}
-.fx-mybadge__icon--06 {background-position:-191px -167px;}
-.fx-mybadge__icon--07 {background-position:0 -347px;}
-.fx-mybadge__icon--08 {background-position:-95px -347px;}
-.fx-mybadge__icon--09 {background-position:-191px -347px;}
+.fx-mybadge__icon--02 {background-position:-90px 0;}
+.fx-mybadge__icon--03 {background-position:-183px 0;}
+.fx-mybadge__icon--04 {background-position:0 -160px;}
+.fx-mybadge__icon--05 {background-position:-90px -160px;}
+.fx-mybadge__icon--06 {background-position:-183px -160px;}
+.fx-mybadge__icon--07 {background-position:0 -332px;}
+.fx-mybadge__icon--08 {background-position:-90px -332px;}
+.fx-mybadge__icon--09 {background-position:-183px -332px;}
 .list-section--fxm {margin:0 0 -1.875rem;}
 hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* [e] 마이페이지 수정중 */
@@ -686,7 +685,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-mylog:after {content:'';position:absolute;right:0;width:1rem;height:1rem;background:url(../../resource/images/C/arrow_right_small.png) no-repeat 70% 50% / 0.4rem;}
 .fx-mylog__nickname {margin-left:0.125rem;font-size:0.875rem;line-height:1;}
 .fx-mylog__link {position:absolute;top:0;right:0;bottom:0;left:0;}
-.fx-mylog .fx-level-icon {width:1.875rem;height:1.188rem;margin-top:-0.313rem;}
+.fx-mylog .fx-level-icon {width:1.438rem;height:0.938rem;margin-top:-0.313rem;}
 .fx-mylog .challenge__badge {margin-left:0.25rem;}
 .fx-mylog .challenge-badge__item {margin:0 0.125rem;}
 .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
@@ -715,7 +714,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-service-challenge .bold {color:#009591;}
 .fx-service-checkout .bold {color:#f84b6f;}
 .fx-service-guide .bold {color:#009591;}
-.fx-submain-toptrader .fx-level-icon {width:1.625rem;height:1rem;}
+.fx-submain-toptrader .fx-level-icon {width:1.438rem;height:0.938rem;}
 .fx-submain-toptrader .fx-trader__nickname {margin-left:0.25rem;}
 .fx-submain-toptrader .fx-trader__sum {margin-left:1.875rem;}
 .fx-submain-toptrader .gray-box {border:1px solid #f4f4f4;background:#f4f4f4;color:#666;}
@@ -780,7 +779,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-predict .btn-share {margin-left:auto;}
 .fx-predict .btn-share:before {content:none;}
 .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url('../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
-.fx-predict .fx-level-icon {width:1.875rem;height:1.188rem;margin:-0.313rem 0.5rem 0 0;text-align:center;}
+.fx-predict .fx-level-icon {width:1.438rem;height:0.938rem;margin:-0.313rem 0.5rem 0 0;text-align:center;}
 .fx-calendar {margin-top:0.5rem;}
 .fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
 .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
