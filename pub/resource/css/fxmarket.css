@@ -173,15 +173,16 @@
 .fx-myinfo {display:flex;justify-content:space-between;align-items:center;flex-direction:row-reverse;}
 .fx-myinfo .button-select {width:13.750em;padding-bottom:0.813rem;}
 .fx-myinfo .button-select__item {height:1.875rem;padding-left:0;border:none;font-size:1.25rem;letter-spacing:-0.5px;background-position:95% 50%;}
+
 /* [s] 마이페이지 수정중 */
-.fx-level-icon {display:block;width:4rem;height:4rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-    /* [s] Level 아이콘(공통) 미정 */
-.fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_1.png);}
-.fx-level-icon.level-2 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_2.png);}
-.fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_3.png);}
-.fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_4.png);}
-.fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/dummy_icon_fxlevel_5.png);}
-    /* [e] Level 아이콘(공통) 미정 */
+.fx-level-icon {display:block;width:5.25rem;height:3.375rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
+.fx-level-icon.level-1 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_1.png);}
+.fx-level-icon.level-2 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_2.png);}
+.fx-level-icon.level-3 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_3.png);}
+.fx-level-icon.level-4 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_4.png);}
+.fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_5.png);}
+.fx-myinfo .fx-level-icon {filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.1));}
+/* .fx-myinfo .fx-level-icon::after {content:'';position:absolute;bottom:0;left:0;right:0;height:0;display:block;box-shadow:0 2px 15px 3px rgba(0, 0, 0, 0.2);} */
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
@@ -191,23 +192,23 @@
 .fx-score__progress[value] {appearance:none;overflow:hidden;width:100%;display:flex;align-items:center;margin-top:0.625rem;border:1px solid #d9d9d9;border-radius:1rem;}
 .fx-score__progress[value]::-webkit-progress-bar {background-color:#f7f7f7;}
 .fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);}
-.fx-mybadge {padding:1.25rem 0.938rem;border-radius:1.25rem;border:1px solid #ececee;}
+.fx-mybadge {}
 .fx-mybadge .no-data {padding:1.813rem 0;}
-.fx-mybadge__inner {overflow:hidden;overflow-x:auto;}
-.fx-mybadge__list {display:flex;flex-wrap:nowrap;}
+.fx-mybadge__list {overflow-x:auto;display:flex;flex-wrap:nowrap;}
 .fx-mybadge__item:not(:first-child) {margin-left:0.625rem;}
+.fx-mybadge__item {position:relative;display:inline-block;}
 .fx-mybadge__anchor {display:block;}
 .fx-mybadge__text {display:block;margin-top:5px;text-align:center;font-size:0.875rem;}
-[class^='fx-mybadge__icon--'] {display:block;width:66px;height:66px;margin:0 auto;background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);background-repeat:no-repeat;background-size:214px auto;}
-.fx-mybadge__icon--01 {height:90px;background-position:0 0;}
-.fx-mybadge__icon--02 {height:90px;background-position:-74px 0;}
-.fx-mybadge__icon--03 {height:90px;background-position:-148px 0;}
-.fx-mybadge__icon--04 {background-position:0 -130px;}
-.fx-mybadge__icon--05 {background-position:-74px -130px;}
-.fx-mybadge__icon--06 {background-position:-148px -130px;}
-.fx-mybadge__icon--07 {background-position:0 -269px;}
-.fx-mybadge__icon--08 {background-position:-74px -269px;}
-.fx-mybadge__icon--09 {background-position:-148px -269px;}
+[class^='fx-mybadge__icon--'] {display:block;width:85px;height:110px;margin:0 auto;background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);background-repeat:no-repeat;background-size:275px auto;}
+.fx-mybadge__icon--01 {background-position:0 0;}
+.fx-mybadge__icon--02 {background-position:-95px 0;}
+.fx-mybadge__icon--03 {background-position:-191px 0;}
+.fx-mybadge__icon--04 {background-position:0 -167px;}
+.fx-mybadge__icon--05 {background-position:-95px -167px;}
+.fx-mybadge__icon--06 {background-position:-191px -167px;}
+.fx-mybadge__icon--07 {background-position:0 -347px;}
+.fx-mybadge__icon--08 {background-position:-95px -347px;}
+.fx-mybadge__icon--09 {background-position:-191px -347px;}
 .list-section--fxm {margin:0 0 -1.875rem;}
 hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 /* [e] 마이페이지 수정중 */
@@ -777,7 +778,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-predict .btn-share {margin-left:auto;}
 .fx-predict .btn-share:before {content:none;}
 .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url('../../resource/images/C/icon_share.png') 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
-.fx-predict .fx-level-icon {width:1.813rem;height:1rem;text-align:center;}
+.fx-predict .fx-level-icon {width:1.875rem;height:1.188rem;margin:-0.25rem 0.5rem 0 0;text-align:center;}
 .fx-calendar {margin-top:0.5rem;}
 .fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
 .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
