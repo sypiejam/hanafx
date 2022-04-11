@@ -198,7 +198,8 @@
 .fx-score__progress[value]::-webkit-progress-bar {background-color:#f7f7f7;}
 .fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);}
 .fx-mybadge {margin-top:1rem;padding-bottom:1.25rem;border-bottom:1px solid #e7e9ee;}
-.fx-mybadge .no-data {padding:1.813rem 0;}
+.fx-mybadge .no-data {padding:1.813rem 0;border-radius:0.625rem;border:1px solid #f0f0f0;background:#f4f4f4;}
+.fx-mybadge .no-data__result {font-size:0.875rem;}
 .fx-mybadge__list {overflow-x:auto;display:flex;flex-wrap:nowrap;}
 .fx-mybadge__item:not(:first-child) {margin-left:0.875rem;}
 .fx-mybadge__item {position:relative;display:inline-block;}
