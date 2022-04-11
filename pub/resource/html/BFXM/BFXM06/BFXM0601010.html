@@ -12,8 +12,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-</style>
 </head>
 <body class="bg-white">
 <div id="wrap" class="wrap">
@@ -26,40 +24,134 @@
     <!-- //header -->
     <!-- Content -->
     <div id="content" class="app-main app-main--without-footer fxmarket">
-        <!-- 기획&디자인 변경예정 / 등급 및 챌린지 아이콘 디자인 미정 -->
-        <div class="fx-mypage background-gray">
-            <div class="container fx-myinfo">
-                <span class="fx-level-icon level-1"><em class="offscreen">Level 1</em></span>
-                <div class="button-select selected button-select__edit">
-                    <button type="button" title="닉네임 변경하기" class="button button-select__item">다동한외빌딩큰손개미</button>
+        <div class="fx-mypage">
+            <div class="background-gray">
+                <div class="container fx-myinfo">
+                    <span class="fx-level-icon level-5"><em class="offscreen">Level 5</em></span>
+                    <!-- to.개발 | 등급 아이콘 클래스명 
+                        Level 1 "fx-level-icon level-1"
+                        Level 2 "fx-level-icon level-2"
+                        Level 3 "fx-level-icon level-3"
+                        Level 4 "fx-level-icon level-4"
+                        Level 5 "fx-level-icon level-5"
+                    -->
+                    <div class="fx-myinfo-wrap">
+                        <div class="challenge__badge">
+                            <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i>
+                            <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i>
+                            <i class="challenge-badge__item challenge-3"><span class="offscreen">환율갓</span></i>
+                        </div>
+                        <div class="button-select selected button-select__edit">
+                            <button type="button" title="닉네임 변경하기" class="button button-select__item">다동한외빌딩큰손개미</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container fx-score">
+                    <button type="button" class="fx-score__point button-arrow">F<span class="color-red">X</span> Score <em class="fx-score__point--num">23,100</em></button>
+                    <progress max="100" value="92.4" class="fx-score__progress"></progress>
+                    <div class="fx-score__item">
+                        <span class="fx-score__title">다음 등급까지 <em>1,900</em></span>
+                        <em class="fx-score__text"><span>25,000</span><span class="fx-score__text--lv">Lv2</span></em>
+                    </div>
                 </div>
             </div>
-            <div class="container fx-score">
-                <button type="button" class="fx-score__point button-arrow">F<span class="color-red">X</span> Score <em class="fx-score__point--num">23,100</em></button>
-                <progress min="0" max="100" value="92.4" class="fx-score__progress"></progress>
-                <div class="fx-score__item">
-                    <span class="fx-score__title">다음 등급까지 <em>1,900</em></span>
-                    <em class="fx-score__text">25,000 <span class="fx-score__text--lv">Lv2</span></em>
-                </div>
-            </div>
+            <hr class="spacer">
             <div class="tit-default">
-                <a href="#none" class="tit-default__link">마이챌린지</a>
-            </div>
-            <div class="container fx-challenge">
-                <div class="fx-challenge-badge">
-                </div>
-            </div>
-            <div class="tit-default">
-                <a href="#none" class="tit-default__link">마이커뮤니티</a>
-            </div>
-            <div class="container fx-community">
-                
+                <a href="#none" class="tit-default__link">FX챌린지</a>
             </div>
             <div class="container">
-                <button type="button" class="button-arrow fx-mypage--arrow">자주하는 질문</button>
+                <div class="fx-mybadge">
+                    <div class="fx-mybadge-box">
+                        <!-- 획득한 배지 없을 때
+                        <div class="no-data">
+                            <p class="no-data__result">획득한 배지가 없습니다.</p>
+                        </div>
+                        //획득한 배지 없을 때 -->
+                        <ul class="fx-mybadge__list">
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--01" aria-hidden="true"></i>
+                                    <span class="offscreen">스타터</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--02" aria-hidden="true"></i>
+                                    <span class="offscreen">빅러너</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--03" aria-hidden="true"></i>
+                                    <span class="offscreen">빅핸드</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--04" aria-hidden="true"></i>
+                                    <span class="offscreen">수줍이</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--05" aria-hidden="true"></i>
+                                    <span class="offscreen">열심이</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--06" aria-hidden="true"></i>
+                                    <span class="offscreen">밀달인싸</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--07" aria-hidden="true"></i>
+                                    <span class="offscreen">환린이</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--08" aria-hidden="true"></i>
+                                    <span class="offscreen">환율킹</span>
+                                </a>
+                            </li>
+                            <li class="fx-mybadge__item">
+                                <a href="#none" class="fx-mybadge__anchor">
+                                    <i class="fx-mybadge__icon--09"></i>
+                                    <span class="offscreen">환율갓</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="list-section list-section--fxm">
+                <div class="container">
+                    <div class="list-wrap list-wrap--line">
+                        <div class="list-wrap__item list-button-wrap list-button-wrap--large">
+                            <button type="button" class="list-wrap__anchor list-wrap__anchor--bullet">
+                                <span class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">FX커뮤니티</strong>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="spacer">
+            <div class="container fx-mybox">
+                <div class="fx-mybox__wrap">
+                    <button type="button" class="fx-mybox__item fx-mybox__item--ico01">
+                        <em class="fx-mybox__title">환율알림</em>
+                    </button>
+                    <button type="button" class="fx-mybox__item fx-mybox__item--ico02">
+                        <em class="fx-mybox__title">자주하는질문</em>
+                    </button>
+                </div>
             </div>
         </div>
-        <!-- //기획&디자인 변경예정 / 등급 및 챌린지 아이콘 디자인 미정 -->
+        <hr class="spacer">
         
         <div class="list-section list-section--fxm">
             <div class="container">
@@ -81,7 +173,7 @@
                 </ul>
             </div>
         </div>
-        <hr class="spacer">
+        <hr class="spacer mgb0">
         <div class="fx-pushalarm">
             <ul class="row-list push-alarm">
                 <li class="row-list__item">
