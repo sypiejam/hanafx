@@ -203,13 +203,13 @@
 .fx-mybadge__text {display:block;margin-top:5px;text-align:center;font-size:0.875rem;}
 [class^='fx-mybadge__icon--'] {display:block;width:80px;height:110px;margin:0 auto;background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);background-repeat:no-repeat;background-size:263px auto;}
 .fx-mybadge__icon--01 {background-position:0 0;}
-.fx-mybadge__icon--02 {background-position:-90px 0;}
+.fx-mybadge__icon--02 {background-position:-91px 0;}
 .fx-mybadge__icon--03 {background-position:-183px 0;}
 .fx-mybadge__icon--04 {background-position:0 -160px;}
-.fx-mybadge__icon--05 {background-position:-90px -160px;}
+.fx-mybadge__icon--05 {background-position:-91px -160px;}
 .fx-mybadge__icon--06 {background-position:-183px -160px;}
 .fx-mybadge__icon--07 {background-position:0 -332px;}
-.fx-mybadge__icon--08 {background-position:-90px -332px;}
+.fx-mybadge__icon--08 {background-position:-91px -332px;}
 .fx-mybadge__icon--09 {background-position:-183px -332px;}
 .fx-mybox {margin-top:2rem;}
 .fx-mybox__wrap {display:flex;justify-content:space-between;align-items:center;}
