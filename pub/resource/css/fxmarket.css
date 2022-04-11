@@ -258,14 +258,20 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-bounds .input.readonly::before {background:#fff;}
 .fx-bounds .input.readonly .input__element {color:#000;}
 .fx-bounds .input--error.readonly::before {border:2px solid #ed1651 !important;}
+/* 마이페이지 - 커뮤니티 */
+.fx-mycommunity {margin-top:0;border-top:1px solid #e7e9ee;}
+.fx-mycommunity .fx-commlist__item:first-child {margin-top:1.875rem;}
+.fx-mycommunity .fx-boast {position:relative;}
+.fx-mycommunity__btn {position:absolute;top:2.813rem;right:0.438rem;display:block;}
+.fx-mycommunity__btn .modal__btn--close {position:static;display:block;}
 
 /* 부가서비스 */
 .fx-service__keyvisual {position:relative;margin-top:-1.25rem;padding:1.875rem 1.5rem;}
 
 /* 부가서비스 - 탑트레이더 랭킹 */
-.fx-service__keyvisual--trader {overflow:hidden;position:relative;padding-top:106%;background:#373a4d;}
+.fx-service__keyvisual--trader {overflow:hidden;position:relative;padding-top:109%;background:#373a4d;}
 .keyvisual__trader--trophy {
-    position:absolute;top:12vw;right:0;left:0;
+    position:absolute;top:16vw;right:0;left:0;
     -webkit-animation-name:trophy;
     animation-name:trophy;
     -webkit-animation-duration:2s;
@@ -285,7 +291,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
     -webkit-animation-iteration-count:1;
     animation-iteration-count:1;
 }
-.keyvisual__trader--txt {position:absolute;top:79vw;left:0;right:0;}
+.keyvisual__trader--txt {position:absolute;top:80vw;left:0;right:0;}
 @keyframes particle {
     0% {-webkit-transform:scale(1);transform:scale(1)}
     100% {-webkit-transform:scale(1.1);transform:scale(1.1)}
@@ -552,7 +558,7 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-service__keyvisual--community {height:72vw;background:url(../../resource/images/fxmarket/img_keyvisual_community.png) no-repeat 0 0 / 100% auto;}
 .fx-commlist hr.spacer {margin-top:0;}
 .fx-commlist__item {margin-top:3rem;}
-.fx-boast .fx-level-icon {width:1.875rem;height:1.25rem;margin-top:-0.125rem;}
+.fx-boast .fx-level-icon {width:2.25rem;height:1.438rem;margin-top:-0.188rem;}
 .fx-boast .challenge-badge__item {width:1.313rem;height:1.313rem;margin:0 0.313rem;}
 .fx-boast-head {display:flex;align-items:center;}
 .fx-boast__nickname {margin-left:0.5rem;font-size:1.25rem;line-height:1;letter-spacing:-1px;}
