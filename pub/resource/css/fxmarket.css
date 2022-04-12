@@ -259,7 +259,9 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-bounds .input.readonly .input__element {color:#000;}
 .fx-bounds .input--error.readonly::before {border:2px solid #ed1651 !important;}
 /* 마이페이지 - 커뮤니티 */
-.fx-mycommunity {margin-top:0;border-top:1px solid #e7e9ee;}
+.fx-mycommunity {margin-top:0;}
+.search-list--comm {position:relative;}
+.search-list--comm::before {content:'';position:absolute;bottom:0;left:1.5rem;right:1.5rem;height:1px;background-color:#e7e9ee;}
 .fx-mycommunity .fx-commlist__item:first-child {margin-top:1.875rem;}
 .fx-mycommunity .fx-boast {position:relative;}
 .fx-mycommunity__btn {position:absolute;top:2.813rem;right:0.438rem;display:block;}
