@@ -12,13 +12,38 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+.fx-service__keyvisual {position:relative;}
+.txt-wrap {position:absolute;bottom:85px;left:0;right:0;}
+.txt-h1 {text-align:center;}
+.txt-h1 span {
+  position:relative;top:20px;display:inline-block;width:29px;height:29px;margin-left:3px;
+  animation:bounce .3s ease infinite alternate;
+  font-size:28px;color:transparent;text-shadow:0 10px 10px rgba(0, 0, 0, .4);
+}
+.txt-h1 span:nth-child(1) {margin:0;background:url(../../../../resource/images/fxmarket/txt_community_split01.png) no-repeat 0 0 / 100%;}
+.txt-h1 span:nth-child(2) {background:url(../../../../resource/images/fxmarket/txt_community_split02.png) no-repeat 0 0 / 100%;animation-delay:.1s;}
+.txt-h1 span:nth-child(3) {margin-left:10px;background:url(../../../../resource/images/fxmarket/txt_community_split01.png) no-repeat 0 0 / 100%;animation-delay:.2s;}
+.txt-h1 span:nth-child(4) {background:url(../../../../resource/images/fxmarket/txt_community_split03.png) no-repeat 0 0 / 100%;animation-delay:.3s;}
+.txt-h1 span:nth-child(5) {width:31px;background:url(../../../../resource/images/fxmarket/txt_community_split04.png) no-repeat 0 0 / 100%;animation-delay:.4s;}
+.txt-h1 span:nth-child(6) {width:8px;background:url(../../../../resource/images/fxmarket/txt_community_split05.png) no-repeat 0 0 / 100%;animation-delay:.5s;}
+/* .txt-h1 span:nth-child(7) { animation-delay: .6s; }
+.txt-h1 span:nth-child(8) { animation-delay: .7s; } */
+
+@keyframes bounce {
+  100% {
+    top: -15px;
+    text-shadow: 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">밀리언달러 커뮤니티</h1>
+        <h1 class="app-header__title">FX커뮤니티</h1>
         <button class="app-header__button app-header__button--home" title="메인화면"></button>
         <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
     </div>
@@ -29,9 +54,14 @@
         <div class="fx-service fx-community">
             <!-- 디자인 변경 및 애니메이션 작업 예정 -->
             <div class="fx-service__keyvisual fx-service__keyvisual--community">
+                <div class="txt-wrap">
+                    <div class="txt-h1">
+                        <span>모</span><span>두</span><span>모</span><span>여</span><span>라</span><span>!</span>
+                    </div>
+                </div>
                 <div class="offscreen">
                     <strong>모두 모여라!</strong> 
-                    <p>밀리언달러 커뮤니티에 자랑해</p>
+                    <p>FX커뮤니티에 자랑해</p>
                     <p>적절치 않은 단어가 포함된 경우 표시가 제한될 수 있습니다.</p>
                 </div>
             </div>
@@ -45,7 +75,7 @@
                         <article class="fx-boast">
                             <div class="fx-boast-head">
                                 <!-- 등급 및 챌린지 아이콘 디자인 미정 -->
-                                <span class="fx-level-icon level-1"><span class="offscreen">level 1</span></span><!-- D : 개발시 유저등급 기재 -->
+                                <span class="fx-level-icon level-1"><span class="offscreen">level 1</span></span>
                                 <!-- to.개발 | 등급 아이콘 클래스명 
                                     Level 1 "fx-level-icon level-1"
                                     Level 2 "fx-level-icon level-2"
@@ -55,9 +85,9 @@
                                 -->
                                 <em class="fx-boast__nickname">소심한단타형백억부자</em>
                                 <div class="challenge__badge">
-                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i><!-- D : 개발시 해당챌린지명 기재 -->
-                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
-                                    <i class="challenge-badge__item challenge-3"><span class="offscreen">챌린지</span></i>
+                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i>
+                                    <i class="challenge-badge__item challenge-3"><span class="offscreen">환율갓</span></i>
                                 </div>
                                 <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
@@ -79,94 +109,96 @@
                                     <span>2022-02-12 00:00</span>
                                 </div>
                                 <div class="fx-commlike" data-element="toggle">
-                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><span class="txt">공감하기</span><span class="num">99+</span></button>
-                                    <ul class="fx-commicon" data-element="toggle__panel">
-                                        <li class="fx-commicon__item">
-                                            <input type="checkbox" id="fxCommLike11" name="fxCommLike1" class="fx-commicon__input">
-                                            <label for="fxCommLike11" class="fx-commicon__icon--01">
-                                                <em class="offscreen">좋아요</em>
-                                                <div class="fx-commicon-heart" aria-hidden="true">
-                                                    <div class="hearts-animations"> 
-                                                        <span class="heart heart1"></span>
-                                                        <span class="heart heart2"></span>
-                                                        <span class="heart heart3"></span>
-                                                        <span class="heart heart4"></span>
-                                                        <span class="heart heart5"></span>
-                                                        <span class="heart heart6"></span>
+                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><span class="txt">공감하기</span><span class="num">999+</span></button>
+                                    <div data-element="toggle__panel">
+                                        <ul class="fx-commicon">
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike11" name="fxCommLike1" class="fx-commicon__input">
+                                                <label for="fxCommLike11" class="fx-commicon__icon--01">
+                                                    <em class="offscreen">좋아요</em>
+                                                    <div class="fx-commicon-heart" aria-hidden="true">
+                                                        <div class="hearts-animations"> 
+                                                            <span class="heart heart1"></span>
+                                                            <span class="heart heart2"></span>
+                                                            <span class="heart heart3"></span>
+                                                            <span class="heart heart4"></span>
+                                                            <span class="heart heart5"></span>
+                                                            <span class="heart heart6"></span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                            <span class="fx-commicon__count">999+</span>
-                                        </li>
-                                        <li class="fx-commicon__item">
-                                            <input type="checkbox" id="fxCommLike12" name="fxCommLike1" class="fx-commicon__input">
-                                            <label for="fxCommLike12" class="fx-commicon__icon--02">
-                                                <em class="offscreen">부러워</em>
-                                                <div class="fx-commicon-heart" aria-hidden="true">
-                                                    <div class="hearts-animations"> 
-                                                        <span class="heart heart1"></span>
-                                                        <span class="heart heart2"></span>
-                                                        <span class="heart heart3"></span>
-                                                        <span class="heart heart4"></span>
-                                                        <span class="heart heart5"></span>
-                                                        <span class="heart heart6"></span>
+                                                </label>
+                                                <span class="fx-commicon__count">99+</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike12" name="fxCommLike1" class="fx-commicon__input">
+                                                <label for="fxCommLike12" class="fx-commicon__icon--02">
+                                                    <em class="offscreen">부러워</em>
+                                                    <div class="fx-commicon-heart" aria-hidden="true">
+                                                        <div class="hearts-animations"> 
+                                                            <span class="heart heart1"></span>
+                                                            <span class="heart heart2"></span>
+                                                            <span class="heart heart3"></span>
+                                                            <span class="heart heart4"></span>
+                                                            <span class="heart heart5"></span>
+                                                            <span class="heart heart6"></span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                            <span class="fx-commicon__count">7</span>
-                                        </li>
-                                        <li class="fx-commicon__item">
-                                            <input type="checkbox" id="fxCommLike13" name="fxCommLike1" class="fx-commicon__input">
-                                            <label for="fxCommLike13" class="fx-commicon__icon--03">
-                                                <em class="offscreen">대단해</em>
-                                                <div class="fx-commicon-heart" aria-hidden="true">
-                                                    <div class="hearts-animations"> 
-                                                        <span class="heart heart1"></span>
-                                                        <span class="heart heart2"></span>
-                                                        <span class="heart heart3"></span>
-                                                        <span class="heart heart4"></span>
-                                                        <span class="heart heart5"></span>
-                                                        <span class="heart heart6"></span>
+                                                </label>
+                                                <span class="fx-commicon__count">7</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike13" name="fxCommLike1" class="fx-commicon__input">
+                                                <label for="fxCommLike13" class="fx-commicon__icon--03">
+                                                    <em class="offscreen">대단해</em>
+                                                    <div class="fx-commicon-heart" aria-hidden="true">
+                                                        <div class="hearts-animations"> 
+                                                            <span class="heart heart1"></span>
+                                                            <span class="heart heart2"></span>
+                                                            <span class="heart heart3"></span>
+                                                            <span class="heart heart4"></span>
+                                                            <span class="heart heart5"></span>
+                                                            <span class="heart heart6"></span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                            <span class="fx-commicon__count">167</span>
-                                        </li>
-                                        <li class="fx-commicon__item">
-                                            <input type="checkbox" id="fxCommLike14" name="fxCommLike1" class="fx-commicon__input">
-                                            <label for="fxCommLike14" class="fx-commicon__icon--04">
-                                                <em class="offscreen">반했어</em>
-                                                <div class="fx-commicon-heart" aria-hidden="true">
-                                                    <div class="hearts-animations"> 
-                                                        <span class="heart heart1"></span>
-                                                        <span class="heart heart2"></span>
-                                                        <span class="heart heart3"></span>
-                                                        <span class="heart heart4"></span>
-                                                        <span class="heart heart5"></span>
-                                                        <span class="heart heart6"></span>
+                                                </label>
+                                                <span class="fx-commicon__count">167</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike14" name="fxCommLike1" class="fx-commicon__input">
+                                                <label for="fxCommLike14" class="fx-commicon__icon--04">
+                                                    <em class="offscreen">반했어</em>
+                                                    <div class="fx-commicon-heart" aria-hidden="true">
+                                                        <div class="hearts-animations"> 
+                                                            <span class="heart heart1"></span>
+                                                            <span class="heart heart2"></span>
+                                                            <span class="heart heart3"></span>
+                                                            <span class="heart heart4"></span>
+                                                            <span class="heart heart5"></span>
+                                                            <span class="heart heart6"></span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                            <span class="fx-commicon__count">16</span>
-                                        </li>
-                                        <li class="fx-commicon__item">
-                                            <input type="checkbox" id="fxCommLike15" name="fxCommLike1" class="fx-commicon__input">
-                                            <label for="fxCommLike15" class="fx-commicon__icon--05">
-                                                <em class="offscreen">슬퍼요</em>
-                                                <div class="fx-commicon-heart" aria-hidden="true">
-                                                    <div class="hearts-animations"> 
-                                                        <span class="heart heart1"></span>
-                                                        <span class="heart heart2"></span>
-                                                        <span class="heart heart3"></span>
-                                                        <span class="heart heart4"></span>
-                                                        <span class="heart heart5"></span>
-                                                        <span class="heart heart6"></span>
+                                                </label>
+                                                <span class="fx-commicon__count">16</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike15" name="fxCommLike1" class="fx-commicon__input">
+                                                <label for="fxCommLike15" class="fx-commicon__icon--05">
+                                                    <em class="offscreen">슬퍼요</em>
+                                                    <div class="fx-commicon-heart" aria-hidden="true">
+                                                        <div class="hearts-animations"> 
+                                                            <span class="heart heart1"></span>
+                                                            <span class="heart heart2"></span>
+                                                            <span class="heart heart3"></span>
+                                                            <span class="heart heart4"></span>
+                                                            <span class="heart heart5"></span>
+                                                            <span class="heart heart6"></span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </label>
-                                            <span class="fx-commicon__count">0</span>
-                                        </li>
-                                    </ul>
+                                                </label>
+                                                <span class="fx-commicon__count">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -178,7 +210,7 @@
                                 <span class="fx-level-icon level-2"><span class="offscreen">level 2</span></span><!-- D : 개발시 유저등급 기재 -->
                                 <em class="fx-boast__nickname">내일의 왕</em>
                                 <div class="challenge__badge">
-                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i><!-- D : 개발시 해당챌린지명 기재 -->
                                 </div>
                                 <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
@@ -200,7 +232,7 @@
                                     <span>2022-02-12 00:00</span>
                                 </div>
                                 <div class="fx-commlike" data-element="toggle">
-                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><span class="txt">공감하기</span><span class="num">99+</span></button>
+                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><span class="txt">공감하기</span><span class="num">999+</span></button>
                                     <ul class="fx-commicon" data-element="toggle__panel">
                                         <li class="fx-commicon__item">
                                             <input type="checkbox" id="fxCommLike21" name="fxCommLike2" class="fx-commicon__input">
@@ -217,7 +249,7 @@
                                                     </div>
                                                 </div>
                                             </label>
-                                            <span class="fx-commicon__count">999+</span>
+                                            <span class="fx-commicon__count">99+</span>
                                         </li>
                                         <li class="fx-commicon__item">
                                             <input type="checkbox" id="fxCommLike22" name="fxCommLike2" class="fx-commicon__input">
@@ -299,7 +331,7 @@
                                 <span class="fx-level-icon level-3"><span class="offscreen">level 3</span></span><!-- D : 개발시 유저등급 기재 -->
                                 <em class="fx-boast__nickname">큰손개미</em>
                                 <div class="challenge__badge">
-                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i><!-- D : 개발시 해당챌린지명 기재 -->
                                 </div>
                                 <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
@@ -323,7 +355,7 @@
                                     <span>2022-02-12 00:00</span>
                                 </div>
                                 <div class="fx-commlike" data-element="toggle">
-                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><span class="txt">공감하기</span><span class="num">99+</span></button>
+                                    <button type="button" class="fx-commlike__btn" data-element="toggle__anchor"><span class="txt">공감하기</span><span class="num">999+</span></button>
                                     <ul class="fx-commicon" data-element="toggle__panel">
                                         <li class="fx-commicon__item">
                                             <input type="checkbox" id="fxCommLike31" name="fxCommLike3" class="fx-commicon__input">
@@ -340,7 +372,7 @@
                                                     </div>
                                                 </div>
                                             </label>
-                                            <span class="fx-commicon__count">999+</span>
+                                            <span class="fx-commicon__count">99+</span>
                                         </li>
                                         <li class="fx-commicon__item">
                                             <input type="checkbox" id="fxCommLike32" name="fxCommLike3" class="fx-commicon__input">
