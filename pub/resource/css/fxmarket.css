@@ -262,7 +262,9 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-mycommunity {margin-top:0;border-top:1px solid #e7e9ee;}
 .fx-mycommunity .fx-commlist__item:first-child {margin-top:1.875rem;}
 .fx-mycommunity .fx-boast {position:relative;}
-.fx-mycommunity__btn {position:absolute;top:2.813rem;right:0.438rem;display:block;}
+.fx-mycommunity .fx-commicon {padding-top:0.813rem;}
+.fx-mycommunity [class^='fx-commicon__icon--'] {-webkit-transform:scale(1);transform:scale(1);}
+.fx-mycommunity__btn {position:absolute;top:0.313rem;right:0.438rem;display:block;}
 .fx-mycommunity__btn .modal__btn--close {position:static;display:block;}
 
 /* 부가서비스 */
