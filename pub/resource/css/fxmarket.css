@@ -248,9 +248,8 @@ hr.spacer + .list-section--fxm {margin-top:-1.875rem;}
 .fx-levelinfo .additional-item {margin-right:-0.813rem;}
 .fx-levelinfo .button-select__item {height:auto;border:none;}
 .fx-mylevel {margin-top:-1.75rem;padding:1.875rem 0 2.5rem;background-color:#f9f9fb;}
-.fx-mylevel .fx-level-icon {position:static;margin-right:0.375rem;transform:scale(0.8);}
+.fx-mylevel .fx-level-icon {position:static;width:4.438rem;height:2.875rem;margin:0 1.063rem 0 0.375rem;}
 .fx-mylevel__wrap {display:flex;align-items:center;padding:0.938rem 0;}
-.fx-mylevel__lv {font-weight:500;font-size:1.25rem;}
 .fx-mylevel__desc {color:#666;}
 .fx-levelinfo .table .fx-level-icon {width:1.438rem;height:0.938rem;margin:auto;}
 /* 마이페이지 - 거래한도 관리 */
