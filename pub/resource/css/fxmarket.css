@@ -299,16 +299,16 @@
     60% {-webkit-transform:translateY(-10px);transform:translateY(-10px);}
     100% {-webkit-transform:translateY(0);transform:translateY(0);}
 }
-.fx-trader__list {position:relative;display:flex;margin:0.625rem 1.5rem;border:1px solid #d4d4d4;border-radius:0.75rem;}
-.fx-trader__list:nth-child(1) {border-color:#e1cc9e;}
-.fx-trader__list:nth-child(2) {border-color:#adadc8;}
-.fx-trader__list:nth-child(3) {border-color:#a8d9e2;}
+.fx-trader__list {position:relative;display:flex;margin:0.625rem 1.5rem;border:1px solid #d4d4d4;border-radius:0.75rem;z-index:-1;}
+.fx-trader__list--1st {border-color:#e1cc9e;}
+.fx-trader__list--2nd {border-color:#adadc8;}
+.fx-trader__list--3rd {border-color:#a8d9e2;}
 .fx-trader__list .fx-level-icon {width:1.438rem;height:0.938rem;margin-top:-0.25rem;}
 .fx-trader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
-.fx-trader__rank:before {content:'';z-index:-1;position:absolute;top:-1px;bottom:-1px;left:-1px;width:100%;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
-.fx-trader__list:nth-child(1) .fx-trader__rank:before {background:#f7b21f;}
-.fx-trader__list:nth-child(2) .fx-trader__rank:before {background:#6e6ec4;}
-.fx-trader__list:nth-child(3) .fx-trader__rank:before {background:#67cfe3;}
+.fx-trader__rank::before {content:'';z-index:-1;position:absolute;top:-1px;bottom:-1px;left:-1px;width:100%;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
+.fx-trader__list--1st .fx-trader__rank::before {background:#f7b21f;}
+.fx-trader__list--2nd .fx-trader__rank::before {background:#6e6ec4;}
+.fx-trader__list--3rd .fx-trader__rank::before {background:#67cfe3;}
 .fx-trader__info {flex:1;padding:1rem 1rem 0.813rem 1.25rem;}
 .fx-trader__nickname {margin-left:0.438rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
 .challenge__badge {display:flex;margin-left:0.313rem;}
@@ -321,9 +321,9 @@
 .fx-mytrader__wrap .fx-sticker {top:-55%;right:1.5rem;}
 .fx-mytrader__wrap .fx-trader__list {z-index:-1;align-items:center;margin:0;padding:0 1rem 0 1.5rem;border-width:0 0 1px 0;border-color:#f0f0f0;border-radius:1.5rem 1.5rem 0 0;background:#fff;}
 .fx-mytrader__wrap .fx-trader__info {padding:2rem 0 1rem 1.5rem;}
-.fx-mytrader__wrap .fx-trader__list:before {content:none;}
+.fx-mytrader__wrap .fx-trader__list::before {content:none;}
 .fx-mytrader__wrap .fx-trader__rank {position:relative;max-width:4.813rem;width:auto;padding:0 0.75rem;border-radius:1.5rem;background:#c6c6c6;font-size:1.125rem;line-height:1.8;}
-.fx-mytrader__wrap .fx-trader__list .fx-trader__rank:before {content:'';z-index:-1;position:absolute;top:auto;left:0.25rem;bottom:-0.438rem;width:1.438rem;height:0.75rem;background:url(../../resource/images/fxmarket/bg_toptrader_tail.png) no-repeat 50% 0 / 100%;}
+.fx-mytrader__wrap .fx-trader__list .fx-trader__rank::before {content:'';z-index:-1;position:absolute;top:auto;left:0.25rem;bottom:-0.438rem;width:1.438rem;height:0.75rem;background:url(../../resource/images/fxmarket/bg_toptrader_tail.png) no-repeat 50% 0 / 100%;}
 .fx-mytrader__wrap .fx-sticker__cont {width:5.063rem;height:5.063rem;}
 .fx-mytrader__wrap .fx-sticker__txt {width:100%;margin-top:2rem;}
 .fx-sticker .icon-speaker {
@@ -730,9 +730,9 @@
 .fx-submain-toptrader .fx-trader__list {margin:-1px 0 0 0;border:1px solid #f0f0f0;border-radius:initial;border-width:1px 0;}
 .fx-submain-toptrader .fx-trader__rank {justify-content:flex-start;width:2.625rem;padding-left:0.625rem;}
 .fx-submain-toptrader .fx-trader__info {padding:1.25rem 1rem 1.063rem 1rem;}
-.fx-submain-toptrader .fx-trader__list:nth-child(1) .fx-trader__rank:before {background:url(../../resource/images/fxmarket/bg_trader_ranking01.png) no-repeat 0 50% / 2.625rem;}
-.fx-submain-toptrader .fx-trader__list:nth-child(2) .fx-trader__rank:before {background:url(../../resource/images/fxmarket/bg_trader_ranking02.png) no-repeat 0 50% / 2.625rem;}
-.fx-submain-toptrader .fx-trader__list:nth-child(3) .fx-trader__rank:before {background:url(../../resource/images/fxmarket/bg_trader_ranking03.png) no-repeat 0 50% / 2.625rem;}
+.fx-submain-toptrader .fx-trader__list--1st .fx-trader__rank::before {background:url(../../resource/images/fxmarket/bg_trader_ranking01.png) no-repeat 0 50% / 2.625rem;}
+.fx-submain-toptrader .fx-trader__list--2nd .fx-trader__rank::before {background:url(../../resource/images/fxmarket/bg_trader_ranking02.png) no-repeat 0 50% / 2.625rem;}
+.fx-submain-toptrader .fx-trader__list--3rd .fx-trader__rank::before {background:url(../../resource/images/fxmarket/bg_trader_ranking03.png) no-repeat 0 50% / 2.625rem;}
 .fx-submain-rate {overflow:hidden;color:#fff;height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
 .fx-rateslider .slick-list {padding-left:1.5rem;}
 .fx-rateslider .slick-slide {margin-right:0.75rem;}
