@@ -309,28 +309,5 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
-<script>
-    $(function () {
-        $('.fx-commicon-heart').each(function(i,el){
-            $(el).find('.hearts-animations .heart').each(function(idx,heart){
-                $(heart).css({
-                    'animation-delay': (idx * 0.1) + 's',
-                    '-webkit-animation-delay': (idx * 0.1) + 's'
-                })
-            })
-        })
-
-        $('.fx-commicon__input').on('change', function(e){
-            var inputState = $(this).prop('checked');
-            var aniTarget = $(this).parents('.fx-commicon__item').find('.hearts-animations');
-            $(this).parents('.fx-commicon').find('.fx-commicon__input').prop('checked',false);
-            $(this).parents('.fx-commicon').find('.hearts-animations').removeClass('is-active');
-            if(inputState){
-                $(this).prop('checked',true);
-                aniTarget.addClass('is-active');
-            }
-        });
-    })
-</script>
 </body>
 </html>
