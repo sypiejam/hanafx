@@ -777,7 +777,7 @@
 .fx-participant {margin-top:0.5rem;font-size:0.875rem;color:#666;text-align:center;}
 .fx-predict .spacer {margin:2.5rem -1.5rem 0;}
 .fx-predictor {display:flex;justify-content:center;align-items:center;margin-top:1.5rem;font-size:0.875rem;}
-.fx-piechart {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 0;border-radius:50%;overflow:hidden;text-align:center;}
+.fx-piechart {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 0;text-align:center;}
 .fx-pietxtarea {position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);background:transparent;}
 .fx-pietxtarea__per {display:block;font-size:1.875rem;}
 .fx-pietxtarea__value {font-size:0.875rem;color:#666;}
@@ -816,6 +816,11 @@
 .fx-boast__img--predictorlv1 {background-image:url(../../resource/images/fxmarket/img_boast_toptrader.png);}
 .fx-boast__img--predictorlv2 {background-image:url(../../resource/images/fxmarket/img_boast_challenge.png);}
 .fx-boast__img--predictorlv3 {background-image:url(../../resource/images/fxmarket/img_boast_forecast.png);}
+
+/* FX외환뉴스 */
+.list-total + .list-section {margin-top:0.813rem;border-top:1px solid #e7e9ee;}
+.news-list__count {margin-left:0.313rem;line-height:1.2;font-size:0.8125rem;color:#666;}
+.news-view__count {margin-left:0.313rem;font-size:0.8125rem;color:#666;}
 
 /* odometer css */
 .odometer.odometer-auto-theme, 

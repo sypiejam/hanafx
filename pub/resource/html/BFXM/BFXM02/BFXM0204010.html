@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">FX외환뉴스</h1>
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main app-main--without-footer app-main--event fxmarket">
+        <div class="tab fx-forexnews" data-element="tab">
+            <div class="fixed-header fixed-header--gray">
+                <div class="tab-wrap">
+                    <ul class="tab-wrap__menu" role="tablist">
+                        <li class="tab-wrap__item" data-element="tab__list">
+                            <a href="#" class="tab-wrap__button is-active" data-element="tab__anchor">외환뉴스</a>
+                        </li>
+                        <li class="tab-wrap__item" data-element="tab__list">
+                            <a href="#" class="tab-wrap__button" data-element="tab__anchor">환율동향</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab__panel is-active" data-element="tab__panel">
+                <div class="container mgt90">
+                    <!-- 외환뉴스 -->
+                    <div class="list-total">
+                        <div class="text-guide-sub">총 <span class="eng">50</span>건</div>
+                    </div>
+                    <div class="list-section">
+                        <ul class="news-list">
+                            <li class="news-list__item">
+                                <a href="#" class="news-list__anchor" role="button">
+                                    <div class="news-list__title">[서환-오전] 달러2줄이 초과하면 안된당께 하하하하하하 말줄임이 되야된당께 2줄이 초과하면 안된당께 하하하하하하 말줄임이 되야된당께</div>
+                                    <span class="news-list__date">2022-04-14</span>
+                                    <span class="news-list__count">조회 <span class="num">999</span></span>
+                                </a>
+                            </li>
+                            <li class="news-list__item">
+                                <a href="#" class="news-list__anchor" role="button">
+                                    <div class="news-list__title">[서환-오전] 역외 매도 속 저점 매수에 장 막판 낙낙낙낙 역외 매도 속 저점 매수에 장 막판 낙낙낙낙 낙낙낙낙</div>
+                                    <span class="news-list__date">2022-04-13</span>
+                                    <span class="news-list__count">조회 <span class="num">999</span></span>
+                                </a>
+                            </li>
+                            <li class="news-list__item">
+                                <a href="#" class="news-list__anchor" role="button">
+                                    <div class="news-list__title">[서환-오전] 美 인플레 우려에 환율 1240원 육박 환율 1240원 육박 환율 1240원 육박 환율 1240원 육박 환율 1240원 육박</div>
+                                    <span class="news-list__date">2022-04-12</span>
+                                    <span class="news-list__count">조회 <span class="num">999</span></span>
+                                </a>
+                            </li>
+                            <li class="news-list__item">
+                                <a href="#" class="news-list__anchor" role="button">
+                                    <div class="news-list__title">[서환-오전] 건조한 美고용에도 네고,주가 상승</div>
+                                    <span class="news-list__date">2022-04-11</span>
+                                    <span class="news-list__count">조회 <span class="num">999</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //외환뉴스 -->
+                </div>
+            </div>
+            <div class="tab__panel" data-element="tab__panel">
+                <div class="container mgt90">
+                    <!-- 환율동향 -->
+                    <div class="list-total">
+                        <div class="text-guide-sub">총 <span class="eng">99</span>건</div>
+                    </div>
+                    <div class="list-section">
+                        <ul class="news-list">
+                            <li class="news-list__item">
+                                <a href="#" class="news-list__anchor" role="button">
+                                    <div class="news-list__title">일일환율동향(2022.04.14)</div>
+                                    <span class="news-list__date">2022-04-14</span>
+                                </a>
+                            </li>
+                            <li class="news-list__item">
+                                <a href="#" class="news-list__anchor" role="button">
+                                    <div class="news-list__title">일일환율동향(2022.04.13)</div>
+                                    <span class="news-list__date">2022-04-13</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="button-contained-wrap mgt90">
+                        <button type="button" class="button-contained-full button-contained-full--gray">더보기</button>
+                    </div>
+                    <!-- //환율동향 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //content -->
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
