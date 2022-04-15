@@ -540,7 +540,7 @@
     100% {-webkit-transform:translate(0, 3.125rem) scale(0.7);transform:translate(0, 3.125rem) scale(0.2);opacity:0;}
 }
 @keyframes circleglow {
-    0%, 88% {box-shadow:-10px 0 40px rgb(255 255 255),10px 0 40px rgb(255 255 255);}
+    0%, 80% {box-shadow:-10px 0 40px rgb(255 255 255),10px 0 40px rgb(255 255 255);}
     100% {box-shadow:-10px 0 40px rgb(250, 204, 89),10px 0 40px rgb(255, 253, 229);}
 }
 @keyframes circlespin { 
