@@ -825,6 +825,32 @@
 .news-list__count {margin-left:0.313rem;line-height:1.2;font-size:0.8125rem;color:#666;}
 .news-view__count {margin-left:0.313rem;font-size:0.8125rem;color:#666;}
 
+/* FX배지 */
+.fx-badge__collect {margin-top:1.625rem;}
+.fx-badge__list {flex-wrap:wrap;display:flex;margin:0 -0.5rem;}
+.fx-badge__item {position:relative;width:calc(100% / 3);padding-top:1.688rem;text-align:center;}
+.fx-badge__item .btn-share {position:absolute;top:0;right:0;}
+.fx-badge-input {position:absolute;width:1px;height:1px;}
+.fx-badge-label {display:block;}
+.fx-badge-img {display:block;width:6.188rem;height:8.063rem;margin:auto;background-repeat:no-repeat;background-position:0 0;background-size:20.438rem;background-image:url(../../resource/images/fxmarket/img_challenge_activity_off.png);}
+.fx-badge-input:checked + .fx-badge-label .fx-badge-img {background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);}
+.fx-badge__item--starter .fx-badge-img {background-position:0 0;}
+.fx-badge__item--bigrunner .fx-badge-img {background-position:-7.125rem 0;}
+.fx-badge__item--bighand .fx-badge-img {background-position:-14.25rem 0;}
+.fx-badge__item--shy .fx-badge-img {background-position:0 -12.438rem;}
+.fx-badge__item--fxhard .fx-badge-img {background-position:-7.125rem -12.438rem;}
+.fx-badge__item--fxinsider .fx-badge-img {background-position:-14.25rem -12.438rem;}
+.fx-badge__item--fxchildren .fx-badge-img {background-position:0 -25.813rem;}
+.fx-badge__item--fxking .fx-badge-img {background-position:-7.125rem -25.813rem;}
+.fx-badge__item--fxgod .fx-badge-img {background-position:-14.25rem -25.813rem;}
+.fx-badge-type {display:block;margin-top:0.5rem;font-size:0.75rem;color:#aaa;}
+.fx-badge-input:checked + .fx-badge-label .fx-badge-type {color:#666}
+.fx-badge-goal {display:block;font-size:0.813rem;color:#aaa;line-height:1.4;}
+.fx-badge-input:checked + .fx-badge-label .fx-badge-goal {font-weight:700;}
+.fx-badge__collect--type01 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#7b46ee;}
+.fx-badge__collect--type02 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#f84b6f;}
+.fx-badge__collect--type03 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#009591;}
+
 /* odometer css */
 .odometer.odometer-auto-theme, 
 .odometer.odometer-theme-minimal {position:relative;display:inline-block;vertical-align:middle;} 
