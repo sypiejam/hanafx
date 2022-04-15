@@ -503,8 +503,8 @@
     49% {-webkit-transform:translate(1rem, 1rem) rotate(45deg);transform:translate(1rem, 1rem) rotate(45deg);}
     70% {-webkit-transform:translate(1rem, 4rem) rotate(45deg);transform:translate(1rem, 4rem) rotate(45deg);opacity:1;}
     80% {-webkit-transform:translate(0.5rem, 4.5rem) rotate(45deg);transform:translate(0.5rem, 4.5rem) rotate(45deg);opacity:1;}
-    95% {-webkit-transform:translate(-1rem, 5rem) rotate(45deg) scale(2);transform:translate(-1rem, 5rem) rotate(45deg) scale(2)}
-    100% {-webkit-transform:scale(0) translate(-1rem, 5rem) rotate(45deg) scale(2);transform:scale(0) translate(-1rem, 5rem) rotate(45deg) scale(2);opacity:0}
+    99% {-webkit-transform:translate(-1rem, 5rem) rotate(45deg) scale(2);transform:translate(-1rem, 5rem) rotate(45deg) scale(2)}
+    100% {-webkit-transform:translate(-1rem, 5rem) rotate(45deg) scale(0) ;transform:translate(-1rem, 5rem) rotate(45deg) scale(0);opacity:0}
 }
 @keyframes rocketmoving {
     0% {-webkit-transform:translate(4rem, 0);transform:translate(4rem, 0);}
