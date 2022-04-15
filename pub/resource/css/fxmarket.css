@@ -232,7 +232,7 @@
 .fx-pushalarm .row-list__text {width:100%;}
 .fx-pushalarm .row-list__phrase--em {display:inline-block;color:#009591;}
 .fx-pushalarm .guide-wrap__item {font-size:0.813rem;color:#757575;}
-/* 마이페이지 - 밀달 Score 상세 */
+/* 마이페이지 - FX Score 상세 */
 .fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
 .fx-score--detail .card__wrap {padding:1.188rem;}
 .fx-score--detail .fx-score__point {display:flex;align-items:center;height:1.375rem;letter-spacing:0;font-size:1.125rem;font-weight:500;}
