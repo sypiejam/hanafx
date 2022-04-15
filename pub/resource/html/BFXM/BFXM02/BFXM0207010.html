@@ -18,7 +18,7 @@
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">출석체크</h1>
+        <h1 class="app-header__title">출석이벤트</h1> <!-- 2022-04-15 타이틀변경 (SB_v1.0.04) -->
         <button class="app-header__button app-header__button--home" title="메인화면"></button>
         <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
     </div>
@@ -28,10 +28,11 @@
         <!-- 부가서비스 : 출석체크 -->
         <div class="fx-service fx-attend">
             <div class="container">
-                <div class="fx-attend__title">
+                <!-- 2022-04-15 마크업 삭제 (SB_v1.0.04) -->
+                <!-- <div class="fx-attend__title">
                     <strong class="offscreen">출첵이벤트</strong>
-                </div>
-                <p class="fx-attend__desc">출석체크 담첨시 <br><em class="color-green">최고 환율(Spread)우대</em>를 받을 수 있는 <br><em class="color-green">밀달부스터를 증정</em>합니다.</p>
+                </div> -->
+                <p class="fx-attend__desc">출석체크 이벤트 당첨시 <br><em class="color-green">최고 환율(Spread)우대</em>를 받을 수 있는 <br><em class="color-green">FX부스터를 증정</em>합니다.</p><!-- 2022-04-15 문구변경 (SB_v1.0.04) -->
             </div>
             <div class="container">
                 <div class="fx-attend-visual" aria-hidden="true">
@@ -49,19 +50,20 @@
                 </div>
             </div>
             <div class="container align-center">
-                <strong class="text-header no-border">밀달부스터</strong>
+                <strong class="text-header no-border">FX부스터</strong> <!-- 2022-04-15 문구변경 (SB_v1.0.04) -->
                 <span class="text-guide eng block">2022.04.25(당일)</span>
             </div>
-            <hr class="content-devider mgt80" aria-hidden="true">
+            <hr class="content-devider mgt100" aria-hidden="true"> <!-- 2022-04-15 클래스 변경 mgt100 (SB_v1.0.04) -->
             <div class="container">
                 <div class="guide-wrap guide-wrap--notoggle mgt90">
                     <div class="guide-title">이용안내</div>
                     <div class="guide-panel">
+                        <!-- 2022-04-15 이용안내 문구수정 (SB_v1.0.04) -->
                         <ul class="guide-list guide-list--large color-999">
-                            <li class="guide-list__item">매일 특정숫자에 출석체크한 손님에게 랜덤으로 제공합니다.</li>
-                            <li class="guide-list__item">밀달부스터는 설정한 약정 한도 내에서 사용가능하며 즉시거래에 한합니다.(예약거래 제외)</li>
+                            <li class="guide-list__item">FX마켓을 방문한 손님에게 매일 랜덤으로 제공합니다.</li>
+                            <li class="guide-list__item">FX부스터는 거래한도 내에서 사용가능하며 즉시거래에 한합니다.(예약거래 제외) </li>
                             <li class="guide-list__item">당일에 한하여 적용되며 경과시 소멸됩니다.</li>
-                            <li class="guide-list__item">거래시 최고 환율(Spread)우대율이 자동 적용됩니다.</li>
+                            <li class="guide-list__item">거래시 최고 환율(Spread) 우대율이 자동 적용됩니다.</li>
                         </ul>
                     </div>
                 </div>

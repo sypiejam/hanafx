@@ -365,7 +365,7 @@
 .fx-attend .text-header {font-size:1.5rem;}
 .fx-attend .text-guide {font-size:0.875rem;line-height:1.3;}
 .font-xxlarge {font-size:1.5rem !important;}
-.fx-attend__desc {display:block;font-size:1.25rem;margin-top:0.5rem;line-height:1.3;color:#000;font-weight:300;text-align:center;}
+.fx-attend__desc {display:block;font-size:1.125rem;margin-top:0.5rem;line-height:1.3;color:#000;font-weight:300;text-align:center;}
 .fx-attend__desc .color-green {font-weight:400;}
 .fx-attend-visual {position:relative;width:11.813rem;height:11.813rem;margin:2.25rem auto 1.25rem;}
 .fx-attend-visual .ani-rocket-wrap {z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;height:100%;}
@@ -430,8 +430,8 @@
 .fx-launch-animation .ani-rocket-wrap {
     -webkit-animation-name:rocketlaunch;
     animation-name:rocketlaunch;
-    -webkit-animation-duration:4s;
-    animation-duration:4s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-timing-function:linear;
     animation-timing-function:linear;
     -webkit-animation-iteration-count:1;
@@ -442,8 +442,8 @@
 .fx-launch-animation .ani-smoke-wrap {
     -webkit-animation-name:smokelaunch;
     animation-name:smokelaunch;
-    -webkit-animation-duration:4s;
-    animation-duration:4s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-timing-function:linear;
     animation-timing-function:linear;
     -webkit-animation-iteration-count:1;
@@ -454,8 +454,8 @@
 .fx-launch-animation .ani-circle {
     -webkit-animation-name:circlespin;
     animation-name:circlespin;
-    -webkit-animation-duration:4s;
-    animation-duration:4s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-timing-function:linear;
     animation-timing-function:linear;
     -webkit-animation-iteration-count:infinite;
@@ -467,41 +467,44 @@
     content:'';display:block;width:100%;height:100%;border-radius:50%;
     -webkit-animation-name:circleglow;
     animation-name:circleglow;
-    -webkit-animation-duration:5s;
-    animation-duration:5s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-timing-function:linear;
     animation-timing-function:linear;
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
 .fx-booster {
-    margin-bottom:1.875rem;text-align:center;
+    position:absolute;top:50%;width:100%;margin:0;text-align:center;
     -webkit-animation-name:fxbooster;
     animation-name:fxbooster;
-    -webkit-animation-duration:5s;
-    animation-duration:5s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-timing-function:ease-out;
     animation-timing-function:ease-out;
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
+.fx-booster .text-header {font-size:1.5rem;}
+.fx-booster .text-guide {font-size:0.875rem;}
 @keyframes rocketlaunch {
-    0% {-webkit-transform:translate(-15rem, 15rem);transform:translate(-15rem, 15rem);}
-    10% {-webkit-transform:translate(2rem, 2rem);transform:translate(2rem, 2rem);}
-    35% {-webkit-transform:translate(4rem, 2rem);transform:translate(4rem, 2rem);}
-    45% {-webkit-transform:translate(1rem, -2rem);transform:translate(1rem, -2rem);}
-    60% {-webkit-transform:translate(4rem, 2rem);transform:translate(4rem, 2rem);}
-    82% {-webkit-transform:translate(0, 4rem);transform:translate(0, 4rem);opacity:1}
-    87%, 100% {-webkit-transform:translate(15rem, -15rem);transform:translate(15rem, -15rem);opacity:0;}
+    0% {-webkit-transform:translate(-1rem, 4rem);transform:translate(-1rem, 4rem);}
+    10% {-webkit-transform:translate(3rem, 0);transform:translate(3rem, 0);}
+    35% {-webkit-transform:translate(3rem, 2rem);transform:translate(3rem, 2rem);}
+    50% {-webkit-transform:translate(1rem, 1rem);transform:translate(1rem, 1rem);}
+    70% {-webkit-transform:translate(1rem, 4rem);transform:translate(1rem, 4rem);opacity:1}
+    80% {-webkit-transform:translate(0.5rem, 4.5rem);transform:translate(0.5rem, 4.5rem);opacity:1}
+    95%, 100% {-webkit-transform:translate(15rem, -15rem);transform:translate(15rem, -15rem);opacity:0}
 }
 @keyframes smokelaunch {
-    0% {-webkit-transform:translate(-15rem, 15rem) rotate(45deg);transform:translate(-15rem, 15rem) rotate(45deg);}
-    10% {-webkit-transform:translate(2rem, 2rem) rotate(45deg);transform:translate(2rem, 2rem) rotate(45deg);}
-    34% {-webkit-transform:translate(4rem, 2rem) rotate(45deg);transform:translate(4rem, 2rem) rotate(45deg);}
-    46% {-webkit-transform:translate(1rem, -2rem) rotate(45deg);transform:translate(1rem, -2rem) rotate(45deg);}
-    61% {-webkit-transform:translate(4rem, 2rem) rotate(45deg);transform:translate(4rem, 2rem) rotate(45deg);}
-    82% {-webkit-transform:translate(0, 4rem) rotate(45deg);transform:translate(0, 4rem) rotate(45deg);opacity:1;}
-    95%, 100% {-webkit-transform:translate(-1rem, 5rem) rotate(45deg) scale(2);transform:translate(-1rem, 5rem) rotate(45deg) scale(2);opacity:0;}
+    0% {-webkit-transform:translate(-1rem, 4rem) rotate(45deg);transform:translate(-1rem, 4rem) rotate(45deg);opacity:1;}
+    11% {-webkit-transform:translate(3rem, 0) rotate(45deg);transform:translate(3rem, 0) rotate(45deg);}
+    34% {-webkit-transform:translate(3rem, 2rem) rotate(45deg);transform:translate(3rem, 2rem) rotate(45deg);}
+    49% {-webkit-transform:translate(1rem, 1rem) rotate(45deg);transform:translate(1rem, 1rem) rotate(45deg);}
+    70% {-webkit-transform:translate(1rem, 4rem) rotate(45deg);transform:translate(1rem, 4rem) rotate(45deg);opacity:1;}
+    80% {-webkit-transform:translate(0.5rem, 4.5rem) rotate(45deg);transform:translate(0.5rem, 4.5rem) rotate(45deg);opacity:1;}
+    95% {-webkit-transform:translate(-1rem, 5rem) rotate(45deg) scale(2);transform:translate(-1rem, 5rem) rotate(45deg) scale(2)}
+    100% {-webkit-transform:scale(0) translate(-1rem, 5rem) rotate(45deg) scale(2);transform:scale(0) translate(-1rem, 5rem) rotate(45deg) scale(2);opacity:0}
 }
 @keyframes rocketmoving {
     0% {-webkit-transform:translate(4rem, 0);transform:translate(4rem, 0);}
@@ -544,9 +547,9 @@
     100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);} 
 }
 @keyframes fxbooster {
-    0%, 82% {margin:0 0 0 0;-webkit-transform:scale(1);transform:scale(1);}
-    90% {margin:-8.5rem 0 6.5rem 0;-webkit-transform:scale(1.5);transform:scale(1.5);}
-    100% {margin:-8.5rem 0 6.5rem 0;-webkit-transform:scale(1);transform:scale(1);}
+    0%, 85% {opacity:0;-webkit-transform:scale(0) translateY(-60%);transform:scale(0) translateY(-60%);}
+    90% {opacity:1;-webkit-transform:scale(1.3) translateY(-50%);transform:scale(1.2) translateY(-50%);}
+    100% {opacity:1;-webkit-transform:scale(1) translateY(-50%);transform:scale(1) translateY(-50%);}
 }
 .fx-attend--modal {min-height:26.25rem !important;margin-top:-1rem;}
 .fx-attend--modal .fx-launch-animation {margin:2rem auto 0.625rem;}
