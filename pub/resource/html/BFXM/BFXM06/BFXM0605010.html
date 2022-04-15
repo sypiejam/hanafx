@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">FX챌린지</h1>
+        <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+    </div>
+    <!-- //header -->
+
+    <!-- content -->
+    <div id="content" class="app-main app-main--without-footer fxmarket">
+        <!-- FX챌린지 / FX배지 -->
+        <div class="fx-badge">
+            <h2 class="tit-large">FX배지</h2>
+            <hr class="content-devider mgt48" aria-hidden="true">
+            <div class="container fx-badge-collection">
+                <h3 class="offscreen">획득한 FX배지</h3>
+                <div class="fx-badge__collect fx-badge__collect--type01">
+                    <ul class="fx-badge__list">
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--starter">
+                                <input type="checkbox" id="starter" name="badge" class="fx-badge-input" disabled checked> <!-- to.개발 | default:disabled / 배지 획득시 checked 추가 -->
+                                <label for="starter" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">스타터</span></i>
+                                    <span class="fx-badge-type">FX마켓</span>
+                                    <span class="fx-badge-goal">첫 거래체결</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--bigrunner">
+                                <input type="checkbox" id="bigrunner" name="badge" class="fx-badge-input" disabled checked>
+                                <label for="bigrunner" class="fx-badge-label">
+                                    <i class="fx-badge-img" data-badge-img="fx-boast__img--predictorlv2"><span class="offscreen">빅러너</span></i>
+                                    <span class="fx-badge-type">누적거래금액</span>
+                                    <span class="fx-badge-goal">USD 10,000이상</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--bighand">
+                                <input type="checkbox" id="bighand" name="badge" class="fx-badge-input" disabled checked>
+                                <label for="bighand" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">빅핸드</span></i>
+                                    <span class="fx-badge-type">누적거래금액</span>
+                                    <span class="fx-badge-goal">USD 50,000 이상</span>
+                                </label>
+                            </div>
+                            <button type="button" class="btn-share" data-element="modal__open" data-target="#boastpopup"><span class="offscreen">누적거래금액 공유하기</span></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fx-badge__collect fx-badge__collect--type02">
+                    <ul class="fx-badge__list">
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--shy">
+                                <input type="checkbox" id="shy" name="badge" class="fx-badge-input" disabled checked>
+                                <label for="shy" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">수줍이</span></i>
+                                    <span class="fx-badge-type">FX커뮤니티</span>
+                                    <span class="fx-badge-goal">첫인사</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--fxhard">
+                                <input type="checkbox" id="fxhard" name="badge" class="fx-badge-input" disabled>
+                                <label for="fxhard" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">열심히</span></i>
+                                    <span class="fx-badge-type">FX커뮤니티</span>
+                                    <span class="fx-badge-goal">공유 10건</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--fxinsider">
+                                <input type="checkbox" id="fxinsider" name="badge" class="fx-badge-input" disabled>
+                                <label for="fxinsider" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">밀달인싸</span></i>
+                                    <span class="fx-badge-type">FX공감 주고받기</span>
+                                    <span class="fx-badge-goal">50개 달성</span>
+                                </label>
+                            </div>
+                            <button type="button" class="btn-share" data-element="modal__open" data-target="#boastpopup"><span class="offscreen">FX활동 공유하기</span></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fx-badge__collect fx-badge__collect--type03">
+                    <ul class="fx-badge__list">
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--fxchildren">
+                                <input type="checkbox" id="fxchildren" name="badge" class="fx-badge-input" disabled checked>
+                                <label for="fxchildren" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">환린이</span></i>
+                                    <span class="fx-badge-type">환율맞추기</span>
+                                    <span class="fx-badge-goal">첫 응모</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--fxking">
+                                <input type="checkbox" id="fxking" name="badge" class="fx-badge-input" disabled>
+                                <label for="fxking" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">환율킹</span></i>
+                                    <span class="fx-badge-type">환율맞추기</span>
+                                    <span class="fx-badge-goal">월참여 5회 이상<br> 적중 50% 3회 달성</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="fx-badge__item">
+                            <div class="fx-badge__item--fxgod">
+                                <input type="checkbox" id="fxgod" name="badge" class="fx-badge-input" disabled>
+                                <label for="fxgod" class="fx-badge-label">
+                                    <i class="fx-badge-img"><span class="offscreen">환율갓</span></i>
+                                    <span class="fx-badge-type">환율맞추기</span>
+                                    <span class="fx-badge-goal">월참여 5회 이상<br> 적중 80% 3회 달성</span>
+                                </label>
+                            </div>
+                            <button type="button" class="btn-share" data-element="modal__open" data-target="#boastpopup"><span class="offscreen">환율 적중률 공유하기</span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="content-devider mgt100" aria-hidden="true">
+            <div class="container">
+                <div class="guide-wrap guide-wrap--notoggle mgt90">
+                    <div class="guide-panel">
+                        <ul class="guide-list guide-list--large color-999">
+                            <li class="guide-list__item">FX배지는 매년 1월 1일 초기화됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //FX챌린지 / FX배지 -->
+
+        <!-- 공유하기 레이어 -->
+        <div id="boastpopup" class="modal modal--confirm" data-element="modal__element">
+            <div class="modal__container modal__container--interval" data-element="modal__element-container">
+                <div class="modal__header">
+                    <h1 class="modal__header--title">FX챌린지</h1>
+                </div>
+                <div class="modal__contents fx-boast__contents">
+                    <div class="fx-boastslider">
+                        <!-- to.개발 | 팝업 내 컨텐츠 미정 -->
+                        <div class="fx-boast">
+                            <span class="fx-boast__img fx-boast__img--challenge" aria-hidden="true"></span>
+                            <div class="inner-txt align-center">
+                                <strong class="fx-boast__txt">누적거래금액</strong>
+                                <span class="fx-boast__subtxt">USD 50,000 이상 달성</span>
+                            </div>
+                        </div>
+                        <!-- // to.개발 | 팝업 내 컨텐츠 미정 -->
+                    </div>
+                </div>
+                <div class="button-wrap">
+                    <button type="button" class="button button--kakao">카카오톡</button>
+                    <button type="button" class="button button--positive">커뮤니티 공유</button>
+                </div>
+                <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+            </div>
+        </div>
+        <!-- // 공유하기 레이어 -->
+    </div>
+    <!-- //content -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>
