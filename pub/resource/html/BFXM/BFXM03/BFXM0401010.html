@@ -20,7 +20,7 @@
         <!-- header -->
         <div id="header" class="app-header">
             <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-            <h1 class="app-header__title">FX 거래</h1>
+            <h1 class="app-header__title">거래하기</h1> <!-- 2022-04-22 타이틀 변경(SB_v1.0.02) -->
             <button class="app-header__button app-header__button--home" title="메인화면"></button>
             <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
         </div>
@@ -30,6 +30,25 @@
         <div id="content" class="app-main fxmarket fxmarket__pull">
             <div class="container container--full">
                 <div class="fx-rateboard">
+                    <!-- 2022-04-22 마크업 추가 (SB_v1.0.02) -->
+                    <div class="fx-tradestate">
+                        지금 <span>USD</span> <span class="bold txt-sell">팔래요</span>가 더 많아요 <!-- 2022-04-22 살래요:txt-buy, 팔래요:txt-sell -->
+                        <span class="tooltip" data-tooltip="paragraph">
+                            <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="매도매수 비율보기"></button>
+                            <!-- 툴팁 레이어 -->
+                            <span class="tooltip__panel" data-tooltip-panel="false">
+                                <span class="tooltip__column">
+                                    <span class="tooltip__description" data-tooltip="focus">
+                                        <span class="txt-buy">살래요</span> : <em>24.45%</em> 
+                                        <span class="txt-sell">팔래요</span> : <em>75.55%</em>(거래건수 기준)
+                                    </span>
+                                </span>
+                                <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                            </span>
+                            <!-- //툴팁 레이어 -->
+                        </span>
+                    </div>
+                    <!-- // 2022-04-22 마크업 추가 (SB_v1.0.02) -->
                     <div class="button-select__flex">
                         <!-- to.개발 | 통화선택 공통레이어팝업 호출 -->
                         <button type="button" class="button button-select__item" data-element="modal__open" data-target="#" title="통화 선택">
@@ -87,10 +106,20 @@
                             <button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
                         </div>
                     </div>
+                    <!-- 2022-04-22 마크업 수정 (SB_v1.0.02) / 등급 아이콘 적용(디자인) -->
                     <div class="fx-spread">
-                        <!-- to.개발 | 등급미정 추후 작업예정 -->
-                        <em class="fx-spread__grade fx-spread__grade--type01">등급</em> 환율우대 스프레드 <em class="spread__rate">80%</em> 적용 중
+                        <!-- to.개발 | 등급 아이콘 클래스명 
+                                Level 1 "fx-level-icon level-1"
+                                Level 2 "fx-level-icon level-2"
+                                Level 3 "fx-level-icon level-3"
+                                Level 4 "fx-level-icon level-4"
+                                Level 5 "fx-level-icon level-5"
+                        -->
+                        <!-- <span class="fx-level-icon level-5"><em class="offscreen">Level 3</em></span>
+                        <p class="fx-mylevel__desc">환율(Spread) <span>80</span>% 우대</p> -->
+                        <p class="fx-mylevel__desc">타임세일 환율(Spread) <span>80</span>% 우대</p><!-- to.개발 | 타임세일, 출석이벤트는 별도의 아이콘 없이 문구로 노출 -->
                     </div>
+                    <!-- //2022-04-22 마크업 수정 (SB_v1.0.02) / 등급 아이콘 적용(디자인) -->
                 </div>
             </div>
 
@@ -183,18 +212,18 @@
                 <!-- 
                     to.개발 | 즉시거래 : label-line__item--direct
                               예약거래 : label-line__item--reserve
-                              MAR거래 : label-line__item--mar
                 -->
                 <div class="label-line label-balloon">
                     <div class="label-line__item label-line__item--direct">즉시거래</div>
                     <div class="label-line__item label-line__item--reserve">예약거래</div>
-                    <div class="label-line__item label-line__item--mar">MAR거래</div>
+                    <!-- <div class="label-line__item label-line__item--mar">MAR거래</div> --> <!-- 2022-04-22 마거래 케이스 삭제 (SB_v1.0.02) -->
                 </div>
             </div>
             <div class="container">
                 <div class="button-select selected button-select__edit">
                     <button type="button" title="환율 선택" class="button button-select__item">1,250,50</button>
                 </div>
+                <div class="input__guide-text input__guide-text--left">원하는 환율로 변경 가능</div> <!-- 2022-04-22 마크업 추가 (SB_v1.0.02) -->
             </div>
 
             <div class="tit-default">원하는 금액</div>
@@ -290,6 +319,59 @@
                 </div>
                 <p class="input-wrap__error align-right" aria-live="assertive">예약 시작일이 예약 종료일 보다 미래일 수 없습니다.</p> <!-- 2022-03-07 에러문구 추가(v0.9) -->
             </div>
+
+            <!-- 2022-04-22 마크업 추가 (SB_v1.0.02) -->
+            <div class="container">
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="guide-title">
+                        <button class="pualugin__button button-arrow" data-element="toggle__anchor">알아두세요</button>
+                    </div>
+                    <div class="guide-panel" data-element="toggle__panel">
+                        <ul class="guide-list">
+                            <li class="guide-list__item">FX마켓이란?
+                                <ul class="guide-sub-list">
+                                    <li class="guide-sub-list__item">원화통장 및 외화통장(하나 FX 통장, 외화보통예금, 외화다통화보통예금, 외화서비스 하나 통장)을 통해 간편하게 27개 통화를 사고팔 수 있는 서비스입니다.</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">이용가능 거래
+                                <ul class="guide-sub-list">
+                                    <li class="guide-sub-list__item">즉시거래 : 현재의 고시된 환율에 환율(Spread) 우대를 적용하여 체결하는 거래</li>
+                                    <li class="guide-sub-list__item">예약거래 : 원하는 환율을 설정 후 영업일 09:00~18:00에 해당 환율에 도달하면 체결되는 거래</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">즉시거래 가능시간 및 금액 : 365일 24시간 가능합니다.
+                                <ul class="guide-sub-list">
+                                    <li class="guide-sub-list__item">영업일 09:00~17:00 : 미화 환산 50만불 이내</li>
+                                    <li class="guide-sub-list__item">영업일 17:00~20:00 : 미화 환산 30만불 이내</li>
+                                    <li class="guide-sub-list__item">그 외 일자 및 시간 : 미화 환산 1만불 이내</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">적용환율
+                                <ul class="guide-sub-list">
+                                    <li class="guide-sub-list__item">전신환율(송금환율)이 적용됩니다.<br>(팔래요의 경우 송금받을때 환율, 살래요의 경우 송금보낼때 환율이 적용됩니다.)</li>
+                                    <li class="guide-sub-list__item">거래 당시의 환율적용에 따라 실제로 입출금 처리되는 금액은 신청 금액과 차이가 있을 수 있습니다.</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">환율(Spread)우대
+                                <ul class="guide-sub-list">
+                                    <li class="guide-sub-list__item">USD, JPY, EUR : 환율(Spread) 40%우대</li>
+                                    <li class="guide-sub-list__item">기타통화 : 환율(Spread) 20%우대</li>
+                                    <li class="guide-sub-list__item">개별 적용되는 우대율이 더 유리한 경우 유리한 우대율이 적용됩니다.</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">거래가능통화
+                                <ul class="guide-sub-list">
+                                    <li class="guide-sub-list__item">FX마켓에서 매매가능한 통화는 총 27개국 통화입니다.(USD, EUR, JPY, GBP, CHF, CAD, AUD, NZD, HKD, 
+                                        SGD, DKK, NOK, SEK, THB, IDR, SAR, AED, KWD, BHD, RUB, ZAR, HUF, PLN, MXN, CNY, TRY, CZK)</li>
+                                </ul>
+                            </li>
+                            <li class="guide-list__item">미화현찰로 입금한 경우 입금일로부터 7일 이내 이체 시 해당 거래가 제한됩니다. 7일 이후 이체 시 별도 현찰수수료 없이 거래가 가능합니다.</li>
+                            <li class="guide-list__item">외화계좌가 대외계정이거나 연결된 원화계좌가 자유원계정일 경우 해당 거래 일부 제한될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- // 2022-04-22 마크업 추가 (SB_v1.0.02) -->
 
             <div id="aftermarket" class="modal modal--alert" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="true">
                 <div class="modal__container" data-element="modal__element-container">
@@ -459,7 +541,7 @@
         }
 
         $(function(){
-            progressPosSet($('.fx-progress .progress__bar'), 93); // 대상, 위치값 (0~ 100%)
+            progressPosSet($('.fx-progress .progress__bar'), 23); // 대상, 위치값 (0~ 100%)
             dataSet();
             currencyChange();
             fxTabControl();

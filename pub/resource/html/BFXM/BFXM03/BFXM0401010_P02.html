@@ -18,7 +18,7 @@
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">FX거래</h1>
+        <h1 class="app-header__title">거래하기</h1> <!-- 2022-04-22 타이틀 변경(SB_v1.0.02) -->
         <!-- <button class="app-header__button app-header__button--home" title="메인 화면"></button> -->
         <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
     </div>
@@ -43,28 +43,30 @@
                             <strong class="fx-sticker__num">90%</strong>
                         </div>
                     </div>
-                    <p>USD <em>500,000</em>을<br> <em>597,750,000</em>원에 팝니다.</p>
-                    <p class="text-guide mgt42">환율 (spread) 80% 우대로<br> <em class="fw-400 color-light-blue">2,500,000</em>원 더 받고 팔아요!</p>
+                    <p class="color-666">USD <em class="bold color-000">500,000</em>을<br> <span class="color-000"><em class="bold">602,750,000</em>원</span>에 팝니다.</p><!-- 2022-04-22 마크업 수정(SB_v1.0.02) -->
                 </div>
             </div>
             <div class="modal__contents modal__contents--modi">
-                <!-- 2022-03-14 항목 추가 및 변경(v0.9) st -->
-                <div class="container container--full">
+                <!-- 2022-04-22 마크업 추가 및 수정(SB_v1.0.02) -->
+                <div class="fx-complete">
+                    <p class="icon-wrap__description">적용환율 <span>1,195.50</span></p> 
+                    <div class="gray-box gray-box--center">
+                        <p class="text-guide">환율 (spread) 80% 우대로<br> 
+                            <span class="txt-sell"><em class="bold">2,500,000</em>원 더 받고 팔아요!</span>
+                        </p>
+                    </div>
+                    <div class="fx-refresh fx-refresh__modal">
+                        <div class="fx-refresh__txt">
+                            <span class="color-green"><em class="fx-refresh__txt--sec">30</em>초</span> 후 환율정보 만료
+                        </div> 
+                    </div>
+                </div>
+                <div class="container container--full fx-complete-list">
                     <div class="list-section">
-                        <ul class="list-wrap">
-                            <li class="list-wrap__item align-top">
-                                <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">환율</strong>
-                                </div>
-                                <div class="list-wrap__box list-wrap__box--unit">
-                                    <strong class="list-wrap__text list-wrap__text--value"><em class="eng">1,205.50</em></strong>
-                                </div>
-                            </li>
-                        </ul>
                         <ul class="list-wrap" style="display: none;" data-element="toggle-list">
                             <li class="list-wrap__item">
                                 <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">거래 후 외화 잔액</strong> <!-- 2022-03-14 띄어쓰기(v0.9) -->
+                                    <strong class="list-wrap__title list-wrap__title--value">거래후 외화 잔액</strong>
                                 </div>
                                 <div class="list-wrap__box list-wrap__box--unit">
                                     <strong class="list-wrap__text list-wrap__text--value eng">
@@ -97,18 +99,10 @@
                         </ul>
                     </div>
                 </div>
-                <!-- 2022-03-14 항목 추가 및 변경(v0.9) end -->
-                <!-- 2022-03-14 마크업 추가(v0.9) -->
                 <div class="container flex mgr0">
                     <button type="button" class="button-simple button-simple--right mgt0" data-element="toggle-btn">펼치기</button>
                 </div>
-                <!-- 2022-03-14 마크업 위치변경(v0.9) -->
-                <div class="fx-refresh fx-refresh__modal">
-                    <div class="fx-refresh__txt">
-                        <em class="fx-refresh__txt--sec">30</em>초 후 환율정보 만료<button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
-                        <!-- 2022-03-14 문구변경 갱신 > 만료(v0.9) -->
-                    </div>
-                </div>
+                <!-- // 2022-04-22 마크업 추가 및 수정(SB_v1.0.02) -->
             </div>
             <div class="button-fixed">
                 <div class="button-wrap">
