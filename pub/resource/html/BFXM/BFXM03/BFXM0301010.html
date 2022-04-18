@@ -29,7 +29,7 @@
         <div id="content" class="app-main fxmarket fxmarket__pull">
             <div class="container container--full">
                 <div class="fx-rateboard">
-                    <!-- 2022-04-22 마크업 추가 (SB_v1.0.02) -->
+                    <!-- 2022-04-22 마크업 추가 (SB_v1.0.02) / 매도매수 우위표기, 건수같을때는 숨김처리 -->
                     <div class="fx-tradestate">
                         지금 <span>USD</span> <span class="bold txt-buy">살래요</span>가 더 많아요 <!-- 2022-04-22 살래요:txt-buy, 팔래요:txt-sell -->
                         <span class="tooltip" data-tooltip="paragraph">
@@ -47,7 +47,7 @@
                             <!-- //툴팁 레이어 -->
                         </span>
                     </div>
-                    <!-- // 2022-04-22 마크업 추가 (SB_v1.0.02) -->
+                    <!-- // 2022-04-22 마크업 추가 (SB_v1.0.02) / 매도매수 우위표기, 건수같을때는 숨김처리 -->
 
                     <div class="button-select__flex">
                         <!-- to.개발 | 통화선택 공통레이어팝업 호출 -->
@@ -329,38 +329,38 @@
                     <div class="guide-panel" data-element="toggle__panel">
                         <ul class="guide-list">
                             <li class="guide-list__item">FX마켓이란?
-                                <ul class="guide-sub-list">
+                                <ul class="guide-sub-list guide-sub-list--gray">
                                     <li class="guide-sub-list__item">원화통장 및 외화통장(하나 FX 통장, 외화보통예금, 외화다통화보통예금, 외화서비스 하나 통장)을 통해 간편하게 27개 통화를 사고팔 수 있는 서비스입니다.</li>
                                 </ul>
                             </li>
                             <li class="guide-list__item">이용가능 거래
-                                <ul class="guide-sub-list">
+                                <ul class="guide-sub-list guide-sub-list--gray">
                                     <li class="guide-sub-list__item">즉시거래 : 현재의 고시된 환율에 환율(Spread) 우대를 적용하여 체결하는 거래</li>
                                     <li class="guide-sub-list__item">예약거래 : 원하는 환율을 설정 후 영업일 09:00~18:00에 해당 환율에 도달하면 체결되는 거래</li>
                                 </ul>
                             </li>
                             <li class="guide-list__item">즉시거래 가능시간 및 금액 : 365일 24시간 가능합니다.
-                                <ul class="guide-sub-list">
+                                <ul class="guide-sub-list guide-sub-list--gray">
                                     <li class="guide-sub-list__item">영업일 09:00~17:00 : 미화 환산 50만불 이내</li>
                                     <li class="guide-sub-list__item">영업일 17:00~20:00 : 미화 환산 30만불 이내</li>
                                     <li class="guide-sub-list__item">그 외 일자 및 시간 : 미화 환산 1만불 이내</li>
                                 </ul>
                             </li>
                             <li class="guide-list__item">적용환율
-                                <ul class="guide-sub-list">
+                                <ul class="guide-sub-list guide-sub-list--gray">
                                     <li class="guide-sub-list__item">전신환율(송금환율)이 적용됩니다.<br>(팔래요의 경우 송금받을때 환율, 살래요의 경우 송금보낼때 환율이 적용됩니다.)</li>
                                     <li class="guide-sub-list__item">거래 당시의 환율적용에 따라 실제로 입출금 처리되는 금액은 신청 금액과 차이가 있을 수 있습니다.</li>
                                 </ul>
                             </li>
-                            <li class="guide-list__item">환율(Spread)우대
-                                <ul class="guide-sub-list">
-                                    <li class="guide-sub-list__item">USD, JPY, EUR : 환율(Spread) 40%우대</li>
-                                    <li class="guide-sub-list__item">기타통화 : 환율(Spread) 20%우대</li>
+                            <li class="guide-list__item">환율(Spread) 우대
+                                <ul class="guide-sub-list guide-sub-list--gray">
+                                    <li class="guide-sub-list__item">USD, JPY, EUR : 환율(Spread) 40% 우대</li>
+                                    <li class="guide-sub-list__item">기타통화 : 환율(Spread) 20% 우대</li>
                                     <li class="guide-sub-list__item">개별 적용되는 우대율이 더 유리한 경우 유리한 우대율이 적용됩니다.</li>
                                 </ul>
                             </li>
-                            <li class="guide-list__item">거래가능통화
-                                <ul class="guide-sub-list">
+                            <li class="guide-list__item">거래가능 통화
+                                <ul class="guide-sub-list guide-sub-list--gray">
                                     <li class="guide-sub-list__item">FX마켓에서 매매가능한 통화는 총 27개국 통화입니다.(USD, EUR, JPY, GBP, CHF, CAD, AUD, NZD, HKD, 
                                         SGD, DKK, NOK, SEK, THB, IDR, SAR, AED, KWD, BHD, RUB, ZAR, HUF, PLN, MXN, CNY, TRY, CZK)</li>
                                 </ul>
