@@ -18,28 +18,29 @@
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">FX거래</h1>
+        <h1 class="app-header__title">거래하기</h1> <!-- 2022-04-22 타이틀 변경(SB_v1.0.02) -->
         <!-- <button class="app-header__button app-header__button--home" title="메인 화면"></button> -->
         <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
     </div>
     <!-- //header -->
     <!-- Content -->
     <div id="content" class="app-main fxmarket">
-        <div class="container">
+        <div class="container fx-complete"> <!-- 2022-04-22 fx-complete 클래스 추가(SB_v1.0.02) -->
             <div class="icon-wrap">
                 <!-- 아이콘 영역 디자인 미정 작업예정 -->
                 <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
                 <!-- //아이콘 영역 디자인 미정 작업예정 -->
+                <!-- 2022-04-22 마크업 수정(SB_v1.0.02) -->
                 <p class="icon-wrap__icon-word">
-                    예약/지정매도(<em>USD</em> &gt; <em>KRW</em>)가<br> 예약되었습니다.
+                    USD <em class="bold">500,000</em>을<br>
+                    <span class="color-000"><em class="bold">595,000</em>원</span>에 파는 거래를 예약합니다.
                 </p>
-                <p class="icon-wrap__description">
-                    이 주문은 예약종료일 <em>18:00</em>까지 유지됩니다.
-                </p>
+                <p class="icon-wrap__description">이 주문은 예약종료일 <em>18:00</em><span class="bold">까지 유지됩니다.</span></p>
+                <!-- // 2022-04-22 마크업 수정(SB_v1.0.02) -->
             </div>
         </div>
                     
-        <div class="container mgt0">
+        <div class="container fx-complete-list"> <!-- 2022-04-22 fx-complete-list 클래스 추가(SB_v1.0.02) -->
             <div class="list-section">
                 <ul class="list-wrap">
                     <li class="list-wrap__item">
@@ -52,17 +53,7 @@
                             </strong>
                         </div>
                     </li>
-                    <li class="list-wrap__item">
-                        <div class="list-wrap__box">
-                            <strong class="list-wrap__title list-wrap__title--value">예약금액</strong>
-                        </div>
-                        <div class="list-wrap__box list-wrap__box--unit">
-                            <strong class="list-wrap__text list-wrap__text--value eng">
-                                USD <em>500,000</em><br>
-                                (KRW <em>595,250,000</em>)
-                            </strong>
-                        </div>
-                    </li>
+                    <!-- 2022-04-22 예약금액 삭제(SB_v1.0.02) -->
                     <li class="list-wrap__item">
                         <div class="list-wrap__box">
                             <strong class="list-wrap__title">예약기간</strong>
@@ -75,7 +66,7 @@
                 <ul class="list-wrap" style="display: none;" data-element="toggle-list">
                     <li class="list-wrap__item">
                         <div class="list-wrap__box">
-                            <strong class="list-wrap__title list-wrap__title--value">외화계좌</strong> <!-- 2022-03-14 타이틀 변경(v0.9) -->
+                            <strong class="list-wrap__title list-wrap__title--value">외화계좌</strong> <!-- 2022-04-22 문구수정(SB_v1.0.02) -->
                         </div>
                         <div class="list-wrap__box list-wrap__box--unit">
                             <strong class="list-wrap__text list-wrap__text--value">
@@ -86,7 +77,7 @@
                     </li>
                     <li class="list-wrap__item">
                         <div class="list-wrap__box">
-                            <strong class="list-wrap__title list-wrap__title--value">원화계좌</strong> <!-- 2022-03-14 타이틀 변경(v0.9) -->
+                            <strong class="list-wrap__title list-wrap__title--value">원화계좌</strong> <!-- 2022-04-22 문구수정(SB_v1.0.02) -->
                         </div>
                         <div class="list-wrap__box list-wrap__box--unit">
                             <strong class="list-wrap__text list-wrap__text--value">
@@ -106,7 +97,7 @@
     <!-- footer -->
     <div id="footer" class="app-footer app-footer--button">
         <div class="button-wrap">
-            <button type="button" class="button button--active">추가매매</button>
+            <button type="button" class="button button--active">추가 매매</button> <!-- 2022-04-22 띄어쓰기 수정(SB_v1.0.02) -->
             <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
         </div>
     </div>
