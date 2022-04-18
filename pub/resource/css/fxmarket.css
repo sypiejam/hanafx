@@ -37,7 +37,7 @@
 .fx-rateboard .button-select__flex {position:relative;display:flex;justify-content:space-between;}
 .fx-rateboard .button-select__item {width:auto;height:3rem;padding:0 2.5rem 0 0;font-size:1rem;font-weight:400;border:0;background-color:inherit;color:#000;line-height:1.4;}
 .fx-tradestate {z-index:10;position:relative;display:inline-block;margin:1rem 0;padding:0.375rem 1rem 0.313rem;background:#fff;border-radius:2rem;font-size:0.813rem;}
-.fx-tradestate:before {content:'';position:absolute;left:20%;top:100%;width:1.313rem;height:0.625rem;background:url(../../../../resource/images/fxmarket/bg_bulloon_tail_white.png) no-repeat 0 0 / 100%;}
+.fx-tradestate:before {content:'';position:absolute;left:18%;top:100%;width:1.313rem;height:0.625rem;background:url(../../../../resource/images/fxmarket/bg_bulloon_tail_white.png) no-repeat 0 0 / 100%;}
 .fx-tradestate .tooltip {margin-left:0.25rem;}
 .fx-tradestate .tooltip[data-tooltip="paragraph"] .tooltip__panel {top:2.5rem;}
 .tab__type--small {margin-top:0.313rem;}
@@ -117,7 +117,7 @@
 .label-line__item--mar:after {background:url(../../resource/images/fxmarket/bg_label_tail_green.png) no-repeat 0 0 / 100%;}
 .label-line__item--reserve {border-color:#ee9d46;color:#ee9d46;}
 .label-line__item--reserve:after {background:url(../../resource/images/fxmarket/bg_label_tail_yellow.png) no-repeat 0 0 / 100%;}
-.fx-exchange {overflow:hidden;padding:1px 0;}
+.fx-exchange {overflow:hidden;padding:1px 0 0;}
 .fx-exchange .checkbox-wrap {width:2.375rem;height:3.5rem;}
 .fx-exchange .checkbox-wrap__label {display:block;width:100%;padding-left:0;background:url(../../resource/images/fxmarket/btn_currency_switch.png) no-repeat 0 50% / 1.438rem;}
 .fx-exchange .checkbox-wrap__label:before {content:none;}
