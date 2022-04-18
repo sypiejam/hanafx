@@ -180,5 +180,14 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script>
+    // 2022-04-18 스크립트 추가(SB_v1.0.02)
+    $(function(){
+        // 공유하기 버튼 클릭시 SLICK레이아웃 깨짐 방지
+        $('.btn-share').on('click', function(){
+            $('.fx-boastslider').slick('setPosition');
+        });
+    })
+</script>
 </body>
 </html>
