@@ -37,7 +37,7 @@
 .fx-rateboard .button-select__flex {position:relative;display:flex;justify-content:space-between;}
 .fx-rateboard .button-select__item {width:auto;height:3rem;padding:0 2.5rem 0 0;font-size:1rem;font-weight:400;border:0;background-color:inherit;color:#000;line-height:1.4;}
 .fx-tradestate {z-index:10;position:relative;display:inline-block;margin:1rem 0;padding:0.375rem 1rem 0.313rem;background:#fff;border-radius:2rem;font-size:0.813rem;}
-.fx-tradestate:before {content:'';position:absolute;left:18%;top:100%;width:1.313rem;height:0.625rem;background:url(../../../../resource/images/fxmarket/bg_bulloon_tail_white.png) no-repeat 0 0 / 100%;}
+.fx-tradestate:before {content:'';position:absolute;left:18%;top:100%;width:1.313rem;height:0.625rem;background:url(../../resource/images/fxmarket/bg_bulloon_tail_white.png) no-repeat 0 0 / 100%;}
 .fx-tradestate .tooltip {margin-left:0.25rem;}
 .fx-tradestate .tooltip[data-tooltip="paragraph"] .tooltip__panel {top:2.5rem;}
 .tab__type--small {margin-top:0.313rem;}
@@ -49,8 +49,8 @@
 .tab__type--small .tab-wrap__button.is-active:before {content:none;}
 .tab__type--small .tab-wrap__button.is-active:after {z-index:0;content:'';background:#fff;}
 .tab__type--small .tab__panel {height:100%;margin-top:1.125rem;padding:0 0.75rem 0;}
-.tab__type--small .tab__panel--buy:before {z-index:-1;content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#f0d4b4 url(../../../../resource/images/fxmarket/img_fxtrade_buy.png) no-repeat calc(100% - 1.5rem) 100% / 8.313rem;}
-.tab__type--small .tab__panel--sell:before {z-index:-1;content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#c1e2eb url(../../../../resource/images/fxmarket/img_fxtrade_sell.png) no-repeat calc(100% - 1.5rem) 100% / 8.313rem;}
+.tab__type--small .tab__panel--buy:before {z-index:-1;content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#f0d4b4 url(../../resource/images/fxmarket/img_fxtrade_buy.png) no-repeat calc(100% - 1.5rem) 100% / 8.313rem;}
+.tab__type--small .tab__panel--sell:before {z-index:-1;content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#c1e2eb url(../../resource/images/fxmarket/img_fxtrade_sell.png) no-repeat calc(100% - 1.5rem) 100% / 8.313rem;}
 .fx-rate__item--del {font-size:1rem;color:#61605c;}
 .fx-rate__item--ins {font-size:1.5rem;font-weight:500;text-decoration:none;color:#000;line-height:1.25;}
 .fx-rateboard .fx-refresh {position:absolute;top:auto;right:1.5rem;bottom:9.125rem;}
