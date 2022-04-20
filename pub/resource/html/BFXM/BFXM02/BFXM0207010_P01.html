@@ -1,88 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<!-- 공통 meta -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>하나은행</title>
-<!-- 공통 css -->
-<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
-<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
-<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
-<!-- Hana FX market CSS -->
-<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+    <!-- 공통 meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>하나은행</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+    <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+    <!-- Hana FX market CSS -->
+    <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 </head>
+
 <body>
-<div id="wrap" class="wrap">
-    <!-- header -->
-    <div id="header" class="app-header">
-        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">출석이벤트</h1> <!-- 2022-04-15 타이틀변경 (SB_v1.0.04) -->
-        <button class="app-header__button app-header__button--home" title="메인화면"></button>
-        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
-    </div>
-    <!-- //header -->
-    <!-- content -->
-    <div id="content" class="app-main fxmarket">
-        <div class="container">
-            <div class="button-wrap">
-                <button type="button" class="button button--positive" data-element="modal__open" data-target="#BFXM0207010_P01">출석이벤트 당첨</button>
+    <div id="wrap" class="wrap">
+        <!-- header -->
+        <div id="header" class="app-header">
+            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+            <h1 class="app-header__title">출석이벤트</h1> <!-- 2022-04-15 타이틀변경 (SB_v1.0.04) -->
+            <button class="app-header__button app-header__button--home" title="메인화면"></button>
+            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
+        </div>
+        <!-- //header -->
+        <!-- content -->
+        <div id="content" class="app-main fxmarket">
+            <div class="container">
+                <div class="button-wrap">
+                    <button type="button" class="button button--positive" data-element="modal__open"
+                        data-target="#BFXM0207010_P01">출석이벤트 당첨</button>
+                </div>
             </div>
         </div>
+        <!-- //content -->
     </div>
-    <!-- //content -->
-</div>
-<div id="BFXM0207010_P01" class="modal modal--confirm is-open" data-element="modal__element">
-    <div class="modal__container modal__container--interval" data-element="modal__element-container">
-        <div class="modal__header">
-            <strong class="modal__header--title font-xxlarge">축하합니다!</strong>
-        </div>
-        <div class="modal__contents fx-attend--modal">
-            <strong class="fx-attend__desc"><em class="color-green"><span>99</span>번째 출석</em> <br><em class="fw-400">FX부스터</em> 당첨</strong> <!-- 2022-04-15 문구변경, fw-400클래스 추가 (SB_v1.0.04) -->
-            <div class="fx-attend-visual fx-launch-animation" aria-hidden="true">
-                <span class="ani-circle"></span>
-                <div class="ani-rocket-wrap">
-                    <div class="ani-rocket">
-                        <span class="ani-rocket-main"></span>
+    <div id="BFXM0207010_P01" class="modal modal--confirm is-open" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <strong class="modal__header--title font-xxlarge">축하합니다!</strong>
+            </div>
+            <div class="modal__contents fx-attend--modal">
+                <strong class="fx-attend__desc"><em class="color-green"><span>99</span>번째 출석</em> <br><em
+                        class="fw-400">FX부스터</em> 당첨</strong> <!-- 2022-04-15 문구변경, fw-400클래스 추가 (SB_v1.0.04) -->
+                <div class="fx-attend-visual fx-launch-animation" aria-hidden="true">
+                    <span class="ani-circle"></span>
+                    <div class="ani-rocket-wrap">
+                        <div class="ani-rocket">
+                            <span class="ani-rocket-main"></span>
+                        </div>
+                    </div>
+                    <div class="ani-smoke-wrap">
+                        <span class="ani-smoke ani-smoke-center"></span>
+                        <span class="ani-smoke ani-smoke-left"></span>
+                        <span class="ani-smoke ani-smoke-right"></span>
+                    </div>
+                    <!-- 2022-04-15 마크업위치변경 (SB_v1.0.04) -->
+                    <div class="container fx-booster">
+                        <strong class="text-header no-border">FX부스터</strong> <!-- 2022-04-15 문구변경 (SB_v1.0.04) -->
+                        <span class="text-guide eng block">2022.04.25(당일)</span>
                     </div>
                 </div>
-                <div class="ani-smoke-wrap">
-                    <span class="ani-smoke ani-smoke-center"></span>
-                    <span class="ani-smoke ani-smoke-left"></span>
-                    <span class="ani-smoke ani-smoke-right"></span>
-                </div>
-                <!-- 2022-04-15 마크업위치변경 (SB_v1.0.04) -->
-                <div class="container fx-booster">
-                    <strong class="text-header no-border">FX부스터</strong> <!-- 2022-04-15 문구변경 (SB_v1.0.04) -->
-                    <span class="text-guide eng block">2022.04.25(당일)</span>
-                </div>
-            </div>
-            <hr class="content-devider mgt90" aria-hidden="true">
-            <div class="guide-wrap guide-wrap--notoggle mgt90">
-                <p class="guide-title color-green">최고 환율(Spread) 우대율이 자동 적용됩니다.</p> <!-- 2022-04-15 클래스, 문구 변경 (SB_v1.0.04) -->
-                <div class="guide-panel">
-                    <!-- 2022-04-15 문구변경 (SB_v1.0.04) -->
-                    <ul class="guide-list guide-list--large color-999">
-                        <li class="guide-list__item">FX부스터는 즉시거래에 한합니다.(예약거래 제외)</li>
-                        <li class="guide-list__item">당일에 한하여 적용되며 경과시 소멸됩니다.</li>
-                    </ul>
+                <hr class="content-devider mgt100" aria-hidden="true"> <!-- 2022-04-15 클래스 변경 mgt100 (SB_v1.0.04) -->
+                <div class="guide-wrap guide-wrap--notoggle mgt90">
+                    <p class="guide-title color-green">최고 환율(Spread) 우대율이 자동 적용됩니다.</p>
+                    <!-- 2022-04-15 클래스, 문구 변경 (SB_v1.0.04) -->
+                    <div class="guide-panel">
+                        <!-- 2022-04-15 문구변경 (SB_v1.0.04) -->
+                        <ul class="guide-list guide-list--large color-999">
+                            <li class="guide-list__item">FX부스터는 즉시거래(외화바꾸기 포함)에 한합니다.(예약거래 제외)</li> <!-- 2022-04-19 문구수정 -->
+                            <li class="guide-list__item">당일에 한하여 적용되며 경과시 소멸됩니다.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--negative button--span3"
+                    data-element="modal__close">닫기</button>
+                <button type="button" class="button button--positive">거래하기</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
         </div>
-        <div class="button-wrap">
-            <button type="button" class="button button--negative button--span3" data-element="modal__close">닫기</button>
-            <button type="button" class="button button--positive">거래하기</button>
-        </div>
-        <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
     </div>
-</div>
 
-<!-- 공통 script -->
-<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
-<script src="../../../../resource/library/slick/slick.js"></script>
-<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
-<script src="../../../../resource/js/ui/pualugin.js"></script>
-<script src="../../../../resource/js/ui/common.js"></script>
+    <!-- 공통 script -->
+    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../../../resource/library/slick/slick.js"></script>
+    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+    <script src="../../../../resource/js/ui/pualugin.js"></script>
+    <script src="../../../../resource/js/ui/common.js"></script>
 </body>
+
 </html>

@@ -18,7 +18,7 @@
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">FX거래</h1>
+        <h1 class="app-header__title">거래하기</h1> <!-- 2022-04-18 타이틀 변경(SB_v1.0.02) -->
         <!-- <button class="app-header__button app-header__button--home" title="메인 화면"></button> -->
         <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
     </div>
@@ -36,12 +36,16 @@
         <div class="modal__container" data-element="modal__element-container">
             <div class="modal__header modal__header--visible">
                 <div class="modal__header--title max-w80">
-                    <p>예약/지정매수(<em>KRW</em> &gt; <em>USD</em>)을<br> 예약하시겠습니까?</p>
-                    <p class="text-guide mgt42">이 주문은 예약종료일 <em>18:00</em>까지 유지됩니다.</p>
+                    <p class="color-666">USD <em class="bold color-000">500,000</em>을<br> <span class="color-000"><em class="bold">595,000</em>원</span>에 사는 거래를 예약합니다.</p><!-- 2022-04-18 마크업 수정(SB_v1.0.02) -->
                 </div>
             </div>
             <div class="modal__contents modal__contents--modi">
-                <div class="container container--full">
+                <!-- 2022-04-18 마크업 추가(SB_v1.0.02) -->
+                <div class="fx-complete">
+                    <p class="icon-wrap__description">이 주문은 예약종료일 <em>18:00</em><span class="bold">까지 유지됩니다.</span></p>
+                </div>
+                <!-- // 2022-04-18 마크업 추가(SB_v1.0.02) -->
+                <div class="container container--full fx-complete-list"> <!-- 2022-04-18 fx-complete-list 클래스 추가(SB_v1.0.02) -->
                     <div class="list-section">
                         <ul class="list-wrap">
                             <li class="list-wrap__item align-top">
@@ -54,17 +58,7 @@
                                     </strong>
                                 </div>
                             </li>
-                            <li class="list-wrap__item">
-                                <div class="list-wrap__box">
-                                    <strong class="list-wrap__title list-wrap__title--value">예약금액</strong>
-                                </div>
-                                <div class="list-wrap__box list-wrap__box--unit">
-                                    <strong class="list-wrap__text list-wrap__text--value">
-                                        USD <em>500,000</em><br>
-                                        (KRW <em>602,705,000</em>)
-                                    </strong>
-                                </div>
-                            </li>
+                            <!-- 2022-04-18 예약금액 삭제(SB_v1.0.02) -->
                             <li class="list-wrap__item">
                                 <div class="list-wrap__box">
                                     <strong class="list-wrap__title list-wrap__title--value">예약기간</strong>
@@ -74,8 +68,39 @@
                                 </div>
                             </li>
                         </ul>
+                        <!-- 2022-04-18 마크업 추가(SB_v1.0.02) -->
+                        <ul class="list-wrap" style="display: none;" data-element="toggle-list">
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">원화계좌</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value">
+                                        <em class="account">급여하나통장</em><br>
+                                        <em class="number eng">123-123456-12345</em>
+                                    </strong>
+                                </div>
+                            </li>
+                            <li class="list-wrap__item">
+                                <div class="list-wrap__box">
+                                    <strong class="list-wrap__title list-wrap__title--value">외화계좌</strong>
+                                </div>
+                                <div class="list-wrap__box list-wrap__box--unit">
+                                    <strong class="list-wrap__text list-wrap__text--value">
+                                        <em class="account">하나밀리언달러통장</em><br>
+                                        <em class="number eng">123-123456-12345</em>
+                                    </strong>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- //2022-04-18 마크업 추가(SB_v1.0.02) -->
                     </div>
                 </div>
+                <!-- 2022-04-18 마크업 추가(SB_v1.0.02) -->
+                <div class="container flex mgr0">
+                    <button type="button" class="button-simple button-simple--right mgt0" data-element="toggle-btn">펼치기</button>
+                </div>
+                <!-- // 2022-04-18 마크업 추가(SB_v1.0.02) -->
             </div>
             <div class="button-fixed">
                 <div class="button-wrap">
