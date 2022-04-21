@@ -743,7 +743,7 @@
     -webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;
 }
 @keyframes beat {
-    from, 10% {-webkit-transform:scale(0);transform:scale(0);}
+    from, 15% {-webkit-transform:scale(0);transform:scale(0);}
     20% {-webkit-transform:scale(1);transform:scale(1);}
     30%, 50%, 70%, 90% {-webkit-transform:scale(1.3);transform:scale(1.3);}
     40%, 60%, 80%  {-webkit-transform:scale(1);transform:scale(1);}
@@ -931,6 +931,15 @@
 .fx-badge__item--fxchildren .fx-badge-img {background-position:0 -25.813rem;}
 .fx-badge__item--fxking .fx-badge-img {background-position:-7.125rem -25.813rem;}
 .fx-badge__item--fxgod .fx-badge-img {background-position:-14.25rem -25.813rem;}
+.fx-badge__item--0101 .fx-badge-img {background-position:0 0;}
+.fx-badge__item--0102 .fx-badge-img {background-position:-7.125rem 0;}
+.fx-badge__item--0103 .fx-badge-img {background-position:-14.25rem 0;}
+.fx-badge__item--0201 .fx-badge-img {background-position:0 -12.438rem;}
+.fx-badge__item--0202 .fx-badge-img {background-position:-7.125rem -12.438rem;}
+.fx-badge__item--0203 .fx-badge-img {background-position:-14.25rem -12.438rem;}
+.fx-badge__item--0301 .fx-badge-img {background-position:0 -25.813rem;}
+.fx-badge__item--0302 .fx-badge-img {background-position:-7.125rem -25.813rem;}
+.fx-badge__item--0303 .fx-badge-img {background-position:-14.25rem -25.813rem;}
 .fx-badge-type {display:block;margin-top:0.5rem;font-size:0.75rem;color:#aaa;}
 .fx-badge-input:checked + .fx-badge-label .fx-badge-type {color:#666}
 .fx-badge-goal {display:block;font-size:0.813rem;color:#aaa;line-height:1.4;}
