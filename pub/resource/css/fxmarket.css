@@ -676,10 +676,24 @@
 
 /* 부가서비스 - 타임세일(서브메인 공통) */
 .fx-service__keyvisual--specialtime {padding:0;}
-.fx-specialtime__keyvisual {position:relative;height:76.5333vw;background-repeat:no-repeat;background-position:0 0;background-size:100% auto;}
-.fx-specialtime__keyvisual--ongoing {background-image:url(../../resource/images/fxmarket/img_timesale_ongoing.png);}
-.fx-specialtime__keyvisual--waiting {}
-.fx-countdown {position:absolute;bottom:1.625rem;right:2.313rem;left:2.813rem;}
+.fx-specialtime__keyvisual {position:relative;padding:2.313rem 0 2.375rem;text-align:center;}
+.fx-specialtime__keyvisual--ongoing {background:linear-gradient(top, #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%);background:-webkit-linear-gradient(top, #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%);}
+.fx-specialtime__keyvisual--waiting {background:linear-gradient(top, #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%);background:-webkit-linear-gradient(top, #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%);}
+.fx-specialtime__label {position:relative;display:inline-block;height:1.875rem;padding:0 0.75rem;border-radius:1.25rem;font-size:1.125rem;}
+.fx-specialtime__label:after {content:'';display:inline-block;width:0.688rem;height:1.188rem;margin:0.25rem 0 0 0.5rem;vertical-align:top;}
+.fx-specialtime__keyvisual--ongoing .fx-specialtime__label:after {background:url(../../resource/images/fxmarket/icon_lightning_red.png) no-repeat 0 0 / 100%;}
+.fx-specialtime__keyvisual--ongoing .fx-specialtime__label {border:1px solid #e81f65;color:#e81f65;}
+.fx-specialtime__keyvisual--waiting .fx-specialtime__label:after {background:url(../../resource/images/fxmarket/icon_lightning_gray.png) no-repeat 0 0 / 100%;}
+.fx-specialtime__keyvisual--waiting .fx-specialtime__label {border:1px solid #bababa;color:#666;}
+.fx-specialtime__keytxt {display:block;margin-top:0.75rem;font-weight:700;font-size:1.813rem;}
+.fx-specialtime__keyvisual--ongoing .fx-specialtime__keytxt {color:#fd1a69;}
+.fx-specialtime__subtxt {font-size:1.375rem;line-height:1.3;}
+.fx-specialtime__keyvisual--ongoing .fx-specialtime__subtxt .fw-700 {color:#009591;}
+.fx-specialtime__keyvisual--waiting .fx-specialtime__subtxt .fw-700 {color:#fd1a69;}
+.fx-specialtime__keyvisual--ongoing .fx-specialtime-img .img-clock {display:block;width:11.5rem;height:9.063rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_timesale_clock_ongoing.png) no-repeat 0 0 / 100%;}
+.fx-specialtime__keyvisual--waiting .fx-specialtime-img .img-clock {display:block;width:14.438rem;height:7.688rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_timesale_clock_waiting.png) no-repeat 0 0 / 100%;}
+.fx-specialtime-img {margin-top:1rem;}
+.fx-countdown {width:17.875rem;margin:0.5rem auto 0;}
 .fx-countdown .i-colon {position:relative;height:100%;}
 .fx-countdown .i-colon::before,
 .fx-countdown .i-colon::after {content:'';position:absolute;top:37%;right:-0.688rem;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:block;width:0.188rem;height:0.188rem;border-radius:50%;background:#000;}
@@ -690,6 +704,8 @@
 .fx-countdown .tick-group:first-child,
 .fx-countdown .tick-label,
 .fx-countdown .tick-credits {display:none !important;}
+.fx-countdown__txt {height:2.938rem;display:flex;justify-content:center;align-items:center;background:#fff;border-radius:0.938rem;font-size:1.375rem;font-weight:700;color:#e81f65;text-align:center;}
+
 /* 부가서비스 - 타임세일 : 환율정보 영역 */
 .fxmarket .txt-buy {color:#139be5;}
 .fxmarket .txt-sell {color:#fa1036;}
@@ -719,14 +735,14 @@
 /* 서브메인 */
 [class^="fx-submain-"] {margin-top:2.5rem;}
 .fx-welcome {display:flex;justify-content:center;align-items:center;height:3.125rem;margin-bottom:1.25rem;background:#eff0f3;text-align:center;}
-.fx-welcome__icon {display:inline-block;width:1.938rem;height:1.188rem;background:url(../../resource/images/fxmarket/icon_welcome_basket.png) no-repeat 0 0 / 1.938rem;}
+.fx-welcome__icon {display:inline-block;width:1.813rem;height:1.688rem;margin-right:0.5rem;background:url(../../resource/images/fxmarket/icon_welcome_basket.png) no-repeat 0 0 / 1.813rem;}
 .fx-welcome__msg {font-size:0.875rem;line-height:1.4;}
 .fx-submain-toplink {display:flex;align-items:center;justify-content:space-between;margin:0;padding:0 1.5rem;}
 .fx-mylog {position:relative;display:flex;align-items:center;padding:1rem 1rem 1.25rem 0;}
 .fx-mylog:after {content:'';position:absolute;right:0;width:1rem;height:1rem;background:url(../../resource/images/C/arrow_right_small.png) no-repeat 70% 50% / 0.4rem;}
 .fx-mylog__nickname {margin-left:0.125rem;font-size:0.875rem;line-height:1;}
 .fx-mylog__link {position:absolute;top:0;right:0;bottom:0;left:0;}
-.fx-mylog .fx-level-icon {width:1.438rem;height:0.938rem;margin-top:-0.313rem;}
+.fx-mylog .fx-level-icon {width:1.438rem;height:0.938rem;margin-right:0.25rem;}
 .fx-mylog .challenge__badge {margin-left:0.25rem;}
 .fx-mylog .challenge-badge__item {margin:0 0.125rem;}
 .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
@@ -740,29 +756,27 @@
 .fx-serviceslider .slick-dots li {margin:0 0.188rem;}
 .fx-serviceslider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
 .fx-serviceslider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
-.fx-service__item {position:relative;display:block;height:13.125rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
-.fx-service__item .service-title {display:block;font-size:1.375rem;color:#000;line-height:1.3;word-break:keep-all;}
+.fx-service__item {overflow:hidden;position:relative;display:block;height:13.125rem;border:1px solid #e3e4e8;border-radius:1rem;background:#fff;}
+.fx-service__item .service-title {display:block;font-size:1.25rem;color:#000;line-height:1.3;word-break:keep-all;}
 .fx-service__item .service-desc {display:block;margin-top:0.25rem;font-size:1rem;color:#000;line-height:1.4;}
+.fx-service__item .service-desc .bold {color:#009591;}
 .fx-service__item .service-img {position:absolute;left:0;right:0;bottom:0;width:100%;}
-.fx-service__item [class^="fx-service-"] {display:block;width:100%;height:100%;padding:1.25rem 1.125rem;background-repeat:no-repeat;background-position:50% 100%;background-size:auto 50%;}
-.fx-service-rate {background-image:url(../../resource/images/fxmarket/dummy_service_rate.png);}
-.fx-service-community {background-image:url(../../resource/images/fxmarket/dummy_service_community.png);}
-.fx-service-challenge {background-image:url(../../resource/images/fxmarket/dummy_service_challenge.png);}
-.fx-service-checkout {background-image:url(../../resource/images/fxmarket/dummy_service_checkout.png);}
-.fx-service-guide {background-image:url(../../resource/images/fxmarket/dummy_service_guide.png);}
-.fx-service-rate .bold {color:#009591;}
-.fx-service-community .bold {color:#f84b6f;}
-.fx-service-challenge .bold {color:#009591;}
-.fx-service-checkout .bold {color:#f84b6f;}
-.fx-service-guide .bold {color:#009591;}
-.fx-submain-toptrader .fx-level-icon {width:1.438rem;height:0.938rem;}
+.fx-service__item [class^="fx-service-"] {display:block;width:100%;height:100%;padding:1.25rem 1.125rem;background-repeat:no-repeat;background-position:100% 100%;background-size:auto 47.6%;}
+.fx-service-rate {background-image:url(../../resource/images/fxmarket/img_service_rate.png);}
+.fx-service-exchange {background-image:url(../../resource/images/fxmarket/img_service_exchange.png);}
+.fx-service-community {background-image:url(../../resource/images/fxmarket/img_service_community.png);}
+.fx-service-challenge {background-image:url(../../resource/images/fxmarket/img_service_challenge.png);}
+.fx-service-checkout {background-image:url(../../resource/images/fxmarket/img_service_checkout.png);}
+.fx-service-guide {background-image:url(../../resource/images/fxmarket/img_service_guide.png);}
+.fx-service-challenge .service-desc {font-size:0.875rem;}
+.fx-submain-toptrader .fx-level-icon {width:1.813rem;height:0.938rem;}
+.fx-submain-toptrader .fx-trader__nickname {font-weight:400;}
 .fx-submain-toptrader .gray-box {border:1px solid #f4f4f4;background:#f4f4f4;color:#666;}
 .fx-submain-toptrader .fx-trader__list {margin:-1px 0 0 0;border:1px solid #f0f0f0;border-radius:initial;border-width:1px 0;}
-.fx-submain-toptrader .fx-trader__rank {justify-content:flex-start;width:2.625rem;padding-left:0.625rem;}
-.fx-submain-toptrader .fx-trader__info {padding:1.25rem 1rem 1.063rem 1rem;}
-.fx-submain-toptrader .fx-trader__list--1st .fx-trader__rank::before {background:url(../../resource/images/fxmarket/bg_trader_ranking01.png) no-repeat 0 50% / 2.625rem;}
-.fx-submain-toptrader .fx-trader__list--2nd .fx-trader__rank::before {background:url(../../resource/images/fxmarket/bg_trader_ranking02.png) no-repeat 0 50% / 2.625rem;}
-.fx-submain-toptrader .fx-trader__list--3rd .fx-trader__rank::before {background:url(../../resource/images/fxmarket/bg_trader_ranking03.png) no-repeat 0 50% / 2.625rem;}
+.fx-submain-toptrader .fx-trader__rank {width:2.375rem;color:#000;font-size:1.25rem;}
+.fx-submain-toptrader .fx-trader__info {padding:1.25rem 1rem 1.063rem 0;}
+.fx-submain-toptrader .fx-trader__sum {margin:0.188rem 0 0 2.25rem;}
+.fx-submain-toptrader .fx-trader__list .fx-trader__rank::before {content:none;}
 .fx-submain-rate {overflow:hidden;color:#fff;height:2.438rem;padding:0.688rem 0;background:#373a4d;font-size:0.875rem;font-weight:300;line-height:initial;}
 .fx-rateslider .slick-list {padding-left:1.5rem;}
 .fx-rateslider .slick-slide {margin-right:0.75rem;}
@@ -772,7 +786,7 @@
 .fx-rate__item .exr--up::before {border:0 6px 11px;}
 .fx-rate__item .exr--dw::before {border:11px 6px 0;}
 .fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
-.fx-submain-news {overflow:hidden;height:4.25rem;}
+.fx-newsslider {overflow:hidden;margin-top:1.5rem;}
 .fx-newsslider .slick-list {padding-left:1.5rem;margin-right:-1.5rem;}
 .fx-newsslider .slick-slide {margin-right:0.625rem;}
 .fx-news__item {position:relative;padding:0.75rem 1rem;border:1px solid #e3e4e8;border-radius:0.8rem;background:#fff;}
@@ -781,6 +795,7 @@
 @media (max-width: 360px) { 
     .fx-mylog__nickname {font-size:0.813rem;} 
 }
+.button-wrap .icon-cart {display:inline-block;width:1.188rem;height:1.063rem;margin-right:0.125rem;background:url(../../resource/images/fxmarket/icon_cart.png) no-repeat 0 0 / 100%;vertical-align:middle}
 
 /* 환율예측 */
 .fx-service__keyvisual--forecast {position:relative;height:68vw;background:url(../../resource/images/fxmarket/dummy_keyvisual_predict.png) no-repeat 0 0 / 100%;} 
@@ -797,6 +812,7 @@
 .fx-guess .fx-score__progress[value] {margin-top:0.313rem;border:0;}
 .fx-guess .fx-score__progress[value]::-webkit-progress-bar {background-color:#3f78fa;}
 .fx-guess .fx-score__progress[value]::-webkit-progress-value {border-radius:initial;background:#fa3f66;box-shadow:none;}
+.fx-guess .fx-score__progress[value="0"]::-webkit-progress-bar {background-color:#d9d9d9;}
 .fx-guess .icon-modify {display:inline-block;width:0.75rem;height:0.75rem;margin-left:0.25rem;background:url(../../resource/images/C/icon_edit_gray.png) no-repeat 0 0 / 100%;-webkit-filter:brightness(3);filter:brightness(3);}
 .fx-participate {margin-top:1.25rem;}
 .fx-participate__opts {display:flex;justify-content:space-between;padding:0 0.5rem;}

@@ -28,12 +28,18 @@
     <div id="content" class="app-main fxmarket">
         <!-- 부가서비스 : 타임세일 -->
         <div class="fx-service fx-specialtime">
+            <!-- 2022-04-22 부가서비스 타임세일 마크업 변경 및 대기case 추가 (SB_v1.3) -->
             <div class="fx-service__keyvisual fx-service__keyvisual--specialtime">
                 <!-- 진행중 -->
                 <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--ongoing">
-                    <div class="offscreen">
-                        <strong>타임세일 진행중</strong>
-                        <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
+                    <div class="fx-specialtime-txtbox">
+                        <h3 class="fx-specialtime__label">타임세일 <em class="fw-700">진행중</em></h3>
+                        <strong class="fx-specialtime__keytxt">환율은 타이밍!</strong>
+                        <p class="fx-specialtime__subtxt">달러쇼핑 <span class="fw-700">타이밍</span>은 지금!</p>
+                    </div>
+                    <!-- 애니메이션 작업 진행예정 -->
+                    <div class="fx-specialtime-img" aria-hidden="true">
+                        <i class="img-clock"></i>
                     </div>
                     <div class="fx-countdown">
                         <!-- Flip Clock -->
@@ -53,7 +59,24 @@
                     </div>
                 </div>
                 <!-- //진행중 -->
+                <!-- 대기중 -->
+                <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--waiting">
+                    <div class="fx-specialtime-txtbox">
+                        <h3 class="fx-specialtime__label">타임세일 <em class="fw-700">대기중</em></h3>
+                        <strong class="fx-specialtime__keytxt">환율은 타이밍!</strong>
+                        <p class="fx-specialtime__subtxt">달러쇼핑 <span class="fw-700">타이밍</span> 놓치지 마세요!</p>
+                    </div>
+                    <!-- 애니메이션 작업 진행예정 -->
+                    <div class="fx-specialtime-img" aria-hidden="true">
+                        <i class="img-clock"></i>
+                    </div>
+                    <div class="fx-countdown">
+                        <div class="fx-countdown__txt">00월 00일 00:00 오픈</div>
+                    </div>
+                </div>
+                <!-- // 대기중 -->
             </div>
+            <!-- // 2022-04-22 부가서비스 타임세일 마크업 변경 및 대기case 추가 (SB_v1.3) -->
 
             <div class="container flex flex--item-c flex-align-center mgt120">
                 <div class="button-select--fxm">
@@ -73,7 +96,7 @@
                         </div>
                         <div class="fx-specialrate-noti">
                             <em class="offscreen">고시환율</em>
-                            <span class="fx-specialrate__amount">1,228.25</span> <em class="exr">0.00<span class="offscreen">동일</span></em>
+                            <span class="fx-specialrate__amount">1,228.25</span> <em class="exr"><span class="offscreen">동일</span></em> <!-- 2022-04-22 환율정보 전일자와 동일할 때 0.00금액삭제 (SB_v1.3) -->
                             <!-- 2022-03-31 클래스 fx-specialrate__amount 추가 -->
                         </div>
                     </div>
@@ -87,7 +110,7 @@
                             <span class="fx-specialrate__amount">1,232.55</span> <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
                             <!-- 2022-03-31 클래스 fx-specialrate__amount 추가 -->
                             <!-- to.개발 | 고시환율 표기
-                                동일 : <em class="exr">0.00<span class="offscreen">동일</span>
+                                동일 : <em class="exr"><span class="offscreen">동일</span>
                                 오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span>
                                 내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span>
                             -->
@@ -108,7 +131,7 @@
                     <div class="guide-panel mgt36">
                         <ul class="guide-list guide-list--large color-999">
                             <li class="guide-list__item">타임세일은 특정시간대에 거래하는 고객에게 제공하는 우대서비스입니다.</li>
-                            <li class="guide-list__item">타임세일을 통한 거래시 최고 우대(Spread) 한율을 적용하여 체결됩니다.</li>
+                            <li class="guide-list__item">타임세일을 통한 거래시 최고 우대(Spread) 환율을 적용하여 체결됩니다.</li> <!-- 2022-04-22 오타수정 (SB_v1.3) -->
                             <li class="guide-list__item">타임세일은 즉시거래에 한해 적용됩니다.(예약거래 제외)</li>
                         </ul>
                     </div>

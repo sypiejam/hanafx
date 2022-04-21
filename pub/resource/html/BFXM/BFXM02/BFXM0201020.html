@@ -14,422 +14,469 @@
     <!-- Hana FX market CSS -->
     <link rel="stylesheet" href="../../../../resource/css/flip.css" type="text/css"><!-- Flip Clock CSS -->
     <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+    <style>
+      
+    </style>
 </head>
 
 <body>
-    <div id="wrap" class="wrap">
-        <!-- header -->
-        <div id="header" class="app-header">
-            <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-            <h1 class="app-header__title">FX마켓</h1>
-            <button class="app-header__button app-header__button--home" title="메인화면"></button>
-            <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
-        </div>
-        <!-- //header -->
-        <!-- content -->
-        <div id="content" class="app-main fxmarket">
-            <div class="fx-submain">
-                <!-- 고객 정보 -->
-                <section class="fx-submain-toplink">
-                    <h2 class="offscreen">나의 정보</h2>
-                    <!-- to.개발 | 로그인 후 -->
-                    <div class="fx-mylog">
-                        <span class="fx-level-icon level-5"><span class="offscreen">level 5</span></span>
-                        <!-- to.개발 | 등급 아이콘 클래스명 
-                            Level 1 "fx-level-icon level-1"
-                            Level 2 "fx-level-icon level-2"
-                            Level 3 "fx-level-icon level-3"
-                            Level 4 "fx-level-icon level-4"
-                            Level 5 "fx-level-icon level-5"
-                        -->
-                        <span class="fx-mylog__nickname">다동한외빌딩큰손개미</span>
-                        <div class="challenge__badge">
-                            <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i>
-                            <!--to.개발 | <span class="offscreen">빅핸드</span> 챌린지명 기재 -->
-                            <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i>
-                            <i class="challenge-badge__item challenge-3"><span class="offscreen">환율갓</span></i>
-                        </div>
-                        <a href="#none" class="fx-mylog__link"><span class="offscreen">마이페이지 바로가기</span></a>
-                    </div>
-                    <div class="fx-mainset">
-                        <span class="fx-mainset__tit">메인설정</span>
-                        <label class="switch mgt0">
-                            <input type="checkbox" title="메인설정 여부">
-                            <span class="switch__toggle" aria-hidden="true"></span>
-                        </label>
-                    </div>
-                    <!-- to.개발 | 로그인 전 -->
-                    <!-- <a href="#none" class="fx-mylog"> 
-                    <span class="fx-mylog__nickname">로그인</span>
-                </a>  -->
-                </section>
-
-                <!-- 타임세일 -->
-                <section class="fx-submain-timesale">
-                    <h2 class="offscreen">환율우대 타임세일</h2>
-                    <!-- to.개발 | 타임세일 진행중 case / 대기중 case는 추후 진행 예정 -->
-                    <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--ongoing">
-                        <div class="offscreen">
-                            <strong>타임세일 진행중</strong>
-                            <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
-                        </div>
-                        <div class="fx-countdown">
-                            <!-- Flip Clock -->
-                            <div class="tick-wrap">
-                                <div class="tick" data-did-init="handleTickInit">
-                                    <div data-repeat="true" data-layout="horizontal center fit"
-                                        data-transform="preset(d, h, m, s) -> delay" style="font-size: 33.6559px;">
-                                        <div class="tick-group i-colon">
-                                            <div class="inner" data-key="value" data-repeat="true"
-                                                data-transform="pad(00) -> split -> delay">
-                                                <span class="tick-flip" data-view="flip"></span>
-                                            </div>
-                                            <span data-key="label" data-view="text" class="tick-label"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //Flip Clock -->
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 부가서비스 배너 -->
-                <section class="fx-submain-service">
-                    <h2 class="offscreen">부가서비스</h2>
-                    <div class="fx-serviceslider">
-                        <div class="fx-service__item">
-                            <a href="#none" class="fx-service-rate">
-                                <strong class="service-title">환율 맞추기</strong>
-                                <span class="service-desc"><em class="bold">내일 환율</em><br>오를까 내릴까?</span>
-                            </a>
-                        </div>
-                        <div class="fx-service__item">
-                            <a href="#none" class="fx-service-community">
-                                <strong class="service-title">커뮤니티</strong>
-                                <span class="service-desc"><em class="bold">밀달활동</em> 자랑하기</span>
-                            </a>
-                        </div>
-                        <div class="fx-service__item">
-                            <a href="#none" class="fx-service-checkout">
-                                <strong class="service-title">출첵 이벤트</strong>
-                                <span class="service-desc"><em class="bold">밀달부스터</em> 증정</span>
-                            </a>
-                        </div>
-                        <div class="fx-service__item">
-                            <a href="#none" class="fx-service-challenge">
-                                <strong class="service-title">밀달챌린지 달성하면</strong>
-                                <span class="service-desc"><em class="bold">밀달배지</em> 득템</span>
-                            </a>
-                        </div>
-                        <div class="fx-service__item">
-                            <a href="#none" class="fx-service-guide">
-                                <strong class="service-title">밀달마켓은 처음이지?</strong>
-                                <span class="service-desc"><em class="bold">100% 활용</em>가이드</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 탑트레이더 랭킹 -->
-                <section class="fx-submain-toptrader">
-                    <hr class="spacer mgb120" aria-hidden="true">
-                    <div class="tit-default">
-                        <h2>탑트레이더 랭킹</h2>
-                        <a href="#none" class="button-arrow">더보기</a>
-                    </div>
-                    <div class="container mgt48">
-                        <ol class="fx-trader__wrap pdt0">
-                            <li class="fx-trader__list fx-trader__list--1st"><!-- 2022-04-13 클래스 fx-trader__list--1st 추가 -->
-                                <strong class="fx-trader__rank">1</strong>
-                                <div class="fx-trader__info">
-                                    <div class="wrap--flex">
-                                        <span class="fx-level-icon level-5"><span class="offscreen">level 5</span></span>
-                                        <span class="fx-trader__nickname">소심한단타형백억부자</span>
-                                        <div class="challenge__badge">
-                                            <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i>
-                                            <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i>
-                                            <i class="challenge-badge__item challenge-3"><span class="offscreen">환율갓</span></i>
-                                        </div>
-                                    </div>
-                                    <span class="fx-trader__sum">USD 50,000,000.00</span>
-                                </div>
-                            </li>
-                            <li class="fx-trader__list fx-trader__list--2nd"><!-- 2022-04-13 클래스 fx-trader__list--2nd 추가 -->
-                                <strong class="fx-trader__rank">2</strong>
-                                <div class="fx-trader__info">
-                                    <div class="wrap--flex">
-                                        <span class="fx-level-icon level-4"><span class="offscreen">level 4</span></span>
-                                        <span class="fx-trader__nickname">소심한단타형백억부자</span>
-                                        <div class="challenge__badge">
-                                            <i class="challenge-badge__item challenge-1"><span class="offscreen">챌린지</span></i>
-                                        </div>
-                                    </div>
-                                    <span class="fx-trader__sum">USD 49,000,000.00</span>
-                                </div>
-                            </li>
-                            <li class="fx-trader__list fx-trader__list--3rd"><!-- 2022-04-13 클래스 fx-trader__list--3rd 추가 -->
-                                <strong class="fx-trader__rank">3</strong>
-                                <div class="fx-trader__info">
-                                    <div class="wrap--flex">
-                                        <span class="fx-level-icon level-3"><span class="offscreen">level 3</span></span>
-                                        <span class="fx-trader__nickname">소심한백억부자</span>
-                                        <div class="challenge__badge">
-                                            <i class="challenge-badge__item challenge-2"><span class="offscreen">챌린지</span></i>
-                                        </div>
-                                    </div>
-                                    <span class="fx-trader__sum">USD 48,000,000.00</span>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="container mgt48">
-                        <div class="gray-box gray-box--center">랭킹 대기중입니다.</div>
-                    </div>
-                </section>
-
-                <!-- 고시환율 통화리스트 -->
-                <section class="fx-submain-rate">
-                    <h2 class="offscreen">통화별 고시환율</h2>
-                    <div class="fx-rateslider">
-                        <div class="fx-rate__item">
-                            <div class="wrap--flex">
-                                <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i> <span class="eng">USD 1232.00</span> 
-                                 <!-- to.개발 | 고시환율 표기
-                                        동일 : <em class="exr">0.00<span class="offscreen">동일</span></em>
-                                        오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
-                                        내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
-                                -->
-                                <em class="exr">0.00<span class="offscreen">동일</span></em>
-                            </div>
-                        </div>
-                        <div class="fx-rate__item">
-                            <div class="wrap--flex">
-                                <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt="유럽"></i> <span class="eng">EUR 1232.00</span>
-                                <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
-                            </div>
-                        </div>
-                        <div class="fx-rate__item">
-                            <div class="wrap--flex">
-                                <i class="icon-na"><img src="../../../images/symbols/na_JP.png" alt="일본"></i> <span class="eng">JPY 1232.00</span>
-                                <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 환율정보 -->
-                <section class="fx-submain-state">
-                    <h2 class="offscreen">환율정보</h2>
-                    <div class="container flex flex--item-c flex-align-center mgt120">
-                        <div class="button-select--fxm">
-                            <button type="button" class="button button-select__item" title="통화선택">
-                                <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
-                                <span>USD</span>
-                            </button>
-                        </div>
-                        <p class="fx-specialrate-info">Lv4 우대 <em>90%</em></p>
-                    </div>
-                    <div class="container fx-dominant">
-                        <div class="inner-wrap">
-                            <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-buy bold">살래요</em>가 더 많아요
-                            </p>
-                            <!-- <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-sell bold">팔래요</em>가 더 많아요</p> -->
-                            <div class="tooltip" data-tooltip="paragraph">
-                                <button type="button" class="tooltip__open" data-tooltip-button="open"
-                                    aria-label="$label$ 툴팁 열기"></button>
-                                <div class="tooltip__panel" data-tooltip-panel="false">
-                                    <div class="tooltip__column">
-                                        <div class="tooltip__title" data-tooltip="focus">
-                                            <p>팔래요 <em>00.00%</em> 살래요 <em>00.00%</em> (거래건수 기준)</p>
-                                        </div>
-                                    </div>
-                                    <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="fx-specialrate">
-                            <div class="fx-specialrate__item fx-specialrate__item--sell">
-                                <span class="fx-specialrate__tit">내가 <em class="txt-sell">팔면</em></span>
-                                <div class="fx-specialrate__num">
-                                    <span class="offscreen">우대율</span><strong>1,228.48</strong>
-                                </div>
-                                <div class="fx-specialrate-noti">
-                                    <em class="offscreen">고시환율</em>
-                                    <span class="fx-specialrate__amount">1,228.25</span> <em class="exr">0.00<span class="offscreen">동일</span></em>
-                                    <!-- 2022-03-31 클래스 fx-specialrate__amount 추가 -->
-                                </div>
-                            </div>
-                            <div class="fx-specialrate__item fx-specialrate__item--buy">
-                                <span class="fx-specialrate__tit">내가 <em class="txt-buy">사면</em></span>
-                                <div class="fx-specialrate__num">
-                                    <span class="offscreen">우대율</span><strong>1,232.00</strong>
-                                </div>
-                                <div class="fx-specialrate-noti">
-                                    <em class="offscreen">고시환율</em>
-                                    <span class="fx-specialrate__amount">1,232.55</span> <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
-                                    <!-- 2022-03-31 클래스 fx-specialrate__amount 추가 -->
-                                    <!-- to.개발 | 고시환율 표기
-                                    동일 : <em class="exr">0.00<span class="offscreen">동일</span>
-                                    오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span>
-                                    내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span>
-                                -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="fx-refresh fx-refresh--timesale">
-                            <div class="fx-refresh__txt align-right">
-                                <span>2022.02.20 13:14:00</span><button type="button" class="button-refresh"
-                                    aria-label="새로고침"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container mgt0">
-                        <div class="fx-rate__graph">
-                            <div style="height:9rem;background:#f0d4b4">
-                                그래프영역
-                            </div>
-                        </div>
-                        <div class="select-button fx-graph__control">
-                            <div class="select-button__box">
-                                <input type="radio" id="period01" class="select-button__input" name="period">
-                                <label for="period01" class="select-button__item">1D</label>
-                            </div>
-                            <div class="select-button__box">
-                                <input type="radio" id="period02" class="select-button__input" name="period">
-                                <label for="period02" class="select-button__item">1M</label>
-                            </div>
-                            <div class="select-button__box">
-                                <input type="radio" id="period03" class="select-button__input" name="period" checked>
-                                <label for="period03" class="select-button__item">3M</label>
-                            </div>
-                            <div class="select-button__box">
-                                <input type="radio" id="period04" class="select-button__input" name="period">
-                                <label for="period04" class="select-button__item">6M</label>
-                            </div>
-                            <div class="select-button__box">
-                                <input type="radio" id="period05" class="select-button__input" name="period">
-                                <label for="period05" class="select-button__item">1Y</label>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 뉴스 -->
-                <section class="fx-submain-news">
-                    <h2 class="offscreen">뉴스</h2>
-                    <div class="fx-newsslider">
-                        <div class="fx-news__item">
-                            <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
-                            <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
-                            <!-- to.개발 | BFXM0201010_P01 뉴스상세팝업 호출 -->
-                        </div>
-                        <div class="fx-news__item">
-                            <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
-                            <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
-                        </div>
-                        <div class="fx-news__item">
-                            <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
-                            <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <!-- //content -->
-        <!-- footer -->
-        <div id="footer" class="app-footer app-footer--button">
-            <div class="button-wrap">
-                <button type="button" class="button button--active button--span4">내역조회</button>
-                <button type="button" class="button button--positive button--span6">거래하기</button>
-            </div>
-        </div>
-        <!-- //footer -->
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">FX마켓</h1> <!-- 2022-04-22 타이틀수정 (SB_v1.3) -->
+        <button class="app-header__button app-header__button--home" title="메인화면"></button>
+        <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
     </div>
-    <!-- 공통 script -->
-    <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
-    <script src="../../../../resource/library/slick/slick.js"></script>
-    <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
-    <script src="../../../../resource/js/ui/pualugin.js"></script>
-    <script src="../../../../resource/js/ui/common.js"></script>
-    <script src="../../../../resource/js/ui/flip.min.js"></script><!-- Flip Clock JS -->
-    <script>
-        $(function () {
-            // 로드 후 환율영역 고정
-            setTimeout(function () {
-                var submainrate = $('.fx-submain-rate').offset().top,
-                    appHeader = $('.app-header').innerHeight();
-                $('body,html').animate({ scrollTop: submainrate - appHeader }, 700);
-            }, 2000)
-        })
-        // 부가서비스 배너
-        if ($('.fx-service__item').length > 1) {
-            $('.fx-serviceslider').slick({
-                dots: true,
-                infinite: true,
-                slidesToShow: 2,
-            });
-        }
+    <!-- //header -->
+    <!-- content -->
+    <div id="content" class="app-main fxmarket">
+        <div class="fx-submain">
+            <!-- 고객 정보 -->
+            <section class="fx-submain-toplink">
+                <h2 class="offscreen">나의 정보</h2>
+                <!-- to.개발 | 로그인 후 -->
+                <div class="fx-mylog">
+                    <span class="fx-level-icon level-5"><span class="offscreen">level 5</span></span>
+                    <!-- to.개발 | 등급 아이콘 클래스명 
+                        Level 1 "fx-level-icon level-1"
+                        Level 2 "fx-level-icon level-2"
+                        Level 3 "fx-level-icon level-3"
+                        Level 4 "fx-level-icon level-4"
+                        Level 5 "fx-level-icon level-5"
+                    -->
+                    <span class="fx-mylog__nickname">다동한외빌딩큰손개미</span>
+                    <!-- 2022-04-22 심화배지 클래스 변경 
+                        challenge-1 > challenge-0103 
+                        challenge-2 > challenge-0203 
+                        challenge-3 > challenge-0303 
+                    -->
+                    <div class="challenge__badge">
+                        <i class="challenge-badge__item challenge-0103"><span class="offscreen">빅핸드</span></i> <!--to.개발 | <span class="offscreen">빅핸드</span> 챌린지명 기재 -->
+                        <i class="challenge-badge__item challenge-0203"><span class="offscreen">FX인싸</span></i>
+                        <i class="challenge-badge__item challenge-0303"><span class="offscreen">환율갓</span></i>
+                    </div>
+                    <a href="#none" class="fx-mylog__link"><span class="offscreen">마이페이지 바로가기</span></a>
+                </div>
+                <div class="fx-mainset">
+                    <span class="fx-mainset__tit">메인설정</span>
+                    <label class="switch mgt0">
+                        <input type="checkbox" title="메인설정 여부">
+                        <span class="switch__toggle" aria-hidden="true"></span>
+                    </label>
+                </div>
+                <!-- to.개발 | 로그인 전 -->
+                <!-- <a href="#none" class="fx-mylog"> 
+                <span class="fx-mylog__nickname">로그인</span>
+            </a>  -->
+            </section>
 
-        // 통화별 고시환율 배너
-        if ($('.fx-rate__item').length > 1) {
-            $('.fx-rateslider').slick({
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 3000,
-                cssEase: "linear",
-                dots: false,
-                infinite: true,
-                swipe: false,
-                variableWidth: true,
-            });
-            $('.fx-rateslider')[0].slick.focussed = false;
-        }
+            <!-- 타임세일 -->
+            <!-- 2022-04-22 부가서비스 타임세일 마크업 변경 및 대기case 추가 (SB_v1.3) -->
+            <section class="fx-submain-timesale">
+                <h2 class="offscreen">환율우대 타임세일</h2>
+                <!-- to.개발 | 타임세일 진행중 case -->
+                <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--ongoing">
+                    <div class="fx-specialtime-txtbox">
+                        <h3 class="fx-specialtime__label">타임세일 <em class="fw-700">진행중</em></h3>
+                        <strong class="fx-specialtime__keytxt">환율은 타이밍!</strong>
+                        <p class="fx-specialtime__subtxt">달러쇼핑 <span class="fw-700">타이밍</span>은 지금!</p>
+                    </div>
+                    <div class="fx-specialtime-img" aria-hidden="true">
+                        <i class="img-clock"></i>
+                    </div>
+                    <div class="fx-countdown">
+                        <!-- Flip Clock -->
+                        <div class="tick-wrap">
+                            <div class="tick" data-did-init="handleTickInit">
+                                <div data-repeat="true" data-layout="horizontal center fit" data-transform="preset(d, h, m, s) -> delay" style="font-size: 33.6559px;">
+                                    <div class="tick-group i-colon">
+                                        <div class="inner" data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                            <span class="tick-flip" data-view="flip"></span>
+                                        </div>
+                                        <span data-key="label" data-view="text" class="tick-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //Flip Clock -->
+                    </div>
+                </div>
+                <!-- to.개발 | 타임세일 대기중 case -->
+                <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--waiting">
+                    <div class="fx-specialtime-txtbox">
+                        <h3 class="fx-specialtime__label">타임세일 <em class="fw-700">대기중</em></h3>
+                        <strong class="fx-specialtime__keytxt">환율은 타이밍!</strong>
+                        <p class="fx-specialtime__subtxt">달러쇼핑 <span class="fw-700">타이밍</span> 놓치지 마세요!</p>
+                    </div>
+                    <div class="fx-specialtime-img" aria-hidden="true">
+                        <i class="img-clock"></i>
+                    </div>
+                    <div class="fx-countdown">
+                        <div class="fx-countdown__txt">00월 00일 00:00 오픈</div>
+                    </div>
+                </div>
+            </section>
 
-        // 뉴스 배너
-        if ($('.fx-news__item').length > 1) {
-            $('.fx-newsslider').slick({
-                dots: false,
-                infinite: true,
-                slidesToShow: 2,
-            });
-        }
+            <!-- 부가서비스 배너 -->
+            <!-- 2022-04-22 부가서비스 배너추가 및 문구수정 (SB_v1.3) -->
+            <section class="fx-submain-service">
+                <h2 class="offscreen">부가서비스</h2>
+                <div class="fx-serviceslider">
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-rate">
+                            <strong class="service-title">환율 맞추기</strong>
+                            <span class="service-desc"><em class="bold">내일 환율</em><br>오를까 내릴까?</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item"> 
+                        <a href="#none" class="fx-service-exchange">
+                            <strong class="service-title">외화바꾸기</strong>
+                            <span class="service-desc"><em class="bold">외화끼리</em><br>사고 팔아요</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-community">
+                            <strong class="service-title">FX커뮤니티</strong>
+                            <span class="service-desc"><em class="bold">FX활동을</em><br>자랑해보세요~</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-checkout">
+                            <strong class="service-title">출첵이벤트</strong>
+                            <span class="service-desc"><em class="bold">FX부스터 받고</em><br>최고우대받고</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-challenge">
+                            <strong class="service-title">FX챌린지</strong>
+                            <span class="service-desc">#거래하기<br>#환율맞추기<br>#FX커뮤니티</span>
+                        </a>
+                    </div>
+                    <div class="fx-service__item">
+                        <a href="#none" class="fx-service-guide">
+                            <strong class="service-title">FX마켓 가이드</strong>
+                            <span class="service-desc"><em class="bold">100%</em> 활용팁</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-        //  타임세일 Flip Clock
-        function handleTickInit(tick) {
-            var locale = {
-                // YEAR_PLURAL: 'Years',
-                // YEAR_SINGULAR: 'Year',
-                // MONTH_PLURAL: 'Months',
-                // MONTH_SINGULAR: 'Month',
-                // WEEK_PLURAL: 'Weeks',
-                // WEEK_SINGULAR: 'Week',
-                DAY_PLURAL: '일',
-                DAY_SINGULAR: '일',
-                HOUR_PLURAL: '시간',
-                HOUR_SINGULAR: '시간',
-                MINUTE_PLURAL: '분',
-                MINUTE_SINGULAR: '분',
-                SECOND_PLURAL: '초',
-                SECOND_SINGULAR: '초',
-                // MILLISECOND_PLURAL: 'Milliseconds',
-                // MILLISECOND_SINGULAR: 'Millisecond'
-            };
+            <!-- 탑트레이더 랭킹 -->
+            <section class="fx-submain-toptrader">
+                <hr class="spacer mgb120" aria-hidden="true">
+                <div class="tit-default">
+                    <h2>탑트레이더 랭킹</h2>
+                    <a href="#none" class="button-arrow">더보기</a>
+                </div>
+                <div class="container mgt48">
+                    <ol class="fx-trader__wrap pdt0">
+                        <li class="fx-trader__list fx-trader__list--1st"><!-- 2022-04-13 클래스 fx-trader__list--1st 추가 -->
+                            <strong class="fx-trader__rank">1</strong>
+                            <div class="fx-trader__info">
+                                <div class="wrap--flex">
+                                    <span class="fx-level-icon level-5"><span class="offscreen">level 5</span></span>
+                                    <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                                    <!-- 2022-04-22 심화배지 클래스 변경 
+                                        challenge-1 > challenge-0103 
+                                        challenge-2 > challenge-0203 
+                                        challenge-3 > challenge-0303 
+                                    -->
+                                    <div class="challenge__badge">
+                                        <i class="challenge-badge__item challenge-0103"><span class="offscreen">빅핸드</span></i>
+                                        <i class="challenge-badge__item challenge-0203"><span class="offscreen">FX인싸</span></i>
+                                        <i class="challenge-badge__item challenge-0303"><span class="offscreen">환율갓</span></i>
+                                    </div>
+                                </div>
+                                <span class="fx-trader__sum">USD 50,000,000.00</span>
+                            </div>
+                        </li>
+                        <li class="fx-trader__list fx-trader__list--2nd"><!-- 2022-04-13 클래스 fx-trader__list--2nd 추가 -->
+                            <strong class="fx-trader__rank">2</strong>
+                            <div class="fx-trader__info">
+                                <div class="wrap--flex">
+                                    <span class="fx-level-icon level-4"><span class="offscreen">level 4</span></span>
+                                    <span class="fx-trader__nickname">소심한단타형백억부자</span>
+                                    <div class="challenge__badge">
+                                        <i class="challenge-badge__item challenge-0103"><span class="offscreen">챌린지</span></i>
+                                    </div>
+                                </div>
+                                <span class="fx-trader__sum">USD 49,000,000.00</span>
+                            </div>
+                        </li>
+                        <li class="fx-trader__list fx-trader__list--3rd"><!-- 2022-04-13 클래스 fx-trader__list--3rd 추가 -->
+                            <strong class="fx-trader__rank">3</strong>
+                            <div class="fx-trader__info">
+                                <div class="wrap--flex">
+                                    <span class="fx-level-icon level-3"><span class="offscreen">level 3</span></span>
+                                    <span class="fx-trader__nickname">소심한백억부자</span>
+                                    <div class="challenge__badge">
+                                        <i class="challenge-badge__item challenge-0203"><span class="offscreen">챌린지</span></i>
+                                    </div>
+                                </div>
+                                <span class="fx-trader__sum">USD 48,000,000.00</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="container mgt48">
+                    <div class="gray-box gray-box--center">랭킹 대기중입니다.</div>
+                </div>
+            </section>
 
-            for (var key in locale) {
-                if (!locale.hasOwnProperty(key)) { continue; }
-                tick.setConstant(key, locale[key]);
-            }
+            <!-- 고시환율 통화리스트 -->
+            <section class="fx-submain-rate">
+                <h2 class="offscreen">통화별 고시환율</h2>
+                <div class="fx-rateslider">
+                    <div class="fx-rate__item">
+                        <div class="wrap--flex">
+                            <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i> <span class="eng">USD 1232.00</span> 
+                                <!-- to.개발 | 고시환율 표기
+                                    동일 : <em class="exr"><span class="offscreen">동일</span></em>
+                                    오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
+                                    내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
+                            -->
+                            <em class="exr"><span class="offscreen">동일</span></em> <!-- 2022-04-22 환율정보 전일자와 동일할 때 0.00금액삭제 (SB_v1.3) -->
+                        </div>
+                    </div>
+                    <div class="fx-rate__item">
+                        <div class="wrap--flex">
+                            <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt="유럽"></i> <span class="eng">EUR 1232.00</span>
+                            <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
+                        </div>
+                    </div>
+                    <div class="fx-rate__item">
+                        <div class="wrap--flex">
+                            <i class="icon-na"><img src="../../../images/symbols/na_JP.png" alt="일본"></i> <span class="eng">JPY 1232.00</span>
+                            <em class="exr exr--dw">0.01<span class="offscreen">내림</span></em>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            var timeSale = '2022/06/16 09:00:00';
+            <!-- 환율정보 -->
+            <section class="fx-submain-state">
+                <h2 class="offscreen">환율정보</h2>
+                <div class="container flex flex--item-c flex-align-center mgt120">
+                    <div class="button-select--fxm">
+                        <button type="button" class="button button-select__item" title="통화선택">
+                            <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
+                            <span>USD</span>
+                        </button>
+                    </div>
+                    <p class="fx-specialrate-info">Lv4 우대 <em>90%</em></p>
+                </div>
+                <div class="container fx-dominant">
+                    <div class="inner-wrap">
+                        <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-buy bold">살래요</em>가 더 많아요
+                        </p>
+                        <!-- <p class="fx-dominant__desc">지금 <span>USD</span> <em class="txt-sell bold">팔래요</em>가 더 많아요</p> -->
+                        <div class="tooltip" data-tooltip="paragraph">
+                            <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="툴팁 열기"></button>
+                            <div class="tooltip__panel" data-tooltip-panel="false">
+                                <!-- 2022-04-22 마크업 수정 (SB_v1.3) -->
+                                <div class="tooltip__column">
+                                    <span class="tooltip__description" data-tooltip="focus">
+                                        <span class="txt-buy">살래요</span> : <em>24.45%</em> 
+                                        <span class="txt-sell">팔래요</span> : <em>75.55%</em>(거래건수 기준)
+                                    </span>
+                                </div>
+                                <!-- // 2022-04-22 마크업 수정 (SB_v1.3) -->
+                                <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="fx-specialrate">
+                        <div class="fx-specialrate__item fx-specialrate__item--sell">
+                            <span class="fx-specialrate__tit">내가 <em class="txt-sell">팔면</em></span>
+                            <div class="fx-specialrate__num">
+                                <span class="offscreen">우대율</span><strong>1,228.48</strong>
+                            </div>
+                            <div class="fx-specialrate-noti">
+                                <em class="offscreen">고시환율</em>
+                                <span class="fx-specialrate__amount">1,228.25</span> <em class="exr"><span class="offscreen">동일</span></em> <!-- 2022-04-22 환율정보 전일자와 동일할 때 0.00금액삭제 (SB_v1.3) -->
+                                <!-- 2022-03-31 클래스 fx-specialrate__amount 추가 -->
+                            </div>
+                        </div>
+                        <div class="fx-specialrate__item fx-specialrate__item--buy">
+                            <span class="fx-specialrate__tit">내가 <em class="txt-buy">사면</em></span>
+                            <div class="fx-specialrate__num">
+                                <span class="offscreen">우대율</span><strong>1,232.00</strong>
+                            </div>
+                            <div class="fx-specialrate-noti">
+                                <em class="offscreen">고시환율</em>
+                                <span class="fx-specialrate__amount">1,232.55</span> <em class="exr exr--up">0.01<span class="offscreen">오름</span></em>
+                                <!-- 2022-03-31 클래스 fx-specialrate__amount 추가 -->
+                                <!-- to.개발 | 고시환율 표기
+                                동일 : <em class="exr"><span class="offscreen">동일</span>
+                                오름 : <em class="exr exr--up">0.01<span class="offscreen">오름</span>
+                                내림 : <em class="exr exr--dw">0.01<span class="offscreen">내림</span>
+                            -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fx-refresh fx-refresh--timesale">
+                        <div class="fx-refresh__txt align-right">
+                            <span>2022.02.20 13:14:00</span><button type="button" class="button-refresh"
+                                aria-label="새로고침"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mgt0">
+                    <div class="fx-rate__graph">
+                        <div style="height:9rem;background:#f0d4b4">
+                            그래프영역
+                        </div>
+                    </div>
+                    <div class="select-button fx-graph__control">
+                        <div class="select-button__box">
+                            <input type="radio" id="period01" class="select-button__input" name="period">
+                            <label for="period01" class="select-button__item">1D</label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period02" class="select-button__input" name="period">
+                            <label for="period02" class="select-button__item">1M</label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period03" class="select-button__input" name="period" checked>
+                            <label for="period03" class="select-button__item">3M</label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period04" class="select-button__input" name="period">
+                            <label for="period04" class="select-button__item">6M</label>
+                        </div>
+                        <div class="select-button__box">
+                            <input type="radio" id="period05" class="select-button__input" name="period">
+                            <label for="period05" class="select-button__item">1Y</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            Tick.count.down(timeSale).onupdate = function (value) {
-                tick.value = value;
-            };
-        }
-    </script>
+            <!-- 뉴스 -->
+            <section class="fx-submain-news">
+                <!-- 2022-04-22 마크업 추가 (SB_v1.3) -->
+                <hr class="spacer mgb120" aria-hidden="true">
+                <div class="tit-default">
+                    <h2 class="offscreen">뉴스</h2>
+                    <a href="#none" class="button-arrow">더보기</a> <!-- 뉴스상세페이지로 이동 -->
+                </div>
+                <!-- // 2022-04-22 마크업 추가 (SB_v1.3) -->
+                <div class="fx-newsslider">
+                    <div class="fx-news__item">
+                        <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
+                        <!-- to.개발 | BFXM0201010_P01 뉴스상세팝업 호출 -->
+                    </div>
+                    <div class="fx-news__item">
+                        <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
+                    </div>
+                    <div class="fx-news__item">
+                        <strong class="news-title">타이틀은 최대 두줄입니다.두줄 이상시 말줄임처리됩니다.</strong>
+                        <button type="button" class="btn-newsmore"><span class="offscreen">뉴스상세보기</span></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- //content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+            <button type="button" class="button button--active button--span4">내역조회</button>
+            <button type="button" class="button button--positive button--span6"><i class="icon-cart" aria-hidden="true"></i> 거래하기</button> <!-- 2022-04-22 장바구니 아이콘 추가 (SB_v1.3) -->
+        </div>
+    </div>
+    <!-- //footer -->
+</div>
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script src="../../../../resource/js/ui/flip.min.js"></script><!-- Flip Clock JS -->
+<script>
+$(function () {
+    // 로드 후 환율영역 고정
+    setTimeout(function () {
+        var submainrate = $('.fx-submain-rate').offset().top,
+            appHeader = $('.app-header').innerHeight();
+        $('body,html').animate({ scrollTop: submainrate - appHeader }, 700);
+    }, 2000)
+})
+// 2022-04-22 부가서비스 자동롤링 적용 (SB_v1.3) 
+if($('.fx-service__item').length > 1){
+    $('.fx-serviceslider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 2,
+        autoplay:true,
+        autoplaySpeed: 3000,
+    });
+    $('.fx-serviceslider')[0].slick.focussed = false;
+}
+
+// 통화별 고시환율 배너
+if ($('.fx-rate__item').length > 1) {
+    $('.fx-rateslider').slick({
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 3000,
+        cssEase: "linear",
+        dots: false,
+        infinite: true,
+        swipe: false,
+        variableWidth: true,
+    });
+    $('.fx-rateslider')[0].slick.focussed = false;
+}
+
+// 뉴스 배너
+if ($('.fx-news__item').length > 1) {
+    $('.fx-newsslider').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 2,
+    });
+}
+
+//  타임세일 Flip Clock
+function handleTickInit(tick) {
+    var locale = {
+        // YEAR_PLURAL: 'Years',
+        // YEAR_SINGULAR: 'Year',
+        // MONTH_PLURAL: 'Months',
+        // MONTH_SINGULAR: 'Month',
+        // WEEK_PLURAL: 'Weeks',
+        // WEEK_SINGULAR: 'Week',
+        DAY_PLURAL: '일',
+        DAY_SINGULAR: '일',
+        HOUR_PLURAL: '시간',
+        HOUR_SINGULAR: '시간',
+        MINUTE_PLURAL: '분',
+        MINUTE_SINGULAR: '분',
+        SECOND_PLURAL: '초',
+        SECOND_SINGULAR: '초',
+        // MILLISECOND_PLURAL: 'Milliseconds',
+        // MILLISECOND_SINGULAR: 'Millisecond'
+    };
+
+    for (var key in locale) {
+        if (!locale.hasOwnProperty(key)) { continue; }
+        tick.setConstant(key, locale[key]);
+    }
+
+    var timeSale = '2022/06/16 09:00:00';
+
+    Tick.count.down(timeSale).onupdate = function (value) {
+        tick.value = value;
+    };
+}
+</script>
 </body>
 
 </html>
