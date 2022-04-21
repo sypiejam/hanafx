@@ -692,7 +692,7 @@
 .fx-specialtime__keyvisual--waiting .fx-specialtime__subtxt .fw-700 {color:#fd1a69;}
 .fx-specialtime__keyvisual--ongoing .fx-specialtime-img .img-clock {display:block;width:11.5rem;height:9.063rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_timesale_clock_ongoing.png) no-repeat 0 0 / 100%;}
 .fx-specialtime__keyvisual--waiting .fx-specialtime-img .img-clock {display:block;width:14.438rem;height:7.688rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_timesale_clock_waiting.png) no-repeat 0 0 / 100%;}
-.fx-specialtime-img {margin-top:1rem;}
+.fx-specialtime-img {position:relative;padding-top:1rem;}
 .fx-countdown {width:17.875rem;margin:0.5rem auto 0;}
 .fx-countdown .i-colon {position:relative;height:100%;}
 .fx-countdown .i-colon::before,
@@ -705,7 +705,50 @@
 .fx-countdown .tick-label,
 .fx-countdown .tick-credits {display:none !important;}
 .fx-countdown__txt {height:2.938rem;display:flex;justify-content:center;align-items:center;background:#fff;border-radius:0.938rem;font-size:1.375rem;font-weight:700;color:#e81f65;text-align:center;}
-
+.ani-clock-box {
+    -webkit-animation-name:clockpush;animation-name:clockpush;
+    -webkit-animation-duration:1s;animation-duration:1s;
+    -webkit-animation-fill-mode:both;animation-fill-mode:both;
+    -webkit-animation-iteration-count:1;animation-iteration-count:1;
+}
+.ani-clock-box {z-index:10;position:relative;display:block;width:6.313rem;height:7.375rem;margin:2rem auto 0;-webkit-transform-origin:center bottom;transform-origin:center bottom;}
+.ani-clock {display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_ani_timesale_clock.png) no-repeat 0 0 / 100%;
+    -webkit-animation-name:shake;animation-name:shake;
+    -webkit-animation-duration:0.5s;animation-duration:0.5s;
+    -webkit-animation-fill-mode:both;animation-fill-mode:both;
+    -webkit-animation-delay:1.8s;animation-delay:1.8s;
+    -webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;
+}
+@keyframes shake {
+    0% {transform: translate(0);}
+	20% {transform: translate(-2px, 2px);}
+	40% {transform: translate(-2px, -2px);}
+	60% {transform: translate(2px, 2px);}
+	80% {transform: translate(2px, -2px);}
+	100% {transform: translate(0);}
+}
+@keyframes clockpush {
+    0% {transform: scale(0,0) translate(0,0);}
+    20% {transform: scale(1,1) translate(0,0);}
+    50% {transform: scale(1.4,0.7) translate(0,0);}
+    80% {transform: scale(1,1.2) translate(0,-2rem);}
+    100% {transform: scale(1,1) translate(0,0);}
+}
+.ani-thunder {position:absolute;top:1rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;-webkit-transform:scale(0);transform:scale(0);}
+.ani-thunder--beat {
+    -webkit-animation-name:beat;animation-name:beat;
+    -webkit-animation-duration:1.6s;animation-duration:1.6s;
+    -webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;
+    -webkit-animation-delay:1.6s;animation-delay:1.6s;
+    -webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;
+}
+@keyframes beat {
+    from, 10% {-webkit-transform:scale(0);transform:scale(0);}
+    20% {-webkit-transform:scale(1);transform:scale(1);}
+    30%, 50%, 70%, 90% {-webkit-transform:scale(1.3);transform:scale(1.3);}
+    40%, 60%, 80%  {-webkit-transform:scale(1);transform:scale(1);}
+    to {-webkit-transform:scale(1);transform:scale(1);}
+}
 /* 부가서비스 - 타임세일 : 환율정보 영역 */
 .fxmarket .txt-buy {color:#139be5;}
 .fxmarket .txt-sell {color:#fa1036;}
