@@ -712,7 +712,7 @@
     -webkit-animation-iteration-count:1;animation-iteration-count:1;
 }
 .ani-clock-box {z-index:10;position:relative;display:block;width:6.313rem;height:7.375rem;margin:2rem auto 0;-webkit-transform-origin:center bottom;transform-origin:center bottom;}
-.ani-clock {display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_ani_timesale_clock.png) no-repeat 0 0 / 100%;
+.ani-clock {display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_ani_timesale_clock.png) no-repeat 0 0 / 100%;
     -webkit-animation-name:shake;animation-name:shake;
     -webkit-animation-duration:0.5s;animation-duration:0.5s;
     -webkit-animation-fill-mode:both;animation-fill-mode:both;
@@ -734,7 +734,7 @@
     80% {transform: scale(1,1.2) translate(0,-2rem);}
     100% {transform: scale(1,1) translate(0,0);}
 }
-.ani-thunder {position:absolute;top:1rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;-webkit-transform:scale(0);transform:scale(0);}
+.ani-thunder {position:absolute;top:1rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;-webkit-transform:scale(0);transform:scale(0);}
 .ani-thunder--beat {
     -webkit-animation-name:beat;animation-name:beat;
     -webkit-animation-duration:1.6s;animation-duration:1.6s;
