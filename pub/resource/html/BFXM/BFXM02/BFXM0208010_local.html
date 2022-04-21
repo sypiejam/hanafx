@@ -14,12 +14,12 @@
 <link rel="stylesheet" href="../../../../resource/css/flip.css" type="text/css"><!-- Flip Clock CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
-    .fx-specialtime__keyvisual--ongoing {background-image:url(../../../../resource/images/fxmarket/bg_timesale_ongoing.png);}
-    .ani-clock {position:absolute;top:50px;left:80px;
-        display:block;width:53px;height:62px;background:url(../../../../resource/images/fxmarket/img_ani_timesale_clock.png) no-repeat 0 0 / 100%;
+    .ani-clock-box {-webkit-animation:none;animation:none;}
+    .ani-clock {
         -webkit-animation-name:shake;animation-name:shake;
         -webkit-animation-duration:1.6s;animation-duration:1.6s;
         -webkit-animation-fill-mode:both;animation-fill-mode:both;
+        -webkit-animation-delay: initial;animation-delay: initial;
         -webkit-animation-iteration-count:infinite;animation-iteration-count:infinite; 
     }
     @keyframes shake {
@@ -29,14 +29,12 @@
         40%, 60%, 80% {-webkit-transform:scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);transform:scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
         to {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);} 
     }
-
-    .ani-thunder {position:absolute;top:20px;left:39px;
-        display:block;width:118px;height:73px;background:url(../../../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;
-    }
+    .ani-thunder {-webkit-transform:scale(1);transform:scale(1);}
     .ani-thunder--beat {
         -webkit-animation-name:beat;animation-name:beat;
         -webkit-animation-duration:1.6s;animation-duration:1.6s;
         -webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;
+        -webkit-animation-delay: initial;animation-delay: initial;
         -webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;
     }
     @keyframes beat {
@@ -88,16 +86,18 @@
     <div id="content" class="app-main fxmarket">
         <!-- 부가서비스 : 타임세일 -->
         <div class="fx-service fx-specialtime">
+            <!-- 2022-04-22 부가서비스 타임세일 마크업 변경 및 대기case 추가 (SB_v1.3) -->
             <div class="fx-service__keyvisual fx-service__keyvisual--specialtime">
                 <!-- 진행중 -->
                 <div class="fx-specialtime__keyvisual fx-specialtime__keyvisual--ongoing">
-
-                    <i class="ani-clock"></i>
-                    <i class="ani-thunder ani-thunder--beat"></i>
-
-                    <div class="offscreen">
-                        <strong>타임세일 진행중</strong>
-                        <p>중요한건 타이밍, 기회는 지금! 놓치지 마세요!</p>
+                    <div class="fx-specialtime-txtbox">
+                        <h3 class="fx-specialtime__label">타임세일 <em class="fw-700">진행중</em></h3>
+                        <strong class="fx-specialtime__keytxt">환율은 타이밍!</strong>
+                        <p class="fx-specialtime__subtxt">달러쇼핑 <span class="fw-700">타이밍</span>은 지금!</p>
+                    </div>
+                    <div class="fx-specialtime-img" aria-hidden="true">
+                        <span class="ani-clock-box"><i class="ani-clock"></i></span>
+                        <i class="ani-thunder ani-thunder--beat"></i>
                     </div>
                     <div class="fx-countdown">
                         <!-- Flip Clock -->
@@ -118,6 +118,7 @@
                 </div>
                 <!-- //진행중 -->
             </div>
+            <!-- // 2022-04-22 부가서비스 타임세일 마크업 변경 및 대기case 추가 (SB_v1.3) -->
 
             <div class="container flex flex--item-c flex-align-center mgt120">
                 <div class="button-select--fxm">
