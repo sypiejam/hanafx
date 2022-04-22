@@ -838,7 +838,7 @@
 @media (max-width: 360px) { 
     .fx-mylog__nickname {font-size:0.813rem;} 
 }
-.button-wrap .icon-cart {display:inline-block;width:1.188rem;height:1.063rem;margin-right:0.125rem;background:url(../../resource/images/fxmarket/icon_cart.png) no-repeat 0 0 / 100%;vertical-align:middle}
+.button-wrap .icon-cart {display:inline-block;width:1.188rem;height:1.063rem;margin-right:0.125rem;background:url(../../resource/images/fxmarket/icon_cart.png) no-repeat 0 0 / 100%;vertical-align:top;}
 
 /* 환율예측 */
 .fx-service__keyvisual--forecast {position:relative;height:68vw;background:url(../../resource/images/fxmarket/dummy_keyvisual_predict.png) no-repeat 0 0 / 100%;} 
