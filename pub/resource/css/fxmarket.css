@@ -714,7 +714,7 @@
 }
 @keyframes shake {
     from {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
-    12%, 24% {-webkit-transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);}
+    12%, 24% {-webkit-transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 0deg);transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 0);}
     36%, 60%, 84% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);}
     48%{-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);}
     72%, 96%, 100% {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);} 
@@ -728,7 +728,8 @@
     -webkit-animation-iteration-count:2;animation-iteration-count:2;
 }
 @keyframes beat {
-    from, 24% {-webkit-transform:scale(1);transform:scale(1);}
+    from {-webkit-transform:scale(1);transform:scale(1);}
+    12%, 24% {-webkit-transform:scale(0.9);transform:scale(0.9);}
     36%, 60%, 84% {-webkit-transform:scale(1.2);transform:scale(1.2);}
     48%, 72%, 96%, 100% {-webkit-transform:scale(1);transform:scale(1);}
 }
