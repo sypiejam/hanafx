@@ -710,28 +710,27 @@
     -webkit-animation-name:shake;animation-name:shake;
     -webkit-animation-duration:2s;animation-duration:2s;
     -webkit-animation-fill-mode:both;animation-fill-mode:both;
-    -webkit-animation-iteration-count:2;animation-iteration-count:2; 
+    -webkit-animation-iteration-count:3;animation-iteration-count:3; 
 }
 @keyframes shake {
     from {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
-    10%, 20% {-webkit-transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);}
-    30%, 50%, 70%, 90% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);}
-    40%, 60%, 80% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);}
-    to {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);} 
+    12%, 24% {-webkit-transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);}
+    36%, 60%, 84% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);}
+    48%{-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);}
+    72%, 96%, 100% {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);} 
 }
 .ani-thunder {position:absolute;top:0.5rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;-webkit-transform:scale(0);transform:scale(0);}
 .ani-thunder--beat {
     -webkit-animation-name:beat;animation-name:beat;
     -webkit-animation-duration:2s;animation-duration:2s;
     -webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;
-    -webkit-animation-iteration-count:2;animation-iteration-count:2;
+    -webkit-animation-fill-mode:both;animation-fill-mode:both;
+    -webkit-animation-iteration-count:3;animation-iteration-count:3;
 }
 @keyframes beat {
-    from {-webkit-transform:scale(1);transform:scale(1);}
-    10%, 20% {-webkit-transform:scale(1);transform:scale(1);}
-    30%, 50%, 70%, 90% {-webkit-transform:scale(1.2);transform:scale(1.2);}
-    40%, 60%, 80%  {-webkit-transform:scale(1);transform:scale(1);}
-    to {-webkit-transform:scale(1);transform:scale(1);}
+    from, 24% {-webkit-transform:scale(1);transform:scale(1);}
+    36%, 60%, 84% {-webkit-transform:scale(1.2);transform:scale(1.2);}
+    48%, 72%, 96%, 100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 /* 부가서비스 - 타임세일 : 환율정보 영역 */
 .fxmarket .txt-buy {color:#139be5;}
