@@ -710,7 +710,7 @@
     -webkit-animation-name:shake;animation-name:shake;
     -webkit-animation-duration:2s;animation-duration:2s;
     -webkit-animation-fill-mode:both;animation-fill-mode:both;
-    -webkit-animation-iteration-count:3;animation-iteration-count:3; 
+    -webkit-animation-iteration-count:2;animation-iteration-count:2; 
 }
 @keyframes shake {
     from {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
@@ -725,7 +725,7 @@
     -webkit-animation-duration:2s;animation-duration:2s;
     -webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;
     -webkit-animation-fill-mode:both;animation-fill-mode:both;
-    -webkit-animation-iteration-count:3;animation-iteration-count:3;
+    -webkit-animation-iteration-count:2;animation-iteration-count:2;
 }
 @keyframes beat {
     from, 24% {-webkit-transform:scale(1);transform:scale(1);}
