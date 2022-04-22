@@ -681,6 +681,7 @@
 .fx-specialtime__keyvisual--waiting {background:linear-gradient(top, #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%);background:-webkit-linear-gradient(top, #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%);}
 .fx-specialtime__label {position:relative;display:inline-block;height:1.875rem;padding:0 0.75rem;border-radius:1.25rem;font-size:1.125rem;}
 .fx-specialtime__label:after {content:'';display:inline-block;width:0.688rem;height:1.188rem;margin:0.25rem 0 0 0.5rem;vertical-align:top;}
+.fx-specialtime-img .img-clock {display:block;height:9.063rem;margin:0 auto;background-position:0 0;background-repeat:no-repeat;background-size:100%;}
 .fx-specialtime__keyvisual--ongoing .fx-specialtime__label:after {background:url(../../resource/images/fxmarket/icon_lightning_red.png) no-repeat 0 0 / 100%;}
 .fx-specialtime__keyvisual--ongoing .fx-specialtime__label {border:1px solid #e81f65;color:#e81f65;}
 .fx-specialtime__keyvisual--waiting .fx-specialtime__label:after {background:url(../../resource/images/fxmarket/icon_lightning_gray.png) no-repeat 0 0 / 100%;}
@@ -690,10 +691,10 @@
 .fx-specialtime__subtxt {font-size:1.375rem;line-height:1.3;}
 .fx-specialtime__keyvisual--ongoing .fx-specialtime__subtxt .fw-700 {color:#009591;}
 .fx-specialtime__keyvisual--waiting .fx-specialtime__subtxt .fw-700 {color:#fd1a69;}
-.fx-specialtime__keyvisual--ongoing .fx-specialtime-img .img-clock {display:block;width:11.5rem;height:9.063rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_timesale_clock_ongoing.png) no-repeat 0 0 / 100%;}
-.fx-specialtime__keyvisual--waiting .fx-specialtime-img .img-clock {display:block;width:14.438rem;height:7.688rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_timesale_clock_waiting.png) no-repeat 0 0 / 100%;}
+.fx-specialtime__keyvisual--ongoing .fx-specialtime-img .img-clock {width:11.5rem;background-image:url(../../resource/images/fxmarket/img_timesale_clock_ongoing.png);}
+.fx-specialtime__keyvisual--waiting .fx-specialtime-img .img-clock {width:14.438rem;background-image:url(../../resource/images/fxmarket/img_timesale_clock_waiting.png);}
 .fx-specialtime-img {position:relative;padding-top:1rem;}
-.fx-countdown {width:17.875rem;margin:0.5rem auto 0;}
+.fx-countdown {width:17.875rem;min-height:2.813rem;margin:0.5rem auto 0;}
 .fx-countdown .i-colon {position:relative;height:100%;}
 .fx-countdown .i-colon::before,
 .fx-countdown .i-colon::after {content:'';position:absolute;top:37%;right:-0.688rem;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:block;width:0.188rem;height:0.188rem;border-radius:50%;background:#000;}
@@ -704,7 +705,7 @@
 .fx-countdown .tick-group:first-child,
 .fx-countdown .tick-label,
 .fx-countdown .tick-credits {display:none !important;}
-.fx-countdown__txt {height:2.938rem;display:flex;justify-content:center;align-items:center;background:#fff;border-radius:0.938rem;font-size:1.375rem;font-weight:700;color:#e81f65;text-align:center;}
+.fx-countdown__txt {height:2.813rem;display:flex;justify-content:center;align-items:center;background:#fff;border-radius:0.938rem;font-size:1.375rem;font-weight:700;color:#e81f65;text-align:center;}
 .ani-clock {display:block;width:6.313rem;height:7.375rem;margin:1.25rem auto 0;background:url(../../resource/images/fxmarket/img_ani_timesale_clock.png) no-repeat 0 0 / 100%;
     -webkit-animation-name:shake;animation-name:shake;
     -webkit-animation-duration:1.8s;animation-duration:1.8s;
