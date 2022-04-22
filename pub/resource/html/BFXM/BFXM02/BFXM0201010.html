@@ -337,6 +337,10 @@ if($('.fx-service__item').length > 1){
     });
     $('.fx-serviceslider')[0].slick.focussed = false;
 }
+// 스크롤시 자동롤링 멈추는 문제
+$('.fx-serviceslider').on('touchcancel touchmove', function(){
+    $('.fx-serviceslider').slick('slickPlay');
+});
 
 // 통화별 고시환율 배너
 if($('.fx-rate__item').length > 1){
