@@ -238,6 +238,15 @@
 .fx-mybadge__icon--07 {background-position:0 -332px;}
 .fx-mybadge__icon--08 {width:81px;background-position:-91px -332px;}
 .fx-mybadge__icon--09 {background-position:-183px -332px;}
+.fx-mybadge__icon--0101 {background-position:0 0;}
+.fx-mybadge__icon--0102 {width:81px;background-position:-91px 0;}
+.fx-mybadge__icon--0103 {background-position:-183px 0;}
+.fx-mybadge__icon--0201 {background-position:0 -160px;}
+.fx-mybadge__icon--0202 {width:81px;background-position:-91px -160px;}
+.fx-mybadge__icon--0203 {background-position:-183px -160px;}
+.fx-mybadge__icon--0301 {background-position:0 -332px;}
+.fx-mybadge__icon--0302 {width:81px;background-position:-91px -332px;}
+.fx-mybadge__icon--0303 {background-position:-183px -332px;}
 .fx-mybox {margin-top:2rem;}
 .fx-mybox__wrap {display:flex;justify-content:space-between;align-items:center;margin:0 -0.813rem;}
 .fx-mybox__item {position:relative;flex:1;text-align:center;}
@@ -936,6 +945,7 @@
 /* odometer css */
 .odometer.odometer-auto-theme, 
 .odometer.odometer-theme-minimal {position:relative;display:inline-block;vertical-align:middle;} 
+
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-minimal {display:inline;}
 .odometer.odometer-auto-theme .odometer-digit,
