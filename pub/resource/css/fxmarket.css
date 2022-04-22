@@ -707,28 +707,28 @@
 .fx-countdown__txt {height:2.938rem;display:flex;justify-content:center;align-items:center;background:#fff;border-radius:0.938rem;font-size:1.375rem;font-weight:700;color:#e81f65;text-align:center;}
 .ani-clock {display:block;width:6.313rem;height:7.375rem;margin:1.25rem auto 0;background:url(../../resource/images/fxmarket/img_ani_timesale_clock.png) no-repeat 0 0 / 100%;
     -webkit-animation-name:shake;animation-name:shake;
-    -webkit-animation-duration:2s;animation-duration:2s;
+    -webkit-animation-duration:1.8s;animation-duration:1.8s;
     -webkit-animation-fill-mode:both;animation-fill-mode:both;
     -webkit-animation-iteration-count:2;animation-iteration-count:2; 
 }
 @keyframes shake {
     from {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
     10%, 20% {-webkit-transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);transform:scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, -3deg);}
-    30%, 50%, 70%, 90% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 9deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 9deg);}
+    30%, 50%, 70%, 90% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, 12deg);}
     40%, 60%, 80% {-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);}
     to {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);} 
 }
 .ani-thunder {position:absolute;top:0.5rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;-webkit-transform:scale(0);transform:scale(0);}
 .ani-thunder--beat {
     -webkit-animation-name:beat;animation-name:beat;
-    -webkit-animation-duration:2s;animation-duration:2s;
+    -webkit-animation-duration:1.8s;animation-duration:1.8s;
     -webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;
     -webkit-animation-iteration-count:2;animation-iteration-count:2;
 }
 @keyframes beat {
     from {-webkit-transform:scale(1);transform:scale(1);}
     10%, 20% {-webkit-transform:scale(1);transform:scale(1);}
-    30%, 50%, 70%, 90% {-webkit-transform:scale(1.1);transform:scale(1.1);}
+    30%, 50%, 70%, 90% {-webkit-transform:scale(1.2);transform:scale(1.2);}
     40%, 60%, 80%  {-webkit-transform:scale(1);transform:scale(1);}
     to {-webkit-transform:scale(1);transform:scale(1);}
 }
