@@ -12,31 +12,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-.fx-service__keyvisual {position:relative;}
-.txt-wrap {position:absolute;bottom:85px;left:0;right:0;}
-.txt-h1 {text-align:center;}
-.txt-h1 span {
-  position:relative;top:20px;display:inline-block;width:29px;height:29px;margin-left:3px;
-  animation:bounce .3s ease infinite alternate;
-  font-size:28px;color:transparent;text-shadow:0 10px 10px rgba(0, 0, 0, .4);
-}
-.txt-h1 span:nth-child(1) {margin:0;background:url(../../../../resource/images/fxmarket/txt_community_split01.png) no-repeat 0 0 / 100%;}
-.txt-h1 span:nth-child(2) {background:url(../../../../resource/images/fxmarket/txt_community_split02.png) no-repeat 0 0 / 100%;animation-delay:.1s;}
-.txt-h1 span:nth-child(3) {margin-left:10px;background:url(../../../../resource/images/fxmarket/txt_community_split01.png) no-repeat 0 0 / 100%;animation-delay:.2s;}
-.txt-h1 span:nth-child(4) {background:url(../../../../resource/images/fxmarket/txt_community_split03.png) no-repeat 0 0 / 100%;animation-delay:.3s;}
-.txt-h1 span:nth-child(5) {width:31px;background:url(../../../../resource/images/fxmarket/txt_community_split04.png) no-repeat 0 0 / 100%;animation-delay:.4s;}
-.txt-h1 span:nth-child(6) {width:8px;background:url(../../../../resource/images/fxmarket/txt_community_split05.png) no-repeat 0 0 / 100%;animation-delay:.5s;}
-/* .txt-h1 span:nth-child(7) { animation-delay: .6s; }
-.txt-h1 span:nth-child(8) { animation-delay: .7s; } */
-
-@keyframes bounce {
-  100% {
-    top: -15px;
-    text-shadow: 0 50px 25px rgba(0, 0, 0, .2);
-  }
-}
-</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -54,11 +29,6 @@
         <div class="fx-service fx-community">
             <!-- 디자인 변경 및 애니메이션 작업 예정 -->
             <div class="fx-service__keyvisual fx-service__keyvisual--community">
-                <div class="txt-wrap">
-                    <div class="txt-h1">
-                        <span>모</span><span>두</span><span>모</span><span>여</span><span>라</span><span>!</span>
-                    </div>
-                </div>
                 <div class="offscreen">
                     <strong>모두 모여라!</strong> 
                     <p>FX커뮤니티에 자랑해</p>
@@ -74,7 +44,6 @@
                     <div class="fx-commlist__item">
                         <article class="fx-boast">
                             <div class="fx-boast-head">
-                                <!-- 등급 및 챌린지 아이콘 디자인 미정 -->
                                 <span class="fx-level-icon level-1"><span class="offscreen">level 1</span></span>
                                 <!-- to.개발 | 등급 아이콘 클래스명 
                                     Level 1 "fx-level-icon level-1"
@@ -84,18 +53,22 @@
                                     Level 5 "fx-level-icon level-5"
                                 -->
                                 <em class="fx-boast__nickname">소심한단타형백억부자</em>
+                                <!-- 2022-04-29 심화배지 클래스 변경 
+                                    challenge-1 > challenge-0103 
+                                    challenge-2 > challenge-0203 
+                                    challenge-3 > challenge-0303 
+                                -->
                                 <div class="challenge__badge">
-                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i><!-- D : 개발시 해당챌린지명 기재 -->
-                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i>
-                                    <i class="challenge-badge__item challenge-3"><span class="offscreen">환율갓</span></i>
+                                    <i class="challenge-badge__item challenge-0103"><span class="offscreen">빅핸드</span></i>
+                                    <i class="challenge-badge__item challenge-0203"><span class="offscreen">FX인싸</span></i>
+                                    <i class="challenge-badge__item challenge-0303"><span class="offscreen">환율갓</span></i>
                                 </div>
-                                <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
                             <div class="fx-boast-cont">
                                 <div class="fx-boast__tit fx-boast__tit--toptrader">
                                     <em class="offscreen">탑트레이더</em>
                                 </div>
-                                <span class="fx-boast__img fx-boast__img--toptrader" aria-hidden="true"></span>
+                                <img src="../../../../resource/images/fxmarket/img_toptrader_level1.png" alt="" class="fx-boast__img"><!-- 2022-04-29 마크업 수정 : span => img 태그로 변경 -->
                                 <div class="inner-txt align-center">
                                     <strong class="fx-boast__txt">따라올테면 따라와봐.</strong>
                                     <span class="fx-boast__subtxt">나의 랭킹 <em class="num">156</em>위</span>
@@ -210,7 +183,7 @@
                                 <span class="fx-level-icon level-2"><span class="offscreen">level 2</span></span><!-- D : 개발시 유저등급 기재 -->
                                 <em class="fx-boast__nickname">내일의 왕</em>
                                 <div class="challenge__badge">
-                                    <i class="challenge-badge__item challenge-2"><span class="offscreen">FX인싸</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                    <i class="challenge-badge__item challenge-0203"><span class="offscreen">FX인싸</span></i><!-- D : 개발시 해당챌린지명 기재 -->
                                 </div>
                                 <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
@@ -218,9 +191,9 @@
                                 <div class="fx-boast__tit fx-boast__tit--forecast">
                                     <em class="offscreen">환율예측</em>
                                 </div>
-                                <span class="fx-boast__img fx-boast__img--forecast" aria-hidden="true"></span>
+                                <img src="../../../../resource/images/fxmarket/img_ratepredict_level2.png" alt="" class="fx-boast__img"><!-- 2022-04-29 마크업 수정 : span => img 태그로 변경 -->
                                 <div class="inner-txt align-center">
-                                    <strong class="fx-boast__txt">비트코인 물럿거라!</strong>
+                                    <strong class="fx-boast__txt">백발백중 환율찍신!</strong>
                                     <span class="fx-boast__subtxt">나의 예지력 <em class="num">90</em>%</span>
                                 </div>
                                 <p class="fx-boast__mymemo">
@@ -331,7 +304,7 @@
                                 <span class="fx-level-icon level-3"><span class="offscreen">level 3</span></span><!-- D : 개발시 유저등급 기재 -->
                                 <em class="fx-boast__nickname">큰손개미</em>
                                 <div class="challenge__badge">
-                                    <i class="challenge-badge__item challenge-1"><span class="offscreen">빅핸드</span></i><!-- D : 개발시 해당챌린지명 기재 -->
+                                    <i class="challenge-badge__item challenge-0103"><span class="offscreen">빅핸드</span></i><!-- D : 개발시 해당챌린지명 기재 -->
                                 </div>
                                 <!-- //등급 및 챌린지 아이콘 디자인 미정 -->
                             </div>
@@ -339,7 +312,7 @@
                                 <div class="fx-boast__tit fx-boast__tit--challenge">
                                     <em class="offscreen">챌린지</em>
                                 </div>
-                                <span class="fx-boast__img fx-boast__img--challenge" aria-hidden="true"></span>
+                                <img src="../../../../resource/images/fxmarket/img_badge_0103.png" alt="" class="fx-boast__img"><!-- 2022-04-29 마크업 수정 : span => img 태그로 변경 -->
                                 <div class="inner-txt align-center">
                                     <span class="fx-boast__subtxt">누적거래금액</span>
                                     <strong class="fx-boast__txt"><em>USD</em> <em>50,000</em> 이상 달성</strong>
