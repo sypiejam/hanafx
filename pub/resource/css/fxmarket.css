@@ -896,7 +896,7 @@
 .fx-boastslider .slick-prev {left:0;-webkit-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg);}
 .fx-boastslider .slick-next {right:0;}
 .fx-boastslider .slick-disabled {opacity:0.3;}
-.fx-boastslider .input__error {position:absolute;}
+.fx-boast__contents .input--error .input__error {position:absolute;}
 .fx-boast__img--predictorlv1 {background-image:url(../../resource/images/fxmarket/img_boast_toptrader.png);}
 .fx-boast__img--predictorlv2 {background-image:url(../../resource/images/fxmarket/img_boast_challenge.png);}
 .fx-boast__img--predictorlv3 {background-image:url(../../resource/images/fxmarket/img_boast_forecast.png);}
