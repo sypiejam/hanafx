@@ -337,7 +337,7 @@
 .fx-trader__list--1st {border-color:#e1cc9e;}
 .fx-trader__list--2nd {border-color:#adadc8;}
 .fx-trader__list--3rd {border-color:#a8d9e2;}
-.fx-trader__list .fx-level-icon {width:1.438rem;height:0.938rem;margin-top:-0.25rem;}
+.fx-trader__list .fx-level-icon {width:1.438rem;height:0.938rem;}
 .fx-trader__rank {position:relative;display:flex;justify-content:center;align-items:center;width:3.5rem;font-weight:500;font-size:1.5rem;color:#fff;}
 .fx-trader__rank::before {content:'';z-index:-1;position:absolute;top:-1px;bottom:-1px;left:-1px;width:100%;border-radius:0.75rem 0 0 0.75rem;background:#c6c6c6;}
 .fx-trader__list--1st .fx-trader__rank::before {background:#f7b21f;}
