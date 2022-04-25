@@ -871,7 +871,7 @@
 .fx-predict .btn-share {margin-left:auto;}
 .fx-predict .btn-share:before {content:none;}
 .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url(../../resource/images/C/icon_share.png) 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
-.fx-predict .fx-level-icon {width:1.813rem;height:1rem;margin:-0.313rem 0.5rem 0 0;text-align:center;}
+.fx-predict .fx-level-icon {width:1.813rem;height:1rem;margin:-0.25rem 0.5rem 0 0;text-align:center;}
 .fx-calendar {margin-top:0.5rem;}
 .fx-calendar .fx-calendar__th {padding:0.625rem 0;border-top:1px solid #e5e5e7;border-bottom:1px solid #d9d9d9;background:#f2f2f4;font-size:0.875rem;}
 .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
