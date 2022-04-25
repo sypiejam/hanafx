@@ -122,81 +122,11 @@
     <!-- //footer -->
 </div>
 
-<!-- 2022-04-18 공유하기 레이어 추가(SB_v1.0.02) -->
-<div id="boastpopup" class="modal modal--confirm" data-element="modal__element">
-    <div class="modal__container modal__container--interval" data-element="modal__element-container">
-        <div class="modal__header">
-            <h1 class="modal__header--title">거래하기</h1>
-        </div>
-        <div class="modal__contents fx-boast__contents">
-            <div class="fx-boastslider" data-slider="arrow1">
-                <div class="fx-boast">
-                    <!-- to.개발 | 이미지별 클래스 (팝업 내 컨텐츠 미정, 추후 변경예정)
-                        1) 오늘저녁은 한우다 fx-boast__img--tradelv1
-                        2) 치킨은 4달라! fx-boast__img--tradelv2
-                        3) 달러쇼핑! 오늘도 득템! fx-boast__img--tradelv3
-                    -->
-                    <span class="fx-boast__img fx-boast__img--tradelv1" aria-hidden="true"></span>
-                    <div class="inner-txt align-center">
-                        <strong class="fx-boast__txt">오늘 저녁은 한우다!</strong>
-                        <span class="fx-boast__subtxt"><em class="num"><span>USD 300</span> <span>1,180.01</span></em> 매수</span>
-                    </div>
-                </div>
-                <div class="fx-boast">
-                    <span class="fx-boast__img fx-boast__img--tradelv2" aria-hidden="true"></span>
-                    <div class="inner-txt align-center">
-                        <strong class="fx-boast__txt">치킨을 4달라!</strong>
-                        <span class="fx-boast__subtxt"><em class="num"><span>USD 100</span> <span>1,203.01</span></em> 매도</span>
-                    </div>
-                </div>
-                <div class="fx-boast">
-                    <span class="fx-boast__img fx-boast__img--tradelv3" aria-hidden="true"></span>
-                    <div class="inner-txt align-center">
-                        <strong class="fx-boast__txt">달러쇼핑! 오늘도 득템!</strong>
-                        <span class="fx-boast__subtxt"><em class="num"><span>USD 100</span> <span>1,203.01</span></em> 매도</span>
-                    </div>
-                </div>
-            </div>
-            <div class="input mgt60">
-                <!--
-                    * 오류시 class="input input--error"
-                    * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
-                -->
-                <div class="input__inner">
-                    <input type="text" id="inputText01" class="input__element" title="한줄입력" value="">
-                    <label for="inputText01" class="input__label" aria-hidden="true">한줄입력</label>
-                    <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
-                </div>
-                <!-- 에러 메시지 -->
-                <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
-            </div>
-            <div class="input__guide-text color-7575">
-                <span>0</span>/20
-            </div>
-        </div>
-        <div class="button-wrap">
-            <button type="button" class="button button--kakao">카카오톡</button>
-            <button type="button" class="button button--positive">커뮤니티 공유</button>
-        </div>
-        <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
-    </div>
-</div>
-<!-- // 2022-04-18 공유하기 레이어 추가(SB_v1.0.02) -->
-
 <!-- 공통 script -->
 <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
 <script src="../../../../resource/library/slick/slick.js"></script>
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
-<script>
-    // 2022-04-18 스크립트 추가(SB_v1.0.02)
-    $(function(){
-        // 공유하기 버튼 클릭시 SLICK레이아웃 깨짐 방지
-        $('.btn-share').on('click', function(){
-            $('.fx-boastslider').slick('setPosition');
-        });
-    })
-</script>
 </body>
 </html>
