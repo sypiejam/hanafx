@@ -344,7 +344,7 @@
 .fx-trader__list--1st .fx-trader__rank::before {background:#f7b21f;}
 .fx-trader__list--2nd .fx-trader__rank::before {background:#6e6ec4;}
 .fx-trader__list--3rd .fx-trader__rank::before {background:#67cfe3;}
-.fx-trader__info {flex:1;padding:1rem 1rem 0.813rem 1.25rem;}
+.fx-trader__info {flex:1;padding:1rem 1rem 0.813rem 1rem;}
 .fx-trader__nickname {margin-left:0.438rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
 .challenge__badge {display:flex;margin-left:0.313rem;}
 .challenge-badge__item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem;}
