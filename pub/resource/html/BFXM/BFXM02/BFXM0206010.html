@@ -113,7 +113,7 @@
                         <span class="fx-pietxtarea__value"><span class="color-000">적중</span> <em class="color-green fw-700">21</em>/<span>29</span></span>
                     </div>
                 </div>
-                <button type="button" class="btn-share mgt48" title="환율예측현황 공유하기" data-element="modal__open" data-target="#boastpopup"><span class="btn-share__text">자랑할래요</span></button>
+                <button type="button" class="btn-share mgt48" title="환율예측현황 공유하기"><span class="btn-share__text">자랑할래요</span></button>
                 <div class="fx-calendar">
                     <table>
                         <caption>1달간 환율예측 현황</caption>
@@ -299,67 +299,7 @@
         </div>
     </div>
     <!-- // 환율맞추기퀴즈 레이어 -->
-
-    <!-- 환율맞추기 공유하기 레이어 -->
-    <div id="boastpopup" class="modal modal--confirm" data-element="modal__element">
-        <div class="modal__container modal__container--interval" data-element="modal__element-container">
-            <div class="modal__header">
-                <h1 class="modal__header--title">환율맞추기</h1>
-            </div>
-            <div class="modal__contents fx-boast__contents">
-                <div class="fx-boastslider" data-slider="arrow1">
-                    <div class="fx-boast">
-                        <!-- to.개발 |  
-                            예지력 50% 미만인 경우 노출 fx-boast__img--predictorlv1 
-                            예지력 50% 이상인 경우 노출 fx-boast__img--predictorlv2
-                            연속적중 히스토리 있는 경우 노출 fx-boast__img--predictorlv3 
-                        -->
-                        <span class="fx-boast__img fx-boast__img--predictorlv1" aria-hidden="true"></span>
-                        <div class="inner-txt align-center">
-                            <strong class="fx-boast__txt">헤헷 환율똥손입니다.</strong>
-                            <span class="fx-boast__subtxt">나의 예지력 <em class="num">49%</em></span>
-                        </div>
-                    </div>
-                    <div class="fx-boast">
-                        <span class="fx-boast__img fx-boast__img--predictorlv2" aria-hidden="true"></span>
-                        <div class="inner-txt align-center">
-                            <strong class="fx-boast__txt">백발백중 환율찍신!</strong>
-                            <span class="fx-boast__subtxt">나의 예지력 <em class="num">59%</em></span>
-                        </div>
-                    </div>
-                    <div class="fx-boast">
-                        <span class="fx-boast__img fx-boast__img--predictorlv3" aria-hidden="true"></span>
-                        <div class="inner-txt align-center">
-                            <strong class="fx-boast__txt">다음은 로또다.</strong>
-                            <span class="fx-boast__subtxt">릴레이적중 <em class="num">1,500ⓢ</em> 획득</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="input mgt60">
-                    <!--
-                        * 오류시 class="input input--error"
-                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
-                    -->
-                    <div class="input__inner">
-                        <input type="text" id="inputText01" class="input__element" title="한줄입력" value="">
-                        <label for="inputText01" class="input__label" aria-hidden="true">한줄입력</label>
-                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
-                    </div>
-                    <!-- 에러 메시지 -->
-                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
-                </div>
-                <div class="input__guide-text color-7575">
-                    <span>0</span>/20
-                </div>
-            </div>
-            <div class="button-wrap">
-                <button type="button" class="button button--kakao">카카오톡</button>
-                <button type="button" class="button button--positive">커뮤니티 공유</button>
-            </div>
-            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
-        </div>
-    </div>
-    <!-- // 환율맞추기 공유하기 레이어 -->
+    
 </div>
 <!-- 공통 script -->
 <script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
@@ -367,13 +307,5 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
-<script>
-$(function(){
-    // 공유하기 버튼 클릭시 SLICK레이아웃 깨짐 방지
-    $('.btn-share').on('click', function(){
-        $('.fx-boastslider').slick('setPosition');
-    });
-})
-</script>
 </body>
 </html>
