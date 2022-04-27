@@ -49,12 +49,12 @@
 .fx-serviceinfo-motion .ani-coin-piles .coin3 {bottom:11px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles3.png);}
 .fx-serviceinfo-motion .ani-coin-piles .coin4 {bottom:16px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles4.png);}
 .fx-serviceinfo-motion .ani-coin-piles .coin5 {bottom:21px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles5.png);}
-.is-active .ani-coin-piles .coin.on {
+.ani-coin-piles .coin.on {
     display:block;
     animation:coinPiles 0.8s forwards ease-out;
 }
     @keyframes coinPiles {
-        0%	{-webkit-transform:rotate(20deg) scale(1.2,1.2);transform:rotate(20deg) scale(1.2,1.2);}
+        0% {-webkit-transform:rotate(20deg) scale(1.2,1.2);transform:rotate(20deg) scale(1.2,1.2);}
         10%	{-webkit-transform:rotate(-20deg);transform:rotate(-20deg);}
         18%	{-webkit-transform:rotate(20deg);transform:rotate(20deg);}
         26%	{-webkit-transform:rotate(-20deg);transform:rotate(-20deg);}
@@ -67,9 +67,12 @@
         100% {-webkit-transform:rotate(0deg) scale(1,1);transform:rotate(0deg) scale(1,1);}
     }
 .fx-serviceinfo-motion .ani-arrow-down {top:-35px;left:50%;width:20px;height:28px;margin-left:-10px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_arrow_down.png);}
+.is-active .ani-arrow-down {
+
+}
 .fx-serviceinfo-motion .ani-hand-grab {bottom:-4px;left:50%;width:81px;height:102px;margin-left:-12px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_grab.png);}
 .is-active .ani-hand-grab {
-    animation:handGrab 1.2s 2s both ease-out;
+    animation:handGrab 1.2s 4s both ease-out;
     /* -webkit-animation:handGrab 1s 0.1s infinite; */
 	transform-origin:50% 90%;
     /* -webkit-transform-origin:50% 90%; */

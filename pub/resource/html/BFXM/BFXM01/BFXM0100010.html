@@ -91,7 +91,7 @@
 <script src="../../../../resource/js/ui/common.js"></script>
 <script>
     $(function(){
-        var dvTime = 900;
+        var dvTime = 1000;
         // $('.fx-serviceinfo .container').each(function(i,el){
         //     $(el).animate({opacity: '1'}, i * dvTime)
         // })
@@ -101,24 +101,16 @@
             }, i * dvTime)
         });
 
-        // var coinTime = 800;
-        // $('.is-active .ani-coin-piles .coin').each(function(i,el){
-        //     setTimeout(function(){
-        //         $(el).addClass('on');
-        //     }, i * coinTime)
-
-        // });
-        
-        setTimeout(function(){$(".coin1").addClass("on")},800);
-        setTimeout(function(){$(".coin2").addClass("on")},1600);
-        setTimeout(function(){$(".coin3").addClass("on")},2400);
-        setTimeout(function(){$(".coin4").addClass("on")},3200);
-        setTimeout(function(){$(".coin5").addClass("on")},4000);
+        var coinTime = 800;
+        $('.ani-coin-piles .coin').each(function(i,el){
+            setTimeout(function(){
+                $(el).addClass('on');
+            },1800 + i * coinTime)
+        });
     
-
         $(window).scroll(function(){ 
             var scrT = $(window).scrollTop();
-            if(scrT == $(document).height() - $(window).height()){ 
+            if(scrT >= $(document).height() - $(window).height() - 100){ 
                 $('.fx-footer').addClass('is-active');
             } else {
                 $('.fx-footer').removeClass('is-active');
