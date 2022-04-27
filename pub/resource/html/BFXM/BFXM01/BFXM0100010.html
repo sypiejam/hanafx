@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/fxmarket_copy.css" type="text/css">
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -25,13 +26,57 @@
     <!-- //header -->
     <!-- content -->
     <div id="content" class="app-main fxmarket">
-        <div class="container">
-            <!-- 디자인 미정 작업예정 -->
+        <div class="fx-serviceinfo">
+            <div class="container">
+                <div class="fx-serviceinfo-group">
+                    <p class="fx-serviceinfo__text"><em class="bold">여러가지 외화</em>를 <br>쉽게 사고 팔아요</p>
+                    <div class="fx-serviceinfo-motion fx-serviceinfo-motion--01" aria-hidden="true">
+                        <div class="bg-circle bg-circle--01">
+                            <span class="ani-hand-receive"></span><span class="ani-hand-give"></span>
+                        </div>
+                        <span class="ani-coin-01"></span><span class="ani-coin-02"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="fx-serviceinfo-group">
+                    <p class="fx-serviceinfo__text">하면 할 수록 <em class="bold">높아지는 레벨 <br>낮아지는 수수료</em></p>
+                    <div class="fx-serviceinfo-motion fx-serviceinfo-motion--02" aria-hidden="true">
+                        <span class="bg-circle bg-circle--02"></span>
+                        <div class="ani-coin-piles">
+                            <i class="coin coin1"></i><i class="coin coin2"></i><i class="coin coin3"></i><i class="coin coin4"></i><i class="coin coin5"></i>
+                            <span class="ani-arrow-down"></span>
+                        </div>
+                        <span class="ani-hand-grab"><span class="ani-arrow-up"></span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="fx-serviceinfo-group">
+                    <p class="fx-serviceinfo__text">딱 <em class="bold">이 시간만!</em> 이 환율! <br>타임세일</p>
+                    <div class="fx-serviceinfo-motion fx-serviceinfo-motion--03" aria-hidden="true">
+                        <span class="bg-circle bg-circle--03"></span>
+                        <span class="ani-coinpop"></span><span class="ani-infoclock"></span><span class="ani-infothunder"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="fx-serviceinfo-group">
+                    <p class="fx-serviceinfo__text"><em class="bold">환테크</em>하는 사람은 <br>여기 다 모였다. <br><em class="bold">FX커뮤니티</em></p>
+                    <div class="fx-serviceinfo-motion fx-serviceinfo-motion--04" aria-hidden="true">
+                        <span class="bg-circle bg-circle--04"></span>
+                        <span class="ani-stardori"></span>
+                        <span class="fx-commicon__icon--03 ani-emoji ani-emoji--01"><i class="ani-emoji-shadow"></i></span>
+                        <span class="fx-commicon__icon--02 ani-emoji ani-emoji--02"><i class="ani-emoji-shadow"></i></span>
+                        <span class="fx-commicon__icon--04 ani-emoji ani-emoji--03"><i class="ani-emoji-shadow"></i></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- //content -->
     <!-- footer -->
-    <div id="footer" class="app-footer app-footer--button">
+    <div id="footer" class="app-footer app-footer--button fx-footer">
         <div class="button-wrap">
             <button type="button" class="button button--positive">가입하기</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
         </div>
@@ -44,5 +89,27 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script>
+    $(function(){
+        var dvTime = 900;
+        // $('.fx-serviceinfo .container').each(function(i,el){
+        //     $(el).animate({opacity: '1', 'margin-top': '3.438rem;'}, i * dvTime)
+        // })
+        $('.fx-serviceinfo-group').each(function(i,el){
+            setTimeout(function(){
+                $(el).addClass('is-active');
+            }, i * dvTime)
+        })
+
+        $(window).scroll(function(){ 
+            var scrT = $(window).scrollTop();
+            if(scrT == $(document).height() - $(window).height()){ 
+                $('.fx-footer').addClass('is-active');
+            } else {
+                $('.fx-footer').removeClass('is-active');
+            } 
+        })
+    })
+</script>
 </body>
 </html>
