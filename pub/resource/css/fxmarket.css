@@ -927,7 +927,7 @@
 .fx-serviceinfo-motion .bg-circle--03 {background-color:#ffdce3;}
 .fx-serviceinfo-motion .bg-circle--04 {background-color:#ffe4ba;}
 .fx-serviceinfo-motion [class^='ani-'] {position:absolute;display:block;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-.fx-serviceinfo-motion .ani-hand-receive {bottom:6px;width:97px;height:43px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_receive.png);}
+.fx-serviceinfo-motion .ani-hand-receive {bottom:0.375rem;width:6.063rem;height:2.688rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_receive.png);}
 .is-active .ani-hand-receive {
     -webkit-animation:handReceive 0.4s 0.3s both linear;
     animation:handReceive 0.4s 0.3s both linear;
@@ -936,17 +936,17 @@
     from {left:-100px;}
     to {left:-18px;}
 }
-.fx-serviceinfo-motion .ani-hand-give {top:17px;width:85px;height:53px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_give.png);}
+.fx-serviceinfo-motion .ani-hand-give {top:0.063rem;width:5.313rem;height:3.313rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_give.png);}
 .is-active .ani-hand-give {
     -webkit-animation:handGive 0.5s 1s both ease-in-out;
     animation:handGive 0.5s 1s both ease-in-out;
 }
 @keyframes handGive {
-    from {right:-100px;}
-    to {right:-2px;}
+    from {right:-6.25rem;}
+    to {right:-0.125rem;}
 }
-.fx-serviceinfo-motion .ani-coin-01 {top:63px;left:50%;width:28px;height:29px;margin-left:38px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_01.png);}
-.fx-serviceinfo-motion .ani-coin-02 {top:33px;left:50%;width:21px;height:22px;margin-left:68px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_02.png);}
+.fx-serviceinfo-motion .ani-coin-01 {top:3.938rem;left:50%;width:1.75rem;height:1.813rem;margin-left:2.375rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_01.png);}
+.fx-serviceinfo-motion .ani-coin-02 {top:2.063rem;left:50%;width:1.313rem;height:1.375rem;margin-left:4.25rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_02.png);}
 .is-active .ani-coin-01 {
     -webkit-animation:coinAni01 1s infinite alternate ease-out;
     animation:coinAni01 1s infinite alternate ease-out;
@@ -963,13 +963,13 @@
     0% {opacity:1;-webkit-transform:translateY(4px);transform:translateY(4px);}
     100% {opacity:1;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
 }
-.fx-serviceinfo-motion .ani-coinpiles {bottom:-3px;left:50%;width:32px;height:30px;margin-left:-46px;}
-.fx-serviceinfo-motion .ani-coinpiles__item {position:absolute;bottom:0;display:none;width:32px;height:9px;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-.fx-serviceinfo-motion .ani-coinpiles__item--01 {height:10px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles1.png);-webkit-filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.2));filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.2));}
-.fx-serviceinfo-motion .ani-coinpiles__item--02 {bottom:6px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles2.png);}
-.fx-serviceinfo-motion .ani-coinpiles__item--03 {bottom:11px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles3.png);}
-.fx-serviceinfo-motion .ani-coinpiles__item--04 {bottom:16px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles4.png);}
-.fx-serviceinfo-motion .ani-coinpiles__item--05 {bottom:21px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles5.png);}
+.fx-serviceinfo-motion .ani-coinpiles {bottom:-0.188rem;left:50%;width:2rem;height:1.875rem;margin-left:-2.875rem;}
+.fx-serviceinfo-motion .ani-coinpiles__item {position:absolute;bottom:0;display:none;width:2rem;height:0.563rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
+.fx-serviceinfo-motion .ani-coinpiles__item--01 {height:0.625rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles1.png);-webkit-filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.2));filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.2));}
+.fx-serviceinfo-motion .ani-coinpiles__item--02 {bottom:0.375rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles2.png);}
+.fx-serviceinfo-motion .ani-coinpiles__item--03 {bottom:0.688rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles3.png);}
+.fx-serviceinfo-motion .ani-coinpiles__item--04 {bottom:1rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles4.png);}
+.fx-serviceinfo-motion .ani-coinpiles__item--05 {bottom:1.313rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_piles5.png);}
 .ani-coinpiles__item.on {
     display:block;
     -webkit-animation:coinPiles 0.8s forwards ease-out;
@@ -988,8 +988,8 @@
     74%	{-webkit-transform:rotate(-5deg);transform:rotate(0deg);}
     100% {-webkit-transform:rotate(0deg) scale(1,1);transform:rotate(0deg) scale(1,1);}
 }
-.fx-serviceinfo-motion .ani-arrow-down {overflow:hidden;opacity:0;top:-35px;left:50%;margin-left:-10px;margin-top:-20px;padding:20px 0 30px}
-.fx-serviceinfo-motion .ani-arrow-down::after {content:'';display:block;width:20px;height:28px;background:url(../../resource/images/fxmarket/img_serviceinfo_arrow_down.png) no-repeat 0 0 / 100%;}
+.fx-serviceinfo-motion .ani-arrow-down {overflow:hidden;opacity:0;top:-2.188rem;left:50%;margin-left:-0.625rem;margin-top:-1.25rem;padding:1.25rem 0 1.875rem}
+.fx-serviceinfo-motion .ani-arrow-down::after {content:'';display:block;width:1.25rem;height:1.75rem;background:url(../../resource/images/fxmarket/img_serviceinfo_arrow_down.png) no-repeat 0 0 / 100%;}
 .is-active .ani-arrow-down {
     -webkit-animation:arrDown1 1s 4.5s both ease-out;
     animation:arrDown1 1s 4.5s both ease-out;
@@ -1007,7 +1007,7 @@
     40%, 45% {opacity:1;-webkit-transform:translate3d(0, -20px, 0) scaleY(0.8);transform:translate3d(0, -20px, 0) scaleY(0.8);}
     to {opacity:0;-webkit-transform:translate3d(0, 100px, 0) scaleY(2);transform:translate3d(0, 100px, 0) scaleY(2);}
 }
-.fx-serviceinfo-motion .ani-hand-grab {bottom:-4px;left:50%;width:81px;height:102px;margin-left:-12px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_grab.png);}
+.fx-serviceinfo-motion .ani-hand-grab {bottom:-0.25rem;left:50%;width:5.063rem;height:6.375rem;margin-left:-0.75rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_grab.png);}
 .is-active .ani-hand-grab {
     -webkit-animation:handGrab 1.2s 1s both ease-out;
     animation:handGrab 1.2s 1s both ease-out;
@@ -1022,7 +1022,7 @@
     55%, 58% {-webkit-transform:rotate(35deg);transform:rotate(35deg);}
     75%, to {-webkit-transform:rotate(0);transform:rotate(0);}
 }
-.fx-serviceinfo-motion .ani-arrow-up {top:8px;left:19px;width:21px;height:25px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_arrow_up.png);}
+.fx-serviceinfo-motion .ani-arrow-up {top:0.5rem;left:1.188rem;width:1.313rem;height:1.563rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_arrow_up.png);}
 .is-active .ani-arrow-up {
     -webkit-animation:arrUp 2s 2.7s infinite ease-in;
     animation:arrUp 2s 2.7s infinite ease-in;
@@ -1031,12 +1031,12 @@
     from, 50%, to {opacity:1;}
     25%, 75% {opacity:0.2;}
 }
-.fx-serviceinfo-motion .ani-coinpop {top:34px;left:50%;width:189px;height:62px;margin-left:-94px;}
+.fx-serviceinfo-motion .ani-coinpop {top:2.125rem;left:50%;width:11.813rem;height:3.875rem;margin-left:-5.875rem;}
 .fx-serviceinfo-motion .ani-coinpop__item {position:absolute;display:block;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
-.fx-serviceinfo-motion .ani-coinpop__item--01 {bottom:0;left:0;width:44px;height:31px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop1.png);}
-.fx-serviceinfo-motion .ani-coinpop__item--02 {bottom:4px;right:0;width:25px;height:23px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop2.png);}
-.fx-serviceinfo-motion .ani-coinpop__item--03 {top:0;right:22px;width:21px;height:21px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop3.png);}
-.fx-serviceinfo-motion .ani-coinpop__item--04 {top:3px;left:28px;width:17px;height:17px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop4.png);}
+.fx-serviceinfo-motion .ani-coinpop__item--01 {bottom:0;left:0;width:2.75rem;height:1.938rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop1.png);}
+.fx-serviceinfo-motion .ani-coinpop__item--02 {bottom:0.25rem;right:0;width:1.563rem;height:1.438rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop2.png);}
+.fx-serviceinfo-motion .ani-coinpop__item--03 {top:0;right:1.375rem;width:1.313rem;height:1.313rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop3.png);}
+.fx-serviceinfo-motion .ani-coinpop__item--04 {top:0.188rem;left:1.75rem;width:1.063rem;height:1.063rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_pop4.png);}
 .is-active .ani-coinpop__item {
     -webkit-animation:coinAni01 1s infinite alternate ease-in-out;
     animation:coinAni01 1s infinite alternate ease-in-out;
@@ -1058,7 +1058,7 @@
     animation-timing-function:ease-out;
 }
 
-.fx-serviceinfo-motion .ani-infoclock {bottom:-8px;left:50%;width:72px;height:83px;margin-left:-36px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_clock.png);}
+.fx-serviceinfo-motion .ani-infoclock {bottom:-0.5rem;left:50%;width:4.5rem;height:5.188rem;margin-left:-2.25rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_clock.png);}
 .is-active .ani-infoclock {
     -webkit-animation:clockShake 1.2s infinite ease-in-out;
     animation:clockShake 1.2s infinite ease-in-out;
@@ -1071,7 +1071,7 @@
     43.5% {-webkit-transform:translateX(2px) rotateY(3deg);transform:translateX(2px) rotateY(3deg);}
     50% {-webkit-transform:translateX(0);transform:translateX(0);}
 }
-.fx-serviceinfo-motion .ani-infothunder {top:-7px;left:50%;width:27px;height:42px;margin-left:-14px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_thunder.png);}
+.fx-serviceinfo-motion .ani-infothunder {top:-0.438rem;left:50%;width:1.688rem;height:2.625rem;margin-left:-0.875rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_thunder.png);}
 .is-active .ani-infothunder {
     -webkit-animation:clockHunder 2s infinite linear;
     animation:clockHunder 2s infinite linear;
@@ -1106,13 +1106,13 @@
         transform:translate3d(0, -2px, 0) scaleY(1.02);
     }
 }
-.fx-serviceinfo-motion .ani-stardori {top:27px;left:50%;width:87px;height:106px;margin-left:-40px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_stardori.png);}
-.fx-serviceinfo-motion .ani-emoji {position:absolute;left:50%;width:38px;height:38px;}
+.fx-serviceinfo-motion .ani-stardori {top:1.688rem;left:50%;width:5.438rem;height:6.625rem;margin-left:-2.5rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_stardori.png);}
+.fx-serviceinfo-motion .ani-emoji {position:absolute;left:50%;width:2.375rem;height:2.375rem;}
 .fx-serviceinfo-motion .ani-emoji__item {position:absolute;top:0;left:0;-webkit-transition:none;transition:none;}
-.fx-serviceinfo-motion .ani-emoji--01 {top:3px;margin-left:-65px;-webkit-transform:scale(0.8);transform:scale(0.8);}
-.fx-serviceinfo-motion .ani-emoji--02 {top:101px;margin-left:-72px;}
-.fx-serviceinfo-motion .ani-emoji--03 {top:27px;margin-left:39px;}
-.fx-serviceinfo-motion .ani-emoji__shadow {position:absolute;bottom:1px;display:block;width:100%;height:9px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_emoji_shadow.png);opacity:0.6;}
+.fx-serviceinfo-motion .ani-emoji--01 {top:0.188rem;margin-left:-4.063rem;-webkit-transform:scale(0.8);transform:scale(0.8);}
+.fx-serviceinfo-motion .ani-emoji--02 {top:6.313rem;margin-left:-4.5rem;}
+.fx-serviceinfo-motion .ani-emoji--03 {top:1.688rem;margin-left:2.438rem;}
+.fx-serviceinfo-motion .ani-emoji__shadow {position:absolute;bottom:1px;display:block;width:100%;height:0.563rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_emoji_shadow.png);opacity:0.6;}
 .is-active .ani-emoji__item--bounce {
     -webkit-animation:emojiBounce .3s ease infinite alternate;
     animation:emojiBounce .3s ease infinite alternate;
