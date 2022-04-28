@@ -28,7 +28,7 @@
     <div id="content" class="app-main fxmarket">
         <div class="fx-serviceinfo">
             <div class="container">
-                <div class="fx-serviceinfo-group">
+                <div class="fx-serviceinfo-group fx-serviceinfo-group--01">
                     <p class="fx-serviceinfo__text"><em class="bold">여러가지 외화</em>를 <br>쉽게 사고 팔아요</p>
                     <div class="fx-serviceinfo-motion fx-serviceinfo-motion--01" aria-hidden="true">
                         <div class="bg-circle bg-circle--01">
@@ -39,36 +39,55 @@
                 </div>
             </div>
             <div class="container">
-                <div class="fx-serviceinfo-group">
+                <div class="fx-serviceinfo-group fx-serviceinfo-group--02">
                     <p class="fx-serviceinfo__text">하면 할 수록 <em class="bold">높아지는 레벨 <br>낮아지는 수수료</em></p>
                     <div class="fx-serviceinfo-motion fx-serviceinfo-motion--02" aria-hidden="true">
                         <span class="bg-circle bg-circle--02"></span>
-                        <div class="ani-coin-piles">
-                            <i class="coin coin1"></i><i class="coin coin2"></i><i class="coin coin3"></i><i class="coin coin4"></i><i class="coin coin5"></i>
+                        <div class="ani-coinpiles">
                             <span class="ani-arrow-down"></span>
+                            <i class="ani-coinpiles__item ani-coinpiles__item--01"></i>
+                            <i class="ani-coinpiles__item ani-coinpiles__item--02"></i>
+                            <i class="ani-coinpiles__item ani-coinpiles__item--03"></i>
+                            <i class="ani-coinpiles__item ani-coinpiles__item--04"></i>
+                            <i class="ani-coinpiles__item ani-coinpiles__item--05"></i>
                         </div>
                         <span class="ani-hand-grab"><span class="ani-arrow-up"></span></span>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="fx-serviceinfo-group">
+                <div class="fx-serviceinfo-group fx-serviceinfo-group--03">
                     <p class="fx-serviceinfo__text">딱 <em class="bold">이 시간만!</em> 이 환율! <br>타임세일</p>
                     <div class="fx-serviceinfo-motion fx-serviceinfo-motion--03" aria-hidden="true">
                         <span class="bg-circle bg-circle--03"></span>
-                        <span class="ani-coinpop"></span><span class="ani-infoclock"></span><span class="ani-infothunder"></span>
+                        <div class="ani-coinpop">
+                            <i class="ani-coinpop__item ani-coinpop__item--01"></i>
+                            <i class="ani-coinpop__item ani-coinpop__item--02"></i>
+                            <i class="ani-coinpop__item ani-coinpop__item--03"></i>
+                            <i class="ani-coinpop__item ani-coinpop__item--04"></i>
+                        </div>
+                        <span class="ani-infoclock"></span><span class="ani-infothunder"></span>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="fx-serviceinfo-group">
+                <div class="fx-serviceinfo-group fx-serviceinfo-group--04">
                     <p class="fx-serviceinfo__text"><em class="bold">환테크</em>하는 사람은 <br>여기 다 모였다. <br><em class="bold">FX커뮤니티</em></p>
                     <div class="fx-serviceinfo-motion fx-serviceinfo-motion--04" aria-hidden="true">
                         <span class="bg-circle bg-circle--04"></span>
                         <span class="ani-stardori"></span>
-                        <span class="fx-commicon__icon--03 ani-emoji ani-emoji--01"><i class="ani-emoji-shadow"></i></span>
-                        <span class="fx-commicon__icon--02 ani-emoji ani-emoji--02"><i class="ani-emoji-shadow"></i></span>
-                        <span class="fx-commicon__icon--04 ani-emoji ani-emoji--03"><i class="ani-emoji-shadow"></i></span>
+                        <span class="ani-emoji ani-emoji--01">
+                            <i class="ani-emoji__shadow"></i>
+                            <i class="fx-commicon__icon--03 ani-emoji__item"></i>
+                        </span>
+                        <span class="ani-emoji ani-emoji--02">
+                            <i class="ani-emoji__shadow"></i>
+                            <i class="fx-commicon__icon--02 ani-emoji__item"></i>
+                        </span>
+                        <span class="ani-emoji ani-emoji--03">
+                            <i class="ani-emoji__shadow"></i>
+                            <i class="fx-commicon__icon--04 ani-emoji__item"></i>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -102,7 +121,7 @@
         });
 
         var coinTime = 800;
-        $('.ani-coin-piles .coin').each(function(i,el){
+        $('.ani-coinpiles__item').each(function(i,el){
             setTimeout(function(){
                 $(el).addClass('on');
             },1800 + i * coinTime)
