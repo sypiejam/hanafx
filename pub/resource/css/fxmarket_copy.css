@@ -87,8 +87,8 @@
 }
 .fx-serviceinfo-motion .ani-hand-grab {bottom:-4px;left:50%;width:81px;height:102px;margin-left:-12px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_grab.png);}
 .is-active .ani-hand-grab {
-    -webkit-animation:handGrab 1.2s 6s both ease-out;
-    animation:handGrab 1.2s 6.3s both ease-out;
+    -webkit-animation:handGrab 1.2s 1s both ease-out;
+    animation:handGrab 1.2s 1s both ease-out;
     -webkit-animation-iteration-count:2;
     animation-iteration-count:2;
     -webkit-transform-origin:50% 90%;
@@ -102,8 +102,8 @@
 }
 .fx-serviceinfo-motion .ani-arrow-up {top:8px;left:19px;width:21px;height:25px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_arrow_up.png);}
 .is-active .ani-arrow-up {
-    -webkit-animation:arrUp 2s infinite ease-in;
-    animation:arrUp 2s infinite ease-in;
+    -webkit-animation:arrUp 2s 2.7s infinite ease-in;
+    animation:arrUp 2s 2.7s infinite ease-in;
 }
 @keyframes arrUp {
     from, 50%, to {opacity:1;}
