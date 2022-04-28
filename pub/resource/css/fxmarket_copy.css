@@ -174,7 +174,7 @@
 .fx-serviceinfo-motion .ani-emoji--01 {top:3px;margin-left:-65px;-webkit-transform:scale(0.8);transform:scale(0.8);}
 .fx-serviceinfo-motion .ani-emoji--02 {top:101px;margin-left:-72px;}
 .fx-serviceinfo-motion .ani-emoji--03 {top:27px;margin-left:39px;}
-.fx-serviceinfo-motion .ani-emoji__shadow {position:absolute;bottom:1px;display:block;width:100%;height:9px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_emoji_shadow.png);opacity:0.8;}
+.fx-serviceinfo-motion .ani-emoji__shadow {position:absolute;bottom:1px;display:block;width:100%;height:9px;background-image:url(../../resource/images/fxmarket/img_serviceinfo_emoji_shadow.png);opacity:0.6;}
 .is-active .ani-emoji__item--bounce {
     animation:emojiBounce .3s ease infinite alternate;
 }
@@ -186,12 +186,13 @@
     animation:emojiShadow .3s ease infinite alternate;
 }
 @keyframes emojiShadow {
-    100% {opacity:0.3;transform:scale(0.6);}
+    100% {opacity:0.2;transform:scale(0.6);}
 }
-.fx-serviceinfo-motion .ani-emoji-wrap {position:relative;display:block;width:100%;height:100%;}
-.fx-serviceinfo-motion .ani-emoji__item--front {overflow:hidden;transform:rotateY(180deg) translateZ(1px) scale(0.8);}
-.fx-serviceinfo-motion .ani-emoji__item--back {overflow:hidden;transform:rotateY(0deg) translateZ(0px) scale(0.8);}
-.is-active .ani-emoji-wrap {
+.fx-serviceinfo-motion .ani-emoji__shadow--faces {bottom:0;transform:scale(0.8);}
+.fx-serviceinfo-motion .ani-emojifaces {position:relative;display:block;width:100%;height:100%;}
+.fx-serviceinfo-motion .ani-emojifaces__front {overflow:hidden;transform:rotateY(180deg) translateZ(1px) scale(0.8);}
+.fx-serviceinfo-motion .ani-emojifaces__back {overflow:hidden;transform:rotateY(0deg) translateZ(0px) scale(0.8);}
+.is-active .ani-emojifaces {
     -webkit-transform-style:preserve-3d;
     transform-style:preserve-3d;
     animation:emojiFaces 2s infinite linear;
