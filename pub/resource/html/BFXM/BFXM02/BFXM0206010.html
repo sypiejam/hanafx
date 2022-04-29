@@ -20,8 +20,17 @@
     .fx-keyvisual__subtxt .color-green {margin-top:1rem;font-weight:700;line-height:1.3;}
     /* 환율맞추기 */
     .fx-service__keyvisual--forecast {position:relative;height:auto;padding:1.875rem 0 2.125rem;background:#e0ebef;text-align:center;} 
-    .fx-forecast-calender {display:flex;align-items:center;justify-content:space-around;width:9.313rem;height:3.25rem;margin:0.813rem auto 0;background:url(../../../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
+    .fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:0.813rem auto 0;background:url(../../../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
+    .fx-calender-base {display:flex;align-items:center;height:100%;}
     .fx-forecast-calender .bold {font-size:1.5rem;}
+    .fx-calender-motion {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;
+        -webkit-animation-name:calendarup;
+        animation-name: calendarup;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
     .fx-forecast-img {z-index:10;position:relative;margin-top:1rem;padding-bottom:1.75rem;}
     .fx-forecast-month {width:50%;color:#fff;}
     .fx-forecast-day {width:50%;color:#1489db;}
@@ -130,6 +139,11 @@
         87% {-webkit-transform:rotate(-1deg);transform:rotate(-1deg);}
         91% {-webkit-transform:rotate(0);transform:rotate(0);}
     }
+    @keyframes calendarup {
+        0%, 50% {-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: perspective(500px) rotateX(-90deg);transform: perspective(500px) rotateX(-90deg);}
+        75% {-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: perspective(500px) rotateX(50deg);transform: perspective(500px) rotateX(50deg);}
+        100% {-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: perspective(500px) rotateX(0deg);transform: perspective(500px) rotateX(0deg);} 
+    }
 </style>
 </head>
 <body>
@@ -153,7 +167,12 @@
                     <p class="fx-keyvisual__keytxt">환율이 오늘보다 오를까? 내릴까?</p>
                 </div>
                 <div class="fx-forecast-calender">
-                    <span class="fx-forecast-month"><span class="bold">4</span>월</span><span class="fx-forecast-day"><span class="bold">26</span>일</span> <!-- to.개발 | 익영업일 날짜 출력 -->
+                    <div class="fx-calender-base">
+                        <span class="fx-forecast-month"><span class="bold">4</span>월</span><span class="fx-forecast-day"><span class="bold">26</span>일</span><!-- to.개발 | 익영업일 날짜 출력 -->
+                    </div>
+                    <div class="fx-calender-motion">
+                        <span class="fx-forecast-month"><span class="bold">4</span>월</span><span class="fx-forecast-day"><span class="bold">26</span>일</span><!-- to.개발 | 익영업일 날짜 출력 -->
+                    </div>
                 </div>  
                 <div class="fx-forecast-img" aria-hidden="true">
                     <span class="ani-dart-board"></span>
