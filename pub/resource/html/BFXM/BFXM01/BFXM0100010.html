@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<link rel="stylesheet" href="../../../../resource/css/fxmarket_copy.css" type="text/css">
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -77,16 +76,19 @@
                         <span class="bg-circle bg-circle--04"></span>
                         <span class="ani-stardori"></span>
                         <span class="ani-emoji ani-emoji--01">
-                            <i class="ani-emoji__shadow"></i>
-                            <i class="fx-commicon__icon--03 ani-emoji__item"></i>
+                            <i class="ani-emoji__shadow ani-emoji__shadow--bounce"></i>
+                            <i class="fx-commicon__icon--03 ani-emoji__item ani-emoji__item--bounce"></i>
                         </span>
                         <span class="ani-emoji ani-emoji--02">
-                            <i class="ani-emoji__shadow"></i>
-                            <i class="fx-commicon__icon--02 ani-emoji__item"></i>
+                            <i class="ani-emoji__shadow ani-emoji__shadow--faces"></i>
+                            <span class="ani-emojifaces">
+                                <i class="fx-commicon__icon--01 ani-emoji__item ani-emojifaces__front"></i>
+                                <i class="fx-commicon__icon--02 ani-emoji__item ani-emojifaces__back"></i>
+                            </span>
                         </span>
                         <span class="ani-emoji ani-emoji--03">
-                            <i class="ani-emoji__shadow"></i>
-                            <i class="fx-commicon__icon--04 ani-emoji__item"></i>
+                            <i class="ani-emoji__shadow ani-emoji__shadow--bounce"></i>
+                            <i class="fx-commicon__icon--04 ani-emoji__item ani-emoji__item--bounce"></i>
                         </span>
                     </div>
                 </div>
@@ -111,9 +113,6 @@
 <script>
     $(function(){
         var dvTime = 1000;
-        // $('.fx-serviceinfo .container').each(function(i,el){
-        //     $(el).animate({opacity: '1'}, i * dvTime)
-        // })
         $('.fx-serviceinfo-group').each(function(i,el){
             setTimeout(function(){
                 $(el).addClass('is-active');
