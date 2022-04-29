@@ -946,14 +946,14 @@
     from {left:-100px;}
     to {left:-18px;}
 }
-.fx-serviceinfo-motion .ani-hand-give {top:0.063rem;width:5.313rem;height:3.313rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_give.png);}
+.fx-serviceinfo-motion .ani-hand-give {top:1.063rem;right:-6.25rem;width:5.313rem;height:3.313rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_give.png);}
 .is-active .ani-hand-give {
-    -webkit-animation:handGive 0.5s 1s both ease-in-out;
-    animation:handGive 0.5s 1s both ease-in-out;
+    -webkit-animation:handGive 3s 1s infinite alternate cubic-bezier(0.42, 0, 0.06, 0.97);
+    animation:handGive 3s 1s infinite alternate cubic-bezier(0.42, 0, 0.06, 0.97);
 }
 @keyframes handGive {
-    from {right:-6.25rem;}
-    to {right:-0.125rem;}
+    0% {right:-6.25rem;}
+    35%, 100% {right:-0.125rem;}
 }
 .fx-serviceinfo-motion .ani-coin-01 {top:3.938rem;left:50%;width:1.75rem;height:1.813rem;margin-left:2.375rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_01.png);}
 .fx-serviceinfo-motion .ani-coin-02 {top:2.063rem;left:50%;width:1.313rem;height:1.375rem;margin-left:4.25rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_coin_02.png);}
