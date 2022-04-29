@@ -291,6 +291,13 @@
 
 /* 부가서비스 */
 .fx-service__keyvisual {position:relative;margin-top:-1.25rem;padding:1.875rem 1.5rem;}
+/* 커뮤니티, 환율맞추기, 챌린지 공통 */
+.fx-keyvisual__label {font-size:1.813rem;font-weight:700;}
+.fx-keyvisual__keytxt {font-size:1.125rem;}
+.fx-keyvisual__subtxt {margin-top:0.438rem;font-size:0.813rem;line-height:1.2;}
+.fx-keyvisual__maintxt {font-size:1.438rem;}
+.fx-keyvisual__subtxt .color-green {margin-top:1rem;font-weight:700;line-height:1.3;}
+
 /* 부가서비스 - 탑트레이더 랭킹 */
 .fx-service__keyvisual--trader {overflow:hidden;position:relative;padding-top:109%;background:#373a4d;}
 .keyvisual__trader--trophy {
@@ -581,7 +588,7 @@
 .fx-attend--modal hr.content-devider {margin:1.875rem 0 0;}
 
 /* 부가서비스 - 커뮤니티 */
-.fx-service__keyvisual--community {height:72vw;background:url(../../resource/images/fxmarket/img_keyvisual_community.png) no-repeat 0 0 / 100% auto;}
+.fx-service__keyvisual--community {background:#f8f0e8;text-align:center;}
 .fx-commlist hr.spacer {margin-top:0;}
 .fx-commlist__item {margin-top:3rem;}
 .fx-boast .challenge-badge__item {width:1.313rem;height:1.313rem;margin:0 0.25rem;}
@@ -818,7 +825,7 @@
 .button-wrap .icon-cart {display:inline-block;width:1.188rem;height:1.063rem;margin-right:0.125rem;background:url(../../resource/images/fxmarket/icon_cart.png) no-repeat 0 0 / 100%;vertical-align:top;}
 
 /* 환율예측 */
-.fx-service__keyvisual--forecast {position:relative;height:68vw;background:url(../../resource/images/fxmarket/dummy_keyvisual_predict.png) no-repeat 0 0 / 100%;} 
+.fx-service__keyvisual--forecast {position:relative;padding:1.875rem 0 2.125rem;background:#e0ebef;text-align:center;} 
 .fx-forecast-date {position:absolute;top:12%;left:13%;font-weight:700;font-size:1.188rem;}
 .fx-guess {margin-top:2.5rem;}
 .fx-guess .fx-rate__graph {margin-top:0.5rem;}
