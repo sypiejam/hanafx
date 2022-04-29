@@ -21,12 +21,17 @@
         -webkit-animation-name:anispeaker;
         animation-duration:2s;
         -webkit-animation-duration:2s;
-        -webkit-animation-iteration-count:2;
-        animation-iteration-count:1;
         animation-fill-mode:both;
         -webkit-animation-fill-mode:both;
     }
-    .ani-speaker-shadow {display:block;width:14.375rem;height:4.25em;margin:-2.5rem auto 0;background:url(../../../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat -1rem 0 / 100%;}
+    .ani-speaker-shadow {display:block;width:14.375rem;height:4.25em;margin:-2.5rem auto 0;background:url(../../../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat -1rem 0 / 100%;
+        animation-name:anishadow;
+        -webkit-animation-name:anishadow;
+        animation-duration:2s;
+        -webkit-animation-duration:2s;
+        animation-fill-mode:both;
+        -webkit-animation-fill-mode:both;
+    }
     .ani-heartgirl-box {z-index:20;top:0.75rem;width:2.75rem;height:2.688rem;margin-left:-5rem;
         animation-name:emojibox;
         -webkit-animation-name:emojibox;
@@ -43,7 +48,7 @@
         animation-duration:2s;	
         -webkit-animation-duration:2s;
         -webkit-transform-origin:center;
-        transform-origin:center
+        transform-origin:center;
     }
     .ani-smileboy-box {z-index:20;top:-1.5rem;width:1.5rem;height:1.5rem;margin-left:-3rem;
         animation-name:emojibox;
@@ -78,8 +83,6 @@
         -webkit-animation-name:anisound;
         animation-duration:2s;
         -webkit-animation-duration:2s;
-        -webkit-animation-iteration-count:1;
-        animation-iteration-count:1;
         animation-fill-mode:both;
         -webkit-animation-fill-mode:both;
     }
@@ -87,6 +90,11 @@
         0% {-webkit-transform:scale(.9) rotate(30deg);transform:scale(.9) rotate(30deg);-webkit-transform-origin:center bottom;transform-origin:center bottom;}
         50% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
         70% {-webkit-transform:scale(1.2) rotate(3deg);transform:scale(1.2) rotate(3deg);}
+        to {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+    }
+    @keyframes anishadow {
+        0%, 50% {-webkit-transform:scale(1);transform:scale(1);}
+        70% {-webkit-transform:scale(1.5);transform:scale(1.5);}
         to {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
     }
     @keyframes anisound {
