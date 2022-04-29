@@ -15,7 +15,7 @@
 <style>
     
     /* 환율맞추기 */
-    .fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:0.813rem auto 0;background:url(../../../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
+    .fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:1rem auto 0;background:url(../../../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
     .fx-calender-base {display:flex;align-items:center;height:100%;}
     .fx-forecast-calender .bold {font-size:1.5rem;}
     .fx-calender-motion {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;
@@ -26,7 +26,7 @@
         animation-fill-mode: both;
         -webkit-animation-fill-mode: both;
     }
-    .fx-forecast-img {z-index:10;position:relative;margin-top:1rem;padding-bottom:1.75rem;}
+    .fx-forecast-img {margin-top:1rem;padding-bottom:1.75rem;}
     .fx-forecast-month {width:50%;color:#fff;}
     .fx-forecast-day {width:50%;color:#1489db;}
     .ani-dart-board {display:block;width:5.75rem;height:6.25rem;margin:0 auto;background:url(../../../../resource/images/fxmarket/img_forecast_dartboard.png) no-repeat 0 0 / 100%;}
@@ -40,7 +40,7 @@
         animation-fill-mode: both;
         -webkit-animation-fill-mode: both;
     }
-    .ani-build-coin {position:absolute;bottom:1rem;left:49%;width:3.563rem;height:2.75rem;background:url(../../../../resource/images/fxmarket/img_forecast_buildcoin.png) no-repeat 0 0 / 100%;
+    .ani-build-coin {bottom:1rem;width:3.563rem;height:2.75rem;margin-left:-0.25rem;background:url(../../../../resource/images/fxmarket/img_forecast_buildcoin.png) no-repeat 0 0 / 100%;
         animation-name: coindummy;
         -webkit-animation-name: coindummy;
         animation-duration: 2s;
@@ -50,7 +50,7 @@
         animation-fill-mode: both;
         -webkit-animation-fill-mode: both;
     }
-    .ani-one-coin {position:absolute;bottom:0.75rem;left:46%;width:2.5rem;height:2.25rem;background:url(../../../../resource/images/fxmarket/img_forecast_anicoin.png) no-repeat 0 0 / 100%;
+    .ani-one-coin {bottom:0.75rem;width:2.5rem;height:2.25rem;margin-left:-1rem;background:url(../../../../resource/images/fxmarket/img_forecast_anicoin.png) no-repeat 0 0 / 100%;
         animation-name: coinmotion;
         -webkit-animation-name: coinmotion;
         animation-duration: 2s;
@@ -107,14 +107,14 @@
         95%, 100% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
     }
     @keyframes shadowtrans {
-        0%, 25% {-webkit-transform:translate(-53%,0);transform:translate(-53%,0);}
-        30% {-webkit-transform:translate(calc(-53% + 16px),0);transform:translate(calc(-53% + 16px),0);}
-        34%,100% {-webkit-transform:translate(calc(-53% + 10px),0);transform:translate(calc(-53% + 10px),0);}
+        0%, 25% {-webkit-transform:translate(calc(-50% - 0.313rem),0);transform:translate(calc(-50% - 0.313rem),0);}
+        30% {-webkit-transform:translate(calc(-50% + 0.5rem),0);transform:translate(calc(-50% + 0.5rem),0);}
+        35%,100% {-webkit-transform:translate(calc(-50% + 0.313rem),0);transform:translate(calc(-50% + 0.313rem),0);}
     }
     @keyframes coindummy {
         0%, 25% {-webkit-transform:translate(0,0);transform:translate(0,0);}
-        30% {-webkit-transform:translate(16px,0);transform:translate(16px,0);}
-        34%,100% {-webkit-transform:translate(10px,0);transform:translate(10px,0);}
+        30% {-webkit-transform:translate(1rem,0);transform:translate(1rem,0);}
+        35%,100% {-webkit-transform:translate(0.625rem,0);transform:translate(0.625rem,0);}
     }
     @keyframes coinmotion {
         0%,30% {-webkit-transform:rotate(0);transform:rotate(0);}
@@ -146,7 +146,7 @@
     <!-- header -->
     <div id="header" class="app-header">
         <button class="app-header__button app-header__button--back" title="이전 화면"></button>
-        <h1 class="app-header__title">환율맞추기</h1> <!-- 2022-04-29 타이틀 수정 -->
+        <h1 class="app-header__title">환율맞추기</h1> <!-- 2022-05-02 타이틀 수정 -->
         <button class="app-header__button app-header__button--home" title="메인화면"></button>
         <button class="app-header__button app-header__button--hamburger" title="전체메뉴"></button>
     </div>
@@ -155,7 +155,7 @@
     <div id="content" class="app-main app-main--without-footer fxmarket">
         <!-- 부가서비스 : 환율예측 -->
         <div class="fx-service fx-forecast">
-            <!-- 2022-04-29 키비쥬얼 수정 -->
+            <!-- 2022-05-02 키비쥬얼 수정 -->
             <div class="fx-service__keyvisual fx-service__keyvisual--forecast">
                 <div class="fx-keyvisual-txtbox">
                     <h2 class="fx-keyvisual__label">환율맞추기</h2>
@@ -169,15 +169,15 @@
                         <span class="fx-forecast-month"><span class="bold">4</span>월</span><span class="fx-forecast-day"><span class="bold">26</span>일</span><!-- to.개발 | 익영업일 날짜 출력 -->
                     </div>
                 </div>  
-                <div class="fx-forecast-img" aria-hidden="true">
+                <div class="fx-keyvisual-img fx-forecast-img" aria-hidden="true">
                     <span class="ani-dart-board"></span>
                     <span class="ani-dart"><i class="ani-dart-motion"></i></span>
-                    <span class="ani-build-coin"></span>
-                    <span class="ani-one-coin"></span>
+                    <span class="ani-obj ani-build-coin"></span>
+                    <span class="ani-obj ani-one-coin"></span>
                 </div>
                 <p class="fx-keyvisual__subtxt">응모만해도 <span class="color-green">Get</span> 적중하면 <span class="color-green">Get</span><br>5일 연속 맞추면 <span class="color-green">1,500ⓢ 추가적립</span></p>
             </div>
-            <!-- // 2022-04-29 키비쥬얼 수정 -->
+            <!-- // 2022-05-02 키비쥬얼 수정 -->
             
             <div class="container fx-guess">
                 <h2 class="offscreen">현재환율</h2>
@@ -400,7 +400,7 @@
                         <li class="guide-list__item">다음날 영업일 기준 장마감 시간(15:30)이후 첫 고시환율로 등락이 확정됩니다.</li>
                         <li class="guide-list__item">포인트 적립 안내
                             <ul class="guide-sub-list guide-sub-list--gray">
-                                <li class="guide-sub-list__item">응모시 100ⓢ, 적중시 100ⓢ, 5일 연속 적중시 1,500ⓢ 추가적립</li> <!-- 2022-04-29 문구변경 -->
+                                <li class="guide-sub-list__item">응모시 100ⓢ, 적중시 100ⓢ, 5일 연속 적중시 1,500ⓢ 추가적립</li> <!-- 2022-05-02 문구변경 -->
                             </ul>
                         </li>
                         <li class="guide-list__item">환율예측 정보는 과거 1개월까지 확인할 수 있습니다.</li>
