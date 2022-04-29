@@ -15,6 +15,14 @@
 <style>
     .fx-challenge-img {margin-bottom:-1rem;}
     .ani-golfer {display:block;width:11.813rem;height:8.688rem;margin:0 auto;background:url(../../../../resource/images/fxmarket/img_challenge_golfer.png) no-repeat 0 0 / 100%;}
+    .ani-shot {top:2rem;width:0.688rem;height:1.313rem;margin-left:3.8rem;background:url(../../../../resource/images/fxmarket/img_challenge_shot.png) no-repeat 0 0 / 100%;
+        -webkit-animation-name: anishot;
+        animation-name: anishot;
+        animation-duration: 3s;	
+        -webkit-animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
     .ani-note {top:1.5rem;width:1.125rem;height:0.938rem;margin-left:-5.5rem;background:url(../../../../resource/images/fxmarket/img_challenge_note.png) no-repeat 0 0 / 100%;
         -webkit-animation-name: aninote;
         animation-name: aninote;
@@ -22,11 +30,6 @@
         -webkit-animation-duration: 2s;
         -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
-    }
-    @keyframes aninote {
-        0% {transform: rotate(-4deg) translateY(-2px);}
-        50% {transform: rotate(4deg) translateY(2px);}
-        100% {transform: rotate(-4deg) translateY(-2px);}
     }
     .ani-star-1 {top:3rem;width:0.625rem;height:0.625rem;margin-left:-6rem;background:url(../../../../resource/images/fxmarket/img_challenge_star1.png) no-repeat 0 0 / 100%;
         -webkit-animation-name: star;
@@ -46,11 +49,6 @@
         -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
     }
-    @keyframes star {
-        0% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}
-        50% {-webkit-transform:scale(1.4);transform:scale(1.4);opacity:1;}	
-	    100% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}	
-    }
     .ani-balloon {top:-1.5rem;width:2.688rem;height:2.625rem;margin-left:3rem;background:url(../../../../resource/images/fxmarket/img_challenge_balloon.png) no-repeat 0 0 / 100%;
         animation-name: aniballoon;
         -webkit-animation-name: aniballoon;	
@@ -59,15 +57,6 @@
         animation-timing-function: ease-out;	
         -webkit-animation-timing-function: ease-out;	
         visibility: visible !important;		
-    }
-    @keyframes aniballoon {
-        0% {transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);opacity: 0.2;}
-        30% {transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);opacity: 1;}
-        45% {transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);opacity: 1;}
-        60% {transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);opacity: 1;}	
-        75% {transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);opacity: 1;}
-        90% {transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);opacity: 1;}	
-        100% {transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);opacity: 1;}		
     }
     .ani-arrow {display:block;position:absolute;top:0;right:0;bottom:0;left:0;width:1.5rem;height:1.375rem;margin:auto;transform:rotate(-60deg);-webkit-transform:rotate(-60deg);}
     .ani-arrow [class^="arrow"] {display:block;position:absolute;background-repeat:no-repeat;background-position:center;background-size:100% auto;
@@ -110,17 +99,43 @@
         -webkit-animation-name:aniarrow03;
         animation-name:aniarrow03
     }
+    @keyframes star {
+        0% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}
+        50% {-webkit-transform:scale(1.4);transform:scale(1.4);opacity:1;}	
+	    100% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}	
+    }
+    @keyframes aninote {
+        0% {transform: rotate(-4deg) translateY(-2px);}
+        50% {transform: rotate(4deg) translateY(2px);}
+        100% {transform: rotate(-4deg) translateY(-2px);}
+    }
+    @keyframes aniballoon {
+        0% {transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);opacity: 0.2;}
+        30% {transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);opacity: 1;}
+        45% {transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);opacity: 1;}
+        60% {transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);opacity: 1;}	
+        75% {transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);opacity: 1;}
+        90% {transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);opacity: 1;}	
+        100% {transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);opacity: 1;}		
+    }
+    @keyframes anishot {
+        0%, 80% {-webkit-transform:scale(1);transform:scale(1);}
+        85% {-webkit-transform:scale(1.4);transform:scale(1.4);}	
+	    90% {-webkit-transform:scale(1);transform:scale(1);}
+        95% {-webkit-transform:scale(1.4);transform:scale(1.4);}	
+	    100% {-webkit-transform:scale(1);transform:scale(1);}
+    }
     @keyframes aniarrow01 {
-        0%, 65% {-webkit-mask-size:0 100%;mask-size:0 100%}
-        70%, to {-webkit-mask-size:150% 100%;mask-size:150% 100%}
+        0%, 40% {-webkit-mask-size:0 100%;mask-size:0 100%}
+        45%, to {-webkit-mask-size:150% 100%;mask-size:150% 100%}
     }
     @keyframes aniarrow02 {
-        0%, 70% {-webkit-mask-size:100% 0;mask-size:100% 0}
-        75%, to {-webkit-mask-size:100% 150%;mask-size:100% 150%}
+        0%, 45% {-webkit-mask-size:100% 0;mask-size:100% 0}
+        50%, to {-webkit-mask-size:100% 150%;mask-size:100% 150%}
     }
     @keyframes aniarrow03 {
-        0%, 75% {-webkit-mask-size:0 100%;mask-size:0 100%}
-        80%, to {-webkit-mask-size:150% 100%;mask-size:150% 100%}
+        0%, 50% {-webkit-mask-size:0 100%;mask-size:0 100%}
+        55%, to {-webkit-mask-size:150% 100%;mask-size:150% 100%}
     }
 </style>
 </head>
@@ -145,7 +160,7 @@
                     <p class="fx-keyvisual__keytxt">#거래하기 #환율맞추기 #커뮤니티</p>
                 </div>
                 <div class="fx-keyvisual-img fx-challenge-img" aria-hidden="true">
-                    <span class="ani-golfer"></span>
+                    <span class="ani-golfer"><i class="ani-obj ani-shot"></i></span>
                     <span class="ani-obj ani-note"></span>
                     <span class="ani-obj ani-star-1"></span>
                     <span class="ani-obj ani-star-2"></span>
