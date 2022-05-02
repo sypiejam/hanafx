@@ -743,7 +743,7 @@
     100% {transform:translateY(0%);}		
 }
 @keyframes soundmotion {
-    0%, 30% {-webkit-transform:translateX(0) rotate(-360deg);transform:translateX(0) rotate(-360deg);opacity:0;}
+    0%, 30% {-webkit-transform:translateX(0) rotate(-540deg);transform:translateX(0) rotate(-540deg);opacity:0;}
     50%, 70% {-webkit-transform:translateX(4.5rem) rotate(0deg);transform:translateX(4.5rem) rotate(0deg);opacity:1;}
     78% {-webkit-transform:translateX(4.5rem) rotate(0deg) scale(1.1);transform:translateX(4.5rem) rotate(0deg) scale(1.1);}
     86% {-webkit-transform:translateX(4.5rem) rotate(0deg) scale(1);transform:translateX(4.5rem) rotate(0deg) scale(1);}
