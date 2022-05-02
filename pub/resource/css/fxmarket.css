@@ -592,8 +592,8 @@
 .fx-service__keyvisual--community {background:#f8f0e8;}
 .ani-speaker-box {z-index:10;position:relative;display:block;margin-left:-1rem;}
 .ani-speaker {display:block;width:8rem;height:7.5rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker.png) no-repeat 0 0 / 100%;
-    animation-name:speakermotion;
-    -webkit-animation-name:speakermotion;
+    animation-name:anispeaker;
+    -webkit-animation-name:anispeaker;
     animation-duration:3s;
     -webkit-animation-duration:3s;
 }
@@ -638,8 +638,8 @@
     -webkit-animation-iteration-count:infinite;
 }
 .ani-sound {display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_community_sound.png) no-repeat 0 0 / 100%;
-    animation-name:soundmotion;
-    -webkit-animation-name:soundmotion;
+    animation-name:anisound;
+    -webkit-animation-name:anisound;
     animation-duration:3s;
     -webkit-animation-duration:3s;
     animation-fill-mode:both;
@@ -718,7 +718,7 @@
     50% {transform:rotate(-15deg);opacity:0.8;}
     100% {top:-150px;transform:rotate(15deg);opacity:0;}
 }
-@keyframes speakermotion {
+@keyframes anispeaker {
     0% {-webkit-transform:scale(.9) rotate(30deg);transform:scale(.9) rotate(30deg);-webkit-transform-origin:center bottom;transform-origin:center bottom;}
     30% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
     40% {-webkit-transform:scale(1.2) rotate(3deg);transform:scale(1.2) rotate(3deg);}
@@ -742,7 +742,7 @@
     50% {-webkit-transform:translateY(8%);transform:translateY(8%);}	
     100% {-webkit-transform:translateY(0%);transform:translateY(0%);}		
 }
-@keyframes soundmotion {
+@keyframes anisound {
     0%, 30% {-webkit-transform:translateX(0) rotate(-600deg);transform:translateX(0) rotate(-600deg);opacity:0;}
     50%, 70% {-webkit-transform:translateX(4.5rem) rotate(0deg);transform:translateX(4.5rem) rotate(0deg);opacity:1;}
     78% {-webkit-transform:translateX(4.5rem) rotate(0deg) scale(1.1);transform:translateX(4.5rem) rotate(0deg) scale(1.1);}
@@ -791,16 +791,16 @@
     animation-iteration-count:infinite;
 }
 .ani-star-1 {top:3rem;width:0.625rem;height:0.625rem;margin-left:-6rem;background:url(../../resource/images/fxmarket/img_challenge_star1.png) no-repeat 0 0 / 100%;
-    -webkit-animation-name:star;
-    animation-name:star;
+    -webkit-animation-name:anistar;
+    animation-name:anistar;
     animation-duration:2s;	
     -webkit-animation-duration:2s;
     -webkit-animation-iteration-count:infinite;
     animation-iteration-count:infinite;
 }
 .ani-star-2 {top:3.5rem;width:0.5rem;height:0.5rem;margin-left:-4.8rem;background:url(../../resource/images/fxmarket/img_challenge_star2.png) no-repeat 0 0 / 100%;
-    -webkit-animation-name:star;
-    animation-name:star;
+    -webkit-animation-name:anistar;
+    animation-name:anistar;
     animation-duration:2s;	
     -webkit-animation-duration:2s;
     -webkit-animation-delay:1s;
@@ -859,7 +859,7 @@
     -webkit-animation-name:aniarrow03;
     animation-name:aniarrow03
 }
-@keyframes star {
+@keyframes anistar {
     0% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}
     50% {-webkit-transform:scale(1.4);transform:scale(1.4);opacity:1;}	
     100% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}	
