@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+<style>
+
+.modal-full .modal__contents--tutorial {height:calc(100vh - 3.5rem - constant(safe-area-inset-bottom));height:calc(100vh - 3.5rem - env(safe-area-inset-top));padding:0;}
+.tutorial-slider .slick-dots {position:fixed;left:0;right:0;bottom:2rem;text-align:center;}
+.tutorial-slider .slick-dots li {display:inline-block;margin:0 0.188rem;}
+.tutorial-slider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
+.tutorial-slider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
+
+.tutorial-header {display:flex;justify-content:center;align-items:center;width:100%;height:5rem;text-align:center;line-height:1.3;}
+.tutorial-container {height:calc(100% - 5rem);padding:1rem 1.5rem 6rem;}
+.tutorial-content {display:flex;flex-direction:column;height:100%;}
+.tutorial-linebox {flex:1;display:flex;align-items:center;width:100%;height:100%;padding:1.5rem;border:1px solid #ddd;border-radius:2rem;}
+
+.tutorial-text span {opacity:0;display:inline-block;min-width:0.2rem;color:#000;font-size:1.25rem;font-weight:300;}
+.tutorial-slider .tutorial-slider__item {position:relative;width:100%;height:100%;}
+.slick-slide .tutorial-list {opacity:0;height:calc(100vh - 3.5rem - constant(safe-area-inset-bottom));height:calc(100vh - 3.5rem - env(safe-area-inset-top));}
+.slick-active .tutorial-list {opacity:1;}
+
+.img-tutorial {margin:0 auto;}
+.tutorial-slider .fx-attend-visual {position:absolute;margin:0;left:25%;}
+.tutorial-slider .fx-attend__desc {margin-top:0;}
+.tutorial-slider .fx-commlist__item {margin-top:0;}
+
+.tutorial-slider__item--guide01 .img-tutorial {max-width:340px;}
+.tutorial-slider__item--guide04 .img-tutorial {width:240px;}
+.tutorial-slider__item--guide04 .fx-boast-foot {height:7rem;margin-top:2rem;}
+.tutorial-slider__item--guide03 .img-guide03-1 {width:200px;}
+.tutorial-slider__item--guide03 .img-guide03-2 {width:200px;}
+.tutorial-slider__item--guide03 .img-guide03-3 {width:200px;}
+
+.tutorial-slider .slick-prev {display:none !important;}
+.tutorial-slider .slick-next {z-index:10;position:fixed;right:1.5rem;bottom:2rem;width:2rem;height:2rem;}
+.tutorial-slider .slick-next:after {content:'다음';font-size:1rem;}
+.tutorial-skip {z-index:10;position:fixed;left:1.5rem;bottom:2rem;font-size:1rem;}
+@keyframes anim {
+  0% {opacity:0;transform: translateX(-100px);}
+  20% {opacity:1;transform: translateX(0px);}
+  100% {opacity:1;transform: translateX(0px);}
+}
+
+@media (max-width: 359px) {
+    html {font-size:12px;}
+}
+
+@media (max-height: 680px) {
+    .tutorial-slider__item--guide04 .img-tutorial {width:200px;}
+}
+</style>
+</head>
+<body>
+<div class="modal-full">
+    <div class="modal__header">
+        <h1 class="modal__header--title">FX마켓 가이드</h1>
+    </div>
+    <div class="modal__contents modal__contents--tutorial">
+        <div class="tutorial-slider">
+            <div class="tutorial-slider__item tutorial-slider__item--guide01">
+                <div class="tutorial-list">
+                    <div class="tutorial-header">
+                        <div class="tutorial-text__wrap">
+                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">부</span><span class="color-green">스</span><span class="color-green">터</span><span>를</span> <span>받</span><span>았</span><span>어</span><span>요</span><span>.</span></p>
+                            <p class="tutorial-text"><span>달</span><span>러</span><span>를</span> <span>사</span><span>볼</span> <span>까</span><span>요</span><span>?</span></p>
+                        </div>
+                    </div>
+                    <div class="tutorial-container">
+                        <div class="tutorial-content">
+                            <div class="tutorial-linebox">
+                                <img src="../../../../resource/images/fxmarket/img_tutorial_guide01.png" alt="" class="img-tutorial">
+                                <div class="fx-attend-visual" aria-hidden="true">
+                                    <div class="ani-rocket-wrap">
+                                        <div class="ani-rocket">
+                                            <span class="ani-rocket-main"></span>
+                                        </div>
+                                    </div>
+                                    <div class="ani-smoke-wrap">
+                                        <span class="ani-smoke ani-smoke-center"></span>
+                                        <span class="ani-smoke ani-smoke-left"></span>
+                                        <span class="ani-smoke ani-smoke-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-slider__item tutorial-slider__item--guide02">
+                <div class="tutorial-list">
+                    <div class="tutorial-header">
+                        <div class="tutorial-text__wrap">
+                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">부</span><span class="color-green">스</span><span class="color-green">터</span> <span class="color-green">우</span><span class="color-green">대</span> <span>받</span><span>고</span></p>
+                            <p class="tutorial-text"><span>금</span><span>액</span><span>만</span> <span>입</span><span>력</span><span>하</span><span>면</span> <span>준</span><span>비</span> <span>끝</span><span>!</span></p>
+                        </div>
+                    </div>
+                    <div class="tutorial-container">
+                        <div class="tutorial-content" style="height:auto;">
+                            <div class="tutorial-linebox" style="padding:0;border:0;">
+                                <img src="../../../../resource/images/fxmarket/img_tutorial_guide01_test.png" alt="" class="img-tutorial">
+                                <div class="fx-attend-visual" aria-hidden="true">
+                                    <div class="ani-rocket-wrap">
+                                        <div class="ani-rocket">
+                                            <span class="ani-rocket-main"></span>
+                                        </div>
+                                    </div>
+                                    <div class="ani-smoke-wrap">
+                                        <span class="ani-smoke ani-smoke-center"></span>
+                                        <span class="ani-smoke ani-smoke-left"></span>
+                                        <span class="ani-smoke ani-smoke-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-slider__item tutorial-slider__item--guide03">
+                <div class="tutorial-list">
+                    <div class="tutorial-header">
+                        <div class="tutorial-text__wrap">
+                            <p class="tutorial-text"><span>달</span><span>러</span> <span>구</span><span>매</span> <span>완</span><span>료</span><span>!</span></p>
+                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">커</span><span class="color-green">뮤</span><span class="color-green">니</span><span class="color-green">티</span><span>에</span> <span>자</span><span>랑</span><span>해</span><span>볼</span><span>까</span><span>요</span><span>.</span></p>
+                        </div>
+                    </div>
+                    <div class="tutorial-container">
+                        <div class="tutorial-content">
+                            <div style="padding:0 2rem;">
+                                <div class="tutorial-linebox">
+                                    <div class="w100">
+                                        <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_0.png" alt="" class="img-tutorial img-guide03-1">
+                                        <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_1.png" alt="" class="img-tutorial img-guide03-2">
+                                        <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_2.png" alt="" class="img-tutorial img-guide03-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-slider__item tutorial-slider__item--guide04">
+                <div class="tutorial-list">
+                    <div class="tutorial-header">
+                        <div class="tutorial-text__wrap">
+                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">커</span><span class="color-green">뮤</span><span class="color-green">니</span><span class="color-green">티</span><span>에</span><span>서</span></p>
+                            <p class="tutorial-text"><span>공</span><span>감</span><span>을</span> <span>주</span><span>고</span><span>받</span><span>아</span><span>요</span><span>.</span></p>
+                        </div>
+                    </div>
+                    <div class="tutorial-container">
+                        <div class="tutorial-content">
+                            <div class="tutorial-linebox">
+                                <img src="../../../../resource/images/fxmarket/img_tutorial_guide04.png" alt="" class="img-tutorial">
+                            </div>
+                            <div class="fx-boast-foot">
+                                <div class="fx-commlist__date">
+                                    <span>2022-02-12 00:00</span>
+                                </div>
+                                <div class="fx-commlike">
+                                    <button type="button" class="fx-commlike__btn is-active"><span class="txt">공감하기</span><span class="num">999+</span></button>
+                                    <div data-element="toggle__panel" style="display:block;">
+                                        <ul class="fx-commicon">
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike11" name="fxCommLike1" class="fx-commicon__input" disabled>
+                                                <label for="fxCommLike11" class="fx-commicon__icon--01">
+                                                    <em class="offscreen">좋아요</em>
+                                                </label>
+                                                <span class="fx-commicon__count">99+</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike12" name="fxCommLike1" class="fx-commicon__input" disabled>
+                                                <label for="fxCommLike12" class="fx-commicon__icon--02">
+                                                    <em class="offscreen">부러워</em>
+                                                </label>
+                                                <span class="fx-commicon__count">7</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike13" name="fxCommLike1" class="fx-commicon__input" disabled>
+                                                <label for="fxCommLike13" class="fx-commicon__icon--03">
+                                                    <em class="offscreen">대단해</em>
+                                                </label>
+                                                <span class="fx-commicon__count">167</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike14" name="fxCommLike1" class="fx-commicon__input" disabled>
+                                                <label for="fxCommLike14" class="fx-commicon__icon--04">
+                                                    <em class="offscreen">반했어</em>
+                                                    <div class="fx-commicon-heart" aria-hidden="true">
+                                                        <div class="hearts-animations"> 
+                                                            <span class="heart heart1"></span>
+                                                            <span class="heart heart2"></span>
+                                                            <span class="heart heart3"></span>
+                                                            <span class="heart heart4"></span>
+                                                            <span class="heart heart5"></span>
+                                                            <span class="heart heart6"></span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <span class="fx-commicon__count">16</span>
+                                            </li>
+                                            <li class="fx-commicon__item">
+                                                <input type="checkbox" id="fxCommLike15" name="fxCommLike1" class="fx-commicon__input" disabled>
+                                                <label for="fxCommLike15" class="fx-commicon__icon--05">
+                                                    <em class="offscreen">슬퍼요</em>
+                                                </label>
+                                                <span class="fx-commicon__count">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-slider__item tutorial-slider__item--guide05">
+                <div class="tutorial-list">
+                    <div class="tutorial-header">
+                        <div class="tutorial-text__wrap">
+                            <p class="tutorial-text"><span class="color-green">챌</span><span class="color-green">린</span><span class="color-green">지</span><span class="color-green">를</span> <span class="color-green">달</span><span class="color-green">성</span><span>하</span><span>면</span></p>
+                            <p class="tutorial-text"><span>F</span><span>X</span><span>배</span><span>지</span><span>를</span> <span>받</span><span>아</span><span>요</span><span>.</span></p>
+                        </div>
+                    </div>
+                    <div class="tutorial-container">
+                        <div class="tutorial-content">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-slider__item tutorial-slider__item--guide06">
+                <div class="tutorial-list">
+                    <div class="tutorial-header">
+                        <div class="tutorial-text__wrap">
+                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">마</span><span class="color-green">켓</span> <span class="color-green">거</span><span class="color-green">래</span><span>도</span> <span>하</span><span>고</span></p>
+                            <p class="tutorial-text"><span class="color-green">즐</span><span class="color-green">거</span><span class="color-green">운</span> <span class="color-green">혜</span><span class="color-green">택</span><span>도</span> <span>를</span> <span>받</span><span>아</span><span>보</span><span>세</span><span>요</span><span>.</span></p>
+                        </div>
+                    </div>
+                    <div class="tutorial-container">
+                        <div class="tutorial-content">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tutorial-skip">
+            <button type="button" class="btn-skip">건너뛰기</button>
+        </div>
+    </div>
+    <button class="modal__btn--close" type="button" title="닫기"></button>
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+<script>
+$(function(){
+    var slider = $('.tutorial-slider');
+    var slideLen = $('.tutorial-slider__item').length - 1;
+        
+
+    slider.slick({
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        arrows: true,
+        dots: true,
+        swipeToSlide: true,
+    })
+  
+    slider.init(function(event, slick){
+        spanMaker(0);
+    });
+
+    slider.on({
+        beforeChange : function(event,slick,cur,next){
+            var dir = slick.currentDirection;
+            if(cur == 0 && next == 0 && dir !== 0){
+                return false;
+            } else if(cur == slideLen && next == slideLen){
+                return false;
+            } else {
+                $('.tutorial-text span').removeAttr('style');
+            }
+            spanMaker(next);
+            
+        },
+        afterChange : function(event,slick,cur){
+            switch(cur){
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    heartRemove();
+                    break;
+                case 3:
+                    heartActive();
+                    break;
+                case 4:
+                    heartRemove();
+                    break;
+                case 5:
+                    break;
+            }
+        }
+    });
+
+    $('.btn-skip').on('click', function(){
+        slider.slick('slickGoTo', slideLen);
+    })
+
+    function spanMaker(idx){
+        var target = $('.tutorial-slider .slick-slide').eq(idx).find('.tutorial-text');
+        target.each(function(i,el){
+            var text = $(el).text().split('');
+            for(var i =0 ; i< text.length; i ++){ 
+                var time = (text.length - i) * 50;
+                $(el).find("span:eq("+ i +")").css( {
+                    "-webkit-animation" : "anim 3s "+ time + "ms 1 cubic-bezier(0.4, 0, 0.2, 1) both", 
+                    "animation": "anim 3s "+ time + "ms 1 cubic-bezier(0.4, 0, 0.2, 1) both" 
+                });
+            }
+        })
+    }
+
+    function heartActive(){
+        $('.hearts-animations .heart').each(function(idx,heart){
+            $(heart).css({
+                'animation-delay': (idx * 0.1) + 's',
+                '-webkit-animation-delay': (idx * 0.1) + 's'
+            })
+        })
+        $('#fxCommLike14').prop('checked', true);
+        $('.hearts-animations').addClass('is-active');
+    }
+
+    function heartRemove(){
+        $('#fxCommLike14').prop('checked', false);
+        $('.hearts-animations').removeClass('is-active');
+    }
+
+
+})
+</script>
+</body>
+</html>
