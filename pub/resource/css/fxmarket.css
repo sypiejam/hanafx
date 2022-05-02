@@ -606,8 +606,8 @@
 [class^=ani-emoji-box] {position:absolute;left:50%;
     animation-name:emojibox;
     -webkit-animation-name:emojibox;
-    animation-duration:3s;	
-    -webkit-animation-duration:3s;
+    animation-duration:2s;	
+    -webkit-animation-duration:2s;
     animation-delay:3s;
     -webkit-animation-delay:3s;
     animation-direction:alternate;
@@ -618,7 +618,7 @@
     -webkit-animation-fill-mode:both;
 }
 .ani-emoji-box1 {z-index:20;top:0.75rem;width:2.75rem;height:2.688rem;margin-left:-5rem;}
-.ani-emoji-box2 {z-index:20;top:-1.5rem;width:1.5rem;height:1.5rem;margin-left:-3rem;animation-delay:3.2s;-webkit-animation-delay:3.2s;}
+.ani-emoji-box2 {z-index:20;top:-1.5rem;width:1.5rem;height:1.5rem;margin-left:-3rem;animation-duration:2.5s;-webkit-animation-duration:2.5s;}
 [class^=ani-emoji-box] .ani-emoji {display:block;width:100%;height:100%;
     -webkit-animation-name:emojimotion;
     animation-name:emojimotion;
@@ -739,11 +739,11 @@
 }
 @keyframes soundbox {
     0% {-webkit-transform:translateY(0%);transform:translateY(0%);}
-    50% {-webkit-transform:translateY(6%);transform:translateY(6%);}	
+    50% {-webkit-transform:translateY(8%);transform:translateY(8%);}	
     100% {-webkit-transform:translateY(0%);transform:translateY(0%);}		
 }
 @keyframes soundmotion {
-    0%, 30% {-webkit-transform:translateX(0) rotate(-540deg);transform:translateX(0) rotate(-540deg);opacity:0;}
+    0%, 30% {-webkit-transform:translateX(0) rotate(-600deg);transform:translateX(0) rotate(-600deg);opacity:0;}
     50%, 70% {-webkit-transform:translateX(4.5rem) rotate(0deg);transform:translateX(4.5rem) rotate(0deg);opacity:1;}
     78% {-webkit-transform:translateX(4.5rem) rotate(0deg) scale(1.1);transform:translateX(4.5rem) rotate(0deg) scale(1.1);}
     86% {-webkit-transform:translateX(4.5rem) rotate(0deg) scale(1);transform:translateX(4.5rem) rotate(0deg) scale(1);}
@@ -751,8 +751,8 @@
     100% {-webkit-transform:translateX(4.5rem) rotate(0deg) scale(1);transform:translateX(4.5rem) rotate(0deg) scale(1);}
 }
 @keyframes emojibox {
-    50% {-webkit-transform:rotate(-6deg);transform:rotate(-6deg);}	
-    100% {-webkit-transform:rotate(6deg);transform:rotate(6deg);}	
+    50% {-webkit-transform:rotate(-8deg);transform:rotate(-8deg);}	
+    100% {-webkit-transform:rotate(8deg);transform:rotate(8deg);}	
 }
 @keyframes emojimotion {
     0% {-webkit-transform:scale3d(0.8,0.8,0.8);transform:scale3d(0.8,0.8,0.8);}
