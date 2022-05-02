@@ -1273,8 +1273,8 @@
 /* 서비스 가입 - 가입안내 */
 .fx-footer {opacity:0;-webkit-transition:all 0.3s;transition:all 0.3s;}
 .fx-footer.is-active {opacity:1;}
-.fx-serviceinfo__text {margin-bottom:1.875rem;font-weight:300;font-size:1.25rem;text-align:center;line-height:1.4;}
-.fx-serviceinfo__text .bold {font-weight:700;color:#009591;}
+.fx-serviceinfo__text {margin-bottom:1.875rem;font-weight:300;font-size:1.375rem;text-align:center;line-height:1.4;}
+.fx-serviceinfo__text .bold {color:#009591;}
 .fx-serviceinfo .container:not(:first-child) {margin-top:3.75rem;}
 .fx-serviceinfo-group {opacity:0;-webkit-transition:all 0.6s;transition:all 0.6s;-webkit-transform:translateY(50px);transform:translateY(50px);}
 .fx-serviceinfo-group.is-active {opacity:1;-webkit-transform:translateY(0);transform:translateY(0);}
