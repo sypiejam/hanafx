@@ -290,7 +290,7 @@
 .fx-mycommunity__btn .modal__btn--close {position:static;display:block;}
 
 /* 부가서비스 */
-.fx-service__keyvisual {position:relative;margin-top:-1.25rem;padding:2.313rem 0 2.375rem;text-align:center;}
+.fx-service__keyvisual {position:relative;min-height:21rem;margin-top:-1.25rem;padding:2.313rem 0 2.375rem;text-align:center;}
 .fx-keyvisual-img {z-index:10;position:relative;margin-top:2rem;}
 .fx-keyvisual-img .ani-obj {position:absolute;left:50%;}
 .fx-keyvisual__label {font-size:1.813rem;font-weight:700;line-height:1.3;}
@@ -618,7 +618,7 @@
     -webkit-animation-fill-mode:both;
 }
 .ani-emoji-box1 {z-index:20;top:0.75rem;width:2.75rem;height:2.688rem;margin-left:-5rem;}
-.ani-emoji-box2 {z-index:20;top:-1.5rem;width:1.5rem;height:1.5rem;margin-left:-3rem;animation-duration:2.5s;-webkit-animation-duration:2.5s;}
+.ani-emoji-box2 {z-index:20;top:-1.25rem;width:1.5rem;height:1.5rem;margin-left:-3rem;animation-duration:2.5s;-webkit-animation-duration:2.5s;}
 [class^=ani-emoji-box] .ani-emoji {display:block;width:100%;height:100%;
     -webkit-animation-name:emojimotion;
     animation-name:emojimotion;
@@ -627,7 +627,7 @@
 }
 .ani-emoji-box1 .ani-emoji {background:url(../../resource/images/fxmarket/img_community_heartgirl.png) no-repeat 0 0 / 100%;}
 .ani-emoji-box2 .ani-emoji {background:url(../../resource/images/fxmarket/img_community_smileboy.png) no-repeat 0 0 / 100%;}
-.ani-sound-box {top:0;width:2.563rem;height:2.688rem;
+.ani-sound-box {top:-0.25rem;width:2.563rem;height:2.688rem;
     animation-name:soundbox;
     -webkit-animation-name:soundbox;	
     animation-duration:2s;	
@@ -808,7 +808,7 @@
     -webkit-animation-iteration-count:infinite;
     animation-iteration-count:infinite;
 }
-.ani-balloon {top:-1.5rem;width:2.688rem;height:2.625rem;margin-left:3rem;background:url(../../resource/images/fxmarket/img_challenge_balloon.png) no-repeat 0 0 / 100%;
+.ani-balloon {top:-1.125rem;width:2.688rem;height:2.625rem;margin-left:3rem;background:url(../../resource/images/fxmarket/img_challenge_balloon.png) no-repeat 0 0 / 100%;
     animation-name:aniballoon;
     -webkit-animation-name:aniballoon;	
     animation-duration:3s;	
@@ -833,31 +833,31 @@
     -webkit-animation-fill-mode:forwards;
     animation-fill-mode:forwards
 }
-.ani-arrow .arrow01 {top:5px;left:0;width:0.75rem;height:0.438rem;background-image:url(../../resource/images/fxmarket/img_challenge_arrow01.png);
+.ani-arrow .arrow-1 {top:5px;left:0;width:0.75rem;height:0.438rem;background-image:url(../../resource/images/fxmarket/img_challenge_arrow01.png);
     -webkit-mask-image:linear-gradient(90deg, black 80%, transparent);
     mask-image:linear-gradient(90deg, black 80%, transparent);
     -webkit-mask-size:0 100%;
     mask-size:0 100%;
-    -webkit-animation-name:aniarrow01;
-    animation-name:aniarrow01
+    -webkit-animation-name:aniarrow1;
+    animation-name:aniarrow1
 }
-.ani-arrow .arrow02 {top:5px;left:5px;width:0.438em;height:0.875rem;background-image:url(../../resource/images/fxmarket/img_challenge_arrow02.png);
+.ani-arrow .arrow-2 {top:5px;left:5px;width:0.438em;height:0.875rem;background-image:url(../../resource/images/fxmarket/img_challenge_arrow02.png);
     -webkit-transform:rotate(4deg);
     transform:rotate(4deg);
     -webkit-mask-image:linear-gradient(to bottom, black 50%, transparent);
     mask-image:linear-gradient(to bottom, black 50%, transparent);
     -webkit-mask-size:100% 0;
     mask-size:100% 0;
-    -webkit-animation-name:aniarrow02;
-    animation-name:aniarrow02
+    -webkit-animation-name:aniarrow2;
+    animation-name:aniarrow2
 }
-.ani-arrow .arrow03 {top:7px;right:-2px;width:1.313rem;height:1rem;background-image:url(../../resource/images/fxmarket/img_challenge_arrow03.png);
+.ani-arrow .arrow-3 {top:7px;right:-2px;width:1.313rem;height:1rem;background-image:url(../../resource/images/fxmarket/img_challenge_arrow03.png);
     -webkit-mask-image:linear-gradient(90deg, black 80%, transparent);
     mask-image:linear-gradient(90deg, black 80%, transparent);
     -webkit-mask-size:0 100%;
     mask-size:0 100%;
-    -webkit-animation-name:aniarrow03;
-    animation-name:aniarrow03
+    -webkit-animation-name:aniarrow3;
+    animation-name:aniarrow3
 }
 @keyframes anistar {
     0% {-webkit-transform:scale(1);transform:scale(1);opacity:0.7;}
@@ -885,15 +885,15 @@
     65% {-webkit-transform:scale(1.4);transform:scale(1.4);}	
     70%, 100% {-webkit-transform:scale(1);transform:scale(1);}
 }
-@keyframes aniarrow01 {
+@keyframes aniarrow1 {
     0%, 20% {-webkit-mask-size:0 100%;mask-size:0 100%}
     25%, to {-webkit-mask-size:150% 100%;mask-size:150% 100%}
 }
-@keyframes aniarrow02 {
+@keyframes aniarrow2 {
     0%, 25% {-webkit-mask-size:100% 0;mask-size:100% 0}
     30%, to {-webkit-mask-size:100% 150%;mask-size:100% 150%}
 }
-@keyframes aniarrow03 {
+@keyframes aniarrow3 {
     0%, 30% {-webkit-mask-size:0 100%;mask-size:0 100%}
     35%, to {-webkit-mask-size:150% 100%;mask-size:150% 100%}
 }
@@ -1054,7 +1054,7 @@
 .fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:1rem auto 0;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
 .fx-calender-base {display:flex;align-items:center;height:100%;}
 .fx-forecast-calender .bold {font-size:1.5rem;}
-.fx-calender-motion {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;
+.fx-calender-over {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;
     -webkit-animation-name:calendarflip;
     animation-name:calendarflip;
     animation-duration:1.5s;
