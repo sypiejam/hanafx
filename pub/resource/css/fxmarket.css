@@ -1131,7 +1131,7 @@
 .fx-guess .fx-score__progress[value]::-webkit-progress-bar {background-color:#3f78fa;}
 .fx-guess .fx-score__progress[value]::-webkit-progress-value {border-radius:initial;background:#fa3f66;box-shadow:none;}
 .fx-guess .fx-score__progress[value="0"]::-webkit-progress-bar {background-color:#3f78fa;}
-.fx-guess .fx-score__progress[max="0"]::-webkit-progress-bar {background-color:#d9d9d9;}
+.fx-guess .fx-score__progress[max="0"]::-webkit-progress-bar {background-color:#dfdfdf;}
 .fx-guess .icon-modify {display:inline-block;width:0.75rem;height:0.75rem;margin-left:0.25rem;background:url(../../resource/images/C/icon_edit_gray.png) no-repeat 0 0 / 100%;-webkit-filter:brightness(3);filter:brightness(3);}
 .fx-participate {margin-top:1.25rem;}
 .fx-participate__opts {display:flex;justify-content:space-between;padding:0 0.5rem;}
