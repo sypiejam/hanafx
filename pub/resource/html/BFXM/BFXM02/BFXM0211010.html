@@ -12,113 +12,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-        
-    .fx-community-img {margin-bottom:-1rem;}
-    .ani-speaker-box {z-index:10;position:relative;display:block;margin-left:-1rem;}
-    .ani-speaker {display:block;width:8rem;height:7.5rem;margin:0 auto;background:url(../../../../resource/images/fxmarket/img_community_speaker.png) no-repeat 0 0 / 100%;
-        animation-name:anispeaker;
-        -webkit-animation-name:anispeaker;
-        animation-duration:2s;
-        -webkit-animation-duration:2s;
-        animation-fill-mode:both;
-        -webkit-animation-fill-mode:both;
-    }
-    .ani-speaker-shadow {display:block;width:14.375rem;height:4.25em;margin:-2.5rem auto 0;background:url(../../../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat -1rem 0 / 100%;
-        animation-name:anishadow;
-        -webkit-animation-name:anishadow;
-        animation-duration:2s;
-        -webkit-animation-duration:2s;
-        animation-fill-mode:both;
-        -webkit-animation-fill-mode:both;
-    }
-    .ani-heartgirl-box {z-index:20;top:0.75rem;width:2.75rem;height:2.688rem;margin-left:-5rem;
-        animation-name:emojibox;
-        -webkit-animation-name:emojibox;
-        animation-duration:3s;	
-        -webkit-animation-duration:3s;
-        animation-delay:2s;
-        -webkit-animation-delay:2s;
-        animation-iteration-count:infinite;
-        -webkit-animation-iteration-count:infinite;
-    }
-    .ani-heartgirl {display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_community_heartgirl.png) no-repeat 0 0 / 100%;
-        -webkit-animation-name:emojimotion;
-        animation-name:emojimotion;
-        animation-duration:2s;	
-        -webkit-animation-duration:2s;
-        -webkit-transform-origin:center;
-        transform-origin:center;
-    }
-    .ani-smileboy-box {z-index:20;top:-1.5rem;width:1.5rem;height:1.5rem;margin-left:-3rem;
-        animation-name:emojibox;
-        -webkit-animation-name:emojibox;	
-        animation-duration:3s;	
-        -webkit-animation-duration:3s;
-        animation-delay:2.5s;
-        -webkit-animation-delay:2.5s;
-        animation-iteration-count:infinite;
-        -webkit-animation-iteration-count:infinite;
-    }
-    .ani-smileboy {display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_community_smileboy.png) no-repeat 0 0 / 100%;
-        animation-name:emojimotion;
-        -webkit-animation-name:emojimotion;
-        animation-duration:2s;
-        -webkit-animation-duration:2s;
-        animation-fill-mode:both;
-        -webkit-animation-fill-mode:both;
-    }
-    .ani-sound-box {top:0;width:2.563rem;height:2.688rem;
-        animation-name:soundbox;
-        -webkit-animation-name:soundbox;	
-        animation-duration:2s;	
-        -webkit-animation-duration:2s;
-        animation-delay:2s;
-        -webkit-animation-delay:2s;
-        animation-iteration-count:infinite;
-        -webkit-animation-iteration-count:infinite;
-    }
-    .ani-sound {display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_community_sound.png) no-repeat 0 0 / 100%;
-        animation-name:anisound;
-        -webkit-animation-name:anisound;
-        animation-duration:2s;
-        -webkit-animation-duration:2s;
-        animation-fill-mode:both;
-        -webkit-animation-fill-mode:both;
-    }
-    @keyframes anispeaker {
-        0% {-webkit-transform:scale(.9) rotate(30deg);transform:scale(.9) rotate(30deg);-webkit-transform-origin:center bottom;transform-origin:center bottom;}
-        50% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
-        70% {-webkit-transform:scale(1.2) rotate(3deg);transform:scale(1.2) rotate(3deg);}
-        to {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
-    }
-    @keyframes anishadow {
-        0%, 50% {-webkit-transform:scale(1);transform:scale(1);}
-        70% {-webkit-transform:scale(1.2);transform:scale(1.2);}
-        to {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
-    }
-    @keyframes anisound {
-        0%, 50% {-webkit-transform:translateX(0) rotate(-540deg);transform:translateX(0) rotate(-540deg);opacity:0;}
-        70% {-webkit-transform:translateX(4.2rem) rotate(0deg);transform:translateX(4.5rem) rotate(0deg);opacity:1;}
-        100% {-webkit-transform:translateX(4rem) rotate(0deg);transform:translateX(4rem) rotate(0deg);opacity:1;}
-    }
-    @keyframes emojimotion {
-        0%, 10% {-webkit-transform:scale3d(0.8,0.8,0.8);transform:scale3d(0.8,0.8,0.8);}
-        50% {-webkit-transform:scale3d(1.2,1.2,1.2);transform:scale3d(1.2,1.2,1.2);}
-        70% {-webkit-transform:scale3d(0.9,0.9,0.9);transform:scale3d(0.9,0.9,0.9);}
-        to {-webkit-transform:scaleX(1);transform:scaleX(1);}
-    }
-    @keyframes emojibox {
-        0% {transform:rotate(0deg);}
-        50% {transform:rotate(8deg);}
-        100% {transform:rotate(-8deg);}	
-    }
-    @keyframes soundbox {
-        0% {transform:translateY(0%);}
-        50% {transform:translateY(8%);}	
-        100% {transform:translateY(0%);}		
-    }
-</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -139,15 +32,15 @@
                 <div class="fx-keyvisual-txtbox">
                     <strong class="fx-keyvisual__label">모두 모여라!</strong>
                     <p class="fx-keyvisual__maintxt">FX커뮤니티에 자랑해</p>
-                    <p class="fx-keyvisual__keytxt"><span class="color-green bold">FX활동 자랑</span>하고, <span class="color-green bold">공감</span> 주고받고!</p>
+                    <p class="fx-keyvisual__keytxt"><span class="color-green bold">FX활동 자랑</span>하고, <span class="color-green bold">공감</span> 주고받고~</p>
                 </div>
                 <div class="fx-keyvisual-img fx-community-img" aria-hidden="true">
                     <span class="ani-speaker-box">
                         <i class="ani-speaker"></i>
-                        <i class="ani-speaker-shadow"></i>
+                        <i class="ani-shadow"></i>
                     </span>
-                    <span class="ani-obj ani-heartgirl-box"><i class="ani-heartgirl"></i></span>
-                    <span class="ani-obj ani-smileboy-box"><i class="ani-smileboy"></i></span>
+                    <span class="ani-emoji-box1"><i class="ani-emoji"></i></span>
+                    <span class="ani-emoji-box2"><i class="ani-emoji"></i></span>
                     <span class="ani-obj ani-sound-box"><i class="ani-sound"></i></span>
                 </div>
             <!-- // 2022-05-02 키비쥬얼 수정 -->
