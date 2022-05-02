@@ -1279,8 +1279,8 @@
 .fx-serviceinfo-group {opacity:0;-webkit-transition:all 0.6s;transition:all 0.6s;-webkit-transform:translateY(50px);transform:translateY(50px);}
 .fx-serviceinfo-group.is-active {opacity:1;-webkit-transform:translateY(0);transform:translateY(0);}
 .fx-serviceinfo-group--01 {padding-top:1rem;}
-.fx-serviceinfo-group--02 {padding-top:0.5rem;}
-.fx-serviceinfo-group--03 {padding-top:0.688rem;}
+.fx-serviceinfo-group--02 {padding-bottom:0.5rem;}
+.fx-serviceinfo-group--03 {padding-bottom:0.688rem;}
 .fx-serviceinfo-group--04 {padding-bottom:1.438rem;}
 .fx-serviceinfo-motion {position:relative;}
 .fx-serviceinfo-motion .bg-circle {overflow:hidden;position:relative;display:block;width:7.25rem;height:7.25rem;margin:0 auto;border-radius:50%;}
