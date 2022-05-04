@@ -13,84 +13,381 @@
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
-
-.modal-full .modal__contents--tutorial {height:calc(100vh - 3.5rem - constant(safe-area-inset-bottom));height:calc(100vh - 3.5rem - env(safe-area-inset-top));padding:0;}
-.tutorial-slider .slick-dots {position:fixed;left:0;right:0;bottom:2rem;text-align:center;}
+.modal-tutorial .button-fixed {z-index:-1;}
+.modal-tutorial .modal__contents {height:calc(100vh - 3.5rem - constant(safe-area-inset-bottom));height:calc(100vh - 3.5rem - env(safe-area-inset-top));padding:0;}
+.tutorial-slider .slick-dots {position:fixed;left:0;right:0;bottom:calc(1.5rem + constant(safe-area-inset-bottom));bottom:calc(1.5rem + env(safe-area-inset-bottom));text-align:center;}
 .tutorial-slider .slick-dots li {display:inline-block;margin:0 0.188rem;}
 .tutorial-slider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
 .tutorial-slider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
-
-.tutorial-header {display:flex;justify-content:center;align-items:center;width:100%;height:5rem;text-align:center;line-height:1.3;}
-.tutorial-container {height:calc(100% - 5rem);padding:1rem 1.5rem 6rem;}
-.tutorial-content {display:flex;flex-direction:column;height:100%;}
-.tutorial-linebox {flex:1;display:flex;align-items:center;width:100%;height:100%;padding:1.5rem;border:1px solid #ddd;border-radius:2rem;}
-
-.tutorial-text span {opacity:0;display:inline-block;min-width:0.2rem;color:#000;font-size:1.25rem;font-weight:300;}
-.tutorial-slider .tutorial-slider__item {position:relative;width:100%;height:100%;}
-.slick-slide .tutorial-list {opacity:0;height:calc(100vh - 3.5rem - constant(safe-area-inset-bottom));height:calc(100vh - 3.5rem - env(safe-area-inset-top));}
-.slick-active .tutorial-list {opacity:1;}
-
-.img-tutorial {margin:0 auto;}
-.tutorial-slider .fx-attend-visual {position:absolute;margin:0;left:25%;}
-.tutorial-slider .fx-attend__desc {margin-top:0;}
-.tutorial-slider .fx-commlist__item {margin-top:0;}
-
-.tutorial-slider__item--guide01 .img-tutorial {max-width:340px;}
-.tutorial-slider__item--guide04 .img-tutorial {width:240px;}
-.tutorial-slider__item--guide04 .fx-boast-foot {height:7rem;margin-top:2rem;}
-.tutorial-slider__item--guide03 .img-guide03-1 {width:200px;}
-.tutorial-slider__item--guide03 .img-guide03-2 {width:200px;}
-.tutorial-slider__item--guide03 .img-guide03-3 {width:200px;}
-
 .tutorial-slider .slick-prev {display:none !important;}
-.tutorial-slider .slick-next {z-index:10;position:fixed;right:1.5rem;bottom:2rem;width:2rem;height:2rem;}
-.tutorial-slider .slick-next:after {content:'다음';font-size:1rem;}
-.tutorial-skip {z-index:10;position:fixed;left:1.5rem;bottom:2rem;font-size:1rem;}
-@keyframes anim {
-  0% {opacity:0;transform: translateX(-100px);}
-  20% {opacity:1;transform: translateX(0px);}
-  100% {opacity:1;transform: translateX(0px);}
+.tutorial-slider .slick-next {z-index:10;position:fixed;right:1.5rem;bottom:calc(0.5rem + constant(safe-area-inset-bottom));bottom:calc(0.5rem + env(safe-area-inset-bottom));height:3rem;}
+.tutorial-slider .slick-next:after {content:'다음';font-size:1.125rem;}
+.tutorial-skip {z-index:10;position:fixed;left:1.5rem;bottom:calc(0.5rem  + constant(safe-area-inset-bottom));bottom:calc(0.5rem + env(safe-area-inset-bottom));display:flex;height:3rem;}
+.tutorial-skip .btn-skip {font-size:1.125rem;}
+
+
+.tutorial-header {display:flex;justify-content:center;align-items:center;width:100%;height:8rem;text-align:center;line-height:1.3;}
+.tutorial-container {opacity:0;display:flex;flex-wrap:wrap;flex-direction:column;justify-content:center;height:calc(100vh - 3.5rem - constant(safe-area-inset-top));height:calc(100vh - 3.5rem - env(safe-area-inset-top));padding-bottom:5rem;}
+.slick-active .tutorial-container {opacity:1;}
+.tutorial-body {position:relative;}
+.tutorial-text {font-size:1.5rem;font-weight:300;line-height:1.4;}
+.tutorial-text .color-green {font-weight:500;}
+.slick-active .tutorial-text {
+    -webkit-animation:tutorialtitle;
+    animation:tutorialtitle;
+    -webkit-animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-animation-duration:1.2s;
+    animation-duration:1.2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes tutorialtitle {
+    0% {letter-spacing:-0.5em;opacity:0;}
+    40% {opacity:0.6;}
+    100% {opacity:1;}
+}
+.tutorial-body .img-base {margin:0 auto;}
+.tutorial-body .img-absol {position:absolute;left:0;right:0;margin:auto;}
+.tutorial-slider__item--guide01 .fx-attend-visual {position:absolute;top:20%;left:0;right:0;margin:0 auto;-webkit-transform:scale(0.8);transform:scale(0.8);}
+.tutorial-slider__item--guide01 .fx-attend__desc {margin-top:0;}
+.tutorial-slider__item--guide02 .img-absol-txt1 {top:54%;}
+.slick-active .tutorial-slider__item--guide02 .img-absol-txt1 {
+    -webkit-animation-name:tutorialguide02-txt1;
+    animation-name:tutorialguide02-txt1;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+}
+.tutorial-slider__item--guide03 .img-absol-txt1 {z-index:10;top:41%;}
+.slick-active .tutorial-slider__item--guide03 .img-absol-txt1 {
+    -webkit-animation-name:tutorialguide03-txt1;
+    animation-name:tutorialguide03-txt1;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide03 .img-absol-txt2 {top:73%;}
+.slick-active .tutorial-slider__item--guide03 .img-absol-txt2 {
+    -webkit-animation-name:tutorialguide03-txt2;
+    animation-name:tutorialguide03-txt2;
+    -webkit-animation-delay:0.8s;
+    animation-delay:0.8s;
+    -webkit-animation-duration:0.8s;
+    animation-duration:0.8s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    animation-timing-function:ease;	
+	-webkit-animation-timing-function:ease;	
+}
+.tutorial-slider__item--guide04 .tutorial-motion {position:absolute;bottom:24%;right:38%;}
+.tutorial-slider__item--guide04 .img-absol-emoji {bottom:14.5%;}
+.slick-active .tutorial-slider__item--guide04 .img-absol-emoji {
+    -webkit-transform-origin:67%;
+    transform-origin:67%;
+    -webkit-animation-name:tutorialguide04-emoji;
+    animation-name:tutorialguide04-emoji;
+    -webkit-animation-duration:0.8s;
+    animation-duration:0.8s;
+}
+.tutorial-slider__item--guide04 .img-absol-eight {bottom:10.8%;}
+.tutorial-slider__item--guide04 .img-absol-nine {opacity:0;bottom:10.8%;}
+.slick-active .tutorial-slider__item--guide04 .img-absol-eight {
+    -webkit-transform-origin:67%;
+    transform-origin: 67%;
+    -webkit-animation-name:tutorialguide04-eight;
+    animation-name:tutorialguide04-eight;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide04 .img-absol-nine {
+    -webkit-transform-origin:67%;
+    transform-origin: 67%;
+    -webkit-animation-name:tutorialguide04-nine;
+    animation-name:tutorialguide04-nine;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide05 .tutorial-body {overflow:hidden;padding:0 1.5rem;}
+.slick-active .tutorial-slider__item--guide05 .img-absol-txt1 {top:6%;right:1.5rem;left:1.5rem;width:calc(100% - 3rem);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform:scaleY(0);
+    transform:scaleY(0);
+    -webkit-animation-name:tutorialguide05-txt1;
+    animation-name:tutorialguide05-txt1;
+	-webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay:3s;
+    animation-delay:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide05 .tutorial-motion {position:absolute;top:0;left:1.5rem;right:1.5rem;height:100%;margin:auto;background:url(../../../../resource/images/fxmarket/img_tutorial_guide05_slide.png) no-repeat 0 0 / 300%;}
+.slick-active .tutorial-slider__item--guide05 .tutorial-motion {
+    -webkit-animation-name:tutorialguide05-bg;
+    animation-name:tutorialguide05-bg;
+    -webkit-animation-duration:3.6s;
+    animation-duration:3.6s;
+    animation-timing-function:linear;	
+	-webkit-animation-timing-function:linear;	
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide05 .img-absol-txt1 {top:6%;right:1.5rem;left:1.5rem;width:calc(100% - 3rem);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform:scaleY(0);
+    transform:scaleY(0);
+    -webkit-animation-name:tutorialguide05-txt1;
+    animation-name:tutorialguide05-txt1;
+	-webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay:3s;
+    animation-delay:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide05 .img-absol-badge {top:14.2%;
+    -webkit-transform-origin:bottom;
+    transform-origin:bottom;
+    -webkit-animation-name:tutorialguide05-badge;
+    animation-name:tutorialguide05-badge;
+    animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+    animation-delay:2.8s;
+    -webkit-animation-delay:2.8s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide06 .tutorial-motion {position:relative;margin-top:5rem;}
+.tutorial-slider__item--guide06 .ani-cart {display:block;width:7.938rem;height:7.813rem;margin:auto;}
+.tutorial-slider__item--guide06 .ani-cart:after {content:'';display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_cart.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-cart:before {z-index:-1;content:'';position:absolute;right:-20%;bottom:0;width:85%;height:85%;background:#fff;border-radius:50%;}
+.tutorial-slider__item--guide06 .ani-basket {position:absolute;top:0.6rem;left:50%;width:7.063rem;height:4.313rem;margin-left:-3.8rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_basket.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-basket:after {content:'';z-index:10;position:absolute;right:0;bottom:0;left:0;width:7.063rem;height:4.188rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_basket_over.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-pocket {z-index:1;position:absolute;width:5rem;height:5.625rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_pocket.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-dollar-1 {z-index:1;position:absolute;left:50%;width:2.875rem;height:2.063rem;margin-left:-4.5rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_dollar1.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-dollar-2 {z-index:1;position:absolute;left:4.5rem;width:1.5rem;height:1.063rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_dollar3.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-dollar-3 {z-index:1;position:absolute;left:4rem;width:1.688rem;height:1.75rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_dollar2.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-tire-1 {position:absolute;bottom:0.65rem;left:50%;width:1.063rem;height:1.25rem;margin-left:-1rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_tire1.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-tire-2 {position:absolute;bottom:1.2rem;left:50%;width:1rem;height:1.125rem;margin-left:2rem;background:url(../../../../resource/images/fxmarket/img_tutorial_guide06_tire2.png) no-repeat 0 0 / 100%;}
+.slick-active .tutorial-slider__item--guide06 .ani-tire-1,
+.slick-active .tutorial-slider__item--guide06 .ani-tire-2 {
+    -webkit-animation-name:tutorialguide06-tire;
+    animation-name:tutorialguide06-tire;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-cart {
+    -webkit-animation-name:tutorialguide06-cart;
+    animation-name:tutorialguide06-cart;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-cart:before {
+    -webkit-animation-name:tutorialguide06-cartbg;
+    animation-name:tutorialguide06-cartbg;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-pocket {
+    -webkit-transform-origin:left top;transform-origin:left top;
+    -webkit-animation-name:tutorialguide06-pocket;
+    animation-name:tutorialguide06-pocket;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-dollar-1 {
+    -webkit-animation-name:tutorialguide06-drop1;
+    animation-name:tutorialguide06-drop1;
+    -webkit-animation-duration:4s;
+    animation-duration:4s;
+    -webkit-animation-timing-function: cubic-bezier(0.14, 1.1, 0.51, 1.04);
+    animation-timing-function: cubic-bezier(0.14, 1.1, 0.51, 1.04);
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-dollar-2 {
+    -webkit-animation-name:tutorialguide06-drop2;
+    animation-name:tutorialguide06-drop2;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-dollar-3 {
+    -webkit-animation-name:tutorialguide06-drop3;
+    animation-name:tutorialguide06-drop3;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes tutorialguide02-txt1 {
+    0% {-webkit-transform:translateY(600px) rotateX(30deg) scale(0);transform:translateY(600px) rotateX(30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0;}
+    100% {-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% -1400px;transform-origin:50% -1400px;opacity:1;}
+}
+@keyframes tutorialguide03-txt1 {
+    0% {-webkit-transform:translateY(-600px) rotateX(-30deg) scale(0);transform:translateY(-600px) rotateX(-30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0;}
+    100% {-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% 1400px;transform-origin:50% 1400px;opacity:1;}
+}
+@keyframes tutorialguide03-txt2 {
+    0% {opacity:0;-webkit-transform:translateY(-100%);transform:translateY(-100%);}
+	50%{opacity:1;-webkit-transform:translateY(8%);transform:translateY(8%);}
+	65%{-webkit-transform:translateY(-4%);transform:translateY(-4%);}
+	80%{-webkit-transform:translateY(4%);transform:translateY(4%);}
+	95%{-webkit-transform:translateY(-2%);transform:translateY(-2%);}			
+	100% {-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+@keyframes tutorialguide04-emoji {
+    0% {-webkit-transform:scale(1);transform:scale(1);}
+	50%{-webkit-transform:scale(1.2);transform:scale(1.2);}
+	100% {-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes tutorialguide04-eight {
+    0%, 70% {opacity:1;}
+    80%, 100% {opacity:0;}
+}
+@keyframes tutorialguide04-nine {
+    0%, 70% {opacity:0;}
+    90% {opacity:1;-webkit-transform:scale(1.3);transform:scale(1.3);}
+    100% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes tutorialguide05-bg {
+    0%, 30% {background-position:0 0;}
+    40%, 63% {background-position:calc(50% + 1.5rem) 0;}
+	73%, 100% {background-position:calc(100% + 1.5rem) 0;}
+}
+@keyframes tutorialguide05-txt1 {
+    0% {-webkit-transform:scaleY(0);transform:scaleY(0);}
+	100% {-webkit-transform:scaleY(1);transform:scaleY(1);}	
+}
+@keyframes tutorialguide05-badge {
+    0% {opacity:0;-webkit-transform:scale(1);transform:scale(1);}
+    10% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+    60% {-webkit-transform:scale(1.2);transform:scale(1.2);}
+    100% {-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes tutorialguide06-cart {
+    0% {-webkit-transform:translate(100vw, -50%);transform:translate(100vw, -50%);}
+    60% {-webkit-transform:translate(-0.7rem, 0.5rem);transform:translate(-0.7rem, 0.5rem);}
+    100% {-webkit-transform:translate(0, 0);transform:translate(0, 0);}
+}
+@keyframes tutorialguide06-cartbg {
+    0%, 80% {opacity:0;background:#fff;}
+    100% {opacity:0.6;background:#eef8e2;}
+}
+@keyframes tutorialguide06-pocket {
+    0%, 66% {opacity:0;-webkit-transform:translate(0,-6rem) scale(1,1);transform:translate(0,-6rem) scale(1,1);}
+    72% {opacity:1;-webkit-transform:translate(0,0.2rem) scale(1.3,0.85);transform:translate(0,0.2rem) scale(1.3,0.85);}
+    82%, 100% {-webkit-transform:translate(0,-0.5rem) scale(1.2,1);transform:translate(0,-0.5rem) scale(1.2,1);}
+}
+@keyframes tutorialguide06-drop1 {
+    0%, 55% {opacity:0;-webkit-transform:translate(0,-5rem);transform:translate(0,-5rem);}
+    56% {opacity:1;}
+    65% {-webkit-transform:translate(0,5rem);transform:translate(0,5rem);}
+    68% {-webkit-transform:translate(0,5rem) rotate(5deg);transform:translate(0,5rem) rotate(5deg);}
+    71% {-webkit-transform:translate(0,5rem) rotate(-5deg);transform:translate(0,5rem) rotate(-5deg);}
+    74% {-webkit-transform:translate(0,5rem) rotate(5deg);transform:translate(0,5rem) rotate(5deg);}
+    77% {-webkit-transform:translate(0,5rem) rotate(-5deg);transform:translate(0,5rem) rotate(-5deg);}
+    80% {-webkit-transform:translate(0,5rem) rotate(4deg);transform:translate(0,5rem) rotate(4deg);}
+    83% {-webkit-transform:translate(0,5rem) rotate(-4deg);transform:translate(0,5rem) rotate(-4deg);}
+    86% {-webkit-transform:translate(0,5rem) rotate(4deg);transform:translate(0,5rem) rotate(4deg);}
+    89% {-webkit-transform:translate(0,5rem) rotate(-4deg);transform:translate(0,5rem) rotate(-4deg);}
+    92% {-webkit-transform:translate(0,5rem) rotate(3deg);transform:translate(0,5rem) rotate(3deg);}
+    95% {-webkit-transform:translate(0,5rem) rotate(-2deg);transform:translate(0,5rem) rotate(-2deg);}
+    98% {-webkit-transform:translate(0,5rem) rotate(-1deg);transform:translate(0,5rem) rotate(-1deg);}
+    100% {-webkit-transform:translate(0,5rem) rotate(0);transform:translate(0,5rem) rotate(0);}
+}
+@keyframes tutorialguide06-drop2 {
+    0%, 60% {opacity:0;-webkit-transform:translate(0,-5rem);transform:translate(0,-5rem);}
+    68% {opacity:1;}
+    70%, 100% {-webkit-transform:translate(0,3.5rem);transform:translate(0,3.5rem);}
+}
+@keyframes tutorialguide06-drop3 {
+    0%, 70% {opacity:0;-webkit-transform:translate(0,-3rem);transform:translate(0,-3rem);}
+    74% {opacity:1;}
+    80%, 100% {-webkit-transform:translate(0,0);transform:translate(0,0);}
+}
+@keyframes tutorialguide06-tire {
+    0%, 50% {-webkit-transform:rotate(0);transform:rotate(0);}
+    55%,65% {-webkit-transform:rotate(5deg);transform:rotate(5deg);}
+    60%,70% {-webkit-transform:rotate(-5deg);transform:rotate(-5deg);}
+    75%,85% {-webkit-transform:rotate(2deg);transform:rotate(2deg);}
+    80%,90% {-webkit-transform:rotate(-2deg);transform:rotate(-2deg);}
+    100% {-webkit-transform:rotate(0);transform:rotate(0);}
 }
 
-@media (max-width: 359px) {
-    html {font-size:12px;}
+@media (min-width:524px) and (max-width:768px){
+    .tutorial-body .img-base {max-width:360px;}
+    .tutorial-body .img-absol {max-width:360px;}
+    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;right:42%;}
+    .tutorial-slider__item--guide05 .img-base,
+    .tutorial-slider__item--guide05 .img-absol,
+    .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(360px - 3rem);}
 }
-
-@media (max-height: 680px) {
-    .tutorial-slider__item--guide04 .img-tutorial {width:200px;}
+@media (max-height:680px) {
+    .tutorial-body .img-base {max-width:360px;}
+    .tutorial-body .img-absol {max-width:360px;}
+    .tutorial-slider__item--guide05 .img-base,
+    .tutorial-slider__item--guide05 .img-absol,
+    .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(360px - 3rem);}
+}
+@media (max-height:600px) {
+    .tutorial-text {font-size:1.25rem;}
+    .tutorial-header {height:6rem;}
+    .tutorial-container {padding-bottom:4rem;}
+    .tutorial-body .img-base {max-width:300px;}
+    .tutorial-body .img-absol {max-width:300px;}
+    .tutorial-slider__item--guide05 .img-base,
+    .tutorial-slider__item--guide05 .img-absol,
+    .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(300px - 3rem);}
 }
 </style>
 </head>
 <body>
-<div class="modal-full">
+<div class="modal-full modal-tutorial">
     <div class="modal__header">
         <h1 class="modal__header--title">FX마켓 가이드</h1>
     </div>
-    <div class="modal__contents modal__contents--tutorial">
+    <div class="modal__contents">
         <div class="tutorial-slider">
             <div class="tutorial-slider__item tutorial-slider__item--guide01">
-                <div class="tutorial-list">
-                    <div class="tutorial-header">
-                        <div class="tutorial-text__wrap">
-                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">부</span><span class="color-green">스</span><span class="color-green">터</span><span>를</span> <span>받</span><span>았</span><span>어</span><span>요</span><span>.</span></p>
-                            <p class="tutorial-text"><span>달</span><span>러</span><span>를</span> <span>사</span><span>볼</span> <span>까</span><span>요</span><span>?</span></p>
+                <div class="tutorial-container">
+                    <div class="tutorial-content">
+                        <div class="tutorial-header">
+                            <p class="tutorial-text">
+                                <span class="block"><em class="color-green">FX부스터</em>를 받았어요.</span>
+                                <span class="block">달러를 사볼까요?</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="tutorial-container">
-                        <div class="tutorial-content">
-                            <div class="tutorial-linebox">
-                                <img src="../../../../resource/images/fxmarket/img_tutorial_guide01.png" alt="" class="img-tutorial">
-                                <div class="fx-attend-visual" aria-hidden="true">
-                                    <div class="ani-rocket-wrap">
-                                        <div class="ani-rocket">
-                                            <span class="ani-rocket-main"></span>
-                                        </div>
+                        <div class="tutorial-body" aria-hidden="true">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide01.png" alt="" class="img-base">
+                            <div class="fx-attend-visual" aria-hidden="true">
+                                <div class="ani-rocket-wrap">
+                                    <div class="ani-rocket">
+                                        <span class="ani-rocket-main"></span>
                                     </div>
-                                    <div class="ani-smoke-wrap">
-                                        <span class="ani-smoke ani-smoke-center"></span>
-                                        <span class="ani-smoke ani-smoke-left"></span>
-                                        <span class="ani-smoke ani-smoke-right"></span>
-                                    </div>
+                                </div>
+                                <div class="ani-smoke-wrap">
+                                    <span class="ani-smoke ani-smoke-center"></span>
+                                    <span class="ani-smoke ani-smoke-left"></span>
+                                    <span class="ani-smoke ani-smoke-right"></span>
                                 </div>
                             </div>
                         </div>
@@ -98,125 +395,60 @@
                 </div>
             </div>
             <div class="tutorial-slider__item tutorial-slider__item--guide02">
-                <div class="tutorial-list">
-                    <div class="tutorial-header">
-                        <div class="tutorial-text__wrap">
-                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">부</span><span class="color-green">스</span><span class="color-green">터</span> <span class="color-green">우</span><span class="color-green">대</span> <span>받</span><span>고</span></p>
-                            <p class="tutorial-text"><span>금</span><span>액</span><span>만</span> <span>입</span><span>력</span><span>하</span><span>면</span> <span>준</span><span>비</span> <span>끝</span><span>!</span></p>
+                <div class="tutorial-container">
+                    <div class="tutorial-content">
+                        <div class="tutorial-header">
+                            <p class="tutorial-text">
+                                <span class="block"><em class="color-green">FX부스터 우대</em> 받고</span>
+                                <span class="block">금액만 입력하면 준비 끝!</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="tutorial-container">
-                        <div class="tutorial-content" style="height:auto;">
-                            <div class="tutorial-linebox" style="padding:0;border:0;">
-                                <img src="../../../../resource/images/fxmarket/img_tutorial_guide01_test.png" alt="" class="img-tutorial">
-                                <div class="fx-attend-visual" aria-hidden="true">
-                                    <div class="ani-rocket-wrap">
-                                        <div class="ani-rocket">
-                                            <span class="ani-rocket-main"></span>
-                                        </div>
-                                    </div>
-                                    <div class="ani-smoke-wrap">
-                                        <span class="ani-smoke ani-smoke-center"></span>
-                                        <span class="ani-smoke ani-smoke-left"></span>
-                                        <span class="ani-smoke ani-smoke-right"></span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="tutorial-body" aria-hidden="true">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide02.png" alt="" class="img-base">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide02_txt1.png" alt="" class="img-absol img-absol-txt1">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tutorial-slider__item tutorial-slider__item--guide03">
-                <div class="tutorial-list">
-                    <div class="tutorial-header">
-                        <div class="tutorial-text__wrap">
-                            <p class="tutorial-text"><span>달</span><span>러</span> <span>구</span><span>매</span> <span>완</span><span>료</span><span>!</span></p>
-                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">커</span><span class="color-green">뮤</span><span class="color-green">니</span><span class="color-green">티</span><span>에</span> <span>자</span><span>랑</span><span>해</span><span>볼</span><span>까</span><span>요</span><span>.</span></p>
+                <div class="tutorial-container">
+                    <div class="tutorial-content">
+                        <div class="tutorial-header">
+                            <p class="tutorial-text">
+                                <span class="block"><em class="color-green">FX부스터</em>를 받았어요.</span>
+                                <span class="block">달러를 사볼까요?</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="tutorial-container">
-                        <div class="tutorial-content">
-                            <div style="padding:0 2rem;">
-                                <div class="tutorial-linebox">
-                                    <div class="w100">
-                                        <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_0.png" alt="" class="img-tutorial img-guide03-1">
-                                        <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_1.png" alt="" class="img-tutorial img-guide03-2">
-                                        <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_2.png" alt="" class="img-tutorial img-guide03-3">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="tutorial-body" aria-hidden="true">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide03.png" alt="" class="img-base">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_txt1.png" alt="" class="img-absol img-absol-txt1">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide03_txt2.png" alt="" class="img-absol img-absol-txt2">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tutorial-slider__item tutorial-slider__item--guide04">
-                <div class="tutorial-list">
-                    <div class="tutorial-header">
-                        <div class="tutorial-text__wrap">
-                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">커</span><span class="color-green">뮤</span><span class="color-green">니</span><span class="color-green">티</span><span>에</span><span>서</span></p>
-                            <p class="tutorial-text"><span>공</span><span>감</span><span>을</span> <span>주</span><span>고</span><span>받</span><span>아</span><span>요</span><span>.</span></p>
+                <div class="tutorial-container">
+                    <div class="tutorial-content">
+                        <div class="tutorial-header">
+                            <p class="tutorial-text">
+                                <span class="block"><em class="color-green">FX커뮤니티</em>에서</span>
+                                <span class="block">공감을 주고 받아요.</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="tutorial-container">
-                        <div class="tutorial-content">
-                            <div class="tutorial-linebox">
-                                <img src="../../../../resource/images/fxmarket/img_tutorial_guide04.png" alt="" class="img-tutorial">
-                            </div>
-                            <div class="fx-boast-foot">
-                                <div class="fx-commlist__date">
-                                    <span>2022-02-12 00:00</span>
-                                </div>
-                                <div class="fx-commlike">
-                                    <button type="button" class="fx-commlike__btn is-active"><span class="txt">공감하기</span><span class="num">999+</span></button>
-                                    <div data-element="toggle__panel" style="display:block;">
-                                        <ul class="fx-commicon">
-                                            <li class="fx-commicon__item">
-                                                <input type="checkbox" id="fxCommLike11" name="fxCommLike1" class="fx-commicon__input" disabled>
-                                                <label for="fxCommLike11" class="fx-commicon__icon--01">
-                                                    <em class="offscreen">좋아요</em>
-                                                </label>
-                                                <span class="fx-commicon__count">99+</span>
-                                            </li>
-                                            <li class="fx-commicon__item">
-                                                <input type="checkbox" id="fxCommLike12" name="fxCommLike1" class="fx-commicon__input" disabled>
-                                                <label for="fxCommLike12" class="fx-commicon__icon--02">
-                                                    <em class="offscreen">부러워</em>
-                                                </label>
-                                                <span class="fx-commicon__count">7</span>
-                                            </li>
-                                            <li class="fx-commicon__item">
-                                                <input type="checkbox" id="fxCommLike13" name="fxCommLike1" class="fx-commicon__input" disabled>
-                                                <label for="fxCommLike13" class="fx-commicon__icon--03">
-                                                    <em class="offscreen">대단해</em>
-                                                </label>
-                                                <span class="fx-commicon__count">167</span>
-                                            </li>
-                                            <li class="fx-commicon__item">
-                                                <input type="checkbox" id="fxCommLike14" name="fxCommLike1" class="fx-commicon__input" disabled>
-                                                <label for="fxCommLike14" class="fx-commicon__icon--04">
-                                                    <em class="offscreen">반했어</em>
-                                                    <div class="fx-commicon-heart" aria-hidden="true">
-                                                        <div class="hearts-animations"> 
-                                                            <span class="heart heart1"></span>
-                                                            <span class="heart heart2"></span>
-                                                            <span class="heart heart3"></span>
-                                                            <span class="heart heart4"></span>
-                                                            <span class="heart heart5"></span>
-                                                            <span class="heart heart6"></span>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                                <span class="fx-commicon__count">16</span>
-                                            </li>
-                                            <li class="fx-commicon__item">
-                                                <input type="checkbox" id="fxCommLike15" name="fxCommLike1" class="fx-commicon__input" disabled>
-                                                <label for="fxCommLike15" class="fx-commicon__icon--05">
-                                                    <em class="offscreen">슬퍼요</em>
-                                                </label>
-                                                <span class="fx-commicon__count">0</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="tutorial-body" aria-hidden="true">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide04.png" alt="" class="img-base">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide04_emoji.png" alt="" class="img-absol img-absol-emoji">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide04_eight.png" alt="" class="img-absol img-absol-eight">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide04_nine.png" alt="" class="img-absol img-absol-nine">
+                            <div class="tutorial-motion">
+                                <div class="hearts-animations"> 
+                                    <span class="heart heart1"></span>
+                                    <span class="heart heart2"></span>
+                                    <span class="heart heart3"></span>
+                                    <span class="heart heart4"></span>
+                                    <span class="heart heart5"></span>
+                                    <span class="heart heart6"></span>
                                 </div>
                             </div>
                         </div>
@@ -224,30 +456,44 @@
                 </div>
             </div>
             <div class="tutorial-slider__item tutorial-slider__item--guide05">
-                <div class="tutorial-list">
-                    <div class="tutorial-header">
-                        <div class="tutorial-text__wrap">
-                            <p class="tutorial-text"><span class="color-green">챌</span><span class="color-green">린</span><span class="color-green">지</span><span class="color-green">를</span> <span class="color-green">달</span><span class="color-green">성</span><span>하</span><span>면</span></p>
-                            <p class="tutorial-text"><span>F</span><span>X</span><span>배</span><span>지</span><span>를</span> <span>받</span><span>아</span><span>요</span><span>.</span></p>
+                <div class="tutorial-container">
+                    <div class="tutorial-content">
+                        <div class="tutorial-header">
+                            <p class="tutorial-text">
+                                <span class="block"><em class="color-green">챌린지를 달성</em>하면</span>
+                                <span class="block">FX배지를 받아요.</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="tutorial-container">
-                        <div class="tutorial-content">
-                            
+                        <div class="tutorial-body" aria-hidden="true">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide05.png" alt="" class="img-base">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide05_txt1.png" alt="" class="img-absol img-absol-txt1">
+                            <img src="../../../../resource/images/fxmarket/img_tutorial_guide05_badge.png" alt="" class="img-absol img-absol-badge">
+                            <span class="tutorial-motion"></span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tutorial-slider__item tutorial-slider__item--guide06">
-                <div class="tutorial-list">
-                    <div class="tutorial-header">
-                        <div class="tutorial-text__wrap">
-                            <p class="tutorial-text"><span class="color-green">F</span><span class="color-green">X</span><span class="color-green">마</span><span class="color-green">켓</span> <span class="color-green">거</span><span class="color-green">래</span><span>도</span> <span>하</span><span>고</span></p>
-                            <p class="tutorial-text"><span class="color-green">즐</span><span class="color-green">거</span><span class="color-green">운</span> <span class="color-green">혜</span><span class="color-green">택</span><span>도</span> <span>를</span> <span>받</span><span>아</span><span>보</span><span>세</span><span>요</span><span>.</span></p>
+                <div class="tutorial-container">
+                    <div class="tutorial-content">
+                        <div class="tutorial-header">
+                            <p class="tutorial-text">
+                                <span class="block"><em class="color-green">FX마켓 거래</em>도 하고</span>
+                                <span class="block"><em class="color-green">즐거운 혜택</em>도 받아보세요.</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="tutorial-container">
-                        <div class="tutorial-content">
+                        <div class="tutorial-body">
+                            <div class="tutorial-motion">
+                                <span class="ani-dollar-1"></span>
+                                <span class="ani-cart">
+                                    <i class="ani-pocket"></i>
+                                    <i class="ani-dollar-2"></i>
+                                    <i class="ani-dollar-3"></i>
+                                    <i class="ani-basket"></i>
+                                    <i class="ani-tire-1"></i>
+                                    <i class="ani-tire-2"></i>
+                                </span>
+                            </div>
                             
                         </div>
                     </div>
@@ -256,6 +502,11 @@
         </div>
         <div class="tutorial-skip">
             <button type="button" class="btn-skip">건너뛰기</button>
+        </div>
+    </div>
+    <div class="button-fixed">
+        <div class="button-wrap">
+            <button type="button" class="button button--positive">FX마켓 시작하기</button>
         </div>
     </div>
     <button class="modal__btn--close" type="button" title="닫기"></button>
@@ -272,34 +523,21 @@ $(function(){
     var slider = $('.tutorial-slider');
     var slideLen = $('.tutorial-slider__item').length - 1;
         
-
     slider.slick({
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        arrows: true,
-        dots: true,
-        swipeToSlide: true,
+        slidesToScroll:1,
+        slidesToShow:1,
+        arrows:true,
+        dots:true,
+        swipeToSlide:true,
     })
   
     slider.init(function(event, slick){
-        spanMaker(0);
+       
     });
 
     slider.on({
-        beforeChange : function(event,slick,cur,next){
-            var dir = slick.currentDirection;
-            if(cur == 0 && next == 0 && dir !== 0){
-                return false;
-            } else if(cur == slideLen && next == slideLen){
-                return false;
-            } else {
-                $('.tutorial-text span').removeAttr('style');
-            }
-            spanMaker(next);
-            
-        },
-        afterChange : function(event,slick,cur){
-            switch(cur){
+        beforeChange :function(event,slick,cur,next){
+            switch(next){
                 case 0:
                     break;
                 case 1:
@@ -312,10 +550,18 @@ $(function(){
                     break;
                 case 4:
                     heartRemove();
+                    $('.slick-arrow, .slick-dots, .tutorial-skip').show();
+                    $('.modal-tutorial .button-fixed').css('zIndex', -1);
                     break;
                 case 5:
+                    $('.slick-arrow, .slick-dots, .tutorial-skip').hide();
+                    $('.modal-tutorial .button-fixed').css('zIndex', 1);
                     break;
             }
+            
+        },
+        afterChange :function(event,slick,cur){
+            
         }
     });
 
@@ -323,37 +569,19 @@ $(function(){
         slider.slick('slickGoTo', slideLen);
     })
 
-    function spanMaker(idx){
-        var target = $('.tutorial-slider .slick-slide').eq(idx).find('.tutorial-text');
-        target.each(function(i,el){
-            var text = $(el).text().split('');
-            for(var i =0 ; i< text.length; i ++){ 
-                var time = (text.length - i) * 50;
-                $(el).find("span:eq("+ i +")").css( {
-                    "-webkit-animation" : "anim 3s "+ time + "ms 1 cubic-bezier(0.4, 0, 0.2, 1) both", 
-                    "animation": "anim 3s "+ time + "ms 1 cubic-bezier(0.4, 0, 0.2, 1) both" 
-                });
-            }
-        })
-    }
-
     function heartActive(){
         $('.hearts-animations .heart').each(function(idx,heart){
             $(heart).css({
-                'animation-delay': (idx * 0.1) + 's',
-                '-webkit-animation-delay': (idx * 0.1) + 's'
+                'animation-delay':(0.5 + idx * 0.1) + 's',
+                '-webkit-animation-delay':(0.5 + idx * 0.1) + 's'
             })
         })
-        $('#fxCommLike14').prop('checked', true);
         $('.hearts-animations').addClass('is-active');
     }
 
     function heartRemove(){
-        $('#fxCommLike14').prop('checked', false);
         $('.hearts-animations').removeClass('is-active');
     }
-
-
 })
 </script>
 </body>
