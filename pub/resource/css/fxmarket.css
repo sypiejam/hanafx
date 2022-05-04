@@ -1174,7 +1174,7 @@
 .fx-quiz__opt--dw + .fx-quiz__label {background-position:0 100%;}
 .fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;}
 .fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;}
-.modal--confirm .fx-boast__contents {max-height:52vh;}
+.modal--confirm .fx-boast__contents {min-height:333px;max-height:52vh;}
 .fx-boastslider {position:relative;}
 .fx-boastslider .slick-arrow {z-index:10;position:absolute;top:4.0315rem;width:1.75rem;height:3.25rem;background:url(../../resource/images/C/arrow_right_default.png) no-repeat 100% 50% / 0.875rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);opacity:0.8;}
 .fx-boastslider .slick-prev {left:0;-webkit-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg);}
@@ -1271,8 +1271,8 @@
 .fx-badge__collect--type03 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#009591;}
 
 /* 서비스 가입 - 가입안내 */
-.fx-footer {opacity:0;-webkit-transition:all 0.3s;transition:all 0.3s;}
-.fx-footer.is-active {opacity:1;}
+.fx-footer {opacity:0;-webkit-transition:all 0.3s;transition:all 0.3s;z-index:-1;}
+.fx-footer.is-active {opacity:1;z-index:10;}
 .fx-serviceinfo__text {margin-bottom:1.875rem;font-weight:300;font-size:1.375rem;text-align:center;line-height:1.4;}
 .fx-serviceinfo__text .bold {color:#009591;}
 .fx-serviceinfo .container:not(:first-child) {margin-top:4.375rem;}

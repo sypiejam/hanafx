@@ -31,18 +31,24 @@
                 <button type="button" class="button button--positive" data-element="modal__open" data-target="#exchangerate">거래하기</button>
             </div>
             <br>
-            <h2 class="tit-default">심화배지 3종</h2>
-            <div class="button-wrap">
-                <button type="button" class="button button--positive" data-element="modal__open" data-target="#badge-0103">심화배지(빅핸드)</button>
+            <!-- 챌린지 공유 6종 추가 : 공유카드 SB_v0.7.03 -->
+            <h2 class="tit-default">챌린지 배지 9종</h2>
+            <div class="button-contained-wrap">
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0101">스타터</button>
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0102">빅러너</button>
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0103">빅핸드</button>
             </div>
-            <br>
-            <div class="button-wrap">
-                <button type="button" class="button button--positive" data-element="modal__open" data-target="#badge-0203">심화배지(FX인싸)</button>
+            <div class="button-contained-wrap mgt30">
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0201">수줍이</button>
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0202">열심이</button>
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0203">FX인싸</button>
             </div>
-            <br>
-            <div class="button-wrap">
-                <button type="button" class="button button--positive" data-element="modal__open" data-target="#badge-0303">심화배지(환율갓)</button>
+            <div class="button-contained-wrap mgt30">
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0301">환린이</button>
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0302">환율킹</button>
+                <button type="button" class="button-square button-square--mini button-square--blue" data-element="modal__open" data-target="#badge-0303">환율갓</button>
             </div>
+            <!-- 챌린지 공유 6종 추가 : 공유카드 SB_v0.7.03 -->
             <br>
             <h2 class="tit-default">환율맞추기</h2>
             <div class="button-wrap">
@@ -120,16 +126,104 @@
     <!-- // 거래하기 -->
 
     <!-- 
-        to. 개발 | 심화배지 3종 이미지 가이드 
+        to. 개발 | 챌린지 배지 6종 이미지 가이드 
+        스타터 > img_badge_0101.png
+        빅러너 > img_badge_0102.png
         빅핸드 > img_badge_0103.png
+        수줍이 > img_badge_0201.png
+        열심이 > img_badge_0202.png
         FX인싸 > img_badge_0203.png
+        환린이 > img_badge_0301.png
+        환율킹 > img_badge_0302.png
         환율갓 > img_badge_0303.png
     -->
-    <!-- 심화배지(빅핸드) -->
+    <!-- 챌린지 배지(스타터) -->
+    <div id="badge-0101" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">FX챌린지 스타터</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <img src="../../../../resource/images/fxmarket/img_badge_0101.png" alt="" class="fx-boast__img">
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">첫 거래 했어요!</strong>
+                            <span class="fx-boast__subtxt">FX 마켓 첫 거래체결</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText0101" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0101" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 챌린지 배지(스타터) -->
+    <!-- 챌린지 배지(빅러너) -->
+    <div id="badge-0102" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">FX챌린지 빅러너</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <img src="../../../../resource/images/fxmarket/img_badge_0102.png" alt="" class="fx-boast__img">
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">밀리어네어 가즈아!</strong>
+                            <span class="fx-boast__subtxt">누적거래금액 USD 10,000이상</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText0102" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0102" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 챌린지 배지(빅러너) -->
+    <!-- 챌린지 배지(빅핸드) -->
     <div id="badge-0103" class="modal modal--confirm" data-element="modal__element">
         <div class="modal__container modal__container--interval" data-element="modal__element-container">
             <div class="modal__header">
-                <h1 class="modal__header--title">빅핸드</h1>
+                <h1 class="modal__header--title">FX챌린지 빅핸드</h1>
             </div>
             <div class="modal__contents fx-boast__contents">
                 <div class="fx-boastslider" data-slider="arrow1">
@@ -147,8 +241,8 @@
                         * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
                     -->
                     <div class="input__inner">
-                        <input type="text" id="inputText02" class="input__element" title="한줄입력" value="">
-                        <label for="inputText02" class="input__label" aria-hidden="true">한줄입력</label>
+                        <input type="text" id="inputText0103" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0103" class="input__label" aria-hidden="true">한줄입력</label>
                         <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
                     </div>
                     <!-- 에러 메시지 -->
@@ -165,13 +259,95 @@
             <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
         </div>
     </div>
-    <!-- // 심화배지(빅핸드) -->
+    <!-- // 챌린지 배지(빅핸드) -->
 
-    <!-- 심화배지(FX인싸) -->
+    <!-- 챌린지 배지(수줍이) -->
+    <div id="badge-0201" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">FX챌린지 수줍이</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <img src="../../../../resource/images/fxmarket/img_badge_0201.png" alt="" class="fx-boast__img">
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">첫 인사 드립니다.</strong>
+                            <span class="fx-boast__subtxt">FX커뮤니티 첫인사</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText0201" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0201" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 챌린지 배지(수줍이) -->
+    <!-- 챌린지 배지(열심이) -->
+    <div id="badge-0202" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">FX챌린지 열심이</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <img src="../../../../resource/images/fxmarket/img_badge_0202.png" alt="" class="fx-boast__img">
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">재미있는 FX커뮤니티~</strong>
+                            <span class="fx-boast__subtxt">FX커뮤니티 공유 10개 달성</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText0202" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0202" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 챌린지 배지(열심이) -->
+    <!-- 챌린지 배지(FX인싸) -->
     <div id="badge-0203" class="modal modal--confirm" data-element="modal__element">
         <div class="modal__container modal__container--interval" data-element="modal__element-container">
             <div class="modal__header">
-                <h1 class="modal__header--title">FX인싸</h1>
+                <h1 class="modal__header--title">FX챌린지 FX인싸</h1>
             </div>
             <div class="modal__contents fx-boast__contents">
                 <div class="fx-boastslider" data-slider="arrow1">
@@ -179,7 +355,7 @@
                         <img src="../../../../resource/images/fxmarket/img_badge_0203.png" alt="" class="fx-boast__img">
                         <div class="inner-txt align-center">
                             <strong class="fx-boast__txt">FX마켓의 사랑둥이♥</strong>
-                            <span class="fx-boast__subtxt">FX공감 주고받기 50개 달성</span>
+                            <span class="fx-boast__subtxt">FX 공감 주고받기 50개 달성</span>
                         </div>
                     </div>
                 </div>
@@ -189,8 +365,8 @@
                         * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
                     -->
                     <div class="input__inner">
-                        <input type="text" id="inputText03" class="input__element" title="한줄입력" value="">
-                        <label for="inputText03" class="input__label" aria-hidden="true">한줄입력</label>
+                        <input type="text" id="inputText0203" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0203" class="input__label" aria-hidden="true">한줄입력</label>
                         <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
                     </div>
                     <!-- 에러 메시지 -->
@@ -207,13 +383,95 @@
             <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
         </div>
     </div>
-    <!-- // 심화배지(FX인싸) -->
+    <!-- // 챌린지 배지(FX인싸) -->
 
-    <!-- 심화배지(환율갓) -->
+    <!-- 챌린지 배지(환린이) -->
+    <div id="badge-0301" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">FX챌린지 환린이</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <img src="../../../../resource/images/fxmarket/img_badge_0301.png" alt="" class="fx-boast__img">
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">두근두근 맞췄을까?</strong>
+                            <span class="fx-boast__subtxt">환율맞추기 첫 참여</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText0301" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0301" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 챌린지 배지(환린이) -->
+    <!-- 챌린지 배지(환율킹) -->
+    <div id="badge-0302" class="modal modal--confirm" data-element="modal__element">
+        <div class="modal__container modal__container--interval" data-element="modal__element-container">
+            <div class="modal__header">
+                <h1 class="modal__header--title">FX챌린지 환율킹</h1>
+            </div>
+            <div class="modal__contents fx-boast__contents">
+                <div class="fx-boastslider" data-slider="arrow1">
+                    <div class="fx-boast">
+                        <img src="../../../../resource/images/fxmarket/img_badge_0302.png" alt="" class="fx-boast__img">
+                        <div class="inner-txt align-center">
+                            <strong class="fx-boast__txt">이쯤되면 환율예측 고수!</strong>
+                            <span class="fx-boast__subtxt">환율맞추기 월참여 5회 이상<br>적중 50% 3회 달성</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input mgt60">
+                    <!--
+                        * 오류시 class="input input--error"
+                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                    -->
+                    <div class="input__inner">
+                        <input type="text" id="inputText0302" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0302" class="input__label" aria-hidden="true">한줄입력</label>
+                        <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
+                    </div>
+                    <!-- 에러 메시지 -->
+                    <p class="input__error" aria-live="assertive">부적절한 문구가 포함되어 있습니다.</p>
+                </div>
+                <div class="input__guide-text color-7575">
+                    <span>0</span>/20
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button type="button" class="button button--kakao">카카오톡</button>
+                <button type="button" class="button button--positive">커뮤니티 공유</button>
+            </div>
+            <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+        </div>
+    </div>
+    <!-- // 챌린지 배지(환율킹) -->
+    <!-- 챌린지 배지(환율갓) -->
     <div id="badge-0303" class="modal modal--confirm" data-element="modal__element">
         <div class="modal__container modal__container--interval" data-element="modal__element-container">
             <div class="modal__header">
-                <h1 class="modal__header--title">환율갓</h1>
+                <h1 class="modal__header--title">FX챌린지 환율갓</h1>
             </div>
             <div class="modal__contents fx-boast__contents">
                 <div class="fx-boastslider" data-slider="arrow1">
@@ -221,7 +479,7 @@
                         <img src="../../../../resource/images/fxmarket/img_badge_0303.png" alt="" class="fx-boast__img">
                         <div class="inner-txt align-center">
                             <strong class="fx-boast__txt">환율찍신! 나이스샷!</strong>
-                            <span class="fx-boast__subtxt">환율맞추기 월출석 5회 이상<br>적중 80% 3회 달성</span>
+                            <span class="fx-boast__subtxt">환율맞추기 월참여 5회 이상<br>적중 80% 3회 달성</span>
                         </div>
                     </div>
                 </div>
@@ -231,8 +489,8 @@
                         * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
                     -->
                     <div class="input__inner">
-                        <input type="text" id="inputText04" class="input__element" title="한줄입력" value="">
-                        <label for="inputText04" class="input__label" aria-hidden="true">한줄입력</label>
+                        <input type="text" id="inputText0303" class="input__element" title="한줄입력" value="">
+                        <label for="inputText0303" class="input__label" aria-hidden="true">한줄입력</label>
                         <button type="button" class="input__remove-button" title="텍스트삭제" style="display: none;"></button>
                     </div>
                     <!-- 에러 메시지 -->
@@ -249,7 +507,7 @@
             <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
         </div>
     </div>
-    <!-- // 심화배지(환율갓) -->
+    <!-- // 챌린지 배지(환율갓) -->
 
     <!-- 환율맞추기 -->
     <div id="ratepredict" class="modal modal--confirm" data-element="modal__element">
