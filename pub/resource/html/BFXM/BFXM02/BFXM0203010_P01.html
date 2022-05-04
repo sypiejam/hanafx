@@ -82,7 +82,7 @@
     animation-timing-function:ease;	
 	-webkit-animation-timing-function:ease;	
 }
-.tutorial-slider__item--guide04 .tutorial-motion {position:absolute;bottom:24%;right:38%;}
+.tutorial-slider__item--guide04 .tutorial-motion {position:absolute;bottom:24%;right:37%;}
 .tutorial-slider__item--guide04 .img-absol-emoji {bottom:14.5%;}
 .slick-active .tutorial-slider__item--guide04 .img-absol-emoji {
     -webkit-transform-origin:67%;
@@ -154,7 +154,9 @@
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
-.slick-active .tutorial-slider__item--guide05 .img-absol-badge {top:14.2%;
+.slick-active .tutorial-slider__item--guide05 .img-absol-badge {top:14.5%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
     -webkit-transform-origin:bottom;
     transform-origin:bottom;
     -webkit-animation-name:tutorialguide05-badge;
@@ -217,8 +219,8 @@
     animation-name:tutorialguide06-drop1;
     -webkit-animation-duration:4s;
     animation-duration:4s;
-    -webkit-animation-timing-function: cubic-bezier(0.14, 1.1, 0.51, 1.04);
-    animation-timing-function: cubic-bezier(0.14, 1.1, 0.51, 1.04);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
@@ -280,7 +282,7 @@
 @keyframes tutorialguide05-badge {
     0% {opacity:0;-webkit-transform:scale(1);transform:scale(1);}
     10% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
-    60% {-webkit-transform:scale(1.2);transform:scale(1.2);}
+    60% {-webkit-transform:scale(1.4);transform:scale(1.4);}
     100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 @keyframes tutorialguide06-cart {
@@ -336,7 +338,7 @@
 @media (min-width:524px) and (max-width:768px){
     .tutorial-body .img-base {max-width:360px;}
     .tutorial-body .img-absol {max-width:360px;}
-    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;right:42%;}
+    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;right:45%;}
     .tutorial-slider__item--guide05 .img-base,
     .tutorial-slider__item--guide05 .img-absol,
     .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(360px - 3rem);}
