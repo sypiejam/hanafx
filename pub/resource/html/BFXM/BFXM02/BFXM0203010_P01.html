@@ -524,7 +524,35 @@
 $(function(){
     var slider = $('.tutorial-slider');
     var slideLen = $('.tutorial-slider__item').length - 1;
-        
+    var tutorialguide = {
+        guide03 : function(){
+            heartRemove();
+        },
+        guide04 : function(){
+            $('.hearts-animations .heart').each(function(idx,heart){
+                $(heart).css({
+                    'animation-delay':(0.5 + idx * 0.1) + 's',
+                    '-webkit-animation-delay':(0.5 + idx * 0.1) + 's'
+                })
+            })
+            $('.hearts-animations').addClass('is-active');
+        },
+        guide05 : function(){
+            $('.hearts-animations').removeClass('is-active');
+            $('.tutorial-slider .slick-arrow, .tutorial-slider .slick-dots, .tutorial-skip').show();
+            $('.modal-tutorial .button-fixed').css('zIndex', -1);
+        },
+        guide06 : function(){
+            $('.hearts-animations').removeClass('is-active');
+            $('.tutorial-slider .slick-arrow, .tutorial-slider .slick-dots, .tutorial-skip').hide();
+            $('.modal-tutorial .button-fixed').css('zIndex', 1);
+        }
+    }
+    
+    $('.tutorial-skip .btn-skip').on('click', function(){
+        slider.slick('slickGoTo', slideLen);
+    });
+    
     slider.slick({
         slidesToScroll:1,
         slidesToShow:1,
@@ -532,10 +560,6 @@ $(function(){
         dots:true,
         swipeToSlide:true,
     })
-  
-    slider.init(function(event, slick){
-       
-    });
 
     slider.on({
         beforeChange :function(event,slick,cur,next){
@@ -545,45 +569,20 @@ $(function(){
                 case 1:
                     break;
                 case 2:
-                    heartRemove();
+                    tutorialguide.guide03();
                     break;
                 case 3:
-                    heartActive();
+                    tutorialguide.guide04();
                     break;
                 case 4:
-                    heartRemove();
-                    $('.slick-arrow, .slick-dots, .tutorial-skip').show();
-                    $('.modal-tutorial .button-fixed').css('zIndex', -1);
+                    tutorialguide.guide05();
                     break;
                 case 5:
-                    $('.slick-arrow, .slick-dots, .tutorial-skip').hide();
-                    $('.modal-tutorial .button-fixed').css('zIndex', 1);
+                    tutorialguide.guide06();
                     break;
             }
-            
-        },
-        afterChange :function(event,slick,cur){
-            
         }
     });
-
-    $('.btn-skip').on('click', function(){
-        slider.slick('slickGoTo', slideLen);
-    })
-
-    function heartActive(){
-        $('.hearts-animations .heart').each(function(idx,heart){
-            $(heart).css({
-                'animation-delay':(0.5 + idx * 0.1) + 's',
-                '-webkit-animation-delay':(0.5 + idx * 0.1) + 's'
-            })
-        })
-        $('.hearts-animations').addClass('is-active');
-    }
-
-    function heartRemove(){
-        $('.hearts-animations').removeClass('is-active');
-    }
 })
 </script>
 </body>
