@@ -1056,7 +1056,8 @@
 .fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:1rem auto 0;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
 .fx-calender-base {display:flex;align-items:center;height:100%;}
 .fx-forecast-calender .bold {font-size:1.5rem;}
-.fx-calender-over {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;
+.fx-calender-over {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;}
+.is-active .fx-calender-over {
     -webkit-animation-name:calendarflip;
     animation-name:calendarflip;
     animation-duration:1.5s;
@@ -1070,63 +1071,58 @@
 .fx-forecast-month {width:50%;color:#fff;}
 .fx-forecast-day {width:50%;color:#1489db;}
 .ani-dart-board {display:block;width:5.75rem;height:6.25rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_forecast_dartboard.png) no-repeat 0 0 / 100%;}
-.ani-dart-board:before {content:'';z-index:-1;position:absolute;width:9.563rem;height:2.813rem;left:50%;bottom:0;background:url(../../resource/images/fxmarket/img_forecast_shadow.png) no-repeat 0 0 / 100%;
+.ani-dart-board:before {content:'';z-index:-1;position:absolute;width:9.563rem;height:2.813rem;left:50%;bottom:0;background:url(../../resource/images/fxmarket/img_forecast_shadow.png) no-repeat 0 0 / 100%;}
+.is-active .ani-dart-board:before {
     -webkit-transform-origin:left;
     transform-origin:left;
     animation-name:dartshadow;
     -webkit-animation-name:dartshadow;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
-.ani-tower-coin {bottom:1rem;width:3.563rem;height:2.75rem;margin-left:-0.25rem;background:url(../../resource/images/fxmarket/img_forecast_buildcoin.png) no-repeat 0 0 / 100%;
+.ani-tower-coin {bottom:1rem;width:3.563rem;height:2.75rem;margin-left:-0.25rem;background:url(../../resource/images/fxmarket/img_forecast_buildcoin.png) no-repeat 0 0 / 100%;}
+.is-active .ani-tower-coin {
     animation-name:coinmoving;
     -webkit-animation-name:coinmoving;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
-.ani-one-coin {bottom:0.75rem;width:2.5rem;height:2.25rem;margin-left:-1rem;background:url(../../resource/images/fxmarket/img_forecast_anicoin.png) no-repeat 0 0 / 100%;
+.ani-one-coin {bottom:0.75rem;width:2.5rem;height:2.25rem;margin-left:-1rem;background:url(../../resource/images/fxmarket/img_forecast_anicoin.png) no-repeat 0 0 / 100%;}
+.is-active .ani-one-coin {
     animation-name:cointrembling;
     -webkit-animation-name:cointrembling;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
-.ani-dart {position:absolute;left:0;top:0;display:block;width:5.875rem;height:2.875rem;
+.ani-dart {position:absolute;left:0;top:0;display:block;width:5.875rem;height:2.875rem;}
+.is-active .ani-dart {
     animation-name:dartmotion;
     -webkit-animation-name:dartmotion;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
-.ani-dart-motion {display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_forecast_dart.png) no-repeat 0 0 / 100%;-webkit-transform-origin:100% 50%;transform-origin:100% 50%;
+.ani-dart-motion {display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_forecast_dart.png) no-repeat 0 0 / 100%;-webkit-transform-origin:100% 50%;transform-origin:100% 50%;}
+.is-active .ani-dart-motion {
     animation-name:dartvibration;
     -webkit-animation-name:dartvibration;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
