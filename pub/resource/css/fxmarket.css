@@ -1060,9 +1060,9 @@
     -webkit-animation-name:calendarflip;
     animation-name:calendarflip;
     animation-duration:1.5s;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
     -webkit-animation-duration:1.5s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
@@ -1070,7 +1070,7 @@
 .fx-forecast-month {width:50%;color:#fff;}
 .fx-forecast-day {width:50%;color:#1489db;}
 .ani-dart-board {display:block;width:5.75rem;height:6.25rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_forecast_dartboard.png) no-repeat 0 0 / 100%;}
-.ani-dart-board:before {content:'';z-index:-1;position:absolute;width:9.563rem;height:2.813rem;left:50%;bottom:0;background:url(../../resource/images/fxmarket/img_forecast_shadow.png) no-repeat 0 0 / 100%;}
+.ani-dart-board:before {content:'';z-index:-1;position:absolute;width:9.563rem;height:2.813rem;left:50%;bottom:0;background:url(../../resource/images/fxmarket/img_forecast_shadow.png) no-repeat 0 0 / 100%;-webkit-transform:translateX(-53%) scaleX(1);transform:translateX(-53%) scaleX(1);}
 .is-active .ani-dart-board:before {
     -webkit-transform-origin:left;
     transform-origin:left;
@@ -1078,8 +1078,8 @@
     -webkit-animation-name:dartshadow;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1091,8 +1091,8 @@
     -webkit-animation-name:coinmoving;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1104,21 +1104,21 @@
     -webkit-animation-name:cointrembling;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
-.ani-dart {position:absolute;left:0;top:0;display:block;width:5.875rem;height:2.875rem;}
+.ani-dart {position:absolute;left:0;top:0;display:block;width:5.875rem;height:2.875rem;opacity:0;}
 .is-active .ani-dart {
     animation-name:dartmotion;
     -webkit-animation-name:dartmotion;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1130,8 +1130,8 @@
     -webkit-animation-name:dartvibration;
     animation-duration:2s;
     -webkit-animation-duration:2s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay:0.5s;
+    animation-delay:0.5s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1205,12 +1205,12 @@
     100% {-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(0deg);transform:perspective(800px) rotateX(0deg);} 
 }
 @keyframes dartmotion {
-    0%, 20% {-webkit-transform:translate(-100%, -3rem);transform:translate(-100%, -3rem);}
-    25%,100% {-webkit-transform:translate(calc(50vw - 100%), 0.375rem);transform:translate(calc(50vw - 100%), 0.375rem);}
+    0%, 20% {opacity:0;-webkit-transform:translate(-100%, -3rem);transform:translate(-100%, -3rem);}
+    25%,100% {opacity:1;-webkit-transform:translate(calc(50vw - 100%), 0.375rem);transform:translate(calc(50vw - 100%), 0.375rem);}
 }
 @keyframes dartvibration {
-    0%,25% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-    26% {-webkit-transform:rotate(15deg);transform:rotate(15deg);}
+    0%,25% {opacity:0;-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    26% {opacity:1;-webkit-transform:rotate(15deg);transform:rotate(15deg);}
     30% {-webkit-transform:rotate(-15deg);transform:rotate(-15deg);}
     34% {-webkit-transform:rotate(12deg);transform:rotate(12deg);}
     38% {-webkit-transform:rotate(-12deg);transform:rotate(-12deg);}
