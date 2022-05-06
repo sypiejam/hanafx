@@ -1581,7 +1581,7 @@
     animation-timing-function:ease;	
 	-webkit-animation-timing-function:ease;	
 }
-.tutorial-slider__item--guide04 .tutorial-motion {position:absolute;bottom:24%;right:37%;}
+.tutorial-slider__item--guide04 .tutorial-motion {position:absolute;bottom:24%;left:62%;}
 .tutorial-slider__item--guide04 .img-absol-emoji {bottom:14.5%;}
 .slick-active .tutorial-slider__item--guide04 .img-absol-emoji {
     -webkit-transform-origin:67%;
@@ -1842,7 +1842,7 @@
 @media (min-width:524px){
     .tutorial-body .img-base {max-width:360px;}
     .tutorial-body .img-absol {max-width:360px;}
-    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;right:45%;}
+    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;left:50%;margin-left:2.5rem;}
     .tutorial-slider__item--guide05 .img-base,
     .tutorial-slider__item--guide05 .img-absol,
     .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(360px - 3rem);}
