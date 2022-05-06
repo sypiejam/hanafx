@@ -1061,6 +1061,8 @@
     animation-name:calendarflip;
     animation-duration:1.5s;
     -webkit-animation-duration:1.5s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     animation-fill-mode:both;
     -webkit-animation-fill-mode:both;
 }
@@ -1075,6 +1077,8 @@
     -webkit-animation-name:dartshadow;
     animation-duration:2s;
     -webkit-animation-duration:2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1085,6 +1089,8 @@
     -webkit-animation-name:coinmoving;
     animation-duration:2s;
     -webkit-animation-duration:2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1095,6 +1101,8 @@
     -webkit-animation-name:cointrembling;
     animation-duration:2s;
     -webkit-animation-duration:2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1105,6 +1113,8 @@
     -webkit-animation-name:dartmotion;
     animation-duration:2s;
     -webkit-animation-duration:2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
@@ -1115,6 +1125,8 @@
     -webkit-animation-name:dartvibration;
     animation-duration:2s;
     -webkit-animation-duration:2s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     animation-timing-function:ease-out;
     -webkit-animation-timing-function:ease-out;
     animation-fill-mode:both;
