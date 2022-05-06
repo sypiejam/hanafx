@@ -736,7 +736,6 @@
     78% {-webkit-transform:scale(1.2);transform:scale(1.2);}
     86% {-webkit-transform:scale(1);transform:scale(1);}
     92% {-webkit-transform:scale(1.2);transform:scale(1.2);}
-
     100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 @keyframes soundbox {
@@ -1531,8 +1530,6 @@
 .tutorial-slider .slick-next:after {content:'다음';display:flex;align-items:center;height:2.5rem;font-size:1.125rem;}
 .tutorial-skip {z-index:10;position:fixed;left:1.5rem;bottom:0;display:flex;padding:0 0 calc(1.25rem + constant(safe-area-inset-bottom));padding:0 0 calc(1.25rem + env(safe-area-inset-bottom));}
 .tutorial-skip .btn-skip {height:2.5rem;font-size:1.125rem;}
-
-
 .tutorial-header {display:flex;justify-content:center;align-items:center;width:100%;height:7rem;text-align:center;line-height:1.3;}
 .tutorial-container {opacity:0;display:flex;flex-wrap:wrap;flex-direction:column;justify-content:center;height:calc(100vh - 7.25rem - constant(safe-area-inset-top));height:calc(100vh - 7.25rem - env(safe-area-inset-top));}
 .slick-active .tutorial-container {opacity:1;}
@@ -1868,7 +1865,6 @@
 /* odometer css */
 .odometer.odometer-auto-theme, 
 .odometer.odometer-theme-minimal {position:relative;display:inline-block;vertical-align:middle;} 
-
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-minimal {display:inline;}
 .odometer.odometer-auto-theme .odometer-digit,
