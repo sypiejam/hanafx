@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 공통 meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>하나은행</title>
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../../../resource/css/common.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/components.css" type="text/css">
+<link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
+<!-- Hana FX market CSS -->
+<link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <!-- header -->
+    <div id="header" class="app-header">
+        <button class="app-header__button app-header__button--back" title="이전 화면"></button>
+        <h1 class="app-header__title">외화바꾸기</h1>
+        <!-- <button class="app-header__button app-header__button--home" title="메인 화면"></button> -->
+        <button class="app-header__button app-header__button--hamburger" title="전체 메뉴"></button>
+    </div>
+    <!-- //header -->
+    <!-- Content -->
+    <div id="content" class="app-main fxmarket">
+        <div class="container fx-complete">
+            <div class="icon-wrap">
+                <!-- 아이콘 영역 디자인 미정 작업예정 -->
+                <i class="icon-wrap__icon icon-wrap__icon--check" aria-hidden="true"></i>
+                <!-- //아이콘 영역 디자인 미정 작업예정 -->
+  
+                <p class="icon-wrap__icon-word">
+                    USD <em class="bold color-000">100,000</em>을<br>
+                    EUR <em class="bold color-000">91,000</em> 으로 바꿉니다.
+                </p>
+                <p class="icon-wrap__description">USD 적용환율 <span>1,235.50</span></p> 
+                <p class="icon-wrap__description mgt0">EUR 적용환율 <span>1,345.83</span></p> 
+                <div class="gray-box gray-box--center"> 
+                    <p class="text-guide">USD 환율 (spread) <span class="color-green"><em class="bold">80</em>%</span> 우대</p>
+                </div>
+                <div class="round-link">
+                    <div class="round-link__item">
+                        <a href="#none" class="round-link__anchor round-link__anchor--icon">
+                            <i class="round-link__anchor--icon__image" aria-hidden="true"></i>
+                            <p class="round-link__txt">
+                                <span class="bold"><em class="key-txt">달러 장보기</em> 완료!</span><br>해외주식 하러 가보자~
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+        <div class="container fx-complete-list">
+            <div class="list-section">
+                <ul class="list-wrap" style="display: none;" data-element="toggle-list">
+                    <li class="list-wrap__item">
+                        <div class="list-wrap__box">
+                            <strong class="list-wrap__title list-wrap__title--value">외화계좌</strong>
+                        </div>
+                        <div class="list-wrap__box list-wrap__box--unit">
+                            <strong class="list-wrap__text list-wrap__text--value">
+                                <em class="account">하나밀리언달러통장</em><br>
+                                <em class="number eng">123-123456-12345</em>
+                            </strong>
+                        </div>
+                    </li>
+                    <li class="list-wrap__item">
+                        <div class="list-wrap__box">
+                            <strong class="list-wrap__title list-wrap__title--value">거래후 잔액</strong>
+                        </div>
+                        <div class="list-wrap__box list-wrap__box--unit">
+                            <strong class="list-wrap__text list-wrap__text--value eng">USD 100,000</strong>
+                            <strong class="list-wrap__text list-wrap__text--value eng">EUR 91,000</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <button type="button" class="button-simple button-simple--right" data-element="toggle-btn">펼치기</button>
+        </div>
+        <!-- // 2022-04-18 마크업 수정(SB_v1.0.02) -->
+    </div>
+    <!-- //Content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+            <button type="button" class="button button--active">추가 매매</button>
+            <button type="button" class="button button--positive">확인</button><!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+        </div>
+    </div>
+    <!-- //footer -->
+</div>
+
+<!-- 공통 script -->
+<script src="../../../../resource/library/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../../../resource/library/slick/slick.js"></script>
+<script src="../../../../resource/library/dnd/touch-dnd.js"></script>
+<script src="../../../../resource/js/ui/pualugin.js"></script>
+<script src="../../../../resource/js/ui/common.js"></script>
+</body>
+</html>

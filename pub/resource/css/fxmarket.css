@@ -6,7 +6,7 @@
 .btn-share {display:flex;align-items:center;}
 .btn-share::before {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-right:0.5rem;background:url(../../resource/images/C/icon_share.png) 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
 .btn-share__text {font-size:0.813rem;color:#666;}
-.fx-sticker {position:absolute;top:-35%;right:0.875rem;}
+.fx-sticker {position:absolute;top:-60%;right:0.875rem;}
 .fx-sticker__arrow {position:absolute;bottom:0;left:30%;width:0;height:0;}
 .fx-sticker__arrow::before {content:'';position:absolute;bottom:0;width:0;height:0;border:solid transparent;border-color:rgba(243, 83, 116, 0);border-bottom-color:#f35374;border-width:13px;margin-left:-12px;}
 .fx-sticker__cont {position:relative;display:flex;flex-wrap:wrap;align-items:center;align-content:center;width:5.625rem;height:5.625rem;text-align:center;border:2px solid #f35374;border-radius:50%;line-height:1.2;color:#f72450;background:#fff;}
