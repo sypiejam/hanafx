@@ -1249,7 +1249,7 @@
 .fx-badge__collect {margin-top:1.625rem;}
 .fx-badge__list {flex-wrap:wrap;display:flex;margin:0 -0.5rem;}
 .fx-badge__item {position:relative;width:calc(100% / 3);padding-top:1.688rem;text-align:center;}
-.fx-badge__item .btn-share {position:absolute;top:1rem;right:0;bottom:0;left:0;display:none;}
+.fx-badge__item .btn-share {position:absolute;top:1rem;right:0;bottom:0;left:0;display:none;width:100%;}
 .fx-badge__item .btn-share:before {content:none;}
 .fx-badge-input {position:absolute;width:1px;height:1px;}
 .fx-badge-label {display:block;}
