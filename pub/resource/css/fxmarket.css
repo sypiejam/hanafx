@@ -1248,11 +1248,13 @@
 .fx-badge__collect {margin-top:1.625rem;}
 .fx-badge__list {flex-wrap:wrap;display:flex;margin:0 -0.5rem;}
 .fx-badge__item {position:relative;width:calc(100% / 3);padding-top:1.688rem;text-align:center;}
-.fx-badge__item .btn-share {position:absolute;top:0;right:0;}
+.fx-badge__item .btn-share {position:absolute;top:1rem;right:0;bottom:0;left:0;display:none;}
+.fx-badge__item .btn-share:before {content:none;}
 .fx-badge-input {position:absolute;width:1px;height:1px;}
 .fx-badge-label {display:block;}
 .fx-badge-img {display:block;width:6.188rem;height:8.063rem;margin:auto;background-repeat:no-repeat;background-position:0 0;background-size:20.438rem;background-image:url(../../resource/images/fxmarket/img_challenge_activity_off.png);}
 .fx-badge-input:checked + .fx-badge-label .fx-badge-img {background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);}
+.fx-badge-input:checked ~ .btn-share {display:block;}
 .fx-badge__item--0101 .fx-badge-img {background-position:0 0;}
 .fx-badge__item--0102 .fx-badge-img {background-position:-7.125rem 0;}
 .fx-badge__item--0103 .fx-badge-img {background-position:-14.25rem 0;}
