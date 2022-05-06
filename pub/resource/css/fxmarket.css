@@ -1508,6 +1508,352 @@
     50%, to {-webkit-transform:rotateY(360deg);transform:rotateY(360deg);}
 }
 
+/* 튜토리얼 */
+.modal-tutorial .button-fixed {z-index:-1;opacity:0;}
+.modal-tutorial .modal__contents {height:calc(100vh - 3.5rem - constant(safe-area-inset-bottom));height:calc(100vh - 3.5rem - env(safe-area-inset-top));padding:0;}
+.tutorial-slider .slick-dots {position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:center;padding:1.25rem 0 calc(1.25rem + constant(safe-area-inset-bottom));padding:1.25rem 0 calc(1.25rem + env(safe-area-inset-bottom));text-align:center;}
+.tutorial-slider .slick-dots li {display:flex;justify-content:center;align-items:center;height:3rem;margin:0 0.188rem;}
+.tutorial-slider .slick-dots li button {display:block;width:0.5rem;height:0.5rem;border-radius:50%;background:#d9d9d9;font-size:0;}
+.tutorial-slider .slick-dots .slick-active button {width:1.188rem;border-radius:0.75rem;background:#556b79;}
+.tutorial-slider .slick-prev {display:none !important;}
+.tutorial-slider .slick-next {z-index:10;position:fixed;right:1.5rem;bottom:0;padding:1.25rem 0 calc(1.25rem + constant(safe-area-inset-bottom));padding:1.25rem 0 calc(1.25rem + env(safe-area-inset-bottom));}
+.tutorial-slider .slick-next:after {content:'다음';display:flex;align-items:center;height:3rem;font-size:1.125rem;}
+.tutorial-skip {z-index:10;position:fixed;left:1.5rem;bottom:0;display:flex;padding:1.25rem 0 calc(1.25rem + constant(safe-area-inset-bottom));padding:1.25rem 0 calc(1.25rem + env(safe-area-inset-bottom));}
+.tutorial-skip .btn-skip {height:3rem;font-size:1.125rem;}
+
+
+.tutorial-header {display:flex;justify-content:center;align-items:center;width:100%;height:7rem;text-align:center;line-height:1.3;}
+.tutorial-container {opacity:0;display:flex;flex-wrap:wrap;flex-direction:column;justify-content:center;height:calc(100vh - 3.5rem - constant(safe-area-inset-top));height:calc(100vh - 3.5rem - env(safe-area-inset-top));padding-bottom:5rem;}
+.slick-active .tutorial-container {opacity:1;}
+.tutorial-body {position:relative;}
+.tutorial-text {font-size:1.5rem;font-weight:300;line-height:1.3;}
+.tutorial-text .color-green {font-weight:500;}
+.slick-active .tutorial-text {
+    -webkit-animation:tutorialtitle;
+    animation:tutorialtitle;
+    -webkit-animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-animation-duration:1.2s;
+    animation-duration:1.2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes tutorialtitle {
+    0% {letter-spacing:-0.5em;opacity:0;}
+    40% {opacity:0.6;}
+    100% {opacity:1;}
+}
+.tutorial-body .img-base {margin:0 auto;}
+.tutorial-body .img-absol {position:absolute;left:0;right:0;margin:auto;}
+.tutorial-slider__item--guide01 .fx-attend-visual {position:absolute;top:20%;left:0;right:0;margin:0 auto;-webkit-transform:scale(0.8);transform:scale(0.8);}
+.tutorial-slider__item--guide01 .fx-attend__desc {margin-top:0;}
+.tutorial-slider__item--guide02 .img-absol-txt1 {top:54%;}
+.slick-active .tutorial-slider__item--guide02 .img-absol-txt1 {
+    -webkit-animation-name:tutorialguide02-txt1;
+    animation-name:tutorialguide02-txt1;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+}
+.tutorial-slider__item--guide03 .img-absol-txt1 {z-index:10;top:41%;}
+.slick-active .tutorial-slider__item--guide03 .img-absol-txt1 {
+    -webkit-animation-name:tutorialguide03-txt1;
+    animation-name:tutorialguide03-txt1;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-timing-function:cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide03 .img-absol-txt2 {top:73%;}
+.slick-active .tutorial-slider__item--guide03 .img-absol-txt2 {
+    -webkit-animation-name:tutorialguide03-txt2;
+    animation-name:tutorialguide03-txt2;
+    -webkit-animation-delay:0.8s;
+    animation-delay:0.8s;
+    -webkit-animation-duration:0.8s;
+    animation-duration:0.8s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    animation-timing-function:ease;	
+	-webkit-animation-timing-function:ease;	
+}
+.tutorial-slider__item--guide04 .tutorial-motion {position:absolute;bottom:24%;right:37%;}
+.tutorial-slider__item--guide04 .img-absol-emoji {bottom:14.5%;}
+.slick-active .tutorial-slider__item--guide04 .img-absol-emoji {
+    -webkit-transform-origin:67%;
+    transform-origin:67%;
+    -webkit-animation-name:tutorialguide04-emoji;
+    animation-name:tutorialguide04-emoji;
+    -webkit-animation-duration:0.8s;
+    animation-duration:0.8s;
+}
+.tutorial-slider__item--guide04 .img-absol-eight {bottom:10.8%;}
+.tutorial-slider__item--guide04 .img-absol-nine {opacity:0;bottom:10.8%;}
+.slick-active .tutorial-slider__item--guide04 .img-absol-eight {
+    -webkit-transform-origin:67%;
+    transform-origin: 67%;
+    -webkit-animation-name:tutorialguide04-eight;
+    animation-name:tutorialguide04-eight;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide04 .img-absol-nine {
+    -webkit-transform-origin:67%;
+    transform-origin: 67%;
+    -webkit-animation-name:tutorialguide04-nine;
+    animation-name:tutorialguide04-nine;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide05 .tutorial-body {overflow:hidden;padding:0 1.5rem;}
+.slick-active .tutorial-slider__item--guide05 .img-absol-txt1 {top:6%;right:1.5rem;left:1.5rem;width:calc(100% - 3rem);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform:scaleY(0);
+    transform:scaleY(0);
+    -webkit-animation-name:tutorialguide05-txt1;
+    animation-name:tutorialguide05-txt1;
+	-webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay:3s;
+    animation-delay:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide05 .tutorial-motion {position:absolute;top:0;left:1.5rem;right:1.5rem;height:100%;margin:auto;background:url(../../resource/images/fxmarket/img_tutorial_guide05_slide.png) no-repeat 0 0 / 300%;}
+.slick-active .tutorial-slider__item--guide05 .tutorial-motion {
+    -webkit-animation-name:tutorialguide05-bg;
+    animation-name:tutorialguide05-bg;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    animation-timing-function:linear;	
+	-webkit-animation-timing-function:linear;	
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide05 .img-absol-txt1 {top:6%;right:1.5rem;left:1.5rem;width:calc(100% - 3rem);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transform:scaleY(0);
+    transform:scaleY(0);
+    -webkit-animation-name:tutorialguide05-txt1;
+    animation-name:tutorialguide05-txt1;
+	-webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-delay:2.5s;
+    animation-delay:2.5s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide05 .img-absol-badge {top:14.5%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform-origin:bottom;
+    transform-origin:bottom;
+    -webkit-animation-name:tutorialguide05-badge;
+    animation-name:tutorialguide05-badge;
+    animation-duration: 0.3s;	
+	-webkit-animation-duration: 0.3s;
+    animation-delay:2.4s;
+    -webkit-animation-delay:2.4s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.tutorial-slider__item--guide06 .tutorial-motion {position:relative;margin-top:5rem;}
+.tutorial-slider__item--guide06 .ani-cart {display:block;width:7.938rem;height:7.813rem;margin:auto;}
+.tutorial-slider__item--guide06 .ani-cart:after {content:'';display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_tutorial_guide06_cart.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-cart:before {z-index:-1;content:'';position:absolute;right:-20%;bottom:0;width:85%;height:85%;background:#fff;border-radius:50%;}
+.tutorial-slider__item--guide06 .ani-basket {position:absolute;top:0.6rem;left:50%;width:7.063rem;height:4.313rem;margin-left:-3.8rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_basket.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-basket:after {content:'';z-index:10;position:absolute;right:0;bottom:0;left:0;width:7.063rem;height:4.188rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_basket_over.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-pocket {z-index:1;position:absolute;width:5rem;height:5.625rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_pocket.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-dollar-1 {z-index:1;position:absolute;left:50%;width:2.875rem;height:2.063rem;margin-left:-4.5rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_dollar1.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-dollar-2 {z-index:1;position:absolute;left:4.5rem;width:1.5rem;height:1.063rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_dollar3.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-dollar-3 {z-index:1;position:absolute;left:4rem;width:1.688rem;height:1.75rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_dollar2.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-tire-1 {position:absolute;bottom:0.65rem;left:50%;width:1.063rem;height:1.25rem;margin-left:-1rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_tire1.png) no-repeat 0 0 / 100%;}
+.tutorial-slider__item--guide06 .ani-tire-2 {position:absolute;bottom:1.2rem;left:50%;width:1rem;height:1.125rem;margin-left:2rem;background:url(../../resource/images/fxmarket/img_tutorial_guide06_tire2.png) no-repeat 0 0 / 100%;}
+.slick-active .tutorial-slider__item--guide06 .ani-tire-1,
+.slick-active .tutorial-slider__item--guide06 .ani-tire-2 {
+    -webkit-animation-name:tutorialguide06-tire;
+    animation-name:tutorialguide06-tire;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-cart {
+    -webkit-animation-name:tutorialguide06-cart;
+    animation-name:tutorialguide06-cart;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-cart:before {
+    -webkit-animation-name:tutorialguide06-cartbg;
+    animation-name:tutorialguide06-cartbg;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-pocket {
+    -webkit-transform-origin:left top;transform-origin:left top;
+    -webkit-animation-name:tutorialguide06-pocket;
+    animation-name:tutorialguide06-pocket;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-dollar-1 {
+    -webkit-animation-name:tutorialguide06-drop1;
+    animation-name:tutorialguide06-drop1;
+    -webkit-animation-duration:4s;
+    animation-duration:4s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-dollar-2 {
+    -webkit-animation-name:tutorialguide06-drop2;
+    animation-name:tutorialguide06-drop2;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.slick-active .tutorial-slider__item--guide06 .ani-dollar-3 {
+    -webkit-animation-name:tutorialguide06-drop3;
+    animation-name:tutorialguide06-drop3;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes tutorialguide02-txt1 {
+    0% {-webkit-transform:translateY(600px) rotateX(30deg) scale(0);transform:translateY(600px) rotateX(30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0;}
+    100% {-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% -1400px;transform-origin:50% -1400px;opacity:1;}
+}
+@keyframes tutorialguide03-txt1 {
+    0% {-webkit-transform:translateY(-600px) rotateX(-30deg) scale(0);transform:translateY(-600px) rotateX(-30deg) scale(0);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;opacity:0;}
+    100% {-webkit-transform:translateY(0) rotateX(0) scale(1);transform:translateY(0) rotateX(0) scale(1);-webkit-transform-origin:50% 1400px;transform-origin:50% 1400px;opacity:1;}
+}
+@keyframes tutorialguide03-txt2 {
+    0% {opacity:0;-webkit-transform:translateY(-100%);transform:translateY(-100%);}
+	50%{opacity:1;-webkit-transform:translateY(8%);transform:translateY(8%);}
+	65%{-webkit-transform:translateY(-4%);transform:translateY(-4%);}
+	80%{-webkit-transform:translateY(4%);transform:translateY(4%);}
+	95%{-webkit-transform:translateY(-2%);transform:translateY(-2%);}			
+	100% {-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+@keyframes tutorialguide04-emoji {
+    0% {-webkit-transform:scale(1);transform:scale(1);}
+	50%{-webkit-transform:scale(1.2);transform:scale(1.2);}
+	100% {-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes tutorialguide04-eight {
+    0%, 70% {opacity:1;}
+    80%, 100% {opacity:0;}
+}
+@keyframes tutorialguide04-nine {
+    0%, 70% {opacity:0;}
+    90% {opacity:1;-webkit-transform:scale(1.3);transform:scale(1.3);}
+    100% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes tutorialguide05-bg {
+    0%, 30% {background-position:0 0;}
+    40%, 63% {background-position:calc(50% + 1.5rem) 0;}
+	73%, 100% {background-position:calc(100% + 1.5rem) 0;}
+}
+@keyframes tutorialguide05-txt1 {
+    0% {-webkit-transform:scaleY(0);transform:scaleY(0);}
+	100% {-webkit-transform:scaleY(1);transform:scaleY(1);}	
+}
+@keyframes tutorialguide05-badge {
+    0% {opacity:0;-webkit-transform:scale(1);transform:scale(1);}
+    10% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+    60% {-webkit-transform:scale(1.4);transform:scale(1.4);}
+    100% {-webkit-transform:scale(1);transform:scale(1);}
+}
+@keyframes tutorialguide06-cart {
+    0% {-webkit-transform:translate(100vw, -50%);transform:translate(100vw, -50%);}
+    50% {-webkit-transform:translate(-0.5rem, 0);transform:translate(-0.5rem, 0);}
+    100% {-webkit-transform:translate(0, 0);transform:translate(0, 0);}
+}
+@keyframes tutorialguide06-cartbg {
+    0%, 75% {opacity:0;background:#fff;}
+    100% {opacity:0.6;background:#eef8e2;}
+}
+@keyframes tutorialguide06-pocket {
+    0%, 60% {opacity:0;-webkit-transform:translate(0,-6rem) scale(1,1);transform:translate(0,-6rem) scale(1,1);}
+    68% {opacity:1;-webkit-transform:translate(0,0.2rem) scale(1.3,0.85);transform:translate(0,0.2rem) scale(1.3,0.85);}
+    78%, 100% {-webkit-transform:translate(0,-0.5rem) scale(1.2,1);transform:translate(0,-0.5rem) scale(1.2,1);}
+}
+@keyframes tutorialguide06-drop1 {
+    0%, 55% {opacity:0;-webkit-transform:translate(0,-5rem);transform:translate(0,-5rem);}
+    56% {opacity:1;}
+    65% {-webkit-transform:translate(0,5rem);transform:translate(0,5rem);}
+    68% {-webkit-transform:translate(0,5rem) rotate(5deg);transform:translate(0,5rem) rotate(5deg);}
+    71% {-webkit-transform:translate(0,5rem) rotate(-5deg);transform:translate(0,5rem) rotate(-5deg);}
+    74% {-webkit-transform:translate(0,5rem) rotate(5deg);transform:translate(0,5rem) rotate(5deg);}
+    77% {-webkit-transform:translate(0,5rem) rotate(-5deg);transform:translate(0,5rem) rotate(-5deg);}
+    80% {-webkit-transform:translate(0,5rem) rotate(4deg);transform:translate(0,5rem) rotate(4deg);}
+    83% {-webkit-transform:translate(0,5rem) rotate(-4deg);transform:translate(0,5rem) rotate(-4deg);}
+    86% {-webkit-transform:translate(0,5rem) rotate(4deg);transform:translate(0,5rem) rotate(4deg);}
+    89% {-webkit-transform:translate(0,5rem) rotate(-4deg);transform:translate(0,5rem) rotate(-4deg);}
+    92% {-webkit-transform:translate(0,5rem) rotate(3deg);transform:translate(0,5rem) rotate(3deg);}
+    95% {-webkit-transform:translate(0,5rem) rotate(-2deg);transform:translate(0,5rem) rotate(-2deg);}
+    98% {-webkit-transform:translate(0,5rem) rotate(-1deg);transform:translate(0,5rem) rotate(-1deg);}
+    100% {-webkit-transform:translate(0,5rem) rotate(0);transform:translate(0,5rem) rotate(0);}
+}
+@keyframes tutorialguide06-drop2 {
+    0%, 50% {opacity:0;-webkit-transform:translate(0,-5rem);transform:translate(0,-5rem);}
+    58% {opacity:1;}
+    66%, 100% {-webkit-transform:translate(0,3.5rem);transform:translate(0,3.5rem);}
+}
+@keyframes tutorialguide06-drop3 {
+    0%, 70% {opacity:0;-webkit-transform:translate(0,-3rem);transform:translate(0,-3rem);}
+    74% {opacity:1;}
+    80%, 100% {-webkit-transform:translate(0,0);transform:translate(0,0);}
+}
+@keyframes tutorialguide06-tire {
+    0%, 50% {-webkit-transform:rotate(0);transform:rotate(0);}
+    55% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
+    60% {-webkit-transform:rotate(-10deg);transform:rotate(-10deg);}
+    65% {-webkit-transform:rotate(8deg);transform:rotate(8deg);}
+    70% {-webkit-transform:rotate(-8deg);transform:rotate(-8deg);}
+    75% {-webkit-transform:rotate(6deg);transform:rotate(6deg);}
+    80% {-webkit-transform:rotate(-6deg);transform:rotate(-6deg);}
+    85% {-webkit-transform:rotate(3deg);transform:rotate(3deg);}
+    90% {-webkit-transform:rotate(-3deg);transform:rotate(-3deg);}
+    95% {-webkit-transform:rotate(1deg);transform:rotate(2deg);}
+    100% {-webkit-transform:rotate(0);transform:rotate(0);}
+}
+
+@media (min-width:524px){
+    .tutorial-body .img-base {max-width:360px;}
+    .tutorial-body .img-absol {max-width:360px;}
+    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;right:45%;}
+    .tutorial-slider__item--guide05 .img-base,
+    .tutorial-slider__item--guide05 .img-absol,
+    .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(360px - 3rem);}
+}
+@media (max-height:639px) {
+    .tutorial-header {height:6rem;}
+    .tutorial-text {font-size:1.25rem;}
+    .tutorial-body .img-base {max-width:300px;}
+    .tutorial-body .img-absol {max-width:300px;}
+    .tutorial-slider__item--guide05 .img-base,
+    .tutorial-slider__item--guide05 .img-absol,
+    .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(300px - 3rem);}
+}
+
 /* odometer css */
 .odometer.odometer-auto-theme, 
 .odometer.odometer-theme-minimal {position:relative;display:inline-block;vertical-align:middle;} 
