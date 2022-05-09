@@ -46,12 +46,9 @@
 
         <div class="tit-default">신청환율</div>
         <div class="container fx-applyrate">
-            <div class="input-wrap input-wrap--wide2">
+            <!-- 2022-05-10 에러문구 추가(SB_v1.0.05) -->
+            <div class="input-wrap input-wrap--wide2 input-wrap--error">
                 <div class="input">
-                    <!--
-                        * 오류시 class="input input--error"
-                        * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
-                    -->
                     <div class="input__inner">
                         <input class="input__element input__element--right input__no-label" id="inputText06" type="text" title="신청환율 입력" placeholder="신청환율 입력">
                     </div>
@@ -64,6 +61,8 @@
                 </div>
                 <div class="input-revenue mgr0">이하</div>
             </div>
+            <p class="input__error active" aria-live="assertive">1,150.48 ~ 1,248.52 이내 입력</p>
+            <!-- //2022-05-10 에러문구 추가(SB_v1.0.05) -->
         </div>
 
         <div class="tit-default">신청금액</div>
