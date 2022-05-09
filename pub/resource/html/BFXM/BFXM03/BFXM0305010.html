@@ -25,11 +25,65 @@
     <!-- //header -->
 
     <div id="content" class="app-main fxmarket">
-        <div class="container">
+        <div class="fx-service__keyvisual fx-service__keyvisual--crosscurrency">
+            <div class="fx-keyvisual-txtbox">
+                <strong class="fx-keyvisual__label">외화바꾸기</strong>
+                <p class="fx-keyvisual__keytxt">FX마켓에서는 외화끼리 바꿀 수 있어요!</p>
+            </div>
+            <div class="fx-keyvisual-img fx-crosscurrency-img" aria-hidden="true">
+                
+            </div>
+        </div>
+
+        <div class="fx-crosscurrency">
+            <div class="container flex">
+                <div class="button-select button-select--inline">
+                    <button type="button" class="button button-select__item pdl0" title="통화선택">
+                        <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt=""></i>
+                        <span>USD</span>
+                    </button>
+                </div>
+                <span>를 팔아서</span>
+            </div>
+            <div class="container">
+                <div class="input-wrap input-wrap--wide2">
+                    <div class="input input--flex">
+                        <!--
+                            * 오류시 class="input input--error"
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <!--
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__icon">
+                            <label for="inputCC01" class="color-7575">USD</label>
+                        </div>
+                        <div class="additional-item">
+                            <div class="input__inner">
+                                <input type="text" id="inputCC01" class="input__element input__no-label input__element--right" title="금액입력" placeholder="금액입력">
+                                <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="input__optional pdt60">·</i>
+                    <div class="input">
+                        <!--
+                            * 오류시 class="input input--error"
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__inner">
+                            <input type="text" class="input__element input__no-label input--on" title="금액 소수점 입력" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="input__guide-text input__guide-text--left">
+                    <p>거래가능잔액 USD 10,000,000</p>
+                    <p>Lv5 등급 환율(Spread) 80% 우대</p>
+                </div>
+            </div>
             
         </div>
     </div>
-
 </div>
 
 <!-- 공통 script -->
