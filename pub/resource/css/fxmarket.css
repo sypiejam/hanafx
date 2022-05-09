@@ -185,7 +185,7 @@
 .fx-crosscurrlist .icon-na {margin-top:0;}
 .fx-crosscurrlist__item {display:flex;}
 .fx-crosscurrlist__item--arrow {position:relative;margin-top:0.5rem;}
-.fx-crosscurrlist__item--arrow::before {content:'';position:absolute;top:-1.625rem;left:0.375rem;display:block;width:0.625rem;height:0.875rem;background:url(../../resource/images/fxmarket/arrow_down_green_30x42.png) no-repeat 0 0 / 100%;}
+.fx-crosscurrlist__item--arrow::before {content:'';position:absolute;top:-1.688rem;left:0.375rem;display:block;width:0.625rem;height:0.875rem;background:url(../../resource/images/fxmarket/arrow_down_green_30x42.png) no-repeat 0 0 / 100%;}
 
 /* 외화바꾸기(이종통화) */
 .fx-service__keyvisual--crosscurrency {background:#f8f0e8;}
