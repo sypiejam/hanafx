@@ -43,7 +43,7 @@
                         <span>USD</span>
                     </button>
                 </div>
-                <span>를 팔아서</span>
+                <span class="font-large fw-500">를 팔아서</span>
             </div>
             <div class="container">
                 <div class="input-wrap input-wrap--wide2">
@@ -81,9 +81,101 @@
                     <p>Lv5 등급 환율(Spread) 80% 우대</p>
                 </div>
             </div>
+        
+            <div class="container flex mgt90">
+                <div class="button-select button-select--inline">
+                    <button type="button" class="button button-select__item pdl0" title="통화선택">
+                        <i class="icon-na"><img src="../../../images/symbols/na_EU.png" alt=""></i>
+                        <span>EUR</span>
+                    </button>
+                </div>
+                <span class="font-large fw-500">로 <em class="color-green">바꿀래요.</em></span>
+            </div>
+            <div class="container">
+                <div class="input-wrap input-wrap--wide2">
+                    <div class="input input--flex">
+                        <!--
+                            * 오류시 class="input input--error"
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <!--
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__icon">
+                            <label for="inputCC02" class="color-7575">EUR</label>
+                        </div>
+                        <div class="additional-item">
+                            <div class="input__inner">
+                                <input type="text" id="inputCC02" class="input__element input__no-label input__element--right" title="금액입력" placeholder="금액입력">
+                                <button type="button" class="input__remove-button" aria-label="텍스트삭제"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="input__optional pdt60">·</i>
+                    <div class="input">
+                        <!--
+                            * 오류시 class="input input--error"
+                            * 데이터가 초기에 자동으로 입력되어 있을때 class="input input--on"
+                        -->
+                        <div class="input__inner">
+                            <input type="text" class="input__element input__no-label input--on" title="금액 소수점 입력" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="input__guide-text input__guide-text--left">
+                    <p>Lv5 등급 환율(Spread) 80% 우대</p>
+                </div>
+            </div>
             
+            <div class="container mgt90">
+                <div class="white-box white-box--main-title">
+                    <div class="fx-crosscurrency-box">
+                        <div class="fx-refresh">
+                            <div class="fx-refresh__txt">
+                                <em class="fx-refresh__txt--sec">30</em>초 후 갱신
+                                <button type="button" class="button-refresh" aria-label="환율정보 새로고침"></button>
+                            </div> 
+                        </div>
+                        <div class="exchange-box">
+                            <div class="exchange-box__item">
+                                <span class="exchange-box__description eng">USD 1</span>
+                            </div>
+                            <i class="exchange-box__inequality" title="USD에서 EUR로"></i>
+                            <div class="exchange-box__item">
+                                <span class="exchange-box__description color-green">약 <em class="eng fw-500">EUR 0.92</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="spacer">
+            <div class="container">
+                환율정보를 확읺세요!
+            </div>
+            
+            <div class="container">
+                <div class="guide-wrap" data-element="toggle">
+                    <div class="guide-title">
+                        <button class="pualugin__button button-arrow" data-element="toggle__anchor">알아두세요</button>
+                    </div>
+                    <div class="guide-panel" data-element="toggle__panel">
+                        <ul class="guide-list">
+                            <li class="guide-list__item">알아두세ㅛ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- //content -->
+    <!-- footer -->
+    <div id="footer" class="app-footer app-footer--button">
+        <div class="button-wrap">
+            <button type="button" class="button button--positive">바꾸기</button>
+            <!--to.개발 | 비활성화 button button--disabled 활성화 button button--positive-->
+        </div>
+    </div>
+    <!-- //footer -->
 </div>
 
 <!-- 공통 script -->
@@ -92,5 +184,29 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+<script>
+    // 환율정보 갱신
+    $(function(){
+        var fxtimer;
+        function refreshTimer() {
+            var timeSec = 30;
+            var timeFunc = function(){
+                $('.fx-refresh__txt--sec').text(timeSec);
+                if (timeSec === 0) {
+                    clearInterval(fxtimer);
+                } else {
+                    timeSec--;
+                }
+            }
+            fxtimer = setInterval(timeFunc, 1000);
+        }
+        refreshTimer();
+
+        $('.fx-refresh .button-refresh').on('click', function () {
+            clearInterval(fxtimer);
+            refreshTimer();
+        })
+    })
+</script>
 </body>
 </html>

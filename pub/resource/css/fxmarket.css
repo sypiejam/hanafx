@@ -189,7 +189,10 @@
 
 /* 외화바꾸기(이종통화) */
 .fx-service__keyvisual--crosscurrency {background:#f8f0e8;}
-.fx-crosscurrency {}
+.fx-crosscurrency {margin-top:2.375rem;}
+.fx-crosscurrency-box {padding:1.188rem 0.875rem 0.875rem;border-radius:0.75rem;background:#f6f6f6;}
+.fx-crosscurrency-box .exchange-box__description {font-size:1.375rem;}
+.fx-crosscurrency-box .exchange-box__inequality {width:0.437rem;height:0.75rem;margin:0 1.25rem;}
 
 /* 마이페이지 */
 .modal__contents .fx-nickname {margin:0.687rem 0 0;}
