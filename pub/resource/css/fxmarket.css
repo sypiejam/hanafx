@@ -358,9 +358,9 @@
 .fx-trader__nickname {margin-left:0.438rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
 .challenge__badge {display:flex;margin-left:0.313rem;}
 .challenge-badge__item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem;}
-.challenge-badge__item.challenge-0103 {background:url(../../resource/images/fxmarket/dummy_icon_challenge_01.png) no-repeat 0 0 / 100%;}
-.challenge-badge__item.challenge-0203 {background:url(../../resource/images/fxmarket/dummy_icon_challenge_02.png) no-repeat 0 0 / 100%;}
-.challenge-badge__item.challenge-0303 {background:url(../../resource/images/fxmarket/dummy_icon_challenge_03.png) no-repeat 0 0 / 100%;}
+.challenge-badge__item.challenge-0103 {background:url(../../resource/images/fxmarket/icon_challenge_01.png) no-repeat 0 0 / 100%;}
+.challenge-badge__item.challenge-0203 {background:url(../../resource/images/fxmarket/icon_challenge_02.png) no-repeat 0 0 / 100%;}
+.challenge-badge__item.challenge-0303 {background:url(../../resource/images/fxmarket/icon_challenge_03.png) no-repeat 0 0 / 100%;}
 .fx-trader__sum {display:block;margin:0.188rem 0 0 1.875rem;font-size:1.125rem;font-weight:300;color:#000;line-height:1;}
 .fx-mytrader__wrap {z-index:10;position:relative;top:-1px;background:#373a4d;}
 .fx-mytrader__wrap .fx-sticker {top:-55%;right:1.5rem;}
