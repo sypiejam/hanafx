@@ -193,6 +193,8 @@
 .fx-service__keyvisual--crosscurrency .icon-moon {display:inline-block;width:0.5rem;height:0.625rem;margin-right:0.3rem;background:url(../../resource/images/fxmarket/icon_moon_yellow2.png) no-repeat 0 0 / 100%;}
 .fx-keyvisual__keytxt .color-purple {color:#a35aef;}
 .fx-crosscurrency {margin-top:2.375rem;}
+.fx-crosscurrency .input__icon,
+.fx-crosscurrency .input__element {font-size:1.125rem !important;}
 .fx-crosscurrency-box {padding:1.188rem 0.875rem 0.875rem;border-radius:0.75rem;background:#f6f6f6;}
 .fx-crosscurrency-box .exchange-box__description {font-size:1.375rem;}
 .fx-crosscurrency-box .exchange-box__inequality {width:0.437rem;height:0.75rem;margin:0 1.25rem;}
@@ -1141,7 +1143,7 @@
 .fx-rate__item .exr--dw {color:#4fc7ff;}
 .fx-rate__item .exr--up::before {border:0 6px 11px;}
 .fx-rate__item .exr--dw::before {border:11px 6px 0;}
-.fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
+.fx-submain-state .fx-rate__graph {min-height:19rem;margin-top:0.25rem;}
 .fx-submain-news .tit-default {min-height:1.313rem;}
 .fx-newsslider {overflow:hidden;margin-top:1rem;}
 .fx-newsslider .slick-list {padding-left:1.5rem;margin-right:-1.5rem;}
