@@ -204,8 +204,8 @@
     animation-name: anicircle;
     -webkit-animation-duration: 4s;
     animation-duration: 4s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    animation-timing-function:cubic-bezier(0.65, 0.05, 0.36, 1);
     -webkit-animation-iteration-count:infinite;
     animation-iteration-count:infinite;
 }
