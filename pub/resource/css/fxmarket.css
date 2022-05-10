@@ -355,6 +355,7 @@
 .fx-trader__list--2nd .fx-trader__rank::before {background:#6e6ec4;}
 .fx-trader__list--3rd .fx-trader__rank::before {background:#67cfe3;}
 .fx-trader__info {flex:1;padding:1rem 1rem 0.813rem 1rem;}
+.fx-trader__info .challenge__badge {margin-top:-2px;}
 .fx-trader__nickname {margin-left:0.438rem;font-size:0.875rem;font-weight:300;line-height:1.5;}
 .challenge__badge {display:flex;margin-left:0.313rem;}
 .challenge-badge__item {display:inline-block;width:0.875rem;height:0.875rem;margin:0 0.188rem;}
@@ -1006,7 +1007,7 @@
 .fx-mylog__nickname {margin-left:0.125rem;font-size:0.875rem;line-height:1;}
 .fx-mylog__link {position:absolute;top:0;right:0;bottom:0;left:0;}
 .fx-mylog .fx-level-icon {width:1.438rem;height:0.938rem;margin-right:0.25rem;}
-.fx-mylog .challenge__badge {margin-left:0.25rem;}
+.fx-mylog .challenge__badge {margin-left:0.25rem;margin-top:-1px;}
 .fx-mylog .challenge-badge__item {margin:0 0.125rem;}
 .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
 .fx-mainset__tit {font-size:0.75rem;line-height:1;}
