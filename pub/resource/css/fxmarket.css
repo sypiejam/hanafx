@@ -1173,8 +1173,8 @@
     -webkit-animation-fill-mode:both;
 }
 .fx-forecast-img {margin-top:1rem;padding-bottom:1.75rem;}
-.fx-forecast-month {width:50%;color:#fff;}
-.fx-forecast-day {width:50%;color:#1489db;}
+.fx-forecast-month {width:50%;padding-top:0.25rem;color:#fff;}
+.fx-forecast-day {width:50%;padding-top:0.25rem;color:#1489db;}
 .ani-dart-board {display:block;width:5.75rem;height:6.25rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_forecast_dartboard.png) no-repeat 0 0 / 100%;}
 .ani-dart-board:before {content:'';z-index:-1;position:absolute;width:9.563rem;height:2.813rem;left:50%;bottom:0;background:url(../../resource/images/fxmarket/img_forecast_shadow.png) no-repeat 0 0 / 100%;-webkit-transform:translateX(-53%) scaleX(1);transform:translateX(-53%) scaleX(1);}
 .is-active .ani-dart-board:before {
