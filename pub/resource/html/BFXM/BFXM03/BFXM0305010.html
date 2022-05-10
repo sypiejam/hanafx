@@ -12,103 +12,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-    .fx-service__keyvisual--crosscurrency {overflow:hidden;min-height:initial;}
-    .fx-service__keyvisual--crosscurrency .button-alert {position:relative;top:-1rem;right:1.5rem;display:block;width:auto;height:2.25rem;margin:0 0 0 auto;padding:0;font-size:0.813rem;}
-    .fx-service__keyvisual--crosscurrency .icon-moon {display:inline-block;width:0.5rem;height:0.625rem;margin-right:0.3rem;background:url(../../../../resource/images/fxmarket/icon_moon_yellow2.png) no-repeat 0 0 / 100%;}
-    .fx-keyvisual__keytxt .color-purple {color:#a35aef;}
-    .ani-wallet-box {display:block;margin-left:1rem;}
-    .ani-wallet {display:block;width:7rem;height:5.875rem;margin:4rem auto 0;background:url(../../../../resource/images/fxmarket/img_crosscurrency_wallet.png) no-repeat 0 0 / 100%;}
-    .ani-circle {position:absolute;top:-2rem;left:50%;width:6.375rem;height:6.375rem;margin-left:-5rem;background:url(../../../../resource/images/fxmarket/img_crosscurrency_circle.png) no-repeat 0 0 / 100%;
-        -webkit-animation-name: anicircle;
-        animation-name: anicircle;
-        -webkit-animation-duration: 4s;
-        animation-duration: 4s;
-        -webkit-animation-timing-function: ease-in-out;
-        animation-timing-function: ease-in-out;
-        -webkit-animation-iteration-count:infinite;
-        animation-iteration-count:infinite;
-    }
-    .ani-usd {position:absolute;top:0.5rem;right:0;width:1.625rem;height:1.688rem;background:url(../../../../resource/images/fxmarket/img_crosscurrency_usd.png) no-repeat 0 0 / 100%;
-        -webkit-animation-name: anicircle;
-        animation-name: anicircle;
-        -webkit-animation-duration: 4s;
-        animation-duration: 4s;
-        -webkit-animation-iteration-count:infinite;
-        animation-iteration-count:infinite;
-    }
-    .ani-eur {position:absolute;bottom:0.25rem;left:0;width:2.25rem;height:2.375rem;background:url(../../../../resource/images/fxmarket/img_crosscurrency_eur.png) no-repeat 0 0 / 100%;
-        -webkit-animation-name: anicircle;
-        animation-name: anicircle;
-        -webkit-animation-duration: 4s;
-        animation-duration: 4s;
-        -webkit-animation-iteration-count:infinite;
-        animation-iteration-count:infinite;
-    }
-    .ani-jpy {position:absolute;bottom:0;left:50%;width:2rem;height:2.063rem;transform:translateX(50vw);-webkit-transform:translateX(50vw);}
-    .is-active .ani-jpy {
-        -webkit-animation-name:anijpy;
-        animation-name:anijpy;
-        -webkit-animation-duration:2s;
-        animation-duration:2s;
-        -webkit-animation-timing-function:ease-in-out;
-        animation-timing-function:ease-in-out;
-        -webkit-animation-fill-mode:both;
-        animation-fill-mode:both;
-    }
-    .ani-jpy:before {content:'';display:block;width:100%;height:100%;background:url(../../../../resource/images/fxmarket/img_crosscurrency_jpy.png) no-repeat 0 0 / 100%; transform:rotate(360deg);-webkit-transform:rotate(360deg);}
-    .is-active .ani-jpy:before {
-        -webkit-animation-name:anijpy2;
-        animation-name:anijpy2;
-        -webkit-animation-duration:2s;
-        animation-duration:2s;
-        -webkit-animation-timing-function:ease-in-out;
-        animation-timing-function:ease-in-out;
-        -webkit-animation-fill-mode:both;
-        animation-fill-mode:both;
-    }
-    .ani-jpy:after {content:'';position:relative;top:-2.063rem;display:block;width:2rem;height:2.063rem;border-radius:50%;}
-    .is-active .ani-jpy:after {
-        -webkit-animation-name:anijpyshadow;
-        animation-name:anijpyshadow;
-        -webkit-animation-duration:2s;
-        animation-duration:2s;
-        -webkit-animation-fill-mode:both;
-        animation-fill-mode:both;
-    }
-    @keyframes anicircle {
-        0% {-webkit-transform:rotate(0);transform:rotate(0);}
-        75%, 100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
-    }
-    @keyframes anijpyshadow {
-        0%, 25% {box-shadow:0 0 0 0 rgb(0 0 0 / 10%);}
-        100% {box-shadow:0px 2px 5px 2px rgb(0 0 0 / 15%);}
-    }
-    @keyframes anijpy {
-        0% {-webkit-transform:translateX(50vw);transform:translateX(50vw);}
-        35% {-webkit-transform:translateX(60%);transform:translateX(60%);}
-        50% {-webkit-transform:translateX(120%);transform:translateX(120%);}
-        60%  {-webkit-transform:translateX(90%);transform:translateX(90%);}
-        70% {-webkit-transform:translateX(110%);transform:translateX(110%);}
-        80%, to {-webkit-transform:translateX(100%);transform:translateX(100%);}
-    }
-    @keyframes anijpy2 {
-        0% {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
-        35% {-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        50% {-webkit-transform:rotate(40deg);transform:rotate(40deg);}
-        60% {-webkit-transform:rotate(-20deg);transform:rotate(-20deg);}
-        70% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
-        80% {-webkit-transform:rotate(-5deg);transform:rotate(-5deg);}
-        84% {-webkit-transform:rotate(5deg);transform:rotate(5deg);}
-        88% {-webkit-transform:rotate(-3deg);transform:rotate(-3deg);} 
-        92% {-webkit-transform:rotate(3deg);transform:rotate(3deg);} 
-        96% {-webkit-transform:rotate(-2deg);transform:rotate(-2deg);} 
-        to {-webkit-transform:rotate(0);transform:rotate(0);}
-    }
-    .fx-rateinfo-type2 .white-box__header {padding:0.5rem 0;border-bottom:1px solid #ddd;}
-    .fx-rateinfo-type2 .white-box__content {padding:1rem 0;border-bottom:1px solid #ddd;}
-    .fx-rateinfo-type2 .list-wrap__item ~ .list-wrap__item {margin-top:0.25rem;}
-</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -132,7 +35,7 @@
             </div>
             <div class="fx-keyvisual-img fx-crosscurrency-img" aria-hidden="true">
                 <span class="ani-wallet-box"><i class="ani-wallet"></i></span>
-                <span class="ani-circle">
+                <span class="ani-crosscurrency">
                     <i class="ani-usd"></i>
                     <i class="ani-eur"></i>
                 </span>
@@ -150,6 +53,7 @@
                 </div>
                 <span class="font-large fw-500">를 팔아서</span>
             </div>
+            
             <div class="container">
                 <div class="input-wrap input-wrap--wide2"> <!-- * 오류시 class="input-wrap input-wrap--error" -->
                     <div class="input input--flex">
@@ -186,6 +90,7 @@
                 </div>
                 <span class="font-large fw-500">로 <em class="color-green">바꿀래요.</em></span>
             </div>
+            
             <div class="container">
                 <div class="input-wrap input-wrap--wide2"> <!-- * 오류시 class="input-wrap input-wrap--error" -->
                     <div class="input input--flex">
