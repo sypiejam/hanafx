@@ -193,6 +193,101 @@
 .fx-crosscurrency-box {padding:1.188rem 0.875rem 0.875rem;border-radius:0.75rem;background:#f6f6f6;}
 .fx-crosscurrency-box .exchange-box__description {font-size:1.375rem;}
 .fx-crosscurrency-box .exchange-box__inequality {width:0.437rem;height:0.75rem;margin:0 1.25rem;}
+.fx-service__keyvisual--crosscurrency {overflow:hidden;min-height:initial;}
+.fx-service__keyvisual--crosscurrency .button-alert {position:relative;top:-1rem;right:1.5rem;display:block;width:auto;height:2.25rem;margin:0 0 0 auto;padding:0;font-size:0.813rem;}
+.fx-service__keyvisual--crosscurrency .icon-moon {display:inline-block;width:0.5rem;height:0.625rem;margin-right:0.3rem;background:url(../../resource/images/fxmarket/icon_moon_yellow2.png) no-repeat 0 0 / 100%;}
+.fx-keyvisual__keytxt .color-purple {color:#a35aef;}
+.ani-wallet-box {display:block;margin-left:1rem;}
+.ani-wallet {display:block;width:7rem;height:5.875rem;margin:4rem auto 0;background:url(../../resource/images/fxmarket/img_crosscurrency_wallet.png) no-repeat 0 0 / 100%;}
+.ani-crosscurrency {position:absolute;top:-2rem;left:50%;width:6.375rem;height:6.375rem;margin-left:-5rem;background:url(../../resource/images/fxmarket/img_crosscurrency_circle.png) no-repeat 0 0 / 100%;
+    -webkit-animation-name: anicircle;
+    animation-name: anicircle;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+}
+.ani-usd {position:absolute;top:0.5rem;right:0;width:1.625rem;height:1.688rem;background:url(../../resource/images/fxmarket/img_crosscurrency_usd.png) no-repeat 0 0 / 100%;
+    -webkit-animation-name: anicircle;
+    animation-name: anicircle;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+}
+.ani-eur {position:absolute;bottom:0.25rem;left:0;width:2.25rem;height:2.375rem;background:url(../../resource/images/fxmarket/img_crosscurrency_eur.png) no-repeat 0 0 / 100%;
+    -webkit-animation-name: anicircle;
+    animation-name: anicircle;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+}
+.ani-jpy {position:absolute;bottom:0;left:50%;width:2rem;height:2.063rem;-webkit-transform:translateX(50vw);transform:translateX(50vw);}
+.is-active .ani-jpy {
+    -webkit-animation-name:anijpy;
+    animation-name:anijpy;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.ani-jpy:before {content:'';display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_crosscurrency_jpy.png) no-repeat 0 0 / 100%;-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+.is-active .ani-jpy:before {
+    -webkit-animation-name:anijpy2;
+    animation-name:anijpy2;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+.ani-jpy:after {content:'';position:relative;top:-2.063rem;display:block;width:2rem;height:2.063rem;border-radius:50%;}
+.is-active .ani-jpy:after {
+    -webkit-animation-name:anijpyshadow;
+    animation-name:anijpyshadow;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes anicircle {
+    0% {-webkit-transform:rotate(0);transform:rotate(0);}
+    75%, 100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+}
+@keyframes anijpyshadow {
+    0%, 25% {box-shadow:0 0 0 0 rgb(0 0 0 / 10%);}
+    100% {box-shadow:0px 2px 5px 2px rgb(0 0 0 / 15%);}
+}
+@keyframes anijpy {
+    0% {-webkit-transform:translateX(50vw);transform:translateX(50vw);}
+    35% {-webkit-transform:translateX(60%);transform:translateX(60%);}
+    50% {-webkit-transform:translateX(120%);transform:translateX(120%);}
+    60%  {-webkit-transform:translateX(90%);transform:translateX(90%);}
+    70% {-webkit-transform:translateX(110%);transform:translateX(110%);}
+    80%, to {-webkit-transform:translateX(100%);transform:translateX(100%);}
+}
+@keyframes anijpy2 {
+    0% {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+    35% {-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
+    50% {-webkit-transform:rotate(40deg);transform:rotate(40deg);}
+    60% {-webkit-transform:rotate(-20deg);transform:rotate(-20deg);}
+    70% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
+    80% {-webkit-transform:rotate(-5deg);transform:rotate(-5deg);}
+    84% {-webkit-transform:rotate(5deg);transform:rotate(5deg);}
+    88% {-webkit-transform:rotate(-3deg);transform:rotate(-3deg);} 
+    92% {-webkit-transform:rotate(3deg);transform:rotate(3deg);} 
+    96% {-webkit-transform:rotate(-2deg);transform:rotate(-2deg);} 
+    to {-webkit-transform:rotate(0);transform:rotate(0);}
+}
+.fx-rateinfo-type2 .white-box__header {padding:0.5rem 0;border-bottom:1px solid #e7e9ee;}
+.fx-rateinfo-type2 .white-box__content {padding:1rem 0;border-bottom:1px solid #e7e9ee;}
+.fx-rateinfo-type2 .list-wrap__item ~ .list-wrap__item {margin-top:0.25rem;}
 
 /* 마이페이지 */
 .modal__contents .fx-nickname {margin:0.687rem 0 0;}
