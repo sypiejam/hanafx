@@ -1965,7 +1965,7 @@
 @media (min-width:524px){
     .tutorial-body .img-base {max-width:360px;}
     .tutorial-body .img-absol {max-width:360px;}
-    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;left:50%;margin-left:2.5rem;}
+    .tutorial-slider__item--guide04 .tutorial-motion {bottom:26%;left:50%;margin-left:2rem;}
     .tutorial-slider__item--guide05 .img-base,
     .tutorial-slider__item--guide05 .img-absol,
     .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(360px - 3rem);}
