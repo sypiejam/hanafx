@@ -673,8 +673,8 @@
     100% {-webkit-transform:translate(0,0) rotate(45deg);transform:translate(0,0) rotate(45deg);}
 }
 @keyframes mainsmoke {
-    0% {-webkit-transform:translate(0, 0.313rem) scale(0.9);transform:translate(0, 0.313rem) scale(0.9);}
-    100% {-webkit-transform:translate(0, 0px) scale(1.2);transform:translate(0, 0px) scale(1.2);}
+    0% {-webkit-transform:scale(0.9);transform:scale(0.9);}
+    100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 @keyframes subsmoke {
     0% {-webkit-transform:translate(0, -0.625rem) scale(1);transform:translate(0, -0.625rem) scale(0.4);opacity:0.6;}
@@ -1650,24 +1650,9 @@
 .tutorial-header {display:flex;justify-content:center;align-items:center;width:100%;padding-top:1rem;text-align:center;}
 .tutorial-container {opacity:0;display:flex;flex-wrap:wrap;flex-direction:column;justify-content:center;height:calc(100vh - 7.25rem - constant(safe-area-inset-top) - constant(safe-area-inset-bottom));height:calc(100vh - 7.25rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));}
 .slick-active .tutorial-container {opacity:1;}
-.tutorial-body {position:relative;margin-top:5vh;}
+.tutorial-body {position:relative;margin-top:4vh;}
 .tutorial-text {font-size:1.5rem;font-weight:300;line-height:1.4;}
 .tutorial-text .color-green {font-weight:500;}
-.slick-active .tutorial-text {
-    -webkit-animation:tutorialtitle;
-    animation:tutorialtitle;
-    -webkit-animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    -webkit-animation-duration:1.2s;
-    animation-duration:1.2s;
-    -webkit-animation-fill-mode:both;
-    animation-fill-mode:both;
-}
-@keyframes tutorialtitle {
-    0% {letter-spacing:-0.5em;opacity:0;}
-    40% {opacity:0.6;}
-    100% {opacity:1;}
-}
 .tutorial-body .img-base {margin:0 auto;}
 .tutorial-body .img-absol {position:absolute;left:0;right:0;margin:auto;}
 .tutorial-slider__item--guide01 .fx-attend-visual {position:absolute;top:20%;left:0;right:0;margin:0 auto;-webkit-transform:scale(0.8);transform:scale(0.8);}
