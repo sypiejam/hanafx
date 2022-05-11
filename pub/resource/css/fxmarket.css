@@ -673,8 +673,8 @@
     100% {-webkit-transform:translate(0,0) rotate(45deg);transform:translate(0,0) rotate(45deg);}
 }
 @keyframes mainsmoke {
-    0% {-webkit-transform:translate(0, 0.1rem) scale(0.9);transform:translate(0, 0.1rem) scale(0.9);}
-    100% {-webkit-transform:translate(0, 0) scale(1);transform:translate(0, 0) scale(1);}
+    0% {-webkit-transform:scale(0.9);transform:scale(0.9);}
+    100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 @keyframes subsmoke {
     0% {-webkit-transform:translate(0, -0.625rem) scale(1);transform:translate(0, -0.625rem) scale(0.4);opacity:0.6;}
