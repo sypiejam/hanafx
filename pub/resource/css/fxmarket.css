@@ -348,7 +348,7 @@
 .fx-mybox {margin-top:2rem;}
 .fx-mybox__wrap {display:flex;justify-content:space-between;align-items:center;margin:0 -0.813rem;}
 .fx-mybox__item {position:relative;flex:1;text-align:center;}
-.fx-mybox__item::before {content:'';display:block;width:81px;height:57px;margin:0 auto;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
+.fx-mybox__item::before {content:'';display:block;width:2.063rem;height:2.063rem;margin:0 auto 0.5rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
 .fx-mybox__item--ico01::after {content:'';position:absolute;top:0;right:0;bottom:0;display:block;width:1px;background:#f0f0f0;}
 .fx-mybox__item--ico01::before {background-image:url(../../resource/images/fxmarket/icon_mypage_box01.png);}
 .fx-mybox__item--ico02::before {background-image:url(../../resource/images/fxmarket/icon_mypage_box02.png);}
