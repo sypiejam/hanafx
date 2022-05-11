@@ -282,7 +282,6 @@
     75% {-webkit-transform:rotate(-20deg);transform:rotate(-20deg);}
     85% {-webkit-transform:rotate(10deg);transform:rotate(10deg);}
     95% {-webkit-transform:rotate(-5deg);transform:rotate(-5deg);}
-    98% {-webkit-transform:rotate(5deg);transform:rotate(5deg);}
     to {-webkit-transform:rotate(0);transform:rotate(0);}
 }
 .fx-rateinfo-type2 .white-box__header {padding:0.5rem 0;border-bottom:1px solid #e7e9ee;}
