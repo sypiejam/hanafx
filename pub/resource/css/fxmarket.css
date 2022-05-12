@@ -1464,6 +1464,10 @@
     -webkit-animation:coinPiles 0.8s forwards ease-out;
     animation:coinPiles 0.8s forwards ease-out;
 }
+.ani-coinpiles__item--05.on {
+    -webkit-animation-iteration-count:2;
+    animation-iteration-count:2;
+}
 @keyframes coinPiles {
     0% {-webkit-transform:rotate(20deg) scale(1.2,1.2);transform:rotate(20deg) scale(1.2,1.2);}
     10%	{-webkit-transform:rotate(-20deg);transform:rotate(-20deg);}
@@ -1476,25 +1480,6 @@
     66%	{-webkit-transform:rotate(10deg);transform:rotate(10deg);}
     74%	{-webkit-transform:rotate(-5deg);transform:rotate(0deg);}
     100% {-webkit-transform:rotate(0deg) scale(1,1);transform:rotate(0deg) scale(1,1);}
-}
-.fx-serviceinfo-motion .ani-arrow-down {overflow:hidden;opacity:0;top:-2.188rem;left:50%;margin-left:-0.625rem;margin-top:-1.25rem;padding:1.25rem 0 1.875rem}
-.fx-serviceinfo-motion .ani-arrow-down::after {content:'';display:block;width:1.25rem;height:1.75rem;background:url(../../resource/images/fxmarket/img_serviceinfo_arrow_down.png) no-repeat 0 0 / 100%;}
-.is-active .ani-arrow-down {
-    -webkit-animation:arrDown1 1s 4.5s both ease-out;
-    animation:arrDown1 1s 4.5s both ease-out;
-}
-@keyframes arrDown1 {
-    from {opacity:0;}
-    to {opacity:1;}
-}
-.is-active .ani-arrow-down::after {
-    -webkit-animation:arrDown2 1.5s 5s infinite ease-out;
-    animation:arrDown2 1.5s 5s infinite ease-out;
-}
-@keyframes arrDown2 {
-    20% {-webkit-transform:translate3d(0, 0, 0) scaleY(0.985);transform:translate3d(0, 0, 0) scaleY(0.985);}
-    40%, 45% {opacity:1;-webkit-transform:translate3d(0, -20px, 0) scaleY(0.8);transform:translate3d(0, -20px, 0) scaleY(0.8);}
-    to {opacity:0;-webkit-transform:translate3d(0, 100px, 0) scaleY(2);transform:translate3d(0, 100px, 0) scaleY(2);}
 }
 .fx-serviceinfo-motion .ani-hand-grab {bottom:-0.25rem;left:50%;width:5.063rem;height:6.375rem;margin-left:-0.75rem;background-image:url(../../resource/images/fxmarket/img_serviceinfo_hand_grab.png);}
 .is-active .ani-hand-grab {

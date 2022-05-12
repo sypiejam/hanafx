@@ -39,11 +39,11 @@
             </div>
             <div class="container">
                 <div class="fx-serviceinfo-group fx-serviceinfo-group--02">
-                    <p class="fx-serviceinfo__text">하면 할 수록 <em class="bold">높아지는 레벨 <br>낮아지는 수수료</em></p>
+                    <p class="fx-serviceinfo__text">하면 할 수록 <em class="bold">높아지는 레벨</em>과 <br><em class="bold">우대서비스</em></p><!-- 2022-05-12 텍스트 수정(SB_v1.1) -->
                     <div class="fx-serviceinfo-motion fx-serviceinfo-motion--02" aria-hidden="true">
                         <span class="bg-circle bg-circle--02"></span>
                         <div class="ani-coinpiles">
-                            <span class="ani-arrow-down"></span>
+                            <!-- 2022-05-12 마크업 삭제 <span class="ani-arrow-down"></span> -->
                             <i class="ani-coinpiles__item ani-coinpiles__item--01"></i>
                             <i class="ani-coinpiles__item ani-coinpiles__item--02"></i>
                             <i class="ani-coinpiles__item ani-coinpiles__item--03"></i>
@@ -71,7 +71,7 @@
             </div>
             <div class="container">
                 <div class="fx-serviceinfo-group fx-serviceinfo-group--04">
-                    <p class="fx-serviceinfo__text"><em class="bold">환테크</em>하는 사람은 <br>여기 다 모였다. <br><em class="bold">FX커뮤니티</em></p>
+                    <p class="fx-serviceinfo__text"><em class="bold">환테크</em> 인증샷! <br><em class="bold">FX커뮤니티</em>에 자랑해요</p><!-- 2022-05-12 텍스트 수정(SB_v1.1) -->
                     <div class="fx-serviceinfo-motion fx-serviceinfo-motion--04" aria-hidden="true">
                         <span class="bg-circle bg-circle--04"></span>
                         <span class="ani-stardori"></span>
@@ -112,7 +112,7 @@
 <script src="../../../../resource/js/ui/common.js"></script>
 <script>
     $(function(){
-        var dvTime = 1500;
+        var dvTime = 1000;
         $('.fx-serviceinfo-group').each(function(i,el){
             setTimeout(function(){
                 $(el).addClass('is-active');
