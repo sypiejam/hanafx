@@ -1636,7 +1636,7 @@
 .tutorial-container {opacity:0;display:flex;flex-wrap:wrap;flex-direction:column;justify-content:center;height:calc(100vh - 7.25rem - constant(safe-area-inset-top) - constant(safe-area-inset-bottom));height:calc(100vh - 7.25rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));}
 .slick-active .tutorial-container {opacity:1;}
 .tutorial-body {position:relative;margin-top:4vh;}
-.tutorial-text {font-size:1.5rem;font-weight:300;line-height:1.4;}
+.tutorial-text {font-size:1.5rem;font-weight:300;line-height:1.4;word-break:keep-all;}
 .tutorial-text .color-green {font-weight:500;}
 .tutorial-body .img-base {margin:0 auto;}
 .tutorial-body .img-absol {position:absolute;left:0;right:0;margin:auto;}
@@ -1745,7 +1745,7 @@
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
-.slick-active .tutorial-slider__item--guide05 .img-absol-badge {top:14.5%;
+.slick-active .tutorial-slider__item--guide05 .img-absol-badge {top:14%;
     -webkit-transform-origin: center;
     transform-origin: center;
     -webkit-transform-origin:bottom;
