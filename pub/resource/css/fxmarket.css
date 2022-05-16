@@ -705,7 +705,7 @@
     animation-duration:3s;
     -webkit-animation-duration:3s;
 }
-.ani-speaker-box .ani-shadow {position:absolute;left:0;right:0;bottom:-2rem;display:block;width:14.375rem;height:4.25em;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat -1rem 0 / 100%;
+.ani-speaker-box .ani-shadow {position:absolute;left:-1.5rem;right:0;bottom:-1.5rem;display:block;width:14.375rem;height:4.25em;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat 0 0 / 100%;
     animation-name:speakershadow;
     -webkit-animation-name:speakershadow;
     animation-duration:3s;
