@@ -87,8 +87,9 @@
                                     <div class="input-wrap input-wrap--wide2 mgt90">
                                         <div class="input">
                                             <div class="input__inner">
-                                                <input type="text" class="input__element" title="예약환율 입력" placeholder="예약환율 입력">
-                                                <label class="input__label" aria-hidden="true">예약환율</label>
+                                                <input type="text" class="input__element input__no-label input__element--right" title="예약환율 입력" placeholder="예약환율 입력">
+                                                <!-- 2022-05-16 프리테스트 #288186 input__no-label input__element--right 클래스 변경 -->
+                                                <span class="input__label--fix" aria-hidden="true">예약환율</span> <!-- 2022-05-16 프리테스트 #288186 input__label--fix 클래스 변경 -->
                                                 <button type="button" class="input__remove-button" title="텍스트삭제"></button>
                                             </div>
                                         </div>
@@ -98,7 +99,7 @@
                                                 <input type="text" class="input__element input__no-label" title="금액 소수점 입력" value="">
                                             </div>
                                         </div>
-                                        <i class="input__unit">이하</i>
+                                        <i class="input__unit">이하</i> 
                                     </div>
                                     <p class="input-wrap__error align-right" aria-live="assertive">현재 환율의 +-5% 이내</p>
                                 </div>
