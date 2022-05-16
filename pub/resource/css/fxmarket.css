@@ -306,7 +306,7 @@
 .fx-myinfo {display:flex;align-items:center;}
 .fx-myinfo .challenge__badge {margin:0;}
 .fx-myinfo .challenge-badge__item {width:1.375rem;height:1.375rem;margin:0;margin-right:0.625rem;}
-.fx-myinfo .button-select {width:13.750em;margin-top:0;}
+.fx-myinfo .button-select {width:auto;margin-top:0;}
 .fx-myinfo .button-select__item {height:1.875rem;padding-left:0;border:none;font-size:1.25rem;letter-spacing:-0.5px;background-position:95% 50%;}
 .fx-myinfo .fx-level-icon {margin-right:0.563rem;}
 .fx-level-icon {display:block;width:2.25rem;height:1.25rem;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
@@ -1375,7 +1375,7 @@
 .fx-badge__item {position:relative;width:calc(100% / 3);padding-top:1.688rem;text-align:center;}
 .fx-badge__item .btn-share {position:absolute;top:1rem;right:0;bottom:0;left:0;display:none;width:100%;}
 .fx-badge__item .btn-share:before {content:none;}
-.fx-badge-input {position:absolute;width:1px;height:1px;}
+.fx-badge-input {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
 .fx-badge-label {display:block;}
 .fx-badge-img {display:block;width:6.188rem;height:8.063rem;margin:auto;background-repeat:no-repeat;background-position:0 0;background-size:20.438rem;background-image:url(../../resource/images/fxmarket/img_challenge_activity_off.png);}
 .fx-badge-input:checked + .fx-badge-label .fx-badge-img {background-image:url(../../resource/images/fxmarket/img_challenge_activity_on.png);}
