@@ -408,8 +408,8 @@
 
 /* 부가서비스 - 탑트레이더 랭킹 */
 .fx-service__keyvisual--trader {overflow:hidden;position:relative;padding-top:109%;background:#373a4d;}
-.keyvisual__trader--trophy {
-    position:absolute;top:16vw;right:0;left:0;
+.keyvisual__trader--trophy {position:absolute;top:16vw;right:0;left:0;}
+.is-active .keyvisual__trader--trophy {
     -webkit-animation-name:trophy;
     animation-name:trophy;
     -webkit-animation-duration:2s;
@@ -419,7 +419,8 @@
     -webkit-animation-iteration-count:1;
     animation-iteration-count:1;
 }
-.keyvisual__trader--particle {position:absolute;top:0;right:0;left:0;-webkit-transform:scale(1.1);transform:scale(1.1);
+.keyvisual__trader--particle {position:absolute;top:0;right:0;left:0;-webkit-transform:scale(1.1);transform:scale(1.1);}
+.is-active .keyvisual__trader--particle {
     -webkit-animation-name:particle;
     animation-name:particle;
     -webkit-animation-duration:2s;
