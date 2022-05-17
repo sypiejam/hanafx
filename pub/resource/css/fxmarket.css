@@ -1171,7 +1171,7 @@
 .fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:1rem auto 0;font-size:1.125rem;}
 .fx-calender-base {display:flex;align-items:center;height:100%;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;}
 .fx-forecast-calender .bold {font-size:1.5rem;}
-.fx-calender-over {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(-90deg);transform:perspective(800px) rotateX(-90deg);}
+.fx-calender-over {visibility:hidden;position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(-90deg) translate3d(0,0,0);transform:perspective(800px) rotateX(-90deg) translate3d(0,0,0);}
 .is-active .fx-calender-over {
     -webkit-animation-name:calendarflip;
     animation-name:calendarflip;
@@ -1316,8 +1316,8 @@
 .fx-boastslider .slick-disabled {opacity:0.3;}
 .fx-boast__contents .input--error .input__error {position:absolute;}
 @keyframes calendarflip {
-    0%, 40% {-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(-90deg);transform:perspective(800px) rotateX(-90deg);}
-    60% {-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(40deg);transform:perspective(800px) rotateX(40deg);}
+    0%, 40% {visibility:hidden;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(-90deg) translate3d(0,0,0);transform:perspective(800px) rotateX(-90deg) translate3d(0,0,0);;}
+    60% {visibility:visible;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(40deg);transform:perspective(800px) rotateX(40deg);}
     100% {-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(0deg);transform:perspective(800px) rotateX(0deg);} 
 }
 @keyframes dartmotion {
