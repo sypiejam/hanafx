@@ -1317,8 +1317,8 @@
 .fx-boast__contents .input--error .input__error {position:absolute;}
 @keyframes calendarflip {
     0%, 40% {visibility:hidden;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(-90deg) translate3d(0,0,0);transform:perspective(800px) rotateX(-90deg) translate3d(0,0,0);;}
-    60% {visibility:visible;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(40deg);transform:perspective(800px) rotateX(40deg);}
-    100% {-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(0deg);transform:perspective(800px) rotateX(0deg);} 
+    60% {visibility:visible;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(40deg) translate3d(0,0,0);transform:perspective(800px) rotateX(40deg) translate3d(0,0,0);}
+    100% {-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(0deg) translate3d(0,0,0);transform:perspective(800px) rotateX(0deg) translate3d(0,0,0);} 
 }
 @keyframes dartmotion {
     0%, 20% {opacity:0;-webkit-transform:translate(-100%, -3rem);transform:translate(-100%, -3rem);}
