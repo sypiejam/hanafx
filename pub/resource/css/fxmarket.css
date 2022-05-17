@@ -700,19 +700,22 @@
 /* 부가서비스 - 커뮤니티 */
 .fx-service__keyvisual--community {background:#f8f0e8;}
 .ani-speaker-box {z-index:10;position:relative;display:block;margin-left:-1rem;}
-.ani-speaker {display:block;width:8rem;height:7.5rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker.png) no-repeat 0 0 / 100%;
+.ani-speaker {display:block;width:8rem;height:7.5rem;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker.png) no-repeat 0 0 / 100%;}
+.is-active .ani-speaker {
     animation-name:anispeaker;
     -webkit-animation-name:anispeaker;
     animation-duration:3s;
     -webkit-animation-duration:3s;
 }
-.ani-speaker-box .ani-shadow {position:absolute;left:-1.5rem;right:0;bottom:-1.5rem;display:block;width:14.375rem;height:4.25em;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat 0 0 / 100%;
+.ani-speaker-box .ani-shadow {position:absolute;left:-1.5rem;right:0;bottom:-1.5rem;display:block;width:14.375rem;height:4.25em;margin:0 auto;background:url(../../resource/images/fxmarket/img_community_speaker_shadow.png) no-repeat 0 0 / 100%;}
+.is-active .ani-speaker-box .ani-shadow {
     animation-name:speakershadow;
     -webkit-animation-name:speakershadow;
     animation-duration:3s;
     -webkit-animation-duration:3s;
 }
-[class^=ani-emoji-box] {position:absolute;left:50%;
+[class^=ani-emoji-box] {position:absolute;left:50%;}
+.is-active [class^=ani-emoji-box] {
     animation-name:emojibox;
     -webkit-animation-name:emojibox;
     animation-duration:2s;	
@@ -727,8 +730,10 @@
     -webkit-animation-fill-mode:both;
 }
 .ani-emoji-box1 {z-index:20;top:0.75rem;width:2.75rem;height:2.688rem;margin-left:-5rem;}
-.ani-emoji-box2 {z-index:20;top:-1.25rem;width:1.5rem;height:1.5rem;margin-left:-3rem;animation-duration:2.5s;-webkit-animation-duration:2.5s;}
-[class^=ani-emoji-box] .ani-emoji {display:block;width:100%;height:100%;
+.ani-emoji-box2 {z-index:20;top:-1.25rem;width:1.5rem;height:1.5rem;margin-left:-3rem;}
+.is-active .ani-emoji-box2 {animation-duration:2.5s;-webkit-animation-duration:2.5s;}
+[class^=ani-emoji-box] .ani-emoji {display:block;width:100%;height:100%;}
+.is-active [class^=ani-emoji-box] .ani-emoji {
     -webkit-animation-name:emojimotion;
     animation-name:emojimotion;
     animation-duration:3s;	
@@ -736,7 +741,8 @@
 }
 .ani-emoji-box1 .ani-emoji {background:url(../../resource/images/fxmarket/img_community_heartgirl.png) no-repeat 0 0 / 100%;}
 .ani-emoji-box2 .ani-emoji {background:url(../../resource/images/fxmarket/img_community_smileboy.png) no-repeat 0 0 / 100%;}
-.ani-sound-box {top:-0.25rem;width:2.563rem;height:2.688rem;
+.ani-sound-box {top:0;width:2.563rem;height:2.688rem;}
+.is-active .ani-sound-box {
     animation-name:soundbox;
     -webkit-animation-name:soundbox;	
     animation-duration:2s;	
@@ -746,7 +752,8 @@
     animation-iteration-count:infinite;
     -webkit-animation-iteration-count:infinite;
 }
-.ani-sound {display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_community_sound.png) no-repeat 0 0 / 100%;
+.ani-sound {display:block;width:100%;height:100%;background:url(../../resource/images/fxmarket/img_community_sound.png) no-repeat 0 0 / 100%;}
+.is-active .ani-sound {
     animation-name:anisound;
     -webkit-animation-name:anisound;
     animation-duration:3s;
