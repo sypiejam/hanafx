@@ -1160,10 +1160,10 @@
 
 /* 환율예측 */
 .fx-service__keyvisual--forecast {background:#e0ebef;} 
-.fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:1rem auto 0;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;font-size:1.125rem;}
-.fx-calender-base {display:flex;align-items:center;height:100%;}
+.fx-forecast-calender {position:relative;width:9.313rem;height:3.25rem;margin:1rem auto 0;font-size:1.125rem;}
+.fx-calender-base {display:flex;align-items:center;height:100%;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;}
 .fx-forecast-calender .bold {font-size:1.5rem;}
-.fx-calender-over {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;}
+.fx-calender-over {position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;background:url(../../resource/images/fxmarket/img_forecast_calendar.png) no-repeat 0 0 / 100%;-webkit-transform-origin:50% 0%;transform-origin:50% 0%;-webkit-transform:perspective(800px) rotateX(-90deg);transform:perspective(800px) rotateX(-90deg);}
 .is-active .fx-calender-over {
     -webkit-animation-name:calendarflip;
     animation-name:calendarflip;
