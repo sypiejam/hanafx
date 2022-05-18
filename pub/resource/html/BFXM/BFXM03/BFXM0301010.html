@@ -55,10 +55,16 @@
                             <i class="icon-na"><img src="../../../images/symbols/na_US.png" alt="미국"></i>
                             <span>USD</span>
                         </button>
-                        <!-- to.개발 | 15:30분부터 익일 09시까지만 노출 / 제어클래스 blind -->
-                        <button type="button" class="button button-alert" data-element="modal__open" data-target="#aftermarket">
+                        <!-- to.개발 | 15:30 ~ 23:50 / 제어클래스 blind -->
+                        <!-- <button type="button" class="button button-alert" data-element="modal__open" data-target="#aftermarket">
                             <i class="icon-moon" aria-hidden="true"></i><span>After Market</span>
+                        </button> -->
+                        <!-- 2022-05-18 예약마켓 마크업 추가 (SB_v1.1.01) -->
+                        <!-- to.개발 | 23:51 ~ 08:59 / 제어클래스 blind -->
+                        <button type="button" class="button button-alert" data-element="modal__open" data-target="#reservemarket">
+                            <i class="icon-timer" aria-hidden="true"></i><span class="alert-txt">예약마켓</span>
                         </button>
+                        <!-- // 2022-05-18 예약마켓 마크업 추가 (SB_v1.1.01) -->
                     </div>
                     <div class="tab tab__type--small" data-element="tab">
                         <div class="tab-wrap">
@@ -379,11 +385,12 @@
                 </div>
             </div>
             <!-- // 2022-04-18 마크업 추가 (SB_v1.0.02) -->
-
+            
+            
             <div id="aftermarket" class="modal modal--alert" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="true">
                 <div class="modal__container" data-element="modal__element-container">
                     <div class="modal__header">
-                        <h1 class="modal__header--title" data-element="focus" tabindex="0">After Market 알림</h1>
+                        <h1 class="modal__header--title">After Market 알림</h1>
                     </div>
                     <div class="modal__contents">
                         <p class="modal__description align-center">
@@ -396,6 +403,25 @@
                     <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
                 </div>
             </div>
+
+            <!-- 2022-05-18 마크업 추가 (SB_v1.1.01) -->
+            <div id="reservemarket" class="modal modal--alert" data-element="modal__element" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal__container" data-element="modal__element-container">
+                    <div class="modal__header">
+                        <h1 class="modal__header--title">예약마켓 알림</h1>
+                    </div>
+                    <div class="modal__contents">
+                        <p class="modal__description align-center">
+                            <i class="icon__timer-blue"></i>공휴일 및 영업일 <em class="color-333 fw-500">23:50~08:59</em>까지는<br>예약마켓 시간입니다.<br>예약마켓에서는 미화 환산 50만불<br>이내의 예약거래 신청만 가능합니다.
+                        </p>
+                    </div>
+                    <div class="modal__button-wrap">
+                        <button type="button" class="button button--positive" data-element="modal__close">확인</button>
+                    </div>
+                    <button class="modal__btn--close" type="button" data-element="modal__close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- // 2022-05-18 마크업 추가 (SB_v1.1.01) -->
         </div>
         <!-- //content -->
         <!-- footer -->
