@@ -164,7 +164,7 @@
     } 
  
     function coinRender() {
-        for (let i=coins.length-1; i--; i >= 0) {
+        for (let i=coins.length; i--; i >= 0) {
             let coin = coins[i];
             coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
             coin.rotate += coin.vel.rotate;
@@ -175,7 +175,6 @@
                 coin.remove();
             }
         }
-        coinsWrap.lastChild.style.display = 'none';
         requestAnimationFrame(coinRender);
     } 
     
