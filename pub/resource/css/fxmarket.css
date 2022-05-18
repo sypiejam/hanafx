@@ -1305,9 +1305,9 @@
 .fx-quiz__opt--up, 
 .fx-quiz__opt--dw {position:absolute;width:1px;height:1px;}
 .fx-quiz__opt--up + .fx-quiz__label {background-position:0 0;}
-.fx-quiz__opt--dw + .fx-quiz__label {background-position:0 100%;}
-.fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;}
-.fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;}
+.fx-quiz__opt--dw + .fx-quiz__label {background-position:0 33.3%;}
+.fx-quiz__opt--up:checked + .fx-quiz__label {background-color:#fa3f66;background-position:0 66.6%;}
+.fx-quiz__opt--dw:checked + .fx-quiz__label {background-color:#3f78fa;background-position:0 100%;}
 .modal--confirm .fx-boast__contents {min-height:333px;max-height:52vh;}
 .fx-boastslider {position:relative;}
 .fx-boastslider .slick-arrow {z-index:10;position:absolute;top:4.0315rem;width:1.75rem;height:3.25rem;background:url(../../resource/images/C/arrow_right_default.png) no-repeat 100% 50% / 0.875rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);opacity:0.8;}
