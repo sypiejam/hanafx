@@ -268,8 +268,10 @@
                 <div class="guide-wrap">
                     <ul class="guide-list guide-list--large color-666">
                         <li class="guide-list__item">환율예측 응모시간은 00:00~24:00입니다.</li>
-                        <li class="guide-list__item">주말 및 공휴일 응모시 다음날 영업일을 기준으로 합니다.</li>
-                        <li class="guide-list__item">다음날 영업일 기준 장마감 시간(15:30)이후 첫 고시환율로 등락이 확정됩니다.</li>
+                        <!-- 2022-05-18 프리테스트 #289490 : 다음날 영업일 => 다음 영업일 -->
+                        <li class="guide-list__item">주말 및 공휴일 응모시 다음 영업일을 기준으로 합니다.</li>
+                        <li class="guide-list__item">다음 영업일 기준 장마감 시간(15:30)이후 첫 고시환율로 등락이 확정됩니다.</li>
+                        <!-- //2022-05-18 프리테스트 #289490 : 다음날 영업일 => 다음 영업일 -->
                         <li class="guide-list__item">포인트 적립 안내
                             <ul class="guide-sub-list guide-sub-list--gray">
                                 <li class="guide-sub-list__item">응모시 100ⓢ, 적중시 100ⓢ, 5일 연속 적중시 1,500ⓢ 추가적립</li> <!-- 2022-05-02 문구변경 -->
