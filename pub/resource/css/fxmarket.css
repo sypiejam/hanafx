@@ -27,7 +27,7 @@
 .fx-limit .input-wrap {margin:0;}
 .fx-limit .input {width:40%;margin-left:0;}
 .fx-limit .input__title {width:4.375rem;font-size:1.125rem;}
-.fx-limit .input__element {font-size:1.25rem !important;}
+.fx-limit .input__element {font-size:1.25rem !important;color:#000 !important;}
 .fx-limit .input__text {font-size:1.125rem;}
 
 /* 거래 */
