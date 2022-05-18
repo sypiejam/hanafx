@@ -325,7 +325,7 @@
 .fx-score__text--lv {margin-left:0.313rem;color:#009591;}
 .fx-score__progress[value] {appearance:none;overflow:hidden;width:100%;display:flex;align-items:center;margin-top:0.625rem;border:1px solid #d9d9d9;border-radius:1rem;}
 .fx-score__progress[value]::-webkit-progress-bar {background-color:#f7f7f7;}
-.fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);}
+.fx-score__progress[value]::-webkit-progress-value {border-radius:15px;background:linear-gradient(to top, #0d9692, 10%, #0faca8);box-shadow:0 2px 5px rgba(255,255,255,0.5) inset, 0 1px 5px rgba(0,0,0,0.3);transition:all 1s;}
 .fx-mybadge {margin-top:1rem;padding-bottom:1.563rem;border-bottom:1px solid #e7e9ee;}
 .fx-mybadge .no-data {padding:2.188rem 0 2rem;border-radius:0.625rem;border:1px solid #f0f0f0;background:#f4f4f4;}
 .fx-mybadge .no-data__result {font-size:0.875rem;}
