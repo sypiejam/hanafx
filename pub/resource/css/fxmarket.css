@@ -35,7 +35,7 @@
 .fx-rateboard {position:relative;padding:0.875rem 1.5rem 1.875rem;;}
 .fx-rateboard .button-alert {width:auto;height:3rem;margin:0;padding:0;font-size:0.813rem;color:#fff;}
 .fx-rateboard .button-alert .icon-moon {display:inline-block;width:0.5rem;height:0.563rem;margin-right:0.3rem;background:url(../../resource/images/fxmarket/icon_moon.png) no-repeat 0 0 / 100%;}
-.fx-rateboard .button-alert .icon-timer {display:inline-block;width:0.688rem;height:0.688rem;margin-right:0.3rem;background:url(../../resource/images/fxmarket/icon_timer.png) no-repeat 0 0 / 100%;vertical-align:middle;}
+.fx-rateboard .button-alert .icon-timer {display:inline-block;width:0.688rem;height:0.688rem;margin:0.1rem 0.3rem 0 0;background:url(../../resource/images/fxmarket/icon_timer.png) no-repeat 0 0 / 100%;vertical-align:top;}
 .fx-rateboard .button-alert .alert-txt {color:#555;}
 .fx-rateboard .button-select__flex {position:relative;display:flex;justify-content:space-between;}
 .fx-rateboard .button-select__item {width:auto;height:3rem;padding:0 2.5rem 0 0;font-size:1rem;font-weight:400;border:0;background-color:inherit;color:#000;line-height:1.4;}
