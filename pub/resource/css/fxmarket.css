@@ -67,7 +67,7 @@
 .fx-rateinfo .white-box__header {padding:0.75rem 0 0.5rem;}
 .fx-rateinfo .white-box__content {padding:0;border:0;}
 .fx-compare {display:flex;align-items:center;justify-content:space-between;}
-.fx-compare .fx-period {margin-right:0.25rem}
+.fx-compare .fx-period {margin-right:0.25rem;}
 .fx-compare .fx-compare__txt {display:flex;align-items:center;font-size:0.813rem;font-weight:500;color:#000;line-height:1;}
 .fx-compare__txt--high {font-size:1.25rem;color:#f4466a;}
 .fx-compare__txt--low {font-size:1.25rem;color:#2396e7;}
@@ -137,7 +137,7 @@
 .fx-complete .icon-wrap__icon-word {color:#666;font-size:1.25rem;}
 .fx-complete .icon-wrap__icon-word .bold {color:#000;}
 .fx-complete .icon-wrap__description {font-weight:400;}
-.fx-complete .icon-wrap__icon-word + .icon-wrap__description {margin-top:1.5rem}
+.fx-complete .icon-wrap__icon-word + .icon-wrap__description {margin-top:1.5rem;}
 .fx-complete .gray-box {margin-top:1rem;background:#f5f5f5;border:0;}
 .fx-complete .round-link {margin-top:1.563rem;}
 .fx-complete .round-link__anchor--icon {display:flex;justify-content:center;align-items:center;padding:1.25rem 0.875rem;}
@@ -317,6 +317,7 @@
 .fx-level-icon.level-5 {background-image:url(../../resource/images/fxmarket/icon_fxlevel_5.png);}
 /* .fx-myinfo .fx-level-icon {filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));} */
 .fx-score {margin-top:1.875rem;}
+.fx-score .tooltip {margin-left:0.25rem;}
 .fx-score__point {color:#009591;}
 .fx-score__point::after {top:0;}
 .fx-score__point span {margin:0 0.25rem 0 0;}
@@ -354,6 +355,8 @@
 .fx-mybox__item--ico02::before {background-image:url(../../resource/images/fxmarket/icon_mypage_box02.png);}
 .fx-mybox__title {display:block;font-size:1rem;letter-spacing:-0.5px;}
 .fx-mybox__count {display:inline-block;min-width:2rem;height:1rem;padding:0.063rem 0.625rem 0;line-height:1.2;border-radius:0.5rem;font-size:0.75rem;background:#009591;color:#fff;}
+.fx-guide {margin-top:1.438rem;margin-bottom:-0.313rem;}
+.fx-guide__item {text-align:center;font-weight:300;font-size:0.875rem;color:#333;}
 .list-section--fxm {margin:0 0 -1.875rem;}
 .list-wrap--line,
 .list-wrap--line .list-wrap__item {border:0;}
