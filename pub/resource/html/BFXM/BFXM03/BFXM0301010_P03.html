@@ -79,7 +79,7 @@
                             </li>
                             <li>
                                 <div class="check-full__item">
-                                    <input type="radio" name="type1" id="type2_6" class="check-full__input" data-input-name="radio-1" data-input-target="radio-section-1">
+                                    <input type="radio" name="type1" id="type2_6" class="check-full__input input-direct" data-input-name="radio-1" data-input-target="radio-section-1">
                                     <label for="type2_6" class="check-full__label">직접입력</label>
                                 </div>
                                 <div class="check-full__item" data-input-labeledby="radio-1" data-input-section="radio-section-1" style="display:none;">
@@ -125,6 +125,16 @@
     <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
     <script src="../../../../resource/js/ui/pualugin.js"></script>
     <script src="../../../../resource/js/ui/common.js"></script>
+    <script>
+        $(function(){
+            $('.input-direct').on('click', function(){
+                var contentsH = $('.modal__contents--fx').height();
+                setTimeout(function(){
+                    $('.modal__contents--fx').scrollTop(contentsH)
+                },300)
+            })
+        })
+    </script>
 </body>
 
 </html>
