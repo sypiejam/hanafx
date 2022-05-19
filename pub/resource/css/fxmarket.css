@@ -80,7 +80,7 @@
 .fx-progress .progress__bg {overflow:visible;position:relative;display:block;width:100%;height:0.625rem;margin-top:0;background:linear-gradient(90deg, #dbdbdb, #dbdbdb 1px, transparent 1px, transparent 50%);background-size:calc((100% - 1px) / 2) 100%;border-radius:initial;}
 .fx-progress .progress__bg:after {content:'';position:absolute;top:0;right:0;bottom:0;left:0;height:0.125rem;margin:auto;background:#dbdbdb;}
 .fx-progress .progress__bar {overflow:visible;position:relative;height:100%;margin:0;padding-left:0.6rem;background:none;border-radius:initial;text-align:right;}
-.fx-progress .progress__bar:after {content:'';z-index:10;position:absolute;right:0;width:0.375rem;height:0.5rem;background:url(../../resource/images/fxmarket/bg_process_low.png) no-repeat 0 0 / 100%;}
+.fx-progress .progress__bar:after {content:'';z-index:10;position:absolute;right:0;width:0.375rem;height:0.563rem;background:url(../../resource/images/fxmarket/bg_process_low.png) no-repeat 0 1px / 100%;}
 .fx-progress .progress__text-wrap {display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;margin-top:0.563rem;}
 .fx-progress .progress__tooltip--text {display:block;font-size:0.75rem;color:#138fe5;line-height:1.2;}
 .fx-progress .progress__tooltip--value {display:block;font-size:0.875rem;font-weight:500;color:#138fe5;line-height:1.3;}
