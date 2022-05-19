@@ -79,7 +79,7 @@
                             </li>
                             <li>
                                 <div class="check-full__item">
-                                    <input type="radio" name="type1" id="type2_6" class="check-full__input input-direct" data-input-name="radio-1" data-input-target="radio-section-1">
+                                    <input type="radio" name="type1" id="type2_6" class="check-full__input check-full__direct" data-input-name="radio-1" data-input-target="radio-section-1"> <!-- 2022-05-19 check-full__direct 클래스 추가 -->
                                     <label for="type2_6" class="check-full__label">직접입력</label>
                                 </div>
                                 <div class="check-full__item" data-input-labeledby="radio-1" data-input-section="radio-section-1" style="display:none;">
@@ -126,14 +126,18 @@
     <script src="../../../../resource/js/ui/pualugin.js"></script>
     <script src="../../../../resource/js/ui/common.js"></script>
     <script>
-        // 2022-05-19 스크립트 추가
+        // 2022-05-19 직접입력 선택시 하단영역으로 스크롤 이동시키는 스크립트 추가
         $(function(){
-            $('.input-direct').on('click', function(){
+            function inputDirect(){
                 setTimeout(function(){
                     var contentsH = $('.modal__contents--fx').height();
                     $('.modal__contents--fx').scrollTop(contentsH);
-                },100)
-            })
+                },100);
+            }
+
+            $('.check-full__direct').on('click', function(){
+                inputDirect();
+            });
         })
     </script>
 </body>
