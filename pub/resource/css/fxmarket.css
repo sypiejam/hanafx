@@ -1164,7 +1164,7 @@
 .fx-rate__item .exr--dw {color:#4fc7ff;}
 .fx-rate__item .exr--up::before {border:0 6px 11px;}
 .fx-rate__item .exr--dw::before {border:11px 6px 0;}
-.fx-submain-state .fx-rate__graph {min-height:19rem;margin-top:0.25rem;}
+.fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
 .fx-submain-news .tit-default {min-height:1.313rem;}
 .fx-newsslider {overflow:hidden;margin-top:1rem;}
 .fx-newsslider .slick-list {padding-left:1.5rem;margin-right:-1.5rem;}
