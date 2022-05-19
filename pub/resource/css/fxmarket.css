@@ -90,7 +90,7 @@
 .fx-progress .progress__item--center .progress__text {color:#000;text-align:center;}
 .fx-progress .progress__item--center .progress__rate {color:#757575;}
 .fx-progress .progress__item--right .progress__text {color:#f4466a;text-align:right;}
-.fx-progress .progress__tooltip {position:absolute;top:-3.5rem;display:inline-block;width:4.563rem;margin-left:-2.5rem;padding:.375rem 0;border:1px solid #83c9f0;border-radius:0.313rem;text-align:center;}
+.fx-progress .progress__tooltip {position:absolute;top:-3.5rem;display:inline-block;width:4.563rem;margin-left:-2.5rem;padding:.375rem 0;border:1px solid #83c9f0;border-radius:0.313rem;background:#fff;text-align:center;}
 .fx-progress .progress__tooltip:before {content:'';position:absolute;bottom:-0.5rem;left:50%;width:0.625rem;height:0.5rem;margin-left:-0.3125rem;background:url(../../resource/images/fxmarket/bg_balloon_tail.png) no-repeat 0 0 / 100%;}
 .progress__bar--average .progress__tooltip {margin-left:-2.3rem;border-color:#ccc;}
 .progress__bar--average .progress__tooltip--text {color:#666;}
