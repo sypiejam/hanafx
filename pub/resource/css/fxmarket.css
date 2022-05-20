@@ -472,7 +472,7 @@
 .fx-trader__sum {display:block;margin:0.188rem 0 0 1.875rem;font-size:1.125rem;font-weight:300;color:#000;line-height:1;}
 .fx-mytrader__wrap {z-index:10;position:relative;/*border-bottom:1px solid #f0f0f0;*/background:#373a4d;}
 .fx-mytrader__wrap .fx-sticker {top:-55%;right:1.5rem;}
-.fx-mytrader__wrap .fx-trader__list {align-items:center;margin:0;padding:0 1rem 0 1.5rem;border:0;border-radius:1.5rem 1.5rem 0 0;background:#fff;}
+.fx-mytrader__wrap .fx-trader__list {top:1px;align-items:center;margin:0;padding:0 1rem 0 1.5rem;border:0;border-radius:1.5rem 1.5rem 0 0;background:#fff;}
 .fx-mytrader__wrap .fx-trader__info {padding:2rem 0 1rem 1.5rem;}
 .fx-mytrader__wrap .fx-trader__list::before {content:none;}
 .fx-mytrader__wrap .fx-trader__rank {position:relative;max-width:4.813rem;width:auto;padding:0 0.75rem;border-radius:1.5rem;background:#c6c6c6;font-size:1.125rem;line-height:1.8;}
