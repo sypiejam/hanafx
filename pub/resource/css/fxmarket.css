@@ -1660,7 +1660,9 @@
 .tutorial-text .color-green {font-weight:500;}
 .tutorial-body .img-base {margin:0 auto;}
 .tutorial-body .img-absol {position:absolute;left:0;right:0;margin:auto;}
-.tutorial-slider__item--guide01 .fx-attend-visual {position:absolute;top:20%;left:0;right:0;margin:0 auto;-webkit-transform:scale(0.8);transform:scale(0.8);}
+.tutorial-slider__item--guide01 .fx-attend-visual {position:absolute;top:20%;left:0;right:0;margin:0 auto;}
+.tutorial-slider__item--guide01 .fx-attend-visual .ani-rocket-main {-webkit-transform:scale(0.8);transform:scale(0.8);}
+.tutorial-slider__item--guide01 .fx-attend-visual .ani-smoke {top:10rem;left:2rem;width:2.9rem;height:3.4rem;}
 .tutorial-slider__item--guide01 .fx-attend__desc {margin-top:0;}
 .tutorial-slider__item--guide02 .img-absol-txt1 {top:54%;}
 .slick-active .tutorial-slider__item--guide02 .img-absol-txt1 {
