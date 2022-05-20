@@ -425,6 +425,8 @@
     animation-name:trophy;
     -webkit-animation-duration:2s;
     animation-duration:2s;
+    -webkit-animation-delay:0.3s;
+    animation-delay:0.3s;
     -webkit-animation-timing-function:ease-in-out;
     animation-timing-function:ease-in-out;
     -webkit-animation-iteration-count:1;
@@ -436,6 +438,8 @@
     animation-name:particle;
     -webkit-animation-duration:2s;
     animation-duration:2s;
+    -webkit-animation-delay:0.3s;
+    animation-delay:0.3s;
     -webkit-animation-timing-function:ease-in-out;
     animation-timing-function:ease-in-out;
     -webkit-animation-iteration-count:1;
