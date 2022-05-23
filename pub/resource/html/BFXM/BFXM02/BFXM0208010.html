@@ -142,6 +142,11 @@
 <script src="../../../../resource/js/ui/common.js"></script>
 <script src="../../../../resource/js/ui/flip.min.js"></script><!-- Flip Clock JS -->
 <script>
+     /* 2022-05-23 스크립트 추가 */
+     $(function(){
+        $('.fx-specialtime__keyvisual--ongoing').addClass('is-active');
+    })
+
     // Flip Clock
 	function handleTickInit(tick) {
         var locale = {
