@@ -1311,11 +1311,12 @@
 .fx-calendar .fx-calendar__td {padding:0.625rem 0 0;border:0;font-size:0.75rem;color:#666;text-align:center;}
 .fx-calendar__label {display:flex;justify-content:center;align-items:center;width:2.938rem;height:2.938rem;margin:auto;border-radius:50%;background:url(../../resource/images/fxmarket/sp_calender_label.png) no-repeat 0 0 / 100%;}
 .fx-calendar__label--success {background-position:0 0;}
-.fx-calendar__label--getpoint {background-position:0 20%;}
-.fx-calendar__label--miss {background-position:0 40%;}
-.fx-calendar__label--fail {background-position:0 60%;}
-.fx-calendar__label--holiday {background-position:0 80%;}
-.fx-calendar__label--challenge {background-position:0 100%;}
+.fx-calendar__label--getpoint {background-position:0 12.5%;}
+.fx-calendar__label--miss {background-position:0 25%;}
+.fx-calendar__label--fail {background-position:0 37.5%;}
+.fx-calendar__label--holiday {background-position:0 50%;}
+.fx-calendar__label--challenge {background-position:0 62.5%;}
+.fx-calendar__label--participate {background-position:0 75%;}
 .fx-quiz__opts {display:flex;justify-content:space-around;align-items:center;margin-bottom:2.5rem;}
 .fx-quiz__label {display:block;width:8.313rem;height:8.313rem;background-color:#dfdfdf;background-image:url(../../resource/images/fxmarket/bg_quiz_sp.png);background-repeat:no-repeat;background-size:100%;border-radius:50%;}
 .fx-quiz__opt--up, 
