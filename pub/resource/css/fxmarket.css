@@ -181,7 +181,7 @@
 .fx-historylist .border-list__item + .border-list__item {border-top:1px solid #e7e9ee;}
 .fx-historylist .list-list__anchor {display:block;padding:0.938rem 1.5rem;}
 .fx-historylist .list-wrap {width:100%;margin-top:-0.188rem;padding:0;}
-.fx-historylist .list-wrap__item {padding:0;align-items:end;}
+.fx-historylist .list-wrap__item {padding:0;-webkit-align-items:end;align-items:end;}
 .fx-historylist .list-wrap__title {color:#000;}
 .fx-historylist .list-wrap__title--exrate {margin-top:0;letter-spacing:0;color:#666;}
 .fx-historylist .list-wrap__text--date {letter-spacing:0;font-weight:300;color:#757575;}
