@@ -1076,7 +1076,7 @@
     48%{-webkit-transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);transform:scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg);}
     72%, 96%, 100% {-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);} 
 }
-.ani-thunder {position:absolute;top:0.5rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;-webkit-transform:scale(0);transform:scale(0);}
+.ani-thunder {position:absolute;top:0.5rem;left:0;right:0;display:block;width:11.500rem;height:6.188rem;margin:auto;background:url(../../resource/images/fxmarket/img_ani_timesale_thunder.png) no-repeat 0 0 / 100%;}
 .is-active .ani-thunder--beat {
     -webkit-animation-name:beat;animation-name:beat;
     -webkit-animation-duration:2s;animation-duration:2s;
