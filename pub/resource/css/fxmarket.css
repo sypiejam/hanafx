@@ -1032,7 +1032,7 @@
 
 /* 부가서비스 - 타임세일(서브메인 공통) */
 .fx-service__keyvisual--specialtime {padding:0;}
-.fx-specialtime__keyvisual {position:relative;display:block;padding:2.313rem 0 2.375rem;text-align:center;}
+.fx-specialtime__keyvisual {position:relative;display:block;min-height:8.438rem;margin-bottom:2.5rem;padding:2.313rem 0 2.375rem;text-align:center;}
 .fx-specialtime__keyvisual--ongoing {background:linear-gradient(top, #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%);background:-webkit-linear-gradient(top, #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%);}
 .fx-specialtime__keyvisual--waiting {background:linear-gradient(top, #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%);background:-webkit-linear-gradient(top, #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%);}
 .fx-specialtime__label {position:relative;display:inline-block;height:1.875rem;padding:0 0.75rem;border-radius:1.25rem;font-size:1.125rem;}
@@ -1131,7 +1131,7 @@
 .fx-mylog .challenge-badge__item {margin:0 0.125rem;}
 .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
 .fx-mainset__tit {font-size:0.75rem;line-height:1;}
-.fx-submain-timesale {margin:0 0 2.5rem 0;}
+.fx-submain-timesale {margin:0;}
 .fx-submain-service {margin-top:0;}
 .fx-serviceslider {overflow:hidden;height:15rem;}
 .fx-serviceslider .slick-list {padding-right:1.25rem;}
