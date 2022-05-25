@@ -1131,7 +1131,7 @@
 .fx-mylog .challenge-badge__item {margin:0 0.125rem;}
 .fx-mainset {display:flex;justify-content:space-between;align-items:center;width:5.625rem;margin-top:-0.25rem;}
 .fx-mainset__tit {font-size:0.75rem;line-height:1;}
-.fx-submain-timesale {min-height:27.875rem;margin:0;}
+.fx-submain-timesale {margin:0;}
 .fx-submain-service {margin-top:0;}
 .fx-serviceslider {overflow:hidden;height:15rem;}
 .fx-serviceslider .slick-list {padding-right:1.25rem;}
