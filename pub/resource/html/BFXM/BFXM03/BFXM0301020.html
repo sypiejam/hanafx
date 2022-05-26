@@ -38,7 +38,7 @@
                 <!-- 2022-04-18 마크업 추가 및 수정(SB_v1.0.02) -->
                 <p class="icon-wrap__icon-word">
                     USD <em class="bold">500,000</em>을<br>
-                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다5.
+                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다6.
                 </p>
                 <p class="icon-wrap__description">적용환율 <span>1,205.50</span></p> 
                 <div class="gray-box gray-box--center"> 
@@ -156,7 +156,7 @@
             let coin = document.createElement('span');
             coin.classList.add('fx-coin-item');
             coin.x = 360 * 0.5;
-            coin.y = Math.random() * window.innerHeight * 0.3;
+            coin.y = Math.random() * 640 * 0.3;
             coin.rotate = 0;
             coin.vel = {
                 x: (Math.random() - 0.5) * 10,
@@ -182,7 +182,7 @@
             coin.x += coin.vel.x;
             coin.y += coin.vel.y;
             coin.vel.y += coin.mass;
-            if (coin.y > window.innerHeight) {
+            if (coin.y > 640) {
                 coin.remove();
             }
         }
