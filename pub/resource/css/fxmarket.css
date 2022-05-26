@@ -1033,8 +1033,23 @@
 /* 부가서비스 - 타임세일(서브메인 공통) */
 .fx-service__keyvisual--specialtime {padding:0;}
 .fx-specialtime__keyvisual {position:relative;display:block;margin-bottom:2.5rem;padding:2.313rem 0 2.375rem;text-align:center;}
-.fx-specialtime__keyvisual--ongoing {background:linear-gradient(top, #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%);background:-webkit-linear-gradient(top, #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%);}
-.fx-specialtime__keyvisual--waiting {background:linear-gradient(top, #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%);background:-webkit-linear-gradient(top, #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%);}
+/* .fx-specialtime__keyvisual--ongoing {background:-webkit-linear-gradient(top, #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%);background:linear-gradient(top, #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%);} */
+/* .fx-specialtime__keyvisual--waiting {background:-webkit-linear-gradient(top, #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%);background:linear-gradient(top, #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%);} */
+.fx-specialtime__keyvisual--ongoing {
+background: #f8e9ef; /* Old browsers */
+background: -moz-linear-gradient(top,  #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8e9ef', endColorstr='#f8eaef',GradientType=0 ); /* IE6-9 */
+}
+.fx-specialtime__keyvisual--waiting {
+background: #e7e7e7; /* Old browsers */
+background: -moz-linear-gradient(top,  #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7e7e7', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+}
+
 .fx-specialtime__label {position:relative;display:inline-block;height:1.875rem;padding:0 0.75rem;border-radius:1.25rem;font-size:1.125rem;}
 .fx-specialtime__label:after {content:'';display:inline-block;width:0.688rem;height:1.188rem;margin:0.25rem 0 0 0.5rem;vertical-align:top;}
 .fx-specialtime-img .img-clock {display:block;height:9.063rem;margin:0 auto;background-position:0 0;background-repeat:no-repeat;background-size:100%;}
