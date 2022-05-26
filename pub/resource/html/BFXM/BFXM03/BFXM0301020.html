@@ -35,7 +35,7 @@
                 <!-- 2022-04-18 마크업 추가 및 수정(SB_v1.0.02) -->
                 <p class="icon-wrap__icon-word">
                     USD <em class="bold">500,000</em>을<br>
-                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다.
+                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다.2
                 </p>
                 <p class="icon-wrap__description">적용환율 <span>1,205.50</span></p> 
                 <div class="gray-box gray-box--center"> 
@@ -148,7 +148,7 @@
             coin.rotate = 0;
             coin.vel = {
                 x: (Math.random() - 0.5) * 10,
-                y: Math.random() * -13,
+                y: Math.random() * -20,
                 rotate : Math.random() * 10,
             };
             coin.mass = Math.random() * 0.2 + 0.4;
@@ -162,8 +162,9 @@
             coinsWrap.append(coin);
         }
     } 
- 
+    let count = 0;
     function coinRender() {
+        
         for (let i=coins.length; i--; i >= 0) {
             let coin = coins[i];
             coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
@@ -172,10 +173,16 @@
             coin.y += coin.vel.y;
             coin.vel.y += coin.mass;
             if (coin.y > window.innerHeight) {
-                coin.remove();
+                //coin.remove();
             }
         }
-        requestAnimationFrame(coinRender);
+
+        if (count <= 100) {
+            count++;
+            requestAnimationFrame(coinRender);
+        } else {
+            coin.remove();
+        }
     } 
     
     // 데이터가 모두 로딩된 후 함수실행
