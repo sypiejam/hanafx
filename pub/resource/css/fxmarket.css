@@ -157,7 +157,7 @@
 .modal__contents .fx-complete-list {margin-top:1.5rem;}
 .fx-complete-list .list-section {border-top:1px solid #e7e9ee;}
 .fx-complete-list .list-section .list-wrap {border-top:0;}
-.fx-coins-wrap {position:fixed;top:20%;right:0;left:0;border:1px solid red;}
+.fx-coins-wrap {position:fixed;top:20%;right:0;left:0;}
 .fx-coin-item {position:absolute;top:0;left:0;}
 
 /* 환율선택 팝업 */
