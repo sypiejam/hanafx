@@ -35,7 +35,7 @@
                 <!-- 2022-04-18 마크업 추가 및 수정(SB_v1.0.02) -->
                 <p class="icon-wrap__icon-word">
                     USD <em class="bold">500,000</em>을<br>
-                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다.222
+                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다.444
                 </p>
                 <p class="icon-wrap__description">적용환율 <span>1,205.50</span></p> 
                 <div class="gray-box gray-box--center"> 
@@ -151,7 +151,7 @@
                 y: Math.random() * -13,
                 rotate : Math.random() * 10,
             };
-            coin.mass = Math.random() * 0.2 + 0.4;
+            coin.mass = Math.random() * 0.8 + 1;
             coins.push(coin);
             let coinImage = Math.floor(8 * Math.random()) + 1;
             let coinRandomSize = Math.floor(coinSize.length * Math.random()) + 1;
@@ -163,18 +163,25 @@
         }
     } 
     
+    let count = 0;
     function coinRender() {
-        for (let i=coins.length; i--; i >= 0) {
-            let coin = coins[i];
-            coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
-            coin.rotate += coin.vel.rotate;
-            coin.x += coin.vel.x;
-            coin.y += coin.vel.y;
-            coin.vel.y += coin.mass;
-            if (coin.y > window.innerHeight) {
-               // coin.remove();
+        count++;
+        if(count % 2 === 0) {
+            for (let i=coins.length; i--; i >= 0) {
+                (function(){
+                    let coin = coins[i];
+                    coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
+                    coin.rotate += coin.vel.rotate;
+                    coin.x += coin.vel.x;
+                    coin.y += coin.vel.y;
+                    coin.vel.y += coin.mass;
+                    if (coin.y > window.innerHeight) {
+                       coin.remove();
+                    }
+                })(i);
             }
         }
+
         requestAnimationFrame(coinRender);
     } 
     
