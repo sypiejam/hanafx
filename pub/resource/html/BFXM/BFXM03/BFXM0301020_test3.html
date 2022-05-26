@@ -13,10 +13,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-    .fx-coins-wrap {position:fixed;top:20%;right:0;left:0;width:100vw;height:50vh;}
-    .fx-coin-item {position:absolute;top:0;left:0;width:30px;height:30px;transition:opacity 2s;}
-</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -132,6 +128,8 @@
 <script src="../../../../resource/library/dnd/touch-dnd.js"></script>
 <script src="../../../../resource/js/ui/pualugin.js"></script>
 <script src="../../../../resource/js/ui/common.js"></script>
+
+<!-- 2022-05-18 가입완료 동전모션 스크립트 추가 -->
 <script>
     let coins = [];
     let coinsWrap;
@@ -160,13 +158,16 @@
             coin.style.transform = `translate(${coin.x}px, ${coin.y}px) rotate(${coin.rotate}deg)`;
             coin.style.width = coinSize[coinRandomSize] + 'px';
             coin.style.height = coinSize[coinRandomSize] + 'px';
-            coin.style.background = 'url(../../../images/fxmarket/img_complete_coin'+ coinImage + '.png) no-repeat 0 0 / 100%';
+            coin.style.background = 'url(../../../../resource/images/fxmarket/img_complete_coin'+ coinImage + '.png) no-repeat 0 0 / 100%';
             coinsWrap.append(coin);
         }
     } 
- 
-    function coinRender() {
-        for (let i=coins.length-1; i--; i >= 0) {
+
+    let t = 1000;
+    let animation = null;
+    const coinRender = () => {
+    if (--t <= 0) clearInterval(animation);
+        for (let i=coins.length; i--; i >= 0) {
             let coin = coins[i];
             coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
             coin.rotate += coin.vel.rotate;
@@ -177,9 +178,23 @@
                 coin.remove();
             }
         }
-        coinsWrap.lastChild.style.display = 'none';
-        requestAnimationFrame(coinRender);
-    } 
+    }
+    animation = setInterval(coinRender, 20);
+ 
+    // function coinRender() {
+    //     for (let i=coins.length; i--; i >= 0) {
+    //         let coin = coins[i];
+    //         coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
+    //         coin.rotate += coin.vel.rotate;
+    //         coin.x += coin.vel.x;
+    //         coin.y += coin.vel.y;
+    //         coin.vel.y += coin.mass;
+    //         if (coin.y > window.innerHeight) {
+    //             coin.remove();
+    //         }
+    //     }
+    //     //requestAnimationFrame(coinRender);
+    // } 
     
     // 데이터가 모두 로딩된 후 함수실행
     window.addEventListener('load', function () {
@@ -187,5 +202,6 @@
         coinRender();
     });
 </script>
+<!-- // 2022-05-18 가입완료 동전모션 스크립트 추가 -->
 </body>
 </html>
