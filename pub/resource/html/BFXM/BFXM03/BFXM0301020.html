@@ -13,9 +13,6 @@
 <link rel="stylesheet" href="../../../../resource/css/bank.css" type="text/css">
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
-<style>
-.fx-coins-wrap {margin:auto;width:1px;height:1px;border:1px solid saddlebrown}
-</style>
 </head>
 <body>
 <div id="wrap" class="wrap">
@@ -38,7 +35,7 @@
                 <!-- 2022-04-18 마크업 추가 및 수정(SB_v1.0.02) -->
                 <p class="icon-wrap__icon-word">
                     USD <em class="bold">500,000</em>을<br>
-                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다.
+                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다2.
                 </p>
                 <p class="icon-wrap__description">적용환율 <span>1,205.50</span></p> 
                 <div class="gray-box gray-box--center"> 
@@ -146,15 +143,15 @@
         for (let i = 0; i < coinLen; i++) {
             let coin = document.createElement('span');
             coin.classList.add('fx-coin-item');
-            coin.x = 0;
-            coin.y = 0;
+            coin.x = window.innerWidth * 0.5;
+            coin.y = Math.random() * window.innerHeight * 0.3;
             coin.rotate = 0;
             coin.vel = {
                 x: (Math.random() - 0.5) * 10,
                 y: Math.random() * -13,
                 rotate : Math.random() * 10,
             };
-            coin.mass = Math.random() * 0.2 + 0.4;
+            coin.mass = 0.4;
             coins.push(coin);
             let coinImage = Math.floor(8 * Math.random()) + 1;
             let coinRandomSize = Math.floor(coinSize.length * Math.random()) + 1;
@@ -165,6 +162,7 @@
             coinsWrap.append(coin);
         }
     } 
+ 
     function coinRender() {
         for (let i=coins.length; i--; i >= 0) {
             let coin = coins[i];
