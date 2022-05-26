@@ -162,17 +162,20 @@
             coinsWrap.append(coin);
         }
     } 
- 
+    let count = 0;
     function coinRender() {
-        for (let i=coins.length; i--; i >= 0) {
-            let coin = coins[i];
-            coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
-            coin.rotate += coin.vel.rotate;
-            coin.x += coin.vel.x;
-            coin.y += coin.vel.y;
-            coin.vel.y += coin.mass;
-            if (coin.y > window.innerHeight * 2) {
-                coin.remove();
+        count++;
+        if(count % 2 === 0) {
+            for (let i=coins.length; i--; i >= 0) {
+                let coin = coins[i];
+                coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
+                coin.rotate += coin.vel.rotate;
+                coin.x += coin.vel.x;
+                coin.y += coin.vel.y;
+                coin.vel.y += coin.mass;
+                if (coin.y > window.innerHeight) {
+                    coin.remove();
+                }
             }
         }
         requestAnimationFrame(coinRender);
