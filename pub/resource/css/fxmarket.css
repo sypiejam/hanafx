@@ -157,7 +157,7 @@
 .modal__contents .fx-complete-list {margin-top:1.5rem;}
 .fx-complete-list .list-section {border-top:1px solid #e7e9ee;}
 .fx-complete-list .list-section .list-wrap {border-top:0;}
-.fx-coins-wrap {position:fixed;top:20%;right:0;left:0;width:360px;}
+.fx-coins-wrap {position:fixed;top:20%;right:0;left:0;width:360px;height:100px;margin:auto;border:1px solid red}
 .fx-coin-item {position:absolute;top:0;left:0;width:30px;height:30px;transition:opacity 2s;}
 
 /* 환율선택 팝업 */
@@ -1033,8 +1033,6 @@
 /* 부가서비스 - 타임세일(서브메인 공통) */
 .fx-service__keyvisual--specialtime {padding:0;}
 .fx-specialtime__keyvisual {position:relative;display:block;margin-bottom:2.5rem;padding:2.313rem 0 2.375rem;text-align:center;}
-/* .fx-specialtime__keyvisual--ongoing {background:-webkit-linear-gradient(top, #f8e9ef 0%,#f8f2f4 70%,#f8eaef 100%);background:linear-gradient(top, #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%);} */
-/* .fx-specialtime__keyvisual--waiting {background:-webkit-linear-gradient(top, #e7e7e7 0%,#eeeeee 70%,#e8e8e8 100%);background:linear-gradient(top, #e7e7e7 0%, #eeeeee 70%, #e8e8e8 100%);} */
 .fx-specialtime__keyvisual--ongoing {
 background: #f8e9ef; /* Old browsers */
 background: -moz-linear-gradient(top,  #f8e9ef 0%, #f8f2f4 70%, #f8eaef 100%); /* FF3.6-15 */
