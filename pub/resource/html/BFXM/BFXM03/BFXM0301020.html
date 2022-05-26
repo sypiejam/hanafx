@@ -14,7 +14,7 @@
 <!-- Hana FX market CSS -->
 <link rel="stylesheet" href="../../../../resource/css/fxmarket.css" type="text/css">
 <style>
-    .fx-coins-wrap {width:360px;margin:auto;}
+.fx-coins-wrap {margin:auto;width:1px;height:1px;border:1px solid saddlebrown}
 </style>
 </head>
 <body>
@@ -38,7 +38,7 @@
                 <!-- 2022-04-18 마크업 추가 및 수정(SB_v1.0.02) -->
                 <p class="icon-wrap__icon-word">
                     USD <em class="bold">500,000</em>을<br>
-                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다6.
+                    <span class="color-000"><em class="bold">602,750,000</em>원</span>에 샀습니다.
                 </p>
                 <p class="icon-wrap__description">적용환율 <span>1,205.50</span></p> 
                 <div class="gray-box gray-box--center"> 
@@ -138,15 +138,6 @@
     let coinsWrap;
     let coinLen = 30; 
     let coinSize = [15,20,30,40];
-
-    window.requestAnimFrame = (function(callback) {
-        return window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function(callback) { window.setTimeout(callback, 1000 / 60); };
-    })();
     
     function coinPop() {
         coinsWrap = document.createElement('div');
@@ -155,8 +146,8 @@
         for (let i = 0; i < coinLen; i++) {
             let coin = document.createElement('span');
             coin.classList.add('fx-coin-item');
-            coin.x = 360 * 0.5;
-            coin.y = Math.random() * 640 * 0.3;
+            coin.x = 0;
+            coin.y = 0;
             coin.rotate = 0;
             coin.vel = {
                 x: (Math.random() - 0.5) * 10,
@@ -182,11 +173,11 @@
             coin.x += coin.vel.x;
             coin.y += coin.vel.y;
             coin.vel.y += coin.mass;
-            if (coin.y > 640) {
+            if (coin.y > window.innerHeight) {
                 coin.remove();
             }
         }
-        requestAnimFrame(coinRender);
+        requestAnimationFrame(coinRender);
     } 
     
     // 데이터가 모두 로딩된 후 함수실행
