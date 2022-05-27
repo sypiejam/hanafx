@@ -1031,8 +1031,8 @@
 /* 부가서비스 - 타임세일(서브메인 공통) */
 .fx-service__keyvisual--specialtime {padding:0;}
 .fx-specialtime__keyvisual {position:relative;display:block;margin-bottom:2.5rem;padding:2.313rem 0 2.375rem;text-align:center;}
-.fx-specialtime__keyvisual--ongoing {background:url(../../resource/images/fxmarket/img_keyvisual_timesale_ongoing.png) no-repeat 0 0 / 100%;}
-.fx-specialtime__keyvisual--waiting {background:url(../../resource/images/fxmarket/img_keyvisual_timesale_waiting.png) no-repeat 0 0 / 100%;}
+.fx-specialtime__keyvisual--ongoing {background:#f8eaef url(../../resource/images/fxmarket/img_keyvisual_timesale_ongoing.png) no-repeat 0 0 / 100%;}
+.fx-specialtime__keyvisual--waiting {background:#e8e8e8 url(../../resource/images/fxmarket/img_keyvisual_timesale_waiting.png) no-repeat 0 0 / 100%;}
 .fx-specialtime__label {position:relative;display:inline-block;height:1.875rem;padding:0 0.75rem;border-radius:1.25rem;font-size:1.125rem;}
 .fx-specialtime__label:after {content:'';display:inline-block;width:0.688rem;height:1.188rem;margin:0.25rem 0 0 0.5rem;vertical-align:top;}
 .fx-specialtime-img .img-clock {display:block;height:9.063rem;margin:0 auto;background-position:0 0;background-repeat:no-repeat;background-size:100%;}
