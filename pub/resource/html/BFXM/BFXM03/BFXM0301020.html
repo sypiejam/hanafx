@@ -161,9 +161,12 @@
             coin.style.background = 'url(../../../../resource/images/fxmarket/img_complete_coin'+ coinImage + '.png) no-repeat 0 0 / 100%';
             coinsWrap.append(coin);
         }
-    } 
- 
-    function coinRender() {
+    }  
+
+
+    // 2022-05-27 requestAnimationFrame > setInterval 스크립트 수정 st 
+    let coinanimation = null;
+    let coinRender = () => {
         for (let i=coins.length; i--; i >= 0) {
             let coin = coins[i];
             coin.style.transform = `translate3d(${coin.x}px, ${coin.y}px, 1px) rotate(${coin.rotate}deg)`;
@@ -173,11 +176,16 @@
             coin.vel.y += coin.mass;
             if (coin.y > window.innerHeight) {
                 coin.remove();
+                setTimeout(function(){
+                    clearInterval(coinanimation);
+                },1000)
             }
         }
-        requestAnimationFrame(coinRender);
-    } 
-    
+    }
+    coinanimation = setInterval(coinRender, 15);
+    // 2022-05-27 requestAnimationFrame > setInterval 스크립트 수정 end
+
+
     // 데이터가 모두 로딩된 후 함수실행
     window.addEventListener('load', function () {
         coinPop();
