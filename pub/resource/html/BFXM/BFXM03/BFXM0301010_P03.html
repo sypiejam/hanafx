@@ -30,7 +30,7 @@
                 <div class="modal__header modal__header--border">
                     <h1 class="modal__header--title">환율 선택</h1>
                 </div>
-                <div class="modal__contents--narrow modal__contents--fx">
+                <div class="modal__contents--narrow modal__contents--fx"> <!-- 2022-05-30 프리테스트 #292470 직접입력 포커스시 하단패딩 컨트롤 클래스 : fx-input--focus -->
                     <div class="fx-rate__select" data-input-selector="radio">
                         <h2 class="offscreen">즉시거래</h2>
                         <ul class="check-full">
@@ -88,8 +88,8 @@
                                         <div class="input">
                                             <div class="input__inner">
                                                 <input type="text" class="input__element input__no-label input__element--right" title="예약환율 입력" placeholder="예약환율 입력">
-                                                <!-- 2022-05-16 프리테스트 #288186 input__no-label input__element--right 클래스 추가 -->
-                                                <span class="input__label--fix" aria-hidden="true">예약환율</span> <!-- 2022-05-16 프리테스트 #288186 input__label--fix 클래스 추가 -->
+                                                <!-- 2022-05-16 프리테스트 #288186 input_no-label input__element--right 클래스 추가 -->
+                                                <label class="input__label--fix" aria-hidden="true">예약환율</label> <!-- 2022-05-16 프리테스트 #288186 input__label--fix 클래스 변경 -->
                                                 <button type="button" class="input__remove-button" title="텍스트삭제"></button>
                                             </div>
                                         </div>
@@ -130,9 +130,9 @@
         $(function(){
             function inputDirect(){
                 setTimeout(function(){
-                    var contentsH = $('.modal__contents--fx').height();
+                    var contentsH = $('.modal__contents--fx').innerHeight();
                     $('.modal__contents--fx').scrollTop(contentsH);
-                },100);
+                },300);
             }
 
             $('.check-full__direct').on('click', function(){
