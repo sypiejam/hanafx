@@ -162,6 +162,7 @@
 
 /* 환율선택 팝업 */
 .modal__contents--fx {max-height:80vh;overflow-y:auto;}
+.modal__contents--fx.fx-input--focus {padding-bottom:50vh;}
 .fx-rate__select {margin-top:-0.625rem;}
 .fx-rate__select .check-full ~ .check-full {margin-top:0.625rem;border-top:1px solid #e7e9ee;}
 .fx-rate__select .check-full__item {margin-top:0.625rem;}
