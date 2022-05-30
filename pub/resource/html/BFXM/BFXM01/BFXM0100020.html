@@ -28,12 +28,23 @@
         <div class="tit-large">약관동의</div>
         <div class="container">
             <div class="privacy modi-privacy1"><!-- 2022-02-25 클래스명 수정 -->
+                <!-- 2022-05-27 마크업 수정 -->
                 <div class="privacy__item">
                     <button type="button" class="privacy__icon" role="checkbox" aria-checked="false" aria-labelledby=""></button>
-                    <button type="button" class="privacy__detail" id="">
-                        FX마켓 약관
-                    </button>
+                    <button type="button" class="privacy__detail" id="">전체동의</button>
                 </div>
+                <div class="privacy__sub-wrap">
+                    <!--- privacy__item--checked 추가 / aria-checked="true" 변경 시 체크 -->
+                    <div class="privacy__item privacy__item--checked">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="true"></button>
+                        <button type="button" class="privacy__detail" id="">FX마켓 약관 동의</button>
+                    </div>
+                    <div class="privacy__item">
+                        <button type="button" class="privacy__icon" role="checkbox" aria-checked="false"></button>
+                        <button type="button" class="privacy__detail" id="">FX마켓 상품 설명서</button>
+                    </div>
+                </div>
+                <!-- //2022-05-27 마크업 수정 -->
             </div>
         </div>
         <!-- 2022-02-25 마크업 수정(v0.7.05) -->
