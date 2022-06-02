@@ -39,7 +39,7 @@
                 <div class="modal__contents pab0">
                     <p class="fx-nickname__modaltit">변경할 닉네임을 입력해주세요.</p>
                     <div class="fx-nickname">
-                        <div class="input input--on">
+                        <div class="input input--error input--on">
                             <!--
                                 * 닉네임 사용 가능시 class="input input__guide-text"
                                 * 오류시 class="input input--error"
@@ -53,9 +53,10 @@
                             </div>
                             <p class="input__guide-text--green" aria-live="assertive">사용 가능한 닉네임 입니다.</p>
                             <!-- 에러 메시지 -->
-                            <p class="input__error" aria-live="assertive">3~10자 이내 입력해주세요.</p>
+                            <!-- <p class="input__error" aria-live="assertive">3~10자 이내 입력해주세요.</p>
                             <p class="input__error" aria-live="assertive">이미 사용하고 있는 닉네임 입니다.</p>
-                            <p class="input__error" aria-live="assertive">닉네임 중복확인 해주세요.</p>
+                            <p class="input__error" aria-live="assertive">닉네임 중복확인 해주세요.</p> -->
+                            <p class="input__error" aria-live="assertive">영문, 특수문자, 연속된 숫자, 부정확한 단어는 사용할 수 없습니다.</p>
                         </div>
                         <div class="input__guide-text">
                             <span>0</span>/10
