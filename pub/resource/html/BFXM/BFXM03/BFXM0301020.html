@@ -177,6 +177,7 @@
             if (coin.y > window.innerHeight) {
                 coin.remove();
                 setTimeout(function(){
+                    coinsWrap.remove();
                     clearInterval(coinanimation);
                 },1000)
             }
