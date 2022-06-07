@@ -533,8 +533,8 @@
 .fx-attend-visual .ani-rocket {display:inline-block;
     -webkit-animation-name:rocketvibration;
     animation-name:rocketvibration;
-    -webkit-animation-duration:0.2s;
-    animation-duration:0.2s;
+    -webkit-animation-duration:0.3s;
+    animation-duration:0.3s;
     -webkit-animation-iteration-count:infinite;
     animation-iteration-count:infinite;
     -webkit-animation-fill-mode:both;
