@@ -1294,7 +1294,7 @@
 .fx-participant {margin-top:0.5rem;font-size:0.875rem;color:#666;text-align:center;}
 .fx-predict .spacer {margin:2.5rem -1.5rem 0;}
 .fx-predictor {display:flex;justify-content:center;align-items:center;margin-top:1.5rem;font-size:0.875rem;}
-.fx-piechart {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 0;text-align:center;}
+.fx-piechart {position:relative;width:9.188rem;height:9.188rem;margin:2rem auto 2rem;text-align:center;}
 .fx-pietxtarea {position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);background:transparent;}
 .fx-pietxtarea__per {display:block;font-size:1.875rem;}
 .fx-pietxtarea__value {font-size:0.875rem;color:#666;}
@@ -1302,7 +1302,7 @@
 .fx-pierotate__ball {position:absolute;left:50%;margin-left:-0.438rem;display:block;width:0.75rem;height:0.75rem;border-radius:50%;background-color:#2fc8e3;}
 [data-value="0"] .fx-pierotate {display:none;}
 [data-value="100"] .fx-pierotate {z-index:2;}
-.fx-predict .btn-share {margin-left:auto;}
+.fx-predict .btn-share {margin-left:auto;margin-top:-1rem !important;}
 .fx-predict .btn-share:before {content:none;}
 .fx-predict .btn-share:after {content:'';display:inline-block;width:1.125rem;height:1.125rem;margin-left:0.5rem;background:url(../../resource/images/C/icon_share.png) 50% 50% no-repeat;background-size:100% auto;opacity:.6;}
 .fx-predict .fx-level-icon {width:1.813rem;height:1rem;margin:-0.25rem 0.5rem 0 0;text-align:center;}
@@ -1394,9 +1394,9 @@
 /* FX외환뉴스 */
 .list-total + .list-section {margin-top:0.813rem;border-top:1px solid #e7e9ee;}
 .news-list__title--pdf::before {content:'';display:inline-block;width:1rem;height:1rem;margin-right:0.313rem;vertical-align:top;background:url(../../resource/images/C/icon_pdf.png) no-repeat 0 0 / 100%;}
-
 /* FX배지 */
 .fx-badge__collect {margin-top:1.625rem;}
+.fx-badge__collect:first-child {margin-top:0;}
 .fx-badge__list {flex-wrap:wrap;display:flex;margin:0 -0.5rem;}
 .fx-badge__item {position:relative;width:calc(100% / 3);padding-top:1.688rem;text-align:center;}
 .fx-badge__item .btn-share {position:absolute;top:1rem;right:0;bottom:0;left:0;display:none;width:100%;}
@@ -1419,6 +1419,7 @@
 .fx-badge-input:checked + .fx-badge-label .fx-badge-type {color:#666}
 .fx-badge-goal {display:block;font-size:0.813rem;color:#aaa;line-height:1.4;}
 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {font-weight:700;}
+.fx-badge__collect--type01 {margin-top:0;}
 .fx-badge__collect--type01 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#7b46ee;}
 .fx-badge__collect--type02 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#f84b6f;}
 .fx-badge__collect--type03 .fx-badge-input:checked + .fx-badge-label .fx-badge-goal {color:#009591;}
