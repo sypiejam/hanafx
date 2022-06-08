@@ -2010,4 +2010,4 @@
 .odometer.odometer-theme-minimal.odometer-animating-down.odometer-animating .odometer-ribbon-inner {-webkit-transition:-webkit-transform 0.8s;transition:transform 0.8s;-webkit-transform:translateY(0);transform:translateY(0);}
 
 /* flip css */
-.tick-flip-panel-front, .tick-flip-panel-back {height:50%;}
+.tick-flip-panel-back {height:50%;}
