@@ -1115,6 +1115,10 @@
 .fxmarket .exr--up::before {border-bottom:9px solid #fa1036;}
 .fxmarket .exr--dw::before {border-top:9px solid #139be5;}
 .fx-refresh--timesale {margin-top:2.625rem;}
+@media (max-width:344px) {
+    .button-select--fxm .button-select__item {padding-right:1.5rem;background-position-x:calc(100% - 7px);}
+    .fx-specialrate-info {font-size:0.75rem;}
+}
 
 /* 서브메인 */
 [class^="fx-submain-"] {margin-top:2.5rem;}
