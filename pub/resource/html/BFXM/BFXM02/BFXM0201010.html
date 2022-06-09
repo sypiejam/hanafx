@@ -353,16 +353,19 @@ $('.fx-serviceslider').on('touchcancel touchmove', function(){
 });
 
 // 통화별 고시환율 배너
-if($('.fx-rate__item').length > 1){
+// 2022-06-09 프리테스트 #295343 pauseOnFocus : false, pauseOnHover : false 옵션 추가
+if ($('.fx-rate__item').length > 1) {
     $('.fx-rateslider').slick({
-        autoplay:true,
-        autoplaySpeed :0,
-        speed :3000,
-        cssEase:"linear",
-        dots :false,
-        infinite :true,
-        swipe:false,
-        variableWidth :true,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 3000,
+        cssEase: "linear",
+        dots: false,
+        infinite: true,
+        swipe: false,
+        variableWidth: true,
+        pauseOnFocus : false,
+        pauseOnHover : false
     });
     $('.fx-rateslider')[0].slick.focussed = false;
 }
