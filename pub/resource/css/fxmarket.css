@@ -420,7 +420,7 @@
 
 /* 부가서비스 - 탑트레이더 랭킹 */
 .fx-service__keyvisual--trader {overflow:hidden;position:relative;padding-top:109%;background:#373a4d;}
-.keyvisual__trader--trophy {position:absolute;top:16vw;right:0;left:0;}
+.keyvisual__trader--trophy {position:absolute;top:16vw;right:0;left:0;-webkit-transform:translateY(20px);transform:translateY(20px);}
 .is-active .keyvisual__trader--trophy {
     -webkit-animation-name:trophy;
     animation-name:trophy;
