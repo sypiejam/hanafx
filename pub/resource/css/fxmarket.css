@@ -1172,8 +1172,8 @@
 .fx-rate__item .icon-na {width:0.813rem;height:0.813rem;margin-right:0.313rem;border:1px solid #fff;border-radius:50%;}
 .fx-rate__item .exr {margin-left:0.5rem;font-size:0.875rem;font-weight:400;line-height:initial;}
 .fx-rate__item .exr--dw {color:#4fc7ff;}
-.fx-rate__item .exr--up::before {border:0 6px 11px;}
-.fx-rate__item .exr--dw::before {border:11px 6px 0;}
+.fx-rate__item .exr--up::before {border-width:0 6px 11px;}
+.fx-rate__item .exr--dw::before {border-width:11px 6px 0;border-top:11px solid #4fc7ff;}
 .fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
 .fx-submain-news .tit-default {min-height:1.313rem;}
 .fx-newsslider {overflow:hidden;margin-top:1rem;}
