@@ -424,8 +424,8 @@
 .is-active .keyvisual__trader--trophy {
     -webkit-animation-name:trophy;
     animation-name:trophy;
-    -webkit-animation-duration:2s;
-    animation-duration:2s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-delay:0.3s;
     animation-delay:0.3s;
     -webkit-animation-timing-function:ease-in-out;
@@ -435,12 +435,12 @@
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
 }
-.keyvisual__trader--particle {position:absolute;top:0;right:0;left:0;-webkit-transform:scale(1.1);transform:scale(1.1);}
+.keyvisual__trader--particle {position:absolute;top:0;right:0;left:0;-webkit-transform:scale(1);transform:scale(1);}
 .is-active .keyvisual__trader--particle {
     -webkit-animation-name:particle;
     animation-name:particle;
-    -webkit-animation-duration:2s;
-    animation-duration:2s;
+    -webkit-animation-duration:3s;
+    animation-duration:3s;
     -webkit-animation-delay:0.3s;
     animation-delay:0.3s;
     -webkit-animation-timing-function:ease-in-out;
@@ -451,7 +451,8 @@
 .keyvisual__trader--txt {position:absolute;top:80vw;left:0;right:0;}
 @keyframes particle {
     0% {-webkit-transform:scale(1);transform:scale(1);}
-    100% {-webkit-transform:scale(1.1);transform:scale(1.1);}
+    60% {-webkit-transform:scale(1.1);transform:scale(1.1);}
+    100% {-webkit-transform:scale(1);transform:scale(1);}
 }
 @keyframes trophy {
     0% {-webkit-transform:translateY(20px);transform:translateY(20px);}
@@ -1112,6 +1113,7 @@
 .fxmarket .exr--up {color:#fa1036;}
 .fxmarket .exr--dw {color:#139be5;}
 .fxmarket .exr::before {content:'';width:0.25rem;height:0.125rem;margin-right:0.313rem;background:#666;}
+.fx-rate__item .exr::before {background:#fff;}
 .fxmarket .exr--up::before,
 .fxmarket .exr--dw::before {width:0;height:0;background:none;border-left:5px solid transparent;border-right:5px solid transparent;}
 .fxmarket .exr--up::before {border-bottom:9px solid #fa1036;}
