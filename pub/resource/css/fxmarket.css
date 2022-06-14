@@ -55,7 +55,7 @@
 .tab__type--small .tab__panel {height:100%;margin-top:1.125rem;padding:0 0.75rem 0;}
 .tab__type--small .tab__panel--buy:before {z-index:-1;content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#f0d4b4 url(../../resource/images/fxmarket/img_fxtrade_buy.png) no-repeat calc(100% - 1.5rem) 100% / 8.313rem;}
 .tab__type--small .tab__panel--sell:before {z-index:-1;content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:#c1e2eb url(../../resource/images/fxmarket/img_fxtrade_sell.png) no-repeat calc(100% - 1.5rem) 100% / 8.313rem;}
-.fx-rate__list {min-height:3.625rem;}
+.fx-rate__list {min-height:3.688rem;}
 .fx-rate__item--del {font-size:1rem;color:#61605c;}
 .fx-rate__item--ins {font-size:1.5rem;font-weight:500;text-decoration:none;color:#000;line-height:1.25;}
 .fx-rateboard .fx-refresh {position:absolute;top:auto;right:1.5rem;bottom:9.125rem;}
