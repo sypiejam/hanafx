@@ -1282,8 +1282,9 @@
 .fx-forecast-date {position:absolute;top:12%;left:13%;font-weight:700;font-size:1.188rem;}
 .fx-guess {margin-top:2.5rem;}
 .fx-guess .fx-rate__graph {margin-top:0.5rem;}
-.fx-guess .fx-refresh {display:flex;justify-content:space-between;align-items:center;font-size:0.938rem;line-height:1;}
-.fx-guess .fx-refresh__txt {font-weight:300;font-size:0.75rem;}
+.fx-guess .fx-refresh {font-size:0.938rem;line-height:1;}
+.fx-guess .fx-refresh .flex-wrap {display:flex;justify-content:center;}
+.fx-guess .fx-refresh__txt {margin-top:0.5rem;font-weight:300;font-size:0.75rem;text-align:center;}
 .fx-guess .icon-na {width:1rem;height:1rem;margin-right:0.313rem;}
 .fx-guess .exr {margin-left:0.25rem;font-size:0.75rem;font-weight:700;}
 .fx-guess .exr:before {margin-right:0.125rem;}
