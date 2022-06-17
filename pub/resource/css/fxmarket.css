@@ -378,6 +378,7 @@
 .fx-pushalarm .guide-wrap__item {font-size:0.813rem;color:#757575;}
 .fx-pushalarm .button-select__item {width:auto;height:1.875rem;padding:0 2.25rem 0 0;font-size:1rem;font-weight:400;border:0;background-color:inherit;color:#000;line-height:1.4;}
 .fx-pushalarm .icon-na {width:1.063rem;height:1.063rem;vertical-align:-1px;}
+.fx-pushalarm .tooltip {margin-left:0.25rem;}
 /* 마이페이지 - FX Score 상세 */
 .fx-score--detail {margin-top:-1.75rem;padding:1.875rem 0 0;background-color:#f9f9fb;}
 .fx-score--detail .card__wrap {padding:1.188rem;}

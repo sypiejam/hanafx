@@ -242,7 +242,23 @@
                     <div class="row-list__link">
                         <div class="row-list__text">
                             <span class="row-list__title">FX마켓 위젯 통화설정</span>
-                            <p class="row-list__phrase">FX마켓 환율 위젯 통화를 설정할 수 있어요.</p>
+                            <!-- 2022-06-17 툴팁 추가 -->
+                            <p class="row-list__phrase">FX마켓 환율 위젯 통화를 설정할 수 있어요.
+                                <span class="tooltip" data-tooltip="paragraph">
+                                    <button type="button" class="tooltip__open" data-tooltip-button="open" aria-label="등급안내"></button>
+                                    <!-- 툴팁 레이어 -->
+                                    <span class="tooltip__panel" data-tooltip-panel="false">
+                                        <span class="tooltip__column">
+                                            <span class="tooltip__description" data-tooltip="focus">
+                                                위젯 통화 변경은 환율정보 갱신 시 반영됩니다.
+                                            </span>
+                                        </span>
+                                        <button class="tooltip__close" data-tooltip-button="close" aria-label="툴팁 닫기"></button>
+                                    </span>
+                                    <!-- //툴팁 레이어 -->
+                                </span>
+                            </p>
+                            <!-- //2022-06-17 툴팁 추가 -->
                         </div>
                         <div class="row-list__anchor">
                             <!-- to.개발 | 통화선택 공통레이어팝업 호출 -->
