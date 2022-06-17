@@ -388,7 +388,7 @@
 .fx-searchlist--bg {background-color:#f9f9fb;}
 .white-nowrap {white-space:nowrap !important;}
 .fx-scorelist .tit-default {margin-left:0;margin-right:0;}
-.fx-scorelist__item {margin-top:2.125rem;}
+.fx-scorelist__item {margin-top:2.125rem;margin-right:-1rem;}
 /* 마이페이지 - 등급안내 */
 .fx-levelinfo .additional-item {margin-right:-0.813rem;}
 .fx-levelinfo .button-select__item {height:auto;border:none;}
