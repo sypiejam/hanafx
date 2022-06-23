@@ -2009,7 +2009,7 @@
 .fx-widget-step {width:16.875rem;margin:1.25rem auto 0;text-align:left;}
 .fx-widget-step .fx-widget-desc {margin-top:0.25rem;}
 .fx-widget-img {width:9.438rem;margin:2.5rem auto 0;}
-.fx-widget-mypage {padding:3rem 0 1.25rem;background:#f9f9fb;}
+.fx-widget-mypage {padding:3rem 0 2.5rem;background:#f9f9fb;}
 .fx-widget-mypage .fx-widget-img {width:auto;max-width:375px;margin-top:1rem;}
 @media (max-width:320px) { 
     .fx-widget-step  {width:auto;} 
