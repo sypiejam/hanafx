@@ -1122,7 +1122,7 @@
 .fxmarket .exr--dw::before {width:0;height:0;background:none;border-left:5px solid transparent;border-right:5px solid transparent;}
 .fxmarket .exr--up::before {border-bottom:9px solid #fa1036;}
 .fxmarket .exr--dw::before {border-top:9px solid #139be5;}
-.fx-refresh--timesale {margin-top:2.625rem;}
+.fx-refresh--timesale {margin:2.625rem 0 0.375rem;}
 @media (max-width:344px) {
     .button-select--fxm .button-select__item {padding-right:1.5rem;background-position-x:calc(100% - 7px);}
     .fx-specialrate-info {font-size:0.75rem;}
@@ -1183,13 +1183,21 @@
 .fx-rate__item .exr--up::before {border-width:0 6px 11px;}
 .fx-rate__item .exr--dw::before {border-width:11px 6px 0;border-top:11px solid #4fc7ff;}
 .fx-submain-state .fx-rate__graph {margin-top:0.25rem;}
+.fx-submain-state .fx-refresh .tit-default {margin:0;font-weight:400;}
 .fx-submain-news .tit-default {min-height:1.313rem;}
+.fx-submain-state .fx-refresh__txt {font-weight:300;}
 .fx-newsslider {overflow:hidden;margin-top:1rem;}
 .fx-newsslider .slick-list {padding-left:1.5rem;margin-right:-1.5rem;}
 .fx-newsslider .slick-slide {margin-right:0.625rem;}
 .fx-news__item {position:relative;padding:0.75rem 1rem;border:1px solid #e3e4e8;border-radius:0.8rem;background:#fff;}
 .fx-news__item .btn-newsmore {z-index:10;position:absolute;top:0;right:0;bottom:0;left:0;}
 .fx-news__item .news-title {overflow:hidden;height:2.625rem;font-size:1rem;font-weight:300;color:#666;text-align:left;line-height:1.4;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.fx-submain-banner {background:#eff0f3;}
+.fx-banner__widget {display:block;padding:1rem 2.375rem;background:url(../../resource/images/fxmarket/img_submain_widget.png) no-repeat calc(100% - 2.375rem) 100% / 6.125rem}
+.fx-banner-desc {font-weight:300;font-size:0.813rem;}
+.fx-banner-title {display:flex;justify-content:space-between;align-items:baseline;width:10.5rem;font-size:1rem;font-weight:500;color:#009591;}
+.fx-banner-detail {position:relative;display:block;width:1.875rem;height:1px;background:#999;}
+.fx-banner-detail:after {content:'';position:absolute;right:-0.4rem;width:0.75rem;border-top:1px solid #999;-webkit-transform:rotate(45deg) translate(-50%, 0);transform:rotate(45deg) translate(-50%, 0);}
 @media (max-width:360px) { 
     .fx-mylog__nickname {font-size:0.813rem;} 
 }
@@ -1989,6 +1997,22 @@
     .tutorial-slider__item--guide05 .img-base,
     .tutorial-slider__item--guide05 .img-absol,
     .tutorial-slider__item--guide05 .tutorial-motion {max-width:calc(300px - 3rem);}
+}
+
+/* 위젯안내팝업 */
+.modal-widget .modal__contents {padding-bottom:0;text-align:center;}
+.modal-widget .modal__header.is-active {border-bottom:0;}
+.fx-widget-title {font-size:1.125rem;font-weight:300;line-height:1.4;}
+.fx-widget-title .color-green {font-weight:400;}
+.fx-widget-desc {margin-top:0.625rem;font-size:0.875rem;font-weight:300;color:#666;line-height:1.3;}
+.fx-widget-desc .icon-plus {display:inline-block;margin-left:0.125rem;padding:0 0.875rem;background:#606060;border-radius:0.938em;font-size:1rem;color:#fff;line-height:1;}
+.fx-widget-step {width:16.875rem;margin:1.25rem auto 0;text-align:left;}
+.fx-widget-step .fx-widget-desc {margin-top:0.25rem;}
+.fx-widget-img {width:9.438rem;margin:2.5rem auto 0;}
+.fx-widget-mypage {padding:3rem 0 1.25rem;background:#f9f9fb;}
+.fx-widget-mypage .fx-widget-img {width:auto;max-width:375px;margin-top:1rem;}
+@media (max-width:320px) { 
+    .fx-widget-step  {width:auto;} 
 }
 
 /* odometer css */
