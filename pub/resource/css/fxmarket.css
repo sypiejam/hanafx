@@ -209,7 +209,7 @@
 .fx-crosscurrency-box {padding:1.188rem 0.875rem 0.875rem;border-radius:0.75rem;background:#f6f6f6;}
 .fx-crosscurrency-box .exchange-box__description {font-size:1.375rem;}
 .fx-crosscurrency-box .exchange-box__inequality {width:0.875rem;height:0.688rem;margin:0 1.125rem;background:url(../../resource/images/C/arrow-right-tail.png) 0 0 no-repeat;background-size:auto 100%;}
-.fx-crosscurrency-box .exchange-box__inequality--left {-webkit-transform:rotate(90deg);transform:rotate(90deg);-webkit-transform:scaleX(-1);transform:scaleX(-1);}
+.fx-crosscurrency-box .exchange-box__inequality--left {-webkit-transform:scaleX(-1);transform:scaleX(-1);}
 .fx-service__keyvisual.fx-service__keyvisual--crosscurrency {overflow:hidden;min-height:initial;}
 .ani-wallet-box {display:block;margin-left:1rem;}
 .ani-wallet {display:block;width:7rem;height:5.875rem;margin:4rem auto 0;background:url(../../resource/images/fxmarket/img_crosscurrency_wallet.png) no-repeat 0 0 / 100%;}
