@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>개발자 99%가 모르는 신박한 HTML 태그 5개!</title>
+</head>
+<style>
+    .progress[value] {
+        appearance: none;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    .progress[value]::-webkit-progress-bar {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.25) inset;
+    }
+    .progress[value]::-webkit-progress-value {
+        background-image: linear-gradient(to left, #2ecc71, #3498db);
+    }
+
+    .details[open] {
+        background-color: #3498db;
+        background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);
+    }
+</style>
+<body>
+    <div>
+		<progress min="0" max="100" value="50" class="progress"></progress>
+        <meter min="0" max="100" low="20" high="65" optimum="15" value="50"></meter>
+    </div>
+
+    <div>
+        <details class="details">
+            <summary>Lorem ipsum dolor sit amet.</summary>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequuntur.</span>
+        </details>
+    </div>
+
+    <div>
+        <input type="date" name="" id="">
+        <input type="month" name="" id="">
+        <input type="week" name="" id="">
+        <input type="time" name="" id="">
+    </div>
+
+    <div>
+        <picture>
+            <source srcset="http://placeimg.com/640/480/tech" media="(min-width:1200px)">
+            <source srcset="http://placeimg.com/640/480/animals" media="(min-width:900px)">
+            <source srcset="http://placeimg.com/640/480/nature" media="(min-width:500px)">
+            <img src="http://placeimg.com/640/480/tech/grayscale" alt="">
+        </picture>
+    </div>
+
+    <div>
+        <label for="movie">auto complete</label>
+        <input type="text" name="" id="movie" list="movie-options">
+        <datalist id="movie-options">
+            <option value="Dune">
+            <option value="Dark Waters">
+            <option value="The Artist">
+            <option value="Iron Man">
+            <option value="Matrix">
+        </datalist>
+    </div>
+    
+</body>
+<html>
